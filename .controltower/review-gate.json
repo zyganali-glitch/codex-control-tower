@@ -32,5 +32,8 @@
   "updatedAt": "2026-07-12T23:29:03+03:00",
   "localFileGate": true,
   "identityVerified": false,
-  "disclaimer": "Local session approval; not enterprise identity verification or a signed authorization."
+  "disclaimer": "Local session approval; not enterprise identity verification or a signed authorization.",
+  "fulfilledAt": "2026-07-12T23:52:03+03:00",
+  "fulfilledCommit": "e0ee256e7eb497cd6293fe51f51899645ee3ed90",
+  "verifiedWorkflowRun": "https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29208503014"
 }

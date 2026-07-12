@@ -59,6 +59,8 @@ Codex was used to implement this independent Codex Control Tower repository. Thi
 | Post-hardening `npm.cmd run verify` | PASS | Nine CLI/core scripts plus five dashboard adapter tests passed; demo regenerated at `25 → 88` and `16 → 1`; dashboard dependencies audited with zero vulnerabilities; Vite built 47 modules. |
 | Post-hardening root self-scan | PASS | `REAL_LOCAL_SCAN`, 100/100 structural governance readiness, zero risks, zero missing surfaces, and four visible configured fixture exclusions. This is not a correctness or security certification. |
 | Release remote configuration | PASS | `origin` points only to `https://github.com/zyganali-glitch/codex-control-tower.git`; commit and push remain NOT_RUN at this checkpoint. |
+| Release commit and push | PASS | Commit `e0ee256e7eb497cd6293fe51f51899645ee3ed90` was pushed to the approved `origin/main`; `git ls-remote` matched the local SHA and the worktree was clean. |
+| GitHub-hosted CI | PASS | Push workflow run `29208503014` completed successfully; all verify job steps passed. |
 
 ## Failures found and fixed
 
@@ -81,7 +83,7 @@ Codex was used to implement this independent Codex Control Tower repository. Thi
 - Verified locally: the full root suite, two governed fixture tests, demo orchestration, evidence/report rerun stability, dashboard production build, and visual dashboard rendering.
 - Local release-preflight verification: **PASS** via `npm.cmd run verify` at 2026-07-12T23:47:16+03:00.
 - Root dogfooding: **PASS** as a `REAL_LOCAL_SCAN` with visible exclusions; 100/100 means structural governance readiness, not code correctness or security certification.
-- Still NOT_RUN: GitHub-hosted CI, deployment, real provider integration, load/concurrency, browser accessibility audit, and independent security review.
-- Manual after-code work: create/push the public repository, record the three-minute video, capture final screenshots, and submit on Devpost.
+- Still NOT_RUN: published Devpost rules review, deployment, real provider integration, load/concurrency, browser accessibility audit, final submission-media review, and independent security review.
+- Manual after-code work: recheck the rules after opening, record the three-minute video, capture the remaining final screenshots, and submit on Devpost.
 
 See [FINAL_COMPLETENESS_REVIEW.md](FINAL_COMPLETENESS_REVIEW.md), [README](../README.md), and [Codex build-time self-assessment](CODEX_SELF_ASSESSMENT.md).

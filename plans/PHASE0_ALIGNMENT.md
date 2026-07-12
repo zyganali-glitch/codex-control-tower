@@ -11,6 +11,6 @@ This alignment is derived from the user's complete competition build brief. It i
 | Biggest risk | Losing trust through self-assessment false positives, unproved done claims, or unclear Codex provenance. |
 | Expected proof | Tests, deterministic demo, dashboard build, root self-scan, source-protection checks, clean Git diff, and remote commit verification. |
 | Workflow | Startup: fast and focused, with explicit approval and evidence for release actions. |
-| Next safe mission | Complete release-preflight hardening and publish the verified main branch to the approved repository. |
+| Next safe mission | Recheck the published Devpost rules, capture the final sanitized three-minute demo, and strengthen inspectable Codex change provenance without unapproved product expansion. |
 
 The machine-readable record is `.controltower/phase0.json`.

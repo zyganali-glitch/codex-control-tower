@@ -12,12 +12,12 @@ Generated for the independent Codex Control Tower product repository. This is re
 | Root dogfooding scan | PASS | `node cli/index.js scan --target . --out tmp/root-release-report.json` produced `REAL_LOCAL_SCAN`, 100/100 governance readiness, zero detected risks, zero missing surfaces, and an explicit four-path fixture exclusion list. This structural score is not a code-correctness or security certification. |
 | Dashboard data-contract integrity | PASS | Five adapter tests prove that absent baselines, approval actors, dates, prompts, shield results, recorder statuses, and evidence coverage are not fabricated; Vite built 47 modules. |
 | Source protection | PASS | `docs/SOURCE_PROTECTION.md`, source-protection test, and independent repository boundary. |
-| GitHub publication | NOT_RUN | Remote is configured, but the verified release commit has not yet been pushed at this checkpoint. |
-| GitHub-hosted CI | NOT_RUN | A workflow exists; it cannot run until the repository is pushed. |
+| GitHub publication | PASS | Local and `origin/main` both resolved to release commit `e0ee256e7eb497cd6293fe51f51899645ee3ed90`. |
+| GitHub-hosted CI | PASS | Workflow run [29208503014](https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29208503014) completed successfully; checkout, Node setup, install, tests, demo, dashboard build, and required-file checks passed. |
 | Deployment, real providers, load, accessibility, independent security review | NOT_RUN | Outside the verified competition-build boundary. |
 
 ## Evidence policy
 
 `PASS` means an executed check or inspectable artifact supports the claim. `WARN` means partial or pending proof. `FAIL` records an observed failure. `NOT_RUN` stays visible. `SIMULATED` is used only for the controlled InvoiceFlow Mini demo.
 
-Local release-preflight verification completed at 2026-07-12T23:47:16+03:00. Publication and hosted checks remain bounded below as `NOT_RUN` until observed.
+Local release-preflight verification completed at 2026-07-12T23:47:16+03:00; publication and the first hosted CI run were independently observed by 2026-07-12T23:52:03+03:00. Remaining external checks stay `NOT_RUN`.

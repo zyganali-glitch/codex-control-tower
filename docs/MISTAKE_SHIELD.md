@@ -4,15 +4,15 @@ Verdict: **CAUTION**
 
 ## Proposed action
 
-Harden the root self-scan, verify the complete repository, and publish the approved `main` branch to `zyganali-glitch/codex-control-tower`.
+Recheck the official rules after challenge opening, capture sanitized competition media, and strengthen the Codex provenance story without unapproved product expansion.
 
 ## Reasons
 
-- Publication is externally visible and should occur only after tests, demo, dashboard build, secret scan, and staged-diff checks pass.
-- Protected source repositories must remain untouched and must never become remotes for this working tree.
-- Temporary dashboard captures contain builder-local context and are not approved public assets.
-- Detailed Devpost rules were not yet published at this checkpoint, so eligibility claims must remain qualified.
+- Detailed Devpost rules were not yet published at this checkpoint, so eligibility and model-use claims remain qualified.
+- The README hero is sanitized, but the final video and screenshot set still need frame-by-frame privacy review.
+- A native Codex hook/plugin or change receipt could improve the entry, but it must not displace the working three-minute story or bypass a new scoped approval.
+- Protected source repositories remain read-only and must never become product remotes or demo targets.
 
 ## Next safe action
 
-Run focused scanner tests, then the full verification suite. Inspect the generated artifacts and Git diff, commit only the independent repository, push to the exact approved remote, and verify matching SHAs. Do not call hosted CI `PASS` until its result is observed.
+On or after challenge opening, read the published rules first. Then record the shortest sanitized Detect → Bound → Prove demo and add only the smallest provenance improvement that can be tested and explained honestly.

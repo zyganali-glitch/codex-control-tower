@@ -18,7 +18,7 @@ The build excludes hosted SaaS, mandatory API keys, telemetry, real authenticati
 - [x] Review Gate, Mistake Shield, Flight Recorder, Memory Lens, Context Trace, and Mission Prompt.
 - [x] Phase-0 `en|tr`, automated demo mode, tests, CI workflow, and Devpost narrative.
 - [x] Close root-repository dogfooding regressions and record post-change evidence.
-- [ ] Push the verified `main` branch to the approved GitHub destination.
+- [x] Push the verified `main` branch to the approved GitHub destination and observe hosted CI success.
 - [ ] Recheck published Devpost rules when available and record eligibility constraints.
 - [ ] Capture sanitized final screenshots and a three-minute demo video.
 

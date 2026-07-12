@@ -41,7 +41,7 @@ This review uses `PASS`, `WARN`, `FAIL`, and `NOT_RUN` without hiding unresolved
 | Portable committed demo reports | PASS | Source-protection tests reject builder-specific absolute user paths. |
 | Full root test suite | PASS | Nine CLI/core regression scripts plus five dashboard adapter tests passed. |
 | Full `npm run verify` | PASS | Post-hardening tests, `25 → 88` simulated demo regeneration, dependency audit, and 47-module Vite production build passed. |
-| CI execution on GitHub | NOT_RUN | Workflow exists but was not run in GitHub Actions locally. |
+| CI execution on GitHub | PASS | Push workflow run `29208503014` completed successfully for release commit `e0ee256e7eb497cd6293fe51f51899645ee3ed90`. |
 | Real auth/payment/provider integration | NOT_RUN | Explicitly outside the simulated demo scope. |
 | Deployment, load, browser accessibility, independent security review | NOT_RUN | No such claims are made. |
 

@@ -10,5 +10,5 @@
   "risk": "The largest immediate risk is a trust product that does not govern or truthfully assess its own repository; competition eligibility and Codex-use provenance must also remain explicit.",
   "expectedEvidence": "Full test suite, deterministic demo output, dashboard production build, root self-scan, source-protection checks, clean staged diff, remote commit verification, and visible NOT_RUN gates.",
   "workflow": "startup",
-  "nextMission": "Fix root self-scan false positives, complete real repository governance records, rerun full verification, then publish the approved main branch to the user-provided GitHub repository."
+  "nextMission": "Recheck the published Devpost rules after challenge opening, capture the final sanitized three-minute demo, and add Codex change provenance without expanding into an unapproved cloud build."
 }
