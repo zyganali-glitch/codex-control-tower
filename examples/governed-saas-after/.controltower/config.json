@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0",
+  "product": "Codex Control Tower",
+  "project": "InvoiceFlow Mini",
+  "profile": "startup",
+  "locale": "en",
+  "supportedPhase0Locales": ["en", "tr"],
+  "codexAdapter": true,
+  "localFirst": true,
+  "simulatedDemoData": true,
+  "evidencePolicy": {
+    "passRequiresEvidence": true,
+    "preserveNotRun": true,
+    "labelSimulated": true
+  },
+  "riskPolicy": {
+    "humanApprovalAreas": ["auth", "payments", "destructive-actions", "network-access"],
+    "maxFileLines": 400
+  }
+}

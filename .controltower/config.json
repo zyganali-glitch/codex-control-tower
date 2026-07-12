@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "product": "Codex Control Tower",
+  "profile": "startup",
+  "locale": "en",
+  "supportedPhase0Locales": [
+    "en",
+    "tr"
+  ],
+  "codexAdapter": true,
+  "localFirst": true,
+  "telemetry": false,
+  "dataMode": "REAL_LOCAL_SCAN",
+  "scan": {
+    "exclude": [
+      "examples/demo-report",
+      "examples/demo-workspace",
+      "examples/governed-saas-after",
+      "examples/messy-saas-before"
+    ],
+    "reason": "Keep controlled simulated fixtures from contaminating the product repository's own risk score. Each fixture remains directly scannable as its own target."
+  },
+  "evidencePolicy": {
+    "passRequiresEvidence": true,
+    "preserveNotRun": true,
+    "labelSimulated": true
+  },
+  "updatedAt": "2026-07-12T23:29:03+03:00"
+}

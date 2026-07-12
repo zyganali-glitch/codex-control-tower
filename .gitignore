@@ -1,0 +1,7 @@
+node_modules/
+apps/dashboard/node_modules/
+apps/dashboard/dist/
+tmp/
+examples/demo-workspace/
+*.log
+.DS_Store

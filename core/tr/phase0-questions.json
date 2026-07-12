@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "locale": "tr",
+  "title": "Phase-0 Hizalama",
+  "description": "Uygulama başlamadan önce birer birer sorulan sade sorular.",
+  "questions": [
+    {
+      "id": "goal",
+      "key": "goal",
+      "prompt": "Ne yapmak veya değiştirmek istiyorsun?",
+      "question": "Ne yapmak veya değiştirmek istiyorsun?"
+    },
+    {
+      "id": "audience",
+      "key": "audience",
+      "prompt": "Bu proje kim için?",
+      "question": "Bu proje kim için?"
+    },
+    {
+      "id": "successCriteria",
+      "key": "successCriteria",
+      "prompt": "Bu işin başarılı olduğunu nasıl anlayacağız?",
+      "question": "Bu işin başarılı olduğunu nasıl anlayacağız?"
+    },
+    {
+      "id": "forbiddenAreas",
+      "key": "forbiddenAreas",
+      "prompt": "Codex hangi dosyalara, özelliklere veya bölümlere onay almadan dokunmasın?",
+      "question": "Codex hangi dosyalara, özelliklere veya bölümlere onay almadan dokunmasın?"
+    },
+    {
+      "id": "risk",
+      "key": "risk",
+      "prompt": "Önlemek istediğin en büyük hata veya risk nedir?",
+      "question": "Önlemek istediğin en büyük hata veya risk nedir?"
+    },
+    {
+      "id": "expectedEvidence",
+      "key": "expectedEvidence",
+      "prompt": "Codex “bitti” demeden önce hangi kanıtı görmek istersin?",
+      "question": "Codex “bitti” demeden önce hangi kanıtı görmek istersin?"
+    },
+    {
+      "id": "profile",
+      "key": "profile",
+      "prompt": "Hafif, startup, enterprise veya regulated çalışma düzeninden hangisi uygun?",
+      "question": "Hafif, startup, enterprise veya regulated çalışma düzeninden hangisi uygun?"
+    },
+    {
+      "id": "nextMission",
+      "key": "nextMission",
+      "prompt": "Codex’in bir sonraki güvenli görevi ne olsun?",
+      "question": "Codex’in bir sonraki güvenli görevi ne olsun?"
+    }
+  ],
+  "profileChoices": ["light", "startup", "enterprise", "regulated"]
+}

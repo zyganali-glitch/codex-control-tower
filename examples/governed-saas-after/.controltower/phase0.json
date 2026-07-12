@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "project": "InvoiceFlow Mini",
+  "locale": "en",
+  "availableQuestionLocales": ["en", "tr"],
+  "simulated": true,
+  "dataClassification": "SIMULATED_DEMO_DATA",
+  "goal": "Harden the simulated invoice, authentication, and payment workflow without adding external services.",
+  "audience": "Small-business operators evaluating a lightweight invoice tracker and Build Week demo viewers.",
+  "successCriteria": "A signed local session, a verified idempotent simulated payment, updated governance docs, and a passing Node.js test.",
+  "forbiddenAreas": "No real providers, network calls, databases, credentials, customer data, or files outside this demo fixture.",
+  "risk": "An unsigned identity or unverified payment event could mark the wrong invoice as paid.",
+  "expectedEvidence": "Recorded test command, assertions for tampered auth and payment idempotency, traceability links, visible NOT_RUN gates, and review state.",
+  "profile": "startup",
+  "nextMission": "Review the bounded auth and payment hardening evidence; do not expand the product scope.",
+  "answers": {
+    "goal": "Harden the simulated invoice, authentication, and payment workflow without adding external services.",
+    "audience": "Small-business operators evaluating a lightweight invoice tracker and Build Week demo viewers.",
+    "successCriteria": "A signed local session, a verified idempotent simulated payment, updated governance docs, and a passing Node.js test.",
+    "forbiddenAreas": "No real providers, network calls, databases, credentials, customer data, or files outside this demo fixture.",
+    "risk": "An unsigned identity or unverified payment event could mark the wrong invoice as paid.",
+    "expectedEvidence": "Recorded test command, assertions for tampered auth and payment idempotency, traceability links, visible NOT_RUN gates, and review state.",
+    "profile": "startup",
+    "nextMission": "Review the bounded auth and payment hardening evidence; do not expand the product scope."
+  },
+  "missionPrompt": "SIMULATED CODEX MISSION: In examples/governed-saas-after, review only the bounded auth and payment hardening. Preserve the goal of a local invoice tracker. Prevent unsigned identity and unverified or duplicate payment events. Do not touch real providers, network services, credentials, customer data, or files outside the fixture. Require the Node test result, traceability links, explicit NOT_RUN gates, and current review status before claiming done."
+  ,
+  "codexMissionPrompt": "SIMULATED CODEX MISSION: In examples/governed-saas-after, review only the bounded auth and payment hardening. Preserve the goal of a local invoice tracker. Prevent unsigned identity and unverified or duplicate payment events. Do not touch real providers, network services, credentials, customer data, or files outside the fixture. Require the Node test result, traceability links, explicit NOT_RUN gates, and current review status before claiming done."
+}

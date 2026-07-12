@@ -1,0 +1,911 @@
+{
+  "schemaVersion": "1.0",
+  "projectName": "invoiceflow-mini-simulated-before",
+  "targetPath": ".\\examples\\demo-workspace",
+  "generatedAt": "2026-07-12T20:47:06.369Z",
+  "scanMode": "SIMULATED",
+  "simulatedData": true,
+  "scanScope": {
+    "targetPath": ".\\examples\\demo-workspace",
+    "excludedPaths": [],
+    "exclusionSource": "built-in generated/dependency exclusions only",
+    "note": "No repository-specific path exclusions were configured."
+  },
+  "score": 25,
+  "scoreBreakdown": {
+    "planning": 3,
+    "codexReadiness": 3,
+    "evidencePack": 0,
+    "testCiProof": 9,
+    "documentationSync": 2,
+    "brownfieldSafety": 2,
+    "memoryContinuity": 0,
+    "reviewGate": 0,
+    "contextGraph": 6,
+    "mistakeShield": 0,
+    "riskHygiene": 0
+  },
+  "codexReadiness": "FAIL",
+  "missingSurfaces": [
+    ".codex/AGENTS.md",
+    ".controltower/config.json",
+    ".controltower/review-gate.json",
+    ".controltower/flight-recorder.jsonl",
+    "plans/master-roadmap.md",
+    "docs/EVIDENCE_REPORT.md",
+    "docs/TRACEABILITY_MATRIX.md",
+    "docs/NOT_RUN_GATES.md",
+    "docs/TECH_DEBT_DELTA.md",
+    "docs/MEMORY_LENS.md",
+    "docs/MISTAKE_SHIELD.md",
+    "TECH_DEBT_AND_SECURITY.md",
+    "docs/ARCHITECTURE.md",
+    ".controltower/phase0.json",
+    "working tests"
+  ],
+  "riskFlags": [
+    {
+      "id": "NO_CODEX_INSTRUCTIONS",
+      "severity": "CRITICAL",
+      "issue": "No Codex instruction surface",
+      "whyItMatters": "A future session has no durable scope or safety rules.",
+      "recommendedFix": "Add .codex/AGENTS.md with allowed files, evidence, and review rules.",
+      "files": []
+    },
+    {
+      "id": "NO_PLAN",
+      "severity": "CRITICAL",
+      "issue": "No master roadmap",
+      "whyItMatters": "Work can drift without a durable mission and acceptance criteria.",
+      "recommendedFix": "Create plans/master-roadmap.md before implementation.",
+      "files": []
+    },
+    {
+      "id": "NO_EVIDENCE",
+      "severity": "CRITICAL",
+      "issue": "No evidence report",
+      "whyItMatters": "A done claim cannot be checked against concrete proof.",
+      "recommendedFix": "Create docs/EVIDENCE_REPORT.md and record only verified checks.",
+      "files": []
+    },
+    {
+      "id": "NO_TRACEABILITY",
+      "severity": "HIGH",
+      "issue": "No traceability matrix",
+      "whyItMatters": "Requirements are not connected to implementation and proof.",
+      "recommendedFix": "Create docs/TRACEABILITY_MATRIX.md.",
+      "files": []
+    },
+    {
+      "id": "NO_NOT_RUN",
+      "severity": "HIGH",
+      "issue": "No NOT_RUN gates file",
+      "whyItMatters": "Skipped checks can disappear from the handoff.",
+      "recommendedFix": "Create docs/NOT_RUN_GATES.md and keep skipped checks visible.",
+      "files": []
+    },
+    {
+      "id": "NO_REVIEW_GATE",
+      "severity": "CRITICAL",
+      "issue": "No local review gate",
+      "whyItMatters": "Risky actions have no explicit human decision artifact.",
+      "recommendedFix": "Create .controltower/review-gate.json in AWAITING_HUMAN.",
+      "files": []
+    },
+    {
+      "id": "NO_FLIGHT_RECORDER",
+      "severity": "HIGH",
+      "issue": "No flight recorder",
+      "whyItMatters": "The next session cannot reconstruct prompts, changes, tests, and approvals.",
+      "recommendedFix": "Create .controltower/flight-recorder.jsonl.",
+      "files": []
+    },
+    {
+      "id": "NO_MEMORY_LENS",
+      "severity": "MEDIUM",
+      "issue": "No memory lens",
+      "whyItMatters": "Minefields and durable constraints may be missed in future sessions.",
+      "recommendedFix": "Create docs/MEMORY_LENS.md.",
+      "files": []
+    },
+    {
+      "id": "NO_MISTAKE_SHIELD",
+      "severity": "MEDIUM",
+      "issue": "No mistake shield record",
+      "whyItMatters": "Proposed work is not compared with known risks.",
+      "recommendedFix": "Create docs/MISTAKE_SHIELD.md.",
+      "files": []
+    },
+    {
+      "id": "WEAK_TESTS",
+      "severity": "HIGH",
+      "issue": "Tests are missing or only placeholders",
+      "whyItMatters": "Behavior changes could be reported without executable proof.",
+      "recommendedFix": "Add a small working test and record its command.",
+      "files": []
+    },
+    {
+      "id": "NO_ARCHITECTURE",
+      "severity": "HIGH",
+      "issue": "Architecture documentation is missing",
+      "whyItMatters": "Future Codex sessions lack system boundaries and dependency intent.",
+      "recommendedFix": "Add docs/ARCHITECTURE.md.",
+      "files": []
+    },
+    {
+      "id": "NO_BROWNFIELD_QUARANTINE",
+      "severity": "HIGH",
+      "issue": "No brownfield safety record",
+      "whyItMatters": "Existing risky areas may be changed without explicit quarantine.",
+      "recommendedFix": "Add TECH_DEBT_AND_SECURITY.md before touching legacy areas.",
+      "files": []
+    },
+    {
+      "id": "UNTRACKED_TODO",
+      "severity": "MEDIUM",
+      "issue": "6 TODO/FIXME marker(s) detected",
+      "whyItMatters": "Markers can become hidden scope and repeated work.",
+      "recommendedFix": "Move markers into the roadmap or tech-debt delta.",
+      "files": [
+        "src/auth.js",
+        "src/customers.js",
+        "src/invoices.js",
+        "src/payments.js"
+      ]
+    },
+    {
+      "id": "STALE_README",
+      "severity": "HIGH",
+      "issue": "README is missing, tiny, or marked stale",
+      "whyItMatters": "Users and future Codex sessions may follow outdated commands.",
+      "recommendedFix": "Rewrite or synchronize README with verified behavior.",
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "id": "RISKY_AUTH",
+      "severity": "CRITICAL",
+      "issue": "Risky authentication logic detected",
+      "whyItMatters": "Unverified tokens, passwords, or caller-controlled roles can bypass authorization.",
+      "recommendedFix": "Require signed token verification and focused auth tests before changes.",
+      "files": [
+        "src/auth.js"
+      ]
+    },
+    {
+      "id": "RISKY_PAYMENT",
+      "severity": "CRITICAL",
+      "issue": "Risky payment state logic detected",
+      "whyItMatters": "Caller-controlled payment state can create false settlement records.",
+      "recommendedFix": "Verify provider events, amounts, currency, and idempotency before marking paid.",
+      "files": [
+        "src/payments.js"
+      ]
+    }
+  ],
+  "detectedFiles": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 424,
+      "lines": 17,
+      "modifiedAt": "2026-07-12T17:08:16.031Z"
+    },
+    {
+      "path": "docs/old-notes.md",
+      "bytes": 404,
+      "lines": 11,
+      "modifiedAt": "2026-07-12T16:56:59.462Z"
+    },
+    {
+      "path": "package.json",
+      "bytes": 323,
+      "lines": 13,
+      "modifiedAt": "2026-07-12T17:12:17.625Z"
+    },
+    {
+      "path": "README.md",
+      "bytes": 453,
+      "lines": 16,
+      "modifiedAt": "2026-07-12T16:56:40.793Z"
+    },
+    {
+      "path": "src/app.js",
+      "bytes": 1079,
+      "lines": 32,
+      "modifiedAt": "2026-07-12T16:56:53.938Z"
+    },
+    {
+      "path": "src/auth.js",
+      "bytes": 994,
+      "lines": 31,
+      "modifiedAt": "2026-07-12T16:56:45.605Z"
+    },
+    {
+      "path": "src/customers.js",
+      "bytes": 505,
+      "lines": 23,
+      "modifiedAt": "2026-07-12T16:56:47.263Z"
+    },
+    {
+      "path": "src/invoices.js",
+      "bytes": 704,
+      "lines": 28,
+      "modifiedAt": "2026-07-12T16:56:48.917Z"
+    },
+    {
+      "path": "src/payments.js",
+      "bytes": 866,
+      "lines": 26,
+      "modifiedAt": "2026-07-12T16:56:50.585Z"
+    },
+    {
+      "path": "src/report.js",
+      "bytes": 522,
+      "lines": 19,
+      "modifiedAt": "2026-07-12T16:56:52.303Z"
+    },
+    {
+      "path": "src/utils.js",
+      "bytes": 369,
+      "lines": 16,
+      "modifiedAt": "2026-07-12T16:56:43.770Z"
+    },
+    {
+      "path": "tests/placeholder.test.js",
+      "bytes": 117,
+      "lines": 3,
+      "modifiedAt": "2026-07-12T16:56:56.726Z"
+    }
+  ],
+  "suggestedNextActions": [
+    "Add .codex/AGENTS.md with allowed files, evidence, and review rules.",
+    "Create plans/master-roadmap.md before implementation.",
+    "Create docs/EVIDENCE_REPORT.md and record only verified checks.",
+    "Create docs/TRACEABILITY_MATRIX.md.",
+    "Create docs/NOT_RUN_GATES.md and keep skipped checks visible.",
+    "Create .controltower/review-gate.json in AWAITING_HUMAN.",
+    "Create .controltower/flight-recorder.jsonl.",
+    "Create docs/MEMORY_LENS.md."
+  ],
+  "codexPrompt": "# Codex Control Tower Mission\n\nTarget repository: .\\examples\\demo-workspace\nMission goal: Close only the detected governance gaps without unrelated refactoring.\nReview gate: AWAITING_HUMAN\nReview gate scope: No approved scope recorded.\nMistake Shield: CAUTION\n\n## Detected risks\n- [CRITICAL] No Codex instruction surface\n- [CRITICAL] No master roadmap\n- [CRITICAL] No evidence report\n- [HIGH] No traceability matrix\n- [HIGH] No NOT_RUN gates file\n- [CRITICAL] No local review gate\n- [HIGH] No flight recorder\n- [MEDIUM] No memory lens\n- [MEDIUM] No mistake shield record\n- [HIGH] Tests are missing or only placeholders\n\n## Missing surfaces\n- .codex/AGENTS.md\n- .controltower/config.json\n- .controltower/review-gate.json\n- .controltower/flight-recorder.jsonl\n- plans/master-roadmap.md\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n- docs/TECH_DEBT_DELTA.md\n- docs/MEMORY_LENS.md\n- docs/MISTAKE_SHIELD.md\n- TECH_DEBT_AND_SECURITY.md\n- docs/ARCHITECTURE.md\n- .controltower/phase0.json\n- working tests\n\n## Allowed files\n- governance files listed under Missing surfaces\n- tests directly related to the approved mission\n\n## Forbidden actions\n- Do not delete tests, history, user data, or unrelated legacy code.\n- Do not overwrite existing files without a backup and explicit need.\n- Do not push, publish, deploy, or upload source unless the APPROVED scoped Review Gate explicitly authorizes the exact action and destination. Never expose secrets.\n- Do not expand scope beyond the mission or bypass a non-approved review gate.\n\n## Required evidence\n- List every changed file and every command actually run.\n- Attach concrete output or artifact paths for every PASS claim.\n- Keep WARN, FAIL, NOT_RUN, and SIMULATED labels visible.\n\n## Tests to run\n- Run the repository test command discovered in package metadata.\n\n## Documentation to update\n- README.md when behavior or commands change\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n\n## Execution contract\nYou are Codex working under Codex Control Tower. Fix only the listed gaps. Read instructions and plans before editing. Stop before risky implementation unless the local gate is APPROVED, fully scoped, and the proposed action stays within that scope. PASS requires evidence; an edited file is not a validated file. If a check cannot run, label it NOT_RUN and explain why.\n\n## Final response format\n1. Summary\n2. Changed files\n3. Commands and evidence with PASS/WARN/FAIL/NOT_RUN/SIMULATED\n4. Review gate and Mistake Shield state\n5. Remaining risks\n6. Next safe action",
+  "traceabilityMatrix": [
+    {
+      "requirement": "Plan before implementation",
+      "implementation": "Missing",
+      "evidence": "Missing",
+      "status": "FAIL"
+    },
+    {
+      "requirement": "Human review gate",
+      "implementation": "Missing",
+      "evidence": "AWAITING_HUMAN",
+      "status": "WARN"
+    },
+    {
+      "requirement": "Executable proof",
+      "implementation": "tests/placeholder.test.js",
+      "evidence": "Tests were not executed by scan.",
+      "status": "WARN"
+    },
+    {
+      "requirement": "Visible skipped gates",
+      "implementation": "Missing",
+      "evidence": "No substantial record",
+      "status": "FAIL"
+    }
+  ],
+  "evidenceStatus": {
+    "mode": "SIMULATED",
+    "plan": {
+      "status": "FAIL",
+      "evidence": null
+    },
+    "tests": {
+      "status": "WARN",
+      "evidence": [
+        "tests/placeholder.test.js"
+      ]
+    },
+    "ci": {
+      "status": "NOT_RUN",
+      "evidence": [
+        ".github/workflows/ci.yml"
+      ]
+    },
+    "documentation": {
+      "status": "WARN",
+      "evidence": [
+        "README.md"
+      ]
+    },
+    "evidenceReport": {
+      "status": "FAIL",
+      "evidence": null
+    },
+    "traceability": {
+      "status": "FAIL",
+      "evidence": null
+    },
+    "techDebtDelta": {
+      "status": "FAIL",
+      "evidence": null
+    },
+    "notRunVisibility": {
+      "status": "FAIL",
+      "evidence": null
+    }
+  },
+  "contextGraph": {
+    "generatedAt": "2026-07-12T20:47:06.365Z",
+    "generatedLocally": true,
+    "algorithm": "deterministic lexical and repository-surface analysis",
+    "nodes": [
+      {
+        "id": "file:.github/workflows/ci.yml",
+        "label": ".github/workflows/ci.yml",
+        "type": "ci",
+        "lines": 17,
+        "bytes": 424,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.88,
+        "importance": 0.88,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a ci surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/old-notes.md",
+        "label": "docs/old-notes.md",
+        "type": "documentation",
+        "lines": 11,
+        "bytes": 404,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:package.json",
+        "label": "package.json",
+        "type": "file",
+        "lines": 13,
+        "bytes": 323,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:README.md",
+        "label": "README.md",
+        "type": "readme",
+        "lines": 16,
+        "bytes": 453,
+        "risk": true,
+        "markers": 0,
+        "relevance": 0.94,
+        "importance": 0.82,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected because the file contains or is connected to a detected risk.",
+        "owners": []
+      },
+      {
+        "id": "file:src/app.js",
+        "label": "src/app.js",
+        "type": "source",
+        "lines": 32,
+        "bytes": 1079,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/auth.js",
+        "label": "src/auth.js",
+        "type": "source",
+        "lines": 31,
+        "bytes": 994,
+        "risk": true,
+        "markers": 2,
+        "relevance": 0.82,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected because the file contains or is connected to a detected risk.",
+        "owners": []
+      },
+      {
+        "id": "file:src/customers.js",
+        "label": "src/customers.js",
+        "type": "source",
+        "lines": 23,
+        "bytes": 505,
+        "risk": true,
+        "markers": 1,
+        "relevance": 0.82,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected because the file contains or is connected to a detected risk.",
+        "owners": []
+      },
+      {
+        "id": "file:src/invoices.js",
+        "label": "src/invoices.js",
+        "type": "source",
+        "lines": 28,
+        "bytes": 704,
+        "risk": true,
+        "markers": 1,
+        "relevance": 0.82,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected because the file contains or is connected to a detected risk.",
+        "owners": []
+      },
+      {
+        "id": "file:src/payments.js",
+        "label": "src/payments.js",
+        "type": "source",
+        "lines": 26,
+        "bytes": 866,
+        "risk": true,
+        "markers": 2,
+        "relevance": 0.82,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected because the file contains or is connected to a detected risk.",
+        "owners": []
+      },
+      {
+        "id": "file:src/report.js",
+        "label": "src/report.js",
+        "type": "source",
+        "lines": 19,
+        "bytes": 522,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/utils.js",
+        "label": "src/utils.js",
+        "type": "source",
+        "lines": 16,
+        "bytes": 369,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:tests/placeholder.test.js",
+        "label": "tests/placeholder.test.js",
+        "type": "test",
+        "lines": 3,
+        "bytes": 117,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.86,
+        "importance": 0.86,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a test surface for Codex mission context.",
+        "owners": []
+      }
+    ],
+    "edges": [
+      {
+        "from": "file:src/app.js",
+        "to": "file:src/auth.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:src/app.js",
+        "to": "file:src/customers.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:src/app.js",
+        "to": "file:src/invoices.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:src/app.js",
+        "to": "file:src/payments.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:src/app.js",
+        "to": "file:src/report.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:src/customers.js",
+        "to": "file:src/utils.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:src/invoices.js",
+        "to": "file:src/utils.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:src/payments.js",
+        "to": "file:src/utils.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:src/report.js",
+        "to": "file:src/utils.js",
+        "relation": "imports"
+      }
+    ],
+    "ownershipHints": [],
+    "missingOwners": [
+      "src/app.js",
+      "src/auth.js",
+      "src/customers.js",
+      "src/invoices.js",
+      "src/payments.js",
+      "src/report.js",
+      "src/utils.js"
+    ],
+    "overlappingPlans": [],
+    "stats": {
+      "nodeCount": 12,
+      "edgeCount": 9,
+      "riskNodeCount": 5,
+      "todoFixmeCount": 6
+    },
+    "contextTrace": [
+      {
+        "id": "file:README.md",
+        "label": "README.md",
+        "type": "readme",
+        "lines": 16,
+        "bytes": 453,
+        "risk": true,
+        "markers": 0,
+        "relevance": 0.94,
+        "importance": 0.82,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected because the file contains or is connected to a detected risk.",
+        "owners": []
+      },
+      {
+        "id": "file:.github/workflows/ci.yml",
+        "label": ".github/workflows/ci.yml",
+        "type": "ci",
+        "lines": 17,
+        "bytes": 424,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.88,
+        "importance": 0.88,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a ci surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:tests/placeholder.test.js",
+        "label": "tests/placeholder.test.js",
+        "type": "test",
+        "lines": 3,
+        "bytes": 117,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.86,
+        "importance": 0.86,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a test surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/auth.js",
+        "label": "src/auth.js",
+        "type": "source",
+        "lines": 31,
+        "bytes": 994,
+        "risk": true,
+        "markers": 2,
+        "relevance": 0.82,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected because the file contains or is connected to a detected risk.",
+        "owners": []
+      },
+      {
+        "id": "file:src/customers.js",
+        "label": "src/customers.js",
+        "type": "source",
+        "lines": 23,
+        "bytes": 505,
+        "risk": true,
+        "markers": 1,
+        "relevance": 0.82,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected because the file contains or is connected to a detected risk.",
+        "owners": []
+      },
+      {
+        "id": "file:src/invoices.js",
+        "label": "src/invoices.js",
+        "type": "source",
+        "lines": 28,
+        "bytes": 704,
+        "risk": true,
+        "markers": 1,
+        "relevance": 0.82,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected because the file contains or is connected to a detected risk.",
+        "owners": []
+      },
+      {
+        "id": "file:src/payments.js",
+        "label": "src/payments.js",
+        "type": "source",
+        "lines": 26,
+        "bytes": 866,
+        "risk": true,
+        "markers": 2,
+        "relevance": 0.82,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected because the file contains or is connected to a detected risk.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/old-notes.md",
+        "label": "docs/old-notes.md",
+        "type": "documentation",
+        "lines": 11,
+        "bytes": 404,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/app.js",
+        "label": "src/app.js",
+        "type": "source",
+        "lines": 32,
+        "bytes": 1079,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/report.js",
+        "label": "src/report.js",
+        "type": "source",
+        "lines": 19,
+        "bytes": 522,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/utils.js",
+        "label": "src/utils.js",
+        "type": "source",
+        "lines": 16,
+        "bytes": 369,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:package.json",
+        "label": "package.json",
+        "type": "file",
+        "lines": 13,
+        "bytes": 323,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      }
+    ],
+    "contextBudget": {
+      "maxItems": 24,
+      "selectedItems": 12,
+      "availableItems": 12,
+      "estimatedTokens": 1695
+    }
+  },
+  "reviewGate": {
+    "status": "AWAITING_HUMAN",
+    "note": "Human review has not been recorded.",
+    "updatedAt": null,
+    "decidedBy": null,
+    "localFileGate": true,
+    "identityVerified": false,
+    "scope": null,
+    "allowedFiles": [],
+    "forbiddenActions": [],
+    "scopeComplete": false,
+    "exists": false,
+    "decisionRecorded": false
+  },
+  "memoryLens": {
+    "generatedAt": "2026-07-12T20:47:06.368Z",
+    "generatedLocally": true,
+    "sources": [
+      {
+        "relative": "README.md",
+        "ageDays": 0,
+        "stale": false,
+        "bytes": 453
+      }
+    ],
+    "persistentRules": [],
+    "neverForgetRisks": [
+      "The app keeps customers, invoices, and payment records in memory. Authentication"
+    ],
+    "architecturePrinciples": [],
+    "environmentConstraints": [],
+    "userPreferences": [],
+    "staleSections": [],
+    "missingSources": [
+      "AGENT_MEMORY_AND_LESSONS.md",
+      "AGENT_ARCHITECTURE_AND_PATTERNS.md",
+      "AGENT_ENVIRONMENT_AND_API.md",
+      "AGENT_USER_PREFERENCES.md",
+      "docs/MEMORY_LENS.md",
+      "TECH_DEBT_AND_SECURITY.md"
+    ],
+    "contradictions": [],
+    "selectedItems": [
+      {
+        "pillar": "Minefield",
+        "text": "The app keeps customers, invoices, and payment records in memory. Authentication",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 1,
+        "freshness": "fresh",
+        "importance": "high"
+      }
+    ],
+    "metrics": {
+      "sourcesFound": 1,
+      "protectedItems": 1,
+      "staleSources": 0,
+      "continuityCoverage": 14
+    }
+  },
+  "mistakeShield": {
+    "verdict": "BLOCKED",
+    "proposedAction": "Refactor auth and delete old tests",
+    "reasons": [
+      "A destructive verb was detected while the local review gate is AWAITING_HUMAN.",
+      "Removing test evidence can hide regressions and requires explicit, scoped approval.",
+      "Matched known risk: Tests are missing or only placeholders"
+    ],
+    "matchedLessons": [],
+    "gateStatus": "AWAITING_HUMAN",
+    "saferNextAction": "Narrow the change, preserve tests, record a plan, and obtain an APPROVED local review gate with a note.",
+    "checkedAt": "2026-07-12T20:47:06.370Z",
+    "deterministic": true
+  },
+  "phase0": null,
+  "flightRecorder": {
+    "events": []
+  },
+  "facts": {
+    "hasPackage": true,
+    "hasCodexInstructions": false,
+    "hasConfig": false,
+    "hasRoadmap": false,
+    "hasAnyPlan": false,
+    "hasEvidence": false,
+    "hasTraceability": false,
+    "hasNotRun": false,
+    "hasTechDebtDelta": false,
+    "hasMemoryLens": false,
+    "hasMistakeShield": false,
+    "hasBrownfield": false,
+    "hasReadme": true,
+    "hasArchitecture": false,
+    "hasPhase0": false,
+    "hasFlightRecorder": false,
+    "reviewGateExists": false,
+    "reviewGateStatus": "AWAITING_HUMAN",
+    "reviewGateScoped": false,
+    "reviewGateDecisionRecorded": false,
+    "hasTests": true,
+    "testsHealthy": false,
+    "testSurfaceMeaningful": true,
+    "weakTests": true,
+    "testFiles": [
+      "tests/placeholder.test.js"
+    ],
+    "hasTestScript": true,
+    "hasCi": true,
+    "ciHealthy": true,
+    "ciFiles": [
+      ".github/workflows/ci.yml"
+    ],
+    "readmeHealthy": false,
+    "todoCount": 6,
+    "simulatedData": true,
+    "codexInstructionsHealthy": false,
+    "configHealthy": false,
+    "roadmapHealthy": false,
+    "evidenceHealthy": false,
+    "traceabilityHealthy": false,
+    "notRunHealthy": false,
+    "techDebtHealthy": false,
+    "memoryLensHealthy": false,
+    "mistakeShieldHealthy": false,
+    "brownfieldHealthy": false,
+    "architectureHealthy": false,
+    "phase0Healthy": false,
+    "flightRecorderHealthy": false,
+    "evidenceSurfaceCount": 0,
+    "contextNodeCount": 12,
+    "criticalRiskCount": 6,
+    "highRiskCount": 7
+  }
+}

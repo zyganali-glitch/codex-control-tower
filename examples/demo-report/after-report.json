@@ -1,0 +1,1749 @@
+{
+  "schemaVersion": "1.0",
+  "projectName": "invoiceflow-mini-simulated-governed",
+  "targetPath": ".\\examples\\governed-saas-after",
+  "generatedAt": "2026-07-12T20:47:06.704Z",
+  "scanMode": "SIMULATED",
+  "simulatedData": true,
+  "scanScope": {
+    "targetPath": ".\\examples\\governed-saas-after",
+    "excludedPaths": [],
+    "exclusionSource": "built-in generated/dependency exclusions only",
+    "note": "No repository-specific path exclusions were configured."
+  },
+  "score": 88,
+  "scoreBreakdown": {
+    "planning": 12,
+    "codexReadiness": 12,
+    "evidencePack": 10,
+    "testCiProof": 8,
+    "documentationSync": 8,
+    "brownfieldSafety": 8,
+    "memoryContinuity": 10,
+    "reviewGate": 7,
+    "contextGraph": 6,
+    "mistakeShield": 5,
+    "riskHygiene": 2
+  },
+  "codexReadiness": "PASS",
+  "missingSurfaces": [
+    ".github/workflows/ci.yml"
+  ],
+  "riskFlags": [
+    {
+      "id": "NO_CI",
+      "severity": "HIGH",
+      "issue": "No CI configuration",
+      "whyItMatters": "Repository checks are not repeatable in a clean automation environment.",
+      "recommendedFix": "Add a minimal CI workflow that runs tests and the demo.",
+      "files": []
+    }
+  ],
+  "detectedFiles": [
+    {
+      "path": ".codex/AGENTS.md",
+      "bytes": 1539,
+      "lines": 39,
+      "modifiedAt": "2026-07-12T16:59:39.621Z"
+    },
+    {
+      "path": ".controltower/config.json",
+      "bytes": 509,
+      "lines": 21,
+      "modifiedAt": "2026-07-12T16:59:42.374Z"
+    },
+    {
+      "path": ".controltower/flight-recorder.jsonl",
+      "bytes": 1746,
+      "lines": 0,
+      "modifiedAt": "2026-07-12T17:11:24.198Z"
+    },
+    {
+      "path": ".controltower/phase0.json",
+      "bytes": 2977,
+      "lines": 30,
+      "modifiedAt": "2026-07-12T17:07:08.870Z"
+    },
+    {
+      "path": ".controltower/review-gate.json",
+      "bytes": 957,
+      "lines": 30,
+      "modifiedAt": "2026-07-12T17:11:03.372Z"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 1829,
+      "lines": 43,
+      "modifiedAt": "2026-07-12T17:01:44.192Z"
+    },
+    {
+      "path": "docs/EVIDENCE_REPORT.md",
+      "bytes": 1980,
+      "lines": 43,
+      "modifiedAt": "2026-07-12T17:01:34.506Z"
+    },
+    {
+      "path": "docs/MEMORY_LENS.md",
+      "bytes": 1409,
+      "lines": 36,
+      "modifiedAt": "2026-07-12T17:01:40.959Z"
+    },
+    {
+      "path": "docs/MISTAKE_SHIELD.md",
+      "bytes": 994,
+      "lines": 25,
+      "modifiedAt": "2026-07-12T17:01:42.584Z"
+    },
+    {
+      "path": "docs/NOT_RUN_GATES.md",
+      "bytes": 1058,
+      "lines": 15,
+      "modifiedAt": "2026-07-12T17:01:37.767Z"
+    },
+    {
+      "path": "docs/TECH_DEBT_DELTA.md",
+      "bytes": 1218,
+      "lines": 24,
+      "modifiedAt": "2026-07-12T17:01:39.349Z"
+    },
+    {
+      "path": "docs/TRACEABILITY_MATRIX.md",
+      "bytes": 1024,
+      "lines": 16,
+      "modifiedAt": "2026-07-12T17:01:36.139Z"
+    },
+    {
+      "path": "package.json",
+      "bytes": 350,
+      "lines": 16,
+      "modifiedAt": "2026-07-12T17:12:19.186Z"
+    },
+    {
+      "path": "plans/master-roadmap.md",
+      "bytes": 1105,
+      "lines": 23,
+      "modifiedAt": "2026-07-12T16:59:49.919Z"
+    },
+    {
+      "path": "plans/PHASE0_ALIGNMENT.md",
+      "bytes": 1549,
+      "lines": 27,
+      "modifiedAt": "2026-07-12T16:59:51.553Z"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1846,
+      "lines": 43,
+      "modifiedAt": "2026-07-12T16:58:27.504Z"
+    },
+    {
+      "path": "src/app.js",
+      "bytes": 1363,
+      "lines": 41,
+      "modifiedAt": "2026-07-12T16:58:39.758Z"
+    },
+    {
+      "path": "src/auth.js",
+      "bytes": 1990,
+      "lines": 59,
+      "modifiedAt": "2026-07-12T17:07:10.651Z"
+    },
+    {
+      "path": "src/customers.js",
+      "bytes": 752,
+      "lines": 24,
+      "modifiedAt": "2026-07-12T16:58:33.297Z"
+    },
+    {
+      "path": "src/invoices.js",
+      "bytes": 935,
+      "lines": 32,
+      "modifiedAt": "2026-07-12T16:58:34.921Z"
+    },
+    {
+      "path": "src/payments.js",
+      "bytes": 1529,
+      "lines": 40,
+      "modifiedAt": "2026-07-12T16:58:36.540Z"
+    },
+    {
+      "path": "src/report.js",
+      "bytes": 551,
+      "lines": 20,
+      "modifiedAt": "2026-07-12T16:58:38.193Z"
+    },
+    {
+      "path": "src/utils.js",
+      "bytes": 493,
+      "lines": 21,
+      "modifiedAt": "2026-07-12T16:58:30.114Z"
+    },
+    {
+      "path": "TECH_DEBT_AND_SECURITY.md",
+      "bytes": 941,
+      "lines": 22,
+      "modifiedAt": "2026-07-12T17:07:12.398Z"
+    },
+    {
+      "path": "tests/invoiceflow.test.js",
+      "bytes": 2245,
+      "lines": 65,
+      "modifiedAt": "2026-07-12T16:58:42.380Z"
+    }
+  ],
+  "suggestedNextActions": [
+    "Add a minimal CI workflow that runs tests and the demo."
+  ],
+  "codexPrompt": "# Codex Control Tower Mission\n\nTarget repository: .\\examples\\governed-saas-after\nMission goal: Review the bounded auth and payment hardening evidence; do not expand the product scope.\nReview gate: APPROVED (scoped)\nReview gate scope: Harden the local simulated authentication and payment flow and add one integration test.\nMistake Shield: CLEAR\n\n## Detected risks\n- [HIGH] No CI configuration\n\n## Missing surfaces\n- .github/workflows/ci.yml\n\n## Allowed files\n- src/auth.js\n- src/payments.js\n- tests/invoiceflow.test.js\n- docs/**\n- plans/**\n- .controltower/**\n\n## Forbidden actions\n- Do not delete tests, history, user data, or unrelated legacy code.\n- Do not overwrite existing files without a backup and explicit need.\n- Do not push, publish, deploy, or upload source unless the APPROVED scoped Review Gate explicitly authorizes the exact action and destination. Never expose secrets.\n- Do not expand scope beyond the mission or bypass a non-approved review gate.\n- Review Gate forbids: connect to a real payment provider\n- Review Gate forbids: use real credentials or customer data\n- Review Gate forbids: delete tests\n- Review Gate forbids: write outside the demo fixture\n- Do not touch without approval: No real providers\n- Do not touch without approval: network calls\n- Do not touch without approval: databases\n- Do not touch without approval: credentials\n- Do not touch without approval: customer data\n- Do not touch without approval: or files outside this demo fixture.\n\n## Required evidence\n- Recorded test command, assertions for tampered auth and payment idempotency, traceability links, visible NOT_RUN gates, and review state.\n- List every changed file and every command actually run.\n- Attach concrete output or artifact paths for every PASS claim.\n- Keep WARN, FAIL, NOT_RUN, and SIMULATED labels visible.\n\n## Tests to run\n- Run the repository test command discovered in package metadata.\n\n## Documentation to update\n- README.md when behavior or commands change\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n\n## Execution contract\nYou are Codex working under Codex Control Tower. Fix only the listed gaps. Read instructions and plans before editing. Stop before risky implementation unless the local gate is APPROVED, fully scoped, and the proposed action stays within that scope. PASS requires evidence; an edited file is not a validated file. If a check cannot run, label it NOT_RUN and explain why.\n\n## Final response format\n1. Summary\n2. Changed files\n3. Commands and evidence with PASS/WARN/FAIL/NOT_RUN/SIMULATED\n4. Review gate and Mistake Shield state\n5. Remaining risks\n6. Next safe action",
+  "traceabilityMatrix": [
+    {
+      "requirement": "Plan before implementation",
+      "implementation": "plans/master-roadmap.md",
+      "evidence": "docs/EVIDENCE_REPORT.md",
+      "status": "PASS"
+    },
+    {
+      "requirement": "Human review gate",
+      "implementation": ".controltower/review-gate.json",
+      "evidence": "APPROVED",
+      "status": "PASS"
+    },
+    {
+      "requirement": "Executable proof",
+      "implementation": "tests/invoiceflow.test.js",
+      "evidence": "node --test tests/invoiceflow.test.js exited 0 with 2 tests.",
+      "status": "PASS"
+    },
+    {
+      "requirement": "Visible skipped gates",
+      "implementation": "docs/NOT_RUN_GATES.md",
+      "evidence": "Substantial NOT_RUN record present",
+      "status": "PASS"
+    }
+  ],
+  "evidenceStatus": {
+    "mode": "SIMULATED",
+    "plan": {
+      "status": "PASS",
+      "evidence": "plans/master-roadmap.md"
+    },
+    "tests": {
+      "status": "PASS",
+      "evidence": [
+        "node --test tests/invoiceflow.test.js",
+        "examples/demo-report/governed-test-output.txt"
+      ]
+    },
+    "ci": {
+      "status": "FAIL",
+      "evidence": null
+    },
+    "documentation": {
+      "status": "PASS",
+      "evidence": [
+        "README.md",
+        "docs/ARCHITECTURE.md"
+      ]
+    },
+    "evidenceReport": {
+      "status": "PASS",
+      "evidence": "docs/EVIDENCE_REPORT.md"
+    },
+    "traceability": {
+      "status": "PASS",
+      "evidence": "docs/TRACEABILITY_MATRIX.md"
+    },
+    "techDebtDelta": {
+      "status": "PASS",
+      "evidence": "docs/TECH_DEBT_DELTA.md"
+    },
+    "notRunVisibility": {
+      "status": "PASS",
+      "evidence": "docs/NOT_RUN_GATES.md"
+    }
+  },
+  "contextGraph": {
+    "generatedAt": "2026-07-12T20:47:06.702Z",
+    "generatedLocally": true,
+    "algorithm": "deterministic lexical and repository-surface analysis",
+    "nodes": [
+      {
+        "id": "file:.codex/AGENTS.md",
+        "label": ".codex/AGENTS.md",
+        "type": "instruction",
+        "lines": 39,
+        "bytes": 1539,
+        "risk": false,
+        "markers": 0,
+        "relevance": 1,
+        "importance": 1,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a instruction surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/config.json",
+        "label": ".controltower/config.json",
+        "type": "control",
+        "lines": 21,
+        "bytes": 509,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/flight-recorder.jsonl",
+        "label": ".controltower/flight-recorder.jsonl",
+        "type": "control",
+        "lines": 0,
+        "bytes": 1746,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/phase0.json",
+        "label": ".controltower/phase0.json",
+        "type": "control",
+        "lines": 30,
+        "bytes": 2977,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/review-gate.json",
+        "label": ".controltower/review-gate.json",
+        "type": "control",
+        "lines": 30,
+        "bytes": 957,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/ARCHITECTURE.md",
+        "label": "docs/ARCHITECTURE.md",
+        "type": "documentation",
+        "lines": 43,
+        "bytes": 1829,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/EVIDENCE_REPORT.md",
+        "label": "docs/EVIDENCE_REPORT.md",
+        "type": "evidence",
+        "lines": 43,
+        "bytes": 1980,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/MEMORY_LENS.md",
+        "label": "docs/MEMORY_LENS.md",
+        "type": "documentation",
+        "lines": 36,
+        "bytes": 1409,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/MISTAKE_SHIELD.md",
+        "label": "docs/MISTAKE_SHIELD.md",
+        "type": "documentation",
+        "lines": 25,
+        "bytes": 994,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/NOT_RUN_GATES.md",
+        "label": "docs/NOT_RUN_GATES.md",
+        "type": "evidence",
+        "lines": 15,
+        "bytes": 1058,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/TECH_DEBT_DELTA.md",
+        "label": "docs/TECH_DEBT_DELTA.md",
+        "type": "documentation",
+        "lines": 24,
+        "bytes": 1218,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/TRACEABILITY_MATRIX.md",
+        "label": "docs/TRACEABILITY_MATRIX.md",
+        "type": "evidence",
+        "lines": 16,
+        "bytes": 1024,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:package.json",
+        "label": "package.json",
+        "type": "file",
+        "lines": 16,
+        "bytes": 350,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:plans/master-roadmap.md",
+        "label": "plans/master-roadmap.md",
+        "type": "plan",
+        "lines": 23,
+        "bytes": 1105,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a plan surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:plans/PHASE0_ALIGNMENT.md",
+        "label": "plans/PHASE0_ALIGNMENT.md",
+        "type": "plan",
+        "lines": 27,
+        "bytes": 1549,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a plan surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:README.md",
+        "label": "README.md",
+        "type": "readme",
+        "lines": 43,
+        "bytes": 1846,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.82,
+        "importance": 0.82,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a readme surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/app.js",
+        "label": "src/app.js",
+        "type": "source",
+        "lines": 41,
+        "bytes": 1363,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/auth.js",
+        "label": "src/auth.js",
+        "type": "source",
+        "lines": 59,
+        "bytes": 1990,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/customers.js",
+        "label": "src/customers.js",
+        "type": "source",
+        "lines": 24,
+        "bytes": 752,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/invoices.js",
+        "label": "src/invoices.js",
+        "type": "source",
+        "lines": 32,
+        "bytes": 935,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/payments.js",
+        "label": "src/payments.js",
+        "type": "source",
+        "lines": 40,
+        "bytes": 1529,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/report.js",
+        "label": "src/report.js",
+        "type": "source",
+        "lines": 20,
+        "bytes": 551,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/utils.js",
+        "label": "src/utils.js",
+        "type": "source",
+        "lines": 21,
+        "bytes": 493,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:TECH_DEBT_AND_SECURITY.md",
+        "label": "TECH_DEBT_AND_SECURITY.md",
+        "type": "documentation",
+        "lines": 22,
+        "bytes": 941,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:tests/invoiceflow.test.js",
+        "label": "tests/invoiceflow.test.js",
+        "type": "test",
+        "lines": 65,
+        "bytes": 2245,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.86,
+        "importance": 0.86,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a test surface for Codex mission context.",
+        "owners": []
+      }
+    ],
+    "edges": [
+      {
+        "from": "file:plans/master-roadmap.md",
+        "to": "file:tests/invoiceflow.test.js",
+        "relation": "plans-change"
+      },
+      {
+        "from": "file:src/app.js",
+        "to": "file:src/auth.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:src/app.js",
+        "to": "file:src/customers.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:src/app.js",
+        "to": "file:src/invoices.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:src/app.js",
+        "to": "file:src/payments.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:src/app.js",
+        "to": "file:src/report.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:src/customers.js",
+        "to": "file:src/utils.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:src/invoices.js",
+        "to": "file:src/utils.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:src/payments.js",
+        "to": "file:src/utils.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:src/report.js",
+        "to": "file:src/utils.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:plans/master-roadmap.md",
+        "to": "file:docs/EVIDENCE_REPORT.md",
+        "relation": "requires-evidence"
+      },
+      {
+        "from": "file:plans/master-roadmap.md",
+        "to": "file:docs/TRACEABILITY_MATRIX.md",
+        "relation": "traced-by"
+      },
+      {
+        "from": "file:README.md",
+        "to": "file:docs/ARCHITECTURE.md",
+        "relation": "explained-by"
+      }
+    ],
+    "ownershipHints": [],
+    "missingOwners": [
+      "src/app.js",
+      "src/auth.js",
+      "src/customers.js",
+      "src/invoices.js",
+      "src/payments.js",
+      "src/report.js",
+      "src/utils.js"
+    ],
+    "overlappingPlans": [],
+    "stats": {
+      "nodeCount": 25,
+      "edgeCount": 13,
+      "riskNodeCount": 0,
+      "todoFixmeCount": 0
+    },
+    "contextTrace": [
+      {
+        "id": "file:.codex/AGENTS.md",
+        "label": ".codex/AGENTS.md",
+        "type": "instruction",
+        "lines": 39,
+        "bytes": 1539,
+        "risk": false,
+        "markers": 0,
+        "relevance": 1,
+        "importance": 1,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a instruction surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/EVIDENCE_REPORT.md",
+        "label": "docs/EVIDENCE_REPORT.md",
+        "type": "evidence",
+        "lines": 43,
+        "bytes": 1980,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/NOT_RUN_GATES.md",
+        "label": "docs/NOT_RUN_GATES.md",
+        "type": "evidence",
+        "lines": 15,
+        "bytes": 1058,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/TRACEABILITY_MATRIX.md",
+        "label": "docs/TRACEABILITY_MATRIX.md",
+        "type": "evidence",
+        "lines": 16,
+        "bytes": 1024,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:plans/master-roadmap.md",
+        "label": "plans/master-roadmap.md",
+        "type": "plan",
+        "lines": 23,
+        "bytes": 1105,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a plan surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:plans/PHASE0_ALIGNMENT.md",
+        "label": "plans/PHASE0_ALIGNMENT.md",
+        "type": "plan",
+        "lines": 27,
+        "bytes": 1549,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a plan surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/config.json",
+        "label": ".controltower/config.json",
+        "type": "control",
+        "lines": 21,
+        "bytes": 509,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/flight-recorder.jsonl",
+        "label": ".controltower/flight-recorder.jsonl",
+        "type": "control",
+        "lines": 0,
+        "bytes": 1746,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/phase0.json",
+        "label": ".controltower/phase0.json",
+        "type": "control",
+        "lines": 30,
+        "bytes": 2977,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/review-gate.json",
+        "label": ".controltower/review-gate.json",
+        "type": "control",
+        "lines": 30,
+        "bytes": 957,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:tests/invoiceflow.test.js",
+        "label": "tests/invoiceflow.test.js",
+        "type": "test",
+        "lines": 65,
+        "bytes": 2245,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.86,
+        "importance": 0.86,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a test surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:README.md",
+        "label": "README.md",
+        "type": "readme",
+        "lines": 43,
+        "bytes": 1846,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.82,
+        "importance": 0.82,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a readme surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/ARCHITECTURE.md",
+        "label": "docs/ARCHITECTURE.md",
+        "type": "documentation",
+        "lines": 43,
+        "bytes": 1829,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/MEMORY_LENS.md",
+        "label": "docs/MEMORY_LENS.md",
+        "type": "documentation",
+        "lines": 36,
+        "bytes": 1409,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/MISTAKE_SHIELD.md",
+        "label": "docs/MISTAKE_SHIELD.md",
+        "type": "documentation",
+        "lines": 25,
+        "bytes": 994,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/TECH_DEBT_DELTA.md",
+        "label": "docs/TECH_DEBT_DELTA.md",
+        "type": "documentation",
+        "lines": 24,
+        "bytes": 1218,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:TECH_DEBT_AND_SECURITY.md",
+        "label": "TECH_DEBT_AND_SECURITY.md",
+        "type": "documentation",
+        "lines": 22,
+        "bytes": 941,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/app.js",
+        "label": "src/app.js",
+        "type": "source",
+        "lines": 41,
+        "bytes": 1363,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/auth.js",
+        "label": "src/auth.js",
+        "type": "source",
+        "lines": 59,
+        "bytes": 1990,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/customers.js",
+        "label": "src/customers.js",
+        "type": "source",
+        "lines": 24,
+        "bytes": 752,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/invoices.js",
+        "label": "src/invoices.js",
+        "type": "source",
+        "lines": 32,
+        "bytes": 935,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/payments.js",
+        "label": "src/payments.js",
+        "type": "source",
+        "lines": 40,
+        "bytes": 1529,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/report.js",
+        "label": "src/report.js",
+        "type": "source",
+        "lines": 20,
+        "bytes": 551,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:src/utils.js",
+        "label": "src/utils.js",
+        "type": "source",
+        "lines": 21,
+        "bytes": 493,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      }
+    ],
+    "contextBudget": {
+      "maxItems": 24,
+      "selectedItems": 24,
+      "availableItems": 25,
+      "estimatedTokens": 8147
+    }
+  },
+  "reviewGate": {
+    "status": "APPROVED",
+    "note": "SIMULATED local approval for the bounded fixture hardening mission.",
+    "updatedAt": "2026-07-12T09:05:00.000Z",
+    "decidedBy": "SIMULATED_DEMO_REVIEWER",
+    "localFileGate": true,
+    "identityVerified": false,
+    "scope": "Harden the local simulated authentication and payment flow and add one integration test.",
+    "allowedFiles": [
+      "src/auth.js",
+      "src/payments.js",
+      "tests/invoiceflow.test.js",
+      "docs/**",
+      "plans/**",
+      ".controltower/**"
+    ],
+    "forbiddenActions": [
+      "connect to a real payment provider",
+      "use real credentials or customer data",
+      "delete tests",
+      "write outside the demo fixture"
+    ],
+    "scopeComplete": true,
+    "schemaVersion": "1.0",
+    "project": "InvoiceFlow Mini",
+    "approvedBy": "SIMULATED_DEMO_REVIEWER",
+    "approvedAt": "2026-07-12T09:05:00.000Z",
+    "simulated": true,
+    "disclaimer": "SIMULATED local review state for product demonstration; not enterprise identity verification.",
+    "exists": true,
+    "decisionRecorded": true
+  },
+  "memoryLens": {
+    "generatedAt": "2026-07-12T20:47:06.704Z",
+    "generatedLocally": true,
+    "sources": [
+      {
+        "relative": "docs/MEMORY_LENS.md",
+        "ageDays": 0,
+        "stale": false,
+        "bytes": 1409
+      },
+      {
+        "relative": "TECH_DEBT_AND_SECURITY.md",
+        "ageDays": 0,
+        "stale": false,
+        "bytes": 941
+      },
+      {
+        "relative": "README.md",
+        "ageDays": 0,
+        "stale": false,
+        "bytes": 1846
+      }
+    ],
+    "persistentRules": [
+      "Never trust a role embedded in an unsigned or caller-controlled token.",
+      "Never accept client-selected payment status as provider truth.",
+      "Never process the same provider event twice.",
+      "Never turn `NOT_RUN` into `PASS` or imply a demo fixture is a customer system.",
+      "Inject sensitive configuration; do not commit real secrets.",
+      "SIMULATED DEMO DATA. This safety record applies only to the controlled fixture.",
+      "`src/auth.js`: identity and authorization behavior; change only with focused tests.",
+      "Do not add network access, real credentials, customer data, persistence, deployment,"
+    ],
+    "neverForgetRisks": [
+      "Current mission: review bounded auth and payment hardening.",
+      "# Minefield history",
+      "Never accept client-selected payment status as provider truth.",
+      "Snapshot date: 2026-07-12. Re-scan after any auth, payment, test, or architecture",
+      "# Quarantined risk areas",
+      "`src/auth.js`: identity and authorization behavior; change only with focused tests.",
+      "or real payment/authentication services. Preserve unrelated changes and write only",
+      "# Known residual debt"
+    ],
+    "architecturePrinciples": [
+      "Keep the default path local-first, deterministic, and dependency-free.",
+      "# Code soul and architecture rules",
+      "Snapshot date: 2026-07-12. Re-scan after any auth, payment, test, or architecture",
+      "NOT_RUN: dependency audit, browser tests, load tests, and real-provider tests.",
+      "See [Architecture](docs/ARCHITECTURE.md), [Evidence Report](docs/EVIDENCE_REPORT.md),"
+    ],
+    "environmentConstraints": [
+      "Verification: two Node tests pass; external and non-local gates remain `NOT_RUN`.",
+      "Keep providers and network access outside the fixture.",
+      "Do not add network access, real credentials, customer data, persistence, deployment,",
+      "Node.js 18 or newer is required. The application stores data in memory and has",
+      "no runtime dependencies, network listener, database, telemetry, or analytics.",
+      "Evidence: one working integration test was run with Node's test runner."
+    ],
+    "userPreferences": [
+      "Prefer a small, understandable three-minute demo."
+    ],
+    "staleSections": [],
+    "missingSources": [
+      "AGENT_MEMORY_AND_LESSONS.md",
+      "AGENT_ARCHITECTURE_AND_PATTERNS.md",
+      "AGENT_ENVIRONMENT_AND_API.md",
+      "AGENT_USER_PREFERENCES.md"
+    ],
+    "contradictions": [],
+    "selectedItems": [
+      {
+        "pillar": "Code Soul",
+        "text": "Never trust a role embedded in an unsigned or caller-controlled token.",
+        "reason": "Durable rule",
+        "protected": true,
+        "relevance": 1,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Code Soul",
+        "text": "Never accept client-selected payment status as provider truth.",
+        "reason": "Durable rule",
+        "protected": true,
+        "relevance": 0.97,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Code Soul",
+        "text": "Never process the same provider event twice.",
+        "reason": "Durable rule",
+        "protected": true,
+        "relevance": 0.95,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Code Soul",
+        "text": "Never turn `NOT_RUN` into `PASS` or imply a demo fixture is a customer system.",
+        "reason": "Durable rule",
+        "protected": true,
+        "relevance": 0.93,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Code Soul",
+        "text": "Inject sensitive configuration; do not commit real secrets.",
+        "reason": "Durable rule",
+        "protected": true,
+        "relevance": 0.9,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Code Soul",
+        "text": "SIMULATED DEMO DATA. This safety record applies only to the controlled fixture.",
+        "reason": "Durable rule",
+        "protected": true,
+        "relevance": 0.88,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Code Soul",
+        "text": "`src/auth.js`: identity and authorization behavior; change only with focused tests.",
+        "reason": "Durable rule",
+        "protected": true,
+        "relevance": 0.85,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Code Soul",
+        "text": "Do not add network access, real credentials, customer data, persistence, deployment,",
+        "reason": "Durable rule",
+        "protected": true,
+        "relevance": 0.82,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Minefield",
+        "text": "Current mission: review bounded auth and payment hardening.",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 0.8,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Minefield",
+        "text": "# Minefield history",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 0.78,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Minefield",
+        "text": "Never accept client-selected payment status as provider truth.",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 0.75,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Minefield",
+        "text": "Snapshot date: 2026-07-12. Re-scan after any auth, payment, test, or architecture",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 0.72,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Minefield",
+        "text": "# Quarantined risk areas",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 0.7,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Minefield",
+        "text": "`src/auth.js`: identity and authorization behavior; change only with focused tests.",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 0.68,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Minefield",
+        "text": "or real payment/authentication services. Preserve unrelated changes and write only",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 0.65,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Minefield",
+        "text": "# Known residual debt",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 0.63,
+        "freshness": "fresh",
+        "importance": "high"
+      }
+    ],
+    "metrics": {
+      "sourcesFound": 3,
+      "protectedItems": 16,
+      "staleSources": 0,
+      "continuityCoverage": 43
+    }
+  },
+  "mistakeShield": {
+    "verdict": "CLEAR",
+    "proposedAction": "Continue with the smallest listed governance fix",
+    "reasons": [
+      "No destructive verb or known minefield overlap was detected."
+    ],
+    "matchedLessons": [],
+    "gateStatus": "APPROVED",
+    "saferNextAction": "Proceed only within the declared scope and record commands, evidence, NOT_RUN checks, and remaining risk.",
+    "checkedAt": "2026-07-12T20:47:06.704Z",
+    "deterministic": true
+  },
+  "phase0": {
+    "schemaVersion": "1.0",
+    "project": "InvoiceFlow Mini",
+    "locale": "en",
+    "availableQuestionLocales": [
+      "en",
+      "tr"
+    ],
+    "simulated": true,
+    "dataClassification": "SIMULATED_DEMO_DATA",
+    "goal": "Harden the simulated invoice, authentication, and payment workflow without adding external services.",
+    "audience": "Small-business operators evaluating a lightweight invoice tracker and Build Week demo viewers.",
+    "successCriteria": "A signed local session, a verified idempotent simulated payment, updated governance docs, and a passing Node.js test.",
+    "forbiddenAreas": "No real providers, network calls, databases, credentials, customer data, or files outside this demo fixture.",
+    "risk": "An unsigned identity or unverified payment event could mark the wrong invoice as paid.",
+    "expectedEvidence": "Recorded test command, assertions for tampered auth and payment idempotency, traceability links, visible NOT_RUN gates, and review state.",
+    "profile": "startup",
+    "nextMission": "Review the bounded auth and payment hardening evidence; do not expand the product scope.",
+    "answers": {
+      "goal": "Harden the simulated invoice, authentication, and payment workflow without adding external services.",
+      "audience": "Small-business operators evaluating a lightweight invoice tracker and Build Week demo viewers.",
+      "successCriteria": "A signed local session, a verified idempotent simulated payment, updated governance docs, and a passing Node.js test.",
+      "forbiddenAreas": "No real providers, network calls, databases, credentials, customer data, or files outside this demo fixture.",
+      "risk": "An unsigned identity or unverified payment event could mark the wrong invoice as paid.",
+      "expectedEvidence": "Recorded test command, assertions for tampered auth and payment idempotency, traceability links, visible NOT_RUN gates, and review state.",
+      "profile": "startup",
+      "nextMission": "Review the bounded auth and payment hardening evidence; do not expand the product scope."
+    },
+    "missionPrompt": "SIMULATED CODEX MISSION: In examples/governed-saas-after, review only the bounded auth and payment hardening. Preserve the goal of a local invoice tracker. Prevent unsigned identity and unverified or duplicate payment events. Do not touch real providers, network services, credentials, customer data, or files outside the fixture. Require the Node test result, traceability links, explicit NOT_RUN gates, and current review status before claiming done.",
+    "codexMissionPrompt": "SIMULATED CODEX MISSION: In examples/governed-saas-after, review only the bounded auth and payment hardening. Preserve the goal of a local invoice tracker. Prevent unsigned identity and unverified or duplicate payment events. Do not touch real providers, network services, credentials, customer data, or files outside the fixture. Require the Node test result, traceability links, explicit NOT_RUN gates, and current review status before claiming done."
+  },
+  "flightRecorder": {
+    "events": [
+      {
+        "schemaVersion": "1.0",
+        "timestamp": "2026-07-12T09:00:00.000Z",
+        "type": "PROMPT",
+        "event": "MISSION_STARTED",
+        "status": "SIMULATED",
+        "message": "Bounded InvoiceFlow Mini auth and payment hardening demo started.",
+        "summary": "Bounded InvoiceFlow Mini auth and payment hardening demo started.",
+        "source": "simulated-demo",
+        "simulated": true
+      },
+      {
+        "schemaVersion": "1.0",
+        "timestamp": "2026-07-12T09:05:00.000Z",
+        "type": "APPROVAL",
+        "event": "REVIEW_GATE_CHECKED",
+        "status": "APPROVED",
+        "message": "SIMULATED_DEMO_REVIEWER approved local fixture files only.",
+        "summary": "SIMULATED_DEMO_REVIEWER approved local fixture files only.",
+        "source": "simulated-demo",
+        "simulated": true
+      },
+      {
+        "schemaVersion": "1.0",
+        "timestamp": "2026-07-12T09:12:00.000Z",
+        "type": "CHANGE",
+        "event": "FILES_CHANGED",
+        "status": "SIMULATED",
+        "message": "Bounded simulated source, test, and evidence files changed.",
+        "files": [
+          "src/auth.js",
+          "src/payments.js",
+          "tests/invoiceflow.test.js",
+          "docs/EVIDENCE_REPORT.md"
+        ],
+        "source": "simulated-demo",
+        "simulated": true
+      },
+      {
+        "schemaVersion": "1.0",
+        "timestamp": "2026-07-12T09:14:00.000Z",
+        "type": "TEST",
+        "event": "CHECK_RECORDED",
+        "status": "PASS",
+        "message": "Two focused local Node tests passed.",
+        "command": "npm test",
+        "result": "2 tests passed; 0 failed",
+        "evidence": "tests/invoiceflow.test.js",
+        "source": "simulated-demo",
+        "simulated": true
+      },
+      {
+        "schemaVersion": "1.0",
+        "timestamp": "2026-07-12T09:15:00.000Z",
+        "type": "EVIDENCE",
+        "event": "MISSION_CLOSED",
+        "status": "WARN",
+        "message": "Bounded test passed; real-provider, browser, load, and dependency-audit gates remain NOT_RUN.",
+        "summary": "Bounded test passed; real-provider, browser, load, and dependency-audit gates remain NOT_RUN.",
+        "nextSafeAction": "Review evidence only; request approval before any real integration.",
+        "source": "simulated-demo",
+        "simulated": true
+      }
+    ]
+  },
+  "facts": {
+    "hasPackage": true,
+    "hasCodexInstructions": true,
+    "hasConfig": true,
+    "hasRoadmap": true,
+    "hasAnyPlan": true,
+    "hasEvidence": true,
+    "hasTraceability": true,
+    "hasNotRun": true,
+    "hasTechDebtDelta": true,
+    "hasMemoryLens": true,
+    "hasMistakeShield": true,
+    "hasBrownfield": true,
+    "hasReadme": true,
+    "hasArchitecture": true,
+    "hasPhase0": true,
+    "hasFlightRecorder": true,
+    "reviewGateExists": true,
+    "reviewGateStatus": "APPROVED",
+    "reviewGateScoped": true,
+    "reviewGateDecisionRecorded": true,
+    "hasTests": true,
+    "testsHealthy": true,
+    "testSurfaceMeaningful": true,
+    "weakTests": false,
+    "testFiles": [
+      "tests/invoiceflow.test.js"
+    ],
+    "hasTestScript": true,
+    "hasCi": false,
+    "ciHealthy": false,
+    "ciFiles": [],
+    "readmeHealthy": true,
+    "todoCount": 0,
+    "simulatedData": true,
+    "codexInstructionsHealthy": true,
+    "configHealthy": true,
+    "roadmapHealthy": true,
+    "evidenceHealthy": true,
+    "traceabilityHealthy": true,
+    "notRunHealthy": true,
+    "techDebtHealthy": true,
+    "memoryLensHealthy": true,
+    "mistakeShieldHealthy": true,
+    "brownfieldHealthy": true,
+    "architectureHealthy": true,
+    "phase0Healthy": true,
+    "flightRecorderHealthy": true,
+    "evidenceSurfaceCount": 4,
+    "contextNodeCount": 25,
+    "criticalRiskCount": 0,
+    "highRiskCount": 1
+  },
+  "verification": {
+    "commands": [
+      {
+        "command": "node --test tests/invoiceflow.test.js",
+        "status": "PASS",
+        "exitCode": 0,
+        "testCount": 2,
+        "evidence": "examples/demo-report/governed-test-output.txt"
+      }
+    ],
+    "notRun": [
+      "CI",
+      "browser/accessibility",
+      "load/concurrency",
+      "deployment",
+      "real provider integration"
+    ]
+  },
+  "comparison": {
+    "label": "SIMULATED InvoiceFlow Mini governance comparison",
+    "beforeScore": 25,
+    "afterScore": 88,
+    "scoreDelta": 63,
+    "beforeRisks": 16,
+    "afterRisks": 1,
+    "riskReduction": 15,
+    "beforeMissingSurfaces": 15,
+    "afterMissingSurfaces": 1,
+    "evidenceBefore": "FAIL",
+    "evidenceAfter": "PASS — 2 fixture tests ran; CI and external checks remain NOT_RUN"
+  },
+  "beforeSnapshot": {
+    "score": 25,
+    "riskFlags": [
+      {
+        "id": "NO_CODEX_INSTRUCTIONS",
+        "severity": "CRITICAL",
+        "issue": "No Codex instruction surface",
+        "whyItMatters": "A future session has no durable scope or safety rules.",
+        "recommendedFix": "Add .codex/AGENTS.md with allowed files, evidence, and review rules.",
+        "files": []
+      },
+      {
+        "id": "NO_PLAN",
+        "severity": "CRITICAL",
+        "issue": "No master roadmap",
+        "whyItMatters": "Work can drift without a durable mission and acceptance criteria.",
+        "recommendedFix": "Create plans/master-roadmap.md before implementation.",
+        "files": []
+      },
+      {
+        "id": "NO_EVIDENCE",
+        "severity": "CRITICAL",
+        "issue": "No evidence report",
+        "whyItMatters": "A done claim cannot be checked against concrete proof.",
+        "recommendedFix": "Create docs/EVIDENCE_REPORT.md and record only verified checks.",
+        "files": []
+      },
+      {
+        "id": "NO_TRACEABILITY",
+        "severity": "HIGH",
+        "issue": "No traceability matrix",
+        "whyItMatters": "Requirements are not connected to implementation and proof.",
+        "recommendedFix": "Create docs/TRACEABILITY_MATRIX.md.",
+        "files": []
+      },
+      {
+        "id": "NO_NOT_RUN",
+        "severity": "HIGH",
+        "issue": "No NOT_RUN gates file",
+        "whyItMatters": "Skipped checks can disappear from the handoff.",
+        "recommendedFix": "Create docs/NOT_RUN_GATES.md and keep skipped checks visible.",
+        "files": []
+      },
+      {
+        "id": "NO_REVIEW_GATE",
+        "severity": "CRITICAL",
+        "issue": "No local review gate",
+        "whyItMatters": "Risky actions have no explicit human decision artifact.",
+        "recommendedFix": "Create .controltower/review-gate.json in AWAITING_HUMAN.",
+        "files": []
+      },
+      {
+        "id": "NO_FLIGHT_RECORDER",
+        "severity": "HIGH",
+        "issue": "No flight recorder",
+        "whyItMatters": "The next session cannot reconstruct prompts, changes, tests, and approvals.",
+        "recommendedFix": "Create .controltower/flight-recorder.jsonl.",
+        "files": []
+      },
+      {
+        "id": "NO_MEMORY_LENS",
+        "severity": "MEDIUM",
+        "issue": "No memory lens",
+        "whyItMatters": "Minefields and durable constraints may be missed in future sessions.",
+        "recommendedFix": "Create docs/MEMORY_LENS.md.",
+        "files": []
+      },
+      {
+        "id": "NO_MISTAKE_SHIELD",
+        "severity": "MEDIUM",
+        "issue": "No mistake shield record",
+        "whyItMatters": "Proposed work is not compared with known risks.",
+        "recommendedFix": "Create docs/MISTAKE_SHIELD.md.",
+        "files": []
+      },
+      {
+        "id": "WEAK_TESTS",
+        "severity": "HIGH",
+        "issue": "Tests are missing or only placeholders",
+        "whyItMatters": "Behavior changes could be reported without executable proof.",
+        "recommendedFix": "Add a small working test and record its command.",
+        "files": []
+      },
+      {
+        "id": "NO_ARCHITECTURE",
+        "severity": "HIGH",
+        "issue": "Architecture documentation is missing",
+        "whyItMatters": "Future Codex sessions lack system boundaries and dependency intent.",
+        "recommendedFix": "Add docs/ARCHITECTURE.md.",
+        "files": []
+      },
+      {
+        "id": "NO_BROWNFIELD_QUARANTINE",
+        "severity": "HIGH",
+        "issue": "No brownfield safety record",
+        "whyItMatters": "Existing risky areas may be changed without explicit quarantine.",
+        "recommendedFix": "Add TECH_DEBT_AND_SECURITY.md before touching legacy areas.",
+        "files": []
+      },
+      {
+        "id": "UNTRACKED_TODO",
+        "severity": "MEDIUM",
+        "issue": "6 TODO/FIXME marker(s) detected",
+        "whyItMatters": "Markers can become hidden scope and repeated work.",
+        "recommendedFix": "Move markers into the roadmap or tech-debt delta.",
+        "files": [
+          "src/auth.js",
+          "src/customers.js",
+          "src/invoices.js",
+          "src/payments.js"
+        ]
+      },
+      {
+        "id": "STALE_README",
+        "severity": "HIGH",
+        "issue": "README is missing, tiny, or marked stale",
+        "whyItMatters": "Users and future Codex sessions may follow outdated commands.",
+        "recommendedFix": "Rewrite or synchronize README with verified behavior.",
+        "files": [
+          "README.md"
+        ]
+      },
+      {
+        "id": "RISKY_AUTH",
+        "severity": "CRITICAL",
+        "issue": "Risky authentication logic detected",
+        "whyItMatters": "Unverified tokens, passwords, or caller-controlled roles can bypass authorization.",
+        "recommendedFix": "Require signed token verification and focused auth tests before changes.",
+        "files": [
+          "src/auth.js"
+        ]
+      },
+      {
+        "id": "RISKY_PAYMENT",
+        "severity": "CRITICAL",
+        "issue": "Risky payment state logic detected",
+        "whyItMatters": "Caller-controlled payment state can create false settlement records.",
+        "recommendedFix": "Verify provider events, amounts, currency, and idempotency before marking paid.",
+        "files": [
+          "src/payments.js"
+        ]
+      }
+    ],
+    "missingSurfaces": [
+      ".codex/AGENTS.md",
+      ".controltower/config.json",
+      ".controltower/review-gate.json",
+      ".controltower/flight-recorder.jsonl",
+      "plans/master-roadmap.md",
+      "docs/EVIDENCE_REPORT.md",
+      "docs/TRACEABILITY_MATRIX.md",
+      "docs/NOT_RUN_GATES.md",
+      "docs/TECH_DEBT_DELTA.md",
+      "docs/MEMORY_LENS.md",
+      "docs/MISTAKE_SHIELD.md",
+      "TECH_DEBT_AND_SECURITY.md",
+      "docs/ARCHITECTURE.md",
+      ".controltower/phase0.json",
+      "working tests"
+    ],
+    "evidenceStatus": {
+      "mode": "SIMULATED",
+      "plan": {
+        "status": "FAIL",
+        "evidence": null
+      },
+      "tests": {
+        "status": "WARN",
+        "evidence": [
+          "tests/placeholder.test.js"
+        ]
+      },
+      "ci": {
+        "status": "NOT_RUN",
+        "evidence": [
+          ".github/workflows/ci.yml"
+        ]
+      },
+      "documentation": {
+        "status": "WARN",
+        "evidence": [
+          "README.md"
+        ]
+      },
+      "evidenceReport": {
+        "status": "FAIL",
+        "evidence": null
+      },
+      "traceability": {
+        "status": "FAIL",
+        "evidence": null
+      },
+      "techDebtDelta": {
+        "status": "FAIL",
+        "evidence": null
+      },
+      "notRunVisibility": {
+        "status": "FAIL",
+        "evidence": null
+      }
+    }
+  }
+}

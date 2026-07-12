@@ -1,0 +1,37 @@
+{
+  "name": "codex-control-tower",
+  "version": "0.1.0",
+  "description": "Mission control for AI-built software.",
+  "license": "MIT",
+  "private": true,
+  "bin": {
+    "cct": "cli/index.js"
+  },
+  "keywords": [
+    "codex",
+    "openai",
+    "ai-agents",
+    "governance",
+    "evidence",
+    "devtools",
+    "local-first",
+    "vscode",
+    "build-week",
+    "context-graph",
+    "flight-recorder",
+    "mistake-prevention"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node tests/test_cli_commands.js && node tests/test_health_scoring.js && node tests/test_evidence_pack.js && node tests/test_required_surfaces.js && node tests/test_context_graph.js && node tests/test_review_gate.js && node tests/test_mistake_shield.js && node tests/test_phase0.js && node tests/test_source_protection.js && npm --prefix apps/dashboard test",
+    "demo": "node cli/index.js demo",
+    "dashboard": "npm --prefix apps/dashboard install && npm --prefix apps/dashboard run dev",
+    "dashboard:build": "npm --prefix apps/dashboard install && npm --prefix apps/dashboard run build",
+    "scan:demo": "node cli/index.js scan --target examples/messy-saas-before --out tmp/report.json",
+    "evidence:demo": "node cli/index.js evidence --target examples/messy-saas-before --out tmp/evidence-pack",
+    "context:demo": "node cli/index.js context-graph --target examples/messy-saas-before --out tmp/context-graph.json",
+    "verify": "npm test && npm run demo && npm run dashboard:build"
+  }
+}

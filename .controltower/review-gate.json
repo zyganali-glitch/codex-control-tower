@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "status": "APPROVED",
+  "note": "The project owner explicitly requested continuation and publication to zyganali-glitch/codex-control-tower in the active Codex session.",
+  "scope": "Complete bounded release-preflight hardening, run local verification, commit the independent repository, and push main to the user-provided GitHub repository.",
+  "allowedFiles": [
+    ".codex/**",
+    ".controltower/**",
+    ".github/**",
+    "apps/**",
+    "cli/**",
+    "core/**",
+    "docs/**",
+    "examples/**",
+    "plans/**",
+    "tests/**",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "package.json",
+    "package-lock.json",
+    "TECH_DEBT_AND_SECURITY.md"
+  ],
+  "forbiddenActions": [
+    "modify or push to any protected source repository",
+    "commit credentials, tokens, private URLs, or private screenshots",
+    "rewrite shared Git history",
+    "claim NOT_RUN or SIMULATED evidence as PASS",
+    "publish to a destination other than the approved GitHub repository"
+  ],
+  "decidedBy": "project-owner-via-active-codex-session",
+  "updatedAt": "2026-07-12T23:29:03+03:00",
+  "localFileGate": true,
+  "identityVerified": false,
+  "disclaimer": "Local session approval; not enterprise identity verification or a signed authorization."
+}

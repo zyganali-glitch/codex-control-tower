@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "locale": "en",
+  "title": "Phase-0 Alignment",
+  "description": "Plain-language questions asked one at a time before implementation begins.",
+  "questions": [
+    {
+      "id": "goal",
+      "key": "goal",
+      "prompt": "What do you want to build or change?",
+      "question": "What do you want to build or change?"
+    },
+    {
+      "id": "audience",
+      "key": "audience",
+      "prompt": "Who is this for?",
+      "question": "Who is this for?"
+    },
+    {
+      "id": "successCriteria",
+      "key": "successCriteria",
+      "prompt": "What would make this successful?",
+      "question": "What would make this successful?"
+    },
+    {
+      "id": "forbiddenAreas",
+      "key": "forbiddenAreas",
+      "prompt": "Which files, features, or areas should Codex avoid unless you approve?",
+      "question": "Which files, features, or areas should Codex avoid unless you approve?"
+    },
+    {
+      "id": "risk",
+      "key": "risk",
+      "prompt": "What is the biggest risk or mistake you want to prevent?",
+      "question": "What is the biggest risk or mistake you want to prevent?"
+    },
+    {
+      "id": "expectedEvidence",
+      "key": "expectedEvidence",
+      "prompt": "What proof do you want before Codex says the task is done?",
+      "question": "What proof do you want before Codex says the task is done?"
+    },
+    {
+      "id": "profile",
+      "key": "profile",
+      "prompt": "Should Codex use a light, startup, enterprise, or regulated workflow?",
+      "question": "Should Codex use a light, startup, enterprise, or regulated workflow?"
+    },
+    {
+      "id": "nextMission",
+      "key": "nextMission",
+      "prompt": "What should the next safe Codex mission be?",
+      "question": "What should the next safe Codex mission be?"
+    }
+  ],
+  "profileChoices": ["light", "startup", "enterprise", "regulated"]
+}

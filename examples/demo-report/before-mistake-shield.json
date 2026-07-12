@@ -1,0 +1,14 @@
+{
+  "verdict": "BLOCKED",
+  "proposedAction": "Refactor auth and delete old tests",
+  "reasons": [
+    "A destructive verb was detected while the local review gate is AWAITING_HUMAN.",
+    "Removing test evidence can hide regressions and requires explicit, scoped approval.",
+    "Matched known risk: Tests are missing or only placeholders"
+  ],
+  "matchedLessons": [],
+  "gateStatus": "AWAITING_HUMAN",
+  "saferNextAction": "Narrow the change, preserve tests, record a plan, and obtain an APPROVED local review gate with a note.",
+  "checkedAt": "2026-07-12T20:47:06.370Z",
+  "deterministic": true
+}

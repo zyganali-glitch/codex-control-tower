@@ -1,0 +1,16 @@
+# SIMULATED DEMO DATA. This nested workflow is intentionally weak: it runs the
+# placeholder check and demonstrates that a green CI job is not sufficient evidence.
+name: InvoiceFlow Mini placeholder check
+
+on:
+  workflow_dispatch:
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm test

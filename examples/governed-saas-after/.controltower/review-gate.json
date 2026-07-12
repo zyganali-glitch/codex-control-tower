@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "project": "InvoiceFlow Mini",
+  "status": "APPROVED",
+  "note": "SIMULATED local approval for the bounded fixture hardening mission.",
+  "scope": "Harden the local simulated authentication and payment flow and add one integration test.",
+  "allowedFiles": [
+    "src/auth.js",
+    "src/payments.js",
+    "tests/invoiceflow.test.js",
+    "docs/**",
+    "plans/**",
+    ".controltower/**"
+  ],
+  "forbiddenActions": [
+    "connect to a real payment provider",
+    "use real credentials or customer data",
+    "delete tests",
+    "write outside the demo fixture"
+  ],
+  "approvedBy": "SIMULATED_DEMO_REVIEWER",
+  "approvedAt": "2026-07-12T09:05:00.000Z",
+  "decidedBy": "SIMULATED_DEMO_REVIEWER",
+  "updatedAt": "2026-07-12T09:05:00.000Z",
+  "localFileGate": true,
+  "identityVerified": false,
+  "simulated": true,
+  "disclaimer": "SIMULATED local review state for product demonstration; not enterprise identity verification."
+}

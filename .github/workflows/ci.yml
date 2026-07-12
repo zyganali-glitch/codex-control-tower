@@ -1,0 +1,23 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+      - run: npm install
+      - run: npm test
+      - run: npm run demo
+      - run: npm run dashboard:build
+      - run: test -f apps/dashboard/src/sample-report.json
+      - run: test -f docs/DEVPOST_SUBMISSION.md
+      - run: test -f docs/SOURCE_PROTECTION.md
+      - run: test -f docs/CODEX_BUILD_LOG.md
