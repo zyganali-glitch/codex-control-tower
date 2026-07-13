@@ -1,6 +1,6 @@
 # Technical Debt Delta
 
-Generated: 2026-07-13T20:54:46.627Z
+Generated: 2026-07-13T21:04:57.642Z
 
 **WARN** — this scan reports current risks; it does not infer a historical before/after delta without two evidence-backed snapshots.
 

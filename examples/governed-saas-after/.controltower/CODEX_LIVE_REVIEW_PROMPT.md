@@ -56,16 +56,16 @@ Only exact allowed relative paths may be cited. Other citations will be filtered
   "source": "RECORDED_REPORT",
   "status": "PASS",
   "reportPath": "CONTROL_TOWER_REPORT.json",
-  "generatedAt": "2026-07-13T20:54:46.902Z",
-  "loadedAt": "2026-07-13T20:54:59.795Z",
-  "ageMs": 12893,
+  "generatedAt": "2026-07-13T21:04:57.905Z",
+  "loadedAt": "2026-07-13T21:06:14.606Z",
+  "ageMs": 76701,
   "maxAgeMs": 86400000,
   "stale": false,
   "staleReasons": [],
   "preservedRecordedExecutionEvidence": true,
   "freshScanComparison": {
     "performed": true,
-    "freshScanGeneratedAt": "2026-07-13T20:54:59.818Z",
+    "freshScanGeneratedAt": "2026-07-13T21:06:14.629Z",
     "scoreMatches": true,
     "riskFlagsMatch": true,
     "changedFileCount": 0,
@@ -78,26 +78,20 @@ Only exact allowed relative paths may be cited. Other citations will be filtered
 ```json
 {
   "algorithm": "SHA-256",
-  "gitCommit": "416d145183e19487e774fdcf9bc051894092dc50",
+  "gitCommit": "61570f36098b3d1f038c5287193c0d614cc89e94",
   "gitWorktreeState": "DIRTY",
   "gitChangedPaths": [
-    "examples/governed-saas-after/.controltower/CODEX_LIVE_REVIEW_PROMPT.md",
     "examples/governed-saas-after/.controltower/DETERMINISTIC_CLAIMS.json",
-    "examples/governed-saas-after/.controltower/EVIDENCE_BUNDLE.md",
-    "examples/governed-saas-after/.controltower/codex-live-events.jsonl",
-    "examples/governed-saas-after/.controltower/codex-live-review-record.json",
-    "examples/governed-saas-after/.controltower/codex-live-review.json",
-    "examples/governed-saas-after/.controltower/codex-review-schema.json",
-    "examples/governed-saas-after/CONTROL_TOWER_REPORT.json",
-    "examples/governed-saas-after/.controltower/governed-test-output.txt"
+    "examples/governed-saas-after/.controltower/governed-test-output.txt",
+    "examples/governed-saas-after/CONTROL_TOWER_REPORT.json"
   ],
   "files": [
     {
       "path": "CONTROL_TOWER_REPORT.json",
       "exists": true,
-      "sha256": "27e553f96ce561af467570622bdd5be322d2e3ca8ee5a2df01d6c0350b7e84a8",
+      "sha256": "0f90e78ea91c56011e0a77adc2efe31ff3f718c6a4035b783db7d91ed09a4060",
       "sizeBytes": 61897,
-      "mtime": "2026-07-13T20:54:46.915Z"
+      "mtime": "2026-07-13T21:04:57.917Z"
     },
     {
       "path": "tests/invoiceflow.test.js",
@@ -109,9 +103,9 @@ Only exact allowed relative paths may be cited. Other citations will be filtered
     {
       "path": ".controltower/governed-test-output.txt",
       "exists": true,
-      "sha256": "b1a413bac44474ee9983f724cc9e7e3d6b075949ab24f1fa64c774aa92421405",
-      "sizeBytes": 374,
-      "mtime": "2026-07-13T20:54:46.880Z"
+      "sha256": "ff0acfe0706a9278329475d865d9798cfd013b107c927ecb00adb4a75d453ab0",
+      "sizeBytes": 375,
+      "mtime": "2026-07-13T21:04:57.883Z"
     },
     {
       "path": "docs/EVIDENCE_REPORT.md",
@@ -144,9 +138,9 @@ Only exact allowed relative paths may be cited. Other citations will be filtered
     {
       "path": ".controltower/DETERMINISTIC_CLAIMS.json",
       "exists": true,
-      "sha256": "5203f45a1f816590fdbbbe2ffe66bfd8fbe4cdb0962b737c11a2a564deedc875",
+      "sha256": "1c1fb3d55e4a23cdfb5f0bd9a30f0637695a2de46fa072419e88878f89edc719",
       "sizeBytes": 2860,
-      "mtime": "2026-07-13T20:54:59.821Z"
+      "mtime": "2026-07-13T21:06:14.633Z"
     }
   ],
   "bundle": null
@@ -157,7 +151,7 @@ Only exact allowed relative paths may be cited. Other citations will be filtered
 ```text
 {
   "projectName": "invoiceflow-mini-simulated-governed",
-  "generatedAt": "2026-07-13T20:54:46.902Z",
+  "generatedAt": "2026-07-13T21:04:57.905Z",
   "score": 88,
   "scanMode": "SIMULATED",
   "simulatedData": true,
@@ -349,12 +343,12 @@ test('tampered auth tokens and unverified payment events are rejected', () => {
 
 ## FILE: .controltower/governed-test-output.txt
 ```text
-Generated: 2026-07-13T20:54:46.878Z
+Generated: 2026-07-13T21:04:57.881Z
 Command: node --test tests/invoiceflow.test.js
 Exit code: 0
 
-✔ authorized verified payment closes an invoice and replay is idempotent (4.6658ms)
-✔ tampered auth tokens and unverified payment events are rejected (0.821ms)
+✔ authorized verified payment closes an invoice and replay is idempotent (4.6711ms)
+✔ tampered auth tokens and unverified payment events are rejected (0.7952ms)
 ℹ tests 2
 ℹ suites 0
 ℹ pass 2
@@ -362,7 +356,7 @@ Exit code: 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 106.6306
+ℹ duration_ms 104.6569
 
 ```
 

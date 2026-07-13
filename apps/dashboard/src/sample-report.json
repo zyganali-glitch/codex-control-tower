@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "invoiceflow-mini-simulated-governed",
   "targetPath": ".\\examples\\governed-saas-after",
-  "generatedAt": "2026-07-13T20:54:46.902Z",
+  "generatedAt": "2026-07-13T21:04:57.905Z",
   "scanMode": "SIMULATED",
   "simulatedData": true,
   "scanScope": {
@@ -50,31 +50,31 @@
       "path": ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
       "bytes": 17950,
       "lines": 488,
-      "modifiedAt": "2026-07-13T20:50:34.030Z"
+      "modifiedAt": "2026-07-13T20:54:59.956Z"
     },
     {
       "path": ".controltower/codex-live-events.jsonl",
-      "bytes": 4505,
+      "bytes": 4640,
       "lines": 0,
-      "modifiedAt": "2026-07-13T20:50:53.710Z"
+      "modifiedAt": "2026-07-13T20:55:26.088Z"
     },
     {
       "path": ".controltower/codex-live-review-record.json",
-      "bytes": 21923,
-      "lines": 472,
-      "modifiedAt": "2026-07-13T20:50:53.713Z"
+      "bytes": 22308,
+      "lines": 483,
+      "modifiedAt": "2026-07-13T20:55:26.091Z"
     },
     {
       "path": ".controltower/codex-live-review.json",
-      "bytes": 4042,
+      "bytes": 4166,
       "lines": 1,
-      "modifiedAt": "2026-07-13T20:50:53.375Z"
+      "modifiedAt": "2026-07-13T20:55:25.778Z"
     },
     {
       "path": ".controltower/codex-review-schema.json",
       "bytes": 1688,
       "lines": 82,
-      "modifiedAt": "2026-07-13T20:50:34.031Z"
+      "modifiedAt": "2026-07-13T20:54:59.958Z"
     },
     {
       "path": ".controltower/config.json",
@@ -84,15 +84,15 @@
     },
     {
       "path": ".controltower/DETERMINISTIC_CLAIMS.json",
-      "bytes": 2859,
+      "bytes": 2860,
       "lines": 94,
-      "modifiedAt": "2026-07-13T20:50:33.888Z"
+      "modifiedAt": "2026-07-13T20:54:59.821Z"
     },
     {
       "path": ".controltower/EVIDENCE_BUNDLE.md",
       "bytes": 14845,
       "lines": 441,
-      "modifiedAt": "2026-07-13T20:50:34.028Z"
+      "modifiedAt": "2026-07-13T20:54:59.955Z"
     },
     {
       "path": ".controltower/flight-recorder.jsonl",
@@ -102,9 +102,9 @@
     },
     {
       "path": ".controltower/governed-test-output.txt",
-      "bytes": 374,
+      "bytes": 375,
       "lines": 15,
-      "modifiedAt": "2026-07-13T20:54:46.880Z"
+      "modifiedAt": "2026-07-13T21:04:57.883Z"
     },
     {
       "path": ".controltower/phase0.json",
@@ -174,9 +174,9 @@
     },
     {
       "path": "plans/PHASE0_ALIGNMENT.md",
-      "bytes": 1549,
+      "bytes": 1512,
       "lines": 27,
-      "modifiedAt": "2026-07-12T16:59:51.553Z"
+      "modifiedAt": "2026-07-13T21:03:49.121Z"
     },
     {
       "path": "README.md",
@@ -311,7 +311,7 @@
     }
   },
   "contextGraph": {
-    "generatedAt": "2026-07-13T20:54:46.900Z",
+    "generatedAt": "2026-07-13T21:04:57.903Z",
     "generatedLocally": true,
     "algorithm": "deterministic lexical and repository-surface analysis",
     "nodes": [
@@ -350,7 +350,7 @@
         "label": ".controltower/codex-live-events.jsonl",
         "type": "control",
         "lines": 0,
-        "bytes": 4505,
+        "bytes": 4640,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -364,8 +364,8 @@
         "id": "file:.controltower/codex-live-review-record.json",
         "label": ".controltower/codex-live-review-record.json",
         "type": "control",
-        "lines": 472,
-        "bytes": 21923,
+        "lines": 483,
+        "bytes": 22308,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -380,7 +380,7 @@
         "label": ".controltower/codex-live-review.json",
         "type": "control",
         "lines": 1,
-        "bytes": 4042,
+        "bytes": 4166,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -425,7 +425,7 @@
         "label": ".controltower/DETERMINISTIC_CLAIMS.json",
         "type": "control",
         "lines": 94,
-        "bytes": 2859,
+        "bytes": 2860,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -470,7 +470,7 @@
         "label": ".controltower/governed-test-output.txt",
         "type": "control",
         "lines": 15,
-        "bytes": 374,
+        "bytes": 375,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -650,7 +650,7 @@
         "label": "plans/PHASE0_ALIGNMENT.md",
         "type": "plan",
         "lines": 27,
-        "bytes": 1549,
+        "bytes": 1512,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -991,7 +991,7 @@
         "label": "plans/PHASE0_ALIGNMENT.md",
         "type": "plan",
         "lines": 27,
-        "bytes": 1549,
+        "bytes": 1512,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -1006,7 +1006,7 @@
         "label": ".controltower/codex-live-events.jsonl",
         "type": "control",
         "lines": 0,
-        "bytes": 4505,
+        "bytes": 4640,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1020,8 +1020,8 @@
         "id": "file:.controltower/codex-live-review-record.json",
         "label": ".controltower/codex-live-review-record.json",
         "type": "control",
-        "lines": 472,
-        "bytes": 21923,
+        "lines": 483,
+        "bytes": 22308,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1036,7 +1036,7 @@
         "label": ".controltower/codex-live-review.json",
         "type": "control",
         "lines": 1,
-        "bytes": 4042,
+        "bytes": 4166,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1081,7 +1081,7 @@
         "label": ".controltower/DETERMINISTIC_CLAIMS.json",
         "type": "control",
         "lines": 94,
-        "bytes": 2859,
+        "bytes": 2860,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1111,7 +1111,7 @@
         "label": ".controltower/governed-test-output.txt",
         "type": "control",
         "lines": 15,
-        "bytes": 374,
+        "bytes": 375,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1261,7 +1261,7 @@
       "maxItems": 24,
       "selectedItems": 24,
       "availableItems": 33,
-      "estimatedTokens": 21084
+      "estimatedTokens": 21138
     }
   },
   "reviewGate": {
@@ -1297,7 +1297,7 @@
     "decisionRecorded": true
   },
   "memoryLens": {
-    "generatedAt": "2026-07-13T20:54:46.901Z",
+    "generatedAt": "2026-07-13T21:04:57.905Z",
     "generatedLocally": true,
     "sources": [
       {
@@ -1527,7 +1527,7 @@
     "matchedLessons": [],
     "gateStatus": "APPROVED",
     "saferNextAction": "Proceed only within the declared scope and record commands, evidence, NOT_RUN checks, and remaining risk.",
-    "checkedAt": "2026-07-13T20:54:46.902Z",
+    "checkedAt": "2026-07-13T21:04:57.905Z",
     "deterministic": true
   },
   "phase0": {
