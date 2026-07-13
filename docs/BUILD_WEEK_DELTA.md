@@ -39,7 +39,7 @@ The final Build Week hardening series adds:
 - explicit judge testing, platform, video, user-validation, and `/feedback` guidance;
 - a shorter competition video path centered on the product's main loop.
 
-The final hardening commit identifier is recorded in this document after the implementation commit exists; git history remains the source of truth for exact timestamps and diffs.
+The main hardening implementation is commit `034d53ff21c65323823e2693f9aed39374f83185` (`feat: add locked GPT-5.6 evidence reconciliation`). Git history remains the source of truth for exact timestamps and diffs.
 
 ## What judges should evaluate as new work
 

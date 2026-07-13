@@ -70,6 +70,7 @@ Codex was used to implement this independent Codex Control Tower repository. Thi
 | Live-artifact privacy check | PASS | No builder-specific workspace path remained in the committed live report or Codex evidence files. |
 | First locked-claim reconciliation | WARN | GPT-5.6 returned structurally valid output, but the no-command contract prevented it from seeing the referenced file contents; all five assessments were honestly preserved as `INSUFFICIENT`. |
 | Bounded evidence-bundle reconciliation | PASS | The command completed in about 23 seconds. GPT-5.6 supported four claims and questioned one CI claim; the deterministic `FAIL` and `NOT_RUN` states remained locked. The model-level verdict remained honestly `FAIL`. |
+| GitHub Pages first deployment attempt | NOT_RUN | The dashboard build passed on GitHub, but `configure-pages` stopped because Pages was not yet enabled in repository settings. No live URL is claimed until the owner enables GitHub Actions as the Pages source and the deployment succeeds. |
 
 ## Failures found and fixed
 
