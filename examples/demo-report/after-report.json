@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "invoiceflow-mini-simulated-governed",
   "targetPath": ".\\examples\\governed-saas-after",
-  "generatedAt": "2026-07-13T17:52:44.949Z",
+  "generatedAt": "2026-07-13T18:39:48.087Z",
   "scanMode": "SIMULATED",
   "simulatedData": true,
   "scanScope": {
@@ -48,39 +48,51 @@
     },
     {
       "path": ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
-      "bytes": 942,
-      "lines": 16,
-      "modifiedAt": "2026-07-13T17:51:31.804Z"
+      "bytes": 12494,
+      "lines": 342,
+      "modifiedAt": "2026-07-13T18:35:23.412Z"
     },
     {
       "path": ".controltower/codex-live-events.jsonl",
-      "bytes": 71616,
+      "bytes": 4421,
       "lines": 0,
-      "modifiedAt": "2026-07-13T17:51:54.258Z"
+      "modifiedAt": "2026-07-13T18:35:44.486Z"
     },
     {
       "path": ".controltower/codex-live-review-record.json",
-      "bytes": 3254,
-      "lines": 48,
-      "modifiedAt": "2026-07-13T17:51:54.260Z"
+      "bytes": 11803,
+      "lines": 200,
+      "modifiedAt": "2026-07-13T18:35:44.490Z"
     },
     {
       "path": ".controltower/codex-live-review.json",
-      "bytes": 2488,
+      "bytes": 3967,
       "lines": 1,
-      "modifiedAt": "2026-07-13T17:51:53.968Z"
+      "modifiedAt": "2026-07-13T18:35:44.148Z"
     },
     {
       "path": ".controltower/codex-review-schema.json",
-      "bytes": 1166,
-      "lines": 66,
-      "modifiedAt": "2026-07-13T17:51:31.805Z"
+      "bytes": 1678,
+      "lines": 82,
+      "modifiedAt": "2026-07-13T18:35:23.413Z"
     },
     {
       "path": ".controltower/config.json",
       "bytes": 509,
       "lines": 21,
       "modifiedAt": "2026-07-12T16:59:42.374Z"
+    },
+    {
+      "path": ".controltower/DETERMINISTIC_CLAIMS.json",
+      "bytes": 1580,
+      "lines": 54,
+      "modifiedAt": "2026-07-13T18:35:23.406Z"
+    },
+    {
+      "path": ".controltower/EVIDENCE_BUNDLE.md",
+      "bytes": 10268,
+      "lines": 303,
+      "modifiedAt": "2026-07-13T18:35:23.410Z"
     },
     {
       "path": ".controltower/flight-recorder.jsonl",
@@ -114,9 +126,9 @@
     },
     {
       "path": "docs/MEMORY_LENS.md",
-      "bytes": 1409,
+      "bytes": 1401,
       "lines": 36,
-      "modifiedAt": "2026-07-12T17:01:40.959Z"
+      "modifiedAt": "2026-07-13T18:38:46.473Z"
     },
     {
       "path": "docs/MISTAKE_SHIELD.md",
@@ -293,7 +305,7 @@
     }
   },
   "contextGraph": {
-    "generatedAt": "2026-07-13T17:52:44.947Z",
+    "generatedAt": "2026-07-13T18:39:48.085Z",
     "generatedLocally": true,
     "algorithm": "deterministic lexical and repository-surface analysis",
     "nodes": [
@@ -316,8 +328,8 @@
         "id": "file:.controltower/CODEX_LIVE_REVIEW_PROMPT.md",
         "label": ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
         "type": "documentation",
-        "lines": 16,
-        "bytes": 942,
+        "lines": 342,
+        "bytes": 12494,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -332,7 +344,7 @@
         "label": ".controltower/codex-live-events.jsonl",
         "type": "control",
         "lines": 0,
-        "bytes": 71616,
+        "bytes": 4421,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -346,8 +358,8 @@
         "id": "file:.controltower/codex-live-review-record.json",
         "label": ".controltower/codex-live-review-record.json",
         "type": "control",
-        "lines": 48,
-        "bytes": 3254,
+        "lines": 200,
+        "bytes": 11803,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -362,7 +374,7 @@
         "label": ".controltower/codex-live-review.json",
         "type": "control",
         "lines": 1,
-        "bytes": 2488,
+        "bytes": 3967,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -376,8 +388,8 @@
         "id": "file:.controltower/codex-review-schema.json",
         "label": ".controltower/codex-review-schema.json",
         "type": "control",
-        "lines": 66,
-        "bytes": 1166,
+        "lines": 82,
+        "bytes": 1678,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -400,6 +412,36 @@
         "freshness": "fresh",
         "protected": false,
         "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/DETERMINISTIC_CLAIMS.json",
+        "label": ".controltower/DETERMINISTIC_CLAIMS.json",
+        "type": "control",
+        "lines": 54,
+        "bytes": 1580,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/EVIDENCE_BUNDLE.md",
+        "label": ".controltower/EVIDENCE_BUNDLE.md",
+        "type": "evidence",
+        "lines": 303,
+        "bytes": 10268,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
         "owners": []
       },
       {
@@ -482,7 +524,7 @@
         "label": "docs/MEMORY_LENS.md",
         "type": "documentation",
         "lines": 36,
-        "bytes": 1409,
+        "bytes": 1401,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -827,7 +869,7 @@
     ],
     "overlappingPlans": [],
     "stats": {
-      "nodeCount": 30,
+      "nodeCount": 32,
       "edgeCount": 13,
       "riskNodeCount": 0,
       "todoFixmeCount": 0
@@ -846,6 +888,21 @@
         "freshness": "fresh",
         "protected": true,
         "reason": "Selected as a instruction surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/EVIDENCE_BUNDLE.md",
+        "label": ".controltower/EVIDENCE_BUNDLE.md",
+        "type": "evidence",
+        "lines": 303,
+        "bytes": 10268,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
         "owners": []
       },
       {
@@ -928,7 +985,7 @@
         "label": ".controltower/codex-live-events.jsonl",
         "type": "control",
         "lines": 0,
-        "bytes": 71616,
+        "bytes": 4421,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -942,8 +999,8 @@
         "id": "file:.controltower/codex-live-review-record.json",
         "label": ".controltower/codex-live-review-record.json",
         "type": "control",
-        "lines": 48,
-        "bytes": 3254,
+        "lines": 200,
+        "bytes": 11803,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -958,7 +1015,7 @@
         "label": ".controltower/codex-live-review.json",
         "type": "control",
         "lines": 1,
-        "bytes": 2488,
+        "bytes": 3967,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -972,8 +1029,8 @@
         "id": "file:.controltower/codex-review-schema.json",
         "label": ".controltower/codex-review-schema.json",
         "type": "control",
-        "lines": 66,
-        "bytes": 1166,
+        "lines": 82,
+        "bytes": 1678,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -989,6 +1046,21 @@
         "type": "control",
         "lines": 21,
         "bytes": 509,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/DETERMINISTIC_CLAIMS.json",
+        "label": ".controltower/DETERMINISTIC_CLAIMS.json",
+        "type": "control",
+        "lines": 54,
+        "bytes": 1580,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1077,8 +1149,8 @@
         "id": "file:.controltower/CODEX_LIVE_REVIEW_PROMPT.md",
         "label": ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
         "type": "documentation",
-        "lines": 16,
-        "bytes": 942,
+        "lines": 342,
+        "bytes": 12494,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -1108,7 +1180,7 @@
         "label": "docs/MEMORY_LENS.md",
         "type": "documentation",
         "lines": 36,
-        "bytes": 1409,
+        "bytes": 1401,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -1162,43 +1234,13 @@
         "protected": true,
         "reason": "Selected as a documentation surface for Codex mission context.",
         "owners": []
-      },
-      {
-        "id": "file:src/app.js",
-        "label": "src/app.js",
-        "type": "source",
-        "lines": 41,
-        "bytes": 1363,
-        "risk": false,
-        "markers": 0,
-        "relevance": 0.7,
-        "importance": 0.7,
-        "freshness": "fresh",
-        "protected": false,
-        "reason": "Selected as a source surface for Codex mission context.",
-        "owners": []
-      },
-      {
-        "id": "file:src/auth.js",
-        "label": "src/auth.js",
-        "type": "source",
-        "lines": 59,
-        "bytes": 1990,
-        "risk": false,
-        "markers": 0,
-        "relevance": 0.7,
-        "importance": 0.7,
-        "freshness": "fresh",
-        "protected": false,
-        "reason": "Selected as a source surface for Codex mission context.",
-        "owners": []
       }
     ],
     "contextBudget": {
       "maxItems": 24,
       "selectedItems": 24,
-      "availableItems": 30,
-      "estimatedTokens": 13044
+      "availableItems": 32,
+      "estimatedTokens": 17794
     }
   },
   "reviewGate": {
@@ -1234,14 +1276,14 @@
     "decisionRecorded": true
   },
   "memoryLens": {
-    "generatedAt": "2026-07-13T17:52:44.949Z",
+    "generatedAt": "2026-07-13T18:39:48.087Z",
     "generatedLocally": true,
     "sources": [
       {
         "relative": "docs/MEMORY_LENS.md",
-        "ageDays": 1,
+        "ageDays": 0,
         "stale": false,
-        "bytes": 1409
+        "bytes": 1401
       },
       {
         "relative": "TECH_DEBT_AND_SECURITY.md",
@@ -1292,7 +1334,7 @@
       "Evidence: one working integration test was run with Node's test runner."
     ],
     "userPreferences": [
-      "Prefer a small, understandable three-minute demo."
+      "Prefer a small, understandable 2:45 demo."
     ],
     "staleSections": [],
     "missingSources": [
@@ -1464,7 +1506,7 @@
     "matchedLessons": [],
     "gateStatus": "APPROVED",
     "saferNextAction": "Proceed only within the declared scope and record commands, evidence, NOT_RUN checks, and remaining risk.",
-    "checkedAt": "2026-07-13T17:52:44.949Z",
+    "checkedAt": "2026-07-13T18:39:48.087Z",
     "deterministic": true
   },
   "phase0": {
@@ -1614,7 +1656,7 @@
     "phase0Healthy": true,
     "flightRecorderHealthy": true,
     "evidenceSurfaceCount": 4,
-    "contextNodeCount": 30,
+    "contextNodeCount": 32,
     "criticalRiskCount": 0,
     "highRiskCount": 1
   },
@@ -1853,9 +1895,9 @@
   },
   "codexLiveReview": {
     "state": "READY",
-    "mode": "REAL_CODEX",
+    "mode": "REAL_CODEX_EVIDENCE_RECONCILIATION",
     "model": "gpt-5.6-sol",
-    "authenticatedVia": "Checked when the live review starts",
-    "disclosure": "Optional real Codex review; deterministic score remains independently reproducible."
+    "authenticatedVia": "Checked when evidence reconciliation starts",
+    "disclosure": "Real GPT-5.6 evidence reconciliation is ready; deterministic states remain locked and independently reproducible."
   }
 }

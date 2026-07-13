@@ -226,7 +226,7 @@ This build intentionally avoids adding a cloud service or hidden model dependenc
 - signed/tamper-evident evidence and identity-backed gate enforcement
 - CI and PR/MR integration
 - team/cross-repository continuity
-- deeper Codex review modes beyond the implemented opt-in read-only GPT-5.6 Sol assessment
+- additional evidence-reconciliation claim packs beyond the implemented read-only GPT-5.6 flow
 - full multilingual product packs beyond bilingual Phase-0
 
 ### Deliberately not claimed

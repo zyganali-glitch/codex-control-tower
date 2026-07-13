@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-07-13T18:39:56.626Z",
+  "claims": [
+    {
+      "id": "TEST_EXECUTION",
+      "claim": "The focused InvoiceFlow Mini tests have recorded execution evidence.",
+      "evidencePaths": [
+        "CONTROL_TOWER_REPORT.json",
+        "docs/EVIDENCE_REPORT.md",
+        "docs/TRACEABILITY_MATRIX.md"
+      ],
+      "deterministicStatus": "PASS"
+    },
+    {
+      "id": "CI_EXECUTION",
+      "claim": "Continuous integration execution is supported by the governed fixture evidence.",
+      "evidencePaths": [
+        "CONTROL_TOWER_REPORT.json",
+        "docs/TRACEABILITY_MATRIX.md",
+        "docs/NOT_RUN_GATES.md"
+      ],
+      "deterministicStatus": "FAIL"
+    },
+    {
+      "id": "REVIEW_GATE",
+      "claim": "The recorded Review Gate represents the disclosed authorization boundary.",
+      "evidencePaths": [
+        "CONTROL_TOWER_REPORT.json",
+        ".controltower/review-gate.json"
+      ],
+      "deterministicStatus": "SIMULATED"
+    },
+    {
+      "id": "EVIDENCE_BOUNDARY",
+      "claim": "PASS, FAIL, NOT_RUN, and SIMULATED evidence remain visibly separated.",
+      "evidencePaths": [
+        "CONTROL_TOWER_REPORT.json",
+        "docs/EVIDENCE_REPORT.md",
+        "docs/TRACEABILITY_MATRIX.md"
+      ],
+      "deterministicStatus": "PASS"
+    },
+    {
+      "id": "EXTERNAL_GATES",
+      "claim": "Browser, load, deployment, and independent security gates remain explicitly NOT_RUN.",
+      "evidencePaths": [
+        "CONTROL_TOWER_REPORT.json",
+        "docs/NOT_RUN_GATES.md"
+      ],
+      "deterministicStatus": "NOT_RUN"
+    }
+  ]
+}

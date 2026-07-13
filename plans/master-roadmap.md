@@ -5,7 +5,7 @@ Mission: ship an honest, competition-ready, local-first mission control layer fo
 
 ## Product scope
 
-The competition build includes the Node.js CLI, deterministic repository scanner and scorer, Mission Prompt Generator, Context Trace, Review Gate, Mistake Shield, Flight Recorder, Memory Lens, English-only Phase-0 wizard, evidence/Devpost exporters, React dashboard, optional real GPT-5.6 Sol review, and the simulated InvoiceFlow Mini before/after story.
+The competition build includes the Node.js CLI, deterministic repository scanner and scorer, bounded Mission Prompt, locked claims, real GPT-5.6 Evidence Reconciliation, local output validation, Review Gate, evidence/Devpost exporters, React dashboard, and the simulated InvoiceFlow Mini before/after story.
 
 The build excludes hosted SaaS, mandatory API keys, telemetry, real authentication or payment integration, enterprise identity verification, and claims of guaranteed correctness.
 
@@ -20,7 +20,7 @@ The build excludes hosted SaaS, mandatory API keys, telemetry, real authenticati
 - [x] Close root-repository dogfooding regressions and record post-change evidence.
 - [x] Push the verified `main` branch to the approved GitHub destination and observe hosted CI success.
 - [ ] Recheck published Devpost rules when available and record eligibility constraints.
-- [ ] Capture sanitized final screenshots and a three-minute demo video.
+- [ ] Capture sanitized final screenshots and a 2:45 demo video.
 
 ## Acceptance and evidence
 
@@ -40,7 +40,7 @@ Release readiness requires `npm.cmd run verify` to pass, the controlled score st
 
 1. Package Control Tower as a Codex-native plugin/skill or hook-driven workflow.
 2. Export a PR-level “agent change passport” joining mission, scope, diff, commands, gate, NOT_RUN items, and next action.
-3. Extend the implemented optional read-only GPT-5.6 Sol review while retaining deterministic local scoring.
+3. Extend the implemented five-claim Evidence Reconciliation policy while retaining locked deterministic states.
 
 ### Future work
 

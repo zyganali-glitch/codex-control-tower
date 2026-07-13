@@ -4,15 +4,15 @@ Verdict: **CAUTION**
 
 ## Proposed action
 
-Recheck the official rules after challenge opening, capture sanitized competition media, and strengthen the Codex provenance story without unapproved product expansion.
+Finish sanitized competition media and strengthen the evidence story without unapproved product expansion.
 
 ## Reasons
 
-- Detailed Devpost rules were not yet published at this checkpoint, so eligibility and model-use claims remain qualified.
+- The published Devpost rules have been reviewed; final media and submission-form checks remain manual gates.
 - The README hero is sanitized, but the final video and screenshot set still need frame-by-frame privacy review.
-- A native Codex hook/plugin or change receipt could improve the entry, but it must not displace the working three-minute story or bypass a new scoped approval.
+- A native Codex hook/plugin or change receipt could improve a future version, but it must not displace the working 2:45 story or bypass a new scoped approval.
 - Protected source repositories remain read-only and must never become product remotes or demo targets.
 
 ## Next safe action
 
-On or after challenge opening, read the published rules first. Then record the shortest sanitized Detect → Bound → Prove demo and add only the smallest provenance improvement that can be tested and explained honestly.
+Record the sanitized Detect → Bound → Reconcile → Prove demo, review every frame for private data, and complete the remaining manual submission checks honestly.

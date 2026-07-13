@@ -1,45 +1,199 @@
 {
   "state": "COMPLETE",
-  "mode": "REAL_CODEX",
+  "mode": "REAL_CODEX_EVIDENCE_RECONCILIATION",
   "model": "gpt-5.6-sol",
   "authenticatedVia": "ChatGPT subscription",
-  "startedAt": "2026-07-13T17:51:31.337Z",
-  "disclosure": "Optional real Codex review; deterministic score remains independently reproducible.",
+  "startedAt": "2026-07-13T18:39:56.626Z",
+  "disclosure": "Real GPT-5.6 evidence reconciliation; deterministic states remain locked and independently reproducible.",
   "cliVersion": "codex-cli 0.144.3",
-  "completedAt": "2026-07-13T17:51:54.259Z",
+  "completedAt": "2026-07-13T18:40:18.528Z",
   "assessment": {
-    "verdict": "WARN",
-    "summary": "Governance evidence is coherent and appropriately bounded: deterministic score 88/100, one HIGH risk flag, and an APPROVED review gate. All approval and PASS claims remain SIMULATED; CI and several external validation gates are NOT_RUN.",
-    "strengths": [
-      "CONTROL_TOWER_REPORT.json consistently reports score 88, one HIGH NO_CI risk, SIMULATED mode, and an APPROVED gate.",
-      "The scoped approval and prohibited actions are explicit in .controltower/review-gate.json, including disclosure that reviewer identity was not verified.",
-      "docs/EVIDENCE_REPORT.md distinguishes local fixture PASS results from production, provider, security, persistence, deployment, and scale claims.",
-      "docs/TRACEABILITY_MATRIX.md links bounded requirements to implementation and verification while marking real integrations NOT_RUN.",
-      "docs/NOT_RUN_GATES.md clearly states that NOT_RUN is not PASS and records prerequisites for each skipped gate."
-    ],
-    "findings": [
+    "verdict": "FAIL",
+    "summary": "The bounded evidence supports the recorded local test claim and preserves the SIMULATED and NOT_RUN boundaries. The locked CI status remains FAIL: no CI configuration or CI execution evidence is present. Review approval is only a SIMULATED local file gate, not identity-verified authorization.",
+    "claimAudits": [
       {
-        "severity": "HIGH",
-        "title": "No repeatable CI proof",
-        "evidence": "CONTROL_TOWER_REPORT.json reports NO_CI, identifies .github/workflows/ci.yml as missing, and marks CI FAIL. No CI execution proof is present in the reviewed evidence.",
-        "recommendation": "Add an approved minimal CI workflow that runs the documented tests in a clean environment and preserve its execution artifact."
+        "id": "TEST_EXECUTION",
+        "modelAssessment": "SUPPORTS",
+        "rationale": "The report records one focused Node test command with PASS, exit code 0, and two tests; the evidence report and traceability matrix consistently limit this to simulated local fixture evidence. This supports recorded execution evidence only, not independent execution verification.",
+        "citedEvidencePaths": [
+          "CONTROL_TOWER_REPORT.json",
+          "docs/EVIDENCE_REPORT.md",
+          "docs/TRACEABILITY_MATRIX.md"
+        ],
+        "missingEvidence": [],
+        "recommendedNextAction": "Retain the recorded PASS while continuing to disclose that the result is local simulated fixture evidence."
       },
       {
-        "severity": "MEDIUM",
-        "title": "Approval is simulated and identity is unverified",
-        "evidence": ".controltower/review-gate.json marks the gate APPROVED but also sets simulated=true and identityVerified=false, explicitly limiting it to a demonstration approval.",
-        "recommendation": "Do not treat this artifact as verified human authorization for real integrations, credentials, deployment, or production changes."
+        "id": "CI_EXECUTION",
+        "modelAssessment": "QUESTIONS",
+        "rationale": "The evidence contradicts the affirmative claim: CI is locked FAIL, its evidence field is null, CI appears in the NOT_RUN list, and the risk register states that no CI configuration exists. NOT_RUN and FAIL must not be interpreted as CI execution support.",
+        "citedEvidencePaths": [
+          "CONTROL_TOWER_REPORT.json",
+          "docs/TRACEABILITY_MATRIX.md",
+          "docs/NOT_RUN_GATES.md"
+        ],
+        "missingEvidence": [
+          "A CI configuration and a CI-generated execution record from a clean automation environment."
+        ],
+        "recommendedNextAction": "Add an approved minimal CI workflow and preserve its actual run output before claiming CI execution support."
       },
       {
-        "severity": "LOW",
-        "title": "PASS evidence is fixture-scoped and partly referential",
-        "evidence": "docs/EVIDENCE_REPORT.md records local simulated PASS claims, while CONTROL_TOWER_REPORT.json references a test-output artifact outside the permitted review set; that underlying artifact was not reviewed.",
-        "recommendation": "Keep PASS labeled SIMULATED and independently verify the referenced test artifact before relying on executable proof beyond this bounded review."
+        "id": "REVIEW_GATE",
+        "modelAssessment": "SUPPORTS",
+        "rationale": "Both records consistently disclose an APPROVED but SIMULATED local file gate, including its scope, allowed files, forbidden actions, reviewer label, and timestamp. They also state that identity was not verified and that the record is not enterprise authorization.",
+        "citedEvidencePaths": [
+          "CONTROL_TOWER_REPORT.json",
+          ".controltower/review-gate.json"
+        ],
+        "missingEvidence": [],
+        "recommendedNextAction": "Keep the status visibly SIMULATED; require a real human and identity-verified authorization process before external integration or deployment work."
+      },
+      {
+        "id": "EVIDENCE_BOUNDARY",
+        "modelAssessment": "SUPPORTS",
+        "rationale": "The bundle visibly distinguishes recorded PASS checks, CI FAIL, multiple NOT_RUN gates, and the overall SIMULATED mode. The evidence report explicitly warns that NOT_RUN checks and simulated fixture results do not establish production, provider, deployment, scale, or compliance claims.",
+        "citedEvidencePaths": [
+          "CONTROL_TOWER_REPORT.json",
+          "docs/EVIDENCE_REPORT.md",
+          "docs/TRACEABILITY_MATRIX.md"
+        ],
+        "missingEvidence": [],
+        "recommendedNextAction": "Preserve these labels without collapsing FAIL or NOT_RUN into PASS, or SIMULATED approval into real authorization."
+      },
+      {
+        "id": "EXTERNAL_GATES",
+        "modelAssessment": "SUPPORTS",
+        "rationale": "The report explicitly lists browser/accessibility, load/concurrency, deployment, and independent security review as NOT_RUN. The NOT_RUN gates document separately confirms browser, load, and deployment checks as NOT_RUN and warns that these statuses are not PASS.",
+        "citedEvidencePaths": [
+          "CONTROL_TOWER_REPORT.json",
+          "docs/NOT_RUN_GATES.md"
+        ],
+        "missingEvidence": [],
+        "recommendedNextAction": "Leave all external gates explicitly NOT_RUN until each is separately authorized and produces its own execution evidence."
       }
     ],
-    "nextSafeAction": "Preserve the current bounded APPROVED scope; add and execute CI only under appropriate approval, while keeping real-provider, identity, browser/accessibility, load/concurrency, deployment, dependency-audit, and independent-security gates explicitly NOT_RUN."
+    "nextSafeAction": "Treat the governance result as FAIL for CI readiness, retain the 88/100 deterministic score and one NO_CI risk flag as recorded, and do not advance external work until real authorization and gate-specific execution evidence exist."
+  },
+  "reconciliation": {
+    "verdict": "FAIL",
+    "summary": "The bounded evidence supports the recorded local test claim and preserves the SIMULATED and NOT_RUN boundaries. The locked CI status remains FAIL: no CI configuration or CI execution evidence is present. Review approval is only a SIMULATED local file gate, not identity-verified authorization.",
+    "claimAudits": [
+      {
+        "id": "TEST_EXECUTION",
+        "claim": "The focused InvoiceFlow Mini tests have recorded execution evidence.",
+        "deterministicStatus": "PASS",
+        "modelAssessment": "SUPPORTS",
+        "agreement": "AGREEMENT",
+        "rationale": "The report records one focused Node test command with PASS, exit code 0, and two tests; the evidence report and traceability matrix consistently limit this to simulated local fixture evidence. This supports recorded execution evidence only, not independent execution verification.",
+        "evidencePaths": [
+          "CONTROL_TOWER_REPORT.json",
+          "docs/EVIDENCE_REPORT.md",
+          "docs/TRACEABILITY_MATRIX.md"
+        ],
+        "citedEvidencePaths": [
+          "CONTROL_TOWER_REPORT.json",
+          "docs/EVIDENCE_REPORT.md",
+          "docs/TRACEABILITY_MATRIX.md"
+        ],
+        "rejectedEvidencePaths": [],
+        "missingEvidence": [],
+        "recommendedNextAction": "Retain the recorded PASS while continuing to disclose that the result is local simulated fixture evidence."
+      },
+      {
+        "id": "CI_EXECUTION",
+        "claim": "Continuous integration execution is supported by the governed fixture evidence.",
+        "deterministicStatus": "FAIL",
+        "modelAssessment": "QUESTIONS",
+        "agreement": "DISAGREEMENT",
+        "rationale": "The evidence contradicts the affirmative claim: CI is locked FAIL, its evidence field is null, CI appears in the NOT_RUN list, and the risk register states that no CI configuration exists. NOT_RUN and FAIL must not be interpreted as CI execution support.",
+        "evidencePaths": [
+          "CONTROL_TOWER_REPORT.json",
+          "docs/TRACEABILITY_MATRIX.md",
+          "docs/NOT_RUN_GATES.md"
+        ],
+        "citedEvidencePaths": [
+          "CONTROL_TOWER_REPORT.json",
+          "docs/TRACEABILITY_MATRIX.md",
+          "docs/NOT_RUN_GATES.md"
+        ],
+        "rejectedEvidencePaths": [],
+        "missingEvidence": [
+          "A CI configuration and a CI-generated execution record from a clean automation environment."
+        ],
+        "recommendedNextAction": "Add an approved minimal CI workflow and preserve its actual run output before claiming CI execution support."
+      },
+      {
+        "id": "REVIEW_GATE",
+        "claim": "The recorded Review Gate represents the disclosed authorization boundary.",
+        "deterministicStatus": "SIMULATED",
+        "modelAssessment": "SUPPORTS",
+        "agreement": "AGREEMENT",
+        "rationale": "Both records consistently disclose an APPROVED but SIMULATED local file gate, including its scope, allowed files, forbidden actions, reviewer label, and timestamp. They also state that identity was not verified and that the record is not enterprise authorization.",
+        "evidencePaths": [
+          "CONTROL_TOWER_REPORT.json",
+          ".controltower/review-gate.json"
+        ],
+        "citedEvidencePaths": [
+          "CONTROL_TOWER_REPORT.json",
+          ".controltower/review-gate.json"
+        ],
+        "rejectedEvidencePaths": [],
+        "missingEvidence": [],
+        "recommendedNextAction": "Keep the status visibly SIMULATED; require a real human and identity-verified authorization process before external integration or deployment work."
+      },
+      {
+        "id": "EVIDENCE_BOUNDARY",
+        "claim": "PASS, FAIL, NOT_RUN, and SIMULATED evidence remain visibly separated.",
+        "deterministicStatus": "PASS",
+        "modelAssessment": "SUPPORTS",
+        "agreement": "AGREEMENT",
+        "rationale": "The bundle visibly distinguishes recorded PASS checks, CI FAIL, multiple NOT_RUN gates, and the overall SIMULATED mode. The evidence report explicitly warns that NOT_RUN checks and simulated fixture results do not establish production, provider, deployment, scale, or compliance claims.",
+        "evidencePaths": [
+          "CONTROL_TOWER_REPORT.json",
+          "docs/EVIDENCE_REPORT.md",
+          "docs/TRACEABILITY_MATRIX.md"
+        ],
+        "citedEvidencePaths": [
+          "CONTROL_TOWER_REPORT.json",
+          "docs/EVIDENCE_REPORT.md",
+          "docs/TRACEABILITY_MATRIX.md"
+        ],
+        "rejectedEvidencePaths": [],
+        "missingEvidence": [],
+        "recommendedNextAction": "Preserve these labels without collapsing FAIL or NOT_RUN into PASS, or SIMULATED approval into real authorization."
+      },
+      {
+        "id": "EXTERNAL_GATES",
+        "claim": "Browser, load, deployment, and independent security gates remain explicitly NOT_RUN.",
+        "deterministicStatus": "NOT_RUN",
+        "modelAssessment": "SUPPORTS",
+        "agreement": "AGREEMENT",
+        "rationale": "The report explicitly lists browser/accessibility, load/concurrency, deployment, and independent security review as NOT_RUN. The NOT_RUN gates document separately confirms browser, load, and deployment checks as NOT_RUN and warns that these statuses are not PASS.",
+        "evidencePaths": [
+          "CONTROL_TOWER_REPORT.json",
+          "docs/NOT_RUN_GATES.md"
+        ],
+        "citedEvidencePaths": [
+          "CONTROL_TOWER_REPORT.json",
+          "docs/NOT_RUN_GATES.md"
+        ],
+        "rejectedEvidencePaths": [],
+        "missingEvidence": [],
+        "recommendedNextAction": "Leave all external gates explicitly NOT_RUN until each is separately authorized and produces its own execution evidence."
+      }
+    ],
+    "counts": {
+      "agreement": 4,
+      "disagreement": 1,
+      "notRunPreserved": 1,
+      "rejectedEvidencePaths": 0
+    },
+    "nextSafeAction": "Treat the governance result as FAIL for CI readiness, retain the 88/100 deterministic score and one NO_CI risk flag as recorded, and do not advance external work until real authorization and gate-specific execution evidence exist.",
+    "safetyBoundary": "GPT-5.6 audits evidence but cannot replace deterministic PASS, WARN, FAIL, NOT_RUN, or SIMULATED states."
   },
   "evidence": [
+    ".controltower/DETERMINISTIC_CLAIMS.json",
+    ".controltower/EVIDENCE_BUNDLE.md",
     ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
     ".controltower/codex-live-review.json",
     ".controltower/codex-live-events.jsonl"

@@ -11,7 +11,7 @@
 
 ## Persona and user preferences
 
-- Prefer a small, understandable three-minute demo.
+- Prefer a small, understandable 2:45 demo.
 - Keep the default path local-first, deterministic, and dependency-free.
 - Surface uncertainty, simulated evidence, and skipped checks explicitly.
 

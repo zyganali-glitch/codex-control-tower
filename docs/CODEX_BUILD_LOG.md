@@ -1,6 +1,6 @@
 # Codex Build Log
 
-Build session: 2026-07-12 (Europe/Istanbul)
+Build sessions: 2026-07-12 through 2026-07-13 (Europe/Istanbul)
 
 Codex was used to implement this independent Codex Control Tower repository. This implementation record makes no consciousness, self-awareness, or sentience claim, and generated output is not automatically correct. The build used parallel, bounded workstreams for source research, the dashboard, the controlled examples/core templates, and the competition narrative; the primary session integrated and tested the result.
 
@@ -9,7 +9,7 @@ Codex was used to implement this independent Codex Control Tower repository. Thi
 - The four Universal Agent OS family repositories were studied read-only through their public web surfaces.
 - None was cloned into, modified by, or used as the active product or demo target.
 - InvoiceFlow Mini is controlled **SIMULATED DEMO DATA**, not a customer project.
-- No OpenAI API key, telemetry, analytics, deployment, source upload, or real auth/payment provider was used. The optional Codex review uses the signed-in ChatGPT subscription.
+- No OpenAI API key, telemetry, analytics, source upload, or real auth/payment provider was used. GPT-5.6 Evidence Reconciliation uses the signed-in ChatGPT subscription and only the bounded evidence bundle disclosed to the user.
 
 ## Phases completed
 
@@ -20,6 +20,8 @@ Codex was used to implement this independent Codex Control Tower repository. Thi
 5. Built the Vite + React local dashboard and raw-report adapter.
 6. Wrote the competition README and source, architecture, privacy, limitations, judging, Devpost, demo, and Codex build-time assessment documents.
 7. Added Node assertion tests and CI, then hardened scoring, scoped approvals, and generated-output isolation after independent adversarial review.
+8. Replaced the free-form model assessment with five locked deterministic claims and a strict GPT-5.6 Evidence Reconciliation contract.
+9. Reviewed the published challenge rules, added Build Week provenance, a GitHub Pages workflow, a no-install judge path, and a 2:45 recording plan.
 
 ## Important implementation decisions
 
@@ -30,7 +32,7 @@ Codex was used to implement this independent Codex Control Tower repository. Thi
 - **Self-scan isolation:** generated evidence/Devpost packs and prior Control Tower JSON reports are excluded from later repository scoring.
 - **Portable demo artifacts:** committed reports replace builder-specific absolute paths with repository-relative `./examples/...` paths.
 - **Demo honesty:** the dashboard uses a real local scan of the simulated governed fixture. Its two fixture tests are executed by `cct demo`; CI, browser/accessibility, load, deployment, and provider checks remain `NOT_RUN`.
-- **Product focus:** signed team gates, PR/MR integrations, and hosted collaboration remain future work; an optional real GPT-5.6 Sol read-only review is implemented.
+- **Product focus:** signed team gates, PR/MR integrations, and hosted collaboration remain future work; real GPT-5.6 Evidence Reconciliation is implemented without giving the model authority to rewrite deterministic states.
 
 ## Command and check record
 
@@ -66,6 +68,8 @@ Codex was used to implement this independent Codex Control Tower repository. Thi
 | First broad `npm run demo:codex` | FAIL | Real GPT-5.6 Sol ran read-only but the broad inspection exceeded the four-minute command boundary before final output; no success was claimed. |
 | Narrowed `npm run demo:codex` | PASS | Real `gpt-5.6-sol` completed in about 21 seconds through ChatGPT subscription access, read-only, with a structured `WARN` assessment and local prompt/event/final/provenance files. |
 | Live-artifact privacy check | PASS | No builder-specific workspace path remained in the committed live report or Codex evidence files. |
+| First locked-claim reconciliation | WARN | GPT-5.6 returned structurally valid output, but the no-command contract prevented it from seeing the referenced file contents; all five assessments were honestly preserved as `INSUFFICIENT`. |
+| Bounded evidence-bundle reconciliation | PASS | The command completed in about 23 seconds. GPT-5.6 supported four claims and questioned one CI claim; the deterministic `FAIL` and `NOT_RUN` states remained locked. The model-level verdict remained honestly `FAIL`. |
 
 ## Failures found and fixed
 
@@ -83,14 +87,16 @@ Codex was used to implement this independent Codex Control Tower repository. Thi
 12. Mission Prompt publication rules conflicted with a scoped release approval. The prompt now carries the exact Review Gate scope and permits publication only when that scoped gate explicitly authorizes the action and destination.
 13. The first live Codex task was too broad for a short demo. The contract was narrowed to five named evidence files, prohibited tests/search/progress updates, and selected low reasoning effort; the real GPT-5.6 Sol run then completed in about 21 seconds.
 14. The initial live dashboard report exposed the builder's absolute workspace path. Portable-path rewriting was added for the live report and Codex event stream before publication.
+15. A no-command model contract initially supplied file names without file contents. A bounded, size-limited evidence bundle now provides the exact permitted local evidence as untrusted data, while the model remains read-only and cannot execute commands.
+16. The compatibility table initially named Windows 11 without checking the host. The operating-system check showed Windows 10 Pro, and the documentation was corrected.
 
 ## Current honest status
 
-- Implemented: CLI, engines, examples, dashboard, docs, tests, CI, demo, evidence pack, Devpost pack, and optional real GPT-5.6 Sol review.
-- Verified locally: the full root suite, two governed fixture tests, demo orchestration, real ChatGPT-authenticated `gpt-5.6-sol` read-only review, evidence/report rerun stability, dashboard production build, and visual dashboard rendering.
+- Implemented: CLI, engines, examples, dashboard, docs, tests, CI, demo, evidence pack, Devpost pack, and real GPT-5.6 Evidence Reconciliation.
+- Verified locally: the full root suite, two governed fixture tests, demo orchestration, real ChatGPT-authenticated `gpt-5.6-sol` read-only reconciliation, locked-state preservation, evidence/report rerun stability, dashboard production build, and visual dashboard rendering.
 - Local release-preflight verification: **PASS** via `npm.cmd run verify` at 2026-07-12T23:47:16+03:00.
 - Root dogfooding: **PASS** as a `REAL_LOCAL_SCAN` with visible exclusions; 100/100 means structural governance readiness, not code correctness or security certification.
-- Still NOT_RUN: published Devpost rules review, deployment, load/concurrency, browser accessibility audit, final submission-media review, and independent security review.
-- Manual after-code work: recheck the rules after opening, record the three-minute video, capture the remaining final screenshots, and submit on Devpost.
+- Still NOT_RUN: live Pages verification (until the workflow succeeds), load/concurrency, browser accessibility audit, independent security review, real user validation, final submission-media review, and Devpost submission.
+- Manual after-code work: record the 2:45 video, run `/feedback` in the primary Codex task and copy its private Session ID into the form, collect only genuine user observations, and submit on Devpost.
 
 See [FINAL_COMPLETENESS_REVIEW.md](FINAL_COMPLETENESS_REVIEW.md), [README](../README.md), and [Codex build-time self-assessment](CODEX_SELF_ASSESSMENT.md).

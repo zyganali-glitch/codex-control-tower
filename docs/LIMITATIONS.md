@@ -23,12 +23,12 @@ Codex Control Tower is an evidence and workflow layer for Codex-assisted develop
 | Privacy | Core processing is local, but generated reports can contain sensitive paths, plans, markers, or architecture details. Automatic redaction is not guaranteed. | Review every export before sharing. |
 | Security enforcement | Safe path handling reduces accidental writes but is not an OS sandbox, policy engine, malware scanner, or secret manager. | Use normal repository and operating-system security controls. |
 | Team workflows | No hosted synchronization, enterprise RBAC, signed approvals, cross-repo view, or automatic PR/MR comments are included. | These are future integrations, not hidden features. |
-| AI/cloud review | No model is required for the deterministic core. The optional real review uses signed-in ChatGPT access and sends the chosen fictional target context to Codex. | Its response is model output, not independent attestation, and cannot upgrade NOT_RUN checks to PASS. |
+| GPT-5.6 Evidence Reconciliation | No model is required for deterministic scanning. The explicit real audit uses signed-in ChatGPT access and sends named fictional evidence to Codex. | Its response is model output, not independent attestation; local code locks every deterministic state and rejects unsafe output. |
 | Localization | This Build Week version, including Phase-0, is English-only. | Multilingual packs are future work. |
 
 ## Demo boundary
 
-InvoiceFlow Mini is **SIMULATED DEMO DATA** created for a controlled three-minute before/after demonstration. It is not a real customer repository, payment product, authentication reference, benchmark corpus, or production sample.
+InvoiceFlow Mini is **SIMULATED DEMO DATA** created for a controlled 2:45 before/after demonstration. It is not a real customer repository, payment product, authentication reference, benchmark corpus, or production sample.
 
 - The messy repository intentionally contains weak tests, stale docs, TODO/FIXME markers, and risky auth/payment examples.
 - The governed repository demonstrates improved governance surfaces; it does not prove that every application risk is remediated.
@@ -50,7 +50,7 @@ The **Universal Agent OS family** was studied for concepts only and was not modi
 
 ## Roadmap, not current capability
 
-- Deeper Codex review modes beyond the implemented read-only GPT-5.6 Sol assessment.
+- Deeper reconciliation policies beyond the implemented five locked claims.
 - GitHub/GitLab PR/MR and CI integrations.
 - Stronger language-aware dependency and ownership analysis.
 - Signed/tamper-evident gates and evidence.

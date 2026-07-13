@@ -19,7 +19,7 @@ This is a concise, read-only concept research record. Codex Control Tower uses t
 | Context | Selected context should be bounded and explainable. | Deterministic Context Graph/Trace over files, plans, tests, docs, risks, and memory. | No claim of complete semantic dependency analysis. |
 | Continuity | Lessons and events should survive a session boundary. | Memory Lens and Flight Recorder. | No hidden autonomous memory service. |
 | Mistake prevention | Known risks should affect the next proposed action. | CLEAR/CAUTION/BLOCKED Mistake Shield with reasons and a safer rewrite. | No guarantee that every novel risk is detected. |
-| Model collaboration | A model can assess the evidence without owning the deterministic score. | Optional real `gpt-5.6-sol` read-only review through ChatGPT subscription access. | No API-key requirement and no AI-generated core score. |
+| Model collaboration | A model can assess evidence without owning the deterministic state. | Real `gpt-5.6-sol` read-only Evidence Reconciliation with locked claims and local output validation. | No API-key requirement, no AI-generated core score, and no model status override. |
 
 ## Decision summary
 

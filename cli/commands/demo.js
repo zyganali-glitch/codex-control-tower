@@ -133,10 +133,10 @@ async function demoCommand() {
   };
   after.codexLiveReview = {
     state: 'READY',
-    mode: 'REAL_CODEX',
+    mode: 'REAL_CODEX_EVIDENCE_RECONCILIATION',
     model: 'gpt-5.6-sol',
-    authenticatedVia: 'Checked when the live review starts',
-    disclosure: 'Optional real Codex review; deterministic score remains independently reproducible.'
+    authenticatedVia: 'Checked when evidence reconciliation starts',
+    disclosure: 'Real GPT-5.6 evidence reconciliation is ready; deterministic states remain locked and independently reproducible.'
   };
   writePortableJson(path.join(reportDir, 'after-report.json'), after, root);
   writePortableJson(path.join(root, 'apps', 'dashboard', 'src', 'sample-report.json'), after, root);

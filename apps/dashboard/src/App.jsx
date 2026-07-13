@@ -67,12 +67,12 @@ function App() {
     let active = true;
     async function refreshLiveReport() {
       try {
-        const response = await fetch(`/live-report.json?t=${Date.now()}`, { cache: 'no-store' });
+        const response = await fetch(`./live-report.json?t=${Date.now()}`, { cache: 'no-store' });
         if (!response.ok) return;
         const raw = await response.json();
         if (active && raw.codexLiveReview) setReport(normalizeReport(raw));
       } catch {
-        // The bundled report remains usable when the optional live file is absent.
+        // The bundled report remains usable before the live reconciliation file exists.
       }
     }
     refreshLiveReport();
@@ -137,7 +137,7 @@ function App() {
         <div className="sidebar-system">
           <div className="system-head"><span>LOCAL SYSTEM</span><i /></div>
           <div><span>Scanner</span><strong>Ready</strong></div>
-          <div><span>Codex review</span><strong>{report.codexLiveReview?.state || 'Ready'}</strong></div>
+          <div><span>Evidence reconcile</span><strong>{report.codexLiveReview?.state || 'Ready'}</strong></div>
           <div><span>Data flow</span><strong>Local + Codex</strong></div>
         </div>
         <div className="sidebar-foot"><Icon name="lock" size={13} /><span>Report stays on this device</span></div>

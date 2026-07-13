@@ -91,3 +91,25 @@ test('uses explicit raw comparison values and derives coverage independently fro
   assert.equal(report.comparison.before.evidenceCoverage, 50);
   assert.equal(report.comparison.after.evidenceCoverage, 50);
 });
+
+test('preserves locked Evidence Reconciliation states beside model assessments', () => {
+  const report = normalizeReport({
+    projectName: 'reconciled-project',
+    score: 70,
+    codexLiveReview: {
+      state: 'COMPLETE',
+      mode: 'REAL_CODEX_EVIDENCE_RECONCILIATION',
+      reconciliation: {
+        claimAudits: [{
+          id: 'EXTERNAL_GATES',
+          deterministicStatus: 'NOT_RUN',
+          modelAssessment: 'SUPPORTS',
+          agreement: 'AGREEMENT',
+        }],
+      },
+    },
+  });
+
+  assert.equal(report.codexLiveReview.reconciliation.claimAudits[0].deterministicStatus, 'NOT_RUN');
+  assert.equal(report.codexLiveReview.reconciliation.claimAudits[0].modelAssessment, 'SUPPORTS');
+});

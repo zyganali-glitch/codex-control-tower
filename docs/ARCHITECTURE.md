@@ -57,7 +57,7 @@ Commands are deliberately separated by mutation level.
 | scan | Yes | No | Optional JSON file |
 | context-graph | Yes | No | Optional JSON file |
 | memory-lens | Yes | No | Optional JSON file |
-| codex-review | Reads the chosen target and writes `.controltower` provenance files | Yes, explicit Codex run through ChatGPT subscription | Optional live dashboard report |
+| codex-review | Locks deterministic claims, runs a named-file audit, rejects unsafe output, and writes `.controltower` provenance files | Yes, explicit GPT-5.6 Codex run through ChatGPT subscription | Evidence Reconciliation dashboard report |
 | mistake-shield | Yes | No | No |
 | init | Yes | Minimal governance files only | No |
 | phase0 | Yes | .controltower/phase0.json and plans/PHASE0_ALIGNMENT.md only | No |
@@ -156,7 +156,7 @@ When Phase-0 data exists, Overview also renders a conditional Phase-0 Alignment 
 
 Core scanning and scoring make no model, telemetry, analytics, database, or upload call. Dependency installation can require network access; after dependencies are present, deterministic scanning/reporting does not.
 
-The optional `codex-review` command is explicit. It verifies ChatGPT subscription authentication and model availability, invokes `gpt-5.6-sol` read-only, records structured output and events, keeps model evidence separate from deterministic results, and never silently changes NOT_RUN to PASS.
+The `codex-review` command is explicit. It verifies ChatGPT subscription authentication and model availability, locks five claims from deterministic evidence, invokes `gpt-5.6-sol` read-only, records structured output and events, rejects missing/duplicate/status-injecting/execution-claiming output, filters citations to allowed paths, and never changes PASS, WARN, FAIL, NOT_RUN, or SIMULATED states.
 
 ## Safety and trust boundaries
 

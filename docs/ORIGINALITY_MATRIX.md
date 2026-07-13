@@ -10,8 +10,8 @@ Codex Control Tower acknowledges the **Universal Agent OS family** while making 
 | Persistent project memory | Memory Lens selects durable rules and minefields for the next mission. | Cross-session continuity. |
 | Human review | Review Gate and Mistake Shield expose explicit developer decisions and safer rewrites. | Human/Codex collaboration remains visible. |
 | Explainable context | Local Context Graph/Trace shows why each file, test, plan, or risk matters. | Product-quality context preparation. |
-| Timeline and comparison | Flight Recorder and Before/After dashboard show change over time without claiming an LLM benchmark. | A coherent three-minute story. |
-| Model-assisted assessment | Optional real `gpt-5.6-sol` read-only run uses ChatGPT subscription access, structured output, model verification, and evidence files. | Codex is a live product participant, not only a build-time author. |
+| Timeline and comparison | Flight Recorder and Before/After dashboard show change over time without claiming an LLM benchmark. | A coherent 2:45 story. |
+| Model-assisted assessment | Real `gpt-5.6-sol` audits locked claims; a deterministic reconciler rejects unsafe output, filters citations, preserves statuses, and exposes disagreement. | Codex is a live product participant without owning the evidence state. |
 
 ## Originality guardrails
 

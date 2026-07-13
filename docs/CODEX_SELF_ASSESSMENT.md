@@ -192,7 +192,7 @@ The build exposed several concrete improvements:
 | Signed/identity-backed gates and immutable logs | **Future work** | Local files are mutable and unsigned |
 | Language-aware semantic graph | **Future work** | Current context is deterministic and heuristic |
 | PR/MR, CI, team, and cross-repo integration | **Future work** | No hosted integration in the local-first build |
-| Optional real Codex review | **Implemented now** | ChatGPT subscription, verified `gpt-5.6-sol`, read-only execution, structured provenance, and explicit data disclosure |
+| Real GPT-5.6 Evidence Reconciliation | **Implemented now** | ChatGPT subscription, verified `gpt-5.6-sol`, read-only execution, locked deterministic states, structured provenance, and explicit data disclosure |
 | Full multilingual product packs | **Future work** | Only Phase-0 is bilingual in this version |
 
 ## Assessment boundary

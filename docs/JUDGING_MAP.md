@@ -11,7 +11,7 @@ Competition details are time-sensitive. Recheck the official pages before submis
 | Technological Implementation | Codex helped build a non-trivial local developer tool: CLI, deterministic analysis engines, generated artifacts, tests, demo fixtures, and React dashboard. | Run the demo, inspect CLI output and generated Evidence Pack, then open the dashboard. |
 | Design | One coherent flow moves from alignment and scan through context, approval, mission, evidence, and before/after handoff. | Follow the eight dashboard tabs and conditional Phase-0 card. |
 | Potential Impact | Developers using coding agents need durable proof and continuity without uploading private repositories. | Show a risky proposed action, visible NOT_RUN gates, and the generated next mission. |
-| Quality of the Idea | Codex was used to build the black-box recorder and also participates as an optional real GPT-5.6 Sol reviewer whose provenance is visible. | Compare the fixtures, run `npm run demo:codex`, and inspect the Real Codex Review panel. |
+| Quality of the Idea | GPT-5.6 audits locked evidence claims while local code prevents it from replacing evidence state. | Run `npm run demo:codex` and inspect agreement, disagreement, preserved NOT_RUN, and provenance. |
 
 ## Technological Implementation
 
@@ -38,7 +38,7 @@ The criterion evaluates the depth and skill of GPT-5.6 use and whether the resul
 
 Codex collaborated across requirements synthesis, read-only source research, CLI and engine implementation, fixtures/tests, dashboard, integration, verification, and competition documentation. The build-time agent workflow analysis was converted into concrete product features rather than remaining prose.
 
-The shipped deterministic core does not make an AI API call, so judges can reproduce its score without credentials. The optional live layer verifies ChatGPT subscription authentication and the `gpt-5.6-sol` catalog entry, runs Codex read-only, captures structured output, and updates the already-open dashboard. Actual commands and outcomes are recorded in [Codex Build Log](CODEX_BUILD_LOG.md).
+The deterministic scanner makes no AI API call, so judges can reproduce its score without credentials. The featured Build Week flow locks five claims, verifies ChatGPT authentication and the `gpt-5.6-sol` catalog entry, runs Codex read-only, rejects unsafe model output, reconciles only allowed citations, and updates the dashboard without replacing local states. Actual commands and outcomes are recorded in [Codex Build Log](CODEX_BUILD_LOG.md).
 
 ### Live judge proof
 
@@ -103,7 +103,7 @@ reviewable handoff + Before / After dashboard
 
 ### Demo design proof
 
-The controlled InvoiceFlow Mini story is small enough to understand in three minutes but realistic enough to surface auth/payment risk, weak tests, stale docs, and continuity gaps. The same simulated project moves from a 25/100 scan with 16 risks to 88/100 with one remaining risk, while omitted checks stay visible.
+The controlled InvoiceFlow Mini story is small enough to understand in 2:45 but realistic enough to surface auth/payment risk, weak tests, stale docs, evidence disagreement, and continuity gaps. The same simulated project moves from a 25/100 scan with 16 risks to 88/100 with one remaining risk, while omitted checks stay visible.
 
 ### Honest boundary
 
@@ -194,17 +194,18 @@ Those distinctions are the core idea, not footnotes.
 
 ### Honest boundary
 
-The optional read-only GPT-5.6 Sol review is implemented. Signed gates, PR/MR integration, team dashboards, and semantic code graphs remain roadmap work.
+Real read-only GPT-5.6 Sol Evidence Reconciliation with locked states is implemented. Signed gates, PR/MR integration, team dashboards, and semantic code graphs remain roadmap work.
 
-## Three-minute evidence path
+## 2:45 evidence path
 
 | Time | Criterion emphasized | Proof |
 | --- | --- | --- |
-| 0:00–0:45 | Potential Impact / Quality of Idea | Problem and messy simulated InvoiceFlow Mini |
-| 0:45–1:35 | Technological Implementation / Design | Real local scan, score, risks, dashboard |
-| 1:35–2:15 | Technological Implementation / Quality of Idea | Context Trace, Review Gate, Mistake Shield |
-| 2:15–2:50 | Design / Technological Implementation | Mission Prompt, Evidence Pack, governed comparison |
-| 2:50–3:00 | Potential Impact | Reviewable handoff and closing line |
+| 0:00–0:25 | Potential Impact / Quality of Idea | Missing-evidence problem and simulated InvoiceFlow Mini |
+| 0:25–0:55 | Technological Implementation | Real local scan and low score |
+| 0:55–1:25 | Design | Bounded mission and locked evidence claims |
+| 1:25–2:15 | Technological Implementation / Quality of Idea | Real GPT-5.6 reconciliation, disagreement, and preserved NOT_RUN |
+| 2:15–2:35 | Design / Impact | Human gate and governed Before / After |
+| 2:35–2:45 | Potential Impact | Reviewable handoff and closing line |
 
 Full narration: [Demo Script](DEMO_SCRIPT.md).
 

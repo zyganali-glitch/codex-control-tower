@@ -4,8 +4,7 @@
   "required": [
     "verdict",
     "summary",
-    "strengths",
-    "findings",
+    "claimAudits",
     "nextSafeAction"
   ],
   "properties": {
@@ -20,39 +19,56 @@
     "summary": {
       "type": "string"
     },
-    "strengths": {
+    "claimAudits": {
       "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "findings": {
-      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
       "items": {
         "type": "object",
         "additionalProperties": false,
         "required": [
-          "severity",
-          "title",
-          "evidence",
-          "recommendation"
+          "id",
+          "modelAssessment",
+          "rationale",
+          "citedEvidencePaths",
+          "missingEvidence",
+          "recommendedNextAction"
         ],
         "properties": {
-          "severity": {
+          "id": {
             "type": "string",
             "enum": [
-              "HIGH",
-              "MEDIUM",
-              "LOW"
+              "TEST_EXECUTION",
+              "CI_EXECUTION",
+              "REVIEW_GATE",
+              "EVIDENCE_BOUNDARY",
+              "EXTERNAL_GATES"
             ]
           },
-          "title": {
+          "modelAssessment": {
+            "type": "string",
+            "enum": [
+              "SUPPORTS",
+              "QUESTIONS",
+              "INSUFFICIENT"
+            ]
+          },
+          "rationale": {
             "type": "string"
           },
-          "evidence": {
-            "type": "string"
+          "citedEvidencePaths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "recommendation": {
+          "missingEvidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "recommendedNextAction": {
             "type": "string"
           }
         }

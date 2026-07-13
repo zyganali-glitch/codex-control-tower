@@ -7,7 +7,7 @@ Bu belge, bilgisayarda bu tür bir çalışma daha önce yapmamış biri düşü
 Videoda iki ayrı şeyi göstereceğiz:
 
 1. InvoiceFlow Mini adlı tamamen uydurma örnek proje üzerinde yerel ve kurallı inceleme.
-2. Codex uygulamasındaki ChatGPT üyelik oturumunu kullanan gerçek `gpt-5.6-sol` incelemesi.
+2. Codex uygulamasındaki ChatGPT üyelik oturumunu kullanan gerçek `gpt-5.6-sol` Kanıt Uzlaştırması.
 
 25 ve 88 puanları ile örnek proje verileri benzetimdir. GPT-5.6 Sol’un ürettiği inceleme ise gerçektir. Videoda bu ayrımı söyle.
 
@@ -108,8 +108,9 @@ Bu adım gerçek GPT-5.6 Sol incelemesini çalıştırır. Birkaç dakika süreb
 
 Beklenen sonuç:
 
-- `REAL Codex review complete with gpt-5.6-sol.` yazısı,
+- `REAL GPT-5.6 evidence reconciliation complete with gpt-5.6-sol.` yazısı,
 - hemen altında `Verdict:` ile başlayan bir satır,
+- `Agreement:` ve `Locked NOT_RUN claims preserved:` satırları,
 - `Evidence:` ile başlayan bir kanıt yolu görünmeli.
 
 Bu sonuç çıkarsa gerçek bağlantı hazırdır. Çekimden hemen önce tekrar `npm run demo` çalıştıracağız; böylece gösterge sayfası yeniden “hazır” durumundan başlayacak.
@@ -150,8 +151,8 @@ Beklenen sonuç:
 2. Adres alanında genellikle `http://localhost:5173` benzeri bir adres görünmeli.
 3. Codex Control Tower gösterge sayfası açılmalı.
 4. Sayfanın üst kısmında InvoiceFlow Mini’nin benzetim verisi olduğunu söyleyen şerit görünmeli.
-5. `Real Codex Review` kutusunda `READY` ve `gpt-5.6-sol` görünmeli.
-6. Sol alandaki küçük durum bölümünde `Scanner Ready`, `Codex review READY` ve `Data flow Local + Codex` görünmeli.
+5. `Evidence Reconciliation` kutusunda `READY` ve `gpt-5.6-sol` görünmeli.
+6. Sol alandaki küçük durum bölümünde `Scanner Ready`, `Evidence reconcile READY` ve `Data flow Local + Codex` görünmeli.
 
 Önemli: `index.html` dosyasına çift tıklama. Bu proje o dosyaya çift tıklayarak açılmaz. Her zaman `npm run dashboard` kullan. Bu komut gerekli görüntüleme hizmetini başlatır ve doğru sayfayı kendisi açar.
 
@@ -186,100 +187,104 @@ Windows’un kendi kayıt aracını kullanacaksan:
 
 Kullandığın başka bir kayıt uygulaması varsa tüm ekranı ve mikrofonu kaydedecek şekilde ayarla.
 
-## Üç dakikalık çekim sırasında tam olarak ne yapacaksın
+## İki dakika kırk beş saniyelik çekimde tam olarak ne yapacaksın
 
-### 0:00–0:20 — Açılış
+Bu bölümde yazan cümleleri İngilizce söyleyeceksin. İngilizce okuyamıyorsan cümleleri önceden bir yapay ses aracına okutabilir ve videoya bu sesi ekleyebilirsin. Söylenenlerin doğru olması şarttır.
 
-Ekranda gösterge sayfasının en üstü açık olsun.
+### 0:00–0:20 — Sorun ve ürün
 
-Şunu söyle:
+1. Tarayıcıda `Overview` açık olsun.
+2. Üstteki `SIMULATED` uyarısını fareyle göster.
+3. `Evidence Reconciliation` kutusunun tamamı görünsün.
 
-“Codex kod üretimini hızlandırıyor. Fakat geliştiricinin hâlâ kapsamı, riskleri, gerçekten çalışan denetimleri, çalışmayan denetimleri ve bir sonraki güvenli adımı görmesi gerekiyor. Codex Control Tower bu süreci görünür ve incelenebilir hâle getiriyor.”
+İngilizce olarak şunu söyle:
 
-Ardından üstteki benzetim uyarısını göster ve şunu söyle:
+“Codex can build software quickly, but scope, proof, skipped checks, and the next safe action can disappear inside a chat. Codex Control Tower turns that missing state into a reviewable workflow. InvoiceFlow Mini is a fully simulated demo project.”
 
-“InvoiceFlow Mini tamamen uydurma bir demo projesidir.”
+Türkçe anlamı: Codex hızlı yazılım üretebilir; fakat kapsam, kanıt, atlanan denetimler ve sonraki güvenli adım sohbet içinde kaybolabilir. Control Tower bu eksik durumu incelenebilir hâle getirir. InvoiceFlow Mini tamamen benzetimdir.
 
-### 0:20–0:45 — Önceki dağınık durum
+### 0:20–0:45 — Dağınık başlangıç
 
 1. Sol menüde `Before / After` yazısına tıkla.
-2. Sol taraftaki önceki durumu göster.
-3. 25 puanı ve 16 risk işaretini fareyle göster.
+2. Sol taraftaki `Before` bölümünü göster.
+3. Fareyi önce `25`, sonra `16` değerinin üzerine götür.
 
 Şunu söyle:
 
-“Başlangıçta plan, kanıt, onay kaydı ve devamlılık bilgileri eksik. Yerel tarama bu duruma 25 puan veriyor ve 16 risk işareti gösteriyor. Bu puan güvenlik belgesi değildir; görünür çalışma düzeninin ölçüsüdür.”
+“The local scan finds a score of twenty-five and sixteen risk flags. This is not a security certificate. It shows missing plans, evidence, approval, and continuity around the coding work.”
 
-### 0:45–1:10 — Risk ve bağlam
+### 0:45–1:10 — Sınırlı görev ve kilitli kanıt
 
-1. Sol menüde `Risks` yazısına tıkla.
-2. Bir risk kartında etkilenen alanı ve öneriyi göster.
-3. Sonra `Context Trace` yazısına tıkla.
-4. Seçilen dosyaları ve neden seçildiklerini göster.
-
-Şunu söyle:
-
-“Riskler yalnızca sayı olarak bırakılmıyor; etkilenen alan, nedeni ve önerilen önlem gösteriliyor. Bağlam izi de Codex’in hangi dosyaları neden görmesi gerektiğini açıklıyor.”
-
-### 1:10–1:35 — İnsan kararı ve hata önleme
-
-1. Sol menüde `Mistake Shield` yazısına tıkla.
-2. Kararı, nedenleri ve daha güvenli öneriyi göster.
-3. Sonra `Evidence` yazısına tıkla.
-4. İnsan onayı bölümünü göster.
+1. Sol menüde `Overview` yazısına tıkla.
+2. Sayfada aşağı kaydırıp `Next bounded Codex mission` bölümünü göster.
+3. İzin verilen dosyaları ve yasaklanan işlemleri kısa süre göster.
+4. Tekrar yukarı kaydırıp `Evidence Reconciliation` kutusuna dön.
 
 Şunu söyle:
 
-“Hata Kalkanı, önerilen işi riskli alanlar ve geçmiş uyarılarla karşılaştırıyor. İnsan onayı ayrı bir kayıt olarak tutuluyor. Bu, kimlik doğrulayan kurumsal bir onay sistemi değil; açık ve yerel bir karar noktasıdır.”
+“Control Tower selects the mission context and creates a bounded Codex instruction with allowed files, forbidden actions, and required proof. Before any model call, local code locks five evidence claims as PASS, FAIL, NOT_RUN, or SIMULATED.”
 
-### 1:35–2:05 — Gerçek GPT-5.6 Sol’u çalıştır
+### 1:10–1:25 — Codex ile nasıl yapıldığını göster
+
+1. Codex uygulamasına geç.
+2. Bu ana geliştirme görevinin açık olduğu ekranı göster.
+3. Kişisel bilgi, başka konuşma adı veya gizli metin görünmediğinden emin ol.
+4. Yalnızca birkaç saniye gösterip ikinci komut penceresine geç.
+
+Şunu söyle:
+
+“I used Codex in the desktop app to turn evidence-loss problems into the scanner, bounded mission, dashboard, tests, and reconciliation safety rules. My key product decision was that GPT-5.6 must never replace local evidence state.”
+
+### 1:25–1:55 — Gerçek GPT-5.6’yı çalıştır
 
 1. İkinci komut penceresine geç.
-2. Hazır tuttuğun şu satırı yaz veya yapıştır:
+2. Şu satırı yaz veya yapıştır:
 
 ~~~powershell
 npm run demo:codex
 ~~~
 
 3. Enter tuşuna bas.
-4. Hemen tarayıcıdaki gösterge sayfasına dön.
-5. Sol menüde `Overview` yazısına tıkla.
-6. `Real Codex Review` kutusunda durumun `RUNNING` olduğunu göster.
+4. Hemen tarayıcıya dön.
+5. `Overview` açık değilse tıkla.
+6. `Evidence Reconciliation` kutusunda `RUNNING` yazısını göster.
 
 Şunu söyle:
 
-“Şimdi benzetimden ayrı olan gerçek Codex katmanını çalıştırıyorum. Sistem ChatGPT üyelik oturumunu ve hesapta GPT-5.6 Sol bulunduğunu denetliyor. Model yalnızca okuma izniyle çalışıyor. Ana puan yine kurallı ve tekrar üretilebilir kalıyor.”
+“Now this real command verifies my signed-in ChatGPT session and GPT-5.6 Sol, then runs Codex read-only against named fictional evidence. GPT-5.6 can support, question, or find a claim insufficient, but it cannot change the locked status.”
 
-Model bu otuz saniye içinde bitmezse sessizce bekleme. Diğer bölümleri göster; sonuç geldiğinde bu kutu kendiliğinden `COMPLETE` olacaktır.
+Model hemen bitmezse sessizce bekleme. Kutudaki `RUNNING`, `Read-only evidence audit` ve `Local states Locked` yazılarını göster. Sonuç geldiğinde kutu kendiliğinden `COMPLETE` olacaktır.
 
-### 2:05–2:30 — Kanıt sınırı
+### 1:55–2:20 — Uzlaşma ve çalıştırılmamış denetimler
 
-1. Sol menüde `Evidence` yazısına tıkla.
-2. `PASS`, `WARN`, `FAIL`, `NOT_RUN` ve `SIMULATED` ayrımını göster.
-3. `NOT_RUN` satırlarından birini fareyle göster.
-
-Şunu söyle:
-
-“Başarılı, uyarılı, başarısız, çalıştırılmamış ve benzetilmiş sonuçlar birbirine karıştırılmıyor. Bir dosyanın var olması, denetimin çalıştığı anlamına gelmiyor.”
-
-### 2:30–2:50 — Sonraki durum ve gerçek sonuç
-
-1. `Before / After` bölümüne dön.
-2. 88 puanı ve 1 kalan riski göster.
-3. Sonra `Overview` bölümüne dön.
-4. Gerçek inceleme tamamlandıysa `COMPLETE`, `gpt-5.6-sol`, sonuç özeti ve sonraki güvenli adımı göster.
+1. `Evidence Reconciliation` kutusu tamamlandıysa `COMPLETE` yazısını göster.
+2. `Agreement`, `Disagreement` ve `NOT_RUN locked` sayılarını göster.
+3. Aşağıdaki iddia satırlarından birini göster.
+4. Sonra sol menüde `Evidence` yazısına tıkla.
+5. `NOT_RUN` bölümünü göster.
 
 Şunu söyle:
 
-“Düzenlenmiş örnek 88 puana çıkıyor ve risk işaretleri 16’dan 1’e düşüyor. İki dar kapsamlı örnek denetimi geçti; diğer çalıştırılmamış denetimler görünür kalıyor. Buradaki GPT-5.6 Sol değerlendirmesi gerçek, örnek projenin kendisi ise benzetimdir.”
+“The local reconciler rejects missing claims, status injection, unsupported evidence paths, malformed output, and any statement that the model ran tests. Agreement and disagreement stay visible, while browser, load, deployment, and independent security checks remain NOT_RUN.”
 
-Gerçek inceleme henüz bitmediyse ikinci komut penceresine kısa süre dön. Tamamlanma yazısı geldiğinde gösterge sayfasına dön; sayfa kendiliğinden yenilenir.
+### 2:20–2:35 — İnsan kararı ve sonuç
 
-### 2:50–3:00 — Kapanış
+1. `Evidence` sayfasında insan onayı bölümünü kısa süre göster.
+2. `Before / After` bölümüne geç.
+3. `88` puanını ve `1` kalan riski göster.
 
-Gösterge sayfasında genel görünüm açıkken şunu söyle:
+Şunu söyle:
 
-“Codex yazar. Control Tower kanıtlar. Geliştirici karar verir. Böylece bağlam işten önce, kanıt işten sonra ve devamlılık bir sonraki oturum için hazırdır.”
+“The developer remains the decision-maker. The governed fixture reaches eighty-eight with one remaining risk, while two focused fixture tests passed and every unavailable check stays visible.”
+
+### 2:35–2:45 — Kapanış
+
+1. `Overview` bölümüne dön.
+2. Tamamlanmış `Evidence Reconciliation` kutusunu göster.
+
+Şunu söyle:
+
+“Codex writes. Control Tower proves. The developer decides.”
 
 ## Kaydı bitir
 
@@ -299,6 +304,8 @@ Videoyu göndermeden önce baştan sona izle. Şunların hepsi görünmeli ve du
 - 88/100 ve 1 risk sonraki durum olarak gösterildi.
 - `NOT_RUN` sonuçlarının hâlâ açık olduğu söylendi.
 - Gerçek Codex kutusunda `gpt-5.6-sol` gösterildi.
+- `Agreement`, `Disagreement` ve kilitli `NOT_RUN` değerlerinden en az biri gösterildi.
+- Codex uygulamasındaki ana geliştirme görevi birkaç saniye gösterildi.
 - Gerçek Codex çalışması ile benzetim proje verisi birbirine karıştırılmadı.
 - Ekranda kişisel bilgi, parola veya gizli anahtar görünmedi.
 - Ses anlaşılır ve yazılar okunabilir.
@@ -332,7 +339,7 @@ Başka bir gösterge penceresi açık kalmış olabilir. Açık koyu pencerelerd
 
 Codex uygulamasında model seçme alanını aç ve GPT-5.6 Sol’un hesabında göründüğünü kontrol et. Görünmüyorsa o gün gerçek model bölümünü çekme; videoda çalışmış gibi gösterme.
 
-### Gerçek inceleme hata verirse
+### Gerçek Kanıt Uzlaştırması hata verirse
 
 Hata metnini gizleyip başarı iddiasında bulunma. İnternet bağlantısını ve Codex oturumunu kontrol et, `npm run demo` ile başlangıcı yenile, sonra tekrar dene.
 
@@ -343,8 +350,34 @@ Hata metnini gizleyip başarı iddiasında bulunma. İnternet bağlantısını v
 3. `npm run dashboard` çalıştır.
 4. Tarayıcıda `Ctrl` ve `R` tuşlarına birlikte bas.
 
+## Devpost için `/feedback` kimliğini al
+
+Bu işlem video çekiminin parçası değildir. Geliştirmeler ve son denetimler bittikten sonra bir kez yap.
+
+1. Codex uygulamasını aç.
+2. Sol taraftaki görevler arasında bu projenin ana geliştirme görevini bul.
+3. Bu; yalnızca küçük bir soru sorduğun deneme görevi değil, projenin ana özelliklerinin yapıldığı uzun görev olmalı.
+4. Görevin üzerine bir kez tıkla.
+5. Ekranın altındaki, normalde Codex’e mesaj yazdığın alana bir kez tıkla.
+6. Yalnızca şu ifadeyi yaz:
+
+~~~text
+/feedback
+~~~
+
+7. Klavyede Enter tuşuna bas.
+8. Codex bir `Session ID` oluşturmalı. Bu, harf ve rakamlardan oluşan özel bir görev kimliğidir.
+9. Kimliği seçip kopyala. Windows’ta seçtikten sonra `Ctrl` ve `C` tuşlarına birlikte basabilirsin.
+10. Not Defteri’ni aç ve kimliği geçici olarak oraya yapıştır.
+11. Devpost başvuru sayfasındaki `/feedback Codex Session ID` alanına aynı kimliği yapıştır.
+12. Kimliği README’ye, videoya, ekran görüntüsüne veya herkese açık başka bir dosyaya koyma.
+13. Codex kimlik üretmezse başka bir değer uydurma. Önce görevin doğru ana görev olduğundan emin ol ve tekrar dene.
+
+Beklenen sonuç: Devpost alanında Codex’in gerçekten verdiği görev kimliği bulunmalı. Küçük bir deneme konuşmasının kimliği kullanılmamalı.
+
 ## İlgili belgeler
 
-- İngilizce üç dakikalık anlatım: [DEMO_SCRIPT.md](DEMO_SCRIPT.md)
+- İngilizce 2 dakika 45 saniyelik anlatım: [DEMO_SCRIPT.md](DEMO_SCRIPT.md)
 - Proje ana açıklaması: [README.md](../README.md)
 - Gönderim metni: [DEVPOST_SUBMISSION.md](DEVPOST_SUBMISSION.md)
+- Jürinin deneme yolu: [JUDGE_TEST_PATH.md](JUDGE_TEST_PATH.md)
