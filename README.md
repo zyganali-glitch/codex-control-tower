@@ -69,13 +69,15 @@ Control Tower makes these questions part of the repository instead of leaving th
 
 ## Live Demo
 
-The no-install judge-demo URL is published here only after GitHub Pages deployment is verified anonymously. See [Judge Test Path](docs/JUDGE_TEST_PATH.md) for the exact hosted and local verification boundaries.
+**[Open the no-install live judge demo](https://zyganali-glitch.github.io/codex-control-tower/)**
+
+The GitHub Pages deployment and anonymous HTTP access were verified on 2026-07-13. See [Judge Test Path](docs/JUDGE_TEST_PATH.md) for the exact hosted and local verification boundaries.
 
 The hosted dashboard is a read-only tour of sanitized InvoiceFlow Mini sample data and a recorded real GPT-5.6 run. It does not claim to scan a visitor's repository or execute Codex in the browser.
 
 ## 30-Second Judge Path
 
-1. Open the hosted dashboard when the verified link appears above.
+1. Open the verified hosted dashboard above.
 2. Read the visible **SIMULATED DEMO DATA** disclosure.
 3. Inspect **Evidence Reconciliation**: local PASS, FAIL, NOT_RUN, and SIMULATED states remain locked beside GPT-5.6's assessment.
 4. Open **Before / After** for `25 → 88` and `16 → 1` on the controlled fixture.

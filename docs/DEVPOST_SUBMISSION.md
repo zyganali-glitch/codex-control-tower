@@ -293,7 +293,7 @@ These are future plans, not current claims.
 - [ ] Re-run the commands in the build log on the final commit.
 - [ ] Confirm every PASS has current artifact/command evidence.
 - [ ] Keep remaining WARN, FAIL, NOT_RUN, and SIMULATED labels visible.
-- [ ] Verify the no-install GitHub Pages judge demo anonymously.
+- [x] Verify the no-install GitHub Pages judge demo anonymously.
 - [ ] Record the 2:45 video using the demo script.
 - [ ] In the primary Codex build thread, run `/feedback` and paste the generated Session ID into the Devpost form; do not publish or invent it.
 - [ ] Record real user validation only if permission-based sessions actually occurred.

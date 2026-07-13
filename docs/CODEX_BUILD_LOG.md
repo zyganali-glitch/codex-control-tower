@@ -71,6 +71,8 @@ Codex was used to implement this independent Codex Control Tower repository. Thi
 | First locked-claim reconciliation | WARN | GPT-5.6 returned structurally valid output, but the no-command contract prevented it from seeing the referenced file contents; all five assessments were honestly preserved as `INSUFFICIENT`. |
 | Bounded evidence-bundle reconciliation | PASS | The command completed in about 23 seconds. GPT-5.6 supported four claims and questioned one CI claim; the deterministic `FAIL` and `NOT_RUN` states remained locked. The model-level verdict remained honestly `FAIL`. |
 | GitHub Pages first deployment attempt | NOT_RUN | The dashboard build passed on GitHub, but `configure-pages` stopped because Pages was not yet enabled in repository settings. No live URL is claimed until the owner enables GitHub Actions as the Pages source and the deployment succeeds. |
+| GitHub Pages enabled deployment | PASS | After the repository owner enabled GitHub Actions as the Pages source, rerun attempt 2 of workflow run `29275636867` built and deployed successfully. Anonymous access to `https://zyganali-glitch.github.io/codex-control-tower/` returned HTTP 200. |
+| GitHub Actions Node runtime warning cleanup | PASS | Pages actions were upgraded to the official Node.js 24 generations: `configure-pages@v6`, `upload-pages-artifact@v5`, and `deploy-pages@v5`. |
 
 ## Failures found and fixed
 
@@ -97,7 +99,7 @@ Codex was used to implement this independent Codex Control Tower repository. Thi
 - Verified locally: the full root suite, two governed fixture tests, demo orchestration, real ChatGPT-authenticated `gpt-5.6-sol` read-only reconciliation, locked-state preservation, evidence/report rerun stability, dashboard production build, and visual dashboard rendering.
 - Local release-preflight verification: **PASS** via `npm.cmd run verify` at 2026-07-12T23:47:16+03:00.
 - Root dogfooding: **PASS** as a `REAL_LOCAL_SCAN` with visible exclusions; 100/100 means structural governance readiness, not code correctness or security certification.
-- Still NOT_RUN: live Pages verification (until the workflow succeeds), load/concurrency, browser accessibility audit, independent security review, real user validation, final submission-media review, and Devpost submission.
+- Still NOT_RUN: load/concurrency, browser accessibility audit, independent security review, real user validation, final submission-media review, and Devpost submission.
 - Manual after-code work: record the 2:45 video, run `/feedback` in the primary Codex task and copy its private Session ID into the form, collect only genuine user observations, and submit on Devpost.
 
 See [FINAL_COMPLETENESS_REVIEW.md](FINAL_COMPLETENESS_REVIEW.md), [README](../README.md), and [Codex build-time self-assessment](CODEX_SELF_ASSESSMENT.md).

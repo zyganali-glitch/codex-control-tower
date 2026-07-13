@@ -60,7 +60,7 @@ Then show:
 
 ### Honest boundary
 
-The scanner is heuristic and does not prove semantic correctness. The fixture's two focused Node tests prove only their bounded cases. Root-suite, dashboard-build, and other final verification results must be read from the current build log; browser, load, deployment, and independent security checks remain NOT_RUN unless separately executed.
+The scanner is heuristic and does not prove semantic correctness. The fixture's two focused Node tests prove only their bounded cases. Root-suite, dashboard-build, static judge-demo deployment, and other final verification results must be read from the current build log; fixture/provider deployment, browser accessibility, load, and independent security checks remain NOT_RUN unless separately executed.
 
 ## Design
 

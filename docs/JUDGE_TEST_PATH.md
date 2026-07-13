@@ -4,9 +4,13 @@ This project is submitted to the **Developer Tools** track. The judge path delib
 
 ## 30-second no-install tour
 
-The public GitHub Pages URL is added here only after the deployment workflow succeeds and the page is verified anonymously. Until then, no live URL is claimed.
+Open the verified public judge demo:
 
-When available:
+**https://zyganali-glitch.github.io/codex-control-tower/**
+
+GitHub Actions run `29275636867` deployed the page successfully, and anonymous HTTP access returned `200` on 2026-07-13.
+
+Judge path:
 
 1. Open the public judge-demo URL.
 2. Read the amber disclosure: InvoiceFlow Mini is **SIMULATED DEMO DATA**.
@@ -72,7 +76,7 @@ Expected result:
 - The committed Codex response is from a real, separately labeled GPT-5.6 Sol run.
 - The model does not compute or change the deterministic score.
 - The model does not run the fixture tests.
-- Browser, load, deployment, and independent security checks remain NOT_RUN unless a named artifact proves otherwise.
+- The static judge-demo deployment is verified. Fixture/provider deployment, browser accessibility, load, and independent security checks remain NOT_RUN unless a named artifact proves otherwise.
 - GitHub Pages may process ordinary hosting access logs under GitHub's own terms; Codex Control Tower adds no analytics or telemetry.
 
 ## Fallback

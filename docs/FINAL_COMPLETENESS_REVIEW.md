@@ -42,8 +42,9 @@ This review uses `PASS`, `WARN`, `FAIL`, and `NOT_RUN` without hiding unresolved
 | Full root test suite | PASS | Nine CLI/core regression scripts plus five dashboard adapter tests passed. |
 | Full `npm run verify` | PASS | Post-hardening tests, `25 → 88` simulated demo regeneration, dependency audit, and 47-module Vite production build passed. |
 | CI execution on GitHub | PASS | Push workflow run `29208503014` completed successfully for release commit `e0ee256e7eb497cd6293fe51f51899645ee3ed90`. |
+| Static judge-demo deployment | PASS | GitHub Pages workflow run `29275636867`, attempt 2, deployed successfully; anonymous access returned HTTP 200. |
 | Real auth/payment integration | NOT_RUN | Explicitly outside the simulated demo scope; GPT-5.6 Evidence Reconciliation preserves this boundary and cannot convert fictional product integrations to PASS. |
-| Deployment, load, browser accessibility, independent security review | NOT_RUN | No such claims are made. |
+| Fixture/provider deployment, load, browser accessibility, independent security review | NOT_RUN | The static judge-demo host does not convert these separate product gates to PASS. |
 
 ## Review conclusion
 
