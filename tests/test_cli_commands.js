@@ -20,6 +20,14 @@ assert.deepEqual(
   portableValue({ targetPath: 'C:\\Users\\Builder\\repo', nested: ['C:/Users/Builder/repo/file.js'] }, 'C:\\Users\\Builder\\repo'),
   { targetPath: '.', nested: ['./file.js'] }
 );
+assert.deepEqual(
+  portableValue({ targetPath: 'C:/Users/Builder/repo', nested: ['C:\\Users\\Builder\\repo\\file.js'] }, 'C:/Users/Builder/repo'),
+  { targetPath: '.', nested: ['./file.js'] }
+);
+assert.deepEqual(
+  portableValue({ targetPath: '/home/builder/repo', nested: ['/home/builder/repo/file.js'] }, '/home/builder/repo'),
+  { targetPath: '.', nested: ['./file.js'] }
+);
 const rootScan = scanRepository(ROOT);
 assert.equal(rootScan.scanMode, 'REAL_LOCAL_SCAN');
 assert.equal(rootScan.simulatedData, false);

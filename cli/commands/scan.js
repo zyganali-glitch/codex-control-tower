@@ -2,21 +2,9 @@
 
 const { execFileSync } = require('node:child_process');
 const path = require('node:path');
+const { portableValue } = require('../lib/portable');
 const { scanRepository } = require('../lib/repoScanner');
 const { writeJson } = require('../lib/reportWriter');
-
-function portableValue(value, target) {
-  if (typeof value === 'string') {
-    return value
-      .replaceAll(target, '.')
-      .replaceAll(target.split(path.sep).join('/'), '.');
-  }
-  if (Array.isArray(value)) return value.map((item) => portableValue(item, target));
-  if (value && typeof value === 'object') {
-    return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, portableValue(item, target)]));
-  }
-  return value;
-}
 
 function gitProvenance(target) {
   try {

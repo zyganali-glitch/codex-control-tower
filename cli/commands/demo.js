@@ -8,22 +8,10 @@ const { phase0Command } = require('./phase0');
 const { createEvidencePack } = require('../lib/evidenceCollector');
 const { appendFlightEvent } = require('../lib/flightRecorder');
 const { evaluateMistakeShield } = require('../lib/mistakeShield');
+const { portableString, portableValue } = require('../lib/portable');
 const { scanRepository } = require('../lib/repoScanner');
 const { updateReviewGate } = require('../lib/reviewGate');
 const { copyDirectory, ensureDirectory, resetDemoDirectory, writeGeneratedFile } = require('../lib/safeFs');
-
-function portableString(value, root) {
-  return String(value).replaceAll(root, '.').replaceAll(root.split(path.sep).join('/'), '.');
-}
-
-function portableValue(value, root) {
-  if (typeof value === 'string') return portableString(value, root);
-  if (Array.isArray(value)) return value.map((item) => portableValue(item, root));
-  if (value && typeof value === 'object') {
-    return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, portableValue(item, root)]));
-  }
-  return value;
-}
 
 function writePortableJson(destination, value, root) {
   return writeGeneratedFile(destination, `${JSON.stringify(portableValue(value, root), null, 2)}\n`);

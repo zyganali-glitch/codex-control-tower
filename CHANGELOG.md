@@ -12,6 +12,7 @@
 - Reframed InvoiceFlow Mini as prepared fictional snapshots with real scan/test/model execution, without crediting GPT-5.6 for the `25 → 88` difference.
 - Split the local next safe action from the model suggestion, recorded base-commit worktree state, and blocked command-like or symbolic-link evidence paths.
 - Moved the governed fixture's raw test output into the selected target after GPT-5.6 exposed the earlier missing-artifact path.
+- Made portable evidence-path sanitization independent of the host operating system and added mixed Windows/Unix path regression tests after Linux CI exposed the mismatch.
 
 ## 0.1.0 - 2026-07-12
 

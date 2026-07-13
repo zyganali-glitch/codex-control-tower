@@ -81,6 +81,7 @@ Codex was used to implement this independent Codex Control Tower repository. Thi
 | First current-contract GPT-5.6 run | WARN | The real run completed, but GPT-5.6 correctly identified that the raw fixture-test output path resolved outside the selected target and appeared missing from the bounded bundle. No clean PASS was claimed for that provenance defect. |
 | Target-local raw test proof | PASS | Demo generation now writes `.controltower/governed-test-output.txt` inside the governed target and records that target-relative path. The required-surface test prevents regression. |
 | Current real GPT-5.6 reconciliation | PASS | `gpt-5.6-sol` via Codex CLI `0.144.3` completed read-only in about 21 seconds. The local verdict was `FAIL`, separate model opinion `WARN`, all five model assessments semantically aligned with locked meanings, one `NOT_RUN` remained, freshness was `PASS`, all eight hashed evidence files existed, and the dirty base-commit worktree was explicitly recorded. |
+| Linux portable-path regression | FAIL → fixed locally | CI run [`29285173732`](https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29285173732) showed that a Windows-style target with forward-slash evidence was not normalized on Linux. Portable string/value handling is now shared across scan, demo, and reconciliation paths, and mixed Windows/Unix regression cases pass locally. The final hosted result remains visible in workflow history. |
 
 ## Failures found and fixed
 

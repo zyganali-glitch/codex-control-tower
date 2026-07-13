@@ -4,6 +4,7 @@ const crypto = require('node:crypto');
 const fs = require('node:fs');
 const path = require('node:path');
 const { scanRepository } = require('../lib/repoScanner');
+const { portableValue } = require('../lib/portable');
 const { assertNoSymlinkTraversal, ensureInside, resolveTarget, writeFileSafe, writeJsonSafe } = require('../lib/safeFs');
 
 const DEFAULT_MODEL = 'gpt-5.6-sol';
@@ -44,12 +45,6 @@ function runCodex(args, options = {}) {
   return spawnSync(process.execPath, [codexProgram(), ...args], { cwd: options.cwd, input: options.input, encoding: 'utf8', windowsHide: true, timeout: options.timeout || 30000, maxBuffer: 10 * 1024 * 1024 });
 }
 function commandOutput(result) { return `${result.stdout || ''}${result.stderr || ''}`.trim(); }
-function portableValue(value, roots) {
-  if (typeof value === 'string') return roots.reduce((text, root) => text.replaceAll(root, '.').replaceAll(root.split(path.sep).join('/'), '.'), value);
-  if (Array.isArray(value)) return value.map((item) => portableValue(item, roots));
-  if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, portableValue(item, roots)]));
-  return value;
-}
 function sha256(value) { return crypto.createHash('sha256').update(value).digest('hex'); }
 function safeEvidencePath(value) {
   if (typeof value !== 'string' || !value.trim() || value.includes('\0')) return null;
