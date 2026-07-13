@@ -1,7 +1,7 @@
 # Phase-0 Alignment — InvoiceFlow Mini
 
 > **SIMULATED DEMO DATA.** Generated from predefined English demo answers. The
-> Phase-0 wizard supports both English (`en`) and Turkish (`tr`) question packs.
+> Build Week product supports English only.
 
 | Prompt | Simulated answer |
 | --- | --- |

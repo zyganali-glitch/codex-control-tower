@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "locale": "tr",
+  "locale": "en",
   "simulated": false,
   "source": "User-supplied competition build brief; no additional Phase-0 interview was required.",
   "goal": "Build, verify, publish, and present Codex Control Tower as a competition-ready local-first governance layer for Codex-assisted software delivery.",
