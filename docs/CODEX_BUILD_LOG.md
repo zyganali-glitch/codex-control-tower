@@ -9,12 +9,12 @@ Codex was used to implement this independent Codex Control Tower repository. Thi
 - The four Universal Agent OS family repositories were studied read-only through their public web surfaces.
 - None was cloned into, modified by, or used as the active product or demo target.
 - InvoiceFlow Mini is controlled **SIMULATED DEMO DATA**, not a customer project.
-- No OpenAI API, Qwen API, telemetry, analytics, deployment, source upload, or real auth/payment provider was used.
+- No OpenAI API key, telemetry, analytics, deployment, source upload, or real auth/payment provider was used. The optional Codex review uses the signed-in ChatGPT subscription.
 
 ## Phases completed
 
-1. Parsed the base prompt and two overriding addenda; resolved the newest inline requirement as bilingual Phase-0 (`en|tr`) with an English judge-facing product surface.
-2. Created the source-protection lock before product implementation and researched the four protected sources plus official Build Week pages.
+1. Parsed the base prompt and overriding requirements; finalized the Build Week product as English-only.
+2. Created the source-protection lock before product implementation and researched the Universal Agent OS family plus official Build Week pages.
 3. Built the Node.js CLI router, safe filesystem layer, scanner, content-quality health scorer, Context Graph/Trace, Mission Prompt, Review Gate, Mistake Shield, Memory Lens, Flight Recorder, evidence exporter, Devpost exporter, Phase-0 wizard, and demo orchestrator.
 4. Built the independent InvoiceFlow Mini messy/governed fixtures and deterministic before/after evidence.
 5. Built the Vite + React local dashboard and raw-report adapter.
@@ -30,7 +30,7 @@ Codex was used to implement this independent Codex Control Tower repository. Thi
 - **Self-scan isolation:** generated evidence/Devpost packs and prior Control Tower JSON reports are excluded from later repository scoring.
 - **Portable demo artifacts:** committed reports replace builder-specific absolute paths with repository-relative `./examples/...` paths.
 - **Demo honesty:** the dashboard uses a real local scan of the simulated governed fixture. Its two fixture tests are executed by `cct demo`; CI, browser/accessibility, load, deployment, and provider checks remain `NOT_RUN`.
-- **Product focus:** signed team gates, PR/MR integrations, hosted collaboration, and optional OpenAI-powered review are future work, not competition-build claims.
+- **Product focus:** signed team gates, PR/MR integrations, and hosted collaboration remain future work; an optional real GPT-5.6 Sol read-only review is implemented.
 
 ## Command and check record
 
@@ -61,6 +61,11 @@ Codex was used to implement this independent Codex Control Tower repository. Thi
 | Release remote configuration | PASS | `origin` points only to `https://github.com/zyganali-glitch/codex-control-tower.git`; commit and push remain NOT_RUN at this checkpoint. |
 | Release commit and push | PASS | Commit `e0ee256e7eb497cd6293fe51f51899645ee3ed90` was pushed to the approved `origin/main`; `git ls-remote` matched the local SHA and the worktree was clean. |
 | GitHub-hosted CI | PASS | Push workflow run `29208503014` completed successfully; all verify job steps passed. |
+| `npm run verify` on 2026-07-13 | PASS | Ten CLI/core scripts plus five dashboard adapter tests passed; demo regenerated at `25 → 88` and `16 → 1`; Vite built 48 modules. |
+| Codex CLI authentication and model catalog | PASS | Codex CLI `0.144.3` reported `Logged in using ChatGPT`; the live catalog contained `gpt-5.6-sol`. |
+| First broad `npm run demo:codex` | FAIL | Real GPT-5.6 Sol ran read-only but the broad inspection exceeded the four-minute command boundary before final output; no success was claimed. |
+| Narrowed `npm run demo:codex` | PASS | Real `gpt-5.6-sol` completed in about 21 seconds through ChatGPT subscription access, read-only, with a structured `WARN` assessment and local prompt/event/final/provenance files. |
+| Live-artifact privacy check | PASS | No builder-specific workspace path remained in the committed live report or Codex evidence files. |
 
 ## Failures found and fixed
 
@@ -76,14 +81,16 @@ Codex was used to implement this independent Codex Control Tower repository. Thi
 10. Root dogfooding exposed three lexical/scope failures: README terminology implied simulation/staleness, controlled fixtures leaked risks, and package locks triggered monolith warnings. Explicit metadata, visible configured exclusions, comment-only markers, and source-only size checks fixed them.
 11. Dashboard normalization supplied plausible-looking fallback values when evidence was absent. A source-derived adapter contract and five focused tests replaced those values with `UNKNOWN`, `null`, or no panel.
 12. Mission Prompt publication rules conflicted with a scoped release approval. The prompt now carries the exact Review Gate scope and permits publication only when that scoped gate explicitly authorizes the action and destination.
+13. The first live Codex task was too broad for a short demo. The contract was narrowed to five named evidence files, prohibited tests/search/progress updates, and selected low reasoning effort; the real GPT-5.6 Sol run then completed in about 21 seconds.
+14. The initial live dashboard report exposed the builder's absolute workspace path. Portable-path rewriting was added for the live report and Codex event stream before publication.
 
 ## Current honest status
 
-- Implemented: CLI, engines, examples, dashboard, docs, tests, CI, demo, evidence pack, and Devpost pack.
-- Verified locally: the full root suite, two governed fixture tests, demo orchestration, evidence/report rerun stability, dashboard production build, and visual dashboard rendering.
+- Implemented: CLI, engines, examples, dashboard, docs, tests, CI, demo, evidence pack, Devpost pack, and optional real GPT-5.6 Sol review.
+- Verified locally: the full root suite, two governed fixture tests, demo orchestration, real ChatGPT-authenticated `gpt-5.6-sol` read-only review, evidence/report rerun stability, dashboard production build, and visual dashboard rendering.
 - Local release-preflight verification: **PASS** via `npm.cmd run verify` at 2026-07-12T23:47:16+03:00.
 - Root dogfooding: **PASS** as a `REAL_LOCAL_SCAN` with visible exclusions; 100/100 means structural governance readiness, not code correctness or security certification.
-- Still NOT_RUN: published Devpost rules review, deployment, real provider integration, load/concurrency, browser accessibility audit, final submission-media review, and independent security review.
+- Still NOT_RUN: published Devpost rules review, deployment, load/concurrency, browser accessibility audit, final submission-media review, and independent security review.
 - Manual after-code work: recheck the rules after opening, record the three-minute video, capture the remaining final screenshots, and submit on Devpost.
 
 See [FINAL_COMPLETENESS_REVIEW.md](FINAL_COMPLETENESS_REVIEW.md), [README](../README.md), and [Codex build-time self-assessment](CODEX_SELF_ASSESSMENT.md).

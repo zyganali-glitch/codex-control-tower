@@ -121,6 +121,8 @@
   .recorder-aside p { display: none; }
 }
 @media (max-width: 860px) {
+  .codex-live__facts { grid-template-columns: 1fr 1fr; }
+  .codex-live__columns { grid-template-columns: 1fr; }
   .sidebar { width: 248px; transform: translateX(-102%); transition: transform .22s ease; box-shadow: 24px 0 70px rgba(0,0,0,.45); }
   .sidebar--open { transform: translateX(0); }
   .sidebar-close { display: grid; place-items: center; }
@@ -138,6 +140,7 @@
   .compare-delta .icon { transform: rotate(90deg); }
 }
 @media (max-width: 620px) {
+  .codex-live__facts { grid-template-columns: 1fr; }
   .disclosure { justify-content: flex-start; padding: 6px 12px; overflow: hidden; white-space: nowrap; }
   .disclosure span { overflow: hidden; text-overflow: ellipsis; }
   .topbar { height: 59px; gap: 10px; }

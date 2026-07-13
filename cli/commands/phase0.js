@@ -16,16 +16,6 @@ const FALLBACK_QUESTIONS = {
     ['expectedEvidence', 'What proof do you want before Codex says the task is done?'],
     ['profile', 'Should Codex use a light, startup, enterprise, or regulated workflow?'],
     ['nextMission', 'What should the next safe Codex mission be?']
-  ],
-  tr: [
-    ['goal', 'Ne yapmak veya değiştirmek istiyorsun?'],
-    ['audience', 'Bu proje kim için?'],
-    ['successCriteria', 'Bu işin başarılı olduğunu nasıl anlayacağız?'],
-    ['forbiddenAreas', 'Codex hangi dosyalara, özelliklere veya bölümlere onay almadan dokunmasın?'],
-    ['risk', 'Önlemek istediğin en büyük hata veya risk nedir?'],
-    ['expectedEvidence', 'Codex “bitti” demeden önce hangi kanıtı görmek istersin?'],
-    ['profile', 'Hafif, startup, enterprise veya regulated çalışma düzeninden hangisi uygun?'],
-    ['nextMission', 'Codex’in bir sonraki güvenli görevi ne olsun?']
   ]
 };
 
@@ -53,10 +43,7 @@ function loadQuestions(locale) {
 }
 
 function alignmentMarkdown(data) {
-  const labels = {
-    en: ['Phase-0 Alignment', 'Simulated demo data', 'Goal', 'Audience', 'Success criteria', 'Forbidden areas', 'Biggest risk', 'Expected evidence', 'Workflow profile', 'Next safe Codex mission', 'First Codex Mission Prompt'],
-    tr: ['Phase-0 Uyumlandırma', 'Simüle demo verisi', 'Hedef', 'Hedef kitle', 'Başarı ölçütü', 'Yasak alanlar', 'En büyük risk', 'Beklenen kanıt', 'Çalışma profili', 'Sonraki güvenli Codex görevi', 'İlk Codex Görev İstemi']
-  }[data.locale];
+  const labels = ['Phase-0 Alignment', 'Simulated demo data', 'Goal', 'Audience', 'Success criteria', 'Forbidden areas', 'Biggest risk', 'Expected evidence', 'Workflow profile', 'Next safe Codex mission', 'First Codex Mission Prompt'];
   return [
     `# ${labels[0]}`, '',
     data.simulated ? `> **${labels[1]}**` : '',
@@ -76,7 +63,7 @@ function alignmentMarkdown(data) {
 async function phase0Command(args) {
   const target = resolveTarget(args.target || '.');
   const locale = String(args.locale || 'en').toLowerCase();
-  if (!FALLBACK_QUESTIONS[locale]) throw new Error('Phase-0 locale must be en or tr.');
+  if (locale !== 'en') throw new Error('This Build Week version supports English-only Phase-0.');
   const questions = loadQuestions(locale);
   const answers = {};
   if (args.demo) {

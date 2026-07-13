@@ -169,7 +169,7 @@ The build exposed several concrete improvements:
 - **Add evidence ingestion.** Record exit status and bounded command logs instead of asking users to summarize a test manually.
 - **Improve ownership/blast radius.** Add CODEOWNERS and language-aware dependency adapters while preserving heuristic disclosure.
 - **Add staleness/contradiction gates.** Conflicting instructions, outdated reports, and docs/schema drift should be visible risks.
-- **Test bilingual alignment separately.** English/Turkish Phase-0 must remain isolated from the English judging narrative and tested for encoding/field parity.
+- **Test beginner alignment separately.** English-only Phase-0 must remain consistent with the judging narrative and tested for field parity.
 - **Add tamper-evident options.** Hashes/signatures and identity-backed approvals belong in an opt-in stronger-assurance mode.
 - **Keep competition claims generated from evidence.** Devpost text should never outrun actual commands or the latest build log.
 
@@ -178,7 +178,7 @@ The build exposed several concrete improvements:
 | Recommendation | Current state | Evidence / boundary |
 | --- | --- | --- |
 | Repository-local mission and alignment | **Implemented now** | Phase-0 files and Codex Mission Prompt |
-| English/Turkish beginner alignment | **Implemented now** | <code>--locale en\|tr</code> question templates; broader product UI remains English |
+| English beginner alignment | **Implemented now** | English question template; the full product surface remains English |
 | Deterministic scan and score | **Implemented now** | Scanner and category breakdown |
 | Explainable local context | **Implemented now** | Context Graph/Trace with selection reasons and metadata |
 | Explicit evidence states | **Implemented now** | PASS/WARN/FAIL/NOT_RUN/SIMULATED across reports/dashboard |
@@ -192,7 +192,7 @@ The build exposed several concrete improvements:
 | Signed/identity-backed gates and immutable logs | **Future work** | Local files are mutable and unsigned |
 | Language-aware semantic graph | **Future work** | Current context is deterministic and heuristic |
 | PR/MR, CI, team, and cross-repo integration | **Future work** | No hosted integration in the local-first build |
-| Optional OpenAI-assisted review | **Future work** | Must be opt-in with explicit data disclosure |
+| Optional real Codex review | **Implemented now** | ChatGPT subscription, verified `gpt-5.6-sol`, read-only execution, structured provenance, and explicit data disclosure |
 | Full multilingual product packs | **Future work** | Only Phase-0 is bilingual in this version |
 
 ## Assessment boundary

@@ -6,7 +6,7 @@
 
 Codex Control Tower is a local-first developer tool that turns Codex-assisted work into a bounded, reviewable delivery workflow with mission context, risk signals, approval state, evidence, and a safe handoff.
 
-**OpenAI Build Week project · deterministic core · no API key required · simulated demo clearly labeled**
+**OpenAI Build Week project · deterministic core + optional real GPT-5.6 Sol review · no API key required · simulated fixture clearly labeled**
 
 Codex is powerful. Codex Control Tower turns that power into an auditable delivery workflow.
 
@@ -46,6 +46,7 @@ Control Tower makes these questions part of the repository instead of leaving th
 - Compares proposed actions with detected risks and remembered minefields through Mistake Shield.
 - Records prompt, plan, change, test, evidence, approval, risk, blocked, and NOT_RUN events as local JSONL.
 - Exports an Evidence Pack and Devpost-ready narrative assets.
+- Optionally runs a real, read-only Codex review with `gpt-5.6-sol` through the user's signed-in ChatGPT subscription and records model/run provenance.
 - Presents the result in a responsive, local dashboard.
 
 ## Core Features
@@ -58,7 +59,8 @@ Control Tower makes these questions part of the repository instead of leaving th
 | **Codex Mistake Shield** | CLEAR, CAUTION, or BLOCKED with matched risks and a safer rewrite—never a silent block. |
 | **Codex Flight Recorder** | A chronological JSONL handoff across prompts, plans, changes, tests, evidence, approvals, risks, and skipped checks. |
 | **Codex Memory Lens** | Durable rules, minefields, architecture principles, environment constraints, preferences, stale sources, and continuity metrics. |
-| **Phase-0 Alignment Wizard** | Eight plain-language questions, one at a time, in English or Turkish; it writes alignment files and a first mission prompt, not implementation code. |
+| **Phase-0 Alignment Wizard** | Eight plain-language English questions, one at a time; it writes alignment files and a first mission prompt, not implementation code. |
+| **Real Codex Review** | Optional `gpt-5.6-sol` assessment through the signed-in ChatGPT subscription, executed read-only and kept separate from deterministic scoring. |
 | **Evidence Boundary Report** | PASS, WARN, FAIL, NOT_RUN, and SIMULATED remain distinct and tied to named artifacts. |
 | **Before / After Dashboard** | An immediate comparison of score, risks, missing surfaces, review state, evidence, and continuity. |
 | **Devpost Pack Exporter** | Submission summary, long description, demo script, judging map, command list, screenshots checklist, limitations, and evidence map. |
@@ -73,7 +75,29 @@ npm run demo
 npm run dashboard
 ~~~
 
-The demo prepares controlled **SIMULATED DEMO DATA** for InvoiceFlow Mini and refreshes the local dashboard report. It does not use a customer repository, a donor repository, or a competition-source repository.
+The dashboard command opens the browser automatically. Keep it open, open a second command window, and run the optional real model layer:
+
+~~~bash
+npm run demo:codex
+~~~
+
+The core demo prepares controlled **SIMULATED DEMO DATA** for InvoiceFlow Mini. The optional command performs a **REAL CODEX RUN** with `gpt-5.6-sol` against that fictional fixture in read-only mode. It uses the ChatGPT subscription session already signed in to Codex, not an API key. The deterministic score does not become an AI-generated score.
+
+For a click-by-click, beginner-safe Turkish recording guide, use [Türkçe Demo Çekim Rehberi](docs/DEMO_REHBERI_TR.md).
+
+## Demo Recording Path
+
+Run:
+
+~~~bash
+npm install
+npm run demo
+npm run dashboard
+# In a second command window, while the dashboard stays open:
+npm run demo:codex
+~~~
+
+Then follow [Three-Minute Demo Script](docs/DEMO_SCRIPT.md). Show the messy InvoiceFlow Mini fixture, its low governance scan, Context Trace, Review Gate, Mistake Shield, Codex Mission Prompt, Evidence Pack, real GPT-5.6 Sol review, and the Before / After dashboard. InvoiceFlow Mini remains simulated demo data; the Codex response is real and separately labeled.
 
 ## CLI Usage
 
@@ -81,11 +105,12 @@ The package exposes the <code>cct</code> binary. From a source checkout, run <co
 
 ~~~bash
 cct init --target . --profile startup --codex
-cct phase0 --target . --locale en|tr
+cct phase0 --target .
 cct scan --target . --out report.json
 cct health --target .
 cct doctor --target .
 cct context-graph --target . --out context-graph.json
+cct codex-review --target . --model gpt-5.6-sol
 cct review-gate --target . --status
 cct mistake-shield --target . --action "Refactor auth and delete old tests"
 cct memory-lens --target . --out memory-lens.json
@@ -102,12 +127,11 @@ cct review-gate --target . --approve --note "Reviewed bounded auth tests" --scop
 
 An `APPROVED` value without this scope remains incomplete and Mistake Shield will not treat it as authorization for risky or destructive work.
 
-Phase-0 supports English and Turkish while the competition README, dashboard, and Devpost narrative remain English:
+Phase-0 is English-only in this Build Week version:
 
 ~~~bash
-cct phase0 --target . --locale en
-cct phase0 --target . --locale tr
-cct phase0 --target examples/demo-workspace --locale en --demo
+cct phase0 --target .
+cct phase0 --target examples/demo-workspace --demo
 ~~~
 
 The <code>--demo</code> answer set is predefined for InvoiceFlow Mini and is written with a SIMULATED label. Interactive Phase-0 saves <code>.controltower/phase0.json</code> and <code>plans/PHASE0_ALIGNMENT.md</code>; it does not write product implementation code.
@@ -121,8 +145,9 @@ The three-minute story uses **InvoiceFlow Mini**, a fictional invoice/customer/p
 3. **Context and risk:** Context Trace explains which repository surfaces matter. Mistake Shield blocks or cautions on actions such as deleting tests while refactoring auth.
 4. **Alignment and approval:** Phase-0 creates a first mission boundary; Review Gate makes the local human decision visible.
 5. **Mission and evidence:** Control Tower generates a strict Codex Mission Prompt and exports the evidence, traceability, NOT_RUN, debt, graph, memory, shield, recorder, and report artifacts.
-6. **Governed after:** <code>examples/governed-saas-after</code> represents the same simulated project with governance applied. Its verified local fixture scan scores **88/100** with **1 remaining risk flag**; **2 focused Node fixture tests passed**. Provider, browser, load, deployment, and independent security checks remain **NOT_RUN**.
+6. **Governed after:** <code>examples/governed-saas-after</code> represents the same simulated project with governance applied. Its verified local fixture scan scores **88/100** with **1 remaining risk flag**; **2 focused Node fixture tests passed**. Browser, load, deployment, and independent security checks remain **NOT_RUN**.
 7. **Dashboard:** Before / After makes the score and risk reduction legible while Evidence keeps the remaining proof gaps visible.
+8. **Real Codex layer:** while the dashboard is already open, `npm run demo:codex` verifies the ChatGPT sign-in and model catalog, runs `gpt-5.6-sol` read-only, stores the structured response, and updates the Real Codex Review panel automatically.
 
 These numbers describe controlled local fixtures, not customer outcomes, production benchmarks, or a correctness guarantee. Re-run the commands and treat current output as the source of truth.
 
@@ -130,11 +155,12 @@ See the shot-by-shot [three-minute demo script](docs/DEMO_SCRIPT.md).
 
 ## Dashboard
 
-The dashboard imports a local report at build time and can also load a local JSON report from the browser. It never uploads that report.
+The dashboard imports a local report at build time, can load a local JSON report, and watches the optional live-review report while open. The core dashboard never uploads a report. The real review sends the fictional governed fixture context to Codex only after the user explicitly runs `npm run demo:codex`.
 
 | Surface | What to show |
 | --- | --- |
 | **Overview** | Health, readiness, review state, evidence signals, next safe action, score breakdown, missing surfaces, mission prompt, and the conditional Phase-0 card. |
+| **Real Codex Review** | READY/RUNNING/COMPLETE state, exact model, ChatGPT subscription provenance, read-only safety boundary, structured verdict, and evidence paths. |
 | **Risks** | Severity, affected area, why each finding matters, and the recommended mitigation. |
 | **Context Trace** | Mission context budget, selected repository items, selection reasons, relevance, freshness, importance, and protected items. |
 | **Evidence** | PASS/WARN/FAIL/NOT_RUN/SIMULATED boundary, traceability rows, technical-debt/docs state, and review status. |
@@ -159,14 +185,9 @@ That makes the project a direct expression of Build Week's invitation to show wh
 
 Codex Control Tower was built for OpenAI Build Week as a Codex-native developer tool.
 
-It is inspired by the Universal Agent OS family of prior experiments:
+It is inspired by the **Universal Agent OS family**: prior experiments in alignment, evidence-first delivery, human review, context, continuity, and mistake prevention.
 
-- **Universal Agent OS** — general multi-agent governance and evidence-first delivery.
-- **Universal Agent OS for UiPath** — human-in-the-loop approval, strict/mock evidence boundaries, and enterprise workflow gates.
-- **Universal Agent OS GitLab Edition** — context graph, blast-radius thinking, reviewable artifacts, and refusal to fake unavailable tool results.
-- **Universal Agent OS Qwen Edition** — memory workbench, mistake prevention, recall traces, timeline views, and honesty reports.
-
-Codex Control Tower is not a direct clone of those repositories. It transforms lessons from that family into a new Codex-centered product: a local-first mission control layer with Codex Mission Prompts, Context Trace, Review Gate, Mistake Shield, Flight Recorder, Evidence Pack, and a dashboard for AI-built software.
+Codex Control Tower is not a direct clone of the family. It transforms those lessons into a new Codex-centered product: a local-first mission control layer with Codex Mission Prompts, Context Trace, Review Gate, Mistake Shield, Flight Recorder, Evidence Pack, an optional real GPT-5.6 Sol review, and a dashboard for AI-built software.
 
 The source repositories were studied read-only, were not modified, are not runtime dependencies, and are never used as the demo target. The no-copy and transformation record is documented in [Source Protection](docs/SOURCE_PROTECTION.md), [Source Research Matrix](docs/SOURCE_RESEARCH_MATRIX.md), [Feature Harvest](docs/FEATURE_HARVEST.md), and [Originality Matrix](docs/ORIGINALITY_MATRIX.md). No unverified competition-placement claim is made.
 
@@ -203,10 +224,13 @@ cct command router -> safe filesystem boundary
       |
       +-> Evidence Pack / Devpost Pack
       |
-      +-> local JSON report -> React dashboard
+      +-> local JSON report -> React dashboard <-> optional live report
+                                      ^
+                                      |
+                    ChatGPT sign-in -> Codex CLI -> gpt-5.6-sol (read-only)
 ~~~
 
-The CLI is CommonJS on Node.js. Scanning and scoring are deterministic and require no model call. The scanner reads filenames, selected text surfaces, metadata, tests/CI presence, governance artifacts, and risk markers. Generated JSON and Markdown stay portable. The Vite/React dashboard visualizes the report; it does not strengthen or replace the underlying evidence.
+The CLI is CommonJS on Node.js. Scanning and scoring are deterministic and require no model call. The scanner reads filenames, selected text surfaces, metadata, tests/CI presence, governance artifacts, and risk markers. Generated JSON and Markdown stay portable. The optional `codex-review` command verifies ChatGPT authentication and model availability, then invokes `gpt-5.6-sol` in read-only mode with structured output. The Vite/React dashboard visualizes both layers; it does not strengthen or replace the underlying evidence.
 
 See [Architecture](docs/ARCHITECTURE.md) for module boundaries, data flow, write behavior, and the safety model.
 
@@ -216,6 +240,7 @@ See [Architecture](docs/ARCHITECTURE.md) for module boundaries, data flow, write
 - No telemetry or analytics are included.
 - Source code is not uploaded by the core workflow.
 - No OpenAI API key is required for the core demo.
+- The optional real review requires an explicit command and sends the fictional governed fixture context to Codex under the signed-in ChatGPT account.
 - Reports remain local unless the user chooses to share them.
 - Generated packs can contain sensitive filenames, plans, paths, and risk descriptions; review them before sharing.
 - Protected lineage repositories remain read-only and outside the product/demo write boundary.
@@ -246,7 +271,7 @@ codex-control-tower/
 │   └── lib/               # scanner, score, graph, prompt, evidence, safety
 ├── apps/dashboard/        # local Vite + React report workbench
 ├── core/
-│   ├── en/ and tr/        # Phase-0 question templates
+│   ├── en/                # English-only Phase-0 question templates
 │   ├── adapters/          # Codex and other instruction adapters
 │   ├── templates/         # portable governance artifacts
 │   └── workflows/         # mission, evidence, review, recorder guidance
@@ -273,12 +298,12 @@ codex-control-tower/
 
 ## Roadmap
 
-- Optional OpenAI API review mode with explicit enablement and a disclosed data boundary
+- Deeper opt-in Codex review modes beyond the current read-only GPT-5.6 Sol assessment
 - GitHub/GitLab PR/MR and CI integrations
 - Stronger language-aware dependency and code-ownership mapping
 - Signed or identity-backed Review Gates and evidence attestations
 - Team and cross-repository dashboards
-- Multilingual packs beyond the current English/Turkish Phase-0 alignment flow
+- Multilingual packs are future work
 
 Roadmap items are future work, not current capability.
 

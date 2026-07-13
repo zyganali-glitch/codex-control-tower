@@ -10,6 +10,8 @@ This is a product boundary, not a claim of formal security certification.
 - **No analytics.** The dashboard does not load an analytics SDK or tracking pixel.
 - **No source upload.** Core commands analyze the user-selected local target.
 - **No API key required for the core demo.** InvoiceFlow Mini, scoring, reports, and dashboard are local.
+- **Real Codex review is explicit.** `npm run demo:codex` sends the fictional governed fixture context to Codex through the user's signed-in ChatGPT subscription. It never starts silently.
+- **Read-only model boundary.** The optional command invokes `gpt-5.6-sol` with a read-only workspace and saves prompt, events, structured response, model, access type, and timestamps locally.
 - **Reports stay local.** Output is written only to the requested target/output paths.
 - **The user chooses what to share.** Devpost/evidence export creates local files; it does not submit or upload them.
 - **No mandatory external CDN or hosted database.** The dashboard uses project dependencies and local report data.
@@ -54,7 +56,7 @@ The scanner is not a secret manager and should not be treated as one.
 - A risk finding that points to a suspected secret is not proof that the value has been redacted from every user-authored file.
 - If a secret is discovered, revoke/rotate it using the owning service; deleting a local report is not remediation.
 
-The current core does not require a networked model. Any future OpenAI-powered review must be separately opt-in, disclose exactly which content will leave the machine, avoid silent fallback to network mode, and keep local and remote evidence distinguishable.
+The current core does not require a networked model. The implemented optional Codex review is separately opt-in, discloses that the chosen target context leaves the machine for Codex, has no silent network fallback, and keeps model evidence distinguishable from deterministic local results. Users should run it only on content they are permitted to send to their signed-in ChatGPT workspace; the official demo uses only fictional InvoiceFlow Mini data.
 
 ## Review Gate security boundary
 

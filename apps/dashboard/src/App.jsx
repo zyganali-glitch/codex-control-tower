@@ -9,6 +9,7 @@ import RiskCards from './components/RiskCards.jsx';
 import MissingSurfaces from './components/MissingSurfaces.jsx';
 import PhaseZeroCard from './components/PhaseZeroCard.jsx';
 import CodexPromptPanel from './components/CodexPromptPanel.jsx';
+import CodexLiveReviewPanel from './components/CodexLiveReviewPanel.jsx';
 import ReviewGatePanel from './components/ReviewGatePanel.jsx';
 import EvidencePanel from './components/EvidencePanel.jsx';
 import TraceabilityMatrix from './components/TraceabilityMatrix.jsx';
@@ -51,6 +52,7 @@ function App() {
   const [report, setReport] = useState(() => normalizeReport(sampleReport));
   const [navOpen, setNavOpen] = useState(false);
   const [notice, setNotice] = useState('');
+  const [liveEnabled, setLiveEnabled] = useState(true);
   const fileInput = useRef(null);
   const title = pageCopy[activeTab];
 
@@ -59,6 +61,24 @@ function App() {
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
+
+  useEffect(() => {
+    if (!liveEnabled) return undefined;
+    let active = true;
+    async function refreshLiveReport() {
+      try {
+        const response = await fetch(`/live-report.json?t=${Date.now()}`, { cache: 'no-store' });
+        if (!response.ok) return;
+        const raw = await response.json();
+        if (active && raw.codexLiveReview) setReport(normalizeReport(raw));
+      } catch {
+        // The bundled report remains usable when the optional live file is absent.
+      }
+    }
+    refreshLiveReport();
+    const timer = window.setInterval(refreshLiveReport, 1500);
+    return () => { active = false; window.clearInterval(timer); };
+  }, [liveEnabled]);
 
   const evidenceCount = useMemo(() => Object.values(report.evidenceBoundary?.summary || {}).reduce((sum, count) => sum + Number(count), 0), [report]);
 
@@ -76,6 +96,7 @@ function App() {
       const parsed = JSON.parse(await file.text());
       if (!(parsed.repository || parsed.project || parsed.targetPath) || !(parsed.health || parsed.score != null)) throw new Error('Missing project or health fields');
       setReport(normalizeReport(parsed));
+      setLiveEnabled(false);
       setNotice(`Loaded ${file.name} locally`);
     } catch (error) {
       setNotice(`Could not load report: ${error.message}`);
@@ -116,8 +137,8 @@ function App() {
         <div className="sidebar-system">
           <div className="system-head"><span>LOCAL SYSTEM</span><i /></div>
           <div><span>Scanner</span><strong>Ready</strong></div>
-          <div><span>Telemetry</span><strong>Off</strong></div>
-          <div><span>Network</span><strong>Not required</strong></div>
+          <div><span>Codex review</span><strong>{report.codexLiveReview?.state || 'Ready'}</strong></div>
+          <div><span>Data flow</span><strong>Local + Codex</strong></div>
         </div>
         <div className="sidebar-foot"><Icon name="lock" size={13} /><span>Report stays on this device</span></div>
       </aside>
@@ -166,6 +187,7 @@ function Overview({ report, navigate }) {
   return (
     <div className="view-stack">
       <ScoreHero health={report.health} repository={report.repository} />
+      <CodexLiveReviewPanel review={report.codexLiveReview} />
       <div className="signal-strip">
         <button onClick={() => navigate('risks')}><span className="signal-icon signal-icon--risk"><Icon name="risks" /></span><span><small>Open risk flags</small><strong>{report.risks?.filter((risk) => risk.status === 'OPEN').length || 0}</strong></span><Icon name="chevron" size={15} /></button>
         <button onClick={() => navigate('evidence')}><span className="signal-icon signal-icon--pass"><Icon name="evidence" /></span><span><small>Evidence checks passed</small><strong>{boundary.PASS || 0}</strong></span><Icon name="chevron" size={15} /></button>

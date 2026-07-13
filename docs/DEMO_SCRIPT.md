@@ -16,6 +16,7 @@ Run these on the final commit and record the real outcomes in [Codex Build Log](
 npm install
 npm test
 npm run demo
+npm run demo:codex
 npm run dashboard:build
 ~~~
 
@@ -29,7 +30,8 @@ Prepare:
 
 - Terminal at the repository root, large readable font.
 - Editor open to <code>examples/messy-saas-before</code>.
-- Browser open to the local dashboard at the URL printed by Vite.
+- Browser opened automatically by `npm run dashboard`.
+- A second command window at the repository root, ready to run `npm run demo:codex` while the dashboard remains open.
 - Dashboard disclosure banner and Before / After tab visible.
 - A second editor tab ready for <code>tmp/demo-evidence/CODEX_MISSION_PROMPT.md</code> after generation.
 
@@ -49,7 +51,8 @@ The verified controlled fixture result at documentation time is:
 - messy scan: **25/100**, **16 risk flags**;
 - governed scan: **88/100**, **1 risk flag**;
 - governed fixture tests: **2 focused Node tests passed, 0 failed**;
-- real provider, browser, load, deployment, and independent security checks: **NOT_RUN**.
+- browser, load, deployment, and independent security checks: **NOT_RUN**;
+- optional live layer: a **REAL** read-only `gpt-5.6-sol` run through the signed-in ChatGPT subscription.
 
 If final output differs, use the current output and update the narrative. Never edit a score into the video or claim a command ran when it did not.
 
@@ -180,29 +183,28 @@ node cli/index.js review-gate --target examples/governed-saas-after --status
 
 Technological Implementation + Design: deterministic safety logic tied to a visible developer decision.
 
-## 2:15–2:35 — Generate the Mission Prompt and Evidence Pack
+## 2:15–2:35 — Run the real GPT-5.6 Sol review
 
 ### Screen and command
 
 ~~~bash
-node cli/index.js evidence --target examples/governed-saas-after --out tmp/demo-evidence
+npm run demo:codex
 ~~~
 
-Open <code>tmp/demo-evidence/CODEX_MISSION_PROMPT.md</code> or the Mission Prompt panel. Then show <code>NOT_RUN_GATES.md</code>.
+Run this in the second command window while the dashboard stays open. Return immediately to **Overview** and show the Real Codex Review panel moving from READY to RUNNING and then COMPLETE. Point to `gpt-5.6-sol`, ChatGPT subscription access, read-only safety, the structured verdict, and the evidence paths.
 
 ### Narration
 
-“Control Tower converts repository state into the next Codex Mission Prompt: target, risks, allowed files, forbidden actions, review state, tests, documentation, evidence, and the final response contract. The Evidence Pack exports traceability, debt, context, review, memory, shield, recorder, and the machine report. Notice the honesty boundary: PASS needs evidence; checks not executed by this command remain NOT_RUN.”
+“This is the optional real model layer. Control Tower verifies the signed-in ChatGPT subscription and that GPT-5.6 Sol is available, then invokes Codex in read-only mode with a structured review contract. The deterministic score remains independent. InvoiceFlow Mini is simulated, but this Codex response is real and its model, run state, prompt, events, and final assessment are recorded.”
 
-### Files worth flashing
+### Evidence files worth flashing
 
-- CODEX_MISSION_PROMPT.md
-- EVIDENCE_REPORT.md
-- TRACEABILITY_MATRIX.md
-- NOT_RUN_GATES.md
-- CONTROL_TOWER_REPORT.json
+- `.controltower/CODEX_LIVE_REVIEW_PROMPT.md`
+- `.controltower/codex-live-review.json`
+- `.controltower/codex-live-events.jsonl`
+- `.controltower/codex-live-review-record.json`
 
-Do not imply <code>cct evidence</code> ran the target tests. It explicitly does not.
+Do not imply the model produced the 88 score or executed the fixture tests. The live review assesses the repository evidence; deterministic code computes the score and the demo command runs the two focused fixture tests.
 
 ## 2:35–2:50 — Governed result
 
@@ -216,7 +218,7 @@ node cli/index.js health --target examples/governed-saas-after
 
 ### Narration
 
-“The same simulated project now scores 88, with risk flags reduced from 16 to 1. Two focused Node fixture tests passed in the verified fixture run. The remaining risk and provider, browser, load, deployment, and independent security gates are still visible—not converted into a victory claim.”
+“The same simulated project now scores 88, with risk flags reduced from 16 to 1. Two focused Node fixture tests passed in the verified fixture run. The remaining risk plus browser, load, deployment, and independent security gates are still visible—not converted into a victory claim.”
 
 ### Visual checklist
 
@@ -231,7 +233,7 @@ node cli/index.js health --target examples/governed-saas-after
 
 ### Screen
 
-Return to Overview with health, Review Gate, Mistake Shield, and next safe action visible.
+Return to Overview with health, the completed Real Codex Review, Review Gate, Mistake Shield, and next safe action visible.
 
 ### Narration
 
@@ -251,10 +253,13 @@ Capture these after the recording with the SIMULATED disclosure visible:
 8. Before / After — 25 → 88 and 16 → 1
 9. Phase-0 card — goal, audience, evidence, forbidden areas, next mission
 10. Terminal — evidence pack generation and local-only boundary
+11. Real Codex Review — COMPLETE, `gpt-5.6-sol`, ChatGPT subscription, read-only mode, verdict, and evidence paths
 
 ## Recovery notes
 
 - If the dashboard sample is stale, stop recording, run <code>npm run demo</code>, restart the dashboard, and confirm the disclosure and current scores.
+- Never open `apps/dashboard/index.html` directly; start the dashboard with `npm run dashboard`, which opens the correct browser address automatically.
+- If the live review is blocked, confirm the Codex app is signed in with ChatGPT and rerun `npm run demo:codex`. Never replace a failed live run with a simulated success.
 - If a command fails, keep the failure as FAIL, fix it, rerun it, and update the build log before recording again.
 - If a screenshot omits the SIMULATED label, retake it.
 - If an output claims PASS without a named artifact or executed command, do not use that shot.
@@ -267,3 +272,4 @@ Capture these after the recording with the SIMULATED disclosure visible:
 - [Judging Map](JUDGING_MAP.md)
 - [Architecture](ARCHITECTURE.md)
 - [Codex Build Log](CODEX_BUILD_LOG.md)
+- [Beginner-safe Turkish recording guide](DEMO_REHBERI_TR.md)

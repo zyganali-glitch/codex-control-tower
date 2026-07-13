@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "invoiceflow-mini-simulated-before",
   "targetPath": ".\\examples\\demo-workspace",
-  "generatedAt": "2026-07-12T20:47:06.494Z",
+  "generatedAt": "2026-07-13T17:52:44.721Z",
   "scanMode": "SIMULATED",
   "simulatedData": true,
   "scanScope": {
@@ -105,31 +105,31 @@
       "path": ".codex/AGENTS.md",
       "bytes": 474,
       "lines": 11,
-      "modifiedAt": "2026-07-12T20:47:06.388Z"
+      "modifiedAt": "2026-07-13T17:52:44.591Z"
     },
     {
       "path": ".controltower/config.json",
       "bytes": 283,
       "lines": 13,
-      "modifiedAt": "2026-07-12T20:47:06.401Z"
+      "modifiedAt": "2026-07-13T17:52:44.607Z"
     },
     {
       "path": ".controltower/flight-recorder.jsonl",
       "bytes": 847,
       "lines": 0,
-      "modifiedAt": "2026-07-12T20:47:06.468Z"
+      "modifiedAt": "2026-07-13T17:52:44.695Z"
     },
     {
       "path": ".controltower/phase0.json",
       "bytes": 3261,
       "lines": 17,
-      "modifiedAt": "2026-07-12T20:47:06.380Z"
+      "modifiedAt": "2026-07-13T17:52:44.584Z"
     },
     {
       "path": ".controltower/review-gate.json",
       "bytes": 605,
       "lines": 23,
-      "modifiedAt": "2026-07-12T20:47:06.411Z"
+      "modifiedAt": "2026-07-13T17:52:44.619Z"
     },
     {
       "path": ".github/workflows/ci.yml",
@@ -141,25 +141,25 @@
       "path": "docs/EVIDENCE_REPORT.md",
       "bytes": 87,
       "lines": 4,
-      "modifiedAt": "2026-07-12T20:47:06.391Z"
+      "modifiedAt": "2026-07-13T17:52:44.594Z"
     },
     {
       "path": "docs/MEMORY_LENS.md",
       "bytes": 174,
       "lines": 8,
-      "modifiedAt": "2026-07-12T20:47:06.396Z"
+      "modifiedAt": "2026-07-13T17:52:44.601Z"
     },
     {
       "path": "docs/MISTAKE_SHIELD.md",
       "bytes": 129,
       "lines": 6,
-      "modifiedAt": "2026-07-12T20:47:06.397Z"
+      "modifiedAt": "2026-07-13T17:52:44.603Z"
     },
     {
       "path": "docs/NOT_RUN_GATES.md",
       "bytes": 104,
       "lines": 6,
-      "modifiedAt": "2026-07-12T20:47:06.393Z"
+      "modifiedAt": "2026-07-13T17:52:44.598Z"
     },
     {
       "path": "docs/old-notes.md",
@@ -171,13 +171,13 @@
       "path": "docs/TECH_DEBT_DELTA.md",
       "bytes": 101,
       "lines": 4,
-      "modifiedAt": "2026-07-12T20:47:06.395Z"
+      "modifiedAt": "2026-07-13T17:52:44.600Z"
     },
     {
       "path": "docs/TRACEABILITY_MATRIX.md",
       "bytes": 176,
       "lines": 6,
-      "modifiedAt": "2026-07-12T20:47:06.392Z"
+      "modifiedAt": "2026-07-13T17:52:44.596Z"
     },
     {
       "path": "package.json",
@@ -189,13 +189,13 @@
       "path": "plans/master-roadmap.md",
       "bytes": 299,
       "lines": 15,
-      "modifiedAt": "2026-07-12T20:47:06.389Z"
+      "modifiedAt": "2026-07-13T17:52:44.593Z"
     },
     {
       "path": "plans/PHASE0_ALIGNMENT.md",
       "bytes": 3121,
       "lines": 91,
-      "modifiedAt": "2026-07-12T20:47:06.382Z"
+      "modifiedAt": "2026-07-13T17:52:44.586Z"
     },
     {
       "path": "README.md",
@@ -249,7 +249,7 @@
       "path": "TECH_DEBT_AND_SECURITY.md",
       "bytes": 241,
       "lines": 4,
-      "modifiedAt": "2026-07-12T20:47:06.399Z"
+      "modifiedAt": "2026-07-13T17:52:44.604Z"
     },
     {
       "path": "tests/placeholder.test.js",
@@ -336,7 +336,7 @@
     }
   },
   "contextGraph": {
-    "generatedAt": "2026-07-12T20:47:06.491Z",
+    "generatedAt": "2026-07-13T17:52:44.718Z",
     "generatedLocally": true,
     "algorithm": "deterministic lexical and repository-surface analysis",
     "nodes": [
@@ -1177,7 +1177,7 @@
   "reviewGate": {
     "status": "APPROVED",
     "note": "SIMULATED demo approval for governance-only changes.",
-    "updatedAt": "2026-07-12T20:47:06.406Z",
+    "updatedAt": "2026-07-13T17:52:44.613Z",
     "decidedBy": "local-human-command",
     "localFileGate": true,
     "identityVerified": false,
@@ -1200,7 +1200,7 @@
     "decisionRecorded": true
   },
   "memoryLens": {
-    "generatedAt": "2026-07-12T20:47:06.494Z",
+    "generatedAt": "2026-07-13T17:52:44.721Z",
     "generatedLocally": true,
     "sources": [
       {
@@ -1217,7 +1217,7 @@
       },
       {
         "relative": "README.md",
-        "ageDays": 0,
+        "ageDays": 1,
         "stale": false,
         "bytes": 453
       }
@@ -1305,7 +1305,7 @@
     "matchedLessons": [],
     "gateStatus": "APPROVED",
     "saferNextAction": "Inspect the listed risk files, define allowed files and evidence, then request review before changing behavior.",
-    "checkedAt": "2026-07-12T20:47:06.494Z",
+    "checkedAt": "2026-07-13T17:52:44.721Z",
     "deterministic": true
   },
   "phase0": {
@@ -1313,7 +1313,7 @@
     "locale": "en",
     "simulated": true,
     "simulatedDataLabel": "SIMULATED — InvoiceFlow Mini demo answers",
-    "generatedAt": "2026-07-12T20:47:06.377Z",
+    "generatedAt": "2026-07-13T17:52:44.582Z",
     "goal": "Govern InvoiceFlow Mini without changing unrelated product behavior.",
     "audience": "Small-business SaaS developers using Codex.",
     "successCriteria": "A reviewable plan, reduced risk flags, a working test, and an honest evidence pack.",
@@ -1327,35 +1327,35 @@
   "flightRecorder": {
     "events": [
       {
-        "timestamp": "2026-07-12T20:47:06.405Z",
+        "timestamp": "2026-07-13T17:52:44.611Z",
         "type": "PROMPT",
         "message": "SIMULATED InvoiceFlow Mini Phase-0 mission generated.",
         "source": "cct-demo",
         "simulated": true
       },
       {
-        "timestamp": "2026-07-12T20:47:06.405Z",
+        "timestamp": "2026-07-13T17:52:44.612Z",
         "type": "PLAN",
         "message": "SIMULATED governance surfaces planned; product behavior remains out of scope.",
         "source": "cct-demo",
         "simulated": true
       },
       {
-        "timestamp": "2026-07-12T20:47:06.411Z",
+        "timestamp": "2026-07-13T17:52:44.619Z",
         "type": "APPROVAL",
         "message": "Local demo gate changed to APPROVED.",
         "source": "cct-demo",
         "simulated": true
       },
       {
-        "timestamp": "2026-07-12T20:47:06.411Z",
+        "timestamp": "2026-07-13T17:52:44.620Z",
         "type": "NOT_RUN",
         "message": "InvoiceFlow Mini behavior tests were not executed by the demo orchestrator.",
         "source": "cct-demo",
         "simulated": true
       },
       {
-        "timestamp": "2026-07-12T20:47:06.466Z",
+        "timestamp": "2026-07-13T17:52:44.694Z",
         "type": "EVIDENCE",
         "message": "SIMULATED demo evidence pack generated; target tests remain NOT_RUN.",
         "source": "cct-demo",

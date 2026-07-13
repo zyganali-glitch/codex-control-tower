@@ -14,12 +14,12 @@ This review uses `PASS`, `WARN`, `FAIL`, and `NOT_RUN` without hiding unresolved
 | 6 | Does README avoid fake claims? | PASS | Honest Boundaries excludes correctness, enterprise identity, production, and real-customer claims. |
 | 7 | Does README link Devpost assets? | PASS | Submission, demo, judging, build log, research, harvest, and originality assets are linked. |
 | 8 | Does the demo use InvoiceFlow Mini rather than Opradox or a source repo? | PASS | Both fixtures and demo workspace are controlled InvoiceFlow Mini data. |
-| 9 | Does the dashboard reflect Qwen-inspired workbench ideas? | PASS | Context Trace, context budget, Memory Lens, Flight Recorder, Mistake Shield, Evidence Boundary, Phase-0, and Before/After are implemented as Codex-native React surfaces. |
+| 9 | Does the dashboard transform Universal Agent OS family workbench ideas? | PASS | Context Trace, context budget, Memory Lens, Flight Recorder, Mistake Shield, Evidence Boundary, Phase-0, and Before/After are implemented as Codex-native React surfaces. |
 | 10 | Does the product have Codex-native originality? | PASS | Mission Prompt, local Context Trace, scoped Review Gate, Flight Recorder, Mistake Shield, Evidence/Devpost exporters, and repository scanner form an independent product. |
 | 11 | Are simulated demo labels visible? | PASS | CLI, fixture docs, JSON reports, evidence packs, and dashboard disclosure label simulation. |
 | 12 | Are NOT_RUN gates visible? | PASS | NOT_RUN documents and dashboard evidence checks preserve unexecuted CI/external checks. |
 | 13 | Are source repositories protected? | PASS | `SOURCE_PROTECTION.md`; no active package or demo target points to a protected source. |
-| 14 | Is the project English-only? | PASS | Judge-facing README, CLI help, dashboard, demo, and Devpost text are English. The newest explicit requirement supersedes the interim English-only Phase-0 rule, so Phase-0 alone supports `en|tr`. |
+| 14 | Is the project English-only? | PASS | README, CLI help, dashboard, Phase-0, demo, and Devpost text are English in the Build Week version. |
 | 15 | Are all acceptance criteria met? | PASS | Required local product, demo, documentation, test, and build criteria passed. External/manual gates remain explicitly NOT_RUN below. |
 
 ## Additional acceptance checks
@@ -33,7 +33,7 @@ This review uses `PASS`, `WARN`, `FAIL`, and `NOT_RUN` without hiding unresolved
 | Risks reduced | PASS | Current simulated comparison: 16 → 1 |
 | Hollow governance cannot claim readiness | PASS | Adversarial scoring regression in `test_health_scoring.js` |
 | Repeated evidence/report scans remain stable | PASS | Self-scan regression tests |
-| Phase-0 English and Turkish templates | PASS | `core/en`, `core/tr`, and `test_phase0.js` |
+| English-only Phase-0 template | PASS | `core/en` and `test_phase0.js` |
 | Governed fixture working tests | PASS | Two focused Node fixture tests; evidence output under `examples/demo-report/` |
 | Dashboard production build | PASS | Vite build, 47 modules transformed |
 | Dashboard runtime rendering | PASS | Headless Overview, Context Trace, and Before/After captures rendered the simulated disclosure and evidence states. |
@@ -42,7 +42,7 @@ This review uses `PASS`, `WARN`, `FAIL`, and `NOT_RUN` without hiding unresolved
 | Full root test suite | PASS | Nine CLI/core regression scripts plus five dashboard adapter tests passed. |
 | Full `npm run verify` | PASS | Post-hardening tests, `25 → 88` simulated demo regeneration, dependency audit, and 47-module Vite production build passed. |
 | CI execution on GitHub | PASS | Push workflow run `29208503014` completed successfully for release commit `e0ee256e7eb497cd6293fe51f51899645ee3ed90`. |
-| Real auth/payment/provider integration | NOT_RUN | Explicitly outside the simulated demo scope. |
+| Real auth/payment integration | NOT_RUN | Explicitly outside the simulated demo scope; the separate real Codex review does not convert fictional product integrations to PASS. |
 | Deployment, load, browser accessibility, independent security review | NOT_RUN | No such claims are made. |
 
 ## Review conclusion

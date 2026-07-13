@@ -23,8 +23,8 @@ Codex Control Tower is an evidence and workflow layer for Codex-assisted develop
 | Privacy | Core processing is local, but generated reports can contain sensitive paths, plans, markers, or architecture details. Automatic redaction is not guaranteed. | Review every export before sharing. |
 | Security enforcement | Safe path handling reduces accidental writes but is not an OS sandbox, policy engine, malware scanner, or secret manager. | Use normal repository and operating-system security controls. |
 | Team workflows | No hosted synchronization, enterprise RBAC, signed approvals, cross-repo view, or automatic PR/MR comments are included. | These are future integrations, not hidden features. |
-| AI/cloud review | No OpenAI API or other model is required or used for the deterministic core. | Optional OpenAI-powered review is future, explicit opt-in work. |
-| Localization | The Phase-0 wizard supports English and Turkish as required. The main Build Week README, dashboard, CLI narrative, and Devpost materials are English. | This is bilingual alignment, not full multilingual localization. |
+| AI/cloud review | No model is required for the deterministic core. The optional real review uses signed-in ChatGPT access and sends the chosen fictional target context to Codex. | Its response is model output, not independent attestation, and cannot upgrade NOT_RUN checks to PASS. |
+| Localization | This Build Week version, including Phase-0, is English-only. | Multilingual packs are future work. |
 
 ## Demo boundary
 
@@ -37,7 +37,7 @@ InvoiceFlow Mini is **SIMULATED DEMO DATA** created for a controlled three-minut
 
 ## Lineage and claim boundary
 
-The four protected Universal Agent OS repositories were studied for concepts only and were not modified or used as demo targets. Source-authored statements about their deployments, test counts, integrations, or readiness were not independently rerun for this project. The reported second-place result for the GitLab edition was not confirmed by an authoritative results page during research, so Codex Control Tower makes no award claim.
+The **Universal Agent OS family** was studied for concepts only and was not modified or used as demo data. Family-authored statements about deployments, tests, integrations, readiness, or competition results are not used as evidence for this project.
 
 ## What still requires human judgment
 
@@ -50,13 +50,13 @@ The four protected Universal Agent OS repositories were studied for concepts onl
 
 ## Roadmap, not current capability
 
-- Optional OpenAI-assisted review with explicit data consent.
+- Deeper Codex review modes beyond the implemented read-only GPT-5.6 Sol assessment.
 - GitHub/GitLab PR/MR and CI integrations.
 - Stronger language-aware dependency and ownership analysis.
 - Signed/tamper-evident gates and evidence.
 - Team and cross-repository dashboards.
 - MCP and multi-agent continuity.
-- Full locale packs beyond English/Turkish Phase-0.
+- Multilingual packs.
 
 ## Related reading
 

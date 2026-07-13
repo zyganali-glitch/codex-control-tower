@@ -12,13 +12,13 @@ This document records the build-time decisions that keep Codex Control Tower sma
 | PD-04 | Evidence states are first-class | `PASS`, `WARN`, `FAIL`, `NOT_RUN`, and `SIMULATED` prevent missing proof from being flattened into “done.” | Users see unresolved work instead of a single optimistic status. |
 | PD-05 | Use a local Review Gate | A JSON/Markdown gate is portable, inspectable, offline, and sufficient to demonstrate an explicit developer decision point. | It is unsigned and does not verify identity, role, or organizational policy. Signed/team gates are future work. |
 | PD-06 | Keep Context Graph local and explainable | Files, plans, tests, docs, CI, markers, risks, and ownership hints provide useful context without GitLab Orbit or another remote graph. | This is static heuristic context, not a complete semantic dependency graph or live cross-repository blast radius. |
-| PD-07 | Use lexical/structural relevance, never fake embeddings | Explainable local signals satisfy the default offline contract and avoid claiming model behavior that did not run. | Deep semantic retrieval is out of scope. Optional OpenAI-powered review may be added only as explicit opt-in future work. |
+| PD-07 | Use lexical/structural relevance for the core, never fake embeddings | Explainable local signals keep the core reproducible. | The optional real GPT-5.6 Sol review is separate model evidence, not a replacement score. |
 | PD-08 | Record events as plain JSONL | Flight Recorder output is append-friendly, diffable, scriptable, and easy for the next Codex session to inspect. | JSONL is not tamper-evident, signed, or a compliance-grade audit ledger. |
 | PD-09 | Keep artifacts portable | JSON and Markdown reports can be reviewed without a proprietary viewer and can feed the dashboard or a future integration. | There is no central database, retention service, or access-control layer. |
 | PD-10 | Use a controlled simulated before/after repo | InvoiceFlow Mini makes governance gaps and improvements understandable in three minutes without exposing a customer, donor, or competition repository. | Scores and risks demonstrate product behavior; they are not real-customer outcomes or an industry benchmark. |
 | PD-11 | Adapt lineage; do not fork it | The four protected sources contain valuable workflow ideas, but the competition entry needs a new Codex-centered product and independent implementation. | Source code, templates, UI, screenshots, cloud endpoints, and platform-specific assets are excluded. Attribution remains visible. |
 | PD-12 | Make cloud integrations optional | A future remote review or PR integration can add value, but core behavior must not fail when credentials or network access are absent. | Optional modes will require explicit enablement, a clear data boundary, and separate evidence from local checks. |
-| PD-13 | Support English and Turkish in Phase-0 only | The newest product requirement explicitly asks for `--locale en|tr`, while an English README and dashboard keep the main judging path consistent. | This is not full product localization. CLI/dashboard/docs outside the Phase-0 interaction remain primarily English. |
+| PD-13 | Keep the Build Week version English-only | One language keeps CLI, Phase-0, dashboard, README, and judging path consistent. | Multilingual packs are future work. |
 | PD-14 | Keep developer authority visible | “Codex writes. Control Tower proves. The developer decides.” Review state and safer next actions should remain visible rather than silently blocking or approving. | A malicious or misconfigured external agent can ignore repository guidance; Control Tower is not an OS sandbox. |
 
 ## Why local-first
@@ -60,14 +60,14 @@ The difference between edited, tested, and verified must remain visible. A test 
 
 ## Why source concepts became a new product
 
-The protected Universal Agent OS family explores alignment, evidence, memory, approval, context, and mistake prevention across general, UiPath, GitLab, and Qwen settings. Codex Control Tower combines only the lessons needed for a focused problem: preparing, governing, and proving local Codex-assisted changes.
+The protected **Universal Agent OS family** explores alignment, evidence, memory, approval, context, and mistake prevention. Codex Control Tower combines only the lessons needed for preparing, governing, and proving local Codex-assisted changes.
 
 The transformation is substantive:
 
 - general governance templates become computed repository health and a Codex mission;
-- UiPath Action Center semantics become an honestly limited local Review Gate;
+- explicit human-review semantics become an honestly limited local Review Gate;
 - GitLab Orbit/context ideas become a deterministic local Context Graph/Trace;
-- Qwen recall and workbench ideas become repo-context explanations, Flight Recorder, Memory Lens, Mistake Shield, and evidence/before-after views;
+- family recall and workbench ideas become repo-context explanations, Flight Recorder, Memory Lens, Mistake Shield, and evidence/before-after views;
 - platform-specific services and branding are removed from the runtime.
 
 The full lineage and no-copy record lives in [Source Protection](SOURCE_PROTECTION.md), [Source Research Matrix](SOURCE_RESEARCH_MATRIX.md), [Feature Harvest](FEATURE_HARVEST.md), and [Originality Matrix](ORIGINALITY_MATRIX.md).
@@ -76,13 +76,13 @@ The full lineage and no-copy record lives in [Source Protection](SOURCE_PROTECTI
 
 These are intentionally future work, not hidden current claims:
 
-- optional OpenAI API review with explicit enablement and data disclosure;
+- deeper Codex review modes beyond the implemented read-only GPT-5.6 Sol assessment;
 - GitHub/GitLab PR/MR and CI adapters;
 - signed or identity-backed review gates;
 - cross-repository and team dashboards;
 - semantic code graph and stronger ownership mapping;
 - MCP interoperability and multi-agent shared memory;
-- full-product locale packs beyond the English/Turkish Phase-0 wizard.
+- multilingual packs.
 
 ## Related reading
 

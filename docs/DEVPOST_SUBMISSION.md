@@ -33,7 +33,7 @@ This is not a criticism of Codex. Codex is powerful; teams need an evidence and 
 
 Codex Control Tower turns repository state into a reviewable mission-control workflow:
 
-1. **Align:** Phase-0 asks eight plain-language questions in English or Turkish.
+1. **Align:** Phase-0 asks eight plain-language questions in English.
 2. **Scan:** deterministic local rules detect governance gaps and risky areas.
 3. **Understand:** Context Graph/Trace shows which files, plans, tests, docs, evidence, and memory matter and why.
 4. **Decide:** Review Gate records the developer's local decision; Mistake Shield compares a proposal with risk and minefield context.
@@ -54,6 +54,8 @@ Codex Control Tower turns repository state into a reviewable mission-control wor
 - JSONL Flight Recorder for mission history
 - Evidence Pack and Devpost Pack export
 - Eight-tab Vite/React dashboard with a conditional Phase-0 card
+- Live Real Codex Review panel with READY/RUNNING/COMPLETE state
+- Optional read-only `gpt-5.6-sol` review through signed-in ChatGPT subscription access, with structured model/run provenance
 - Controlled InvoiceFlow Mini before/after demo
 
 ## What Is Technically Implemented
@@ -71,7 +73,7 @@ Codex Control Tower turns repository state into a reviewable mission-control wor
 | Dashboard | Local Vite/React report workbench; bundled report import and local JSON load/export | apps/dashboard/ |
 | Fixtures | Fictional messy/governed InvoiceFlow Mini projects | examples/messy-saas-before and examples/governed-saas-after |
 
-The default runtime does not call an AI API. Codex was used to build the product; the shipped core remains inspectable and runnable without an API key.
+The deterministic core does not call an AI API and remains inspectable without an API key. An optional, explicit `codex-review` command now uses the user's signed-in ChatGPT subscription to invoke the real `gpt-5.6-sol` model read-only. It records the prompt, event stream, final structured assessment, model, CLI version, access type, and timestamps without changing the deterministic score.
 
 ## How Codex Was Used
 
@@ -86,7 +88,7 @@ Codex was the coding collaborator for the new repository:
 - generated build-time workflow recommendations and converted them into product requirements;
 - recorded actual verification commands and outcomes in [Codex Build Log](CODEX_BUILD_LOG.md).
 
-Codex usage during the build is distinct from product runtime: no OpenAI API key or model call is required for the local demo.
+Codex usage now has two disclosed layers: Codex helped build the product, and the optional live demo invokes `gpt-5.6-sol` through ChatGPT subscription access. No OpenAI API key is required. The core demo still works if the live layer is not run.
 
 ## What Codex Contributed Beyond Code
 
@@ -131,6 +133,14 @@ npm run demo
 npm run dashboard
 ~~~
 
+With the dashboard already open, run the real model layer in a second command window:
+
+~~~bash
+npm run demo:codex
+~~~
+
+The Real Codex Review panel updates automatically from READY to RUNNING to COMPLETE.
+
 Individual proof:
 
 ~~~bash
@@ -165,6 +175,7 @@ For a timed recording, follow [Demo Script](DEMO_SCRIPT.md).
 - Vite/React dashboard and local report handling
 - Files and tests in the controlled fixtures
 - Local scan/test commands explicitly recorded as run in the build log
+- Optional real Codex execution with verified `gpt-5.6-sol`, ChatGPT subscription provenance, read-only permissions, and saved structured output
 
 ## What Is Simulated
 
@@ -174,6 +185,8 @@ For a timed recording, follow [Demo Script](DEMO_SCRIPT.md).
 - Any provider-backed payment verification
 - Any enterprise identity-backed approval
 - Any browser, load, deployment, penetration, or independent security result not explicitly executed
+
+The real Codex response is **not simulated**. It is kept separate from the fictional InvoiceFlow Mini data and from deterministic scoring.
 
 Simulated data is labeled in the fixtures, reports, dashboard, and narrative.
 
@@ -197,7 +210,7 @@ Codex Control Tower fits as:
 - a **Codex-centered collaboration layer** built with Codex;
 - a coherent **local product experience** from scan to decision to evidence to dashboard;
 - a specific response to the real handoff/proof problem in agent-assisted software work;
-- a non-obvious use of Codex: Codex helped build an evidence layer for future Codex missions.
+- a non-obvious use of Codex: Codex helped build an evidence layer and now participates as an optional, provenance-bearing GPT-5.6 Sol reviewer without owning the deterministic score.
 
 The evidence-by-criterion mapping is in [Judging Map](JUDGING_MAP.md).
 
@@ -214,7 +227,7 @@ See [Architecture](ARCHITECTURE.md) and [Product Decisions](PRODUCT_DECISIONS.md
 
 ## Lineage and Originality
 
-Codex Control Tower acknowledges concept-level inspiration from Universal Agent OS and its UiPath, GitLab, and Qwen editions. Those repositories were studied read-only and were not modified, copied into the runtime, or used as demo targets.
+Codex Control Tower acknowledges concept-level inspiration from the **Universal Agent OS family**. Family sources were studied read-only and were not modified, copied into the runtime, or used as demo targets.
 
 The new Codex-native contribution is the integrated local path from repository scan to Context Trace, bounded Codex Mission Prompt, local decision state, mistake comparison, session recorder, evidence boundary, and before/after workbench.
 
@@ -240,13 +253,13 @@ The Review Gate is local and unsigned. It is not enterprise identity verificatio
 - Flight Recorder events depend on participating tools/agents.
 - The dashboard cannot provide stronger evidence than its input report.
 - Full Git ownership, cross-repository blast radius, signed evidence, and hosted team workflows are not implemented.
-- Phase-0 supports English and Turkish; the competition dashboard and narrative are English.
+- This Build Week version is English-only; multilingual packs are future work.
 
 Full list: [Limitations](LIMITATIONS.md).
 
 ## Future Roadmap
 
-- Optional OpenAI-assisted review with explicit opt-in and data disclosure
+- Deeper opt-in Codex review modes beyond the implemented read-only GPT-5.6 Sol assessment
 - GitHub/GitLab PR/MR and CI adapters
 - Stronger language-aware dependency and ownership mapping
 - Structured command-evidence ingestion

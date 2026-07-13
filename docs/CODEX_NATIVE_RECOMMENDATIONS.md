@@ -191,7 +191,7 @@ Recommended product-plan changes:
 | P1 | Git and concurrent-work context | Report names branch/commit/dirty/overlap state or explicitly says unavailable |
 | P1 | Staleness and contradiction engine | Conflicting/latest instructions and stale generated reports raise visible findings |
 | P1 | Safer output boundary | Target mutation and output-directory writes are separately previewed |
-| P1 | Encoding/locale parity tests | English/Turkish Phase-0 fields round-trip correctly; main judging UI stays English |
+| P1 | English Phase-0 schema tests | English-only Phase-0 fields round-trip correctly and remain aligned with the judging UI |
 | P2 | Stronger context adapters | Language/package/ownership signals augment, never hide, heuristic output |
 | P2 | Signed/team evidence mode | Approval and evidence can be identity-backed without weakening local mode |
 
@@ -205,7 +205,7 @@ This build intentionally avoids adding a cloud service or hidden model dependenc
 
 - Node.js CLI command router and local-first deterministic scanner
 - Governance health score and ranked doctor output
-- English/Turkish Phase-0 alignment with simulated demo mode
+- English-only Phase-0 alignment with simulated demo mode
 - Codex Mission Prompt Generator
 - local Context Graph and dashboard Context Trace
 - local Review Gate states and notes
@@ -226,7 +226,7 @@ This build intentionally avoids adding a cloud service or hidden model dependenc
 - signed/tamper-evident evidence and identity-backed gate enforcement
 - CI and PR/MR integration
 - team/cross-repository continuity
-- optional OpenAI-assisted review with explicit consent and disclosure
+- deeper Codex review modes beyond the implemented opt-in read-only GPT-5.6 Sol assessment
 - full multilingual product packs beyond bilingual Phase-0
 
 ### Deliberately not claimed
@@ -237,7 +237,7 @@ This build intentionally avoids adding a cloud service or hidden model dependenc
 - complete semantic blast radius
 - real customer outcomes
 - live provider/payment/auth verification in the demo
-- hidden OpenAI, Qwen, GitLab, or UiPath runtime integration
+- hidden model, hosting, or platform integration
 
 ## Recommended next product mission
 

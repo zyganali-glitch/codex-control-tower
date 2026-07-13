@@ -57,6 +57,7 @@ Commands are deliberately separated by mutation level.
 | scan | Yes | No | Optional JSON file |
 | context-graph | Yes | No | Optional JSON file |
 | memory-lens | Yes | No | Optional JSON file |
+| codex-review | Reads the chosen target and writes `.controltower` provenance files | Yes, explicit Codex run through ChatGPT subscription | Optional live dashboard report |
 | mistake-shield | Yes | No | No |
 | init | Yes | Minimal governance files only | No |
 | phase0 | Yes | .controltower/phase0.json and plans/PHASE0_ALIGNMENT.md only | No |
@@ -125,7 +126,8 @@ The dashboard has a normalization boundary so generated CLI reports and the rich
 Phase-0 is intentionally separate from implementation:
 
 ~~~bash
-cct phase0 --target . --locale en|tr
+cct phase0 --target .
+cct codex-review --target . --model gpt-5.6-sol
 ~~~
 
 The command asks eight plain-language questions one at a time and writes only:
@@ -152,9 +154,9 @@ When Phase-0 data exists, Overview also renders a conditional Phase-0 Alignment 
 
 ## Local-first and network model
 
-Core code makes no OpenAI, Qwen, GitLab, UiPath, telemetry, analytics, database, or upload call. Dependency installation can require network access; after dependencies are present, scanning/reporting does not.
+Core scanning and scoring make no model, telemetry, analytics, database, or upload call. Dependency installation can require network access; after dependencies are present, deterministic scanning/reporting does not.
 
-An optional OpenAI-assisted review mode is roadmap work. If added, it must be explicitly enabled, disclose exactly which content leaves the machine, keep remote evidence separate from deterministic local results, and never silently change NOT_RUN to PASS.
+The optional `codex-review` command is explicit. It verifies ChatGPT subscription authentication and model availability, invokes `gpt-5.6-sol` read-only, records structured output and events, keeps model evidence separate from deterministic results, and never silently changes NOT_RUN to PASS.
 
 ## Safety and trust boundaries
 

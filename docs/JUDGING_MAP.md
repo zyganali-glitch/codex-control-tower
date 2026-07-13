@@ -11,7 +11,7 @@ Competition details are time-sensitive. Recheck the official pages before submis
 | Technological Implementation | Codex helped build a non-trivial local developer tool: CLI, deterministic analysis engines, generated artifacts, tests, demo fixtures, and React dashboard. | Run the demo, inspect CLI output and generated Evidence Pack, then open the dashboard. |
 | Design | One coherent flow moves from alignment and scan through context, approval, mission, evidence, and before/after handoff. | Follow the eight dashboard tabs and conditional Phase-0 card. |
 | Potential Impact | Developers using coding agents need durable proof and continuity without uploading private repositories. | Show a risky proposed action, visible NOT_RUN gates, and the generated next mission. |
-| Quality of the Idea | Codex was used not only to write code but to help design a local black-box recorder for future Codex-assisted changes. | Compare the messy and governed InvoiceFlow Mini fixtures and read the build-time self-assessment. |
+| Quality of the Idea | Codex was used to build the black-box recorder and also participates as an optional real GPT-5.6 Sol reviewer whose provenance is visible. | Compare the fixtures, run `npm run demo:codex`, and inspect the Real Codex Review panel. |
 
 ## Technological Implementation
 
@@ -30,7 +30,7 @@ The criterion evaluates the depth and skill of GPT-5.6 use and whether the resul
 | Human decision and risk comparison | cli/lib/reviewGate.js and cli/lib/mistakeShield.js | Local gate states plus deterministic CLEAR/CAUTION/BLOCKED reasoning |
 | Cross-session continuity | cli/lib/memoryLens.js and cli/lib/flightRecorder.js | Persistent rules/minefields plus typed JSONL events |
 | Portable evidence | cli/lib/evidenceCollector.js | Markdown/JSON evidence, traceability, NOT_RUN, debt, graph, gate, memory, shield, recorder, and mission artifacts |
-| Beginner alignment | cli/commands/phase0.js and core/en/, core/tr/ | One-question-at-a-time English/Turkish alignment and non-interactive simulated mode |
+| Beginner alignment | cli/commands/phase0.js and core/en/ | One-question-at-a-time English alignment and non-interactive simulated mode |
 | Product UI | apps/dashboard/ | Vite/React workbench with local report import, normalization, eight tabs, and conditional Phase-0 card |
 | Reproducible demonstration | examples/messy-saas-before and examples/governed-saas-after | The same fictional codebase exposes meaningful before/after governance behavior |
 
@@ -38,7 +38,7 @@ The criterion evaluates the depth and skill of GPT-5.6 use and whether the resul
 
 Codex collaborated across requirements synthesis, read-only source research, CLI and engine implementation, fixtures/tests, dashboard, integration, verification, and competition documentation. The build-time agent workflow analysis was converted into concrete product features rather than remaining prose.
 
-The shipped deterministic runtime does not make an AI API call. That is deliberate: Codex built the tool; judges can run the core without credentials. Actual build commands and outcomes—not retrospective claims—are recorded in [Codex Build Log](CODEX_BUILD_LOG.md).
+The shipped deterministic core does not make an AI API call, so judges can reproduce its score without credentials. The optional live layer verifies ChatGPT subscription authentication and the `gpt-5.6-sol` catalog entry, runs Codex read-only, captures structured output, and updates the already-open dashboard. Actual commands and outcomes are recorded in [Codex Build Log](CODEX_BUILD_LOG.md).
 
 ### Live judge proof
 
@@ -60,7 +60,7 @@ Then show:
 
 ### Honest boundary
 
-The scanner is heuristic and does not prove semantic correctness. The fixture's two focused Node tests prove only their bounded cases. Root-suite, dashboard-build, and other final verification results must be read from the current build log; provider, browser, load, deployment, and independent security checks remain NOT_RUN unless separately executed.
+The scanner is heuristic and does not prove semantic correctness. The fixture's two focused Node tests prove only their bounded cases. Root-suite, dashboard-build, and other final verification results must be read from the current build log; browser, load, deployment, and independent security checks remain NOT_RUN unless separately executed.
 
 ## Design
 
@@ -176,7 +176,7 @@ This is a Codex-generated build-time assessment—not an anthropomorphic claim.
 | Evidence manifest | Generated evidence boundary, traceability, NOT_RUN gates, and black-box-style handoff |
 | Before/after demo | Same fictional SaaS scanned as messy and governed, without donor/customer data |
 
-The four lineage repositories are acknowledged and protected. Their code, UI, screenshots, and platform runtimes are not copied into this product. See [Source Protection](SOURCE_PROTECTION.md), [Feature Harvest](FEATURE_HARVEST.md), and [Originality Matrix](ORIGINALITY_MATRIX.md).
+The **Universal Agent OS family** is acknowledged and protected. Family code, UI, screenshots, and runtimes are not copied into this product. See [Source Protection](SOURCE_PROTECTION.md), [Feature Harvest](FEATURE_HARVEST.md), and [Originality Matrix](ORIGINALITY_MATRIX.md).
 
 ### Demonstrated understanding
 
@@ -194,7 +194,7 @@ Those distinctions are the core idea, not footnotes.
 
 ### Honest boundary
 
-Optional OpenAI-powered review, signed gates, PR/MR integration, team dashboards, and semantic code graphs are roadmap work. The Build Week version makes no claim that they exist.
+The optional read-only GPT-5.6 Sol review is implemented. Signed gates, PR/MR integration, team dashboards, and semantic code graphs remain roadmap work.
 
 ## Three-minute evidence path
 

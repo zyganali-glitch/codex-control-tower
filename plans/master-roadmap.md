@@ -5,7 +5,7 @@ Mission: ship an honest, competition-ready, local-first mission control layer fo
 
 ## Product scope
 
-The competition build includes the Node.js CLI, deterministic repository scanner and scorer, Mission Prompt Generator, Context Trace, Review Gate, Mistake Shield, Flight Recorder, Memory Lens, Phase-0 wizard in English and Turkish, evidence/Devpost exporters, React dashboard, and the simulated InvoiceFlow Mini before/after story.
+The competition build includes the Node.js CLI, deterministic repository scanner and scorer, Mission Prompt Generator, Context Trace, Review Gate, Mistake Shield, Flight Recorder, Memory Lens, English-only Phase-0 wizard, evidence/Devpost exporters, React dashboard, optional real GPT-5.6 Sol review, and the simulated InvoiceFlow Mini before/after story.
 
 The build excludes hosted SaaS, mandatory API keys, telemetry, real authentication or payment integration, enterprise identity verification, and claims of guaranteed correctness.
 
@@ -16,7 +16,7 @@ The build excludes hosted SaaS, mandatory API keys, telemetry, real authenticati
 - [x] Simulated InvoiceFlow Mini before/after fixtures with visible disclosure.
 - [x] Content-aware governance scoring and evidence vocabulary.
 - [x] Review Gate, Mistake Shield, Flight Recorder, Memory Lens, Context Trace, and Mission Prompt.
-- [x] Phase-0 `en|tr`, automated demo mode, tests, CI workflow, and Devpost narrative.
+- [x] English-only Phase-0, automated demo mode, tests, CI workflow, and Devpost narrative.
 - [x] Close root-repository dogfooding regressions and record post-change evidence.
 - [x] Push the verified `main` branch to the approved GitHub destination and observe hosted CI success.
 - [ ] Recheck published Devpost rules when available and record eligibility constraints.
@@ -40,7 +40,7 @@ Release readiness requires `npm.cmd run verify` to pass, the controlled score st
 
 1. Package Control Tower as a Codex-native plugin/skill or hook-driven workflow.
 2. Export a PR-level “agent change passport” joining mission, scope, diff, commands, gate, NOT_RUN items, and next action.
-3. Add optional OpenAI-powered review only when explicitly enabled, while retaining deterministic local mode.
+3. Extend the implemented optional read-only GPT-5.6 Sol review while retaining deterministic local scoring.
 
 ### Future work
 

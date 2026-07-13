@@ -2,6 +2,7 @@
 'use strict';
 
 const { contextGraphCommand } = require('./commands/context-graph');
+const { codexReviewCommand } = require('./commands/codex-review');
 const { demoCommand } = require('./commands/demo');
 const { doctorCommand } = require('./commands/doctor');
 const { evidenceCommand } = require('./commands/evidence');
@@ -18,13 +19,14 @@ const { scanCommand } = require('./commands/scan');
 const HELP = `Codex Control Tower (cct) — mission control for AI-built software
 
 Usage:
-  cct init --target <dir> --profile solo|startup|enterprise|regulated --locale en|tr --codex
-  cct phase0 --target <dir> --locale en|tr [--demo]
+  cct init --target <dir> --profile solo|startup|enterprise|regulated --codex
+  cct phase0 --target <dir> [--demo]
   cct scan --target <dir> [--out <file>]
   cct health --target <dir> [--strict]
   cct doctor --target <dir>
   cct evidence --target <dir> --out <dir>
   cct context-graph --target <dir> [--out <file>]
+  cct codex-review --target <dir> [--model gpt-5.6-sol] [--live-report <file>]
   cct review-gate --target <dir> --status|--approve|--reject|--reset [--note <text>] [--scope <text> --allow <paths> --forbid <actions>]
   cct mistake-shield --target <dir> --action <text>
   cct memory-lens --target <dir> [--out <file>]
@@ -33,7 +35,7 @@ Usage:
   cct demo
 
 Evidence states: PASS, WARN, FAIL, NOT_RUN, SIMULATED.
-Core operation is local-first and does not require an API key.`;
+Core operation is local-first. Optional codex-review uses a ChatGPT subscription session and requires no API key.`;
 
 function parseArgs(argv) {
   const result = { _: [] };
@@ -63,6 +65,7 @@ const COMMANDS = {
   doctor: doctorCommand,
   evidence: evidenceCommand,
   'context-graph': contextGraphCommand,
+  'codex-review': codexReviewCommand,
   'review-gate': reviewGateCommand,
   'mistake-shield': mistakeShieldCommand,
   'memory-lens': memoryLensCommand,

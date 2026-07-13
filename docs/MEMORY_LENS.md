@@ -2,7 +2,7 @@
 
 ## Never-forget rules
 
-- The four Universal Agent OS family repositories are protected read-only sources; this repository is independent.
+- The Universal Agent OS family is protected read-only concept research; this repository is independent.
 - InvoiceFlow Mini is simulated demo data and must never be represented as customer evidence.
 - `PASS` requires inspectable evidence; `NOT_RUN` and `SIMULATED` remain visible.
 - Preserve local-first behavior, no telemetry, and no mandatory OpenAI API key.

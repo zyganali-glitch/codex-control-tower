@@ -30,7 +30,7 @@ async function initCommand(args) {
   if (!GOVERNANCE_PROFILES.includes(profile) || profile === 'light') {
     throw new Error('Profile must be solo, startup, enterprise, or regulated.');
   }
-  if (!['en', 'tr'].includes(locale)) throw new Error('Locale must be en or tr.');
+  if (locale !== 'en') throw new Error('This Build Week version supports English only.');
   const existing = fs.readdirSync(target).filter((name) => !['.git', '.controltower'].includes(name));
   const brownfield = existing.length > 0;
   const timestamp = new Date().toISOString();

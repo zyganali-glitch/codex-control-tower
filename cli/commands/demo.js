@@ -110,7 +110,7 @@ async function demoCommand() {
       testCount,
       evidence: 'examples/demo-report/governed-test-output.txt'
     }],
-    notRun: ['CI', 'browser/accessibility', 'load/concurrency', 'deployment', 'real provider integration']
+    notRun: ['CI', 'browser/accessibility', 'load/concurrency', 'deployment', 'independent security review']
   };
   after.comparison = {
     label: 'SIMULATED InvoiceFlow Mini governance comparison',
@@ -131,8 +131,16 @@ async function demoCommand() {
     missingSurfaces: before.missingSurfaces,
     evidenceStatus: before.evidenceStatus
   };
+  after.codexLiveReview = {
+    state: 'READY',
+    mode: 'REAL_CODEX',
+    model: 'gpt-5.6-sol',
+    authenticatedVia: 'Checked when the live review starts',
+    disclosure: 'Optional real Codex review; deterministic score remains independently reproducible.'
+  };
   writePortableJson(path.join(reportDir, 'after-report.json'), after, root);
   writePortableJson(path.join(root, 'apps', 'dashboard', 'src', 'sample-report.json'), after, root);
+  writePortableJson(path.join(root, 'apps', 'dashboard', 'public', 'live-report.json'), after, root);
   writePortableJson(path.join(governed, 'CONTROL_TOWER_REPORT.json'), after, root);
 
   console.log('SIMULATED InvoiceFlow Mini demo prepared.');

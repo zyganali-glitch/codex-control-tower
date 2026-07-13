@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "invoiceflow-mini-simulated-governed",
   "targetPath": ".\\examples\\governed-saas-after",
-  "generatedAt": "2026-07-12T20:47:06.704Z",
+  "generatedAt": "2026-07-13T17:52:44.949Z",
   "scanMode": "SIMULATED",
   "simulatedData": true,
   "scanScope": {
@@ -45,6 +45,36 @@
       "bytes": 1539,
       "lines": 39,
       "modifiedAt": "2026-07-12T16:59:39.621Z"
+    },
+    {
+      "path": ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
+      "bytes": 942,
+      "lines": 16,
+      "modifiedAt": "2026-07-13T17:51:31.804Z"
+    },
+    {
+      "path": ".controltower/codex-live-events.jsonl",
+      "bytes": 71616,
+      "lines": 0,
+      "modifiedAt": "2026-07-13T17:51:54.258Z"
+    },
+    {
+      "path": ".controltower/codex-live-review-record.json",
+      "bytes": 3254,
+      "lines": 48,
+      "modifiedAt": "2026-07-13T17:51:54.260Z"
+    },
+    {
+      "path": ".controltower/codex-live-review.json",
+      "bytes": 2488,
+      "lines": 1,
+      "modifiedAt": "2026-07-13T17:51:53.968Z"
+    },
+    {
+      "path": ".controltower/codex-review-schema.json",
+      "bytes": 1166,
+      "lines": 66,
+      "modifiedAt": "2026-07-13T17:51:31.805Z"
     },
     {
       "path": ".controltower/config.json",
@@ -263,7 +293,7 @@
     }
   },
   "contextGraph": {
-    "generatedAt": "2026-07-12T20:47:06.702Z",
+    "generatedAt": "2026-07-13T17:52:44.947Z",
     "generatedLocally": true,
     "algorithm": "deterministic lexical and repository-surface analysis",
     "nodes": [
@@ -280,6 +310,81 @@
         "freshness": "fresh",
         "protected": true,
         "reason": "Selected as a instruction surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/CODEX_LIVE_REVIEW_PROMPT.md",
+        "label": ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
+        "type": "documentation",
+        "lines": 16,
+        "bytes": 942,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/codex-live-events.jsonl",
+        "label": ".controltower/codex-live-events.jsonl",
+        "type": "control",
+        "lines": 0,
+        "bytes": 71616,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/codex-live-review-record.json",
+        "label": ".controltower/codex-live-review-record.json",
+        "type": "control",
+        "lines": 48,
+        "bytes": 3254,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/codex-live-review.json",
+        "label": ".controltower/codex-live-review.json",
+        "type": "control",
+        "lines": 1,
+        "bytes": 2488,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/codex-review-schema.json",
+        "label": ".controltower/codex-review-schema.json",
+        "type": "control",
+        "lines": 66,
+        "bytes": 1166,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
         "owners": []
       },
       {
@@ -722,7 +827,7 @@
     ],
     "overlappingPlans": [],
     "stats": {
-      "nodeCount": 25,
+      "nodeCount": 30,
       "edgeCount": 13,
       "riskNodeCount": 0,
       "todoFixmeCount": 0
@@ -819,6 +924,66 @@
         "owners": []
       },
       {
+        "id": "file:.controltower/codex-live-events.jsonl",
+        "label": ".controltower/codex-live-events.jsonl",
+        "type": "control",
+        "lines": 0,
+        "bytes": 71616,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/codex-live-review-record.json",
+        "label": ".controltower/codex-live-review-record.json",
+        "type": "control",
+        "lines": 48,
+        "bytes": 3254,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/codex-live-review.json",
+        "label": ".controltower/codex-live-review.json",
+        "type": "control",
+        "lines": 1,
+        "bytes": 2488,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/codex-review-schema.json",
+        "label": ".controltower/codex-review-schema.json",
+        "type": "control",
+        "lines": 66,
+        "bytes": 1166,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
         "id": "file:.controltower/config.json",
         "label": ".controltower/config.json",
         "type": "control",
@@ -906,6 +1071,21 @@
         "freshness": "fresh",
         "protected": false,
         "reason": "Selected as a readme surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/CODEX_LIVE_REVIEW_PROMPT.md",
+        "label": ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
+        "type": "documentation",
+        "lines": 16,
+        "bytes": 942,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
         "owners": []
       },
       {
@@ -1012,88 +1192,13 @@
         "protected": false,
         "reason": "Selected as a source surface for Codex mission context.",
         "owners": []
-      },
-      {
-        "id": "file:src/customers.js",
-        "label": "src/customers.js",
-        "type": "source",
-        "lines": 24,
-        "bytes": 752,
-        "risk": false,
-        "markers": 0,
-        "relevance": 0.7,
-        "importance": 0.7,
-        "freshness": "fresh",
-        "protected": false,
-        "reason": "Selected as a source surface for Codex mission context.",
-        "owners": []
-      },
-      {
-        "id": "file:src/invoices.js",
-        "label": "src/invoices.js",
-        "type": "source",
-        "lines": 32,
-        "bytes": 935,
-        "risk": false,
-        "markers": 0,
-        "relevance": 0.7,
-        "importance": 0.7,
-        "freshness": "fresh",
-        "protected": false,
-        "reason": "Selected as a source surface for Codex mission context.",
-        "owners": []
-      },
-      {
-        "id": "file:src/payments.js",
-        "label": "src/payments.js",
-        "type": "source",
-        "lines": 40,
-        "bytes": 1529,
-        "risk": false,
-        "markers": 0,
-        "relevance": 0.7,
-        "importance": 0.7,
-        "freshness": "fresh",
-        "protected": false,
-        "reason": "Selected as a source surface for Codex mission context.",
-        "owners": []
-      },
-      {
-        "id": "file:src/report.js",
-        "label": "src/report.js",
-        "type": "source",
-        "lines": 20,
-        "bytes": 551,
-        "risk": false,
-        "markers": 0,
-        "relevance": 0.7,
-        "importance": 0.7,
-        "freshness": "fresh",
-        "protected": false,
-        "reason": "Selected as a source surface for Codex mission context.",
-        "owners": []
-      },
-      {
-        "id": "file:src/utils.js",
-        "label": "src/utils.js",
-        "type": "source",
-        "lines": 21,
-        "bytes": 493,
-        "risk": false,
-        "markers": 0,
-        "relevance": 0.7,
-        "importance": 0.7,
-        "freshness": "fresh",
-        "protected": false,
-        "reason": "Selected as a source surface for Codex mission context.",
-        "owners": []
       }
     ],
     "contextBudget": {
       "maxItems": 24,
       "selectedItems": 24,
-      "availableItems": 25,
-      "estimatedTokens": 8147
+      "availableItems": 30,
+      "estimatedTokens": 13044
     }
   },
   "reviewGate": {
@@ -1129,24 +1234,24 @@
     "decisionRecorded": true
   },
   "memoryLens": {
-    "generatedAt": "2026-07-12T20:47:06.704Z",
+    "generatedAt": "2026-07-13T17:52:44.949Z",
     "generatedLocally": true,
     "sources": [
       {
         "relative": "docs/MEMORY_LENS.md",
-        "ageDays": 0,
+        "ageDays": 1,
         "stale": false,
         "bytes": 1409
       },
       {
         "relative": "TECH_DEBT_AND_SECURITY.md",
-        "ageDays": 0,
+        "ageDays": 1,
         "stale": false,
         "bytes": 941
       },
       {
         "relative": "README.md",
-        "ageDays": 0,
+        "ageDays": 1,
         "stale": false,
         "bytes": 1846
       }
@@ -1359,7 +1464,7 @@
     "matchedLessons": [],
     "gateStatus": "APPROVED",
     "saferNextAction": "Proceed only within the declared scope and record commands, evidence, NOT_RUN checks, and remaining risk.",
-    "checkedAt": "2026-07-12T20:47:06.704Z",
+    "checkedAt": "2026-07-13T17:52:44.949Z",
     "deterministic": true
   },
   "phase0": {
@@ -1509,7 +1614,7 @@
     "phase0Healthy": true,
     "flightRecorderHealthy": true,
     "evidenceSurfaceCount": 4,
-    "contextNodeCount": 25,
+    "contextNodeCount": 30,
     "criticalRiskCount": 0,
     "highRiskCount": 1
   },
@@ -1528,7 +1633,7 @@
       "browser/accessibility",
       "load/concurrency",
       "deployment",
-      "real provider integration"
+      "independent security review"
     ]
   },
   "comparison": {
@@ -1745,5 +1850,12 @@
         "evidence": null
       }
     }
+  },
+  "codexLiveReview": {
+    "state": "READY",
+    "mode": "REAL_CODEX",
+    "model": "gpt-5.6-sol",
+    "authenticatedVia": "Checked when the live review starts",
+    "disclosure": "Optional real Codex review; deterministic score remains independently reproducible."
   }
 }
