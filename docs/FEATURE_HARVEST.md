@@ -12,8 +12,8 @@ Codex Control Tower uses the **Universal Agent OS family** as attributed concept
 | Explainable context | Context Trace shows selected items, reasons, freshness, importance, and protection. | YES | Context builder, command, panel, tests |
 | Durable continuity | Flight Recorder and Memory Lens preserve events, rules, and minefields. | YES | JSONL recorder, memory analysis, dashboard |
 | Mistake prevention | Proposed actions receive CLEAR/CAUTION/BLOCKED with reasons and a safer action. | YES | Mistake Shield and tests |
-| Before/after proof | Fictional InvoiceFlow Mini shows reproducible governance changes. | YES | Demo fixtures, reports, dashboard |
-| Real model collaboration | Signed-in ChatGPT access invokes `gpt-5.6-sol` read-only and stores structured provenance. | YES, OPTIONAL | `codex-review` command, live dashboard panel, recorded evidence files |
+| Before/after proof | Prepared fictional InvoiceFlow Mini snapshots produce reproducible real scan/test results without claiming customer impact or a GPT-authored transformation. | YES | Demo fixtures, reports, dashboard |
+| Real model collaboration | The featured explicit opt-in path invokes signed-in `gpt-5.6-sol` read-only, keeps local/model verdicts separate, and stores hashes/freshness plus structured provenance. | YES | `codex-review` command, live dashboard panel, recorded evidence files |
 | Multilingual packs | Additional languages beyond the English Build Week version. | FUTURE | Roadmap only |
 
 ## Explicitly not harvested

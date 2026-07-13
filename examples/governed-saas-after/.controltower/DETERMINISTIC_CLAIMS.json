@@ -1,53 +1,93 @@
 {
-  "generatedAt": "2026-07-13T18:39:56.626Z",
+  "generatedAt": "2026-07-13T20:54:58.973Z",
+  "reportProvenance": {
+    "source": "RECORDED_REPORT",
+    "status": "PASS",
+    "reportPath": "CONTROL_TOWER_REPORT.json",
+    "generatedAt": "2026-07-13T20:54:46.902Z",
+    "loadedAt": "2026-07-13T20:54:59.795Z",
+    "ageMs": 12893,
+    "maxAgeMs": 86400000,
+    "stale": false,
+    "staleReasons": [],
+    "preservedRecordedExecutionEvidence": true,
+    "freshScanComparison": {
+      "performed": true,
+      "freshScanGeneratedAt": "2026-07-13T20:54:59.818Z",
+      "scoreMatches": true,
+      "riskFlagsMatch": true,
+      "changedFileCount": 0,
+      "changedFiles": []
+    }
+  },
   "claims": [
     {
       "id": "TEST_EXECUTION",
-      "claim": "The focused InvoiceFlow Mini tests have recorded execution evidence.",
+      "claim": "Recorded test execution for invoiceflow-mini-simulated-governed is supported by the bounded evidence.",
+      "deterministicStatus": "PASS",
+      "expectedModelAssessments": [
+        "SUPPORTS"
+      ],
       "evidencePaths": [
         "CONTROL_TOWER_REPORT.json",
+        "tests/invoiceflow.test.js",
+        ".controltower/governed-test-output.txt",
         "docs/EVIDENCE_REPORT.md",
         "docs/TRACEABILITY_MATRIX.md"
-      ],
-      "deterministicStatus": "PASS"
+      ]
     },
     {
       "id": "CI_EXECUTION",
-      "claim": "Continuous integration execution is supported by the governed fixture evidence.",
+      "claim": "Recorded continuous-integration execution for invoiceflow-mini-simulated-governed is supported by the bounded evidence.",
+      "deterministicStatus": "FAIL",
+      "expectedModelAssessments": [
+        "QUESTIONS",
+        "INSUFFICIENT"
+      ],
       "evidencePaths": [
         "CONTROL_TOWER_REPORT.json",
         "docs/TRACEABILITY_MATRIX.md",
         "docs/NOT_RUN_GATES.md"
-      ],
-      "deterministicStatus": "FAIL"
+      ]
     },
     {
       "id": "REVIEW_GATE",
-      "claim": "The recorded Review Gate represents the disclosed authorization boundary.",
+      "claim": "The Review Gate for invoiceflow-mini-simulated-governed is accurately disclosed and supported by the bounded evidence.",
+      "deterministicStatus": "SIMULATED",
+      "expectedModelAssessments": [
+        "SUPPORTS"
+      ],
       "evidencePaths": [
         "CONTROL_TOWER_REPORT.json",
         ".controltower/review-gate.json"
-      ],
-      "deterministicStatus": "SIMULATED"
+      ]
     },
     {
       "id": "EVIDENCE_BOUNDARY",
-      "claim": "PASS, FAIL, NOT_RUN, and SIMULATED evidence remain visibly separated.",
+      "claim": "The report for invoiceflow-mini-simulated-governed visibly separates executed, failed, unexecuted, and simulated evidence.",
+      "deterministicStatus": "PASS",
+      "expectedModelAssessments": [
+        "SUPPORTS"
+      ],
       "evidencePaths": [
         "CONTROL_TOWER_REPORT.json",
         "docs/EVIDENCE_REPORT.md",
-        "docs/TRACEABILITY_MATRIX.md"
-      ],
-      "deterministicStatus": "PASS"
+        "docs/TRACEABILITY_MATRIX.md",
+        "docs/NOT_RUN_GATES.md"
+      ]
     },
     {
       "id": "EXTERNAL_GATES",
-      "claim": "Browser, load, deployment, and independent security gates remain explicitly NOT_RUN.",
+      "claim": "Every external verification gate listed for invoiceflow-mini-simulated-governed has recorded completion evidence.",
+      "deterministicStatus": "NOT_RUN",
+      "expectedModelAssessments": [
+        "QUESTIONS",
+        "INSUFFICIENT"
+      ],
       "evidencePaths": [
         "CONTROL_TOWER_REPORT.json",
         "docs/NOT_RUN_GATES.md"
-      ],
-      "deterministicStatus": "NOT_RUN"
+      ]
     }
   ]
 }

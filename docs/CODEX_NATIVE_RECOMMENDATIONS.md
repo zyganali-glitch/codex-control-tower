@@ -84,9 +84,9 @@ Use:
 
 Each status object should eventually include <code>claim</code>, <code>scope</code>, <code>source</code>, <code>command</code>, <code>exitCode</code>, <code>timestamp</code>, <code>artifact</code>, and <code>simulated</code>.
 
-**Implemented now:** status vocabulary, evidence tables, simulated demo disclosure, visible NOT_RUN.
+**Implemented now:** status vocabulary, evidence tables, fictional-sample/real-execution disclosure, visible NOT_RUN, deterministic local verdict/action, separate model opinion/suggestion, evidence SHA-256/base-commit/bounded-worktree provenance, and freshness state.
 
-**Future:** enforce the richer provenance schema and reject unsupported PASS at report validation time.
+**Implemented now:** reconciliation validates the richer provenance contract, marks stale evidence, preserves locked state, and filters/records unsupported citation paths. Signed third-party attestation remains future work.
 
 ## 5. Which large-repository mistakes should the product anticipate?
 
@@ -205,7 +205,7 @@ This build intentionally avoids adding a cloud service or hidden model dependenc
 
 - Node.js CLI command router and local-first deterministic scanner
 - Governance health score and ranked doctor output
-- English-only Phase-0 alignment with simulated demo mode
+- English-only Phase-0 alignment with a fictional sample mode
 - Codex Mission Prompt Generator
 - local Context Graph and dashboard Context Trace
 - local Review Gate states and notes

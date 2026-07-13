@@ -45,7 +45,7 @@ cli/index.js -> command -> repoScanner -> healthScorer       |
 | Memory Lens | cli/lib/memoryLens.js | Read known memory/lesson surfaces and report durable rules, risks, architecture, environment, preferences, staleness, and missing sources. | Quality is limited by the repository's recorded memory. |
 | Flight Recorder | cli/lib/flightRecorder.js | Append and read local JSONL events for prompts, plans, changes, tests, evidence, skipped checks, approvals, risks, and blocks. | Mutable local history, not a tamper-evident ledger. |
 | Evidence collector | cli/lib/evidenceCollector.js | Export evidence, traceability, NOT_RUN, debt, prompt, graph, gate, memory, shield, recorder, Devpost summary, and the machine report. | Artifact presence can be PASS; unexecuted target tests/CI stay NOT_RUN. |
-| Dashboard | apps/dashboard/ | Normalize and render a local report across eight workbench tabs; allow local JSON load/export. | A visualization of report evidence, not additional verification. |
+| Dashboard | apps/dashboard/ | Normalize and render a report across eight workbench tabs; allow local JSON load/export. | The local server is the live workbench; the GitHub Pages build is a static recorded exhibit. Neither adds proof beyond its source artifacts. |
 
 ## Command and write model
 
@@ -57,7 +57,7 @@ Commands are deliberately separated by mutation level.
 | scan | Yes | No | Optional JSON file |
 | context-graph | Yes | No | Optional JSON file |
 | memory-lens | Yes | No | Optional JSON file |
-| codex-review | Locks deterministic claims, runs a named-file audit, rejects unsafe output, and writes `.controltower` provenance files | Yes, explicit GPT-5.6 Codex run through ChatGPT subscription | Evidence Reconciliation dashboard report |
+| codex-review | Yes; derives target-appropriate claims and a bounded evidence bundle | `.controltower` claims, bundle, model output, events, hashes/freshness, and reconciliation record | Evidence Reconciliation dashboard report |
 | mistake-shield | Yes | No | No |
 | init | Yes | Minimal governance files only | No |
 | phase0 | Yes | .controltower/phase0.json and plans/PHASE0_ALIGNMENT.md only | No |
@@ -105,7 +105,7 @@ The score is a prioritization signal. Evidence states carry more meaning than th
 - **WARN** — partial or ambiguous support needs review.
 - **FAIL** — a required surface or proof is missing or contradicted.
 - **NOT_RUN** — an executable or external check did not run.
-- **SIMULATED** — a controlled demo artifact, actor, event, or result.
+- **SIMULATED** — a controlled sample actor, event, or assertion. Real scans/tests of a fictional snapshot are separately labeled executions.
 
 ## Report contract
 
@@ -119,7 +119,7 @@ The scanner's machine report includes:
 - Context Graph/Trace;
 - Review Gate, Memory Lens, Mistake Shield, Phase-0, and Flight Recorder state.
 
-The dashboard has a normalization boundary so generated CLI reports and the richer bundled demo report can feed the same views. Full-detail cards require the corresponding report fields; absent optional fields render as unavailable rather than becoming fabricated proof.
+The dashboard has a normalization boundary so generated CLI reports and the richer bundled demo report can feed the same views. Full-detail cards require the corresponding report fields; absent fields render as unavailable rather than becoming fabricated proof. The local server watches reconciliation state and can show `READY → RUNNING → COMPLETE`; the GitHub Pages build is a sanitized static snapshot and cannot observe a local run.
 
 ## Phase-0 alignment
 
@@ -156,7 +156,9 @@ When Phase-0 data exists, Overview also renders a conditional Phase-0 Alignment 
 
 Core scanning and scoring make no model, telemetry, analytics, database, or upload call. Dependency installation can require network access; after dependencies are present, deterministic scanning/reporting does not.
 
-The `codex-review` command is explicit. It verifies ChatGPT subscription authentication and model availability, locks five claims from deterministic evidence, invokes `gpt-5.6-sol` read-only, records structured output and events, rejects missing/duplicate/status-injecting/execution-claiming output, filters citations to allowed paths, and never changes PASS, WARN, FAIL, NOT_RUN, or SIMULATED states.
+The `codex-review` command is a featured explicit opt-in path. It verifies ChatGPT subscription authentication and model availability, derives target-appropriate locked claims, computes `reconciliation.deterministicVerdict`, builds bounded evidence, and records `evidenceIntegrity` SHA-256/file/base-commit/bounded-worktree provenance plus `reportProvenance` freshness. It invokes `gpt-5.6-sol` read-only. Missing, duplicate, status-injecting, execution-claiming, or malformed output is rejected. Unsupported citation paths are filtered from accepted evidence and recorded. Model output remains separately labeled as `modelVerdict`, `modelSummary`, and `modelNextSafeAction`; per-claim relation is `ALIGNS_WITH_LOCKED_STATUS` or `CONFLICTS_WITH_LOCKED_STATUS`. The model never changes PASS, WARN, FAIL, NOT_RUN, SIMULATED, the deterministic local verdict, or the locally derived `nextSafeAction`.
+
+InvoiceFlow Mini is only the bundled demonstration target. Its two prepared snapshots produce real deterministic scan/test outputs, but GPT-5.6 does not create the snapshots or cause the `25 → 88` score difference.
 
 ## Safety and trust boundaries
 

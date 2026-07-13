@@ -5,7 +5,7 @@ Mission: ship an honest, competition-ready, local-first mission control layer fo
 
 ## Product scope
 
-The competition build includes the Node.js CLI, deterministic repository scanner and scorer, bounded Mission Prompt, locked claims, real GPT-5.6 Evidence Reconciliation, local output validation, Review Gate, evidence/Devpost exporters, React dashboard, and the simulated InvoiceFlow Mini before/after story.
+The competition build includes the Node.js CLI, deterministic repository scanner and scorer, bounded Mission Prompt, target-derived locked claims, authoritative local verdict, separate real GPT-5.6 opinion, evidence integrity/freshness, Review Gate, evidence/Devpost exporters, React dashboard, and prepared fictional InvoiceFlow Mini snapshots.
 
 The build excludes hosted SaaS, mandatory API keys, telemetry, real authentication or payment integration, enterprise identity verification, and claims of guaranteed correctness.
 
@@ -13,18 +13,19 @@ The build excludes hosted SaaS, mandatory API keys, telemetry, real authenticati
 
 - [x] Independent repository and source-protection records.
 - [x] Working CLI and local dashboard.
-- [x] Simulated InvoiceFlow Mini before/after fixtures with visible disclosure.
+- [x] Prepared fictional InvoiceFlow Mini before/governed fixtures with real scan/test execution and visible disclosure.
 - [x] Content-aware governance scoring and evidence vocabulary.
 - [x] Review Gate, Mistake Shield, Flight Recorder, Memory Lens, Context Trace, and Mission Prompt.
 - [x] English-only Phase-0, automated demo mode, tests, CI workflow, and Devpost narrative.
 - [x] Close root-repository dogfooding regressions and record post-change evidence.
 - [x] Push the verified `main` branch to the approved GitHub destination and observe hosted CI success.
-- [ ] Recheck published Devpost rules when available and record eligibility constraints.
+- [x] Review published Devpost rules/FAQ and record eligibility and media constraints.
+- [x] Publish and verify the static GitHub Pages no-install judge exhibit.
 - [ ] Capture sanitized final screenshots and a 2:45 demo video.
 
 ## Acceptance and evidence
 
-Release readiness requires `npm.cmd run verify` to pass, the controlled score story to remain within 25–45 before and 75–90 after, the root scan to be `REAL_LOCAL_SCAN` with no fixture risk leakage, `git diff --check` to be clean, and the remote `main` SHA to match the local commit. Hosted CI and other external checks remain `NOT_RUN` until observed.
+Release readiness requires `npm.cmd run verify` to pass, the prepared-snapshot score story to remain within 25–45 before and 75–90 after, the root scan to be `REAL_LOCAL_SCAN` with no fixture risk leakage, `git diff --check` to be clean, and the remote `main` SHA to match the local commit. Hosted CI and Pages are PASS only when their named runs succeed; other external checks remain `NOT_RUN` until observed.
 
 ## Competition priorities
 
@@ -40,7 +41,7 @@ Release readiness requires `npm.cmd run verify` to pass, the controlled score st
 
 1. Package Control Tower as a Codex-native plugin/skill or hook-driven workflow.
 2. Export a PR-level “agent change passport” joining mission, scope, diff, commands, gate, NOT_RUN items, and next action.
-3. Extend the implemented five-claim Evidence Reconciliation policy while retaining locked deterministic states.
+3. Extend target-derived Evidence Reconciliation policies while retaining locked deterministic states and local verdict authority.
 
 ### Future work
 

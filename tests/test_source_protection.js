@@ -13,8 +13,10 @@ for (const url of ['https://github.com/zyganali-glitch/Universal-Agent-OS']) {
   assert.match(protection, new RegExp(url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
 }
 const docs = fs.readdirSync(path.join(ROOT, 'docs')).filter((name) => name.endsWith('.md')).map((name) => fs.readFileSync(path.join(ROOT, 'docs', name), 'utf8')).join('\n');
+const publicText = `${fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8')}\n${docs}`;
 assert.doesNotMatch(docs, /production-ready guaranteed/i);
 assert.doesNotMatch(docs, /Codex is (conscious|self-aware|sentient)/i);
+assert.doesNotMatch(publicText, /(?:[A-Za-z]:\\Users\\[^\\]+|\/(?:home|Users)\/[^/]+)/i, 'public documentation must not expose builder-specific absolute paths');
 const portableDemoArtifacts = [
   'apps/dashboard/src/sample-report.json',
   'apps/dashboard/public/live-report.json',

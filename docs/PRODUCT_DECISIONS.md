@@ -12,14 +12,17 @@ This document records the build-time decisions that keep Codex Control Tower sma
 | PD-04 | Evidence states are first-class | `PASS`, `WARN`, `FAIL`, `NOT_RUN`, and `SIMULATED` prevent missing proof from being flattened into “done.” | Users see unresolved work instead of a single optimistic status. |
 | PD-05 | Use a local Review Gate | A JSON/Markdown gate is portable, inspectable, offline, and sufficient to demonstrate an explicit developer decision point. | It is unsigned and does not verify identity, role, or organizational policy. Signed/team gates are future work. |
 | PD-06 | Keep Context Graph local and explainable | Files, plans, tests, docs, CI, markers, risks, and ownership hints provide useful context without GitLab Orbit or another remote graph. | This is static heuristic context, not a complete semantic dependency graph or live cross-repository blast radius. |
-| PD-07 | Use lexical/structural relevance for the core, never fake embeddings | Explainable local signals keep the core reproducible. | Real GPT-5.6 Evidence Reconciliation is separate model evidence; local status remains locked. |
+| PD-07 | Use lexical/structural relevance for the core, never fake embeddings | Explainable local signals keep the core reproducible. | Real GPT-5.6 Evidence Reconciliation is separate model opinion; local status and deterministic verdict remain locked. |
 | PD-08 | Record events as plain JSONL | Flight Recorder output is append-friendly, diffable, scriptable, and easy for the next Codex session to inspect. | JSONL is not tamper-evident, signed, or a compliance-grade audit ledger. |
 | PD-09 | Keep artifacts portable | JSON and Markdown reports can be reviewed without a proprietary viewer and can feed the dashboard or a future integration. | There is no central database, retention service, or access-control layer. |
-| PD-10 | Use a controlled simulated before/after repo | InvoiceFlow Mini makes governance gaps and improvements understandable in 2:45 without exposing a customer, donor, or competition repository. | Scores and risks demonstrate product behavior; they are not real-customer outcomes or an industry benchmark. |
-| PD-11 | Adapt lineage; do not fork it | The four protected sources contain valuable workflow ideas, but the competition entry needs a new Codex-centered product and independent implementation. | Source code, templates, UI, screenshots, cloud endpoints, and platform-specific assets are excluded. Attribution remains visible. |
-| PD-12 | Make cloud integrations optional | A future remote review or PR integration can add value, but core behavior must not fail when credentials or network access are absent. | Optional modes will require explicit enablement, a clear data boundary, and separate evidence from local checks. |
+| PD-10 | Use prepared fictional before/governed snapshots | InvoiceFlow Mini makes governance gaps and improvements reproducible in 2:45 without exposing a customer, donor, or competition repository. | Scores are real deterministic outputs on prepared snapshots, not customer outcomes; GPT-5.6 does not create the transformation. |
+| PD-11 | Adapt lineage; do not fork it | The Universal Agent OS family contains valuable workflow ideas, but the competition entry needs a new Codex-centered product and independent implementation. | Source code, templates, UI, screenshots, cloud endpoints, and platform-specific assets are excluded. Attribution remains visible. |
+| PD-12 | Make network/model work explicit opt-in | Deterministic core behavior must not fail when credentials or network access are absent; the featured GPT-5.6 audit is a separately initiated step. | Future remote/PR modes require explicit enablement, a clear data boundary, and evidence separate from local checks. |
 | PD-13 | Keep the Build Week version English-only | One language keeps CLI, Phase-0, dashboard, README, and judging path consistent. | Multilingual packs are future work. |
 | PD-14 | Keep developer authority visible | “Codex writes. Control Tower proves. The developer decides.” Review state and safer next actions should remain visible rather than silently blocking or approving. | A malicious or misconfigured external agent can ignore repository guidance; Control Tower is not an OS sandbox. |
+| PD-15 | Keep local verdict/action and model opinion separate | A model can audit evidence creatively without owning repository truth. | `reconciliation.deterministicVerdict` / `nextSafeAction` remain authoritative; `modelVerdict` / `modelSummary` / `modelNextSafeAction` and alignment/conflict stay inspectable. |
+| PD-16 | Record evidence integrity and freshness | SHA-256 bundle/file hashes, base commit, bounded worktree state, and stale/current comparison make later change visible. | Hashes are not signatures or immutable third-party attestation. |
+| PD-17 | Separate static and live dashboard roles | GitHub Pages provides a zero-install recorded exhibit; the local server provides live `READY → RUNNING → COMPLETE`. | Pages cannot scan a visitor's repository or mirror a local run. |
 
 ## Why local-first
 
@@ -37,7 +40,7 @@ The health score is a prioritization aid, not a verdict from an opaque model. A 
 - Will the same repository produce the same result?
 - Which improvement changed the before/after score?
 
-An optional model may later comment on a report, but it must not silently rewrite the deterministic result or convert `NOT_RUN` into `PASS`.
+The implemented real model audit may comment on evidence, but it cannot rewrite the deterministic result, the authoritative local verdict, or convert `NOT_RUN` into `PASS`.
 
 ## Why a Codex Mission Prompt
 
@@ -76,7 +79,7 @@ The full lineage and no-copy record lives in [Source Protection](SOURCE_PROTECTI
 
 These are intentionally future work, not hidden current claims:
 
-- deeper reconciliation policies beyond the implemented five locked claims;
+- additional target-derived reconciliation policies and language-aware claim adapters;
 - GitHub/GitLab PR/MR and CI adapters;
 - signed or identity-backed review gates;
 - cross-repository and team dashboards;

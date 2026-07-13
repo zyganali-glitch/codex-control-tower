@@ -31,6 +31,7 @@
     "demo:codex": "node cli/index.js codex-review --target examples/governed-saas-after --model gpt-5.6-sol --live-report apps/dashboard/public/live-report.json",
     "dashboard:build": "npm --prefix apps/dashboard install && npm --prefix apps/dashboard run build",
     "scan:demo": "node cli/index.js scan --target examples/messy-saas-before --out tmp/report.json",
+    "evidence:self": "node cli/index.js scan --target . --out docs/ROOT_REPO_SCAN.json --portable",
     "evidence:demo": "node cli/index.js evidence --target examples/messy-saas-before --out tmp/evidence-pack",
     "context:demo": "node cli/index.js context-graph --target examples/messy-saas-before --out tmp/context-graph.json",
     "verify": "npm test && npm run demo && npm run dashboard:build"

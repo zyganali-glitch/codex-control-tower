@@ -32,15 +32,17 @@ const tabs = [
 ];
 
 const pageCopy = {
-  overview: ['Mission overview', 'One local view of governance health, approval, evidence, and the next safe Codex action.'],
+  overview: ['Mission overview', 'One inspectable view of governance health, approval, evidence, and the next safe Codex action.'],
   risks: ['Risk intelligence', 'Prioritized findings with explicit mitigations and no silent blockers.'],
   context: ['Context Trace', 'See what context Codex receives, why it was selected, and how much of the budget it consumes.'],
   evidence: ['Evidence & review', 'Separate verified claims from warnings, failures, unavailable checks, and simulated proof.'],
   memory: ['Memory Lens', 'Carry validated lessons forward while keeping stale assumptions visible.'],
   recorder: ['Flight Recorder', 'A chronological, local record of missions, gates, commands, evidence, and skipped checks.'],
   shield: ['Mistake Shield', 'Compare a proposed action against protected lessons and the approved mission boundary.'],
-  compare: ['Before / After', 'The same fictional InvoiceFlow Mini repo before and after a governed Codex workflow.'],
+  compare: ['Before / After', 'Prepared starting and governed snapshots of the same fictional project, scanned by the same real tool.'],
 };
+
+const isHostedPages = window.location.hostname.endsWith('.github.io');
 
 function getInitialTab() {
   const hash = window.location.hash.replace('#', '');
@@ -76,8 +78,11 @@ function App() {
       }
     }
     refreshLiveReport();
-    const timer = window.setInterval(refreshLiveReport, 1500);
-    return () => { active = false; window.clearInterval(timer); };
+    const timer = isHostedPages ? null : window.setInterval(refreshLiveReport, 1500);
+    return () => {
+      active = false;
+      if (timer) window.clearInterval(timer);
+    };
   }, [liveEnabled]);
 
   const evidenceCount = useMemo(() => Object.values(report.evidenceBoundary?.summary || {}).reduce((sum, count) => sum + Number(count), 0), [report]);
@@ -115,6 +120,14 @@ function App() {
     URL.revokeObjectURL(url);
   }
 
+  const isFictionalSample = report.sampleContext?.fictional || report.mode === 'SIMULATED';
+  const disclosureLabel = isFictionalSample ? 'FICTIONAL SAMPLE PROJECT' : report.mode || 'LOCAL';
+  const environmentLabel = isHostedPages ? 'Static recorded demo' : 'Local live session';
+  const dataFlowLabel = isHostedPages ? 'Recorded JSON snapshot' : 'Local files + Codex';
+  const privacyCopy = isHostedPages
+    ? 'A JSON you load is parsed only in this browser tab'
+    : 'A JSON you load stays on this device';
+
   return (
     <div className="app-shell">
       <a className="skip-link" href="#main-content">Skip to dashboard content</a>
@@ -135,17 +148,30 @@ function App() {
           ))}
         </nav>
         <div className="sidebar-system">
-          <div className="system-head"><span>LOCAL SYSTEM</span><i /></div>
+          <div className="system-head"><span>{environmentLabel.toUpperCase()}</span><i /></div>
           <div><span>Scanner</span><strong>Ready</strong></div>
           <div><span>Evidence reconcile</span><strong>{report.codexLiveReview?.state || 'Ready'}</strong></div>
-          <div><span>Data flow</span><strong>Local + Codex</strong></div>
+          <div><span>Data flow</span><strong>{dataFlowLabel}</strong></div>
         </div>
-        <div className="sidebar-foot"><Icon name="lock" size={13} /><span>Report stays on this device</span></div>
+        <div className="sidebar-foot"><Icon name="lock" size={13} /><span>{privacyCopy}</span></div>
       </aside>
       {navOpen && <button className="nav-scrim" aria-label="Close navigation" onClick={() => setNavOpen(false)} />}
 
       <div className="main-shell">
-        <div className={`disclosure disclosure--${String(report.mode).toLowerCase()}`}><Icon name="spark" size={13} /><strong>{report.mode || 'LOCAL'}</strong><span>{report.disclosure || 'Local report data'}</span></div>
+        <div className={`disclosure disclosure--${String(report.mode).toLowerCase()}`}>
+          <Icon name="spark" size={13} />
+          {isFictionalSample ? (
+            <>
+              <strong>FICTIONAL SAMPLE PROJECT</strong>
+              <span className="disclosure__detail">prepared InvoiceFlow Mini snapshots</span>
+              <i className="disclosure__separator" aria-hidden="true" />
+              <strong className="disclosure__real">REAL EXECUTION</strong>
+              <span className="disclosure__detail">scans, two tests, hashes, and recorded GPT-5.6 reconciliation</span>
+            </>
+          ) : (
+            <><strong>{disclosureLabel}</strong><span>{report.disclosure || 'Local report data'}</span></>
+          )}
+        </div>
         <header className="topbar">
           <button className="menu-button" onClick={() => setNavOpen(true)} aria-label="Open navigation"><Icon name="menu" /></button>
           <div className="repo-select">
@@ -164,7 +190,7 @@ function App() {
         <main className="workspace" id="main-content" tabIndex="-1">
           <header className="page-heading">
             <div><span className="eyebrow">{report.repository?.path}</span><h1>{title[0]}</h1><p>{title[1]}</p></div>
-            <div className="heading-chips"><span><i className="dot dot--green" />Local-first</span><span>Schema v{report.schemaVersion || 'unknown'}</span></div>
+            <div className="heading-chips"><span><i className="dot dot--green" />{environmentLabel}</span><span>Schema v{report.schemaVersion || 'unknown'}</span></div>
           </header>
 
           {activeTab === 'overview' && <Overview report={report} navigate={navigate} />}
@@ -187,7 +213,7 @@ function Overview({ report, navigate }) {
   return (
     <div className="view-stack">
       <ScoreHero health={report.health} repository={report.repository} />
-      <CodexLiveReviewPanel review={report.codexLiveReview} />
+      <CodexLiveReviewPanel review={report.codexLiveReview} report={report} />
       <div className="signal-strip">
         <button onClick={() => navigate('risks')}><span className="signal-icon signal-icon--risk"><Icon name="risks" /></span><span><small>Open risk flags</small><strong>{report.risks?.filter((risk) => risk.status === 'OPEN').length || 0}</strong></span><Icon name="chevron" size={15} /></button>
         <button onClick={() => navigate('evidence')}><span className="signal-icon signal-icon--pass"><Icon name="evidence" /></span><span><small>Evidence checks passed</small><strong>{boundary.PASS || 0}</strong></span><Icon name="chevron" size={15} /></button>

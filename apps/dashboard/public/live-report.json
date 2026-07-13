@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "invoiceflow-mini-simulated-governed",
   "targetPath": ".\\examples\\governed-saas-after",
-  "generatedAt": "2026-07-13T18:39:48.087Z",
+  "generatedAt": "2026-07-13T20:54:46.902Z",
   "scanMode": "SIMULATED",
   "simulatedData": true,
   "scanScope": {
@@ -48,33 +48,33 @@
     },
     {
       "path": ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
-      "bytes": 12494,
-      "lines": 342,
-      "modifiedAt": "2026-07-13T18:35:23.412Z"
+      "bytes": 17950,
+      "lines": 488,
+      "modifiedAt": "2026-07-13T20:50:34.030Z"
     },
     {
       "path": ".controltower/codex-live-events.jsonl",
-      "bytes": 4421,
+      "bytes": 4505,
       "lines": 0,
-      "modifiedAt": "2026-07-13T18:35:44.486Z"
+      "modifiedAt": "2026-07-13T20:50:53.710Z"
     },
     {
       "path": ".controltower/codex-live-review-record.json",
-      "bytes": 11803,
-      "lines": 200,
-      "modifiedAt": "2026-07-13T18:35:44.490Z"
+      "bytes": 21923,
+      "lines": 472,
+      "modifiedAt": "2026-07-13T20:50:53.713Z"
     },
     {
       "path": ".controltower/codex-live-review.json",
-      "bytes": 3967,
+      "bytes": 4042,
       "lines": 1,
-      "modifiedAt": "2026-07-13T18:35:44.148Z"
+      "modifiedAt": "2026-07-13T20:50:53.375Z"
     },
     {
       "path": ".controltower/codex-review-schema.json",
-      "bytes": 1678,
+      "bytes": 1688,
       "lines": 82,
-      "modifiedAt": "2026-07-13T18:35:23.413Z"
+      "modifiedAt": "2026-07-13T20:50:34.031Z"
     },
     {
       "path": ".controltower/config.json",
@@ -84,21 +84,27 @@
     },
     {
       "path": ".controltower/DETERMINISTIC_CLAIMS.json",
-      "bytes": 1580,
-      "lines": 54,
-      "modifiedAt": "2026-07-13T18:35:23.406Z"
+      "bytes": 2859,
+      "lines": 94,
+      "modifiedAt": "2026-07-13T20:50:33.888Z"
     },
     {
       "path": ".controltower/EVIDENCE_BUNDLE.md",
-      "bytes": 10268,
-      "lines": 303,
-      "modifiedAt": "2026-07-13T18:35:23.410Z"
+      "bytes": 14845,
+      "lines": 441,
+      "modifiedAt": "2026-07-13T20:50:34.028Z"
     },
     {
       "path": ".controltower/flight-recorder.jsonl",
       "bytes": 1746,
       "lines": 0,
       "modifiedAt": "2026-07-12T17:11:24.198Z"
+    },
+    {
+      "path": ".controltower/governed-test-output.txt",
+      "bytes": 374,
+      "lines": 15,
+      "modifiedAt": "2026-07-13T20:54:46.880Z"
     },
     {
       "path": ".controltower/phase0.json",
@@ -272,8 +278,8 @@
     "tests": {
       "status": "PASS",
       "evidence": [
-        "node --test tests/invoiceflow.test.js",
-        "examples/demo-report/governed-test-output.txt"
+        "tests/invoiceflow.test.js",
+        ".controltower/governed-test-output.txt"
       ]
     },
     "ci": {
@@ -305,7 +311,7 @@
     }
   },
   "contextGraph": {
-    "generatedAt": "2026-07-13T18:39:48.085Z",
+    "generatedAt": "2026-07-13T20:54:46.900Z",
     "generatedLocally": true,
     "algorithm": "deterministic lexical and repository-surface analysis",
     "nodes": [
@@ -328,8 +334,8 @@
         "id": "file:.controltower/CODEX_LIVE_REVIEW_PROMPT.md",
         "label": ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
         "type": "documentation",
-        "lines": 342,
-        "bytes": 12494,
+        "lines": 488,
+        "bytes": 17950,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -344,7 +350,7 @@
         "label": ".controltower/codex-live-events.jsonl",
         "type": "control",
         "lines": 0,
-        "bytes": 4421,
+        "bytes": 4505,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -358,8 +364,8 @@
         "id": "file:.controltower/codex-live-review-record.json",
         "label": ".controltower/codex-live-review-record.json",
         "type": "control",
-        "lines": 200,
-        "bytes": 11803,
+        "lines": 472,
+        "bytes": 21923,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -374,7 +380,7 @@
         "label": ".controltower/codex-live-review.json",
         "type": "control",
         "lines": 1,
-        "bytes": 3967,
+        "bytes": 4042,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -389,7 +395,7 @@
         "label": ".controltower/codex-review-schema.json",
         "type": "control",
         "lines": 82,
-        "bytes": 1678,
+        "bytes": 1688,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -418,8 +424,8 @@
         "id": "file:.controltower/DETERMINISTIC_CLAIMS.json",
         "label": ".controltower/DETERMINISTIC_CLAIMS.json",
         "type": "control",
-        "lines": 54,
-        "bytes": 1580,
+        "lines": 94,
+        "bytes": 2859,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -433,8 +439,8 @@
         "id": "file:.controltower/EVIDENCE_BUNDLE.md",
         "label": ".controltower/EVIDENCE_BUNDLE.md",
         "type": "evidence",
-        "lines": 303,
-        "bytes": 10268,
+        "lines": 441,
+        "bytes": 14845,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -450,6 +456,21 @@
         "type": "control",
         "lines": 0,
         "bytes": 1746,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/governed-test-output.txt",
+        "label": ".controltower/governed-test-output.txt",
+        "type": "control",
+        "lines": 15,
+        "bytes": 374,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -869,7 +890,7 @@
     ],
     "overlappingPlans": [],
     "stats": {
-      "nodeCount": 32,
+      "nodeCount": 33,
       "edgeCount": 13,
       "riskNodeCount": 0,
       "todoFixmeCount": 0
@@ -894,8 +915,8 @@
         "id": "file:.controltower/EVIDENCE_BUNDLE.md",
         "label": ".controltower/EVIDENCE_BUNDLE.md",
         "type": "evidence",
-        "lines": 303,
-        "bytes": 10268,
+        "lines": 441,
+        "bytes": 14845,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -985,7 +1006,7 @@
         "label": ".controltower/codex-live-events.jsonl",
         "type": "control",
         "lines": 0,
-        "bytes": 4421,
+        "bytes": 4505,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -999,8 +1020,8 @@
         "id": "file:.controltower/codex-live-review-record.json",
         "label": ".controltower/codex-live-review-record.json",
         "type": "control",
-        "lines": 200,
-        "bytes": 11803,
+        "lines": 472,
+        "bytes": 21923,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1015,7 +1036,7 @@
         "label": ".controltower/codex-live-review.json",
         "type": "control",
         "lines": 1,
-        "bytes": 3967,
+        "bytes": 4042,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1030,7 +1051,7 @@
         "label": ".controltower/codex-review-schema.json",
         "type": "control",
         "lines": 82,
-        "bytes": 1678,
+        "bytes": 1688,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1059,8 +1080,8 @@
         "id": "file:.controltower/DETERMINISTIC_CLAIMS.json",
         "label": ".controltower/DETERMINISTIC_CLAIMS.json",
         "type": "control",
-        "lines": 54,
-        "bytes": 1580,
+        "lines": 94,
+        "bytes": 2859,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1076,6 +1097,21 @@
         "type": "control",
         "lines": 0,
         "bytes": 1746,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/governed-test-output.txt",
+        "label": ".controltower/governed-test-output.txt",
+        "type": "control",
+        "lines": 15,
+        "bytes": 374,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1149,8 +1185,8 @@
         "id": "file:.controltower/CODEX_LIVE_REVIEW_PROMPT.md",
         "label": ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
         "type": "documentation",
-        "lines": 342,
-        "bytes": 12494,
+        "lines": 488,
+        "bytes": 17950,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -1219,28 +1255,13 @@
         "protected": false,
         "reason": "Selected as a documentation surface for Codex mission context.",
         "owners": []
-      },
-      {
-        "id": "file:TECH_DEBT_AND_SECURITY.md",
-        "label": "TECH_DEBT_AND_SECURITY.md",
-        "type": "documentation",
-        "lines": 22,
-        "bytes": 941,
-        "risk": false,
-        "markers": 0,
-        "relevance": 0.75,
-        "importance": 0.75,
-        "freshness": "fresh",
-        "protected": true,
-        "reason": "Selected as a documentation surface for Codex mission context.",
-        "owners": []
       }
     ],
     "contextBudget": {
       "maxItems": 24,
       "selectedItems": 24,
-      "availableItems": 32,
-      "estimatedTokens": 17794
+      "availableItems": 33,
+      "estimatedTokens": 21084
     }
   },
   "reviewGate": {
@@ -1276,7 +1297,7 @@
     "decisionRecorded": true
   },
   "memoryLens": {
-    "generatedAt": "2026-07-13T18:39:48.087Z",
+    "generatedAt": "2026-07-13T20:54:46.901Z",
     "generatedLocally": true,
     "sources": [
       {
@@ -1506,7 +1527,7 @@
     "matchedLessons": [],
     "gateStatus": "APPROVED",
     "saferNextAction": "Proceed only within the declared scope and record commands, evidence, NOT_RUN checks, and remaining risk.",
-    "checkedAt": "2026-07-13T18:39:48.087Z",
+    "checkedAt": "2026-07-13T20:54:46.902Z",
     "deterministic": true
   },
   "phase0": {
@@ -1656,7 +1677,7 @@
     "phase0Healthy": true,
     "flightRecorderHealthy": true,
     "evidenceSurfaceCount": 4,
-    "contextNodeCount": 32,
+    "contextNodeCount": 33,
     "criticalRiskCount": 0,
     "highRiskCount": 1
   },
@@ -1667,7 +1688,7 @@
         "status": "PASS",
         "exitCode": 0,
         "testCount": 2,
-        "evidence": "examples/demo-report/governed-test-output.txt"
+        "evidence": ".controltower/governed-test-output.txt"
       }
     ],
     "notRun": [
@@ -1898,109 +1919,134 @@
     "mode": "REAL_CODEX_EVIDENCE_RECONCILIATION",
     "model": "gpt-5.6-sol",
     "authenticatedVia": "ChatGPT subscription",
-    "startedAt": "2026-07-13T18:39:56.626Z",
+    "startedAt": "2026-07-13T20:54:58.973Z",
     "disclosure": "Real GPT-5.6 evidence reconciliation; deterministic states remain locked and independently reproducible.",
     "cliVersion": "codex-cli 0.144.3",
-    "completedAt": "2026-07-13T18:40:18.528Z",
+    "completedAt": "2026-07-13T20:55:26.088Z",
     "assessment": {
-      "verdict": "FAIL",
-      "summary": "The bounded evidence supports the recorded local test claim and preserves the SIMULATED and NOT_RUN boundaries. The locked CI status remains FAIL: no CI configuration or CI execution evidence is present. Review approval is only a SIMULATED local file gate, not identity-verified authorization.",
+      "modelVerdict": "WARN",
+      "summary": "The bounded evidence supports the recorded local test PASS, the explicitly SIMULATED Review Gate, and clear separation of PASS, FAIL, NOT_RUN, and SIMULATED states. It does not support completed CI or external verification gates. This assessment relies solely on the supplied recorded evidence; no checks were independently executed.",
       "claimAudits": [
         {
           "id": "TEST_EXECUTION",
           "modelAssessment": "SUPPORTS",
-          "rationale": "The report records one focused Node test command with PASS, exit code 0, and two tests; the evidence report and traceability matrix consistently limit this to simulated local fixture evidence. This supports recorded execution evidence only, not independent execution verification.",
+          "rationale": "The report records a PASS for the specified Node test command with exit code 0 and two tests, while the preserved output records the same command, exit code, and two passing test cases. The test source contains those two cases, and the documentation limits the result to simulated local flows.",
           "citedEvidencePaths": [
             "CONTROL_TOWER_REPORT.json",
-            "docs/EVIDENCE_REPORT.md",
-            "docs/TRACEABILITY_MATRIX.md"
+            "tests/invoiceflow.test.js",
+            ".controltower/governed-test-output.txt",
+            "docs/EVIDENCE_REPORT.md"
           ],
           "missingEvidence": [],
-          "recommendedNextAction": "Retain the recorded PASS while continuing to disclose that the result is local simulated fixture evidence."
+          "recommendedNextAction": "Preserve the recorded artifacts and continue describing this only as local simulated test evidence."
         },
         {
           "id": "CI_EXECUTION",
-          "modelAssessment": "QUESTIONS",
-          "rationale": "The evidence contradicts the affirmative claim: CI is locked FAIL, its evidence field is null, CI appears in the NOT_RUN list, and the risk register states that no CI configuration exists. NOT_RUN and FAIL must not be interpreted as CI execution support.",
+          "modelAssessment": "INSUFFICIENT",
+          "rationale": "The report explicitly records CI as FAIL with no evidence and raises a HIGH NO_CI risk. The traceability and NOT_RUN documentation do not provide any CI workflow or CI-run completion record, so recorded continuous-integration execution is unsupported.",
           "citedEvidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             "docs/TRACEABILITY_MATRIX.md",
             "docs/NOT_RUN_GATES.md"
           ],
           "missingEvidence": [
-            "A CI configuration and a CI-generated execution record from a clean automation environment."
+            "A CI configuration that runs the required checks",
+            "A recorded CI run result and associated logs or artifacts"
           ],
-          "recommendedNextAction": "Add an approved minimal CI workflow and preserve its actual run output before claiming CI execution support."
+          "recommendedNextAction": "Add an approved minimal CI workflow and retain its run evidence before making a CI-execution claim."
         },
         {
           "id": "REVIEW_GATE",
           "modelAssessment": "SUPPORTS",
-          "rationale": "Both records consistently disclose an APPROVED but SIMULATED local file gate, including its scope, allowed files, forbidden actions, reviewer label, and timestamp. They also state that identity was not verified and that the record is not enterprise authorization.",
+          "rationale": "Both permitted records consistently disclose an APPROVED local-file gate as SIMULATED, identify the simulated reviewer, state that identity was not verified, and disclaim enterprise identity verification. This supports the locked SIMULATED boundary without turning it into an independently verified approval.",
           "citedEvidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             ".controltower/review-gate.json"
           ],
           "missingEvidence": [],
-          "recommendedNextAction": "Keep the status visibly SIMULATED; require a real human and identity-verified authorization process before external integration or deployment work."
+          "recommendedNextAction": "Keep the gate labeled SIMULATED and require a real authorized reviewer before relying on it outside this demonstration."
         },
         {
           "id": "EVIDENCE_BOUNDARY",
           "modelAssessment": "SUPPORTS",
-          "rationale": "The bundle visibly distinguishes recorded PASS checks, CI FAIL, multiple NOT_RUN gates, and the overall SIMULATED mode. The evidence report explicitly warns that NOT_RUN checks and simulated fixture results do not establish production, provider, deployment, scale, or compliance claims.",
+          "rationale": "The report and documentation visibly distinguish passing local tests, failed or absent CI, intentionally NOT_RUN external checks, and simulated project and review data. The documents also state that NOT_RUN is not PASS and avoid production, provider, deployment, scale, or compliance claims.",
           "citedEvidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             "docs/EVIDENCE_REPORT.md",
-            "docs/TRACEABILITY_MATRIX.md"
+            "docs/TRACEABILITY_MATRIX.md",
+            "docs/NOT_RUN_GATES.md"
           ],
           "missingEvidence": [],
-          "recommendedNextAction": "Preserve these labels without collapsing FAIL or NOT_RUN into PASS, or SIMULATED approval into real authorization."
+          "recommendedNextAction": "Retain these explicit PASS, FAIL, NOT_RUN, and SIMULATED labels in future reports."
         },
         {
           "id": "EXTERNAL_GATES",
-          "modelAssessment": "SUPPORTS",
-          "rationale": "The report explicitly lists browser/accessibility, load/concurrency, deployment, and independent security review as NOT_RUN. The NOT_RUN gates document separately confirms browser, load, and deployment checks as NOT_RUN and warns that these statuses are not PASS.",
+          "modelAssessment": "INSUFFICIENT",
+          "rationale": "The report lists CI and several external checks as not run, while the gate document marks dependency, browser/accessibility, load/concurrency, real identity-provider, real payment-provider, and deployment checks as NOT_RUN. Therefore, completion evidence does not exist for every listed external verification gate.",
           "citedEvidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             "docs/NOT_RUN_GATES.md"
           ],
-          "missingEvidence": [],
-          "recommendedNextAction": "Leave all external gates explicitly NOT_RUN until each is separately authorized and produces its own execution evidence."
+          "missingEvidence": [
+            "Completion records for browser and accessibility verification",
+            "Completion records for load and concurrency verification",
+            "Completion records for real identity-provider verification",
+            "Completion records for real payment-provider verification",
+            "Completion records for deployment verification",
+            "Completion records for any applicable dependency vulnerability audit"
+          ],
+          "recommendedNextAction": "Keep all external gates at NOT_RUN until separately authorized checks produce recorded completion evidence."
         }
       ],
-      "nextSafeAction": "Treat the governance result as FAIL for CI readiness, retain the 88/100 deterministic score and one NO_CI risk flag as recorded, and do not advance external work until real authorization and gate-specific execution evidence exist."
+      "nextSafeAction": "Accept the local simulated test evidence only within its stated boundary; keep CI at FAIL and external gates at NOT_RUN until approved automation and external verification produce recorded evidence."
     },
     "reconciliation": {
       "verdict": "FAIL",
-      "summary": "The bounded evidence supports the recorded local test claim and preserves the SIMULATED and NOT_RUN boundaries. The locked CI status remains FAIL: no CI configuration or CI execution evidence is present. Review approval is only a SIMULATED local file gate, not identity-verified authorization.",
+      "deterministicVerdict": "FAIL",
+      "modelVerdict": "WARN",
+      "summary": "Locked local evidence: 2 PASS, 0 WARN, 1 FAIL, 1 NOT_RUN, 1 SIMULATED.",
+      "modelSummary": "The bounded evidence supports the recorded local test PASS, the explicitly SIMULATED Review Gate, and clear separation of PASS, FAIL, NOT_RUN, and SIMULATED states. It does not support completed CI or external verification gates. This assessment relies solely on the supplied recorded evidence; no checks were independently executed.",
       "claimAudits": [
         {
           "id": "TEST_EXECUTION",
-          "claim": "The focused InvoiceFlow Mini tests have recorded execution evidence.",
+          "claim": "Recorded test execution for invoiceflow-mini-simulated-governed is supported by the bounded evidence.",
           "deterministicStatus": "PASS",
           "modelAssessment": "SUPPORTS",
+          "expectedModelAssessments": [
+            "SUPPORTS"
+          ],
           "agreement": "AGREEMENT",
-          "rationale": "The report records one focused Node test command with PASS, exit code 0, and two tests; the evidence report and traceability matrix consistently limit this to simulated local fixture evidence. This supports recorded execution evidence only, not independent execution verification.",
+          "relation": "ALIGNS_WITH_LOCKED_STATUS",
+          "rationale": "The report records a PASS for the specified Node test command with exit code 0 and two tests, while the preserved output records the same command, exit code, and two passing test cases. The test source contains those two cases, and the documentation limits the result to simulated local flows.",
           "evidencePaths": [
             "CONTROL_TOWER_REPORT.json",
+            "tests/invoiceflow.test.js",
+            ".controltower/governed-test-output.txt",
             "docs/EVIDENCE_REPORT.md",
             "docs/TRACEABILITY_MATRIX.md"
           ],
           "citedEvidencePaths": [
             "CONTROL_TOWER_REPORT.json",
-            "docs/EVIDENCE_REPORT.md",
-            "docs/TRACEABILITY_MATRIX.md"
+            "tests/invoiceflow.test.js",
+            ".controltower/governed-test-output.txt",
+            "docs/EVIDENCE_REPORT.md"
           ],
           "rejectedEvidencePaths": [],
           "missingEvidence": [],
-          "recommendedNextAction": "Retain the recorded PASS while continuing to disclose that the result is local simulated fixture evidence."
+          "recommendedNextAction": "Preserve the recorded artifacts and continue describing this only as local simulated test evidence."
         },
         {
           "id": "CI_EXECUTION",
-          "claim": "Continuous integration execution is supported by the governed fixture evidence.",
+          "claim": "Recorded continuous-integration execution for invoiceflow-mini-simulated-governed is supported by the bounded evidence.",
           "deterministicStatus": "FAIL",
-          "modelAssessment": "QUESTIONS",
-          "agreement": "DISAGREEMENT",
-          "rationale": "The evidence contradicts the affirmative claim: CI is locked FAIL, its evidence field is null, CI appears in the NOT_RUN list, and the risk register states that no CI configuration exists. NOT_RUN and FAIL must not be interpreted as CI execution support.",
+          "modelAssessment": "INSUFFICIENT",
+          "expectedModelAssessments": [
+            "QUESTIONS",
+            "INSUFFICIENT"
+          ],
+          "agreement": "AGREEMENT",
+          "relation": "ALIGNS_WITH_LOCKED_STATUS",
+          "rationale": "The report explicitly records CI as FAIL with no evidence and raises a HIGH NO_CI risk. The traceability and NOT_RUN documentation do not provide any CI workflow or CI-run completion record, so recorded continuous-integration execution is unsupported.",
           "evidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             "docs/TRACEABILITY_MATRIX.md",
@@ -2013,17 +2059,22 @@
           ],
           "rejectedEvidencePaths": [],
           "missingEvidence": [
-            "A CI configuration and a CI-generated execution record from a clean automation environment."
+            "A CI configuration that runs the required checks",
+            "A recorded CI run result and associated logs or artifacts"
           ],
-          "recommendedNextAction": "Add an approved minimal CI workflow and preserve its actual run output before claiming CI execution support."
+          "recommendedNextAction": "Add an approved minimal CI workflow and retain its run evidence before making a CI-execution claim."
         },
         {
           "id": "REVIEW_GATE",
-          "claim": "The recorded Review Gate represents the disclosed authorization boundary.",
+          "claim": "The Review Gate for invoiceflow-mini-simulated-governed is accurately disclosed and supported by the bounded evidence.",
           "deterministicStatus": "SIMULATED",
           "modelAssessment": "SUPPORTS",
+          "expectedModelAssessments": [
+            "SUPPORTS"
+          ],
           "agreement": "AGREEMENT",
-          "rationale": "Both records consistently disclose an APPROVED but SIMULATED local file gate, including its scope, allowed files, forbidden actions, reviewer label, and timestamp. They also state that identity was not verified and that the record is not enterprise authorization.",
+          "relation": "ALIGNS_WITH_LOCKED_STATUS",
+          "rationale": "Both permitted records consistently disclose an APPROVED local-file gate as SIMULATED, identify the simulated reviewer, state that identity was not verified, and disclaim enterprise identity verification. This supports the locked SIMULATED boundary without turning it into an independently verified approval.",
           "evidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             ".controltower/review-gate.json"
@@ -2034,36 +2085,47 @@
           ],
           "rejectedEvidencePaths": [],
           "missingEvidence": [],
-          "recommendedNextAction": "Keep the status visibly SIMULATED; require a real human and identity-verified authorization process before external integration or deployment work."
+          "recommendedNextAction": "Keep the gate labeled SIMULATED and require a real authorized reviewer before relying on it outside this demonstration."
         },
         {
           "id": "EVIDENCE_BOUNDARY",
-          "claim": "PASS, FAIL, NOT_RUN, and SIMULATED evidence remain visibly separated.",
+          "claim": "The report for invoiceflow-mini-simulated-governed visibly separates executed, failed, unexecuted, and simulated evidence.",
           "deterministicStatus": "PASS",
           "modelAssessment": "SUPPORTS",
+          "expectedModelAssessments": [
+            "SUPPORTS"
+          ],
           "agreement": "AGREEMENT",
-          "rationale": "The bundle visibly distinguishes recorded PASS checks, CI FAIL, multiple NOT_RUN gates, and the overall SIMULATED mode. The evidence report explicitly warns that NOT_RUN checks and simulated fixture results do not establish production, provider, deployment, scale, or compliance claims.",
+          "relation": "ALIGNS_WITH_LOCKED_STATUS",
+          "rationale": "The report and documentation visibly distinguish passing local tests, failed or absent CI, intentionally NOT_RUN external checks, and simulated project and review data. The documents also state that NOT_RUN is not PASS and avoid production, provider, deployment, scale, or compliance claims.",
           "evidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             "docs/EVIDENCE_REPORT.md",
-            "docs/TRACEABILITY_MATRIX.md"
+            "docs/TRACEABILITY_MATRIX.md",
+            "docs/NOT_RUN_GATES.md"
           ],
           "citedEvidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             "docs/EVIDENCE_REPORT.md",
-            "docs/TRACEABILITY_MATRIX.md"
+            "docs/TRACEABILITY_MATRIX.md",
+            "docs/NOT_RUN_GATES.md"
           ],
           "rejectedEvidencePaths": [],
           "missingEvidence": [],
-          "recommendedNextAction": "Preserve these labels without collapsing FAIL or NOT_RUN into PASS, or SIMULATED approval into real authorization."
+          "recommendedNextAction": "Retain these explicit PASS, FAIL, NOT_RUN, and SIMULATED labels in future reports."
         },
         {
           "id": "EXTERNAL_GATES",
-          "claim": "Browser, load, deployment, and independent security gates remain explicitly NOT_RUN.",
+          "claim": "Every external verification gate listed for invoiceflow-mini-simulated-governed has recorded completion evidence.",
           "deterministicStatus": "NOT_RUN",
-          "modelAssessment": "SUPPORTS",
+          "modelAssessment": "INSUFFICIENT",
+          "expectedModelAssessments": [
+            "QUESTIONS",
+            "INSUFFICIENT"
+          ],
           "agreement": "AGREEMENT",
-          "rationale": "The report explicitly lists browser/accessibility, load/concurrency, deployment, and independent security review as NOT_RUN. The NOT_RUN gates document separately confirms browser, load, and deployment checks as NOT_RUN and warns that these statuses are not PASS.",
+          "relation": "ALIGNS_WITH_LOCKED_STATUS",
+          "rationale": "The report lists CI and several external checks as not run, while the gate document marks dependency, browser/accessibility, load/concurrency, real identity-provider, real payment-provider, and deployment checks as NOT_RUN. Therefore, completion evidence does not exist for every listed external verification gate.",
           "evidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             "docs/NOT_RUN_GATES.md"
@@ -2073,25 +2135,265 @@
             "docs/NOT_RUN_GATES.md"
           ],
           "rejectedEvidencePaths": [],
-          "missingEvidence": [],
-          "recommendedNextAction": "Leave all external gates explicitly NOT_RUN until each is separately authorized and produces its own execution evidence."
+          "missingEvidence": [
+            "Completion records for browser and accessibility verification",
+            "Completion records for load and concurrency verification",
+            "Completion records for real identity-provider verification",
+            "Completion records for real payment-provider verification",
+            "Completion records for deployment verification",
+            "Completion records for any applicable dependency vulnerability audit"
+          ],
+          "recommendedNextAction": "Keep all external gates at NOT_RUN until separately authorized checks produce recorded completion evidence."
         }
       ],
       "counts": {
-        "agreement": 4,
-        "disagreement": 1,
+        "agreement": 5,
+        "disagreement": 0,
+        "insufficient": 2,
         "notRunPreserved": 1,
         "rejectedEvidencePaths": 0
       },
-      "nextSafeAction": "Treat the governance result as FAIL for CI readiness, retain the 88/100 deterministic score and one NO_CI risk flag as recorded, and do not advance external work until real authorization and gate-specific execution evidence exist.",
+      "warnings": [],
+      "reportProvenance": {
+        "source": "RECORDED_REPORT",
+        "status": "PASS",
+        "reportPath": "CONTROL_TOWER_REPORT.json",
+        "generatedAt": "2026-07-13T20:54:46.902Z",
+        "loadedAt": "2026-07-13T20:54:59.795Z",
+        "ageMs": 12893,
+        "maxAgeMs": 86400000,
+        "stale": false,
+        "staleReasons": [],
+        "preservedRecordedExecutionEvidence": true,
+        "freshScanComparison": {
+          "performed": true,
+          "freshScanGeneratedAt": "2026-07-13T20:54:59.818Z",
+          "scoreMatches": true,
+          "riskFlagsMatch": true,
+          "changedFileCount": 0,
+          "changedFiles": []
+        }
+      },
+      "evidenceIntegrity": {
+        "algorithm": "SHA-256",
+        "gitCommit": "416d145183e19487e774fdcf9bc051894092dc50",
+        "gitWorktreeState": "DIRTY",
+        "gitChangedPaths": [
+          "examples/governed-saas-after/.controltower/CODEX_LIVE_REVIEW_PROMPT.md",
+          "examples/governed-saas-after/.controltower/DETERMINISTIC_CLAIMS.json",
+          "examples/governed-saas-after/.controltower/EVIDENCE_BUNDLE.md",
+          "examples/governed-saas-after/.controltower/codex-live-events.jsonl",
+          "examples/governed-saas-after/.controltower/codex-live-review-record.json",
+          "examples/governed-saas-after/.controltower/codex-live-review.json",
+          "examples/governed-saas-after/.controltower/codex-review-schema.json",
+          "examples/governed-saas-after/CONTROL_TOWER_REPORT.json",
+          "examples/governed-saas-after/.controltower/governed-test-output.txt"
+        ],
+        "files": [
+          {
+            "path": "CONTROL_TOWER_REPORT.json",
+            "exists": true,
+            "sha256": "27e553f96ce561af467570622bdd5be322d2e3ca8ee5a2df01d6c0350b7e84a8",
+            "sizeBytes": 61897,
+            "mtime": "2026-07-13T20:54:46.915Z"
+          },
+          {
+            "path": "tests/invoiceflow.test.js",
+            "exists": true,
+            "sha256": "4bcbf10ef5a607fef108c6de20618b95e7f98fc128885e55914580a470b3e67e",
+            "sizeBytes": 2245,
+            "mtime": "2026-07-12T16:58:42.380Z"
+          },
+          {
+            "path": ".controltower/governed-test-output.txt",
+            "exists": true,
+            "sha256": "b1a413bac44474ee9983f724cc9e7e3d6b075949ab24f1fa64c774aa92421405",
+            "sizeBytes": 374,
+            "mtime": "2026-07-13T20:54:46.880Z"
+          },
+          {
+            "path": "docs/EVIDENCE_REPORT.md",
+            "exists": true,
+            "sha256": "9eedf36354f9802f0eb2b2d954a00da5a3e704b0db904a4614a6a07f1d0ee250",
+            "sizeBytes": 1980,
+            "mtime": "2026-07-12T17:01:34.506Z"
+          },
+          {
+            "path": "docs/TRACEABILITY_MATRIX.md",
+            "exists": true,
+            "sha256": "7388c511b74c09241f9c2c3288a6900385ac39bf75a6d8bbc0eb721c3098f51e",
+            "sizeBytes": 1024,
+            "mtime": "2026-07-12T17:01:36.139Z"
+          },
+          {
+            "path": "docs/NOT_RUN_GATES.md",
+            "exists": true,
+            "sha256": "7ba06b0b204b452b91bf0f39ac3dd9d85139a29605e251a8106a7d0abafa7b20",
+            "sizeBytes": 1058,
+            "mtime": "2026-07-12T17:01:37.767Z"
+          },
+          {
+            "path": ".controltower/review-gate.json",
+            "exists": true,
+            "sha256": "2ee906e997a4e10747b007dd77315b102ff3713da0b4b46bc46495610eda5155",
+            "sizeBytes": 957,
+            "mtime": "2026-07-12T17:11:03.372Z"
+          },
+          {
+            "path": ".controltower/DETERMINISTIC_CLAIMS.json",
+            "exists": true,
+            "sha256": "5203f45a1f816590fdbbbe2ffe66bfd8fbe4cdb0962b737c11a2a564deedc875",
+            "sizeBytes": 2860,
+            "mtime": "2026-07-13T20:54:59.821Z"
+          }
+        ],
+        "bundle": {
+          "path": ".controltower/EVIDENCE_BUNDLE.md",
+          "sha256": "646106b47bb602b3e869b0b4abce93437f799c1c5950e3f7f680dedd633e5905",
+          "sizeBytes": 14845,
+          "digestScope": "Exact UTF-8 bytes written to the bundle file; the digest is recorded externally to avoid a self-referential hash."
+        }
+      },
+      "executionEvidence": {
+        "tests": {
+          "deterministicStatus": "PASS",
+          "commands": [
+            {
+              "command": "node --test tests/invoiceflow.test.js",
+              "status": "PASS",
+              "exitCode": 0,
+              "testCount": 2,
+              "evidence": ".controltower/governed-test-output.txt"
+            }
+          ]
+        },
+        "ci": {
+          "deterministicStatus": "FAIL",
+          "evidencePaths": []
+        },
+        "externalGates": {
+          "deterministicStatus": "NOT_RUN",
+          "notRun": [
+            "CI",
+            "browser/accessibility",
+            "load/concurrency",
+            "deployment",
+            "independent security review"
+          ]
+        }
+      },
+      "nextSafeAction": "Resolve failed locked evidence and rerun the deterministic checks; do not treat the model opinion as an override.",
+      "modelNextSafeAction": "Accept the local simulated test evidence only within its stated boundary; keep CI at FAIL and external gates at NOT_RUN until approved automation and external verification produce recorded evidence.",
       "safetyBoundary": "GPT-5.6 audits evidence but cannot replace deterministic PASS, WARN, FAIL, NOT_RUN, or SIMULATED states."
     },
+    "reportProvenance": {
+      "source": "RECORDED_REPORT",
+      "status": "PASS",
+      "reportPath": "CONTROL_TOWER_REPORT.json",
+      "generatedAt": "2026-07-13T20:54:46.902Z",
+      "loadedAt": "2026-07-13T20:54:59.795Z",
+      "ageMs": 12893,
+      "maxAgeMs": 86400000,
+      "stale": false,
+      "staleReasons": [],
+      "preservedRecordedExecutionEvidence": true,
+      "freshScanComparison": {
+        "performed": true,
+        "freshScanGeneratedAt": "2026-07-13T20:54:59.818Z",
+        "scoreMatches": true,
+        "riskFlagsMatch": true,
+        "changedFileCount": 0,
+        "changedFiles": []
+      }
+    },
+    "evidenceIntegrity": {
+      "algorithm": "SHA-256",
+      "gitCommit": "416d145183e19487e774fdcf9bc051894092dc50",
+      "gitWorktreeState": "DIRTY",
+      "gitChangedPaths": [
+        "examples/governed-saas-after/.controltower/CODEX_LIVE_REVIEW_PROMPT.md",
+        "examples/governed-saas-after/.controltower/DETERMINISTIC_CLAIMS.json",
+        "examples/governed-saas-after/.controltower/EVIDENCE_BUNDLE.md",
+        "examples/governed-saas-after/.controltower/codex-live-events.jsonl",
+        "examples/governed-saas-after/.controltower/codex-live-review-record.json",
+        "examples/governed-saas-after/.controltower/codex-live-review.json",
+        "examples/governed-saas-after/.controltower/codex-review-schema.json",
+        "examples/governed-saas-after/CONTROL_TOWER_REPORT.json",
+        "examples/governed-saas-after/.controltower/governed-test-output.txt"
+      ],
+      "files": [
+        {
+          "path": "CONTROL_TOWER_REPORT.json",
+          "exists": true,
+          "sha256": "27e553f96ce561af467570622bdd5be322d2e3ca8ee5a2df01d6c0350b7e84a8",
+          "sizeBytes": 61897,
+          "mtime": "2026-07-13T20:54:46.915Z"
+        },
+        {
+          "path": "tests/invoiceflow.test.js",
+          "exists": true,
+          "sha256": "4bcbf10ef5a607fef108c6de20618b95e7f98fc128885e55914580a470b3e67e",
+          "sizeBytes": 2245,
+          "mtime": "2026-07-12T16:58:42.380Z"
+        },
+        {
+          "path": ".controltower/governed-test-output.txt",
+          "exists": true,
+          "sha256": "b1a413bac44474ee9983f724cc9e7e3d6b075949ab24f1fa64c774aa92421405",
+          "sizeBytes": 374,
+          "mtime": "2026-07-13T20:54:46.880Z"
+        },
+        {
+          "path": "docs/EVIDENCE_REPORT.md",
+          "exists": true,
+          "sha256": "9eedf36354f9802f0eb2b2d954a00da5a3e704b0db904a4614a6a07f1d0ee250",
+          "sizeBytes": 1980,
+          "mtime": "2026-07-12T17:01:34.506Z"
+        },
+        {
+          "path": "docs/TRACEABILITY_MATRIX.md",
+          "exists": true,
+          "sha256": "7388c511b74c09241f9c2c3288a6900385ac39bf75a6d8bbc0eb721c3098f51e",
+          "sizeBytes": 1024,
+          "mtime": "2026-07-12T17:01:36.139Z"
+        },
+        {
+          "path": "docs/NOT_RUN_GATES.md",
+          "exists": true,
+          "sha256": "7ba06b0b204b452b91bf0f39ac3dd9d85139a29605e251a8106a7d0abafa7b20",
+          "sizeBytes": 1058,
+          "mtime": "2026-07-12T17:01:37.767Z"
+        },
+        {
+          "path": ".controltower/review-gate.json",
+          "exists": true,
+          "sha256": "2ee906e997a4e10747b007dd77315b102ff3713da0b4b46bc46495610eda5155",
+          "sizeBytes": 957,
+          "mtime": "2026-07-12T17:11:03.372Z"
+        },
+        {
+          "path": ".controltower/DETERMINISTIC_CLAIMS.json",
+          "exists": true,
+          "sha256": "5203f45a1f816590fdbbbe2ffe66bfd8fbe4cdb0962b737c11a2a564deedc875",
+          "sizeBytes": 2860,
+          "mtime": "2026-07-13T20:54:59.821Z"
+        }
+      ],
+      "bundle": {
+        "path": ".controltower/EVIDENCE_BUNDLE.md",
+        "sha256": "646106b47bb602b3e869b0b4abce93437f799c1c5950e3f7f680dedd633e5905",
+        "sizeBytes": 14845,
+        "digestScope": "Exact UTF-8 bytes written to the bundle file; the digest is recorded externally to avoid a self-referential hash."
+      }
+    },
+    "liveRecordPath": ".controltower/codex-live-review-record.json",
     "evidence": [
       ".controltower/DETERMINISTIC_CLAIMS.json",
       ".controltower/EVIDENCE_BUNDLE.md",
       ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
       ".controltower/codex-live-review.json",
-      ".controltower/codex-live-events.jsonl"
+      ".controltower/codex-live-events.jsonl",
+      ".controltower/codex-live-review-record.json"
     ]
   }
 }

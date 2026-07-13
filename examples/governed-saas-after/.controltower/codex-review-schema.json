@@ -2,13 +2,13 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "verdict",
+    "modelVerdict",
     "summary",
     "claimAudits",
     "nextSafeAction"
   ],
   "properties": {
-    "verdict": {
+    "modelVerdict": {
       "type": "string",
       "enum": [
         "PASS",

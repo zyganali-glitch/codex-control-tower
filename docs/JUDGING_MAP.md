@@ -1,6 +1,6 @@
 # OpenAI Build Week Judging Map
 
-This map uses the four criteria currently published on the official [OpenAI Build Week Devpost page](https://openai.devpost.com/): **Technological Implementation**, **Design**, **Potential Impact**, and **Quality of the Idea**. The official [Build Week FAQ](https://openai.com/build-week/#faq) describes strong submissions as thoughtful Codex/GPT-5.6 use with a clearly communicated problem, solution, and approach.
+This map uses the four criteria currently published on the official [OpenAI Build Week Devpost page](https://openai.devpost.com/): **Technological Implementation**, **Design**, **Potential Impact**, and **Quality of the Idea**. The official [Devpost FAQ](https://openai.devpost.com/details/faqs) describes the required demo and Codex/GPT-5.6 disclosure path.
 
 Competition details are time-sensitive. Recheck the official pages before submission.
 
@@ -11,7 +11,7 @@ Competition details are time-sensitive. Recheck the official pages before submis
 | Technological Implementation | Codex helped build a non-trivial local developer tool: CLI, deterministic analysis engines, generated artifacts, tests, demo fixtures, and React dashboard. | Run the demo, inspect CLI output and generated Evidence Pack, then open the dashboard. |
 | Design | One coherent flow moves from alignment and scan through context, approval, mission, evidence, and before/after handoff. | Follow the eight dashboard tabs and conditional Phase-0 card. |
 | Potential Impact | Developers using coding agents need durable proof and continuity without uploading private repositories. | Show a risky proposed action, visible NOT_RUN gates, and the generated next mission. |
-| Quality of the Idea | GPT-5.6 audits locked evidence claims while local code prevents it from replacing evidence state. | Run `npm run demo:codex` and inspect agreement, disagreement, preserved NOT_RUN, and provenance. |
+| Quality of the Idea | GPT-5.6 audits target-derived locked evidence claims while local code owns the final verdict and exposes model opinion separately. | Ask Codex desktop to run `npm run demo:codex`; inspect semantic alignment/conflict, preserved NOT_RUN, hashes, and freshness. |
 
 ## Technological Implementation
 
@@ -30,15 +30,16 @@ The criterion evaluates the depth and skill of GPT-5.6 use and whether the resul
 | Human decision and risk comparison | cli/lib/reviewGate.js and cli/lib/mistakeShield.js | Local gate states plus deterministic CLEAR/CAUTION/BLOCKED reasoning |
 | Cross-session continuity | cli/lib/memoryLens.js and cli/lib/flightRecorder.js | Persistent rules/minefields plus typed JSONL events |
 | Portable evidence | cli/lib/evidenceCollector.js | Markdown/JSON evidence, traceability, NOT_RUN, debt, graph, gate, memory, shield, recorder, and mission artifacts |
-| Beginner alignment | cli/commands/phase0.js and core/en/ | One-question-at-a-time English alignment and non-interactive simulated mode |
+| Beginner alignment | cli/commands/phase0.js and core/en/ | One-question-at-a-time English alignment and non-interactive fictional-sample mode |
 | Product UI | apps/dashboard/ | Vite/React workbench with local report import, normalization, eight tabs, and conditional Phase-0 card |
 | Reproducible demonstration | examples/messy-saas-before and examples/governed-saas-after | The same fictional codebase exposes meaningful before/after governance behavior |
+| Evidence Reconciliation | cli/commands/codex-review.js | Target-derived claims, deterministic local verdict/action, separate model verdict/suggestion, SHA-256/base-commit/worktree/freshness provenance, structured validation, and filtered citation records |
 
 ### How Codex was used
 
 Codex collaborated across requirements synthesis, read-only source research, CLI and engine implementation, fixtures/tests, dashboard, integration, verification, and competition documentation. The build-time agent workflow analysis was converted into concrete product features rather than remaining prose.
 
-The deterministic scanner makes no AI API call, so judges can reproduce its score without credentials. The featured Build Week flow locks five claims, verifies ChatGPT authentication and the `gpt-5.6-sol` catalog entry, runs Codex read-only, rejects unsafe model output, reconciles only allowed citations, and updates the dashboard without replacing local states. Actual commands and outcomes are recorded in [Codex Build Log](CODEX_BUILD_LOG.md).
+The deterministic scanner makes no AI API call, so judges can reproduce its score without credentials. The featured Build Week flow derives target-appropriate claims, computes the authoritative local verdict, verifies ChatGPT authentication and the `gpt-5.6-sol` catalog entry, runs Codex read-only, validates model output, filters and records unsupported citations, and shows a separate model verdict without replacing local state. Actual commands and outcomes are recorded in [Codex Build Log](CODEX_BUILD_LOG.md).
 
 ### Live judge proof
 
@@ -57,6 +58,8 @@ Then show:
 - generated Codex Mission Prompt;
 - Evidence Pack with NOT_RUN entries;
 - dashboard comparison.
+
+For the model step, use a clean **Demo Reconciliation** task in Codex desktop and paste [Codex Demo Prompt](CODEX_DEMO_PROMPT.md). The local dashboard shows the live transition; the public GitHub Pages page is a static recorded no-install exhibit.
 
 ### Honest boundary
 
@@ -98,16 +101,16 @@ reviewable handoff + Before / After dashboard
 | Explainable context | Context is not a mystery list; each selection has a reason and quality signals | Context Trace |
 | Developer authority | The human decision remains visible and separate from Codex implementation | Review Gate panel |
 | Beginner and expert paths | Phase-0 avoids jargon; CLI reports and artifact exports support deeper inspection | Phase-0 card plus JSON/Markdown |
-| Local privacy | No account, hosted service, analytics, telemetry, source upload, or API key is required | Architecture/privacy docs and network-free core |
+| Local privacy | Deterministic core needs no account, analytics, telemetry, source upload, or API key; real model audit is explicit opt-in | Architecture/privacy docs and network-free core |
 | Portable handoff | Reports remain inspectable without the UI | JSON, JSONL, and Markdown outputs |
 
 ### Demo design proof
 
-The controlled InvoiceFlow Mini story is small enough to understand in 2:45 but realistic enough to surface auth/payment risk, weak tests, stale docs, evidence disagreement, and continuity gaps. The same simulated project moves from a 25/100 scan with 16 risks to 88/100 with one remaining risk, while omitted checks stay visible.
+The InvoiceFlow Mini story is small enough to understand in 2:45 but realistic enough to surface auth/payment risk, weak tests, stale docs, evidence conflict, and continuity gaps. Two prepared fictional snapshots produce real deterministic scans of 25/100 with 16 risks and 88/100 with one remaining risk. GPT-5.6 does not create that transformation, and omitted checks stay visible.
 
 ### Honest boundary
 
-The dashboard does not create stronger proof than the report. Simulated labels must remain visible in every screenshot and video shot. The UI is a local workbench, not a hosted multi-user service.
+The dashboard does not create stronger proof than the report. FICTIONAL SAMPLE PROJECT and REAL EXECUTION labels must remain visible in screenshots/video. The local UI is a live workbench; GitHub Pages is a static exhibit, not a hosted scanner or multi-user service.
 
 ## Potential Impact
 
@@ -137,7 +140,7 @@ The criterion tests whether the project makes a credible, specific case for a re
 
 ### Credibility of impact
 
-The project does not claim user counts, customer deployments, productivity percentages, incident reduction, or production outcomes. The current evidence is a working local implementation and controlled simulated before/after fixture. The credible near-term impact is better reviewability and continuity for a developer who chooses to adopt the workflow.
+The project does not claim user counts, customer deployments, productivity percentages, incident reduction, or production outcomes. The current evidence is a working local implementation, real scans/tests on prepared fictional snapshots, and a recorded real GPT-5.6 reconciliation. The credible near-term impact is better reviewability and continuity for a developer who chooses to adopt the workflow.
 
 ### Honest boundary
 
@@ -187,7 +190,7 @@ The product explicitly distinguishes:
 - local approval from identity verification;
 - lexical context from semantic certainty;
 - recorder history from immutable attestation;
-- simulated demo proof from customer/production evidence;
+- fictional sample content from customer/production evidence, and sample content from real scan/test/model execution;
 - Codex implementation from developer authority.
 
 Those distinctions are the core idea, not footnotes.
@@ -200,12 +203,12 @@ Real read-only GPT-5.6 Sol Evidence Reconciliation with locked states is impleme
 
 | Time | Criterion emphasized | Proof |
 | --- | --- | --- |
-| 0:00–0:25 | Potential Impact / Quality of Idea | Missing-evidence problem and simulated InvoiceFlow Mini |
-| 0:25–0:55 | Technological Implementation | Real local scan and low score |
-| 0:55–1:25 | Design | Bounded mission and locked evidence claims |
-| 1:25–2:15 | Technological Implementation / Quality of Idea | Real GPT-5.6 reconciliation, disagreement, and preserved NOT_RUN |
-| 2:15–2:35 | Design / Impact | Human gate and governed Before / After |
-| 2:35–2:45 | Potential Impact | Reviewable handoff and closing line |
+| 0:00–0:20 | Potential Impact / Quality of Idea | Missing-evidence problem plus fictional-sample/real-execution boundary |
+| 0:20–0:45 | Technological Implementation | Prepared starting snapshot and real deterministic scan |
+| 0:45–1:10 | Design | Bounded mission, target-derived locked claims, local verdict |
+| 1:10–2:00 | Technological Implementation / Quality of Idea | Clean Codex demo task launches real GPT-5.6; local dashboard shows live state |
+| 2:00–2:25 | Technological Implementation | Separate verdicts, semantic alignment/conflict, hashes/freshness, preserved NOT_RUN |
+| 2:25–2:45 | Design / Impact | Human gate, governed prepared snapshot, explicit honest close |
 
 Full narration: [Demo Script](DEMO_SCRIPT.md).
 
@@ -214,7 +217,9 @@ Full narration: [Demo Script](DEMO_SCRIPT.md).
 - [ ] CLI help lists the full command surface.
 - [ ] Messy fixture scan reports 25/100 and visible governance/risk gaps.
 - [ ] Governed fixture scan reports 88/100 and one remaining risk.
-- [ ] Simulated label is visible.
+- [ ] FICTIONAL SAMPLE PROJECT and REAL EXECUTION labels are both visible.
+- [ ] Codex desktop visibly receives the demo prompt and launches the product command.
+- [ ] GPT-5.6 is not credited with the prepared snapshots or `25 → 88` score difference.
 - [ ] Context Trace explains selection.
 - [ ] Review Gate states its local identity boundary.
 - [ ] Mistake Shield gives reasons and a safer next action.

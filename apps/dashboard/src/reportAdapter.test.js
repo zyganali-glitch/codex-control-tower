@@ -19,6 +19,9 @@ test('normalizes the simulated sample from recorded comparison and evidence data
   assert.equal(report.comparison.after.evidenceCoverage, 88);
   assert.equal(report.reviewGate.approvedBy, 'SIMULATED_DEMO_REVIEWER');
   assert.equal(report.mistakeShield.score, null);
+  assert.equal(report.sampleContext.fictional, true);
+  assert.match(report.disclosure, /real deterministic scans of prepared fictional snapshots/i);
+  assert.match(report.disclosure, /recorded GPT-5\.6 reconciliation/i);
 });
 
 test('does not synthesize a baseline, prompt, gate, shield, or recorder event', () => {
@@ -112,4 +115,52 @@ test('preserves locked Evidence Reconciliation states beside model assessments',
 
   assert.equal(report.codexLiveReview.reconciliation.claimAudits[0].deterministicStatus, 'NOT_RUN');
   assert.equal(report.codexLiveReview.reconciliation.claimAudits[0].modelAssessment, 'SUPPORTS');
+  assert.equal(report.codexLiveReview.reconciliation.claimAudits[0].relation, 'AGREEMENT');
+  assert.equal(report.codexLiveReview.reconciliation.localVerdict, 'NOT_RUN');
+});
+
+test('preserves split verdicts, semantic relations, freshness, and integrity provenance', () => {
+  const report = normalizeReport({
+    projectName: 'provenance-project',
+    score: 72,
+    codexLiveReview: {
+      state: 'COMPLETE',
+      model: 'gpt-5.6-sol',
+      reconciliation: {
+        verdict: 'FAIL',
+        deterministicVerdict: 'FAIL',
+        modelVerdict: 'WARN',
+        summary: 'A local rule failed.',
+        modelSummary: 'The model questioned one source.',
+        claimAudits: [{
+          id: 'CI_EXECUTION',
+          deterministicStatus: 'FAIL',
+          modelAssessment: 'QUESTIONS',
+          agreement: 'AGREEMENT',
+          relation: 'ALIGNS_WITH_LOCKED_STATUS',
+        }],
+        reportProvenance: {
+          generatedAt: '2026-07-13T10:00:00.000Z',
+          loadedAt: '2026-07-13T10:00:01.000Z',
+          stale: false,
+        },
+        evidenceIntegrity: {
+          algorithm: 'sha256',
+          gitCommit: 'abc123',
+          gitWorktreeState: 'DIRTY',
+          gitChangedPaths: ['CONTROL_TOWER_REPORT.json'],
+          files: [{ path: 'CONTROL_TOWER_REPORT.json', sha256: 'digest', sizeBytes: 42 }],
+          bundle: { path: '.controltower/EVIDENCE_BUNDLE.md', sha256: 'bundle-digest', sizeBytes: 84 },
+        },
+      },
+    },
+  });
+
+  const reconciliation = report.codexLiveReview.reconciliation;
+  assert.equal(reconciliation.localVerdict, 'FAIL');
+  assert.equal(reconciliation.modelVerdict, 'WARN');
+  assert.equal(reconciliation.claimAudits[0].relation, 'ALIGNS_WITH_LOCKED_STATUS');
+  assert.equal(reconciliation.reportProvenance.stale, false);
+  assert.equal(reconciliation.evidenceIntegrity.bundle.sha256, 'bundle-digest');
+  assert.equal(reconciliation.evidenceIntegrity.gitWorktreeState, 'DIRTY');
 });

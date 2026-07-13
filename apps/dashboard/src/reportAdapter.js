@@ -1,3 +1,5 @@
+import normalizeCodexLiveReview from './reconciliationAdapter.js';
+
 const evidenceStates = ['PASS', 'WARN', 'FAIL', 'NOT_RUN', 'SIMULATED'];
 
 const asArray = (value) => {
@@ -307,7 +309,15 @@ function normalizeCliReport(raw) {
   return {
     ...raw,
     mode: simulated ? 'SIMULATED' : raw.scanMode || 'LOCAL',
-    disclosure: simulated ? 'SIMULATED DEMO DATA — InvoiceFlow Mini is fictional and no real customer activity is represented.' : 'LOCAL REPORT — source and evidence remain on this device.',
+    disclosure: simulated
+      ? 'InvoiceFlow Mini and its customer facts are fictional. The 25/88 values are real deterministic scans of prepared fictional snapshots, not a customer outcome; policy checks, evidence, two Node.js tests, and recorded GPT-5.6 reconciliation are real tool outputs.'
+      : 'LOCAL REPORT — source and evidence remain on this device.',
+    sampleContext: simulated ? {
+      fictional: true,
+      label: 'FICTIONAL SAMPLE PROJECT',
+      fictionalScope: 'InvoiceFlow Mini, its people, customer facts, approval identity, and prepared before/after states',
+      realExecution: 'Real deterministic scans of prepared snapshots, policy checks, evidence bundle, two Node.js tests, and recorded GPT-5.6 reconciliation',
+    } : { fictional: false },
     repository: {
       name: raw.project?.name || raw.projectName || 'Unnamed repository',
       path: raw.project?.target || raw.targetPath || 'Path not recorded',
@@ -359,6 +369,7 @@ function normalizeCliReport(raw) {
       safeRewrite: raw.mistakeShield.saferNextAction || raw.nextSafeAction || phase0?.nextMission || null,
     } : null,
     comparison,
+    codexLiveReview: normalizeCodexLiveReview(raw.codexLiveReview),
   };
 }
 
@@ -368,5 +379,6 @@ export default function normalizeReport(raw = {}) {
     ...raw,
     risks: raw.risks || [], missingSurfaces: raw.missingSurfaces || [], scoreBreakdown: raw.scoreBreakdown || [], traceability: raw.traceability || [], flightRecorder: Array.isArray(raw.flightRecorder) ? raw.flightRecorder : [],
     evidenceBoundary: raw.evidenceBoundary || { summary: Object.fromEntries(evidenceStates.map((state) => [state, 0])), checks: [] },
+    codexLiveReview: normalizeCodexLiveReview(raw.codexLiveReview),
   };
 }

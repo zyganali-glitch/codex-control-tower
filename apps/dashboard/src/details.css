@@ -123,6 +123,9 @@
 @media (max-width: 860px) {
   .codex-live__facts { grid-template-columns: 1fr 1fr; }
   .codex-live__columns { grid-template-columns: 1fr; }
+  .reconciliation-counts { grid-template-columns: repeat(3, 1fr); }
+  .proof-metadata { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .proof-files > div,.proof-test { grid-template-columns: 1fr 1fr; }
   .sidebar { width: 248px; transform: translateX(-102%); transition: transform .22s ease; box-shadow: 24px 0 70px rgba(0,0,0,.45); }
   .sidebar--open { transform: translateX(0); }
   .sidebar-close { display: grid; place-items: center; }
@@ -141,8 +144,14 @@
 }
 @media (max-width: 620px) {
   .codex-live__facts { grid-template-columns: 1fr; }
+  .verdict-split,.verdict-explanations,.ci-scope-note { grid-template-columns: 1fr; }
+  .reconciliation-counts { grid-template-columns: repeat(2, 1fr); }
+  .reconciliation-claim__head { flex-direction: column; }
+  .proof-metadata,.proof-files > div,.proof-test { grid-template-columns: 1fr; }
+  .proof-details summary { align-items: flex-start; flex-direction: column; }
   .disclosure { justify-content: flex-start; padding: 6px 12px; overflow: hidden; white-space: nowrap; }
   .disclosure span { overflow: hidden; text-overflow: ellipsis; }
+  .disclosure__detail { display: none; }
   .topbar { height: 59px; gap: 10px; }
   .repo-select .repo-icon,.repo-select .status-pill { display: none; }
   .repo-select strong { max-width: 140px; }

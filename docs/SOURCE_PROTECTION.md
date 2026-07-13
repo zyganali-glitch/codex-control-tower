@@ -27,7 +27,7 @@ The primary family source is [Universal Agent OS](https://github.com/zyganali-gl
 
 - Product: Codex Control Tower — mission control for AI-built software.
 - Active package: `codex-control-tower`.
-- Demo: InvoiceFlow Mini, explicitly simulated.
+- Demo: InvoiceFlow Mini, explicitly labeled fictional sample content with separate real execution evidence.
 - Runtime dependency on the Universal Agent OS family: none.
 - Write operations against family sources: none.
 

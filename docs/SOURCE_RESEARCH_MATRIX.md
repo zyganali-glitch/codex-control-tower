@@ -8,6 +8,8 @@ This is a concise, read-only concept research record. Codex Control Tower uses t
 | --- | --- |
 | [OpenAI Build Week](https://openai.com/build-week/) | Make Codex participation visible and ship a runnable artifact. |
 | [OpenAI Build Week Devpost](https://openai.devpost.com/) | Demonstrate technological implementation, design, potential impact, and idea quality with honest evidence. |
+| [Official Rules](https://openai.devpost.com/rules) | Preserve eligibility/timing provenance and verify every submission requirement against the current text. |
+| [Official FAQ](https://openai.devpost.com/details/faqs) | Keep the video under three minutes, explain Codex/GPT-5.6 use aloud, and obtain the private `/feedback` Session ID from the primary build task. |
 
 ## Family research
 
@@ -25,8 +27,8 @@ This is a concise, read-only concept research record. Codex Control Tower uses t
 
 - Use concepts, not source implementation.
 - Keep deterministic scanning and scoring independently reproducible.
-- Make real Codex use explicit, optional, read-only, and provenance-bearing.
-- Keep InvoiceFlow Mini simulated and never use a family repository as demo data.
+- Make real Codex use a featured explicit opt-in, read-only, and provenance-bearing path.
+- Keep InvoiceFlow Mini fictional and never use a family repository as demo data; label real scan/test/model execution separately.
 - Use “Universal Agent OS family” as the public lineage term.
 
 ## Related reading

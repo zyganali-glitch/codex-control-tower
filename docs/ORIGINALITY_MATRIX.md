@@ -1,6 +1,6 @@
 # Originality Matrix
 
-Codex Control Tower acknowledges the **Universal Agent OS family** while making a different product bet: compute the state of a local repository, turn it into an explainable and bounded Codex mission, preserve evidence and review state, and optionally obtain a real GPT-5.6 Sol assessment without surrendering the deterministic core.
+Codex Control Tower acknowledges the **Universal Agent OS family** while making a different product bet: compute the state of a local repository, turn it into an explainable and bounded Codex mission, preserve evidence and review state, and use a featured explicit opt-in real GPT-5.6 Sol assessment without surrendering the deterministic core.
 
 | Prior family concept | New Codex Control Tower contribution | Build Week value |
 | --- | --- | --- |
@@ -11,7 +11,7 @@ Codex Control Tower acknowledges the **Universal Agent OS family** while making 
 | Human review | Review Gate and Mistake Shield expose explicit developer decisions and safer rewrites. | Human/Codex collaboration remains visible. |
 | Explainable context | Local Context Graph/Trace shows why each file, test, plan, or risk matters. | Product-quality context preparation. |
 | Timeline and comparison | Flight Recorder and Before/After dashboard show change over time without claiming an LLM benchmark. | A coherent 2:45 story. |
-| Model-assisted assessment | Real `gpt-5.6-sol` audits locked claims; a deterministic reconciler rejects unsafe output, filters citations, preserves statuses, and exposes disagreement. | Codex is a live product participant without owning the evidence state. |
+| Model-assisted assessment | Real `gpt-5.6-sol` audits target-derived locked claims; a deterministic reconciler rejects unsafe structure, filters/records unsupported citations, preserves the local verdict, and exposes semantic alignment/conflict plus hashes/freshness. | Codex is a live product participant without owning the evidence state. |
 
 ## Originality guardrails
 
@@ -21,7 +21,7 @@ Codex Control Tower acknowledges the **Universal Agent OS family** while making 
 4. The handoff is durable and inspectable.
 5. The deterministic path works without an API key.
 6. Real Codex use is explicit and its data boundary is disclosed.
-7. InvoiceFlow Mini remains fictional and simulated.
+7. InvoiceFlow Mini remains fictional; prepared sample content stays separate from real scan/test/model execution.
 8. Public lineage uses the term “Universal Agent OS family.”
 
 No family competition placement or deployment claim is used as evidence for this entry.

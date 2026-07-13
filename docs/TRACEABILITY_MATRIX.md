@@ -2,13 +2,21 @@
 
 | Requirement | Implementation | Evidence | Status |
 | --- | --- | --- | --- |
-| Local-first Codex governance CLI | `cli/commands/`, `cli/lib/` | Root tests and `npm.cmd run verify` record | PASS |
-| Judge-readable dashboard | `apps/dashboard/` | Vite production build and prior visual inspection | PASS |
-| Honest simulated before/after demo | `examples/messy-saas-before`, `examples/governed-saas-after` | `npm.cmd run demo`, disclosure labels, generated reports | PASS |
-| Root dogfooding without fixture leakage | Configured, visible scan excludes plus explicit simulation/stale markers | Root regression assertions and `REAL_LOCAL_SCAN` release report | PASS |
-| Plan and bounded mission | `plans/master-roadmap.md`, `.controltower/phase0.json` | This matrix and Review Gate scope | PASS |
-| Human publication approval | `.controltower/review-gate.json` | User's active-session request, local unsigned gate | PASS — identity is not cryptographically verified |
+| Local-first Codex governance CLI | `cli/commands/`, `cli/lib/` | Current test and `npm run verify` records | PASS |
+| Judge-readable dashboard | `apps/dashboard/` | Production build plus local/Pages visual checks | PASS |
+| Static no-install judge exhibit | `.github/workflows/pages.yml` | GitHub Pages run [`29279549424`](https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29279549424), published baseline `416d145` | PASS |
+| Live recording workbench | Local `npm run dashboard` | `READY → RUNNING → COMPLETE` contract and dashboard tests | PASS — local only |
+| Honest fictional before/after sample | `examples/messy-saas-before`, `examples/governed-saas-after` | Real `npm run demo` scans and two focused fixture tests | PASS — prepared snapshots, not customer outcomes |
+| General target-derived evidence claims | `cli/commands/codex-review.js` | Reconciliation tests and generated deterministic claims | PASS |
+| Real GPT-5.6 audit | Explicit opt-in `npm run demo:codex` | Recorded model/run provenance and evidence record | PASS |
+| Deterministic authority boundary | Local verdict/status computation plus separate model opinion | Adversarial validation/reconciliation tests | PASS |
+| Evidence integrity/freshness | SHA-256 bundle/file hashes, base Git commit, bounded worktree state, command provenance, freshness state | Reconciliation record; target-local raw test output | PASS |
+| Unsupported citation handling | Citation allowlist and rejected-path record | Accepted citations are filtered; rejected paths remain inspectable | PASS |
+| Plan and bounded mission | `plans/master-roadmap.md`, `.controltower/phase0.json` | Mission prompt and Review Gate scope | PASS |
+| Human publication approval | `.controltower/review-gate.json` | Local unsigned gate | PASS — identity is not cryptographically verified |
 | Source lineage and protection | `docs/SOURCE_*`, `docs/FEATURE_HARVEST.md`, `docs/ORIGINALITY_MATRIX.md` | `tests/test_source_protection.js` | PASS |
-| Remote GitHub release | `origin/main` | Matching local/remote SHA `e0ee256e7eb497cd6293fe51f51899645ee3ed90` | PASS |
-| Hosted CI | `.github/workflows/ci.yml` | Successful GitHub Actions run `29208503014` | PASS |
-| Final Devpost media and submission | `docs/DEMO_SCRIPT.md`, submission docs | Sanitized captures, video URL, submitted entry | NOT_RUN |
+| Final public YouTube video | `docs/DEMO_SCRIPT.md`, `docs/DEMO_REHBERI_TR.md` | Verified public URL and media privacy review | NOT_RUN |
+| Private `/feedback` form field | Primary Codex task and Devpost form | Real Session ID, not committed | NOT_RUN in public evidence |
+| Independent user validation | `docs/USER_VALIDATION.md` | Consented sessions and honest summary | NOT_RUN |
+
+The final Git commit created after this matrix is edited must be read from Git history; this file does not predict or invent it.

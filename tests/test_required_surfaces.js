@@ -18,4 +18,8 @@ for (const relative of required) assert.ok(fs.existsSync(path.join(ROOT, relativ
 const beforeRequired = ['package.json', 'README.md', 'src/app.js', 'src/auth.js', 'src/invoices.js', 'src/customers.js', 'src/payments.js', 'src/report.js', 'src/utils.js', 'tests/placeholder.test.js', 'docs/old-notes.md'];
 for (const relative of beforeRequired) assert.ok(fs.existsSync(path.join(ROOT, 'examples/messy-saas-before', relative)), `messy ${relative} missing`);
 assert.equal(fs.existsSync(path.join(ROOT, 'examples/messy-saas-before/.codex/AGENTS.md')), false, 'messy repo must stay ungoverned');
+const governedEvidencePath = path.join(ROOT, 'examples/governed-saas-after/.controltower/governed-test-output.txt');
+assert.ok(fs.existsSync(governedEvidencePath), 'governed fixture must retain its target-local raw test output');
+const governedReport = JSON.parse(fs.readFileSync(path.join(ROOT, 'examples/governed-saas-after/CONTROL_TOWER_REPORT.json'), 'utf8'));
+assert.equal(governedReport.verification.commands[0].evidence, '.controltower/governed-test-output.txt');
 console.log('PASS test_required_surfaces');

@@ -63,7 +63,7 @@ A trustworthy completion packet should contain:
 | Review approved | Gate artifact, bounded scope, note, timestamp, and approver provenance; local identity limitation stated |
 | No unintended change | Diff review plus relevant regression checks; absence of a scanner flag is not sufficient |
 | Security/compliance checked | Named qualified review or tool output; otherwise NOT_RUN |
-| Demo result | SIMULATED label, fixture path, generating command, and separation from customer/production claims |
+| Sample/demo result | Fictional-sample marker, fixture path, exact generating command, real execution evidence, and separation from customer/production claims |
 | Ready for handoff | Remaining risks, every NOT_RUN gate, known failures, and the next safe action |
 
 The developer should be able to open every evidence path and rerun material checks in a trusted environment.
@@ -76,7 +76,7 @@ The developer should be able to open every evidence path and rerun material chec
 | **WARN** | Evidence is partial, stale, narrow, ambiguous, heuristic, or needs human interpretation. | A mandatory check definitively failed or never ran. |
 | **FAIL** | A required surface is absent, a command ran and failed, or observed behavior contradicts the requirement. | The check was unavailable and produced no result. |
 | **NOT_RUN** | The check was not executed, unavailable, outside scope, or requires an environment/person not present. | The check ran and failed; that is FAIL. |
-| **SIMULATED** | The actor, data, event, approval, score, or outcome belongs to a controlled fixture/demo. | The same item is being presented as customer, production, live-provider, or independent evidence. |
+| **SIMULATED** | The actor, customer fact, event, approval, or asserted outcome belongs to a controlled fixture/demo. | A real scan/test/model execution is being described; label its fictional target and real execution separately. |
 
 Status scope matters. “2 focused fixture tests PASS” does not imply integration, provider, browser, load, deployment, or security gates passed.
 
@@ -186,14 +186,14 @@ The build exposed several concrete improvements:
 | Known-mistake comparison | **Implemented now** | Deterministic Mistake Shield |
 | Cross-session event record | **Implemented now** | Local JSONL Flight Recorder |
 | Evidence and Devpost exports | **Implemented now** | Portable Markdown/JSON packs |
-| Controlled before/after proof | **Implemented now** | InvoiceFlow Mini simulated fixtures and dashboard |
+| Controlled before/after proof | **Implemented now** | Prepared fictional InvoiceFlow Mini snapshots plus real deterministic scans/tests and dashboard |
 | Automatic Git/diff/concurrent-work capture | **Future work** | Current scanner does not provide a complete worktree/ownership handoff |
 | Executed-command evidence ingestion | **Future work** | Users/agents record events; no independent command attestation |
 | Signed/identity-backed gates and immutable logs | **Future work** | Local files are mutable and unsigned |
 | Language-aware semantic graph | **Future work** | Current context is deterministic and heuristic |
 | PR/MR, CI, team, and cross-repo integration | **Future work** | No hosted integration in the local-first build |
-| Real GPT-5.6 Evidence Reconciliation | **Implemented now** | ChatGPT subscription, verified `gpt-5.6-sol`, read-only execution, locked deterministic states, structured provenance, and explicit data disclosure |
-| Full multilingual product packs | **Future work** | Only Phase-0 is bilingual in this version |
+| Real GPT-5.6 Evidence Reconciliation | **Implemented now** | ChatGPT subscription, verified `gpt-5.6-sol`, read-only execution, target-derived locked states, local verdict/action, separate model opinion/suggestion, SHA-256/base-commit/worktree/freshness provenance, and explicit data disclosure |
+| Full multilingual product packs | **Future work** | The Build Week product and Phase-0 are English-only |
 
 ## Assessment boundary
 

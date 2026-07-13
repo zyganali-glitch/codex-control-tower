@@ -21,7 +21,7 @@ const HELP = `Codex Control Tower (cct) — mission control for AI-built softwar
 Usage:
   cct init --target <dir> --profile solo|startup|enterprise|regulated --codex
   cct phase0 --target <dir> [--demo]
-  cct scan --target <dir> [--out <file>]
+  cct scan --target <dir> [--out <file>] [--portable]
   cct health --target <dir> [--strict]
   cct doctor --target <dir>
   cct evidence --target <dir> --out <dir>

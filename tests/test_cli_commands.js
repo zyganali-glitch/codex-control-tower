@@ -4,6 +4,8 @@ const assert = require('node:assert/strict');
 const { execFileSync } = require('node:child_process');
 const path = require('node:path');
 const { COMMANDS, HELP, parseArgs } = require('../cli/index');
+const { portableValue } = require('../cli/commands/scan');
+const { scanRepository } = require('../cli/lib/repoScanner');
 const { ROOT } = require('./helpers');
 
 const packageJson = require('../package.json');
@@ -13,7 +15,16 @@ for (const command of ['init', 'phase0', 'scan', 'health', 'doctor', 'evidence',
   assert.equal(typeof COMMANDS[command], 'function', `${command} must be routed`);
   assert.match(HELP, new RegExp(command.replace('-', '\\-')));
 }
-assert.deepEqual(parseArgs(['--target', '.', '--strict', '--out', 'report.json']), { _: [], target: '.', strict: true, out: 'report.json' });
+assert.deepEqual(parseArgs(['--target', '.', '--strict', '--portable', '--out', 'report.json']), { _: [], target: '.', strict: true, portable: true, out: 'report.json' });
+assert.deepEqual(
+  portableValue({ targetPath: 'C:\\Users\\Builder\\repo', nested: ['C:/Users/Builder/repo/file.js'] }, 'C:\\Users\\Builder\\repo'),
+  { targetPath: '.', nested: ['./file.js'] }
+);
+const rootScan = scanRepository(ROOT);
+assert.equal(rootScan.scanMode, 'REAL_LOCAL_SCAN');
+assert.equal(rootScan.simulatedData, false);
+assert.equal(rootScan.projectName, 'codex-control-tower');
+assert.ok(rootScan.score >= 75, `real root repository scan should remain reviewable, received ${rootScan.score}`);
 const output = execFileSync(process.execPath, [path.join(ROOT, 'cli', 'index.js'), '--help'], { encoding: 'utf8' });
 assert.match(output, /Codex Control Tower/);
 assert.match(output, /codex-review/);

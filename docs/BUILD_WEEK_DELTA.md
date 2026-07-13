@@ -30,14 +30,20 @@ That commit changed 63 files, adding approximately 3,690 lines and removing appr
 
 The final Build Week hardening series adds:
 
-- deterministic claim generation before any model call;
+- target-derived deterministic claim generation before any model call;
 - real GPT-5.6 Evidence Reconciliation rather than an unbounded general review;
 - local rejection of missing, duplicate, status-injecting, execution-claiming, or malformed model output;
 - preservation of deterministic PASS, WARN, FAIL, NOT_RUN, and SIMULATED states;
-- an evidence-agreement/disagreement dashboard;
+- a deterministic local verdict plus separately labeled model opinion;
+- semantic alignment/conflict rather than treating every non-SUPPORTS answer as disagreement;
+- SHA-256 bundle/file integrity, base-commit plus bounded-worktree context, and report freshness/staleness provenance;
+- filtered and recorded unsupported citation paths;
+- an Evidence Reconciliation dashboard with truthful READY/RUNNING/COMPLETE state;
 - a GitHub Pages judge-demo workflow;
 - explicit judge testing, platform, video, user-validation, and `/feedback` guidance;
-- a shorter competition video path centered on the product's main loop.
+- a shorter competition video path where a clean Codex desktop task visibly launches the product command;
+- an explicit GitHub Pages static-exhibit versus local live-workbench boundary;
+- a fictional-sample versus real-execution boundary that does not credit GPT-5.6 with the prepared `25 → 88` snapshot difference.
 
 The main hardening implementation is commit `034d53ff21c65323823e2693f9aed39374f83185` (`feat: add locked GPT-5.6 evidence reconciliation`). Git history remains the source of truth for exact timestamps and diffs.
 
@@ -45,10 +51,10 @@ The main hardening implementation is commit `034d53ff21c65323823e2693f9aed39374f
 
 The Build Week contribution is not merely the existence of a deterministic scanner. The new work makes Codex and GPT-5.6 inspectable participants in the product:
 
-1. Control Tower locks claims and statuses from local repository evidence.
+1. Control Tower derives target-appropriate claims and locks statuses plus the authoritative local verdict from repository evidence.
 2. Real GPT-5.6 audits those claims against named files in a read-only Codex run.
-3. A deterministic reconciler rejects unsafe model output and preserves the original evidence states.
-4. The dashboard exposes agreement, disagreement, missing proof, rejected citations, and the next safe action.
+3. A deterministic reconciler rejects unsafe model output, filters/records unsupported citations, preserves original evidence states, and keeps the model verdict separate.
+4. The dashboard exposes semantic alignment/conflict, evidence hashes/freshness, missing proof, filtered paths, and the next safe action.
 5. A human Review Gate remains the authority boundary.
 
 ## Verification sources

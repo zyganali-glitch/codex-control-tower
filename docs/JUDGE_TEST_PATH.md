@@ -1,37 +1,40 @@
 # Judge Test Path
 
-This project is submitted to the **Developer Tools** track. The judge path deliberately separates a no-install read-only product tour from the full local developer-tool workflow.
+This **Developer Tools** entry deliberately separates a no-install static exhibit from the live local workflow.
 
-## 30-second no-install tour
+## 30-second no-install exhibit
 
-Open the verified public judge demo:
+Open the verified public page:
 
 **https://zyganali-glitch.github.io/codex-control-tower/**
 
-GitHub Actions run `29275636867` deployed the page successfully, and anonymous HTTP access returned `200` on 2026-07-13.
+GitHub Pages workflow run [`29279549424`](https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29279549424) succeeded for published baseline `416d145`, and the page was verified without authentication on 2026-07-13.
 
-Judge path:
+1. Read **FICTIONAL SAMPLE PROJECT** and the separate **REAL EXECUTION** statement.
+2. In **Overview**, inspect the recorded Evidence Reconciliation result.
+3. Confirm the deterministic local verdict/statuses remain separate from `modelVerdict` and model assessments.
+4. Open **Before / After** for the real deterministic scan results `25 → 88` and `16 → 1` on two prepared fictional snapshots.
+5. Open **Evidence** and confirm unavailable checks remain NOT_RUN.
 
-1. Open the public judge-demo URL.
-2. Read the amber disclosure: InvoiceFlow Mini is **SIMULATED DEMO DATA**.
-3. In **Overview**, inspect the locked deterministic score and Evidence Reconciliation panel.
-4. Confirm the recorded model layer says **REAL GPT-5.6** and **RECORDED REAL CODEX RUN** or shows a current real run state.
-5. Confirm claim rows keep their deterministic PASS, FAIL, NOT_RUN, or SIMULATED state beside the model assessment.
-6. Open **Before / After** to see `25 → 88` and `16 → 1` for the controlled fixture.
-7. Open **Evidence** and confirm unavailable checks remain NOT_RUN.
+GitHub Pages is a static, read-only, no-install exhibit. It does not scan the judge's repository, execute Codex in the browser, or show live state from the entrant's computer.
 
-The hosted tour does not scan the judge's repository and does not pretend to execute Codex in the browser. It visualizes sanitized sample data plus a recorded real GPT-5.6 evidence audit.
+## What the sample proves
 
-## Full local test
+- InvoiceFlow Mini's customer facts, actors, approval, and prepared before/after snapshots are fictional.
+- The scanner really evaluates both snapshots and calculates their heuristic scores.
+- Two focused Node.js fixture tests really ran on the governed snapshot.
+- A recorded real `gpt-5.6-sol` run audited the bounded evidence read-only.
+- GPT-5.6 did not create the snapshots, change the score from 25 to 88, run the tests, or prove production readiness.
+
+## Full live local test
 
 Requirements:
 
-- Node.js 18 or newer.
-- A desktop computer.
-- Internet only for dependency installation and the real Codex/GPT-5.6 step.
-- A ChatGPT account signed in to Codex for `npm run demo:codex`.
+- Node.js 18 or newer;
+- Codex desktop signed in to a ChatGPT account with `gpt-5.6-sol` access;
+- internet for dependency installation and the real model step.
 
-Commands:
+From the repository root:
 
 ```bash
 npm install
@@ -39,31 +42,33 @@ npm run demo
 npm run dashboard
 ```
 
-Expected result:
+Expected local result:
 
-- the browser opens automatically;
-- the dashboard appears without opening `index.html` directly;
-- the simulated before score is 25 with 16 risks;
-- the simulated governed score is 88 with one remaining risk;
-- the Evidence Reconciliation panel initially says READY.
+- browser opens the local dashboard without opening `index.html` directly;
+- prepared before snapshot: 25 with 16 risks;
+- prepared governed snapshot: 88 with one remaining risk;
+- Evidence Reconciliation begins at `READY / NOT STARTED`.
 
-Keep the dashboard open. In a second command window run:
+Keep the local dashboard open. Create a clean **Demo Reconciliation** task for this repository in Codex desktop and paste the exact [Codex Demo Prompt](CODEX_DEMO_PROMPT.md). Codex launches `npm run demo:codex` without editing files. The separate primary build task is used only to obtain the private `/feedback` Session ID and stays off-camera.
 
-```bash
-npm run demo:codex
-```
+Expected live result:
 
-Expected result:
+- dashboard changes from `READY` to `RUNNING` to `COMPLETE`;
+- exact `gpt-5.6-sol` and read-only ChatGPT/Codex provenance are shown;
+- locked claim statuses and `reconciliation.deterministicVerdict` remain local;
+- separate `modelVerdict` / `modelSummary` / `modelNextSafeAction` are identified as model opinion, while the local verdict and action remain authoritative;
+- claim relations show `ALIGNS_WITH_LOCKED_STATUS` or `CONFLICTS_WITH_LOCKED_STATUS`;
+- `reportProvenance` shows fresh/stale comparison;
+- `evidenceIntegrity` shows the SHA-256 bundle digest, file hashes, base Git commit, and bounded worktree state when available;
+- unsupported citation paths are filtered from accepted citations and recorded;
+- preserved NOT_RUN count and next safe action remain visible.
 
-- Codex verifies the signed-in ChatGPT session;
-- Codex verifies that `gpt-5.6-sol` is available;
-- a read-only real model run audits five locked claims;
-- the dashboard updates to COMPLETE;
-- agreement, disagreement, preserved NOT_RUN count, rejected evidence paths, and next safe action become visible.
+A separate command window running `npm run demo:codex` is a recovery option only; it is the same product command but does not provide the preferred visible Codex-desktop instruction path.
 
 ## Evidence locations
 
 - `examples/governed-saas-after/.controltower/DETERMINISTIC_CLAIMS.json`
+- `examples/governed-saas-after/.controltower/EVIDENCE_BUNDLE.md`
 - `examples/governed-saas-after/.controltower/CODEX_LIVE_REVIEW_PROMPT.md`
 - `examples/governed-saas-after/.controltower/codex-live-review.json`
 - `examples/governed-saas-after/.controltower/codex-live-events.jsonl`
@@ -72,13 +77,12 @@ Expected result:
 
 ## Honest boundary
 
-- InvoiceFlow Mini, its approvals, its score, and its history are simulated.
-- The committed Codex response is from a real, separately labeled GPT-5.6 Sol run.
-- The model does not compute or change the deterministic score.
-- The model does not run the fixture tests.
-- The static judge-demo deployment is verified. Fixture/provider deployment, browser accessibility, load, and independent security checks remain NOT_RUN unless a named artifact proves otherwise.
-- GitHub Pages may process ordinary hosting access logs under GitHub's own terms; Codex Control Tower adds no analytics or telemetry.
+- A static judge-exhibit deployment is verified; fixture/provider deployment is not.
+- The health score is deterministic and reproducible but heuristic, not a security/correctness certificate.
+- Local files and provenance hashes improve inspectability but are not signed, immutable attestations.
+- Fixture/provider browser, load, accessibility, and independent security checks remain NOT_RUN unless a named artifact proves otherwise.
+- GitHub Pages may process ordinary hosting logs under GitHub's terms; Codex Control Tower adds no analytics or telemetry.
 
 ## Fallback
 
-If the hosted page is unavailable, judges can inspect the public repository and video without rebuilding, then use the three local commands above for the full test. A failed live model run must remain FAILED or BLOCKED; it must never be replaced with simulated success.
+If the hosted page is unavailable, judges can inspect the public repository and video, then use the local commands. A failed model run must remain FAILED or BLOCKED; it must never be replaced with fictional success. No final YouTube URL or `/feedback` Session ID is claimed in this document until the entrant actually obtains it.

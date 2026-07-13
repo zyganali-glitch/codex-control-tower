@@ -40,8 +40,8 @@ Codex Control Tower turns repository state into a reviewable mission-control wor
 5. **Direct Codex:** Mission Prompt Generator creates a bounded next mission with scope, evidence, tests, docs, and stop rules.
 6. **Lock evidence:** local code creates claims whose PASS, WARN, FAIL, NOT_RUN, and SIMULATED states cannot be replaced by model output.
 7. **Audit with real GPT-5.6:** a read-only Codex run assesses each claim against named files.
-8. **Reconcile and decide:** local validation rejects unsafe output, the dashboard exposes agreement/disagreement, and the human Review Gate remains authoritative.
-9. **See progress:** the dashboard compares the same simulated project before and after governance.
+8. **Reconcile and decide:** local validation rejects unsafe output, computes the authoritative deterministic verdict, keeps model opinion separate, exposes semantic agreement/conflict, and leaves the human Review Gate authoritative.
+9. **See progress:** the dashboard compares prepared before/governed snapshots of the same fictional sample project.
 
 ## What It Does
 
@@ -57,8 +57,8 @@ Codex Control Tower turns repository state into a reviewable mission-control wor
 - Evidence Pack and Devpost Pack export
 - Eight-tab Vite/React dashboard with a conditional Phase-0 card
 - Real GPT-5.6 Evidence Reconciliation panel with READY/RUNNING/COMPLETE state
-- Locked claim generation, strict structured-output validation, allowed-path filtering, agreement/disagreement, and preserved NOT_RUN
-- Controlled InvoiceFlow Mini before/after demo
+- Target-derived locked claims, strict structured-output validation, deterministic local verdict, separate model opinion, semantic agreement/conflict, evidence hashes/freshness, filtered-path records, and preserved NOT_RUN
+- Prepared InvoiceFlow Mini before/governed sample snapshots with real deterministic scans
 
 ## What Is Technically Implemented
 
@@ -73,10 +73,10 @@ Codex Control Tower turns repository state into a reviewable mission-control wor
 | Continuity | Memory-source analysis and typed local JSONL event recorder | cli/lib/memoryLens.js and cli/lib/flightRecorder.js |
 | Evidence | Twelve-file Markdown/JSON evidence export with explicit status boundary | cli/lib/evidenceCollector.js |
 | Dashboard | Local Vite/React report workbench; bundled report import and local JSON load/export | apps/dashboard/ |
-| Evidence Reconciliation | Five deterministic claims, real read-only `gpt-5.6-sol` audit, schema validation, status-injection rejection, citation filtering, and locked-state merge | cli/commands/codex-review.js and tests/test_codex_review.js |
+| Evidence Reconciliation | Target-derived deterministic claims, authoritative local verdict/action, separate model verdict/suggestion, real read-only `gpt-5.6-sol` audit, schema validation, evidence SHA-256/base-commit/worktree/freshness provenance, semantic claim relations, citation filtering/recording, and locked-state merge | cli/commands/codex-review.js and tests/test_codex_review.js |
 | Fixtures | Fictional messy/governed InvoiceFlow Mini projects | examples/messy-saas-before and examples/governed-saas-after |
 
-The deterministic scan does not call an AI API and remains inspectable without an API key. The explicit `codex-review` command uses the user's signed-in ChatGPT subscription to invoke real `gpt-5.6-sol` read-only. Before the call it locks five local claims. After the call it rejects malformed, incomplete, duplicate, status-injecting, execution-claiming, or unapproved-citation output. It records the prompt, events, assessment, reconciliation, model, CLI version, access type, and timestamps without changing deterministic state.
+The deterministic scan does not call an AI API and remains inspectable without an API key. The featured explicit opt-in `codex-review` command uses the user's signed-in ChatGPT subscription to invoke real `gpt-5.6-sol` read-only. Before the call it derives target-appropriate locked claims, computes `reconciliation.deterministicVerdict` and the local `nextSafeAction`, and records `evidenceIntegrity` plus `reportProvenance`. After the call it rejects malformed, incomplete, duplicate, status-injecting, or execution-claiming output. Unsupported citation paths are filtered from accepted citations and recorded. `modelVerdict`, `modelSummary`, and `modelNextSafeAction` remain separate model opinion; claim relations identify alignment or conflict without changing local fact.
 
 ## How Codex Was Used
 
@@ -110,11 +110,11 @@ Read [Codex Self-Assessment](CODEX_SELF_ASSESSMENT.md) and [Codex-Native Recomme
 
 ## InvoiceFlow Mini Demo
 
-InvoiceFlow Mini is a **fictional, controlled, SIMULATED DEMO PROJECT** for small-business invoice/customer/payment tracking. It is not a customer repository, production payment application, benchmark, donor repository, or competition-source repository.
+InvoiceFlow Mini is a **FICTIONAL SAMPLE PROJECT** for small-business invoice/customer/payment tracking. It is not a customer repository, production payment application, benchmark, donor repository, or competition-source repository.
 
 The messy fixture intentionally has stale documentation, a placeholder test, TODO/FIXME markers, missing governance surfaces, and risky auth/payment examples. The governed fixture adds the Control Tower workflow and focused proof without pretending all application risks are solved.
 
-Verified local fixture results:
+The messy and governed folders are prepared snapshots. GPT-5.6 did not create them or cause the score change. Verified real executions on those snapshots are:
 
 | Signal | Messy before | Governed after |
 | --- | ---: | ---: |
@@ -136,13 +136,13 @@ npm run demo
 npm run dashboard
 ~~~
 
-With the dashboard already open, run the real model layer in a second command window:
+With the local dashboard already open, create a clean **Demo Reconciliation** Codex desktop task for this repository and paste the [Codex Demo Prompt](CODEX_DEMO_PROMPT.md). Codex visibly launches:
 
 ~~~bash
 npm run demo:codex
 ~~~
 
-The Evidence Reconciliation panel updates automatically from READY to RUNNING to COMPLETE.
+The local Evidence Reconciliation panel updates automatically from `READY / NOT STARTED` to RUNNING to COMPLETE. GitHub Pages is a static recorded no-install exhibit and does not display this local transition. A second command window is recovery only.
 
 Individual proof:
 
@@ -159,7 +159,7 @@ node cli/index.js evidence --target examples/governed-saas-after --out tmp/evide
 Phase-0:
 
 ~~~bash
-node cli/index.js phase0 --target examples/demo-workspace --locale en --demo
+node cli/index.js phase0 --target examples/demo-workspace --demo
 ~~~
 
 For a timed recording, follow [Demo Script](DEMO_SCRIPT.md).
@@ -180,18 +180,18 @@ For a timed recording, follow [Demo Script](DEMO_SCRIPT.md).
 - Local scan/test commands explicitly recorded as run in the build log
 - Real Codex execution with verified `gpt-5.6-sol`, ChatGPT subscription provenance, read-only permissions, locked claims, saved structured output, and deterministic reconciliation
 
-## What Is Simulated
+## What Is Fictional Sample Content
 
 - InvoiceFlow Mini and all of its customer/payment/auth records
 - Demo actors, approvals, branches, commits, timestamps, and history
-- Before/after outcomes as a customer story
+- Prepared before/after snapshots as a customer story; the real deterministic scan values are not customer outcomes
 - Any provider-backed payment verification
 - Any enterprise identity-backed approval
 - Any browser, load, deployment, penetration, or independent security result not explicitly executed
 
-The real Codex response is **not simulated**. It is kept separate from the fictional InvoiceFlow Mini data and from deterministic scoring.
+The scanner/test executions and real Codex response are **not simulated**. They are kept separate from fictional InvoiceFlow Mini facts. GPT-5.6 does not calculate the score or create the prepared snapshots.
 
-Simulated data is labeled in the fixtures, reports, dashboard, and narrative.
+Fictional sample content and real execution are separately labeled in fixtures, reports, dashboard, and narrative.
 
 ## Evidence Boundary
 
@@ -205,7 +205,7 @@ A test file's presence is not proof it ran. Two focused fixture tests do not est
 
 ## OpenAI Build Week Fit
 
-The official [OpenAI Build Week page](https://openai.com/build-week/) invites developers to bring ideas to life with Codex. The official [Devpost page](https://openai.devpost.com/) lists four judging criteria: Technological Implementation, Design, Potential Impact, and Quality of the Idea.
+The official [OpenAI Build Week Devpost page](https://openai.devpost.com/) lists four judging criteria: Technological Implementation, Design, Potential Impact, and Quality of the Idea. Submission/media/Codex requirements are checked against the current [official rules](https://openai.devpost.com/rules) and [official FAQ](https://openai.devpost.com/details/faqs).
 
 Codex Control Tower fits as:
 
@@ -262,7 +262,7 @@ Full list: [Limitations](LIMITATIONS.md).
 
 ## Future Roadmap
 
-- Deeper reconciliation policies beyond the implemented five locked claims
+- Additional target-derived reconciliation policies and language-aware claim adapters
 - GitHub/GitLab PR/MR and CI adapters
 - Stronger language-aware dependency and ownership mapping
 - Structured command-evidence ingestion
@@ -276,6 +276,7 @@ These are future plans, not current claims.
 
 - [README](../README.md)
 - [Demo Script](DEMO_SCRIPT.md)
+- [Codex Demo Prompt](CODEX_DEMO_PROMPT.md)
 - [Judge Test Path](JUDGE_TEST_PATH.md)
 - [Build Week Development Delta](BUILD_WEEK_DELTA.md)
 - [User Validation](USER_VALIDATION.md)
@@ -294,10 +295,11 @@ These are future plans, not current claims.
 - [ ] Confirm every PASS has current artifact/command evidence.
 - [ ] Keep remaining WARN, FAIL, NOT_RUN, and SIMULATED labels visible.
 - [x] Verify the no-install GitHub Pages judge demo anonymously.
+- [x] Review the currently published Devpost rules and FAQ.
 - [ ] Record the 2:45 video using the demo script.
 - [ ] In the primary Codex build thread, run `/feedback` and paste the generated Session ID into the Devpost form; do not publish or invent it.
 - [ ] Record real user validation only if permission-based sessions actually occurred.
-- [ ] Capture dashboard screenshots with the simulated-data disclosure visible.
+- [ ] Capture dashboard screenshots with both FICTIONAL SAMPLE PROJECT and REAL EXECUTION disclosures visible.
 - [ ] Review exported files for private paths, secrets, or internal data.
-- [ ] Recheck current dates, rules, tracks, and submission requirements on the official Devpost page.
-- [ ] Add the final repository and video URLs only after they exist.
+- [ ] Recheck dates, rules, tracks, and submission requirements once more immediately before submitting.
+- [ ] Confirm the public repository URL and add the final video URL only after it exists.

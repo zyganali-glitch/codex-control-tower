@@ -86,7 +86,11 @@ async function demoCommand() {
   });
   const testOutput = `${governedTest.stdout || ''}${governedTest.stderr || ''}`;
   const testEvidenceFile = path.join(reportDir, 'governed-test-output.txt');
-  writeGeneratedFile(testEvidenceFile, portableString(`Generated: ${new Date().toISOString()}\nCommand: node --test tests/invoiceflow.test.js\nExit code: ${governedTest.status}\n\n${testOutput}`, root));
+  const targetTestEvidencePath = '.controltower/governed-test-output.txt';
+  const targetTestEvidenceFile = path.join(governed, targetTestEvidencePath);
+  const testEvidence = portableString(`Generated: ${new Date().toISOString()}\nCommand: node --test tests/invoiceflow.test.js\nExit code: ${governedTest.status}\n\n${testOutput}`, root);
+  writeGeneratedFile(testEvidenceFile, testEvidence);
+  writeGeneratedFile(targetTestEvidenceFile, testEvidence);
   if (governedTest.status !== 0) {
     throw new Error(`Governed InvoiceFlow fixture test failed. See ${testEvidenceFile}`);
   }
@@ -95,7 +99,7 @@ async function demoCommand() {
   const after = scanRepository(governed, { simulatedData: true });
   after.evidenceStatus.tests = {
     status: 'PASS',
-    evidence: ['node --test tests/invoiceflow.test.js', 'examples/demo-report/governed-test-output.txt']
+    evidence: ['tests/invoiceflow.test.js', targetTestEvidencePath]
   };
   const executableRow = after.traceabilityMatrix.find((row) => row.requirement === 'Executable proof');
   if (executableRow) {
@@ -108,7 +112,7 @@ async function demoCommand() {
       status: 'PASS',
       exitCode: governedTest.status,
       testCount,
-      evidence: 'examples/demo-report/governed-test-output.txt'
+      evidence: targetTestEvidencePath
     }],
     notRun: ['CI', 'browser/accessibility', 'load/concurrency', 'deployment', 'independent security review']
   };
