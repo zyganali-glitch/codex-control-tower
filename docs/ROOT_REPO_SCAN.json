@@ -1,0 +1,4354 @@
+{
+  "schemaVersion": "1.0",
+  "projectName": "codex-control-tower",
+  "targetPath": ".",
+  "generatedAt": "2026-07-13T21:04:09.368Z",
+  "scanMode": "REAL_LOCAL_SCAN",
+  "simulatedData": false,
+  "scanScope": {
+    "targetPath": ".",
+    "excludedPaths": [
+      "examples/demo-report",
+      "examples/demo-workspace",
+      "examples/governed-saas-after",
+      "examples/messy-saas-before"
+    ],
+    "exclusionSource": ".controltower/config.json",
+    "note": "Configured exclusions are visible here and remain directly scannable when selected as the target."
+  },
+  "score": 100,
+  "scoreBreakdown": {
+    "planning": 12,
+    "codexReadiness": 12,
+    "evidencePack": 16,
+    "testCiProof": 12,
+    "documentationSync": 8,
+    "brownfieldSafety": 8,
+    "memoryContinuity": 10,
+    "reviewGate": 8,
+    "contextGraph": 6,
+    "mistakeShield": 5,
+    "riskHygiene": 3
+  },
+  "codexReadiness": "PASS",
+  "missingSurfaces": [],
+  "riskFlags": [],
+  "detectedFiles": [
+    {
+      "path": ".codex/AGENTS.md",
+      "bytes": 1717,
+      "lines": 29,
+      "modifiedAt": "2026-07-12T20:30:58.960Z"
+    },
+    {
+      "path": ".controltower/config.json",
+      "bytes": 769,
+      "lines": 30,
+      "modifiedAt": "2026-07-12T20:30:58.962Z"
+    },
+    {
+      "path": ".controltower/flight-recorder.jsonl",
+      "bytes": 2603,
+      "lines": 0,
+      "modifiedAt": "2026-07-12T20:52:58.423Z"
+    },
+    {
+      "path": ".controltower/phase0.json",
+      "bytes": 1520,
+      "lines": 15,
+      "modifiedAt": "2026-07-13T21:03:49.120Z"
+    },
+    {
+      "path": ".controltower/review-gate.json",
+      "bytes": 1495,
+      "lines": 40,
+      "modifiedAt": "2026-07-12T20:52:58.422Z"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 534,
+      "lines": 24,
+      "modifiedAt": "2026-07-12T20:54:20.038Z"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "bytes": 1171,
+      "lines": 50,
+      "modifiedAt": "2026-07-13T19:42:55.160Z"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 110,
+      "lines": 0,
+      "modifiedAt": "2026-07-12T16:58:09.325Z"
+    },
+    {
+      "path": "apps/dashboard/index.html",
+      "bytes": 473,
+      "lines": 0,
+      "modifiedAt": "2026-07-12T16:56:40.818Z"
+    },
+    {
+      "path": "apps/dashboard/package-lock.json",
+      "bytes": 57693,
+      "lines": 1692,
+      "modifiedAt": "2026-07-13T20:54:49.263Z"
+    },
+    {
+      "path": "apps/dashboard/package.json",
+      "bytes": 452,
+      "lines": 20,
+      "modifiedAt": "2026-07-12T20:41:19.552Z"
+    },
+    {
+      "path": "apps/dashboard/src/App.jsx",
+      "bytes": 14414,
+      "lines": 248,
+      "modifiedAt": "2026-07-13T20:45:32.667Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/BeforeAfterPanel.jsx",
+      "bytes": 3460,
+      "lines": 53,
+      "modifiedAt": "2026-07-12T20:46:38.351Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/CodexLiveReviewPanel.jsx",
+      "bytes": 13486,
+      "lines": 241,
+      "modifiedAt": "2026-07-13T20:53:56.279Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/CodexPromptPanel.jsx",
+      "bytes": 1914,
+      "lines": 47,
+      "modifiedAt": "2026-07-12T16:59:30.922Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/ContextBudgetPanel.jsx",
+      "bytes": 2781,
+      "lines": 47,
+      "modifiedAt": "2026-07-12T17:21:56.242Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/ContextGraphPanel.jsx",
+      "bytes": 2934,
+      "lines": 46,
+      "modifiedAt": "2026-07-12T20:41:05.166Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/EvidencePanel.jsx",
+      "bytes": 1820,
+      "lines": 38,
+      "modifiedAt": "2026-07-12T16:59:34.115Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/FlightRecorderPanel.jsx",
+      "bytes": 2470,
+      "lines": 35,
+      "modifiedAt": "2026-07-12T20:46:38.350Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/Icon.jsx",
+      "bytes": 2461,
+      "lines": 43,
+      "modifiedAt": "2026-07-12T16:58:17.158Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/MemoryLensPanel.jsx",
+      "bytes": 2313,
+      "lines": 36,
+      "modifiedAt": "2026-07-12T17:00:36.500Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/MissingSurfaces.jsx",
+      "bytes": 624,
+      "lines": 18,
+      "modifiedAt": "2026-07-12T16:58:25.859Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/MistakeShieldPanel.jsx",
+      "bytes": 1703,
+      "lines": 27,
+      "modifiedAt": "2026-07-12T17:00:39.727Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/Panel.jsx",
+      "bytes": 1692,
+      "lines": 41,
+      "modifiedAt": "2026-07-12T16:58:18.949Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/PhaseZeroCard.jsx",
+      "bytes": 1456,
+      "lines": 27,
+      "modifiedAt": "2026-07-12T16:58:27.525Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/ReviewGatePanel.jsx",
+      "bytes": 1352,
+      "lines": 22,
+      "modifiedAt": "2026-07-12T20:41:05.168Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/RiskCards.jsx",
+      "bytes": 2014,
+      "lines": 45,
+      "modifiedAt": "2026-07-12T17:23:23.283Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/ScoreBreakdown.jsx",
+      "bytes": 829,
+      "lines": 22,
+      "modifiedAt": "2026-07-12T16:58:22.258Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/ScoreHero.jsx",
+      "bytes": 1568,
+      "lines": 35,
+      "modifiedAt": "2026-07-12T16:58:20.641Z"
+    },
+    {
+      "path": "apps/dashboard/src/components/TraceabilityMatrix.jsx",
+      "bytes": 803,
+      "lines": 16,
+      "modifiedAt": "2026-07-12T16:59:35.746Z"
+    },
+    {
+      "path": "apps/dashboard/src/details.css",
+      "bytes": 17435,
+      "lines": 0,
+      "modifiedAt": "2026-07-13T20:45:32.669Z"
+    },
+    {
+      "path": "apps/dashboard/src/main.jsx",
+      "bytes": 265,
+      "lines": 12,
+      "modifiedAt": "2026-07-12T17:11:03.893Z"
+    },
+    {
+      "path": "apps/dashboard/src/reconciliationAdapter.js",
+      "bytes": 1843,
+      "lines": 45,
+      "modifiedAt": "2026-07-13T20:40:19.470Z"
+    },
+    {
+      "path": "apps/dashboard/src/reportAdapter.js",
+      "bytes": 22966,
+      "lines": 385,
+      "modifiedAt": "2026-07-13T20:40:19.471Z"
+    },
+    {
+      "path": "apps/dashboard/src/reportAdapter.test.js",
+      "bytes": 6543,
+      "lines": 167,
+      "modifiedAt": "2026-07-13T20:50:14.040Z"
+    },
+    {
+      "path": "apps/dashboard/src/styles.css",
+      "bytes": 41020,
+      "lines": 0,
+      "modifiedAt": "2026-07-13T20:45:32.668Z"
+    },
+    {
+      "path": "apps/dashboard/vite.config.js",
+      "bytes": 286,
+      "lines": 17,
+      "modifiedAt": "2026-07-12T16:56:39.043Z"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 2375,
+      "lines": 24,
+      "modifiedAt": "2026-07-13T20:51:39.270Z"
+    },
+    {
+      "path": "cli/commands/codex-review.js",
+      "bytes": 32277,
+      "lines": 303,
+      "modifiedAt": "2026-07-13T20:54:15.451Z"
+    },
+    {
+      "path": "cli/commands/context-graph.js",
+      "bytes": 568,
+      "lines": 19,
+      "modifiedAt": "2026-07-12T17:03:33.841Z"
+    },
+    {
+      "path": "cli/commands/demo.js",
+      "bytes": 8140,
+      "lines": 160,
+      "modifiedAt": "2026-07-13T20:48:03.637Z"
+    },
+    {
+      "path": "cli/commands/doctor.js",
+      "bytes": 1046,
+      "lines": 22,
+      "modifiedAt": "2026-07-12T17:03:30.334Z"
+    },
+    {
+      "path": "cli/commands/evidence.js",
+      "bytes": 627,
+      "lines": 17,
+      "modifiedAt": "2026-07-12T17:03:32.086Z"
+    },
+    {
+      "path": "cli/commands/export-devpost.js",
+      "bytes": 4928,
+      "lines": 37,
+      "modifiedAt": "2026-07-13T20:39:19.169Z"
+    },
+    {
+      "path": "cli/commands/flight-recorder.js",
+      "bytes": 620,
+      "lines": 19,
+      "modifiedAt": "2026-07-12T17:05:00.394Z"
+    },
+    {
+      "path": "cli/commands/health.js",
+      "bytes": 1123,
+      "lines": 21,
+      "modifiedAt": "2026-07-12T17:27:57.173Z"
+    },
+    {
+      "path": "cli/commands/init.js",
+      "bytes": 4597,
+      "lines": 69,
+      "modifiedAt": "2026-07-13T17:37:42.924Z"
+    },
+    {
+      "path": "cli/commands/memory-lens.js",
+      "bytes": 575,
+      "lines": 20,
+      "modifiedAt": "2026-07-12T17:04:58.789Z"
+    },
+    {
+      "path": "cli/commands/mistake-shield.js",
+      "bytes": 786,
+      "lines": 23,
+      "modifiedAt": "2026-07-12T17:04:57.129Z"
+    },
+    {
+      "path": "cli/commands/phase0.js",
+      "bytes": 5119,
+      "lines": 111,
+      "modifiedAt": "2026-07-13T17:37:42.923Z"
+    },
+    {
+      "path": "cli/commands/review-gate.js",
+      "bytes": 1111,
+      "lines": 23,
+      "modifiedAt": "2026-07-12T17:22:33.462Z"
+    },
+    {
+      "path": "cli/commands/scan.js",
+      "bytes": 1705,
+      "lines": 53,
+      "modifiedAt": "2026-07-13T20:23:44.882Z"
+    },
+    {
+      "path": "cli/index.js",
+      "bytes": 3571,
+      "lines": 98,
+      "modifiedAt": "2026-07-13T20:23:44.883Z"
+    },
+    {
+      "path": "cli/lib/codexPromptBuilder.js",
+      "bytes": 4224,
+      "lines": 79,
+      "modifiedAt": "2026-07-12T20:42:06.258Z"
+    },
+    {
+      "path": "cli/lib/constants.js",
+      "bytes": 1601,
+      "lines": 55,
+      "modifiedAt": "2026-07-12T17:21:52.888Z"
+    },
+    {
+      "path": "cli/lib/contextGraphBuilder.js",
+      "bytes": 7039,
+      "lines": 162,
+      "modifiedAt": "2026-07-12T20:38:10.269Z"
+    },
+    {
+      "path": "cli/lib/evidenceCollector.js",
+      "bytes": 5665,
+      "lines": 126,
+      "modifiedAt": "2026-07-12T20:28:59.601Z"
+    },
+    {
+      "path": "cli/lib/flightRecorder.js",
+      "bytes": 1358,
+      "lines": 37,
+      "modifiedAt": "2026-07-12T17:00:22.251Z"
+    },
+    {
+      "path": "cli/lib/healthScorer.js",
+      "bytes": 3653,
+      "lines": 92,
+      "modifiedAt": "2026-07-12T20:38:10.270Z"
+    },
+    {
+      "path": "cli/lib/markdown.js",
+      "bytes": 723,
+      "lines": 23,
+      "modifiedAt": "2026-07-12T16:58:18.918Z"
+    },
+    {
+      "path": "cli/lib/memoryLens.js",
+      "bytes": 3113,
+      "lines": 77,
+      "modifiedAt": "2026-07-12T17:13:56.689Z"
+    },
+    {
+      "path": "cli/lib/mistakeShield.js",
+      "bytes": 4350,
+      "lines": 91,
+      "modifiedAt": "2026-07-12T19:39:14.507Z"
+    },
+    {
+      "path": "cli/lib/reportWriter.js",
+      "bytes": 487,
+      "lines": 16,
+      "modifiedAt": "2026-07-12T17:03:22.661Z"
+    },
+    {
+      "path": "cli/lib/repoScanner.js",
+      "bytes": 23881,
+      "lines": 287,
+      "modifiedAt": "2026-07-12T20:38:29.794Z"
+    },
+    {
+      "path": "cli/lib/reviewGate.js",
+      "bytes": 3205,
+      "lines": 94,
+      "modifiedAt": "2026-07-12T17:23:29.114Z"
+    },
+    {
+      "path": "cli/lib/safeFs.js",
+      "bytes": 5736,
+      "lines": 179,
+      "modifiedAt": "2026-07-12T20:38:29.793Z"
+    },
+    {
+      "path": "core/adapters/codex/AGENTS.md",
+      "bytes": 1810,
+      "lines": 45,
+      "modifiedAt": "2026-07-12T17:02:39.816Z"
+    },
+    {
+      "path": "core/adapters/copilot/copilot-instructions.md",
+      "bytes": 967,
+      "lines": 19,
+      "modifiedAt": "2026-07-12T17:02:42.564Z"
+    },
+    {
+      "path": "core/adapters/gemini/GEMINI.md",
+      "bytes": 853,
+      "lines": 16,
+      "modifiedAt": "2026-07-12T17:02:45.282Z"
+    },
+    {
+      "path": "core/adapters/generic/AGENTS.md",
+      "bytes": 967,
+      "lines": 24,
+      "modifiedAt": "2026-07-12T17:02:47.970Z"
+    },
+    {
+      "path": "core/en/phase0-questions.json",
+      "bytes": 1878,
+      "lines": 58,
+      "modifiedAt": "2026-07-12T17:07:05.532Z"
+    },
+    {
+      "path": "core/templates/EVIDENCE_REPORT_TEMPLATE.md",
+      "bytes": 869,
+      "lines": 41,
+      "modifiedAt": "2026-07-12T17:04:40.318Z"
+    },
+    {
+      "path": "core/templates/FLIGHT_RECORDER_TEMPLATE.md",
+      "bytes": 1292,
+      "lines": 21,
+      "modifiedAt": "2026-07-12T17:04:48.540Z"
+    },
+    {
+      "path": "core/templates/MEMORY_LENS_TEMPLATE.md",
+      "bytes": 848,
+      "lines": 35,
+      "modifiedAt": "2026-07-12T17:04:50.150Z"
+    },
+    {
+      "path": "core/templates/MISTAKE_SHIELD_TEMPLATE.md",
+      "bytes": 719,
+      "lines": 29,
+      "modifiedAt": "2026-07-12T17:04:51.764Z"
+    },
+    {
+      "path": "core/templates/NOT_RUN_GATES_TEMPLATE.md",
+      "bytes": 455,
+      "lines": 16,
+      "modifiedAt": "2026-07-12T17:04:43.552Z"
+    },
+    {
+      "path": "core/templates/PLAN_TEMPLATE.md",
+      "bytes": 994,
+      "lines": 45,
+      "modifiedAt": "2026-07-12T17:04:38.696Z"
+    },
+    {
+      "path": "core/templates/REVIEW_GATE_TEMPLATE.md",
+      "bytes": 858,
+      "lines": 40,
+      "modifiedAt": "2026-07-12T17:04:46.938Z"
+    },
+    {
+      "path": "core/templates/TECH_DEBT_DELTA_TEMPLATE.md",
+      "bytes": 623,
+      "lines": 24,
+      "modifiedAt": "2026-07-12T17:04:45.270Z"
+    },
+    {
+      "path": "core/templates/TRACEABILITY_MATRIX_TEMPLATE.md",
+      "bytes": 716,
+      "lines": 14,
+      "modifiedAt": "2026-07-12T17:04:41.943Z"
+    },
+    {
+      "path": "core/workflows/brownfield-quarantine.md",
+      "bytes": 1115,
+      "lines": 26,
+      "modifiedAt": "2026-07-12T17:03:36.064Z"
+    },
+    {
+      "path": "core/workflows/closure-check.md",
+      "bytes": 1216,
+      "lines": 30,
+      "modifiedAt": "2026-07-12T17:03:34.457Z"
+    },
+    {
+      "path": "core/workflows/codex-mission.md",
+      "bytes": 1382,
+      "lines": 38,
+      "modifiedAt": "2026-07-12T17:03:32.619Z"
+    },
+    {
+      "path": "core/workflows/evidence-first-delivery.md",
+      "bytes": 1213,
+      "lines": 30,
+      "modifiedAt": "2026-07-12T17:03:37.707Z"
+    },
+    {
+      "path": "core/workflows/flight-recorder.md",
+      "bytes": 1017,
+      "lines": 27,
+      "modifiedAt": "2026-07-12T17:03:42.571Z"
+    },
+    {
+      "path": "core/workflows/mistake-shield.md",
+      "bytes": 941,
+      "lines": 26,
+      "modifiedAt": "2026-07-12T17:03:40.951Z"
+    },
+    {
+      "path": "core/workflows/review-gate.md",
+      "bytes": 1035,
+      "lines": 26,
+      "modifiedAt": "2026-07-12T17:03:39.327Z"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 13048,
+      "lines": 180,
+      "modifiedAt": "2026-07-13T20:50:14.042Z"
+    },
+    {
+      "path": "docs/assets/dashboard-overview.png",
+      "bytes": 666416,
+      "lines": 0,
+      "modifiedAt": "2026-07-13T20:56:02.655Z"
+    },
+    {
+      "path": "docs/BUILD_WEEK_DELTA.md",
+      "bytes": 4631,
+      "lines": 71,
+      "modifiedAt": "2026-07-13T20:52:48.228Z"
+    },
+    {
+      "path": "docs/CODEX_BUILD_LOG.md",
+      "bytes": 19436,
+      "lines": 120,
+      "modifiedAt": "2026-07-13T21:04:08.076Z"
+    },
+    {
+      "path": "docs/CODEX_DEMO_PROMPT.md",
+      "bytes": 1736,
+      "lines": 31,
+      "modifiedAt": "2026-07-13T20:29:22.869Z"
+    },
+    {
+      "path": "docs/CODEX_NATIVE_RECOMMENDATIONS.md",
+      "bytes": 12687,
+      "lines": 260,
+      "modifiedAt": "2026-07-13T20:52:48.230Z"
+    },
+    {
+      "path": "docs/CODEX_SELF_ASSESSMENT.md",
+      "bytes": 15623,
+      "lines": 211,
+      "modifiedAt": "2026-07-13T20:52:48.229Z"
+    },
+    {
+      "path": "docs/DEMO_REHBERI_TR.md",
+      "bytes": 17642,
+      "lines": 347,
+      "modifiedAt": "2026-07-13T20:44:30.692Z"
+    },
+    {
+      "path": "docs/DEMO_SCRIPT.md",
+      "bytes": 9032,
+      "lines": 164,
+      "modifiedAt": "2026-07-13T20:44:30.691Z"
+    },
+    {
+      "path": "docs/DEVPOST_SUBMISSION.md",
+      "bytes": 18440,
+      "lines": 306,
+      "modifiedAt": "2026-07-13T20:52:26.965Z"
+    },
+    {
+      "path": "docs/EVIDENCE_REPORT.md",
+      "bytes": 3603,
+      "lines": 31,
+      "modifiedAt": "2026-07-13T21:04:08.078Z"
+    },
+    {
+      "path": "docs/FEATURE_HARVEST.md",
+      "bytes": 2629,
+      "lines": 31,
+      "modifiedAt": "2026-07-13T20:36:22.157Z"
+    },
+    {
+      "path": "docs/FINAL_COMPLETENESS_REVIEW.md",
+      "bytes": 4994,
+      "lines": 53,
+      "modifiedAt": "2026-07-13T21:04:08.079Z"
+    },
+    {
+      "path": "docs/JUDGE_TEST_PATH.md",
+      "bytes": 5021,
+      "lines": 89,
+      "modifiedAt": "2026-07-13T21:04:08.080Z"
+    },
+    {
+      "path": "docs/JUDGING_MAP.md",
+      "bytes": 15084,
+      "lines": 240,
+      "modifiedAt": "2026-07-13T20:52:48.231Z"
+    },
+    {
+      "path": "docs/LIMITATIONS.md",
+      "bytes": 6681,
+      "lines": 71,
+      "modifiedAt": "2026-07-13T20:31:45.323Z"
+    },
+    {
+      "path": "docs/MEMORY_LENS.md",
+      "bytes": 1789,
+      "lines": 29,
+      "modifiedAt": "2026-07-13T20:32:34.529Z"
+    },
+    {
+      "path": "docs/MISTAKE_SHIELD.md",
+      "bytes": 872,
+      "lines": 19,
+      "modifiedAt": "2026-07-13T18:39:31.357Z"
+    },
+    {
+      "path": "docs/NOT_RUN_GATES.md",
+      "bytes": 3120,
+      "lines": 27,
+      "modifiedAt": "2026-07-13T21:04:08.081Z"
+    },
+    {
+      "path": "docs/ORIGINALITY_MATRIX.md",
+      "bytes": 2692,
+      "lines": 35,
+      "modifiedAt": "2026-07-13T20:36:07.285Z"
+    },
+    {
+      "path": "docs/PRIVACY_AND_SECURITY.md",
+      "bytes": 8519,
+      "lines": 112,
+      "modifiedAt": "2026-07-13T20:52:48.233Z"
+    },
+    {
+      "path": "docs/PRODUCT_DECISIONS.md",
+      "bytes": 9203,
+      "lines": 98,
+      "modifiedAt": "2026-07-13T20:52:26.967Z"
+    },
+    {
+      "path": "docs/SOURCE_PROTECTION.md",
+      "bytes": 3017,
+      "lines": 45,
+      "modifiedAt": "2026-07-13T20:33:48.202Z"
+    },
+    {
+      "path": "docs/SOURCE_RESEARCH_MATRIX.md",
+      "bytes": 3106,
+      "lines": 40,
+      "modifiedAt": "2026-07-13T20:39:54.600Z"
+    },
+    {
+      "path": "docs/TECH_DEBT_DELTA.md",
+      "bytes": 1849,
+      "lines": 26,
+      "modifiedAt": "2026-07-13T20:51:39.271Z"
+    },
+    {
+      "path": "docs/TRACEABILITY_MATRIX.md",
+      "bytes": 2655,
+      "lines": 23,
+      "modifiedAt": "2026-07-13T21:04:08.082Z"
+    },
+    {
+      "path": "docs/USER_VALIDATION.md",
+      "bytes": 1852,
+      "lines": 40,
+      "modifiedAt": "2026-07-13T18:27:10.950Z"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1089,
+      "lines": 0,
+      "modifiedAt": "2026-07-12T16:58:10.948Z"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 4559,
+      "lines": 152,
+      "modifiedAt": "2026-07-13T17:34:07.950Z"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1868,
+      "lines": 43,
+      "modifiedAt": "2026-07-13T20:23:44.884Z"
+    },
+    {
+      "path": "plans/master-roadmap.md",
+      "bytes": 3207,
+      "lines": 49,
+      "modifiedAt": "2026-07-13T20:32:45.886Z"
+    },
+    {
+      "path": "plans/PHASE0_ALIGNMENT.md",
+      "bytes": 1445,
+      "lines": 17,
+      "modifiedAt": "2026-07-13T20:32:34.531Z"
+    },
+    {
+      "path": "README.md",
+      "bytes": 29536,
+      "lines": 376,
+      "modifiedAt": "2026-07-13T21:04:08.075Z"
+    },
+    {
+      "path": "TECH_DEBT_AND_SECURITY.md",
+      "bytes": 1119,
+      "lines": 15,
+      "modifiedAt": "2026-07-12T20:30:58.978Z"
+    },
+    {
+      "path": "tests/helpers.js",
+      "bytes": 518,
+      "lines": 21,
+      "modifiedAt": "2026-07-12T17:08:55.824Z"
+    },
+    {
+      "path": "tests/test_cli_commands.js",
+      "bytes": 1807,
+      "lines": 32,
+      "modifiedAt": "2026-07-13T20:30:28.509Z"
+    },
+    {
+      "path": "tests/test_codex_review.js",
+      "bytes": 13113,
+      "lines": 247,
+      "modifiedAt": "2026-07-13T20:54:15.453Z"
+    },
+    {
+      "path": "tests/test_context_graph.js",
+      "bytes": 700,
+      "lines": 16,
+      "modifiedAt": "2026-07-12T17:09:03.962Z"
+    },
+    {
+      "path": "tests/test_evidence_pack.js",
+      "bytes": 1931,
+      "lines": 27,
+      "modifiedAt": "2026-07-12T17:26:39.135Z"
+    },
+    {
+      "path": "tests/test_health_scoring.js",
+      "bytes": 6331,
+      "lines": 91,
+      "modifiedAt": "2026-07-12T20:42:06.259Z"
+    },
+    {
+      "path": "tests/test_mistake_shield.js",
+      "bytes": 1371,
+      "lines": 29,
+      "modifiedAt": "2026-07-12T19:39:14.508Z"
+    },
+    {
+      "path": "tests/test_phase0.js",
+      "bytes": 1316,
+      "lines": 27,
+      "modifiedAt": "2026-07-13T17:45:16.005Z"
+    },
+    {
+      "path": "tests/test_required_surfaces.js",
+      "bytes": 2071,
+      "lines": 26,
+      "modifiedAt": "2026-07-13T21:04:08.084Z"
+    },
+    {
+      "path": "tests/test_review_gate.js",
+      "bytes": 1132,
+      "lines": 26,
+      "modifiedAt": "2026-07-12T17:26:40.689Z"
+    },
+    {
+      "path": "tests/test_source_protection.js",
+      "bytes": 1921,
+      "lines": 30,
+      "modifiedAt": "2026-07-13T21:04:08.085Z"
+    }
+  ],
+  "suggestedNextActions": [],
+  "codexPrompt": "# Codex Control Tower Mission\n\nTarget repository: .\nMission goal: Recheck the published Devpost rules after challenge opening, capture the final sanitized three-minute demo, and add Codex change provenance without expanding into an unapproved cloud build.\nReview gate: APPROVED (scoped)\nReview gate scope: Complete bounded release-preflight hardening, run local verification, commit the independent repository, and push main to the user-provided GitHub repository.\nMistake Shield: CAUTION\n\n## Detected risks\n- No scanner risk was detected; continue to verify scope.\n\n## Missing surfaces\n- No required governance surface is currently missing.\n\n## Allowed files\n- .codex/**\n- .controltower/**\n- .github/**\n- apps/**\n- cli/**\n- core/**\n- docs/**\n- examples/**\n- plans/**\n- tests/**\n- README.md\n- CHANGELOG.md\n- LICENSE\n- package.json\n- package-lock.json\n- TECH_DEBT_AND_SECURITY.md\n\n## Forbidden actions\n- Do not delete tests, history, user data, or unrelated legacy code.\n- Do not overwrite existing files without a backup and explicit need.\n- Do not push, publish, deploy, or upload source unless the APPROVED scoped Review Gate explicitly authorizes the exact action and destination. Never expose secrets.\n- Do not expand scope beyond the mission or bypass a non-approved review gate.\n- Review Gate forbids: modify or push to any protected source repository\n- Review Gate forbids: commit credentials, tokens, private URLs, or private screenshots\n- Review Gate forbids: rewrite shared Git history\n- Review Gate forbids: claim NOT_RUN or SIMULATED evidence as PASS\n- Review Gate forbids: publish to a destination other than the approved GitHub repository\n- Do not touch without approval: Do not modify the four protected source repositories\n- Do not touch without approval: commit secrets or private screenshots\n- Do not touch without approval: claim simulated evidence as real\n- Do not touch without approval: add mandatory cloud dependencies\n- Do not touch without approval: or rewrite Git history.\n\n## Required evidence\n- Full test suite, deterministic demo output, dashboard production build, root self-scan, source-protection checks, clean staged diff, remote commit verification, and visible NOT_RUN gates.\n- List every changed file and every command actually run.\n- Attach concrete output or artifact paths for every PASS claim.\n- Keep WARN, FAIL, NOT_RUN, and SIMULATED labels visible.\n\n## Tests to run\n- Run the repository test command discovered in package metadata.\n\n## Documentation to update\n- README.md when behavior or commands change\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n\n## Execution contract\nYou are Codex working under Codex Control Tower. Fix only the listed gaps. Read instructions and plans before editing. Stop before risky implementation unless the local gate is APPROVED, fully scoped, and the proposed action stays within that scope. PASS requires evidence; an edited file is not a validated file. If a check cannot run, label it NOT_RUN and explain why.\n\n## Final response format\n1. Summary\n2. Changed files\n3. Commands and evidence with PASS/WARN/FAIL/NOT_RUN/SIMULATED\n4. Review gate and Mistake Shield state\n5. Remaining risks\n6. Next safe action",
+  "traceabilityMatrix": [
+    {
+      "requirement": "Plan before implementation",
+      "implementation": "plans/master-roadmap.md",
+      "evidence": "docs/EVIDENCE_REPORT.md",
+      "status": "PASS"
+    },
+    {
+      "requirement": "Human review gate",
+      "implementation": ".controltower/review-gate.json",
+      "evidence": "APPROVED",
+      "status": "PASS"
+    },
+    {
+      "requirement": "Executable proof",
+      "implementation": "apps/dashboard/src/reportAdapter.test.js, tests/helpers.js, tests/test_cli_commands.js, tests/test_codex_review.js, tests/test_context_graph.js, tests/test_evidence_pack.js, tests/test_health_scoring.js, tests/test_mistake_shield.js, tests/test_phase0.js, tests/test_required_surfaces.js, tests/test_review_gate.js, tests/test_source_protection.js",
+      "evidence": "Tests were not executed by scan.",
+      "status": "NOT_RUN"
+    },
+    {
+      "requirement": "Visible skipped gates",
+      "implementation": "docs/NOT_RUN_GATES.md",
+      "evidence": "Substantial NOT_RUN record present",
+      "status": "PASS"
+    }
+  ],
+  "evidenceStatus": {
+    "mode": "REAL_LOCAL_SCAN",
+    "plan": {
+      "status": "PASS",
+      "evidence": "plans/master-roadmap.md"
+    },
+    "tests": {
+      "status": "NOT_RUN",
+      "evidence": [
+        "apps/dashboard/src/reportAdapter.test.js",
+        "tests/helpers.js",
+        "tests/test_cli_commands.js",
+        "tests/test_codex_review.js",
+        "tests/test_context_graph.js",
+        "tests/test_evidence_pack.js",
+        "tests/test_health_scoring.js",
+        "tests/test_mistake_shield.js",
+        "tests/test_phase0.js",
+        "tests/test_required_surfaces.js",
+        "tests/test_review_gate.js",
+        "tests/test_source_protection.js"
+      ]
+    },
+    "ci": {
+      "status": "NOT_RUN",
+      "evidence": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/pages.yml"
+      ]
+    },
+    "documentation": {
+      "status": "PASS",
+      "evidence": [
+        "README.md",
+        "docs/ARCHITECTURE.md"
+      ]
+    },
+    "evidenceReport": {
+      "status": "PASS",
+      "evidence": "docs/EVIDENCE_REPORT.md"
+    },
+    "traceability": {
+      "status": "PASS",
+      "evidence": "docs/TRACEABILITY_MATRIX.md"
+    },
+    "techDebtDelta": {
+      "status": "PASS",
+      "evidence": "docs/TECH_DEBT_DELTA.md"
+    },
+    "notRunVisibility": {
+      "status": "PASS",
+      "evidence": "docs/NOT_RUN_GATES.md"
+    }
+  },
+  "contextGraph": {
+    "generatedAt": "2026-07-13T21:04:09.362Z",
+    "generatedLocally": true,
+    "algorithm": "deterministic lexical and repository-surface analysis",
+    "nodes": [
+      {
+        "id": "file:.codex/AGENTS.md",
+        "label": ".codex/AGENTS.md",
+        "type": "instruction",
+        "lines": 29,
+        "bytes": 1717,
+        "risk": false,
+        "markers": 0,
+        "relevance": 1,
+        "importance": 1,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a instruction surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/config.json",
+        "label": ".controltower/config.json",
+        "type": "control",
+        "lines": 30,
+        "bytes": 769,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/flight-recorder.jsonl",
+        "label": ".controltower/flight-recorder.jsonl",
+        "type": "control",
+        "lines": 0,
+        "bytes": 2603,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/phase0.json",
+        "label": ".controltower/phase0.json",
+        "type": "control",
+        "lines": 15,
+        "bytes": 1520,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/review-gate.json",
+        "label": ".controltower/review-gate.json",
+        "type": "control",
+        "lines": 40,
+        "bytes": 1495,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.github/workflows/ci.yml",
+        "label": ".github/workflows/ci.yml",
+        "type": "ci",
+        "lines": 24,
+        "bytes": 534,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.88,
+        "importance": 0.88,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a ci surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.github/workflows/pages.yml",
+        "label": ".github/workflows/pages.yml",
+        "type": "ci",
+        "lines": 50,
+        "bytes": 1171,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.88,
+        "importance": 0.88,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a ci surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.gitignore",
+        "label": ".gitignore",
+        "type": "file",
+        "lines": 0,
+        "bytes": 110,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/index.html",
+        "label": "apps/dashboard/index.html",
+        "type": "file",
+        "lines": 0,
+        "bytes": 473,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/package-lock.json",
+        "label": "apps/dashboard/package-lock.json",
+        "type": "file",
+        "lines": 1692,
+        "bytes": 57693,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/package.json",
+        "label": "apps/dashboard/package.json",
+        "type": "file",
+        "lines": 20,
+        "bytes": 452,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/App.jsx",
+        "label": "apps/dashboard/src/App.jsx",
+        "type": "source",
+        "lines": 248,
+        "bytes": 14414,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/BeforeAfterPanel.jsx",
+        "label": "apps/dashboard/src/components/BeforeAfterPanel.jsx",
+        "type": "source",
+        "lines": 53,
+        "bytes": 3460,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/CodexLiveReviewPanel.jsx",
+        "label": "apps/dashboard/src/components/CodexLiveReviewPanel.jsx",
+        "type": "source",
+        "lines": 241,
+        "bytes": 13486,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/CodexPromptPanel.jsx",
+        "label": "apps/dashboard/src/components/CodexPromptPanel.jsx",
+        "type": "source",
+        "lines": 47,
+        "bytes": 1914,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/ContextBudgetPanel.jsx",
+        "label": "apps/dashboard/src/components/ContextBudgetPanel.jsx",
+        "type": "source",
+        "lines": 47,
+        "bytes": 2781,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/ContextGraphPanel.jsx",
+        "label": "apps/dashboard/src/components/ContextGraphPanel.jsx",
+        "type": "source",
+        "lines": 46,
+        "bytes": 2934,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/EvidencePanel.jsx",
+        "label": "apps/dashboard/src/components/EvidencePanel.jsx",
+        "type": "evidence",
+        "lines": 38,
+        "bytes": 1820,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/FlightRecorderPanel.jsx",
+        "label": "apps/dashboard/src/components/FlightRecorderPanel.jsx",
+        "type": "source",
+        "lines": 35,
+        "bytes": 2470,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/Icon.jsx",
+        "label": "apps/dashboard/src/components/Icon.jsx",
+        "type": "source",
+        "lines": 43,
+        "bytes": 2461,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/MemoryLensPanel.jsx",
+        "label": "apps/dashboard/src/components/MemoryLensPanel.jsx",
+        "type": "source",
+        "lines": 36,
+        "bytes": 2313,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/MissingSurfaces.jsx",
+        "label": "apps/dashboard/src/components/MissingSurfaces.jsx",
+        "type": "source",
+        "lines": 18,
+        "bytes": 624,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/MistakeShieldPanel.jsx",
+        "label": "apps/dashboard/src/components/MistakeShieldPanel.jsx",
+        "type": "source",
+        "lines": 27,
+        "bytes": 1703,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/Panel.jsx",
+        "label": "apps/dashboard/src/components/Panel.jsx",
+        "type": "source",
+        "lines": 41,
+        "bytes": 1692,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/PhaseZeroCard.jsx",
+        "label": "apps/dashboard/src/components/PhaseZeroCard.jsx",
+        "type": "source",
+        "lines": 27,
+        "bytes": 1456,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/ReviewGatePanel.jsx",
+        "label": "apps/dashboard/src/components/ReviewGatePanel.jsx",
+        "type": "source",
+        "lines": 22,
+        "bytes": 1352,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/RiskCards.jsx",
+        "label": "apps/dashboard/src/components/RiskCards.jsx",
+        "type": "source",
+        "lines": 45,
+        "bytes": 2014,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/ScoreBreakdown.jsx",
+        "label": "apps/dashboard/src/components/ScoreBreakdown.jsx",
+        "type": "source",
+        "lines": 22,
+        "bytes": 829,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/ScoreHero.jsx",
+        "label": "apps/dashboard/src/components/ScoreHero.jsx",
+        "type": "source",
+        "lines": 35,
+        "bytes": 1568,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/TraceabilityMatrix.jsx",
+        "label": "apps/dashboard/src/components/TraceabilityMatrix.jsx",
+        "type": "evidence",
+        "lines": 16,
+        "bytes": 803,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/details.css",
+        "label": "apps/dashboard/src/details.css",
+        "type": "file",
+        "lines": 0,
+        "bytes": 17435,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/main.jsx",
+        "label": "apps/dashboard/src/main.jsx",
+        "type": "source",
+        "lines": 12,
+        "bytes": 265,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/reconciliationAdapter.js",
+        "label": "apps/dashboard/src/reconciliationAdapter.js",
+        "type": "source",
+        "lines": 45,
+        "bytes": 1843,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/reportAdapter.js",
+        "label": "apps/dashboard/src/reportAdapter.js",
+        "type": "source",
+        "lines": 385,
+        "bytes": 22966,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/reportAdapter.test.js",
+        "label": "apps/dashboard/src/reportAdapter.test.js",
+        "type": "test",
+        "lines": 167,
+        "bytes": 6543,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.86,
+        "importance": 0.86,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a test surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/styles.css",
+        "label": "apps/dashboard/src/styles.css",
+        "type": "file",
+        "lines": 0,
+        "bytes": 41020,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/vite.config.js",
+        "label": "apps/dashboard/vite.config.js",
+        "type": "source",
+        "lines": 17,
+        "bytes": 286,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:CHANGELOG.md",
+        "label": "CHANGELOG.md",
+        "type": "documentation",
+        "lines": 24,
+        "bytes": 2375,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/commands/codex-review.js",
+        "label": "cli/commands/codex-review.js",
+        "type": "source",
+        "lines": 303,
+        "bytes": 32277,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/commands/context-graph.js",
+        "label": "cli/commands/context-graph.js",
+        "type": "source",
+        "lines": 19,
+        "bytes": 568,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/commands/demo.js",
+        "label": "cli/commands/demo.js",
+        "type": "source",
+        "lines": 160,
+        "bytes": 8140,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/commands/doctor.js",
+        "label": "cli/commands/doctor.js",
+        "type": "source",
+        "lines": 22,
+        "bytes": 1046,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/commands/evidence.js",
+        "label": "cli/commands/evidence.js",
+        "type": "evidence",
+        "lines": 17,
+        "bytes": 627,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/commands/export-devpost.js",
+        "label": "cli/commands/export-devpost.js",
+        "type": "source",
+        "lines": 37,
+        "bytes": 4928,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/commands/flight-recorder.js",
+        "label": "cli/commands/flight-recorder.js",
+        "type": "source",
+        "lines": 19,
+        "bytes": 620,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/commands/health.js",
+        "label": "cli/commands/health.js",
+        "type": "source",
+        "lines": 21,
+        "bytes": 1123,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/commands/init.js",
+        "label": "cli/commands/init.js",
+        "type": "source",
+        "lines": 69,
+        "bytes": 4597,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/commands/memory-lens.js",
+        "label": "cli/commands/memory-lens.js",
+        "type": "source",
+        "lines": 20,
+        "bytes": 575,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/commands/mistake-shield.js",
+        "label": "cli/commands/mistake-shield.js",
+        "type": "source",
+        "lines": 23,
+        "bytes": 786,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/commands/phase0.js",
+        "label": "cli/commands/phase0.js",
+        "type": "source",
+        "lines": 111,
+        "bytes": 5119,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/commands/review-gate.js",
+        "label": "cli/commands/review-gate.js",
+        "type": "source",
+        "lines": 23,
+        "bytes": 1111,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/commands/scan.js",
+        "label": "cli/commands/scan.js",
+        "type": "source",
+        "lines": 53,
+        "bytes": 1705,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/index.js",
+        "label": "cli/index.js",
+        "type": "source",
+        "lines": 98,
+        "bytes": 3571,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/lib/codexPromptBuilder.js",
+        "label": "cli/lib/codexPromptBuilder.js",
+        "type": "source",
+        "lines": 79,
+        "bytes": 4224,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/lib/constants.js",
+        "label": "cli/lib/constants.js",
+        "type": "source",
+        "lines": 55,
+        "bytes": 1601,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/lib/contextGraphBuilder.js",
+        "label": "cli/lib/contextGraphBuilder.js",
+        "type": "source",
+        "lines": 162,
+        "bytes": 7039,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/lib/evidenceCollector.js",
+        "label": "cli/lib/evidenceCollector.js",
+        "type": "evidence",
+        "lines": 126,
+        "bytes": 5665,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/lib/flightRecorder.js",
+        "label": "cli/lib/flightRecorder.js",
+        "type": "source",
+        "lines": 37,
+        "bytes": 1358,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/lib/healthScorer.js",
+        "label": "cli/lib/healthScorer.js",
+        "type": "source",
+        "lines": 92,
+        "bytes": 3653,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/lib/markdown.js",
+        "label": "cli/lib/markdown.js",
+        "type": "source",
+        "lines": 23,
+        "bytes": 723,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/lib/memoryLens.js",
+        "label": "cli/lib/memoryLens.js",
+        "type": "source",
+        "lines": 77,
+        "bytes": 3113,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/lib/mistakeShield.js",
+        "label": "cli/lib/mistakeShield.js",
+        "type": "source",
+        "lines": 91,
+        "bytes": 4350,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/lib/reportWriter.js",
+        "label": "cli/lib/reportWriter.js",
+        "type": "source",
+        "lines": 16,
+        "bytes": 487,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/lib/repoScanner.js",
+        "label": "cli/lib/repoScanner.js",
+        "type": "source",
+        "lines": 287,
+        "bytes": 23881,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/lib/reviewGate.js",
+        "label": "cli/lib/reviewGate.js",
+        "type": "source",
+        "lines": 94,
+        "bytes": 3205,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/lib/safeFs.js",
+        "label": "cli/lib/safeFs.js",
+        "type": "source",
+        "lines": 179,
+        "bytes": 5736,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/adapters/codex/AGENTS.md",
+        "label": "core/adapters/codex/AGENTS.md",
+        "type": "instruction",
+        "lines": 45,
+        "bytes": 1810,
+        "risk": false,
+        "markers": 0,
+        "relevance": 1,
+        "importance": 1,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a instruction surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/adapters/copilot/copilot-instructions.md",
+        "label": "core/adapters/copilot/copilot-instructions.md",
+        "type": "documentation",
+        "lines": 19,
+        "bytes": 967,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/adapters/gemini/GEMINI.md",
+        "label": "core/adapters/gemini/GEMINI.md",
+        "type": "documentation",
+        "lines": 16,
+        "bytes": 853,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/adapters/generic/AGENTS.md",
+        "label": "core/adapters/generic/AGENTS.md",
+        "type": "instruction",
+        "lines": 24,
+        "bytes": 967,
+        "risk": false,
+        "markers": 0,
+        "relevance": 1,
+        "importance": 1,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a instruction surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/en/phase0-questions.json",
+        "label": "core/en/phase0-questions.json",
+        "type": "file",
+        "lines": 58,
+        "bytes": 1878,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/templates/EVIDENCE_REPORT_TEMPLATE.md",
+        "label": "core/templates/EVIDENCE_REPORT_TEMPLATE.md",
+        "type": "evidence",
+        "lines": 41,
+        "bytes": 869,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/templates/FLIGHT_RECORDER_TEMPLATE.md",
+        "label": "core/templates/FLIGHT_RECORDER_TEMPLATE.md",
+        "type": "documentation",
+        "lines": 21,
+        "bytes": 1292,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/templates/MEMORY_LENS_TEMPLATE.md",
+        "label": "core/templates/MEMORY_LENS_TEMPLATE.md",
+        "type": "documentation",
+        "lines": 35,
+        "bytes": 848,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/templates/MISTAKE_SHIELD_TEMPLATE.md",
+        "label": "core/templates/MISTAKE_SHIELD_TEMPLATE.md",
+        "type": "documentation",
+        "lines": 29,
+        "bytes": 719,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/templates/NOT_RUN_GATES_TEMPLATE.md",
+        "label": "core/templates/NOT_RUN_GATES_TEMPLATE.md",
+        "type": "evidence",
+        "lines": 16,
+        "bytes": 455,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/templates/PLAN_TEMPLATE.md",
+        "label": "core/templates/PLAN_TEMPLATE.md",
+        "type": "documentation",
+        "lines": 45,
+        "bytes": 994,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/templates/REVIEW_GATE_TEMPLATE.md",
+        "label": "core/templates/REVIEW_GATE_TEMPLATE.md",
+        "type": "documentation",
+        "lines": 40,
+        "bytes": 858,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/templates/TECH_DEBT_DELTA_TEMPLATE.md",
+        "label": "core/templates/TECH_DEBT_DELTA_TEMPLATE.md",
+        "type": "documentation",
+        "lines": 24,
+        "bytes": 623,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/templates/TRACEABILITY_MATRIX_TEMPLATE.md",
+        "label": "core/templates/TRACEABILITY_MATRIX_TEMPLATE.md",
+        "type": "evidence",
+        "lines": 14,
+        "bytes": 716,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/workflows/brownfield-quarantine.md",
+        "label": "core/workflows/brownfield-quarantine.md",
+        "type": "documentation",
+        "lines": 26,
+        "bytes": 1115,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/workflows/closure-check.md",
+        "label": "core/workflows/closure-check.md",
+        "type": "documentation",
+        "lines": 30,
+        "bytes": 1216,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/workflows/codex-mission.md",
+        "label": "core/workflows/codex-mission.md",
+        "type": "documentation",
+        "lines": 38,
+        "bytes": 1382,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/workflows/evidence-first-delivery.md",
+        "label": "core/workflows/evidence-first-delivery.md",
+        "type": "evidence",
+        "lines": 30,
+        "bytes": 1213,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/workflows/flight-recorder.md",
+        "label": "core/workflows/flight-recorder.md",
+        "type": "documentation",
+        "lines": 27,
+        "bytes": 1017,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/workflows/mistake-shield.md",
+        "label": "core/workflows/mistake-shield.md",
+        "type": "documentation",
+        "lines": 26,
+        "bytes": 941,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/workflows/review-gate.md",
+        "label": "core/workflows/review-gate.md",
+        "type": "documentation",
+        "lines": 26,
+        "bytes": 1035,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/ARCHITECTURE.md",
+        "label": "docs/ARCHITECTURE.md",
+        "type": "documentation",
+        "lines": 180,
+        "bytes": 13048,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/assets/dashboard-overview.png",
+        "label": "docs/assets/dashboard-overview.png",
+        "type": "file",
+        "lines": 0,
+        "bytes": 666416,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/BUILD_WEEK_DELTA.md",
+        "label": "docs/BUILD_WEEK_DELTA.md",
+        "type": "documentation",
+        "lines": 71,
+        "bytes": 4631,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/CODEX_BUILD_LOG.md",
+        "label": "docs/CODEX_BUILD_LOG.md",
+        "type": "documentation",
+        "lines": 120,
+        "bytes": 19436,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/CODEX_DEMO_PROMPT.md",
+        "label": "docs/CODEX_DEMO_PROMPT.md",
+        "type": "documentation",
+        "lines": 31,
+        "bytes": 1736,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/CODEX_NATIVE_RECOMMENDATIONS.md",
+        "label": "docs/CODEX_NATIVE_RECOMMENDATIONS.md",
+        "type": "documentation",
+        "lines": 260,
+        "bytes": 12687,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/CODEX_SELF_ASSESSMENT.md",
+        "label": "docs/CODEX_SELF_ASSESSMENT.md",
+        "type": "documentation",
+        "lines": 211,
+        "bytes": 15623,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/DEMO_REHBERI_TR.md",
+        "label": "docs/DEMO_REHBERI_TR.md",
+        "type": "documentation",
+        "lines": 347,
+        "bytes": 17642,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/DEMO_SCRIPT.md",
+        "label": "docs/DEMO_SCRIPT.md",
+        "type": "documentation",
+        "lines": 164,
+        "bytes": 9032,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/DEVPOST_SUBMISSION.md",
+        "label": "docs/DEVPOST_SUBMISSION.md",
+        "type": "documentation",
+        "lines": 306,
+        "bytes": 18440,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/EVIDENCE_REPORT.md",
+        "label": "docs/EVIDENCE_REPORT.md",
+        "type": "evidence",
+        "lines": 31,
+        "bytes": 3603,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/FEATURE_HARVEST.md",
+        "label": "docs/FEATURE_HARVEST.md",
+        "type": "documentation",
+        "lines": 31,
+        "bytes": 2629,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/FINAL_COMPLETENESS_REVIEW.md",
+        "label": "docs/FINAL_COMPLETENESS_REVIEW.md",
+        "type": "documentation",
+        "lines": 53,
+        "bytes": 4994,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/JUDGE_TEST_PATH.md",
+        "label": "docs/JUDGE_TEST_PATH.md",
+        "type": "documentation",
+        "lines": 89,
+        "bytes": 5021,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/JUDGING_MAP.md",
+        "label": "docs/JUDGING_MAP.md",
+        "type": "documentation",
+        "lines": 240,
+        "bytes": 15084,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/LIMITATIONS.md",
+        "label": "docs/LIMITATIONS.md",
+        "type": "documentation",
+        "lines": 71,
+        "bytes": 6681,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/MEMORY_LENS.md",
+        "label": "docs/MEMORY_LENS.md",
+        "type": "documentation",
+        "lines": 29,
+        "bytes": 1789,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/MISTAKE_SHIELD.md",
+        "label": "docs/MISTAKE_SHIELD.md",
+        "type": "documentation",
+        "lines": 19,
+        "bytes": 872,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/NOT_RUN_GATES.md",
+        "label": "docs/NOT_RUN_GATES.md",
+        "type": "evidence",
+        "lines": 27,
+        "bytes": 3120,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/ORIGINALITY_MATRIX.md",
+        "label": "docs/ORIGINALITY_MATRIX.md",
+        "type": "documentation",
+        "lines": 35,
+        "bytes": 2692,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/PRIVACY_AND_SECURITY.md",
+        "label": "docs/PRIVACY_AND_SECURITY.md",
+        "type": "documentation",
+        "lines": 112,
+        "bytes": 8519,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/PRODUCT_DECISIONS.md",
+        "label": "docs/PRODUCT_DECISIONS.md",
+        "type": "documentation",
+        "lines": 98,
+        "bytes": 9203,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/SOURCE_PROTECTION.md",
+        "label": "docs/SOURCE_PROTECTION.md",
+        "type": "documentation",
+        "lines": 45,
+        "bytes": 3017,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/SOURCE_RESEARCH_MATRIX.md",
+        "label": "docs/SOURCE_RESEARCH_MATRIX.md",
+        "type": "documentation",
+        "lines": 40,
+        "bytes": 3106,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/TECH_DEBT_DELTA.md",
+        "label": "docs/TECH_DEBT_DELTA.md",
+        "type": "documentation",
+        "lines": 26,
+        "bytes": 1849,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/TRACEABILITY_MATRIX.md",
+        "label": "docs/TRACEABILITY_MATRIX.md",
+        "type": "evidence",
+        "lines": 23,
+        "bytes": 2655,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/USER_VALIDATION.md",
+        "label": "docs/USER_VALIDATION.md",
+        "type": "documentation",
+        "lines": 40,
+        "bytes": 1852,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:LICENSE",
+        "label": "LICENSE",
+        "type": "file",
+        "lines": 0,
+        "bytes": 1089,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:package-lock.json",
+        "label": "package-lock.json",
+        "type": "file",
+        "lines": 152,
+        "bytes": 4559,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:package.json",
+        "label": "package.json",
+        "type": "file",
+        "lines": 43,
+        "bytes": 1868,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:plans/master-roadmap.md",
+        "label": "plans/master-roadmap.md",
+        "type": "plan",
+        "lines": 49,
+        "bytes": 3207,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a plan surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:plans/PHASE0_ALIGNMENT.md",
+        "label": "plans/PHASE0_ALIGNMENT.md",
+        "type": "plan",
+        "lines": 17,
+        "bytes": 1445,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a plan surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:README.md",
+        "label": "README.md",
+        "type": "readme",
+        "lines": 376,
+        "bytes": 29536,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.82,
+        "importance": 0.82,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a readme surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:TECH_DEBT_AND_SECURITY.md",
+        "label": "TECH_DEBT_AND_SECURITY.md",
+        "type": "documentation",
+        "lines": 15,
+        "bytes": 1119,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:tests/helpers.js",
+        "label": "tests/helpers.js",
+        "type": "test",
+        "lines": 21,
+        "bytes": 518,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.86,
+        "importance": 0.86,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a test surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:tests/test_cli_commands.js",
+        "label": "tests/test_cli_commands.js",
+        "type": "test",
+        "lines": 32,
+        "bytes": 1807,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.86,
+        "importance": 0.86,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a test surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:tests/test_codex_review.js",
+        "label": "tests/test_codex_review.js",
+        "type": "test",
+        "lines": 247,
+        "bytes": 13113,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.86,
+        "importance": 0.86,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a test surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:tests/test_context_graph.js",
+        "label": "tests/test_context_graph.js",
+        "type": "test",
+        "lines": 16,
+        "bytes": 700,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.86,
+        "importance": 0.86,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a test surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:tests/test_evidence_pack.js",
+        "label": "tests/test_evidence_pack.js",
+        "type": "evidence",
+        "lines": 27,
+        "bytes": 1931,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:tests/test_health_scoring.js",
+        "label": "tests/test_health_scoring.js",
+        "type": "test",
+        "lines": 91,
+        "bytes": 6331,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.86,
+        "importance": 0.86,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a test surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:tests/test_mistake_shield.js",
+        "label": "tests/test_mistake_shield.js",
+        "type": "test",
+        "lines": 29,
+        "bytes": 1371,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.86,
+        "importance": 0.86,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a test surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:tests/test_phase0.js",
+        "label": "tests/test_phase0.js",
+        "type": "test",
+        "lines": 27,
+        "bytes": 1316,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.86,
+        "importance": 0.86,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a test surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:tests/test_required_surfaces.js",
+        "label": "tests/test_required_surfaces.js",
+        "type": "test",
+        "lines": 26,
+        "bytes": 2071,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.86,
+        "importance": 0.86,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a test surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:tests/test_review_gate.js",
+        "label": "tests/test_review_gate.js",
+        "type": "test",
+        "lines": 26,
+        "bytes": 1132,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.86,
+        "importance": 0.86,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a test surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:tests/test_source_protection.js",
+        "label": "tests/test_source_protection.js",
+        "type": "test",
+        "lines": 30,
+        "bytes": 1921,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.86,
+        "importance": 0.86,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a test surface for Codex mission context.",
+        "owners": []
+      }
+    ],
+    "edges": [
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/reportAdapter.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/Icon.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/Panel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/ScoreHero.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/ScoreBreakdown.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/RiskCards.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/MissingSurfaces.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/PhaseZeroCard.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/CodexPromptPanel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/CodexLiveReviewPanel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/ReviewGatePanel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/EvidencePanel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/TraceabilityMatrix.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/ContextBudgetPanel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/ContextGraphPanel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/MemoryLensPanel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/FlightRecorderPanel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/MistakeShieldPanel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/App.jsx",
+        "to": "file:apps/dashboard/src/components/BeforeAfterPanel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/BeforeAfterPanel.jsx",
+        "to": "file:apps/dashboard/src/components/Panel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/BeforeAfterPanel.jsx",
+        "to": "file:apps/dashboard/src/components/Icon.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/CodexLiveReviewPanel.jsx",
+        "to": "file:apps/dashboard/src/components/Panel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/CodexPromptPanel.jsx",
+        "to": "file:apps/dashboard/src/components/Panel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/CodexPromptPanel.jsx",
+        "to": "file:apps/dashboard/src/components/Icon.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/ContextBudgetPanel.jsx",
+        "to": "file:apps/dashboard/src/components/Panel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/ContextBudgetPanel.jsx",
+        "to": "file:apps/dashboard/src/components/Icon.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/ContextGraphPanel.jsx",
+        "to": "file:apps/dashboard/src/components/Panel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/FlightRecorderPanel.jsx",
+        "to": "file:apps/dashboard/src/components/Panel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/FlightRecorderPanel.jsx",
+        "to": "file:apps/dashboard/src/components/Icon.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/MemoryLensPanel.jsx",
+        "to": "file:apps/dashboard/src/components/Panel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/MemoryLensPanel.jsx",
+        "to": "file:apps/dashboard/src/components/Icon.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/MissingSurfaces.jsx",
+        "to": "file:apps/dashboard/src/components/Panel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/MistakeShieldPanel.jsx",
+        "to": "file:apps/dashboard/src/components/Panel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/MistakeShieldPanel.jsx",
+        "to": "file:apps/dashboard/src/components/Icon.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/Panel.jsx",
+        "to": "file:apps/dashboard/src/components/Icon.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/PhaseZeroCard.jsx",
+        "to": "file:apps/dashboard/src/components/Panel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/PhaseZeroCard.jsx",
+        "to": "file:apps/dashboard/src/components/Icon.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/ReviewGatePanel.jsx",
+        "to": "file:apps/dashboard/src/components/Panel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/ReviewGatePanel.jsx",
+        "to": "file:apps/dashboard/src/components/Icon.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/RiskCards.jsx",
+        "to": "file:apps/dashboard/src/components/Panel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/RiskCards.jsx",
+        "to": "file:apps/dashboard/src/components/Icon.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/ScoreBreakdown.jsx",
+        "to": "file:apps/dashboard/src/components/Panel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/ScoreHero.jsx",
+        "to": "file:apps/dashboard/src/components/Panel.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/components/ScoreHero.jsx",
+        "to": "file:apps/dashboard/src/components/Icon.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/main.jsx",
+        "to": "file:apps/dashboard/src/App.jsx",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/reportAdapter.js",
+        "to": "file:apps/dashboard/src/reconciliationAdapter.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:apps/dashboard/src/reportAdapter.test.js",
+        "to": "file:apps/dashboard/src/reportAdapter.js",
+        "relation": "tests"
+      },
+      {
+        "from": "file:cli/commands/codex-review.js",
+        "to": "file:cli/lib/repoScanner.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/codex-review.js",
+        "to": "file:cli/lib/safeFs.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/context-graph.js",
+        "to": "file:cli/lib/repoScanner.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/context-graph.js",
+        "to": "file:cli/lib/reportWriter.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/demo.js",
+        "to": "file:cli/commands/init.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/demo.js",
+        "to": "file:cli/commands/phase0.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/demo.js",
+        "to": "file:cli/lib/evidenceCollector.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/demo.js",
+        "to": "file:cli/lib/flightRecorder.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/demo.js",
+        "to": "file:cli/lib/mistakeShield.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/demo.js",
+        "to": "file:cli/lib/repoScanner.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/demo.js",
+        "to": "file:cli/lib/reviewGate.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/demo.js",
+        "to": "file:cli/lib/safeFs.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/doctor.js",
+        "to": "file:cli/lib/repoScanner.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/export-devpost.js",
+        "to": "file:cli/lib/repoScanner.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/export-devpost.js",
+        "to": "file:cli/lib/safeFs.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/export-devpost.js",
+        "to": "file:cli/lib/reportWriter.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/flight-recorder.js",
+        "to": "file:cli/lib/flightRecorder.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/flight-recorder.js",
+        "to": "file:cli/lib/safeFs.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/health.js",
+        "to": "file:cli/lib/repoScanner.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/init.js",
+        "to": "file:cli/lib/constants.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/init.js",
+        "to": "file:cli/lib/reviewGate.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/init.js",
+        "to": "file:cli/lib/safeFs.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/memory-lens.js",
+        "to": "file:cli/lib/memoryLens.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/memory-lens.js",
+        "to": "file:cli/lib/reportWriter.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/memory-lens.js",
+        "to": "file:cli/lib/safeFs.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/mistake-shield.js",
+        "to": "file:cli/lib/repoScanner.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/mistake-shield.js",
+        "to": "file:cli/lib/mistakeShield.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/mistake-shield.js",
+        "to": "file:cli/lib/safeFs.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/phase0.js",
+        "to": "file:cli/lib/codexPromptBuilder.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/phase0.js",
+        "to": "file:cli/lib/safeFs.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/review-gate.js",
+        "to": "file:cli/lib/reviewGate.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/review-gate.js",
+        "to": "file:cli/lib/safeFs.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/scan.js",
+        "to": "file:cli/lib/repoScanner.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/scan.js",
+        "to": "file:cli/lib/reportWriter.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/index.js",
+        "to": "file:cli/commands/context-graph.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/index.js",
+        "to": "file:cli/commands/codex-review.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/index.js",
+        "to": "file:cli/commands/demo.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/index.js",
+        "to": "file:cli/commands/doctor.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/index.js",
+        "to": "file:cli/commands/evidence.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/index.js",
+        "to": "file:cli/commands/export-devpost.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/index.js",
+        "to": "file:cli/commands/flight-recorder.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/index.js",
+        "to": "file:cli/commands/health.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/index.js",
+        "to": "file:cli/commands/init.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/index.js",
+        "to": "file:cli/commands/memory-lens.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/index.js",
+        "to": "file:cli/commands/mistake-shield.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/index.js",
+        "to": "file:cli/commands/phase0.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/index.js",
+        "to": "file:cli/commands/review-gate.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/index.js",
+        "to": "file:cli/commands/scan.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/flightRecorder.js",
+        "to": "file:cli/lib/safeFs.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/healthScorer.js",
+        "to": "file:cli/lib/constants.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/memoryLens.js",
+        "to": "file:cli/lib/safeFs.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/mistakeShield.js",
+        "to": "file:cli/lib/reviewGate.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/mistakeShield.js",
+        "to": "file:cli/lib/memoryLens.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/reportWriter.js",
+        "to": "file:cli/lib/safeFs.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/repoScanner.js",
+        "to": "file:cli/lib/constants.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/repoScanner.js",
+        "to": "file:cli/lib/contextGraphBuilder.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/repoScanner.js",
+        "to": "file:cli/lib/codexPromptBuilder.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/repoScanner.js",
+        "to": "file:cli/lib/healthScorer.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/repoScanner.js",
+        "to": "file:cli/lib/memoryLens.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/repoScanner.js",
+        "to": "file:cli/lib/mistakeShield.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/repoScanner.js",
+        "to": "file:cli/lib/reviewGate.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/repoScanner.js",
+        "to": "file:cli/lib/safeFs.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/repoScanner.js",
+        "to": "file:cli/lib/flightRecorder.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/reviewGate.js",
+        "to": "file:cli/lib/constants.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/reviewGate.js",
+        "to": "file:cli/lib/safeFs.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/lib/safeFs.js",
+        "to": "file:cli/lib/constants.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:plans/master-roadmap.md",
+        "to": "file:docs/EVIDENCE_REPORT.md",
+        "relation": "requires-evidence"
+      },
+      {
+        "from": "file:plans/master-roadmap.md",
+        "to": "file:docs/TRACEABILITY_MATRIX.md",
+        "relation": "traced-by"
+      },
+      {
+        "from": "file:README.md",
+        "to": "file:docs/ARCHITECTURE.md",
+        "relation": "explained-by"
+      }
+    ],
+    "ownershipHints": [],
+    "missingOwners": [
+      "apps/dashboard/src/App.jsx",
+      "apps/dashboard/src/components/BeforeAfterPanel.jsx",
+      "apps/dashboard/src/components/CodexLiveReviewPanel.jsx",
+      "apps/dashboard/src/components/CodexPromptPanel.jsx",
+      "apps/dashboard/src/components/ContextBudgetPanel.jsx",
+      "apps/dashboard/src/components/ContextGraphPanel.jsx",
+      "apps/dashboard/src/components/FlightRecorderPanel.jsx",
+      "apps/dashboard/src/components/Icon.jsx",
+      "apps/dashboard/src/components/MemoryLensPanel.jsx",
+      "apps/dashboard/src/components/MissingSurfaces.jsx",
+      "apps/dashboard/src/components/MistakeShieldPanel.jsx",
+      "apps/dashboard/src/components/Panel.jsx",
+      "apps/dashboard/src/components/PhaseZeroCard.jsx",
+      "apps/dashboard/src/components/ReviewGatePanel.jsx",
+      "apps/dashboard/src/components/RiskCards.jsx",
+      "apps/dashboard/src/components/ScoreBreakdown.jsx",
+      "apps/dashboard/src/components/ScoreHero.jsx",
+      "apps/dashboard/src/main.jsx",
+      "apps/dashboard/src/reconciliationAdapter.js",
+      "apps/dashboard/src/reportAdapter.js",
+      "apps/dashboard/vite.config.js",
+      "cli/commands/codex-review.js",
+      "cli/commands/context-graph.js",
+      "cli/commands/demo.js",
+      "cli/commands/doctor.js",
+      "cli/commands/export-devpost.js",
+      "cli/commands/flight-recorder.js",
+      "cli/commands/health.js",
+      "cli/commands/init.js",
+      "cli/commands/memory-lens.js",
+      "cli/commands/mistake-shield.js",
+      "cli/commands/phase0.js",
+      "cli/commands/review-gate.js",
+      "cli/commands/scan.js",
+      "cli/index.js",
+      "cli/lib/codexPromptBuilder.js",
+      "cli/lib/constants.js",
+      "cli/lib/contextGraphBuilder.js",
+      "cli/lib/flightRecorder.js",
+      "cli/lib/healthScorer.js",
+      "cli/lib/markdown.js",
+      "cli/lib/memoryLens.js",
+      "cli/lib/mistakeShield.js",
+      "cli/lib/reportWriter.js",
+      "cli/lib/repoScanner.js",
+      "cli/lib/reviewGate.js",
+      "cli/lib/safeFs.js"
+    ],
+    "overlappingPlans": [],
+    "stats": {
+      "nodeCount": 132,
+      "edgeCount": 116,
+      "riskNodeCount": 0,
+      "todoFixmeCount": 0
+    },
+    "contextTrace": [
+      {
+        "id": "file:.codex/AGENTS.md",
+        "label": ".codex/AGENTS.md",
+        "type": "instruction",
+        "lines": 29,
+        "bytes": 1717,
+        "risk": false,
+        "markers": 0,
+        "relevance": 1,
+        "importance": 1,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a instruction surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/adapters/codex/AGENTS.md",
+        "label": "core/adapters/codex/AGENTS.md",
+        "type": "instruction",
+        "lines": 45,
+        "bytes": 1810,
+        "risk": false,
+        "markers": 0,
+        "relevance": 1,
+        "importance": 1,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a instruction surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/adapters/generic/AGENTS.md",
+        "label": "core/adapters/generic/AGENTS.md",
+        "type": "instruction",
+        "lines": 24,
+        "bytes": 967,
+        "risk": false,
+        "markers": 0,
+        "relevance": 1,
+        "importance": 1,
+        "freshness": "fresh",
+        "protected": true,
+        "reason": "Selected as a instruction surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/EvidencePanel.jsx",
+        "label": "apps/dashboard/src/components/EvidencePanel.jsx",
+        "type": "evidence",
+        "lines": 38,
+        "bytes": 1820,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/components/TraceabilityMatrix.jsx",
+        "label": "apps/dashboard/src/components/TraceabilityMatrix.jsx",
+        "type": "evidence",
+        "lines": 16,
+        "bytes": 803,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/commands/evidence.js",
+        "label": "cli/commands/evidence.js",
+        "type": "evidence",
+        "lines": 17,
+        "bytes": 627,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/lib/evidenceCollector.js",
+        "label": "cli/lib/evidenceCollector.js",
+        "type": "evidence",
+        "lines": 126,
+        "bytes": 5665,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/templates/EVIDENCE_REPORT_TEMPLATE.md",
+        "label": "core/templates/EVIDENCE_REPORT_TEMPLATE.md",
+        "type": "evidence",
+        "lines": 41,
+        "bytes": 869,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/templates/NOT_RUN_GATES_TEMPLATE.md",
+        "label": "core/templates/NOT_RUN_GATES_TEMPLATE.md",
+        "type": "evidence",
+        "lines": 16,
+        "bytes": 455,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/templates/TRACEABILITY_MATRIX_TEMPLATE.md",
+        "label": "core/templates/TRACEABILITY_MATRIX_TEMPLATE.md",
+        "type": "evidence",
+        "lines": 14,
+        "bytes": 716,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:core/workflows/evidence-first-delivery.md",
+        "label": "core/workflows/evidence-first-delivery.md",
+        "type": "evidence",
+        "lines": 30,
+        "bytes": 1213,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/EVIDENCE_REPORT.md",
+        "label": "docs/EVIDENCE_REPORT.md",
+        "type": "evidence",
+        "lines": 31,
+        "bytes": 3603,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/NOT_RUN_GATES.md",
+        "label": "docs/NOT_RUN_GATES.md",
+        "type": "evidence",
+        "lines": 27,
+        "bytes": 3120,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/TRACEABILITY_MATRIX.md",
+        "label": "docs/TRACEABILITY_MATRIX.md",
+        "type": "evidence",
+        "lines": 23,
+        "bytes": 2655,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:plans/master-roadmap.md",
+        "label": "plans/master-roadmap.md",
+        "type": "plan",
+        "lines": 49,
+        "bytes": 3207,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a plan surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:plans/PHASE0_ALIGNMENT.md",
+        "label": "plans/PHASE0_ALIGNMENT.md",
+        "type": "plan",
+        "lines": 17,
+        "bytes": 1445,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a plan surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:tests/test_evidence_pack.js",
+        "label": "tests/test_evidence_pack.js",
+        "type": "evidence",
+        "lines": 27,
+        "bytes": 1931,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/config.json",
+        "label": ".controltower/config.json",
+        "type": "control",
+        "lines": 30,
+        "bytes": 769,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/flight-recorder.jsonl",
+        "label": ".controltower/flight-recorder.jsonl",
+        "type": "control",
+        "lines": 0,
+        "bytes": 2603,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/phase0.json",
+        "label": ".controltower/phase0.json",
+        "type": "control",
+        "lines": 15,
+        "bytes": 1520,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.controltower/review-gate.json",
+        "label": ".controltower/review-gate.json",
+        "type": "control",
+        "lines": 40,
+        "bytes": 1495,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.9,
+        "importance": 0.9,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a control surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.github/workflows/ci.yml",
+        "label": ".github/workflows/ci.yml",
+        "type": "ci",
+        "lines": 24,
+        "bytes": 534,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.88,
+        "importance": 0.88,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a ci surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:.github/workflows/pages.yml",
+        "label": ".github/workflows/pages.yml",
+        "type": "ci",
+        "lines": 50,
+        "bytes": 1171,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.88,
+        "importance": 0.88,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a ci surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:apps/dashboard/src/reportAdapter.test.js",
+        "label": "apps/dashboard/src/reportAdapter.test.js",
+        "type": "test",
+        "lines": 167,
+        "bytes": 6543,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.86,
+        "importance": 0.86,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a test surface for Codex mission context.",
+        "owners": []
+      }
+    ],
+    "contextBudget": {
+      "maxItems": 24,
+      "selectedItems": 24,
+      "availableItems": 132,
+      "estimatedTokens": 11823
+    }
+  },
+  "reviewGate": {
+    "status": "APPROVED",
+    "note": "The project owner explicitly requested continuation and publication to zyganali-glitch/codex-control-tower in the active Codex session.",
+    "updatedAt": "2026-07-12T23:29:03+03:00",
+    "decidedBy": "project-owner-via-active-codex-session",
+    "localFileGate": true,
+    "identityVerified": false,
+    "scope": "Complete bounded release-preflight hardening, run local verification, commit the independent repository, and push main to the user-provided GitHub repository.",
+    "allowedFiles": [
+      ".codex/**",
+      ".controltower/**",
+      ".github/**",
+      "apps/**",
+      "cli/**",
+      "core/**",
+      "docs/**",
+      "examples/**",
+      "plans/**",
+      "tests/**",
+      "README.md",
+      "CHANGELOG.md",
+      "LICENSE",
+      "package.json",
+      "package-lock.json",
+      "TECH_DEBT_AND_SECURITY.md"
+    ],
+    "forbiddenActions": [
+      "modify or push to any protected source repository",
+      "commit credentials, tokens, private URLs, or private screenshots",
+      "rewrite shared Git history",
+      "claim NOT_RUN or SIMULATED evidence as PASS",
+      "publish to a destination other than the approved GitHub repository"
+    ],
+    "scopeComplete": true,
+    "schemaVersion": "1.0",
+    "disclaimer": "Local session approval; not enterprise identity verification or a signed authorization.",
+    "fulfilledAt": "2026-07-12T23:52:03+03:00",
+    "fulfilledCommit": "e0ee256e7eb497cd6293fe51f51899645ee3ed90",
+    "verifiedWorkflowRun": "https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29208503014",
+    "exists": true,
+    "decisionRecorded": true
+  },
+  "memoryLens": {
+    "generatedAt": "2026-07-13T21:04:09.366Z",
+    "generatedLocally": true,
+    "sources": [
+      {
+        "relative": "docs/MEMORY_LENS.md",
+        "ageDays": 0,
+        "stale": false,
+        "bytes": 1789
+      },
+      {
+        "relative": "TECH_DEBT_AND_SECURITY.md",
+        "ageDays": 1,
+        "stale": false,
+        "bytes": 1119
+      },
+      {
+        "relative": "README.md",
+        "ageDays": 0,
+        "stale": false,
+        "bytes": 29536
+      }
+    ],
+    "persistentRules": [
+      "# Never-forget rules",
+      "The Universal Agent OS family is protected read-only concept research; this repository is independent.",
+      "InvoiceFlow Mini is a fictional sample project and must never be represented as customer evidence; real scans/tests/model runs on its prepared snapshots remain separately labeled executions.",
+      "Preserve local-first behavior, no telemetry, and no mandatory OpenAI API key.",
+      "Do not publish secrets, private screenshots, or user-specific absolute paths.",
+      "Scoring is deterministic and content-aware; empty filenames must not inflate readiness.",
+      "Dashboard captures must use sanitized relative paths before public submission.",
+      "The competition narrative must show thoughtful, inspectable Codex collaboration—not merely a long feature list."
+    ],
+    "neverForgetRisks": [
+      "Next session: read the roadmap, Review Gate, evidence report, NOT_RUN gates, technical-debt delta, and flight recorder; then take only the next safe mission supported by current evidence.",
+      "Technical Debt and Security Quarantine",
+      "Real authentication, payment providers, credentials, external APIs, telemetry, and source upload are outside the competition build.",
+      "The deliberately risky auth/payment code under `examples/` is simulated fixture data and must not be reused as production logic.",
+      "Destructive work, protected-source changes, real provider integration, and publication outside the recorded repository are blocked without a new scoped Review Gate. Security claims require executed checks; local heuristics do not replace independent review, and unrun external checks remain `NOT_RUN`.",
+      "Codex Control Tower is a local-first developer tool that turns Codex-assisted work into a bounded, reviewable delivery workflow with mission context, risk signals, approval state, evidence, and a safe handoff.",
+      "Scores governance health across planning, Codex readiness, evidence, tests/CI, documentation, brownfield safety, continuity, review, context, and risk hygiene.",
+      "Detects risky auth/payment areas, stale or tiny documentation, TODO/FIXME markers, weak tests, oversized files, and missing handoff records."
+    ],
+    "architecturePrinciples": [
+      "Preserve local-first behavior, no telemetry, and no mandatory OpenAI API key.",
+      "# Architecture and product memory",
+      "Git publication, history rewriting, dependency changes, and workflow permissions require explicit human scope.",
+      "Codex Control Tower is a local-first developer tool that turns Codex-assisted work into a bounded, reviewable delivery workflow with mission context, risk signals, approval state, evidence, and a safe handoff.",
+      "What was the agreed mission and file boundary?",
+      "What context and lessons must survive the session boundary?",
+      "| **Codex Memory Lens** | Durable rules, minefields, architecture principles, environment constraints, preferences, stale sources, and continuity metrics. |",
+      "| **Evidence Boundary Report** | PASS, WARN, FAIL, NOT_RUN, and SIMULATED remain distinct and tied to named artifacts. |"
+    ],
+    "environmentConstraints": [
+      "Preserve local-first behavior, no telemetry, and no mandatory OpenAI API key.",
+      "CommonJS Node.js powers the CLI; React/Vite powers the local dashboard.",
+      "*OpenAI Build Week Developer Tools entry · deterministic claims + real GPT-5.6 Evidence Reconciliation · no API key required · fictional sample clearly separated from real execution**",
+      "| **Codex Memory Lens** | Durable rules, minefields, architecture principles, environment constraints, preferences, stale sources, and continuity metrics. |",
+      "Requires Node.js 18 or newer.",
+      "Codex then executes `npm run demo:codex` through the product's featured, explicit opt-in path. The command performs a **REAL CODEX RUN** with `gpt-5.6-sol` against bounded evidence in read-only mode. It uses the ChatGPT subscription session already signed in to Codex, not an API key. Local code derives target-appropriate claims, records evidence hashes and Git provenance, filters and records unsupported citation paths, rejects malformed output, and keeps every deterministic state and the final local verdict outside model control.",
+      "| Windows 10 Pro | **VERIFIED** | Full root tests, dashboard build, ChatGPT-authenticated Codex CLI, and real `gpt-5.6-sol` run executed locally. |",
+      "| macOS | **NOT_RUN** | Node/Vite portability is expected, but this Build Week version has no named macOS execution artifact. |"
+    ],
+    "userPreferences": [
+      "Self-referential lexical rules can flag their own source or explanatory documentation. Prefer explicit markers, scoped targets, and regression fixtures.",
+      "Codex Control Tower is a new independent repository, but release and scanner surfaces still require brownfield-style caution because they traverse arbitrary local files and publish evidence.",
+      "| **Phase-0 Alignment Wizard** | Eight plain-language English questions, one at a time; it writes alignment files and a first mission prompt, not implementation code. |",
+      "Additional target-derived reconciliation policies and language-aware claim adapters",
+      "Stronger language-aware dependency and code-ownership mapping"
+    ],
+    "staleSections": [],
+    "missingSources": [
+      "AGENT_MEMORY_AND_LESSONS.md",
+      "AGENT_ARCHITECTURE_AND_PATTERNS.md",
+      "AGENT_ENVIRONMENT_AND_API.md",
+      "AGENT_USER_PREFERENCES.md"
+    ],
+    "contradictions": [],
+    "selectedItems": [
+      {
+        "pillar": "Code Soul",
+        "text": "# Never-forget rules",
+        "reason": "Durable rule",
+        "protected": true,
+        "relevance": 1,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Code Soul",
+        "text": "The Universal Agent OS family is protected read-only concept research; this repository is independent.",
+        "reason": "Durable rule",
+        "protected": true,
+        "relevance": 0.97,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Code Soul",
+        "text": "InvoiceFlow Mini is a fictional sample project and must never be represented as customer evidence; real scans/tests/model runs on its prepared snapshots remain separately labeled executions.",
+        "reason": "Durable rule",
+        "protected": true,
+        "relevance": 0.95,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Code Soul",
+        "text": "Preserve local-first behavior, no telemetry, and no mandatory OpenAI API key.",
+        "reason": "Durable rule",
+        "protected": true,
+        "relevance": 0.93,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Code Soul",
+        "text": "Do not publish secrets, private screenshots, or user-specific absolute paths.",
+        "reason": "Durable rule",
+        "protected": true,
+        "relevance": 0.9,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Code Soul",
+        "text": "Scoring is deterministic and content-aware; empty filenames must not inflate readiness.",
+        "reason": "Durable rule",
+        "protected": true,
+        "relevance": 0.88,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Code Soul",
+        "text": "Dashboard captures must use sanitized relative paths before public submission.",
+        "reason": "Durable rule",
+        "protected": true,
+        "relevance": 0.85,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Code Soul",
+        "text": "The competition narrative must show thoughtful, inspectable Codex collaboration—not merely a long feature list.",
+        "reason": "Durable rule",
+        "protected": true,
+        "relevance": 0.82,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Minefield",
+        "text": "Next session: read the roadmap, Review Gate, evidence report, NOT_RUN gates, technical-debt delta, and flight recorder; then take only the next safe mission supported by current evidence.",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 0.8,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Minefield",
+        "text": "Technical Debt and Security Quarantine",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 0.78,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Minefield",
+        "text": "Real authentication, payment providers, credentials, external APIs, telemetry, and source upload are outside the competition build.",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 0.75,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Minefield",
+        "text": "The deliberately risky auth/payment code under `examples/` is simulated fixture data and must not be reused as production logic.",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 0.72,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Minefield",
+        "text": "Destructive work, protected-source changes, real provider integration, and publication outside the recorded repository are blocked without a new scoped Review Gate. Security claims require executed checks; local heuristics do not replace independent review, and unrun external checks remain `NOT_RUN`.",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 0.7,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Minefield",
+        "text": "Codex Control Tower is a local-first developer tool that turns Codex-assisted work into a bounded, reviewable delivery workflow with mission context, risk signals, approval state, evidence, and a safe handoff.",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 0.68,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Minefield",
+        "text": "Scores governance health across planning, Codex readiness, evidence, tests/CI, documentation, brownfield safety, continuity, review, context, and risk hygiene.",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 0.65,
+        "freshness": "fresh",
+        "importance": "high"
+      },
+      {
+        "pillar": "Minefield",
+        "text": "Detects risky auth/payment areas, stale or tiny documentation, TODO/FIXME markers, weak tests, oversized files, and missing handoff records.",
+        "reason": "Risk prevention",
+        "protected": true,
+        "relevance": 0.63,
+        "freshness": "fresh",
+        "importance": "high"
+      }
+    ],
+    "metrics": {
+      "sourcesFound": 3,
+      "protectedItems": 16,
+      "staleSources": 0,
+      "continuityCoverage": 43
+    }
+  },
+  "mistakeShield": {
+    "verdict": "CAUTION",
+    "proposedAction": "Continue with the smallest listed governance fix",
+    "reasons": [
+      "Matched memory: Scores governance health across planning, Codex readiness, evidence, tests/CI, documentation, brownfield safety, continuity, review, context, and risk hygiene."
+    ],
+    "matchedLessons": [
+      "Scores governance health across planning, Codex readiness, evidence, tests/CI, documentation, brownfield safety, continuity, review, context, and risk hygiene."
+    ],
+    "gateStatus": "APPROVED",
+    "saferNextAction": "Inspect the listed risk files, define allowed files and evidence, then request review before changing behavior.",
+    "checkedAt": "2026-07-13T21:04:09.367Z",
+    "deterministic": true
+  },
+  "phase0": {
+    "schemaVersion": "1.0",
+    "locale": "en",
+    "simulated": false,
+    "source": "User-supplied competition build brief; no additional Phase-0 interview was required.",
+    "goal": "Build, verify, publish, and present Codex Control Tower as a competition-ready local-first governance layer for Codex-assisted software delivery.",
+    "audience": "OpenAI Build Week judges, developers using Codex, AI-agent workflow builders, and open-source reviewers.",
+    "successCriteria": "A working CLI and dashboard, a clear 25-to-88 simulated before/after demo, honest evidence boundaries, protected source lineage, passing local verification, and a reviewable public repository.",
+    "forbiddenAreas": "Do not modify the four protected source repositories, commit secrets or private screenshots, claim simulated evidence as real, add mandatory cloud dependencies, or rewrite Git history.",
+    "risk": "The largest immediate risk is a trust product that does not govern or truthfully assess its own repository; competition eligibility and Codex-use provenance must also remain explicit.",
+    "expectedEvidence": "Full test suite, deterministic demo output, dashboard production build, root self-scan, source-protection checks, clean staged diff, remote commit verification, and visible NOT_RUN gates.",
+    "workflow": "startup",
+    "nextMission": "Recheck the published Devpost rules after challenge opening, capture the final sanitized three-minute demo, and add Codex change provenance without expanding into an unapproved cloud build."
+  },
+  "flightRecorder": {
+    "events": [
+      {
+        "timestamp": "2026-07-12T23:10:00+03:00",
+        "type": "PROMPT",
+        "message": "Project owner requested continuation, GitHub publication, and a competition/repository/roadmap assessment.",
+        "source": "active-codex-session"
+      },
+      {
+        "timestamp": "2026-07-12T23:16:00+03:00",
+        "type": "RISK",
+        "message": "Root self-scan scored 37/100 and incorrectly inherited SIMULATED mode plus fixture auth/payment risks.",
+        "source": "cct-root-preflight"
+      },
+      {
+        "timestamp": "2026-07-12T23:20:00+03:00",
+        "type": "APPROVAL",
+        "message": "User-provided GitHub destination and publication request recorded; protected source repositories remain forbidden.",
+        "source": "active-codex-session"
+      },
+      {
+        "timestamp": "2026-07-12T23:29:03+03:00",
+        "type": "PLAN",
+        "message": "Correct explicit simulation/staleness detection, isolate configured fixtures, add substantive root governance evidence, verify, then publish.",
+        "source": "release-preflight"
+      },
+      {
+        "timestamp": "2026-07-12T23:29:03+03:00",
+        "type": "NOT_RUN",
+        "message": "Post-hardening full verification and GitHub-hosted CI have not run at this checkpoint.",
+        "source": "release-preflight"
+      },
+      {
+        "timestamp": "2026-07-12T23:44:42+03:00",
+        "type": "CHANGE",
+        "message": "Corrected scanner scope/simulation/staleness false positives, score integrity, Mission Prompt authorization, backup symlink handling, and dashboard evidence fallbacks.",
+        "source": "release-preflight"
+      },
+      {
+        "timestamp": "2026-07-12T23:44:42+03:00",
+        "type": "EVIDENCE",
+        "message": "Root self-scan returned REAL_LOCAL_SCAN, 100/100 structural governance readiness, zero risks, zero missing surfaces, and visible fixture exclusions.",
+        "source": "cct-root-release-scan",
+        "status": "PASS"
+      },
+      {
+        "timestamp": "2026-07-12T23:44:42+03:00",
+        "type": "NOT_RUN",
+        "message": "GitHub publication, hosted CI, final sanitized media, published Devpost rules review, deployment, provider, load, accessibility, and independent security checks remain unobserved.",
+        "source": "release-preflight",
+        "status": "NOT_RUN"
+      },
+      {
+        "timestamp": "2026-07-12T23:47:16+03:00",
+        "type": "TEST",
+        "message": "npm.cmd run verify passed: nine CLI/core scripts, five dashboard adapter tests, 25-to-88 demo, dependency audit, and Vite build.",
+        "source": "release-preflight",
+        "status": "PASS"
+      },
+      {
+        "timestamp": "2026-07-12T23:52:03+03:00",
+        "type": "CHANGE",
+        "message": "Release commit e0ee256e7eb497cd6293fe51f51899645ee3ed90 pushed to the approved origin/main; local and remote SHAs matched.",
+        "source": "git-remote-verification",
+        "status": "PASS"
+      },
+      {
+        "timestamp": "2026-07-12T23:52:03+03:00",
+        "type": "TEST",
+        "message": "GitHub Actions workflow run 29208503014 completed successfully for the release commit; all verify job steps passed.",
+        "source": "github-actions",
+        "status": "PASS"
+      }
+    ]
+  },
+  "facts": {
+    "hasPackage": true,
+    "hasCodexInstructions": true,
+    "hasConfig": true,
+    "hasRoadmap": true,
+    "hasAnyPlan": true,
+    "hasEvidence": true,
+    "hasTraceability": true,
+    "hasNotRun": true,
+    "hasTechDebtDelta": true,
+    "hasMemoryLens": true,
+    "hasMistakeShield": true,
+    "hasBrownfield": true,
+    "hasReadme": true,
+    "hasArchitecture": true,
+    "hasPhase0": true,
+    "hasFlightRecorder": true,
+    "reviewGateExists": true,
+    "reviewGateStatus": "APPROVED",
+    "reviewGateScoped": true,
+    "reviewGateDecisionRecorded": true,
+    "hasTests": true,
+    "testsHealthy": true,
+    "testSurfaceMeaningful": true,
+    "weakTests": false,
+    "testFiles": [
+      "apps/dashboard/src/reportAdapter.test.js",
+      "tests/helpers.js",
+      "tests/test_cli_commands.js",
+      "tests/test_codex_review.js",
+      "tests/test_context_graph.js",
+      "tests/test_evidence_pack.js",
+      "tests/test_health_scoring.js",
+      "tests/test_mistake_shield.js",
+      "tests/test_phase0.js",
+      "tests/test_required_surfaces.js",
+      "tests/test_review_gate.js",
+      "tests/test_source_protection.js"
+    ],
+    "hasTestScript": true,
+    "hasCi": true,
+    "ciHealthy": true,
+    "ciFiles": [
+      ".github/workflows/ci.yml",
+      ".github/workflows/pages.yml"
+    ],
+    "readmeHealthy": true,
+    "todoCount": 0,
+    "simulatedData": false,
+    "codexInstructionsHealthy": true,
+    "configHealthy": true,
+    "roadmapHealthy": true,
+    "evidenceHealthy": true,
+    "traceabilityHealthy": true,
+    "notRunHealthy": true,
+    "techDebtHealthy": true,
+    "memoryLensHealthy": true,
+    "mistakeShieldHealthy": true,
+    "brownfieldHealthy": true,
+    "architectureHealthy": true,
+    "phase0Healthy": true,
+    "flightRecorderHealthy": true,
+    "evidenceSurfaceCount": 4,
+    "contextNodeCount": 132,
+    "criticalRiskCount": 0,
+    "highRiskCount": 0
+  },
+  "provenance": {
+    "generatedBy": "cct scan --portable",
+    "gitCommit": "079a604962fd72109d9688dc7384e02d9265c958",
+    "worktreeAtScan": "CLEAN"
+  }
+}

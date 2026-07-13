@@ -119,6 +119,10 @@ Node.js 18 or newer is required. The deterministic path needs no OpenAI API key.
 
 **REAL EXECUTION:** Control Tower really scans both snapshots, calculates the heuristic scores, runs two focused Node.js fixture tests, constructs and hashes an evidence bundle, checks provenance/freshness, invokes real `gpt-5.6-sol` read-only, validates the response, and records the reconciliation. These bounded results are tool evidence, not proof of customer use, production readiness, or full application correctness.
 
+## Real Repository Dogfood
+
+The product also scans its own repository rather than relying only on InvoiceFlow Mini. The committed [portable root scan](docs/ROOT_REPO_SCAN.json) records `REAL_LOCAL_SCAN`, no simulated-data flag, score `100/100`, zero detected risks, zero missing governance surfaces, base commit `079a604`, and a clean worktree at scan time. Reproduce it with `npm run evidence:self`. This is structural governance evidence, not a correctness or security certificate.
+
 ## Demo Recording Path
 
 Prepare the live local workbench:

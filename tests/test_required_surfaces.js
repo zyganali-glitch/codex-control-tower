@@ -10,7 +10,7 @@ const required = [
   'docs/DEVPOST_SUBMISSION.md', 'docs/DEMO_SCRIPT.md', 'docs/JUDGING_MAP.md', 'docs/CODEX_BUILD_LOG.md',
   'docs/DEMO_REHBERI_TR.md', 'cli/commands/codex-review.js', 'tests/test_codex_review.js',
   'docs/SOURCE_PROTECTION.md', 'docs/SOURCE_RESEARCH_MATRIX.md', 'docs/FEATURE_HARVEST.md', 'docs/ORIGINALITY_MATRIX.md',
-  'docs/CODEX_SELF_ASSESSMENT.md', 'docs/CODEX_NATIVE_RECOMMENDATIONS.md', 'docs/FINAL_COMPLETENESS_REVIEW.md',
+  'docs/CODEX_SELF_ASSESSMENT.md', 'docs/CODEX_NATIVE_RECOMMENDATIONS.md', 'docs/FINAL_COMPLETENESS_REVIEW.md', 'docs/ROOT_REPO_SCAN.json',
   'apps/dashboard/src/App.jsx', 'apps/dashboard/src/components/CodexLiveReviewPanel.jsx', 'apps/dashboard/src/sample-report.json', 'apps/dashboard/public/live-report.json',
   'core/en/phase0-questions.json'
 ];

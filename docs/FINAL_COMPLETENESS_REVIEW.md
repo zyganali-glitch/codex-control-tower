@@ -32,7 +32,7 @@ This review separates product implementation, published evidence, fictional samp
 | Unsafe model-output handling | PASS | Missing/duplicate/status-injecting/malformed/execution-claiming responses are rejected; unsupported citation paths are filtered and recorded |
 | READY truthfulness | PASS | READY is labeled not started; real-run claims appear only for RUNNING/COMPLETE recorded state |
 | Full root verification and dashboard production build | PASS | Current release verification record; exact module count is not a durable product claim |
-| Static judge-demo deployment | PASS | GitHub Pages run [`29279549424`](https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29279549424), published baseline `416d145`; anonymous access succeeded |
+| Static judge-demo deployment | PASS | Historical GitHub Pages run [`29279549424`](https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29279549424), published baseline `416d145`; anonymous access succeeded. Current status is read from workflow history. |
 | Real GPT-5.6 Evidence Reconciliation | PASS | Signed-in ChatGPT subscription, exact `gpt-5.6-sol`, read-only execution, locked local state, structured provenance |
 | Fixture/provider deployment, load, accessibility, independent security review | NOT_RUN | Static judge hosting and focused tests do not prove these separate gates |
 

@@ -20,6 +20,7 @@ assert.doesNotMatch(publicText, /(?:[A-Za-z]:\\Users\\[^\\]+|\/(?:home|Users)\/[
 const portableDemoArtifacts = [
   'apps/dashboard/src/sample-report.json',
   'apps/dashboard/public/live-report.json',
+  'docs/ROOT_REPO_SCAN.json',
   'examples/governed-saas-after/CONTROL_TOWER_REPORT.json',
   'examples/demo-report/after-report.json',
   'examples/governed-saas-after/.controltower/codex-live-events.jsonl',

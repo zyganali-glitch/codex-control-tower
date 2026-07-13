@@ -8,7 +8,7 @@ Open the verified public page:
 
 **https://zyganali-glitch.github.io/codex-control-tower/**
 
-GitHub Pages workflow run [`29279549424`](https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29279549424) succeeded for published baseline `416d145`, and the page was verified without authentication on 2026-07-13.
+Historical GitHub Pages workflow run [`29279549424`](https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29279549424) succeeded for published baseline `416d145`, and the page was verified without authentication on 2026-07-13. Use the repository's workflow history for the current deployment result.
 
 1. Read **FICTIONAL SAMPLE PROJECT** and the separate **REAL EXECUTION** statement.
 2. In **Overview**, inspect the recorded Evidence Reconciliation result.

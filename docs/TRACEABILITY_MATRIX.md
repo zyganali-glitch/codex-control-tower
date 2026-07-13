@@ -3,8 +3,9 @@
 | Requirement | Implementation | Evidence | Status |
 | --- | --- | --- | --- |
 | Local-first Codex governance CLI | `cli/commands/`, `cli/lib/` | Current test and `npm run verify` records | PASS |
+| Product self-scan | `npm run evidence:self` | `docs/ROOT_REPO_SCAN.json`: portable clean-worktree `REAL_LOCAL_SCAN` | PASS — structural governance only |
 | Judge-readable dashboard | `apps/dashboard/` | Production build plus local/Pages visual checks | PASS |
-| Static no-install judge exhibit | `.github/workflows/pages.yml` | GitHub Pages run [`29279549424`](https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29279549424), published baseline `416d145` | PASS |
+| Static no-install judge exhibit | `.github/workflows/pages.yml` | Historical GitHub Pages run [`29279549424`](https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29279549424), published baseline `416d145`; current result lives in workflow history | PASS |
 | Live recording workbench | Local `npm run dashboard` | `READY → RUNNING → COMPLETE` contract and dashboard tests | PASS — local only |
 | Honest fictional before/after sample | `examples/messy-saas-before`, `examples/governed-saas-after` | Real `npm run demo` scans and two focused fixture tests | PASS — prepared snapshots, not customer outcomes |
 | General target-derived evidence claims | `cli/commands/codex-review.js` | Reconciliation tests and generated deterministic claims | PASS |

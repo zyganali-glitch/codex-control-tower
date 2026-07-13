@@ -8,7 +8,7 @@ This list separates completed release evidence from work that is still unavailab
 | --- | --- | --- |
 | Published Devpost rules and FAQ review | PASS | The current [official rules](https://openai.devpost.com/rules) and [official FAQ](https://openai.devpost.com/details/faqs) were reviewed during the Build Week hardening work. Requirements must still be rechecked immediately before submission because the organizer may update the site. |
 | Real OpenAI/Codex integration | PASS | The explicit opt-in `npm run demo:codex` path verified the signed-in ChatGPT session and ran real `gpt-5.6-sol` read-only. The deterministic local verdict remains authoritative. |
-| Static judge-exhibit deployment | PASS | GitHub Pages workflow run [`29279549424`](https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29279549424) completed successfully for published baseline `416d145`; the public page returned successfully without authentication. This is a static recorded exhibit, not a hosted scanner or live Codex service. |
+| Static judge-exhibit deployment | PASS | Historical GitHub Pages workflow run [`29279549424`](https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29279549424) completed successfully for published baseline `416d145`; the public page returned successfully without authentication. Current status is read from workflow history. This is a static recorded exhibit, not a hosted scanner or live Codex service. |
 
 ## Gates that remain NOT_RUN
 
