@@ -135,7 +135,7 @@ Codex was used to implement this independent Codex Control Tower repository. Thi
 - Historical release-preflight verification: **PASS** via `npm.cmd run verify` at 2026-07-12T23:47:16+03:00; later hardening is covered by newer rows and must be reverified on every final commit.
 - Historical named pre-hardening baseline in this document: `416d145`, with Pages/Actions run `29279549424`. It is not the submission source. The current result is the `openai-build-week-final` tag plus live workflow history.
 - Root dogfooding: **PASS** as a `REAL_LOCAL_SCAN` with visible exclusions; 100/100 means structural governance readiness, not code correctness or security certification.
-- Committed self-scan evidence: `docs/ROOT_REPO_SCAN.json` was generated on clean commit `079a604` with portable paths, zero risks, and zero missing surfaces.
+- Committed self-scan evidence: `docs/ROOT_REPO_SCAN.json` was generated on clean commit `633fe839e44a67d53befd29422e3f0167400be13` with portable paths, `REAL_LOCAL_SCAN`, `100/100` structural readiness, zero risks, and zero missing surfaces.
 - Still NOT_RUN in public product evidence: fixture/provider load/concurrency, accessibility audit, independent security review, and real user validation.
 - Submission-form assumption: the public under-three-minute YouTube video with spoken Codex/GPT-5.6 explanation and the private primary-task `/feedback` field are treated as completed for readiness scoring. The private value is intentionally not committed; Devpost remains authoritative for both form assets.
 

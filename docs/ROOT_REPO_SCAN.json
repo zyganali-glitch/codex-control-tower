@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "codex-control-tower",
   "targetPath": ".",
-  "generatedAt": "2026-07-13T21:04:09.368Z",
+  "generatedAt": "2026-07-15T09:24:12.356Z",
   "scanMode": "REAL_LOCAL_SCAN",
   "simulatedData": false,
   "scanScope": {
@@ -36,9 +36,9 @@
   "detectedFiles": [
     {
       "path": ".codex/AGENTS.md",
-      "bytes": 1717,
+      "bytes": 1708,
       "lines": 29,
-      "modifiedAt": "2026-07-12T20:30:58.960Z"
+      "modifiedAt": "2026-07-15T09:04:04.413Z"
     },
     {
       "path": ".controltower/config.json",
@@ -54,9 +54,9 @@
     },
     {
       "path": ".controltower/phase0.json",
-      "bytes": 1520,
+      "bytes": 1515,
       "lines": 15,
-      "modifiedAt": "2026-07-13T21:03:49.120Z"
+      "modifiedAt": "2026-07-15T09:04:04.414Z"
     },
     {
       "path": ".controltower/review-gate.json",
@@ -84,15 +84,15 @@
     },
     {
       "path": "apps/dashboard/index.html",
-      "bytes": 473,
+      "bytes": 5491,
       "lines": 0,
-      "modifiedAt": "2026-07-12T16:56:40.818Z"
+      "modifiedAt": "2026-07-15T09:04:47.082Z"
     },
     {
       "path": "apps/dashboard/package-lock.json",
       "bytes": 57693,
       "lines": 1692,
-      "modifiedAt": "2026-07-13T20:54:49.263Z"
+      "modifiedAt": "2026-07-15T09:05:55.552Z"
     },
     {
       "path": "apps/dashboard/package.json",
@@ -102,9 +102,9 @@
     },
     {
       "path": "apps/dashboard/src/App.jsx",
-      "bytes": 14414,
-      "lines": 248,
-      "modifiedAt": "2026-07-13T20:45:32.667Z"
+      "bytes": 15441,
+      "lines": 273,
+      "modifiedAt": "2026-07-15T09:04:47.083Z"
     },
     {
       "path": "apps/dashboard/src/components/BeforeAfterPanel.jsx",
@@ -114,9 +114,9 @@
     },
     {
       "path": "apps/dashboard/src/components/CodexLiveReviewPanel.jsx",
-      "bytes": 13486,
-      "lines": 241,
-      "modifiedAt": "2026-07-13T20:53:56.279Z"
+      "bytes": 18231,
+      "lines": 300,
+      "modifiedAt": "2026-07-15T09:09:09.204Z"
     },
     {
       "path": "apps/dashboard/src/components/CodexPromptPanel.jsx",
@@ -228,27 +228,27 @@
     },
     {
       "path": "apps/dashboard/src/reconciliationAdapter.js",
-      "bytes": 1843,
-      "lines": 45,
-      "modifiedAt": "2026-07-13T20:40:19.470Z"
+      "bytes": 2304,
+      "lines": 50,
+      "modifiedAt": "2026-07-15T07:42:54.268Z"
     },
     {
       "path": "apps/dashboard/src/reportAdapter.js",
-      "bytes": 22966,
+      "bytes": 22984,
       "lines": 385,
-      "modifiedAt": "2026-07-13T20:40:19.471Z"
+      "modifiedAt": "2026-07-15T07:43:41.668Z"
     },
     {
       "path": "apps/dashboard/src/reportAdapter.test.js",
-      "bytes": 6543,
-      "lines": 167,
-      "modifiedAt": "2026-07-13T20:50:14.040Z"
+      "bytes": 7235,
+      "lines": 176,
+      "modifiedAt": "2026-07-15T09:15:52.636Z"
     },
     {
       "path": "apps/dashboard/src/styles.css",
-      "bytes": 41020,
+      "bytes": 42392,
       "lines": 0,
-      "modifiedAt": "2026-07-13T20:45:32.668Z"
+      "modifiedAt": "2026-07-15T09:05:19.134Z"
     },
     {
       "path": "apps/dashboard/vite.config.js",
@@ -258,15 +258,15 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 2375,
-      "lines": 24,
-      "modifiedAt": "2026-07-13T20:51:39.270Z"
+      "bytes": 3963,
+      "lines": 39,
+      "modifiedAt": "2026-07-15T09:02:36.171Z"
     },
     {
       "path": "cli/commands/codex-review.js",
-      "bytes": 32277,
-      "lines": 303,
-      "modifiedAt": "2026-07-13T20:54:15.451Z"
+      "bytes": 43457,
+      "lines": 397,
+      "modifiedAt": "2026-07-15T09:09:03.728Z"
     },
     {
       "path": "cli/commands/context-graph.js",
@@ -276,9 +276,9 @@
     },
     {
       "path": "cli/commands/demo.js",
-      "bytes": 8140,
-      "lines": 160,
-      "modifiedAt": "2026-07-13T20:48:03.637Z"
+      "bytes": 8061,
+      "lines": 153,
+      "modifiedAt": "2026-07-15T09:02:36.170Z"
     },
     {
       "path": "cli/commands/doctor.js",
@@ -294,9 +294,9 @@
     },
     {
       "path": "cli/commands/export-devpost.js",
-      "bytes": 4928,
+      "bytes": 6038,
       "lines": 37,
-      "modifiedAt": "2026-07-13T20:39:19.169Z"
+      "modifiedAt": "2026-07-15T09:03:11.755Z"
     },
     {
       "path": "cli/commands/flight-recorder.js",
@@ -342,15 +342,15 @@
     },
     {
       "path": "cli/commands/scan.js",
-      "bytes": 1705,
-      "lines": 53,
-      "modifiedAt": "2026-07-13T20:23:44.882Z"
+      "bytes": 1311,
+      "lines": 41,
+      "modifiedAt": "2026-07-13T21:11:37.995Z"
     },
     {
       "path": "cli/index.js",
-      "bytes": 3571,
-      "lines": 98,
-      "modifiedAt": "2026-07-13T20:23:44.883Z"
+      "bytes": 3730,
+      "lines": 101,
+      "modifiedAt": "2026-07-15T09:03:11.756Z"
     },
     {
       "path": "cli/lib/codexPromptBuilder.js",
@@ -405,6 +405,12 @@
       "bytes": 4350,
       "lines": 91,
       "modifiedAt": "2026-07-12T19:39:14.507Z"
+    },
+    {
+      "path": "cli/lib/portable.js",
+      "bytes": 984,
+      "lines": 31,
+      "modifiedAt": "2026-07-13T21:11:37.993Z"
     },
     {
       "path": "cli/lib/reportWriter.js",
@@ -558,99 +564,99 @@
     },
     {
       "path": "docs/ARCHITECTURE.md",
-      "bytes": 13048,
-      "lines": 180,
-      "modifiedAt": "2026-07-13T20:50:14.042Z"
+      "bytes": 15472,
+      "lines": 187,
+      "modifiedAt": "2026-07-15T08:50:56.561Z"
     },
     {
       "path": "docs/assets/dashboard-overview.png",
-      "bytes": 666416,
+      "bytes": 691328,
       "lines": 0,
-      "modifiedAt": "2026-07-13T20:56:02.655Z"
+      "modifiedAt": "2026-07-15T09:14:43.927Z"
     },
     {
       "path": "docs/BUILD_WEEK_DELTA.md",
-      "bytes": 4631,
-      "lines": 71,
-      "modifiedAt": "2026-07-13T20:52:48.228Z"
+      "bytes": 6655,
+      "lines": 83,
+      "modifiedAt": "2026-07-15T09:03:46.295Z"
     },
     {
       "path": "docs/CODEX_BUILD_LOG.md",
-      "bytes": 19436,
-      "lines": 120,
-      "modifiedAt": "2026-07-13T21:04:08.076Z"
+      "bytes": 27501,
+      "lines": 143,
+      "modifiedAt": "2026-07-15T09:22:21.691Z"
     },
     {
       "path": "docs/CODEX_DEMO_PROMPT.md",
-      "bytes": 1736,
-      "lines": 31,
-      "modifiedAt": "2026-07-13T20:29:22.869Z"
+      "bytes": 3396,
+      "lines": 38,
+      "modifiedAt": "2026-07-15T08:59:28.357Z"
     },
     {
       "path": "docs/CODEX_NATIVE_RECOMMENDATIONS.md",
-      "bytes": 12687,
-      "lines": 260,
-      "modifiedAt": "2026-07-13T20:52:48.230Z"
+      "bytes": 13165,
+      "lines": 261,
+      "modifiedAt": "2026-07-15T08:59:28.359Z"
     },
     {
       "path": "docs/CODEX_SELF_ASSESSMENT.md",
-      "bytes": 15623,
+      "bytes": 15752,
       "lines": 211,
-      "modifiedAt": "2026-07-13T20:52:48.229Z"
+      "modifiedAt": "2026-07-15T08:59:28.358Z"
     },
     {
       "path": "docs/DEMO_REHBERI_TR.md",
-      "bytes": 17642,
-      "lines": 347,
-      "modifiedAt": "2026-07-13T20:44:30.692Z"
+      "bytes": 25119,
+      "lines": 532,
+      "modifiedAt": "2026-07-15T09:19:35.737Z"
     },
     {
       "path": "docs/DEMO_SCRIPT.md",
-      "bytes": 9032,
-      "lines": 164,
-      "modifiedAt": "2026-07-13T20:44:30.691Z"
+      "bytes": 8296,
+      "lines": 171,
+      "modifiedAt": "2026-07-15T09:17:07.019Z"
     },
     {
       "path": "docs/DEVPOST_SUBMISSION.md",
-      "bytes": 18440,
-      "lines": 306,
-      "modifiedAt": "2026-07-13T20:52:26.965Z"
+      "bytes": 17049,
+      "lines": 227,
+      "modifiedAt": "2026-07-15T09:13:21.349Z"
     },
     {
       "path": "docs/EVIDENCE_REPORT.md",
-      "bytes": 3603,
-      "lines": 31,
-      "modifiedAt": "2026-07-13T21:04:08.078Z"
+      "bytes": 4778,
+      "lines": 33,
+      "modifiedAt": "2026-07-15T09:12:44.789Z"
     },
     {
       "path": "docs/FEATURE_HARVEST.md",
-      "bytes": 2629,
+      "bytes": 2711,
       "lines": 31,
-      "modifiedAt": "2026-07-13T20:36:22.157Z"
+      "modifiedAt": "2026-07-15T07:54:23.109Z"
     },
     {
       "path": "docs/FINAL_COMPLETENESS_REVIEW.md",
-      "bytes": 4994,
-      "lines": 53,
-      "modifiedAt": "2026-07-13T21:04:08.079Z"
+      "bytes": 6734,
+      "lines": 57,
+      "modifiedAt": "2026-07-15T09:22:21.692Z"
     },
     {
       "path": "docs/JUDGE_TEST_PATH.md",
-      "bytes": 5021,
-      "lines": 89,
-      "modifiedAt": "2026-07-13T21:04:08.080Z"
+      "bytes": 6866,
+      "lines": 97,
+      "modifiedAt": "2026-07-15T09:13:54.424Z"
     },
     {
       "path": "docs/JUDGING_MAP.md",
-      "bytes": 15084,
-      "lines": 240,
-      "modifiedAt": "2026-07-13T20:52:48.231Z"
+      "bytes": 13923,
+      "lines": 184,
+      "modifiedAt": "2026-07-15T09:13:34.254Z"
     },
     {
       "path": "docs/LIMITATIONS.md",
-      "bytes": 6681,
-      "lines": 71,
-      "modifiedAt": "2026-07-13T20:31:45.323Z"
+      "bytes": 7818,
+      "lines": 75,
+      "modifiedAt": "2026-07-15T08:58:39.464Z"
     },
     {
       "path": "docs/MEMORY_LENS.md",
@@ -660,45 +666,51 @@
     },
     {
       "path": "docs/MISTAKE_SHIELD.md",
-      "bytes": 872,
+      "bytes": 890,
       "lines": 19,
-      "modifiedAt": "2026-07-13T18:39:31.357Z"
+      "modifiedAt": "2026-07-15T07:55:31.394Z"
     },
     {
       "path": "docs/NOT_RUN_GATES.md",
-      "bytes": 3120,
-      "lines": 27,
-      "modifiedAt": "2026-07-13T21:04:08.081Z"
+      "bytes": 2849,
+      "lines": 28,
+      "modifiedAt": "2026-07-15T07:53:45.376Z"
     },
     {
       "path": "docs/ORIGINALITY_MATRIX.md",
-      "bytes": 2692,
+      "bytes": 2674,
       "lines": 35,
-      "modifiedAt": "2026-07-13T20:36:07.285Z"
+      "modifiedAt": "2026-07-15T07:54:23.110Z"
     },
     {
       "path": "docs/PRIVACY_AND_SECURITY.md",
-      "bytes": 8519,
-      "lines": 112,
-      "modifiedAt": "2026-07-13T20:52:48.233Z"
+      "bytes": 10038,
+      "lines": 119,
+      "modifiedAt": "2026-07-15T08:58:39.465Z"
     },
     {
       "path": "docs/PRODUCT_DECISIONS.md",
-      "bytes": 9203,
-      "lines": 98,
-      "modifiedAt": "2026-07-13T20:52:26.967Z"
+      "bytes": 10752,
+      "lines": 102,
+      "modifiedAt": "2026-07-15T08:58:39.466Z"
     },
     {
       "path": "docs/SOURCE_PROTECTION.md",
-      "bytes": 3017,
+      "bytes": 3043,
       "lines": 45,
-      "modifiedAt": "2026-07-13T20:33:48.202Z"
+      "modifiedAt": "2026-07-15T07:54:23.112Z"
     },
     {
       "path": "docs/SOURCE_RESEARCH_MATRIX.md",
-      "bytes": 3106,
+      "bytes": 3173,
       "lines": 40,
-      "modifiedAt": "2026-07-13T20:39:54.600Z"
+      "modifiedAt": "2026-07-15T07:54:23.111Z"
+    },
+    {
+      "path": "docs/SUBMISSION_MANIFEST.md",
+      "bytes": 4540,
+      "lines": 67,
+      "modifiedAt": "2026-07-15T09:13:40.565Z"
     },
     {
       "path": "docs/TECH_DEBT_DELTA.md",
@@ -708,15 +720,21 @@
     },
     {
       "path": "docs/TRACEABILITY_MATRIX.md",
-      "bytes": 2655,
-      "lines": 23,
-      "modifiedAt": "2026-07-13T21:04:08.082Z"
+      "bytes": 3876,
+      "lines": 28,
+      "modifiedAt": "2026-07-15T08:58:55.007Z"
     },
     {
       "path": "docs/USER_VALIDATION.md",
       "bytes": 1852,
       "lines": 40,
       "modifiedAt": "2026-07-13T18:27:10.950Z"
+    },
+    {
+      "path": "JUDGE_START_HERE.md",
+      "bytes": 6212,
+      "lines": 70,
+      "modifiedAt": "2026-07-15T09:12:26.358Z"
     },
     {
       "path": "LICENSE",
@@ -726,15 +744,15 @@
     },
     {
       "path": "package-lock.json",
-      "bytes": 4559,
+      "bytes": 4558,
       "lines": 152,
-      "modifiedAt": "2026-07-13T17:34:07.950Z"
+      "modifiedAt": "2026-07-15T07:55:27.088Z"
     },
     {
       "path": "package.json",
-      "bytes": 1868,
-      "lines": 43,
-      "modifiedAt": "2026-07-13T20:23:44.884Z"
+      "bytes": 2008,
+      "lines": 45,
+      "modifiedAt": "2026-07-15T09:06:23.643Z"
     },
     {
       "path": "plans/master-roadmap.md",
@@ -744,15 +762,15 @@
     },
     {
       "path": "plans/PHASE0_ALIGNMENT.md",
-      "bytes": 1445,
+      "bytes": 1449,
       "lines": 17,
-      "modifiedAt": "2026-07-13T20:32:34.531Z"
+      "modifiedAt": "2026-07-15T09:04:04.415Z"
     },
     {
       "path": "README.md",
-      "bytes": 29536,
-      "lines": 376,
-      "modifiedAt": "2026-07-13T21:04:08.075Z"
+      "bytes": 21378,
+      "lines": 240,
+      "modifiedAt": "2026-07-15T09:12:14.531Z"
     },
     {
       "path": "TECH_DEBT_AND_SECURITY.md",
@@ -768,15 +786,15 @@
     },
     {
       "path": "tests/test_cli_commands.js",
-      "bytes": 1807,
-      "lines": 32,
-      "modifiedAt": "2026-07-13T20:30:28.509Z"
+      "bytes": 2186,
+      "lines": 40,
+      "modifiedAt": "2026-07-13T21:11:37.999Z"
     },
     {
       "path": "tests/test_codex_review.js",
-      "bytes": 13113,
-      "lines": 247,
-      "modifiedAt": "2026-07-13T20:54:15.453Z"
+      "bytes": 22491,
+      "lines": 383,
+      "modifiedAt": "2026-07-15T09:09:03.729Z"
     },
     {
       "path": "tests/test_context_graph.js",
@@ -810,9 +828,9 @@
     },
     {
       "path": "tests/test_required_surfaces.js",
-      "bytes": 2071,
+      "bytes": 2099,
       "lines": 26,
-      "modifiedAt": "2026-07-13T21:04:08.084Z"
+      "modifiedAt": "2026-07-13T21:04:18.442Z"
     },
     {
       "path": "tests/test_review_gate.js",
@@ -822,13 +840,13 @@
     },
     {
       "path": "tests/test_source_protection.js",
-      "bytes": 1921,
-      "lines": 30,
-      "modifiedAt": "2026-07-13T21:04:08.085Z"
+      "bytes": 1952,
+      "lines": 31,
+      "modifiedAt": "2026-07-13T21:04:18.443Z"
     }
   ],
   "suggestedNextActions": [],
-  "codexPrompt": "# Codex Control Tower Mission\n\nTarget repository: .\nMission goal: Recheck the published Devpost rules after challenge opening, capture the final sanitized three-minute demo, and add Codex change provenance without expanding into an unapproved cloud build.\nReview gate: APPROVED (scoped)\nReview gate scope: Complete bounded release-preflight hardening, run local verification, commit the independent repository, and push main to the user-provided GitHub repository.\nMistake Shield: CAUTION\n\n## Detected risks\n- No scanner risk was detected; continue to verify scope.\n\n## Missing surfaces\n- No required governance surface is currently missing.\n\n## Allowed files\n- .codex/**\n- .controltower/**\n- .github/**\n- apps/**\n- cli/**\n- core/**\n- docs/**\n- examples/**\n- plans/**\n- tests/**\n- README.md\n- CHANGELOG.md\n- LICENSE\n- package.json\n- package-lock.json\n- TECH_DEBT_AND_SECURITY.md\n\n## Forbidden actions\n- Do not delete tests, history, user data, or unrelated legacy code.\n- Do not overwrite existing files without a backup and explicit need.\n- Do not push, publish, deploy, or upload source unless the APPROVED scoped Review Gate explicitly authorizes the exact action and destination. Never expose secrets.\n- Do not expand scope beyond the mission or bypass a non-approved review gate.\n- Review Gate forbids: modify or push to any protected source repository\n- Review Gate forbids: commit credentials, tokens, private URLs, or private screenshots\n- Review Gate forbids: rewrite shared Git history\n- Review Gate forbids: claim NOT_RUN or SIMULATED evidence as PASS\n- Review Gate forbids: publish to a destination other than the approved GitHub repository\n- Do not touch without approval: Do not modify the four protected source repositories\n- Do not touch without approval: commit secrets or private screenshots\n- Do not touch without approval: claim simulated evidence as real\n- Do not touch without approval: add mandatory cloud dependencies\n- Do not touch without approval: or rewrite Git history.\n\n## Required evidence\n- Full test suite, deterministic demo output, dashboard production build, root self-scan, source-protection checks, clean staged diff, remote commit verification, and visible NOT_RUN gates.\n- List every changed file and every command actually run.\n- Attach concrete output or artifact paths for every PASS claim.\n- Keep WARN, FAIL, NOT_RUN, and SIMULATED labels visible.\n\n## Tests to run\n- Run the repository test command discovered in package metadata.\n\n## Documentation to update\n- README.md when behavior or commands change\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n\n## Execution contract\nYou are Codex working under Codex Control Tower. Fix only the listed gaps. Read instructions and plans before editing. Stop before risky implementation unless the local gate is APPROVED, fully scoped, and the proposed action stays within that scope. PASS requires evidence; an edited file is not a validated file. If a check cannot run, label it NOT_RUN and explain why.\n\n## Final response format\n1. Summary\n2. Changed files\n3. Commands and evidence with PASS/WARN/FAIL/NOT_RUN/SIMULATED\n4. Review gate and Mistake Shield state\n5. Remaining risks\n6. Next safe action",
+  "codexPrompt": "# Codex Control Tower Mission\n\nTarget repository: .\nMission goal: Recheck the published Devpost rules after challenge opening, capture the final sanitized three-minute demo, and add Codex change provenance without expanding into an unapproved cloud build.\nReview gate: APPROVED (scoped)\nReview gate scope: Complete bounded release-preflight hardening, run local verification, commit the independent repository, and push main to the user-provided GitHub repository.\nMistake Shield: CAUTION\n\n## Detected risks\n- No scanner risk was detected; continue to verify scope.\n\n## Missing surfaces\n- No required governance surface is currently missing.\n\n## Allowed files\n- .codex/**\n- .controltower/**\n- .github/**\n- apps/**\n- cli/**\n- core/**\n- docs/**\n- examples/**\n- plans/**\n- tests/**\n- README.md\n- CHANGELOG.md\n- LICENSE\n- package.json\n- package-lock.json\n- TECH_DEBT_AND_SECURITY.md\n\n## Forbidden actions\n- Do not delete tests, history, user data, or unrelated legacy code.\n- Do not overwrite existing files without a backup and explicit need.\n- Do not push, publish, deploy, or upload source unless the APPROVED scoped Review Gate explicitly authorizes the exact action and destination. Never expose secrets.\n- Do not expand scope beyond the mission or bypass a non-approved review gate.\n- Review Gate forbids: modify or push to any protected source repository\n- Review Gate forbids: commit credentials, tokens, private URLs, or private screenshots\n- Review Gate forbids: rewrite shared Git history\n- Review Gate forbids: claim NOT_RUN or SIMULATED evidence as PASS\n- Review Gate forbids: publish to a destination other than the approved GitHub repository\n- Do not touch without approval: Do not modify Universal Agent OS family sources\n- Do not touch without approval: commit secrets or private screenshots\n- Do not touch without approval: claim simulated evidence as real\n- Do not touch without approval: add mandatory cloud dependencies\n- Do not touch without approval: or rewrite Git history.\n\n## Required evidence\n- Full test suite, deterministic demo output, dashboard production build, root self-scan, source-protection checks, clean staged diff, remote commit verification, and visible NOT_RUN gates.\n- List every changed file and every command actually run.\n- Attach concrete output or artifact paths for every PASS claim.\n- Keep WARN, FAIL, NOT_RUN, and SIMULATED labels visible.\n\n## Tests to run\n- Run the repository test command discovered in package metadata.\n\n## Documentation to update\n- README.md when behavior or commands change\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n\n## Execution contract\nYou are Codex working under Codex Control Tower. Fix only the listed gaps. Read instructions and plans before editing. Stop before risky implementation unless the local gate is APPROVED, fully scoped, and the proposed action stays within that scope. PASS requires evidence; an edited file is not a validated file. If a check cannot run, label it NOT_RUN and explain why.\n\n## Final response format\n1. Summary\n2. Changed files\n3. Commands and evidence with PASS/WARN/FAIL/NOT_RUN/SIMULATED\n4. Review gate and Mistake Shield state\n5. Remaining risks\n6. Next safe action",
   "traceabilityMatrix": [
     {
       "requirement": "Plan before implementation",
@@ -910,7 +928,7 @@
     }
   },
   "contextGraph": {
-    "generatedAt": "2026-07-13T21:04:09.362Z",
+    "generatedAt": "2026-07-15T09:24:12.350Z",
     "generatedLocally": true,
     "algorithm": "deterministic lexical and repository-surface analysis",
     "nodes": [
@@ -919,7 +937,7 @@
         "label": ".codex/AGENTS.md",
         "type": "instruction",
         "lines": 29,
-        "bytes": 1717,
+        "bytes": 1708,
         "risk": false,
         "markers": 0,
         "relevance": 1,
@@ -964,7 +982,7 @@
         "label": ".controltower/phase0.json",
         "type": "control",
         "lines": 15,
-        "bytes": 1520,
+        "bytes": 1515,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1039,7 +1057,7 @@
         "label": "apps/dashboard/index.html",
         "type": "file",
         "lines": 0,
-        "bytes": 473,
+        "bytes": 5491,
         "risk": false,
         "markers": 0,
         "relevance": 0.45,
@@ -1083,8 +1101,8 @@
         "id": "file:apps/dashboard/src/App.jsx",
         "label": "apps/dashboard/src/App.jsx",
         "type": "source",
-        "lines": 248,
-        "bytes": 14414,
+        "lines": 273,
+        "bytes": 15441,
         "risk": false,
         "markers": 0,
         "relevance": 0.7,
@@ -1113,8 +1131,8 @@
         "id": "file:apps/dashboard/src/components/CodexLiveReviewPanel.jsx",
         "label": "apps/dashboard/src/components/CodexLiveReviewPanel.jsx",
         "type": "source",
-        "lines": 241,
-        "bytes": 13486,
+        "lines": 300,
+        "bytes": 18231,
         "risk": false,
         "markers": 0,
         "relevance": 0.7,
@@ -1398,8 +1416,8 @@
         "id": "file:apps/dashboard/src/reconciliationAdapter.js",
         "label": "apps/dashboard/src/reconciliationAdapter.js",
         "type": "source",
-        "lines": 45,
-        "bytes": 1843,
+        "lines": 50,
+        "bytes": 2304,
         "risk": false,
         "markers": 0,
         "relevance": 0.7,
@@ -1414,7 +1432,7 @@
         "label": "apps/dashboard/src/reportAdapter.js",
         "type": "source",
         "lines": 385,
-        "bytes": 22966,
+        "bytes": 22984,
         "risk": false,
         "markers": 0,
         "relevance": 0.7,
@@ -1428,8 +1446,8 @@
         "id": "file:apps/dashboard/src/reportAdapter.test.js",
         "label": "apps/dashboard/src/reportAdapter.test.js",
         "type": "test",
-        "lines": 167,
-        "bytes": 6543,
+        "lines": 176,
+        "bytes": 7235,
         "risk": false,
         "markers": 0,
         "relevance": 0.86,
@@ -1444,7 +1462,7 @@
         "label": "apps/dashboard/src/styles.css",
         "type": "file",
         "lines": 0,
-        "bytes": 41020,
+        "bytes": 42392,
         "risk": false,
         "markers": 0,
         "relevance": 0.45,
@@ -1473,8 +1491,8 @@
         "id": "file:CHANGELOG.md",
         "label": "CHANGELOG.md",
         "type": "documentation",
-        "lines": 24,
-        "bytes": 2375,
+        "lines": 39,
+        "bytes": 3963,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -1488,8 +1506,8 @@
         "id": "file:cli/commands/codex-review.js",
         "label": "cli/commands/codex-review.js",
         "type": "source",
-        "lines": 303,
-        "bytes": 32277,
+        "lines": 397,
+        "bytes": 43457,
         "risk": false,
         "markers": 0,
         "relevance": 0.7,
@@ -1518,8 +1536,8 @@
         "id": "file:cli/commands/demo.js",
         "label": "cli/commands/demo.js",
         "type": "source",
-        "lines": 160,
-        "bytes": 8140,
+        "lines": 153,
+        "bytes": 8061,
         "risk": false,
         "markers": 0,
         "relevance": 0.7,
@@ -1564,7 +1582,7 @@
         "label": "cli/commands/export-devpost.js",
         "type": "source",
         "lines": 37,
-        "bytes": 4928,
+        "bytes": 6038,
         "risk": false,
         "markers": 0,
         "relevance": 0.7,
@@ -1683,8 +1701,8 @@
         "id": "file:cli/commands/scan.js",
         "label": "cli/commands/scan.js",
         "type": "source",
-        "lines": 53,
-        "bytes": 1705,
+        "lines": 41,
+        "bytes": 1311,
         "risk": false,
         "markers": 0,
         "relevance": 0.7,
@@ -1698,8 +1716,8 @@
         "id": "file:cli/index.js",
         "label": "cli/index.js",
         "type": "source",
-        "lines": 98,
-        "bytes": 3571,
+        "lines": 101,
+        "bytes": 3730,
         "risk": false,
         "markers": 0,
         "relevance": 0.7,
@@ -1835,6 +1853,21 @@
         "type": "source",
         "lines": 91,
         "bytes": 4350,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.7,
+        "importance": 0.7,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a source surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:cli/lib/portable.js",
+        "label": "cli/lib/portable.js",
+        "type": "source",
+        "lines": 31,
+        "bytes": 984,
         "risk": false,
         "markers": 0,
         "relevance": 0.7,
@@ -2223,8 +2256,8 @@
         "id": "file:docs/ARCHITECTURE.md",
         "label": "docs/ARCHITECTURE.md",
         "type": "documentation",
-        "lines": 180,
-        "bytes": 13048,
+        "lines": 187,
+        "bytes": 15472,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2239,7 +2272,7 @@
         "label": "docs/assets/dashboard-overview.png",
         "type": "file",
         "lines": 0,
-        "bytes": 666416,
+        "bytes": 691328,
         "risk": false,
         "markers": 0,
         "relevance": 0.45,
@@ -2253,8 +2286,8 @@
         "id": "file:docs/BUILD_WEEK_DELTA.md",
         "label": "docs/BUILD_WEEK_DELTA.md",
         "type": "documentation",
-        "lines": 71,
-        "bytes": 4631,
+        "lines": 83,
+        "bytes": 6655,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2268,8 +2301,8 @@
         "id": "file:docs/CODEX_BUILD_LOG.md",
         "label": "docs/CODEX_BUILD_LOG.md",
         "type": "documentation",
-        "lines": 120,
-        "bytes": 19436,
+        "lines": 143,
+        "bytes": 27501,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2283,8 +2316,8 @@
         "id": "file:docs/CODEX_DEMO_PROMPT.md",
         "label": "docs/CODEX_DEMO_PROMPT.md",
         "type": "documentation",
-        "lines": 31,
-        "bytes": 1736,
+        "lines": 38,
+        "bytes": 3396,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2298,8 +2331,8 @@
         "id": "file:docs/CODEX_NATIVE_RECOMMENDATIONS.md",
         "label": "docs/CODEX_NATIVE_RECOMMENDATIONS.md",
         "type": "documentation",
-        "lines": 260,
-        "bytes": 12687,
+        "lines": 261,
+        "bytes": 13165,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2314,7 +2347,7 @@
         "label": "docs/CODEX_SELF_ASSESSMENT.md",
         "type": "documentation",
         "lines": 211,
-        "bytes": 15623,
+        "bytes": 15752,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2328,8 +2361,8 @@
         "id": "file:docs/DEMO_REHBERI_TR.md",
         "label": "docs/DEMO_REHBERI_TR.md",
         "type": "documentation",
-        "lines": 347,
-        "bytes": 17642,
+        "lines": 532,
+        "bytes": 25119,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2343,8 +2376,8 @@
         "id": "file:docs/DEMO_SCRIPT.md",
         "label": "docs/DEMO_SCRIPT.md",
         "type": "documentation",
-        "lines": 164,
-        "bytes": 9032,
+        "lines": 171,
+        "bytes": 8296,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2358,8 +2391,8 @@
         "id": "file:docs/DEVPOST_SUBMISSION.md",
         "label": "docs/DEVPOST_SUBMISSION.md",
         "type": "documentation",
-        "lines": 306,
-        "bytes": 18440,
+        "lines": 227,
+        "bytes": 17049,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2373,8 +2406,8 @@
         "id": "file:docs/EVIDENCE_REPORT.md",
         "label": "docs/EVIDENCE_REPORT.md",
         "type": "evidence",
-        "lines": 31,
-        "bytes": 3603,
+        "lines": 33,
+        "bytes": 4778,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -2389,7 +2422,7 @@
         "label": "docs/FEATURE_HARVEST.md",
         "type": "documentation",
         "lines": 31,
-        "bytes": 2629,
+        "bytes": 2711,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2403,8 +2436,8 @@
         "id": "file:docs/FINAL_COMPLETENESS_REVIEW.md",
         "label": "docs/FINAL_COMPLETENESS_REVIEW.md",
         "type": "documentation",
-        "lines": 53,
-        "bytes": 4994,
+        "lines": 57,
+        "bytes": 6734,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2418,8 +2451,8 @@
         "id": "file:docs/JUDGE_TEST_PATH.md",
         "label": "docs/JUDGE_TEST_PATH.md",
         "type": "documentation",
-        "lines": 89,
-        "bytes": 5021,
+        "lines": 97,
+        "bytes": 6866,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2433,8 +2466,8 @@
         "id": "file:docs/JUDGING_MAP.md",
         "label": "docs/JUDGING_MAP.md",
         "type": "documentation",
-        "lines": 240,
-        "bytes": 15084,
+        "lines": 184,
+        "bytes": 13923,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2448,8 +2481,8 @@
         "id": "file:docs/LIMITATIONS.md",
         "label": "docs/LIMITATIONS.md",
         "type": "documentation",
-        "lines": 71,
-        "bytes": 6681,
+        "lines": 75,
+        "bytes": 7818,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2479,7 +2512,7 @@
         "label": "docs/MISTAKE_SHIELD.md",
         "type": "documentation",
         "lines": 19,
-        "bytes": 872,
+        "bytes": 890,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2493,8 +2526,8 @@
         "id": "file:docs/NOT_RUN_GATES.md",
         "label": "docs/NOT_RUN_GATES.md",
         "type": "evidence",
-        "lines": 27,
-        "bytes": 3120,
+        "lines": 28,
+        "bytes": 2849,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -2509,7 +2542,7 @@
         "label": "docs/ORIGINALITY_MATRIX.md",
         "type": "documentation",
         "lines": 35,
-        "bytes": 2692,
+        "bytes": 2674,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2523,8 +2556,8 @@
         "id": "file:docs/PRIVACY_AND_SECURITY.md",
         "label": "docs/PRIVACY_AND_SECURITY.md",
         "type": "documentation",
-        "lines": 112,
-        "bytes": 8519,
+        "lines": 119,
+        "bytes": 10038,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2538,8 +2571,8 @@
         "id": "file:docs/PRODUCT_DECISIONS.md",
         "label": "docs/PRODUCT_DECISIONS.md",
         "type": "documentation",
-        "lines": 98,
-        "bytes": 9203,
+        "lines": 102,
+        "bytes": 10752,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2554,7 +2587,7 @@
         "label": "docs/SOURCE_PROTECTION.md",
         "type": "documentation",
         "lines": 45,
-        "bytes": 3017,
+        "bytes": 3043,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2569,7 +2602,22 @@
         "label": "docs/SOURCE_RESEARCH_MATRIX.md",
         "type": "documentation",
         "lines": 40,
-        "bytes": 3106,
+        "bytes": 3173,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:docs/SUBMISSION_MANIFEST.md",
+        "label": "docs/SUBMISSION_MANIFEST.md",
+        "type": "documentation",
+        "lines": 67,
+        "bytes": 4540,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2598,8 +2646,8 @@
         "id": "file:docs/TRACEABILITY_MATRIX.md",
         "label": "docs/TRACEABILITY_MATRIX.md",
         "type": "evidence",
-        "lines": 23,
-        "bytes": 2655,
+        "lines": 28,
+        "bytes": 3876,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -2615,6 +2663,21 @@
         "type": "documentation",
         "lines": 40,
         "bytes": 1852,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:JUDGE_START_HERE.md",
+        "label": "JUDGE_START_HERE.md",
+        "type": "documentation",
+        "lines": 70,
+        "bytes": 6212,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2644,7 +2707,7 @@
         "label": "package-lock.json",
         "type": "file",
         "lines": 152,
-        "bytes": 4559,
+        "bytes": 4558,
         "risk": false,
         "markers": 0,
         "relevance": 0.45,
@@ -2658,8 +2721,8 @@
         "id": "file:package.json",
         "label": "package.json",
         "type": "file",
-        "lines": 43,
-        "bytes": 1868,
+        "lines": 45,
+        "bytes": 2008,
         "risk": false,
         "markers": 0,
         "relevance": 0.45,
@@ -2689,7 +2752,7 @@
         "label": "plans/PHASE0_ALIGNMENT.md",
         "type": "plan",
         "lines": 17,
-        "bytes": 1445,
+        "bytes": 1449,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -2703,8 +2766,8 @@
         "id": "file:README.md",
         "label": "README.md",
         "type": "readme",
-        "lines": 376,
-        "bytes": 29536,
+        "lines": 240,
+        "bytes": 21378,
         "risk": false,
         "markers": 0,
         "relevance": 0.82,
@@ -2748,8 +2811,8 @@
         "id": "file:tests/test_cli_commands.js",
         "label": "tests/test_cli_commands.js",
         "type": "test",
-        "lines": 32,
-        "bytes": 1807,
+        "lines": 40,
+        "bytes": 2186,
         "risk": false,
         "markers": 0,
         "relevance": 0.86,
@@ -2763,8 +2826,8 @@
         "id": "file:tests/test_codex_review.js",
         "label": "tests/test_codex_review.js",
         "type": "test",
-        "lines": 247,
-        "bytes": 13113,
+        "lines": 383,
+        "bytes": 22491,
         "risk": false,
         "markers": 0,
         "relevance": 0.86,
@@ -2854,7 +2917,7 @@
         "label": "tests/test_required_surfaces.js",
         "type": "test",
         "lines": 26,
-        "bytes": 2071,
+        "bytes": 2099,
         "risk": false,
         "markers": 0,
         "relevance": 0.86,
@@ -2883,8 +2946,8 @@
         "id": "file:tests/test_source_protection.js",
         "label": "tests/test_source_protection.js",
         "type": "test",
-        "lines": 30,
-        "bytes": 1921,
+        "lines": 31,
+        "bytes": 1952,
         "risk": false,
         "markers": 0,
         "relevance": 0.86,
@@ -3138,6 +3201,11 @@
       },
       {
         "from": "file:cli/commands/codex-review.js",
+        "to": "file:cli/lib/portable.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/codex-review.js",
         "to": "file:cli/lib/safeFs.js",
         "relation": "imports"
       },
@@ -3174,6 +3242,11 @@
       {
         "from": "file:cli/commands/demo.js",
         "to": "file:cli/lib/mistakeShield.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/demo.js",
+        "to": "file:cli/lib/portable.js",
         "relation": "imports"
       },
       {
@@ -3289,6 +3362,11 @@
       {
         "from": "file:cli/commands/review-gate.js",
         "to": "file:cli/lib/safeFs.js",
+        "relation": "imports"
+      },
+      {
+        "from": "file:cli/commands/scan.js",
+        "to": "file:cli/lib/portable.js",
         "relation": "imports"
       },
       {
@@ -3522,6 +3600,7 @@
       "cli/lib/markdown.js",
       "cli/lib/memoryLens.js",
       "cli/lib/mistakeShield.js",
+      "cli/lib/portable.js",
       "cli/lib/reportWriter.js",
       "cli/lib/repoScanner.js",
       "cli/lib/reviewGate.js",
@@ -3529,8 +3608,8 @@
     ],
     "overlappingPlans": [],
     "stats": {
-      "nodeCount": 132,
-      "edgeCount": 116,
+      "nodeCount": 135,
+      "edgeCount": 119,
       "riskNodeCount": 0,
       "todoFixmeCount": 0
     },
@@ -3540,7 +3619,7 @@
         "label": ".codex/AGENTS.md",
         "type": "instruction",
         "lines": 29,
-        "bytes": 1717,
+        "bytes": 1708,
         "risk": false,
         "markers": 0,
         "relevance": 1,
@@ -3704,8 +3783,8 @@
         "id": "file:docs/EVIDENCE_REPORT.md",
         "label": "docs/EVIDENCE_REPORT.md",
         "type": "evidence",
-        "lines": 31,
-        "bytes": 3603,
+        "lines": 33,
+        "bytes": 4778,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -3719,8 +3798,8 @@
         "id": "file:docs/NOT_RUN_GATES.md",
         "label": "docs/NOT_RUN_GATES.md",
         "type": "evidence",
-        "lines": 27,
-        "bytes": 3120,
+        "lines": 28,
+        "bytes": 2849,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -3734,8 +3813,8 @@
         "id": "file:docs/TRACEABILITY_MATRIX.md",
         "label": "docs/TRACEABILITY_MATRIX.md",
         "type": "evidence",
-        "lines": 23,
-        "bytes": 2655,
+        "lines": 28,
+        "bytes": 3876,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -3765,7 +3844,7 @@
         "label": "plans/PHASE0_ALIGNMENT.md",
         "type": "plan",
         "lines": 17,
-        "bytes": 1445,
+        "bytes": 1449,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -3825,7 +3904,7 @@
         "label": ".controltower/phase0.json",
         "type": "control",
         "lines": 15,
-        "bytes": 1520,
+        "bytes": 1515,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -3884,8 +3963,8 @@
         "id": "file:apps/dashboard/src/reportAdapter.test.js",
         "label": "apps/dashboard/src/reportAdapter.test.js",
         "type": "test",
-        "lines": 167,
-        "bytes": 6543,
+        "lines": 176,
+        "bytes": 7235,
         "risk": false,
         "markers": 0,
         "relevance": 0.86,
@@ -3899,8 +3978,8 @@
     "contextBudget": {
       "maxItems": 24,
       "selectedItems": 24,
-      "availableItems": 132,
-      "estimatedTokens": 11823
+      "availableItems": 135,
+      "estimatedTokens": 12525
     }
   },
   "reviewGate": {
@@ -3946,18 +4025,18 @@
     "decisionRecorded": true
   },
   "memoryLens": {
-    "generatedAt": "2026-07-13T21:04:09.366Z",
+    "generatedAt": "2026-07-15T09:24:12.354Z",
     "generatedLocally": true,
     "sources": [
       {
         "relative": "docs/MEMORY_LENS.md",
-        "ageDays": 0,
+        "ageDays": 1,
         "stale": false,
         "bytes": 1789
       },
       {
         "relative": "TECH_DEBT_AND_SECURITY.md",
-        "ageDays": 1,
+        "ageDays": 2,
         "stale": false,
         "bytes": 1119
       },
@@ -3965,7 +4044,7 @@
         "relative": "README.md",
         "ageDays": 0,
         "stale": false,
-        "bytes": 29536
+        "bytes": 21378
       }
     ],
     "persistentRules": [
@@ -3984,36 +4063,34 @@
       "Real authentication, payment providers, credentials, external APIs, telemetry, and source upload are outside the competition build.",
       "The deliberately risky auth/payment code under `examples/` is simulated fixture data and must not be reused as production logic.",
       "Destructive work, protected-source changes, real provider integration, and publication outside the recorded repository are blocked without a new scoped Review Gate. Security claims require executed checks; local heuristics do not replace independent review, and unrun external checks remain `NOT_RUN`.",
-      "Codex Control Tower is a local-first developer tool that turns Codex-assisted work into a bounded, reviewable delivery workflow with mission context, risk signals, approval state, evidence, and a safe handoff.",
-      "Scores governance health across planning, Codex readiness, evidence, tests/CI, documentation, brownfield safety, continuity, review, context, and risk hygiene.",
-      "Detects risky auth/payment areas, stale or tiny documentation, TODO/FIXME markers, weak tests, oversized files, and missing handoff records."
+      "the conflict is substantive: local code found the mission/test/evidence surfaces structurally present, while GPT-5.6 traced the stated durable rejected-payment audit requirement and showed that neither implementation nor focused test proof existed.",
+      "| **Mistake Shield** | CLEAR, CAUTION, or BLOCKED with matched risks and a safer rewrite—never a silent block. |",
+      "| **Before / After Dashboard** | Reproducible comparison of governance score, risk, evidence, approval, and continuity on a fictional fixture. |"
     ],
     "architecturePrinciples": [
       "Preserve local-first behavior, no telemetry, and no mandatory OpenAI API key.",
       "# Architecture and product memory",
       "Git publication, history rewriting, dependency changes, and workflow permissions require explicit human scope.",
-      "Codex Control Tower is a local-first developer tool that turns Codex-assisted work into a bounded, reviewable delivery workflow with mission context, risk signals, approval state, evidence, and a safe handoff.",
-      "What was the agreed mission and file boundary?",
-      "What context and lessons must survive the session boundary?",
-      "| **Codex Memory Lens** | Durable rules, minefields, architecture principles, environment constraints, preferences, stale sources, and continuity metrics. |",
-      "| **Evidence Boundary Report** | PASS, WARN, FAIL, NOT_RUN, and SIMULATED remain distinct and tied to named artifacts. |"
+      "| **Memory Lens** | Durable rules, minefields, architecture principles, environment constraints, preferences, and continuity signals. |",
+      "| **Evidence Boundary** | PASS, WARN, FAIL, NOT_RUN, and SIMULATED remain distinct and tied to named artifacts. |",
+      "`npm run demo:codex` verifies the signed-in ChatGPT session and model catalog, then invokes real `gpt-5.6-sol` with medium reasoning inside an empty temporary workspace. The run is read-only and ephemeral; user configuration, project rules/instructions, web search, and approval escalation are disabled. Local code rejects any command, file, MCP, web-search, plan, unknown, failed, or malformed Codex event. It also validates the structured result, requires allowed citations for decisive assessments, records hashes and Git provenance, and performs the local reconciliation. The Codex dependency is pinned to `0.144.3` so this fail-closed event contract cannot silently drift. There is no hidden fallback to deterministic or simulated output.",
+      "# Blind GPT-5.6 Audit: Exact Authority Boundary",
+      "| **Evidence** | PASS/WARN/FAIL/NOT_RUN/SIMULATED boundary and named proof. |"
     ],
     "environmentConstraints": [
       "Preserve local-first behavior, no telemetry, and no mandatory OpenAI API key.",
       "CommonJS Node.js powers the CLI; React/Vite powers the local dashboard.",
-      "*OpenAI Build Week Developer Tools entry · deterministic claims + real GPT-5.6 Evidence Reconciliation · no API key required · fictional sample clearly separated from real execution**",
-      "| **Codex Memory Lens** | Durable rules, minefields, architecture principles, environment constraints, preferences, stale sources, and continuity metrics. |",
+      "*OpenAI Build Week Developer Tools entry · real Blind GPT-5.6 Semantic Audit · deterministic authority · no API key required · fictional sample separated from real execution**",
+      "empty ephemeral workspace, read-only sandbox, web/user/project instructions disabled, no inherited subprocess environment, no approval escalation;",
+      "| **Memory Lens** | Durable rules, minefields, architecture principles, environment constraints, preferences, and continuity signals. |",
       "Requires Node.js 18 or newer.",
-      "Codex then executes `npm run demo:codex` through the product's featured, explicit opt-in path. The command performs a **REAL CODEX RUN** with `gpt-5.6-sol` against bounded evidence in read-only mode. It uses the ChatGPT subscription session already signed in to Codex, not an API key. Local code derives target-appropriate claims, records evidence hashes and Git provenance, filters and records unsupported citation paths, rejects malformed output, and keeps every deterministic state and the final local verdict outside model control.",
-      "| Windows 10 Pro | **VERIFIED** | Full root tests, dashboard build, ChatGPT-authenticated Codex CLI, and real `gpt-5.6-sol` run executed locally. |",
-      "| macOS | **NOT_RUN** | Node/Vite portability is expected, but this Build Week version has no named macOS execution artifact. |"
+      "The deterministic path requires no OpenAI API key. The featured model path uses the ChatGPT account already signed in to Codex and requires access to `gpt-5.6-sol`.",
+      "*REAL EXECUTION:** Control Tower really scans both snapshots, calculates the heuristic scores, runs two focused Node.js fixture tests, builds and hashes evidence, records provenance/freshness, and invokes real `gpt-5.6-sol` in an empty ephemeral read-only no-tool workspace. These are bounded tool outputs—not customer validation, production readiness, a correctness guarantee, or independent security review."
     ],
     "userPreferences": [
       "Self-referential lexical rules can flag their own source or explanatory documentation. Prefer explicit markers, scoped targets, and regression fixtures.",
       "Codex Control Tower is a new independent repository, but release and scanner surfaces still require brownfield-style caution because they traverse arbitrary local files and publish evidence.",
-      "| **Phase-0 Alignment Wizard** | Eight plain-language English questions, one at a time; it writes alignment files and a first mission prompt, not implementation code. |",
-      "Additional target-derived reconciliation policies and language-aware claim adapters",
-      "Stronger language-aware dependency and code-ownership mapping"
+      "More target-derived challenge policies and language-aware claim adapters"
     ],
     "staleSections": [],
     "missingSources": [
@@ -4143,7 +4220,7 @@
       },
       {
         "pillar": "Minefield",
-        "text": "Codex Control Tower is a local-first developer tool that turns Codex-assisted work into a bounded, reviewable delivery workflow with mission context, risk signals, approval state, evidence, and a safe handoff.",
+        "text": "the conflict is substantive: local code found the mission/test/evidence surfaces structurally present, while GPT-5.6 traced the stated durable rejected-payment audit requirement and showed that neither implementation nor focused test proof existed.",
         "reason": "Risk prevention",
         "protected": true,
         "relevance": 0.68,
@@ -4152,7 +4229,7 @@
       },
       {
         "pillar": "Minefield",
-        "text": "Scores governance health across planning, Codex readiness, evidence, tests/CI, documentation, brownfield safety, continuity, review, context, and risk hygiene.",
+        "text": "| **Mistake Shield** | CLEAR, CAUTION, or BLOCKED with matched risks and a safer rewrite—never a silent block. |",
         "reason": "Risk prevention",
         "protected": true,
         "relevance": 0.65,
@@ -4161,7 +4238,7 @@
       },
       {
         "pillar": "Minefield",
-        "text": "Detects risky auth/payment areas, stale or tiny documentation, TODO/FIXME markers, weak tests, oversized files, and missing handoff records.",
+        "text": "| **Before / After Dashboard** | Reproducible comparison of governance score, risk, evidence, approval, and continuity on a fictional fixture. |",
         "reason": "Risk prevention",
         "protected": true,
         "relevance": 0.63,
@@ -4180,14 +4257,14 @@
     "verdict": "CAUTION",
     "proposedAction": "Continue with the smallest listed governance fix",
     "reasons": [
-      "Matched memory: Scores governance health across planning, Codex readiness, evidence, tests/CI, documentation, brownfield safety, continuity, review, context, and risk hygiene."
+      "Matched memory: | **Before / After Dashboard** | Reproducible comparison of governance score, risk, evidence, approval, and continuity on a fictional fixture. |"
     ],
     "matchedLessons": [
-      "Scores governance health across planning, Codex readiness, evidence, tests/CI, documentation, brownfield safety, continuity, review, context, and risk hygiene."
+      "| **Before / After Dashboard** | Reproducible comparison of governance score, risk, evidence, approval, and continuity on a fictional fixture. |"
     ],
     "gateStatus": "APPROVED",
     "saferNextAction": "Inspect the listed risk files, define allowed files and evidence, then request review before changing behavior.",
-    "checkedAt": "2026-07-13T21:04:09.367Z",
+    "checkedAt": "2026-07-15T09:24:12.356Z",
     "deterministic": true
   },
   "phase0": {
@@ -4198,7 +4275,7 @@
     "goal": "Build, verify, publish, and present Codex Control Tower as a competition-ready local-first governance layer for Codex-assisted software delivery.",
     "audience": "OpenAI Build Week judges, developers using Codex, AI-agent workflow builders, and open-source reviewers.",
     "successCriteria": "A working CLI and dashboard, a clear 25-to-88 simulated before/after demo, honest evidence boundaries, protected source lineage, passing local verification, and a reviewable public repository.",
-    "forbiddenAreas": "Do not modify the four protected source repositories, commit secrets or private screenshots, claim simulated evidence as real, add mandatory cloud dependencies, or rewrite Git history.",
+    "forbiddenAreas": "Do not modify Universal Agent OS family sources, commit secrets or private screenshots, claim simulated evidence as real, add mandatory cloud dependencies, or rewrite Git history.",
     "risk": "The largest immediate risk is a trust product that does not govern or truthfully assess its own repository; competition eligibility and Codex-use provenance must also remain explicit.",
     "expectedEvidence": "Full test suite, deterministic demo output, dashboard production build, root self-scan, source-protection checks, clean staged diff, remote commit verification, and visible NOT_RUN gates.",
     "workflow": "startup",
@@ -4342,13 +4419,13 @@
     "phase0Healthy": true,
     "flightRecorderHealthy": true,
     "evidenceSurfaceCount": 4,
-    "contextNodeCount": 132,
+    "contextNodeCount": 135,
     "criticalRiskCount": 0,
     "highRiskCount": 0
   },
   "provenance": {
     "generatedBy": "cct scan --portable",
-    "gitCommit": "079a604962fd72109d9688dc7384e02d9265c958",
+    "gitCommit": "633fe839e44a67d53befd29422e3f0167400be13",
     "worktreeAtScan": "CLEAN"
   }
 }
