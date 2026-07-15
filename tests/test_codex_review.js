@@ -197,6 +197,8 @@ assert.equal(reconciled.modelVerdict, 'PASS');
 assert.equal(reconciled.claimAudits.find((item) => item.id === 'CI_EXECUTION').deterministicStatus, 'FAIL');
 assert.equal(reconciled.claimAudits.find((item) => item.id === 'CI_EXECUTION').agreement, 'AGREEMENT');
 assert.equal(reconciled.claimAudits.find((item) => item.id === 'CI_EXECUTION').relation, 'ALIGNS_WITH_LOCKED_STATUS');
+assert.deepEqual(reconciled.claimAudits.find((item) => item.id === 'CI_EXECUTION').localComparisonPolicyAccepts, ['CONTRADICTS', 'INSUFFICIENT']);
+assert.equal(Object.hasOwn(reconciled.claimAudits.find((item) => item.id === 'CI_EXECUTION'), 'expectedModelAssessments'), false);
 assert.equal(reconciled.claimAudits.find((item) => item.id === 'EXTERNAL_GATES').deterministicStatus, 'NOT_RUN');
 assert.equal(reconciled.counts.agreement, claims.length - 1);
 assert.equal(reconciled.counts.compatible, 1);

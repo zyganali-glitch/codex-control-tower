@@ -147,6 +147,7 @@ function ProofAndProvenance({ review, report }) {
     ['Tool-event policy', isolation.eventPolicy || 'Not recorded'],
     ['Tool events accepted', isolation.eventValidation?.policy === 'NO_TOOL_EVENTS' ? 'None' : 'Not recorded'],
     ['Web search', isolation.webSearch || 'Not recorded'],
+    ['Subprocess environment', isolation.subprocessEnvironment || 'Not recorded'],
     ['Started', formatTime(review.startedAt)],
     ['Completed', formatTime(review.completedAt)],
     ['Report snapshot', formatTime(provenance.generatedAt || provenance.reportGeneratedAt || report?.generatedAt)],

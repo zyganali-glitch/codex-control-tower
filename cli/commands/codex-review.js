@@ -143,7 +143,7 @@ function evidenceState(report, key, fallback = 'WARN') {
   const item = report.evidenceStatus?.[key]; const value = typeof item === 'string' ? item : item?.status; const normalized = String(value || fallback).toUpperCase();
   return DETERMINISTIC_STATES.includes(normalized) ? normalized : fallback;
 }
-function expectedAssessments(definition, status) { return definition?.supportsStates?.includes(status) ? ['SUPPORTS'] : ['CONTRADICTS', 'INSUFFICIENT']; }
+function localPolicyAccepts(definition, status) { return definition?.supportsStates?.includes(status) ? ['SUPPORTS'] : ['CONTRADICTS', 'INSUFFICIENT']; }
 function comparisonOutcome(definition, status, assessment) {
   const positiveLocalSignal = Boolean(definition?.supportsStates?.includes(status));
   if ((positiveLocalSignal && assessment === 'SUPPORTS') || (!positiveLocalSignal && assessment === 'CONTRADICTS')) {
@@ -311,8 +311,8 @@ function buildExecutionEvidence(report, claims) {
 function reconcileAssessment(assessment, claims, options = {}) {
   validateModelAssessment(assessment, claims); const audits = new Map(assessment.claimAudits.map((audit) => [audit.id, audit])); const definitions = new Map(CLAIM_DEFINITIONS.map((definition) => [definition.id, definition]));
   const claimAudits = claims.map((claim) => {
-    const audit = audits.get(claim.id); const definition = definitions.get(claim.id); const allowed = new Set(claim.evidencePaths); const expected = expectedAssessments(definition, claim.deterministicStatus); const outcome = comparisonOutcome(definition, claim.deterministicStatus, audit.modelAssessment);
-    return { id: claim.id, claim: claim.claim, claimKind: claim.claimKind || 'LOCKED_EVIDENCE_STATE_CLAIM', deterministicStatus: claim.deterministicStatus, deterministicBasis: claim.deterministicBasis || null, modelAssessment: audit.modelAssessment, expectedModelAssessments: expected, agreement: outcome.agreement, relation: outcome.relation, humanReviewRequired: outcome.humanReviewRequired, rationale: audit.rationale, evidencePaths: claim.evidencePaths, citedEvidencePaths: audit.citedEvidencePaths.filter((item) => allowed.has(item)), rejectedEvidencePaths: audit.citedEvidencePaths.filter((item) => !allowed.has(item)), counterEvidence: audit.counterEvidence, missingEvidence: audit.missingEvidence, recommendedNextAction: audit.recommendedNextAction };
+    const audit = audits.get(claim.id); const definition = definitions.get(claim.id); const allowed = new Set(claim.evidencePaths); const acceptedByLocalPolicy = localPolicyAccepts(definition, claim.deterministicStatus); const outcome = comparisonOutcome(definition, claim.deterministicStatus, audit.modelAssessment);
+    return { id: claim.id, claim: claim.claim, claimKind: claim.claimKind || 'LOCKED_EVIDENCE_STATE_CLAIM', deterministicStatus: claim.deterministicStatus, deterministicBasis: claim.deterministicBasis || null, modelAssessment: audit.modelAssessment, localComparisonPolicyAccepts: acceptedByLocalPolicy, agreement: outcome.agreement, relation: outcome.relation, humanReviewRequired: outcome.humanReviewRequired, rationale: audit.rationale, evidencePaths: claim.evidencePaths, citedEvidencePaths: audit.citedEvidencePaths.filter((item) => allowed.has(item)), rejectedEvidencePaths: audit.citedEvidencePaths.filter((item) => !allowed.has(item)), counterEvidence: audit.counterEvidence, missingEvidence: audit.missingEvidence, recommendedNextAction: audit.recommendedNextAction };
   });
   const warnings = [...(options.reportProvenance?.staleReasons || [])]; const deterministicVerdict = deterministicVerdictFor(claims, warnings); const conflicts = claimAudits.filter((item) => item.humanReviewRequired);
   return {
@@ -346,7 +346,7 @@ function buildReviewPrompt(report, claims = buildDeterministicClaims(report), ev
 }
 async function codexReviewCommand(args) {
   const target = resolveTarget(args.target || '.'); const model = String(args.model || DEFAULT_MODEL); const liveReport = args.liveReport; const startedAt = new Date().toISOString();
-  const isolationBase = { workspace: 'EPHEMERAL_EMPTY_DIRECTORY', sandbox: 'read-only', approvalPolicy: 'never', webSearch: 'disabled', userConfig: 'ignored', projectRules: 'ignored', projectInstructionsMaxBytes: 0, sessionPersistence: 'ephemeral', eventPolicy: 'FAIL_CLOSED_NO_TOOL_EVENTS' };
+  const isolationBase = { workspace: 'EPHEMERAL_EMPTY_DIRECTORY', sandbox: 'read-only', approvalPolicy: 'never', webSearch: 'disabled', userConfig: 'ignored', projectRules: 'ignored', projectInstructionsMaxBytes: 0, subprocessEnvironment: 'none', sessionPersistence: 'ephemeral', eventPolicy: 'FAIL_CLOSED_NO_TOOL_EVENTS' };
   const baseState = { state: 'RUNNING', mode: 'REAL_CODEX_BLIND_SEMANTIC_AUDIT', model, authenticatedVia: 'Checking ChatGPT subscription session', startedAt, executionIsolation: isolationBase, disclosure: 'Real GPT-5.6 blind semantic audit: the model receives neutral claims and bounded raw evidence in an isolated empty workspace, while the reconciler\'s locked claim statuses and expected comparison classes are withheld. Local states remain locked and independently reproducible.' };
   const fail = (message, state = 'FAILED') => writeLiveReport(target, liveReport, { ...baseState, state, authenticatedVia: state === 'BLOCKED' ? 'Not signed in with ChatGPT' : baseState.authenticatedVia, completedAt: new Date().toISOString(), error: String(message).slice(-1200) });
   writeLiveReport(target, liveReport, baseState);

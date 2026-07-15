@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-07-13T21:06:13.863Z",
+  "generatedAt": "2026-07-15T09:06:44.006Z",
   "reportProvenance": {
     "source": "RECORDED_REPORT",
     "status": "PASS",
     "reportPath": "CONTROL_TOWER_REPORT.json",
-    "generatedAt": "2026-07-13T21:04:57.905Z",
-    "loadedAt": "2026-07-13T21:06:14.606Z",
-    "ageMs": 76701,
+    "generatedAt": "2026-07-15T09:05:52.103Z",
+    "loadedAt": "2026-07-15T09:06:44.905Z",
+    "ageMs": 52802,
     "maxAgeMs": 86400000,
     "stale": false,
     "staleReasons": [],
     "preservedRecordedExecutionEvidence": true,
     "freshScanComparison": {
       "performed": true,
-      "freshScanGeneratedAt": "2026-07-13T21:06:14.629Z",
+      "freshScanGeneratedAt": "2026-07-15T09:06:44.921Z",
       "scoreMatches": true,
       "riskFlagsMatch": true,
       "changedFileCount": 0,
@@ -24,10 +24,9 @@
     {
       "id": "TEST_EXECUTION",
       "claim": "Recorded test execution for invoiceflow-mini-simulated-governed is supported by the bounded evidence.",
+      "claimKind": "LOCKED_EVIDENCE_STATE_CLAIM",
       "deterministicStatus": "PASS",
-      "expectedModelAssessments": [
-        "SUPPORTS"
-      ],
+      "deterministicBasis": "Recorded local test-execution state and evidence references.",
       "evidencePaths": [
         "CONTROL_TOWER_REPORT.json",
         "tests/invoiceflow.test.js",
@@ -39,11 +38,9 @@
     {
       "id": "CI_EXECUTION",
       "claim": "Recorded continuous-integration execution for invoiceflow-mini-simulated-governed is supported by the bounded evidence.",
+      "claimKind": "LOCKED_EVIDENCE_STATE_CLAIM",
       "deterministicStatus": "FAIL",
-      "expectedModelAssessments": [
-        "QUESTIONS",
-        "INSUFFICIENT"
-      ],
+      "deterministicBasis": "Recorded local CI-execution state and evidence references.",
       "evidencePaths": [
         "CONTROL_TOWER_REPORT.json",
         "docs/TRACEABILITY_MATRIX.md",
@@ -53,10 +50,9 @@
     {
       "id": "REVIEW_GATE",
       "claim": "The Review Gate for invoiceflow-mini-simulated-governed is accurately disclosed and supported by the bounded evidence.",
+      "claimKind": "LOCKED_EVIDENCE_STATE_CLAIM",
       "deterministicStatus": "SIMULATED",
-      "expectedModelAssessments": [
-        "SUPPORTS"
-      ],
+      "deterministicBasis": "Recorded local gate decision, scope, and simulation boundary.",
       "evidencePaths": [
         "CONTROL_TOWER_REPORT.json",
         ".controltower/review-gate.json"
@@ -65,10 +61,9 @@
     {
       "id": "EVIDENCE_BOUNDARY",
       "claim": "The report for invoiceflow-mini-simulated-governed visibly separates executed, failed, unexecuted, and simulated evidence.",
+      "claimKind": "LOCKED_EVIDENCE_STATE_CLAIM",
       "deterministicStatus": "PASS",
-      "expectedModelAssessments": [
-        "SUPPORTS"
-      ],
+      "deterministicBasis": "Structural presence of the evidence, traceability, and NOT_RUN disclosures.",
       "evidencePaths": [
         "CONTROL_TOWER_REPORT.json",
         "docs/EVIDENCE_REPORT.md",
@@ -79,14 +74,32 @@
     {
       "id": "EXTERNAL_GATES",
       "claim": "Every external verification gate listed for invoiceflow-mini-simulated-governed has recorded completion evidence.",
+      "claimKind": "LOCKED_EVIDENCE_STATE_CLAIM",
       "deterministicStatus": "NOT_RUN",
-      "expectedModelAssessments": [
-        "QUESTIONS",
-        "INSUFFICIENT"
-      ],
+      "deterministicBasis": "Recorded local completion or NOT_RUN state for external gates.",
       "evidencePaths": [
         "CONTROL_TOWER_REPORT.json",
         "docs/NOT_RUN_GATES.md"
+      ]
+    },
+    {
+      "id": "MISSION_CHANGE_TEST_ALIGNMENT",
+      "claim": "The recorded changes, test assertions, test output, and evidence for invoiceflow-mini-simulated-governed semantically demonstrate every stated Phase-0 success criterion.",
+      "claimKind": "SEMANTIC_CHALLENGE_WITH_STRUCTURAL_PRECHECK",
+      "deterministicStatus": "PASS",
+      "deterministicBasis": "Structural presence of a Phase-0 goal and success criteria, traceability, a passing recorded test command, and its evidence reference; semantic coverage is deliberately left to the blind model audit.",
+      "evidencePaths": [
+        "CONTROL_TOWER_REPORT.json",
+        "tests/invoiceflow.test.js",
+        ".controltower/governed-test-output.txt",
+        "docs/TRACEABILITY_MATRIX.md",
+        "docs/EVIDENCE_REPORT.md",
+        "docs/TECH_DEBT_DELTA.md",
+        "plans/master-roadmap.md",
+        ".controltower/review-gate.json",
+        "docs/NOT_RUN_GATES.md",
+        "src/auth.js",
+        "src/payments.js"
       ]
     }
   ]

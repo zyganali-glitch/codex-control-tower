@@ -21,8 +21,8 @@
     },
     "claimAudits": {
       "type": "array",
-      "minItems": 5,
-      "maxItems": 5,
+      "minItems": 6,
+      "maxItems": 6,
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -31,6 +31,7 @@
           "modelAssessment",
           "rationale",
           "citedEvidencePaths",
+          "counterEvidence",
           "missingEvidence",
           "recommendedNextAction"
         ],
@@ -42,14 +43,15 @@
               "CI_EXECUTION",
               "REVIEW_GATE",
               "EVIDENCE_BOUNDARY",
-              "EXTERNAL_GATES"
+              "EXTERNAL_GATES",
+              "MISSION_CHANGE_TEST_ALIGNMENT"
             ]
           },
           "modelAssessment": {
             "type": "string",
             "enum": [
               "SUPPORTS",
-              "QUESTIONS",
+              "CONTRADICTS",
               "INSUFFICIENT"
             ]
           },
@@ -57,6 +59,12 @@
             "type": "string"
           },
           "citedEvidencePaths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "counterEvidence": {
             "type": "array",
             "items": {
               "type": "string"
