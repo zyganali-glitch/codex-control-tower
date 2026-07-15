@@ -1,6 +1,6 @@
 # Codex Control Tower Mission
 
-Target repository: .\examples\demo-workspace
+Target repository: ./examples\demo-workspace
 Mission goal: Add the smallest governance surfaces and tests needed for an auditable handoff.
 Review gate: APPROVED (scoped)
 Review gate scope: Install and record Control Tower governance surfaces in the controlled demo workspace.

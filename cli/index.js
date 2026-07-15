@@ -26,7 +26,7 @@ Usage:
   cct doctor --target <dir>
   cct evidence --target <dir> --out <dir>
   cct context-graph --target <dir> [--out <file>]
-  cct codex-review --target <dir> [--model gpt-5.6-sol] [--live-report <file>]  # evidence reconciliation
+  cct codex-review --target <dir> [--model gpt-5.6-sol] [--live-report <file>]  # blind semantic evidence challenge
   cct review-gate --target <dir> --status|--approve|--reject|--reset [--note <text>] [--scope <text> --allow <paths> --forbid <actions>]
   cct mistake-shield --target <dir> --action <text>
   cct memory-lens --target <dir> [--out <file>]
@@ -35,7 +35,10 @@ Usage:
   cct demo
 
 Evidence states: PASS, WARN, FAIL, NOT_RUN, SIMULATED.
-Core operation is local-first. codex-review adds real GPT-5.6 evidence reconciliation through a ChatGPT subscription session and requires no API key.`;
+Core operation is local-first. codex-review adds a real, blind GPT-5.6 semantic
+evidence challenge through a ChatGPT subscription session and requires no API key.
+It uses an empty ephemeral read-only workspace and rejects any model tool event.
+GPT-5.6 cannot overwrite locked local evidence states.`;
 
 function parseArgs(argv) {
   const result = { _: [] };

@@ -15,6 +15,7 @@ out of scope.
 | IFM-03 | Verify and deduplicate simulated payments | Demo maintainer | PASS | `tests/invoiceflow.test.js` |
 | IFM-04 | Record evidence and traceability | Demo maintainer | PASS | `docs/EVIDENCE_REPORT.md` |
 | IFM-05 | Add real providers or persistence | Unassigned | NOT_RUN | Outside approved demo scope |
+| IFM-06 | Record every rejected payment attempt in a durable local audit trail | Unassigned | NOT_RUN | No implementation or execution evidence |
 
 ## Next safe mission
 

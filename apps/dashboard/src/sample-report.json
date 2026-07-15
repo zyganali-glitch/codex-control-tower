@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0",
   "projectName": "invoiceflow-mini-simulated-governed",
-  "targetPath": ".\\examples\\governed-saas-after",
-  "generatedAt": "2026-07-13T21:04:57.905Z",
+  "targetPath": "./examples\\governed-saas-after",
+  "generatedAt": "2026-07-15T09:05:52.103Z",
   "scanMode": "SIMULATED",
   "simulatedData": true,
   "scanScope": {
-    "targetPath": ".\\examples\\governed-saas-after",
+    "targetPath": "./examples\\governed-saas-after",
     "excludedPaths": [],
     "exclusionSource": "built-in generated/dependency exclusions only",
     "note": "No repository-specific path exclusions were configured."
@@ -48,33 +48,33 @@
     },
     {
       "path": ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
-      "bytes": 17950,
-      "lines": 488,
-      "modifiedAt": "2026-07-13T20:54:59.956Z"
+      "bytes": 17502,
+      "lines": 482,
+      "modifiedAt": "2026-07-13T21:06:14.768Z"
     },
     {
       "path": ".controltower/codex-live-events.jsonl",
-      "bytes": 4640,
+      "bytes": 4667,
       "lines": 0,
-      "modifiedAt": "2026-07-13T20:55:26.088Z"
+      "modifiedAt": "2026-07-13T21:06:44.836Z"
     },
     {
       "path": ".controltower/codex-live-review-record.json",
-      "bytes": 22308,
-      "lines": 483,
-      "modifiedAt": "2026-07-13T20:55:26.091Z"
+      "bytes": 21430,
+      "lines": 471,
+      "modifiedAt": "2026-07-13T21:06:44.839Z"
     },
     {
       "path": ".controltower/codex-live-review.json",
-      "bytes": 4166,
+      "bytes": 4194,
       "lines": 1,
-      "modifiedAt": "2026-07-13T20:55:25.778Z"
+      "modifiedAt": "2026-07-13T21:06:43.227Z"
     },
     {
       "path": ".controltower/codex-review-schema.json",
       "bytes": 1688,
       "lines": 82,
-      "modifiedAt": "2026-07-13T20:54:59.958Z"
+      "modifiedAt": "2026-07-13T21:06:14.770Z"
     },
     {
       "path": ".controltower/config.json",
@@ -86,13 +86,13 @@
       "path": ".controltower/DETERMINISTIC_CLAIMS.json",
       "bytes": 2860,
       "lines": 94,
-      "modifiedAt": "2026-07-13T20:54:59.821Z"
+      "modifiedAt": "2026-07-13T21:06:14.633Z"
     },
     {
       "path": ".controltower/EVIDENCE_BUNDLE.md",
-      "bytes": 14845,
-      "lines": 441,
-      "modifiedAt": "2026-07-13T20:54:59.955Z"
+      "bytes": 14397,
+      "lines": 435,
+      "modifiedAt": "2026-07-13T21:06:14.767Z"
     },
     {
       "path": ".controltower/flight-recorder.jsonl",
@@ -102,15 +102,15 @@
     },
     {
       "path": ".controltower/governed-test-output.txt",
-      "bytes": 375,
+      "bytes": 373,
       "lines": 15,
-      "modifiedAt": "2026-07-13T21:04:57.883Z"
+      "modifiedAt": "2026-07-15T09:05:52.087Z"
     },
     {
       "path": ".controltower/phase0.json",
-      "bytes": 2977,
+      "bytes": 3351,
       "lines": 30,
-      "modifiedAt": "2026-07-12T17:07:08.870Z"
+      "modifiedAt": "2026-07-15T07:40:56.649Z"
     },
     {
       "path": ".controltower/review-gate.json",
@@ -126,9 +126,9 @@
     },
     {
       "path": "docs/EVIDENCE_REPORT.md",
-      "bytes": 1980,
-      "lines": 43,
-      "modifiedAt": "2026-07-12T17:01:34.506Z"
+      "bytes": 2177,
+      "lines": 45,
+      "modifiedAt": "2026-07-15T07:49:55.996Z"
     },
     {
       "path": "docs/MEMORY_LENS.md",
@@ -144,9 +144,9 @@
     },
     {
       "path": "docs/NOT_RUN_GATES.md",
-      "bytes": 1058,
-      "lines": 15,
-      "modifiedAt": "2026-07-12T17:01:37.767Z"
+      "bytes": 1238,
+      "lines": 16,
+      "modifiedAt": "2026-07-15T07:40:46.548Z"
     },
     {
       "path": "docs/TECH_DEBT_DELTA.md",
@@ -156,9 +156,9 @@
     },
     {
       "path": "docs/TRACEABILITY_MATRIX.md",
-      "bytes": 1024,
-      "lines": 16,
-      "modifiedAt": "2026-07-12T17:01:36.139Z"
+      "bytes": 1171,
+      "lines": 17,
+      "modifiedAt": "2026-07-15T07:40:46.546Z"
     },
     {
       "path": "package.json",
@@ -168,21 +168,21 @@
     },
     {
       "path": "plans/master-roadmap.md",
-      "bytes": 1105,
-      "lines": 23,
-      "modifiedAt": "2026-07-12T16:59:49.919Z"
+      "bytes": 1252,
+      "lines": 24,
+      "modifiedAt": "2026-07-15T07:40:46.545Z"
     },
     {
       "path": "plans/PHASE0_ALIGNMENT.md",
-      "bytes": 1512,
-      "lines": 27,
-      "modifiedAt": "2026-07-13T21:03:49.121Z"
+      "bytes": 1686,
+      "lines": 28,
+      "modifiedAt": "2026-07-15T07:41:01.813Z"
     },
     {
       "path": "README.md",
-      "bytes": 1846,
-      "lines": 43,
-      "modifiedAt": "2026-07-12T16:58:27.504Z"
+      "bytes": 1883,
+      "lines": 44,
+      "modifiedAt": "2026-07-15T07:40:46.549Z"
     },
     {
       "path": "src/app.js",
@@ -242,7 +242,7 @@
   "suggestedNextActions": [
     "Add a minimal CI workflow that runs tests and the demo."
   ],
-  "codexPrompt": "# Codex Control Tower Mission\n\nTarget repository: .\\examples\\governed-saas-after\nMission goal: Review the bounded auth and payment hardening evidence; do not expand the product scope.\nReview gate: APPROVED (scoped)\nReview gate scope: Harden the local simulated authentication and payment flow and add one integration test.\nMistake Shield: CLEAR\n\n## Detected risks\n- [HIGH] No CI configuration\n\n## Missing surfaces\n- .github/workflows/ci.yml\n\n## Allowed files\n- src/auth.js\n- src/payments.js\n- tests/invoiceflow.test.js\n- docs/**\n- plans/**\n- .controltower/**\n\n## Forbidden actions\n- Do not delete tests, history, user data, or unrelated legacy code.\n- Do not overwrite existing files without a backup and explicit need.\n- Do not push, publish, deploy, or upload source unless the APPROVED scoped Review Gate explicitly authorizes the exact action and destination. Never expose secrets.\n- Do not expand scope beyond the mission or bypass a non-approved review gate.\n- Review Gate forbids: connect to a real payment provider\n- Review Gate forbids: use real credentials or customer data\n- Review Gate forbids: delete tests\n- Review Gate forbids: write outside the demo fixture\n- Do not touch without approval: No real providers\n- Do not touch without approval: network calls\n- Do not touch without approval: databases\n- Do not touch without approval: credentials\n- Do not touch without approval: customer data\n- Do not touch without approval: or files outside this demo fixture.\n\n## Required evidence\n- Recorded test command, assertions for tampered auth and payment idempotency, traceability links, visible NOT_RUN gates, and review state.\n- List every changed file and every command actually run.\n- Attach concrete output or artifact paths for every PASS claim.\n- Keep WARN, FAIL, NOT_RUN, and SIMULATED labels visible.\n\n## Tests to run\n- Run the repository test command discovered in package metadata.\n\n## Documentation to update\n- README.md when behavior or commands change\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n\n## Execution contract\nYou are Codex working under Codex Control Tower. Fix only the listed gaps. Read instructions and plans before editing. Stop before risky implementation unless the local gate is APPROVED, fully scoped, and the proposed action stays within that scope. PASS requires evidence; an edited file is not a validated file. If a check cannot run, label it NOT_RUN and explain why.\n\n## Final response format\n1. Summary\n2. Changed files\n3. Commands and evidence with PASS/WARN/FAIL/NOT_RUN/SIMULATED\n4. Review gate and Mistake Shield state\n5. Remaining risks\n6. Next safe action",
+  "codexPrompt": "# Codex Control Tower Mission\n\nTarget repository: ./examples\\governed-saas-after\nMission goal: Review the bounded auth and payment hardening evidence; do not expand the product scope.\nReview gate: APPROVED (scoped)\nReview gate scope: Harden the local simulated authentication and payment flow and add one integration test.\nMistake Shield: CLEAR\n\n## Detected risks\n- [HIGH] No CI configuration\n\n## Missing surfaces\n- .github/workflows/ci.yml\n\n## Allowed files\n- src/auth.js\n- src/payments.js\n- tests/invoiceflow.test.js\n- docs/**\n- plans/**\n- .controltower/**\n\n## Forbidden actions\n- Do not delete tests, history, user data, or unrelated legacy code.\n- Do not overwrite existing files without a backup and explicit need.\n- Do not push, publish, deploy, or upload source unless the APPROVED scoped Review Gate explicitly authorizes the exact action and destination. Never expose secrets.\n- Do not expand scope beyond the mission or bypass a non-approved review gate.\n- Review Gate forbids: connect to a real payment provider\n- Review Gate forbids: use real credentials or customer data\n- Review Gate forbids: delete tests\n- Review Gate forbids: write outside the demo fixture\n- Do not touch without approval: No real providers\n- Do not touch without approval: network calls\n- Do not touch without approval: databases\n- Do not touch without approval: credentials\n- Do not touch without approval: customer data\n- Do not touch without approval: or files outside this demo fixture.\n\n## Required evidence\n- Recorded test command, assertions for tampered auth and payment idempotency, evidence of a durable rejected-payment audit record, traceability links, visible NOT_RUN gates, and review state.\n- List every changed file and every command actually run.\n- Attach concrete output or artifact paths for every PASS claim.\n- Keep WARN, FAIL, NOT_RUN, and SIMULATED labels visible.\n\n## Tests to run\n- Run the repository test command discovered in package metadata.\n\n## Documentation to update\n- README.md when behavior or commands change\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n\n## Execution contract\nYou are Codex working under Codex Control Tower. Fix only the listed gaps. Read instructions and plans before editing. Stop before risky implementation unless the local gate is APPROVED, fully scoped, and the proposed action stays within that scope. PASS requires evidence; an edited file is not a validated file. If a check cannot run, label it NOT_RUN and explain why.\n\n## Final response format\n1. Summary\n2. Changed files\n3. Commands and evidence with PASS/WARN/FAIL/NOT_RUN/SIMULATED\n4. Review gate and Mistake Shield state\n5. Remaining risks\n6. Next safe action",
   "traceabilityMatrix": [
     {
       "requirement": "Plan before implementation",
@@ -311,7 +311,7 @@
     }
   },
   "contextGraph": {
-    "generatedAt": "2026-07-13T21:04:57.903Z",
+    "generatedAt": "2026-07-15T09:05:52.101Z",
     "generatedLocally": true,
     "algorithm": "deterministic lexical and repository-surface analysis",
     "nodes": [
@@ -334,8 +334,8 @@
         "id": "file:.controltower/CODEX_LIVE_REVIEW_PROMPT.md",
         "label": ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
         "type": "documentation",
-        "lines": 488,
-        "bytes": 17950,
+        "lines": 482,
+        "bytes": 17502,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -350,7 +350,7 @@
         "label": ".controltower/codex-live-events.jsonl",
         "type": "control",
         "lines": 0,
-        "bytes": 4640,
+        "bytes": 4667,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -364,8 +364,8 @@
         "id": "file:.controltower/codex-live-review-record.json",
         "label": ".controltower/codex-live-review-record.json",
         "type": "control",
-        "lines": 483,
-        "bytes": 22308,
+        "lines": 471,
+        "bytes": 21430,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -380,7 +380,7 @@
         "label": ".controltower/codex-live-review.json",
         "type": "control",
         "lines": 1,
-        "bytes": 4166,
+        "bytes": 4194,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -439,8 +439,8 @@
         "id": "file:.controltower/EVIDENCE_BUNDLE.md",
         "label": ".controltower/EVIDENCE_BUNDLE.md",
         "type": "evidence",
-        "lines": 441,
-        "bytes": 14845,
+        "lines": 435,
+        "bytes": 14397,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -470,7 +470,7 @@
         "label": ".controltower/governed-test-output.txt",
         "type": "control",
         "lines": 15,
-        "bytes": 375,
+        "bytes": 373,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -485,7 +485,7 @@
         "label": ".controltower/phase0.json",
         "type": "control",
         "lines": 30,
-        "bytes": 2977,
+        "bytes": 3351,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -529,8 +529,8 @@
         "id": "file:docs/EVIDENCE_REPORT.md",
         "label": "docs/EVIDENCE_REPORT.md",
         "type": "evidence",
-        "lines": 43,
-        "bytes": 1980,
+        "lines": 45,
+        "bytes": 2177,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -574,8 +574,8 @@
         "id": "file:docs/NOT_RUN_GATES.md",
         "label": "docs/NOT_RUN_GATES.md",
         "type": "evidence",
-        "lines": 15,
-        "bytes": 1058,
+        "lines": 16,
+        "bytes": 1238,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -604,8 +604,8 @@
         "id": "file:docs/TRACEABILITY_MATRIX.md",
         "label": "docs/TRACEABILITY_MATRIX.md",
         "type": "evidence",
-        "lines": 16,
-        "bytes": 1024,
+        "lines": 17,
+        "bytes": 1171,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -634,8 +634,8 @@
         "id": "file:plans/master-roadmap.md",
         "label": "plans/master-roadmap.md",
         "type": "plan",
-        "lines": 23,
-        "bytes": 1105,
+        "lines": 24,
+        "bytes": 1252,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -649,8 +649,8 @@
         "id": "file:plans/PHASE0_ALIGNMENT.md",
         "label": "plans/PHASE0_ALIGNMENT.md",
         "type": "plan",
-        "lines": 27,
-        "bytes": 1512,
+        "lines": 28,
+        "bytes": 1686,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -664,8 +664,8 @@
         "id": "file:README.md",
         "label": "README.md",
         "type": "readme",
-        "lines": 43,
-        "bytes": 1846,
+        "lines": 44,
+        "bytes": 1883,
         "risk": false,
         "markers": 0,
         "relevance": 0.82,
@@ -915,8 +915,8 @@
         "id": "file:.controltower/EVIDENCE_BUNDLE.md",
         "label": ".controltower/EVIDENCE_BUNDLE.md",
         "type": "evidence",
-        "lines": 441,
-        "bytes": 14845,
+        "lines": 435,
+        "bytes": 14397,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -930,8 +930,8 @@
         "id": "file:docs/EVIDENCE_REPORT.md",
         "label": "docs/EVIDENCE_REPORT.md",
         "type": "evidence",
-        "lines": 43,
-        "bytes": 1980,
+        "lines": 45,
+        "bytes": 2177,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -945,8 +945,8 @@
         "id": "file:docs/NOT_RUN_GATES.md",
         "label": "docs/NOT_RUN_GATES.md",
         "type": "evidence",
-        "lines": 15,
-        "bytes": 1058,
+        "lines": 16,
+        "bytes": 1238,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -960,8 +960,8 @@
         "id": "file:docs/TRACEABILITY_MATRIX.md",
         "label": "docs/TRACEABILITY_MATRIX.md",
         "type": "evidence",
-        "lines": 16,
-        "bytes": 1024,
+        "lines": 17,
+        "bytes": 1171,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -975,8 +975,8 @@
         "id": "file:plans/master-roadmap.md",
         "label": "plans/master-roadmap.md",
         "type": "plan",
-        "lines": 23,
-        "bytes": 1105,
+        "lines": 24,
+        "bytes": 1252,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -990,8 +990,8 @@
         "id": "file:plans/PHASE0_ALIGNMENT.md",
         "label": "plans/PHASE0_ALIGNMENT.md",
         "type": "plan",
-        "lines": 27,
-        "bytes": 1512,
+        "lines": 28,
+        "bytes": 1686,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -1006,7 +1006,7 @@
         "label": ".controltower/codex-live-events.jsonl",
         "type": "control",
         "lines": 0,
-        "bytes": 4640,
+        "bytes": 4667,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1020,8 +1020,8 @@
         "id": "file:.controltower/codex-live-review-record.json",
         "label": ".controltower/codex-live-review-record.json",
         "type": "control",
-        "lines": 483,
-        "bytes": 22308,
+        "lines": 471,
+        "bytes": 21430,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1036,7 +1036,7 @@
         "label": ".controltower/codex-live-review.json",
         "type": "control",
         "lines": 1,
-        "bytes": 4166,
+        "bytes": 4194,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1111,7 +1111,7 @@
         "label": ".controltower/governed-test-output.txt",
         "type": "control",
         "lines": 15,
-        "bytes": 375,
+        "bytes": 373,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1126,7 +1126,7 @@
         "label": ".controltower/phase0.json",
         "type": "control",
         "lines": 30,
-        "bytes": 2977,
+        "bytes": 3351,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1170,8 +1170,8 @@
         "id": "file:README.md",
         "label": "README.md",
         "type": "readme",
-        "lines": 43,
-        "bytes": 1846,
+        "lines": 44,
+        "bytes": 1883,
         "risk": false,
         "markers": 0,
         "relevance": 0.82,
@@ -1185,8 +1185,8 @@
         "id": "file:.controltower/CODEX_LIVE_REVIEW_PROMPT.md",
         "label": ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
         "type": "documentation",
-        "lines": 488,
-        "bytes": 17950,
+        "lines": 482,
+        "bytes": 17502,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -1261,7 +1261,7 @@
       "maxItems": 24,
       "selectedItems": 24,
       "availableItems": 33,
-      "estimatedTokens": 21138
+      "estimatedTokens": 21354
     }
   },
   "reviewGate": {
@@ -1297,26 +1297,26 @@
     "decisionRecorded": true
   },
   "memoryLens": {
-    "generatedAt": "2026-07-13T21:04:57.905Z",
+    "generatedAt": "2026-07-15T09:05:52.102Z",
     "generatedLocally": true,
     "sources": [
       {
         "relative": "docs/MEMORY_LENS.md",
-        "ageDays": 0,
+        "ageDays": 1,
         "stale": false,
         "bytes": 1401
       },
       {
         "relative": "TECH_DEBT_AND_SECURITY.md",
-        "ageDays": 1,
+        "ageDays": 2,
         "stale": false,
         "bytes": 941
       },
       {
         "relative": "README.md",
-        "ageDays": 1,
+        "ageDays": 0,
         "stale": false,
-        "bytes": 1846
+        "bytes": 1883
       }
     ],
     "persistentRules": [
@@ -1343,7 +1343,7 @@
       "Keep the default path local-first, deterministic, and dependency-free.",
       "# Code soul and architecture rules",
       "Snapshot date: 2026-07-12. Re-scan after any auth, payment, test, or architecture",
-      "NOT_RUN: dependency audit, browser tests, load tests, and real-provider tests.",
+      "NOT_RUN: durable rejected-payment auditing, dependency audit, browser tests,",
       "See [Architecture](docs/ARCHITECTURE.md), [Evidence Report](docs/EVIDENCE_REPORT.md),"
     ],
     "environmentConstraints": [
@@ -1527,7 +1527,7 @@
     "matchedLessons": [],
     "gateStatus": "APPROVED",
     "saferNextAction": "Proceed only within the declared scope and record commands, evidence, NOT_RUN checks, and remaining risk.",
-    "checkedAt": "2026-07-13T21:04:57.905Z",
+    "checkedAt": "2026-07-15T09:05:52.102Z",
     "deterministic": true
   },
   "phase0": {
@@ -1535,31 +1535,30 @@
     "project": "InvoiceFlow Mini",
     "locale": "en",
     "availableQuestionLocales": [
-      "en",
-      "tr"
+      "en"
     ],
     "simulated": true,
     "dataClassification": "SIMULATED_DEMO_DATA",
     "goal": "Harden the simulated invoice, authentication, and payment workflow without adding external services.",
     "audience": "Small-business operators evaluating a lightweight invoice tracker and Build Week demo viewers.",
-    "successCriteria": "A signed local session, a verified idempotent simulated payment, updated governance docs, and a passing Node.js test.",
+    "successCriteria": "A signed local session, a verified idempotent simulated payment, a durable local audit record for every rejected payment attempt, updated governance docs, and a passing Node.js test.",
     "forbiddenAreas": "No real providers, network calls, databases, credentials, customer data, or files outside this demo fixture.",
     "risk": "An unsigned identity or unverified payment event could mark the wrong invoice as paid.",
-    "expectedEvidence": "Recorded test command, assertions for tampered auth and payment idempotency, traceability links, visible NOT_RUN gates, and review state.",
+    "expectedEvidence": "Recorded test command, assertions for tampered auth and payment idempotency, evidence of a durable rejected-payment audit record, traceability links, visible NOT_RUN gates, and review state.",
     "profile": "startup",
     "nextMission": "Review the bounded auth and payment hardening evidence; do not expand the product scope.",
     "answers": {
       "goal": "Harden the simulated invoice, authentication, and payment workflow without adding external services.",
       "audience": "Small-business operators evaluating a lightweight invoice tracker and Build Week demo viewers.",
-      "successCriteria": "A signed local session, a verified idempotent simulated payment, updated governance docs, and a passing Node.js test.",
+      "successCriteria": "A signed local session, a verified idempotent simulated payment, a durable local audit record for every rejected payment attempt, updated governance docs, and a passing Node.js test.",
       "forbiddenAreas": "No real providers, network calls, databases, credentials, customer data, or files outside this demo fixture.",
       "risk": "An unsigned identity or unverified payment event could mark the wrong invoice as paid.",
-      "expectedEvidence": "Recorded test command, assertions for tampered auth and payment idempotency, traceability links, visible NOT_RUN gates, and review state.",
+      "expectedEvidence": "Recorded test command, assertions for tampered auth and payment idempotency, evidence of a durable rejected-payment audit record, traceability links, visible NOT_RUN gates, and review state.",
       "profile": "startup",
       "nextMission": "Review the bounded auth and payment hardening evidence; do not expand the product scope."
     },
-    "missionPrompt": "SIMULATED CODEX MISSION: In examples/governed-saas-after, review only the bounded auth and payment hardening. Preserve the goal of a local invoice tracker. Prevent unsigned identity and unverified or duplicate payment events. Do not touch real providers, network services, credentials, customer data, or files outside the fixture. Require the Node test result, traceability links, explicit NOT_RUN gates, and current review status before claiming done.",
-    "codexMissionPrompt": "SIMULATED CODEX MISSION: In examples/governed-saas-after, review only the bounded auth and payment hardening. Preserve the goal of a local invoice tracker. Prevent unsigned identity and unverified or duplicate payment events. Do not touch real providers, network services, credentials, customer data, or files outside the fixture. Require the Node test result, traceability links, explicit NOT_RUN gates, and current review status before claiming done."
+    "missionPrompt": "SIMULATED CODEX MISSION: In examples/governed-saas-after, review only the bounded auth and payment hardening. Preserve the goal of a local invoice tracker. Prevent unsigned identity and unverified or duplicate payment events, and require durable local audit evidence for rejected payment attempts. Do not touch real providers, network services, credentials, customer data, or files outside the fixture. Require the Node test result, traceability links, explicit NOT_RUN gates, and current review status before claiming done.",
+    "codexMissionPrompt": "SIMULATED CODEX MISSION: In examples/governed-saas-after, review only the bounded auth and payment hardening. Preserve the goal of a local invoice tracker. Prevent unsigned identity and unverified or duplicate payment events, and require durable local audit evidence for rejected payment attempts. Do not touch real providers, network services, credentials, customer data, or files outside the fixture. Require the Node test result, traceability links, explicit NOT_RUN gates, and current review status before claiming done."
   },
   "flightRecorder": {
     "events": [
@@ -1914,11 +1913,16 @@
       }
     }
   },
+  "submission": {
+    "version": "openai-build-week-final",
+    "immutableSource": "https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final",
+    "judgeStart": "JUDGE_START_HERE.md"
+  },
   "codexLiveReview": {
     "state": "READY",
-    "mode": "REAL_CODEX_EVIDENCE_RECONCILIATION",
+    "mode": "REAL_CODEX_BLIND_SEMANTIC_AUDIT",
     "model": "gpt-5.6-sol",
-    "authenticatedVia": "Checked when evidence reconciliation starts",
-    "disclosure": "Real GPT-5.6 evidence reconciliation is ready; deterministic states remain locked and independently reproducible."
+    "authenticatedVia": "Checked when the blind semantic audit starts",
+    "disclosure": "Real GPT-5.6 is ready to challenge bounded raw evidence in an empty ephemeral no-tool workspace without seeing the reconciler's locked claim statuses or expected assessment classes; local facts remain independently reproducible and cannot be overwritten."
   }
 }

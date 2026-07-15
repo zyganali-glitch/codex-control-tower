@@ -7,10 +7,10 @@
 | --- | --- |
 | Goal | Harden the simulated invoice, authentication, and payment workflow without external services. |
 | Audience | Small-business operators evaluating a lightweight tracker and Build Week demo viewers. |
-| Success | Signed local sessions, verified idempotent simulated payments, synced docs, and a passing Node.js test. |
+| Success | Signed local sessions, verified idempotent simulated payments, a durable local audit record for every rejected payment attempt, synced docs, and a passing Node.js test. |
 | Forbidden areas | Real providers, networks, databases, credentials, customer data, and files outside this fixture. |
 | Biggest risk | Unsigned identity or unverified payment events marking the wrong invoice paid. |
-| Expected evidence | Test output, auth and idempotency assertions, traceability, NOT_RUN gates, and review state. |
+| Expected evidence | Test output, auth and idempotency assertions, durable rejected-payment audit evidence, traceability, NOT_RUN gates, and review state. |
 | Workflow | Startup |
 | Next safe mission | Review the bounded hardening evidence without expanding scope. |
 
@@ -18,9 +18,10 @@
 
 Work only inside `examples/governed-saas-after`. Review the bounded auth and
 payment hardening. Preserve the stated goal and prevent unsigned identity,
-unverified payment, and duplicate event risks. Do not access forbidden areas.
-Require the Node test result, traceability links, explicit NOT_RUN gates, and
-current Review Gate status before reporting completion.
+unverified payment, and duplicate event risks. Require durable local audit
+evidence for rejected payment attempts. Do not access forbidden areas. Require
+the Node test result, traceability links, explicit NOT_RUN gates, and current
+Review Gate status before reporting completion.
 
 If new risky files or broader work are proposed, run `cct scan --target .` and
 `cct review-gate --target . --status` before proceeding.

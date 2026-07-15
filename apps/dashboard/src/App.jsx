@@ -32,7 +32,7 @@ const tabs = [
 ];
 
 const pageCopy = {
-  overview: ['Mission overview', 'One inspectable view of governance health, approval, evidence, and the next safe Codex action.'],
+  overview: ['Blind GPT-5.6 evidence challenge', "GPT-5.6 reads neutral claims and bounded raw evidence in an empty ephemeral no-tool workspace; locked local states stay authoritative."],
   risks: ['Risk intelligence', 'Prioritized findings with explicit mitigations and no silent blockers.'],
   context: ['Context Trace', 'See what context Codex receives, why it was selected, and how much of the budget it consumes.'],
   evidence: ['Evidence & review', 'Separate verified claims from warnings, failures, unavailable checks, and simulated proof.'],
@@ -43,6 +43,26 @@ const pageCopy = {
 };
 
 const isHostedPages = window.location.hostname.endsWith('.github.io');
+
+function publicProvenance(report) {
+  const reconciliation = report.codexLiveReview?.reconciliation || {};
+  const version = report.submission?.version
+    || report.submissionVersion
+    || report.release?.tag
+    || report.releaseTag
+    || report.build?.version
+    || null;
+  const commit = report.submission?.commit
+    || report.gitCommit
+    || reconciliation.evidenceIntegrity?.gitCommit
+    || reconciliation.reportProvenance?.gitCommit
+    || report.codexLiveReview?.provenance?.gitCommit
+    || null;
+  return {
+    version: version || (report.schemaVersion ? `report schema ${report.schemaVersion}` : null),
+    commit,
+  };
+}
 
 function getInitialTab() {
   const hash = window.location.hash.replace('#', '');
@@ -127,6 +147,7 @@ function App() {
   const privacyCopy = isHostedPages
     ? 'A JSON you load is parsed only in this browser tab'
     : 'A JSON you load stays on this device';
+  const provenance = publicProvenance(report);
 
   return (
     <div className="app-shell">
@@ -150,7 +171,7 @@ function App() {
         <div className="sidebar-system">
           <div className="system-head"><span>{environmentLabel.toUpperCase()}</span><i /></div>
           <div><span>Scanner</span><strong>Ready</strong></div>
-          <div><span>Evidence reconcile</span><strong>{report.codexLiveReview?.state || 'Ready'}</strong></div>
+          <div><span>GPT-5.6 blind audit</span><strong>{report.codexLiveReview?.state || 'Ready'}</strong></div>
           <div><span>Data flow</span><strong>{dataFlowLabel}</strong></div>
         </div>
         <div className="sidebar-foot"><Icon name="lock" size={13} /><span>{privacyCopy}</span></div>
@@ -166,7 +187,7 @@ function App() {
               <span className="disclosure__detail">prepared InvoiceFlow Mini snapshots</span>
               <i className="disclosure__separator" aria-hidden="true" />
               <strong className="disclosure__real">REAL EXECUTION</strong>
-              <span className="disclosure__detail">scans, two tests, hashes, and recorded GPT-5.6 reconciliation</span>
+              <span className="disclosure__detail">scans, two tests, hashes, and a recorded blind GPT-5.6 semantic audit</span>
             </>
           ) : (
             <><strong>{disclosureLabel}</strong><span>{report.disclosure || 'Local report data'}</span></>
@@ -190,7 +211,11 @@ function App() {
         <main className="workspace" id="main-content" tabIndex="-1">
           <header className="page-heading">
             <div><span className="eyebrow">{report.repository?.path}</span><h1>{title[0]}</h1><p>{title[1]}</p></div>
-            <div className="heading-chips"><span><i className="dot dot--green" />{environmentLabel}</span><span>Schema v{report.schemaVersion || 'unknown'}</span></div>
+            <div className="heading-chips public-provenance" aria-label="Public report provenance">
+              <span><i className="dot dot--green" />{environmentLabel}</span>
+              {provenance.version && <span title="Recorded release or report version">Version {provenance.version}</span>}
+              {provenance.commit && <span title={provenance.commit}>Commit {String(provenance.commit).slice(0, 12)}</span>}
+            </div>
           </header>
 
           {activeTab === 'overview' && <Overview report={report} navigate={navigate} />}
@@ -212,8 +237,8 @@ function Overview({ report, navigate }) {
   const boundary = report.evidenceBoundary?.summary || {};
   return (
     <div className="view-stack">
-      <ScoreHero health={report.health} repository={report.repository} />
       <CodexLiveReviewPanel review={report.codexLiveReview} report={report} />
+      <ScoreHero health={report.health} repository={report.repository} />
       <div className="signal-strip">
         <button onClick={() => navigate('risks')}><span className="signal-icon signal-icon--risk"><Icon name="risks" /></span><span><small>Open risk flags</small><strong>{report.risks?.filter((risk) => risk.status === 'OPEN').length || 0}</strong></span><Icon name="chevron" size={15} /></button>
         <button onClick={() => navigate('evidence')}><span className="signal-icon signal-icon--pass"><Icon name="evidence" /></span><span><small>Evidence checks passed</small><strong>{boundary.PASS || 0}</strong></span><Icon name="chevron" size={15} /></button>

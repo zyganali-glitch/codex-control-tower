@@ -310,13 +310,13 @@ function normalizeCliReport(raw) {
     ...raw,
     mode: simulated ? 'SIMULATED' : raw.scanMode || 'LOCAL',
     disclosure: simulated
-      ? 'InvoiceFlow Mini and its customer facts are fictional. The 25/88 values are real deterministic scans of prepared fictional snapshots, not a customer outcome; policy checks, evidence, two Node.js tests, and recorded GPT-5.6 reconciliation are real tool outputs.'
+      ? 'InvoiceFlow Mini and its customer facts are fictional. The 25/88 values are real deterministic scans of prepared fictional snapshots, not a customer outcome; policy checks, evidence, two Node.js tests, and the recorded blind GPT-5.6 semantic audit are real tool outputs.'
       : 'LOCAL REPORT — source and evidence remain on this device.',
     sampleContext: simulated ? {
       fictional: true,
       label: 'FICTIONAL SAMPLE PROJECT',
       fictionalScope: 'InvoiceFlow Mini, its people, customer facts, approval identity, and prepared before/after states',
-      realExecution: 'Real deterministic scans of prepared snapshots, policy checks, evidence bundle, two Node.js tests, and recorded GPT-5.6 reconciliation',
+      realExecution: 'Real deterministic scans of prepared snapshots, policy checks, evidence bundle, two Node.js tests, and a recorded blind GPT-5.6 semantic audit',
     } : { fictional: false },
     repository: {
       name: raw.project?.name || raw.projectName || 'Unnamed repository',

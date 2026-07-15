@@ -1,69 +1,82 @@
 # Judge Test Path
 
-This **Developer Tools** entry deliberately separates a no-install static exhibit from the live local workflow.
+This Developer Tools entry has a no-install public route and an optional full local route.
 
-## 30-second no-install exhibit
+## Route A: no installation, about 30 seconds
 
-Open the verified public page:
+Open the verified public exhibit:
 
 **https://zyganali-glitch.github.io/codex-control-tower/**
 
-Historical GitHub Pages workflow run [`29279549424`](https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29279549424) succeeded for published baseline `416d145`, and the page was verified without authentication on 2026-07-13. Use the repository's workflow history for the current deployment result.
-
 1. Read **FICTIONAL SAMPLE PROJECT** and the separate **REAL EXECUTION** statement.
-2. In **Overview**, inspect the recorded Evidence Reconciliation result.
-3. Confirm the deterministic local verdict/statuses remain separate from `modelVerdict` and model assessments.
-4. Open **Before / After** for the real deterministic scan results `25 → 88` and `16 → 1` on two prepared fictional snapshots.
+2. Inspect **Blind GPT-5.6 Semantic Audit**.
+3. Confirm the page identifies real `gpt-5.6-sol`, the empty ephemeral/no-tool execution boundary, the blind reconciliation boundary, separate model/local verdicts, evidence provenance, and any HUMAN REVIEW REQUIRED flag.
+4. Open **Before / After** for the deterministic `25 → 88` score and `16 → 1` risk comparison on prepared fictional snapshots.
 5. Open **Evidence** and confirm unavailable checks remain NOT_RUN.
 
-GitHub Pages is a static, read-only, no-install exhibit. It does not scan the judge's repository, execute Codex in the browser, or show live state from the entrant's computer.
+GitHub Pages is a static, sanitized, no-install exhibit. It does not scan a judge's repository, execute Codex in the browser, or show a new run from the entrant's computer. Use the [current Pages workflow history](https://github.com/zyganali-glitch/codex-control-tower/actions/workflows/pages.yml) for deployment status and the [frozen submission tag](https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final) for submitted source. Old workflow-run numbers are historical evidence only, not the authority for the current build.
 
-## What the sample proves
+## What the exhibit proves
 
-- InvoiceFlow Mini's customer facts, actors, approval, and prepared before/after snapshots are fictional.
-- The scanner really evaluates both snapshots and calculates their heuristic scores.
-- Two focused Node.js fixture tests really ran on the governed snapshot.
-- A recorded real `gpt-5.6-sol` run audited the bounded evidence read-only.
-- GPT-5.6 did not create the snapshots, change the score from 25 to 88, run the tests, or prove production readiness.
+- The working dashboard can render the committed sanitized evidence record without installation.
+- Deterministic scans really calculate the displayed fixture scores.
+- Two focused Node.js fixture tests really ran on the governed prepared snapshot.
+- A recorded real `gpt-5.6-sol` run reviewed bounded raw evidence from an empty ephemeral read-only workspace.
+- Local code rejected tool/unknown/failed/malformed events, validated the evidence-bearing model result, and reconciled it without granting model authority over locked facts.
 
-## Full live local test
+## What it does not prove
+
+- InvoiceFlow Mini is not a customer project; its actors, records, approvals, and prepared snapshots are fictional.
+- GPT-5.6 did not create the snapshots, calculate the scores, run the tests itself, or cause `25 → 88`.
+- The exhibit is not production, provider, browser, load, accessibility, penetration, or independent security validation.
+- A recorded model opinion is not third-party attestation.
+
+## Route B: full local reproduction
 
 Requirements:
 
 - Node.js 18 or newer;
-- Codex desktop signed in to a ChatGPT account with `gpt-5.6-sol` access;
-- internet for dependency installation and the real model step.
+- internet for dependency installation;
+- for the real model step, Codex desktop signed in to a ChatGPT account with `gpt-5.6-sol` access.
 
 From the repository root:
 
 ```bash
 npm install
+npm run verify
 npm run demo
 npm run dashboard
 ```
 
-Expected local result:
+Expected deterministic result:
 
-- browser opens the local dashboard without opening `index.html` directly;
-- prepared before snapshot: 25 with 16 risks;
-- prepared governed snapshot: 88 with one remaining risk;
-- Evidence Reconciliation begins at `READY / NOT STARTED`.
+- browser opens the local workbench; do not open `apps/dashboard/index.html` directly;
+- messy prepared snapshot: 25/100 and 16 risks;
+- governed prepared snapshot: 88/100 and one remaining risk;
+- two focused governed-fixture tests pass;
+- browser/load/deployment/provider/independent-security gates remain NOT_RUN;
+- Blind GPT-5.6 Semantic Audit begins at READY / NOT STARTED.
 
-Keep the local dashboard open. Create a clean **Demo Reconciliation** task for this repository in Codex desktop and paste the exact [Codex Demo Prompt](CODEX_DEMO_PROMPT.md). Codex launches `npm run demo:codex` without editing files. The separate primary build task is used only to obtain the private `/feedback` Session ID and stays off-camera.
+Keep the local workbench open. Create a clean **Demo Blind Audit** task for this repository in Codex desktop and paste [Codex Demo Prompt](CODEX_DEMO_PROMPT.md). Codex launches `npm run demo:codex` without editing files.
 
-Expected live result:
+Expected model-path behavior:
 
-- dashboard changes from `READY` to `RUNNING` to `COMPLETE`;
-- exact `gpt-5.6-sol` and read-only ChatGPT/Codex provenance are shown;
-- locked claim statuses and `reconciliation.deterministicVerdict` remain local;
-- separate `modelVerdict` / `modelSummary` / `modelNextSafeAction` are identified as model opinion, while the local verdict and action remain authoritative;
-- claim relations show `ALIGNS_WITH_LOCKED_STATUS` or `CONFLICTS_WITH_LOCKED_STATUS`;
-- `reportProvenance` shows fresh/stale comparison;
-- `evidenceIntegrity` shows the SHA-256 bundle digest, file hashes, base Git commit, and bounded worktree state when available;
-- unsupported citation paths are filtered from accepted citations and recorded;
-- preserved NOT_RUN count and next safe action remain visible.
+- dashboard changes READY → RUNNING → COMPLETE, or preserves the real FAILED/BLOCKED result;
+- exact `gpt-5.6-sol`, pinned Codex CLI, medium reasoning, signed-in ChatGPT access, empty ephemeral read-only workspace, no-tool event policy, and `REAL_CODEX_BLIND_SEMANTIC_AUDIT` are recorded;
+- user/project configuration and instructions, web search, inherited subprocess environment, persistence, and approval escalation are disabled;
+- any command, file, MCP, web-search, plan, unknown, failed, or malformed event rejects the run instead of producing accepted evidence;
+- GPT-5.6 receives neutral claims and bounded raw evidence, while the reconciler's locked claim-status fields and expected comparison classes are withheld;
+- assessments use `SUPPORTS`, `CONTRADICTS`, or `INSUFFICIENT`;
+- decisive assessments require an allowed citation; contradiction requires counter-evidence and insufficiency requires missing evidence;
+- citations, counter-evidence, missing evidence, and recommended next action are inspectable;
+- unsupported citation paths are removed from accepted citations and separately recorded;
+- the local deterministic verdict, local next safe action, evidence states, and Review Gate remain authoritative;
+- an assessment that conflicts with the hidden local comparison policy can raise advisory `HUMAN_REVIEW_REQUIRED` without changing those facts; `CONTRADICTS` alone is not always a conflict, while compatible insufficiency is not overstated as agreement;
+- mission-alignment local PASS is explicitly a structural precheck, not deterministic semantic truth;
+- full-file SHA-256 hashes and exact included-content hashes, Git base commit, bounded worktree state, command provenance, and evidence freshness are recorded;
+- preserved NOT_RUN remains visible.
 
-A separate command window running `npm run demo:codex` is a recovery option only; it is the same product command but does not provide the preferred visible Codex-desktop instruction path.
+The controlled `MISSION_CHANGE_TEST_ALIGNMENT` claim asks whether mission, change, tests, output, and evidence prove every Phase-0 criterion. The fictional fixture openly lacks proof of a durable local audit trail for rejected payment attempts. Raw records contain that information, but the prompt neither labels it as the challenge nor supplies the expected class; the real result must be shown as returned.
 
 ## Evidence locations
 
@@ -75,14 +88,8 @@ A separate command window running `npm run demo:codex` is a recovery option only
 - `examples/governed-saas-after/.controltower/codex-live-review-record.json`
 - `examples/demo-report/governed-test-output.txt`
 
-## Honest boundary
-
-- A static judge-exhibit deployment is verified; fixture/provider deployment is not.
-- The health score is deterministic and reproducible but heuristic, not a security/correctness certificate.
-- Local files and provenance hashes improve inspectability but are not signed, immutable attestations.
-- Fixture/provider browser, load, accessibility, and independent security checks remain NOT_RUN unless a named artifact proves otherwise.
-- GitHub Pages may process ordinary hosting logs under GitHub's terms; Codex Control Tower adds no analytics or telemetry.
+Current regenerated output is authoritative for a fresh checkout. The committed sample report is the Pages/public-exhibit snapshot and may represent an earlier recorded execution until the repository is regenerated and republished.
 
 ## Fallback
 
-If the hosted page is unavailable, judges can inspect the public repository and video, then use the local commands. A failed model run must remain FAILED or BLOCKED; it must never be replaced with fictional success. No final YouTube URL or `/feedback` Session ID is claimed in this document until the entrant actually obtains it.
+If Pages is temporarily unavailable, inspect [Judge: Start Here](../JUDGE_START_HERE.md), the public repository, the submitted video, and the frozen tag, then use the local commands. A failed model run must remain failed; it must never be replaced with fictional success.

@@ -84,9 +84,9 @@ Use:
 
 Each status object should eventually include <code>claim</code>, <code>scope</code>, <code>source</code>, <code>command</code>, <code>exitCode</code>, <code>timestamp</code>, <code>artifact</code>, and <code>simulated</code>.
 
-**Implemented now:** status vocabulary, evidence tables, fictional-sample/real-execution disclosure, visible NOT_RUN, deterministic local verdict/action, separate model opinion/suggestion, evidence SHA-256/base-commit/bounded-worktree provenance, and freshness state.
+**Implemented now:** status vocabulary, evidence tables, fictional-sample/real-execution disclosure, visible NOT_RUN, deterministic local verdict/action, Blind GPT-5.6 model opinion/suggestion, evidence SHA-256/base-commit/bounded-worktree provenance, and freshness state.
 
-**Implemented now:** reconciliation validates the richer provenance contract, marks stale evidence, preserves locked state, and filters/records unsupported citation paths. Signed third-party attestation remains future work.
+**Implemented now:** reconciliation withholds locked claim-status fields/expected classes from the model, runs pinned Codex in an empty ephemeral workspace, rejects all tool/unknown/failed/malformed events, requires evidence-bearing decisive assessments, validates the richer provenance contract, marks stale evidence, preserves locked state, distinguishes compatible uncertainty from agreement, and raises advisory human review on policy conflict. Signed third-party attestation remains future work.
 
 ## 5. Which large-repository mistakes should the product anticipate?
 
@@ -216,6 +216,7 @@ This build intentionally avoids adding a cloud service or hidden model dependenc
 - PASS/WARN/FAIL/NOT_RUN/SIMULATED boundary
 - Vite/React dashboard with Overview, Risks, Context Trace, Evidence, Memory Lens, Flight Recorder, Mistake Shield, Before / After, and conditional Phase-0 card
 - controlled InvoiceFlow Mini before/after fixtures
+- real Blind GPT-5.6 Semantic Audit with empty-workspace isolation, fail-closed no-tool validation, structural-precheck/compatible/conflict reconciliation, and locked local authority
 
 ### Future work
 
@@ -226,8 +227,8 @@ This build intentionally avoids adding a cloud service or hidden model dependenc
 - signed/tamper-evident evidence and identity-backed gate enforcement
 - CI and PR/MR integration
 - team/cross-repository continuity
-- additional evidence-reconciliation claim packs beyond the implemented read-only GPT-5.6 flow
-- full multilingual product packs beyond bilingual Phase-0
+- additional semantic-challenge claim packs beyond the implemented read-only GPT-5.6 flow
+- full multilingual product packs beyond the English-only Build Week product
 
 ### Deliberately not claimed
 

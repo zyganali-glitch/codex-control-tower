@@ -11,7 +11,7 @@ The primary family source is [Universal Agent OS](https://github.com/zyganali-gl
 | Source code | **None copied.** No implementation, algorithm body, configuration, test, screenshot, data, or packaged asset was copied. |
 | Documentation | No family document was imported or lightly edited. Product documentation was written for Codex Control Tower. |
 | Concepts studied | Alignment before implementation, plan-before-code, evidence states, durable context, human review, explainable context selection, timeline views, baseline comparison, and mistake prevention. |
-| Independent transformation | Bounded Codex Mission, locked evidence claims, real GPT-5.6 Evidence Reconciliation, local Review Gate, Evidence Pack, and Before/After dashboard. |
+| Independent transformation | Bounded Codex Mission, locked evidence facts, real Blind GPT-5.6 Semantic Audit, deterministic reconciliation, local Review Gate, Evidence Pack, and Before/After dashboard. |
 | New implementation | Node.js CLI, deterministic scanner/scorer, structured evidence files, React dashboard, tests, and fictional InvoiceFlow Mini fixtures. |
 
 ## Protection lock

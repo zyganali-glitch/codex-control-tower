@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0",
   "projectName": "invoiceflow-mini-simulated-before",
-  "targetPath": ".\\examples\\demo-workspace",
-  "generatedAt": "2026-07-13T21:04:57.579Z",
+  "targetPath": "./examples\\demo-workspace",
+  "generatedAt": "2026-07-15T09:05:51.792Z",
   "scanMode": "SIMULATED",
   "simulatedData": true,
   "scanScope": {
-    "targetPath": ".\\examples\\demo-workspace",
+    "targetPath": "./examples\\demo-workspace",
     "excludedPaths": [],
     "exclusionSource": "built-in generated/dependency exclusions only",
     "note": "No repository-specific path exclusions were configured."
@@ -268,7 +268,7 @@
     "Create .controltower/flight-recorder.jsonl.",
     "Create docs/MEMORY_LENS.md."
   ],
-  "codexPrompt": "# Codex Control Tower Mission\n\nTarget repository: .\\examples\\demo-workspace\nMission goal: Close only the detected governance gaps without unrelated refactoring.\nReview gate: AWAITING_HUMAN\nReview gate scope: No approved scope recorded.\nMistake Shield: CAUTION\n\n## Detected risks\n- [CRITICAL] No Codex instruction surface\n- [CRITICAL] No master roadmap\n- [CRITICAL] No evidence report\n- [HIGH] No traceability matrix\n- [HIGH] No NOT_RUN gates file\n- [CRITICAL] No local review gate\n- [HIGH] No flight recorder\n- [MEDIUM] No memory lens\n- [MEDIUM] No mistake shield record\n- [HIGH] Tests are missing or only placeholders\n\n## Missing surfaces\n- .codex/AGENTS.md\n- .controltower/config.json\n- .controltower/review-gate.json\n- .controltower/flight-recorder.jsonl\n- plans/master-roadmap.md\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n- docs/TECH_DEBT_DELTA.md\n- docs/MEMORY_LENS.md\n- docs/MISTAKE_SHIELD.md\n- TECH_DEBT_AND_SECURITY.md\n- docs/ARCHITECTURE.md\n- .controltower/phase0.json\n- working tests\n\n## Allowed files\n- governance files listed under Missing surfaces\n- tests directly related to the approved mission\n\n## Forbidden actions\n- Do not delete tests, history, user data, or unrelated legacy code.\n- Do not overwrite existing files without a backup and explicit need.\n- Do not push, publish, deploy, or upload source unless the APPROVED scoped Review Gate explicitly authorizes the exact action and destination. Never expose secrets.\n- Do not expand scope beyond the mission or bypass a non-approved review gate.\n\n## Required evidence\n- List every changed file and every command actually run.\n- Attach concrete output or artifact paths for every PASS claim.\n- Keep WARN, FAIL, NOT_RUN, and SIMULATED labels visible.\n\n## Tests to run\n- Run the repository test command discovered in package metadata.\n\n## Documentation to update\n- README.md when behavior or commands change\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n\n## Execution contract\nYou are Codex working under Codex Control Tower. Fix only the listed gaps. Read instructions and plans before editing. Stop before risky implementation unless the local gate is APPROVED, fully scoped, and the proposed action stays within that scope. PASS requires evidence; an edited file is not a validated file. If a check cannot run, label it NOT_RUN and explain why.\n\n## Final response format\n1. Summary\n2. Changed files\n3. Commands and evidence with PASS/WARN/FAIL/NOT_RUN/SIMULATED\n4. Review gate and Mistake Shield state\n5. Remaining risks\n6. Next safe action",
+  "codexPrompt": "# Codex Control Tower Mission\n\nTarget repository: ./examples\\demo-workspace\nMission goal: Close only the detected governance gaps without unrelated refactoring.\nReview gate: AWAITING_HUMAN\nReview gate scope: No approved scope recorded.\nMistake Shield: CAUTION\n\n## Detected risks\n- [CRITICAL] No Codex instruction surface\n- [CRITICAL] No master roadmap\n- [CRITICAL] No evidence report\n- [HIGH] No traceability matrix\n- [HIGH] No NOT_RUN gates file\n- [CRITICAL] No local review gate\n- [HIGH] No flight recorder\n- [MEDIUM] No memory lens\n- [MEDIUM] No mistake shield record\n- [HIGH] Tests are missing or only placeholders\n\n## Missing surfaces\n- .codex/AGENTS.md\n- .controltower/config.json\n- .controltower/review-gate.json\n- .controltower/flight-recorder.jsonl\n- plans/master-roadmap.md\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n- docs/TECH_DEBT_DELTA.md\n- docs/MEMORY_LENS.md\n- docs/MISTAKE_SHIELD.md\n- TECH_DEBT_AND_SECURITY.md\n- docs/ARCHITECTURE.md\n- .controltower/phase0.json\n- working tests\n\n## Allowed files\n- governance files listed under Missing surfaces\n- tests directly related to the approved mission\n\n## Forbidden actions\n- Do not delete tests, history, user data, or unrelated legacy code.\n- Do not overwrite existing files without a backup and explicit need.\n- Do not push, publish, deploy, or upload source unless the APPROVED scoped Review Gate explicitly authorizes the exact action and destination. Never expose secrets.\n- Do not expand scope beyond the mission or bypass a non-approved review gate.\n\n## Required evidence\n- List every changed file and every command actually run.\n- Attach concrete output or artifact paths for every PASS claim.\n- Keep WARN, FAIL, NOT_RUN, and SIMULATED labels visible.\n\n## Tests to run\n- Run the repository test command discovered in package metadata.\n\n## Documentation to update\n- README.md when behavior or commands change\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n\n## Execution contract\nYou are Codex working under Codex Control Tower. Fix only the listed gaps. Read instructions and plans before editing. Stop before risky implementation unless the local gate is APPROVED, fully scoped, and the proposed action stays within that scope. PASS requires evidence; an edited file is not a validated file. If a check cannot run, label it NOT_RUN and explain why.\n\n## Final response format\n1. Summary\n2. Changed files\n3. Commands and evidence with PASS/WARN/FAIL/NOT_RUN/SIMULATED\n4. Review gate and Mistake Shield state\n5. Remaining risks\n6. Next safe action",
   "traceabilityMatrix": [
     {
       "requirement": "Plan before implementation",
@@ -337,7 +337,7 @@
     }
   },
   "contextGraph": {
-    "generatedAt": "2026-07-13T21:04:57.576Z",
+    "generatedAt": "2026-07-15T09:05:51.789Z",
     "generatedLocally": true,
     "algorithm": "deterministic lexical and repository-surface analysis",
     "nodes": [
@@ -790,12 +790,12 @@
     "decisionRecorded": false
   },
   "memoryLens": {
-    "generatedAt": "2026-07-13T21:04:57.578Z",
+    "generatedAt": "2026-07-15T09:05:51.791Z",
     "generatedLocally": true,
     "sources": [
       {
         "relative": "README.md",
-        "ageDays": 1,
+        "ageDays": 2,
         "stale": false,
         "bytes": 453
       }
@@ -846,7 +846,7 @@
     "matchedLessons": [],
     "gateStatus": "AWAITING_HUMAN",
     "saferNextAction": "Narrow the change, preserve tests, record a plan, and obtain an APPROVED local review gate with a note.",
-    "checkedAt": "2026-07-13T21:04:57.580Z",
+    "checkedAt": "2026-07-15T09:05:51.793Z",
     "deterministic": true
   },
   "phase0": null,

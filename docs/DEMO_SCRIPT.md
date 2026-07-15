@@ -1,163 +1,170 @@
-# 2:45 OpenAI Build Week Demo Script
+# 2:52 OpenAI Build Week Demo Script
 
 ## Demo promise
 
-In less than three minutes, show one complete product loop:
+In less than three minutes, show one complete and truthful loop:
 
-> local evidence → bounded Codex mission → locked claims → Codex desktop instruction → real GPT-5.6 audit → deterministic reconciliation → human decision → reviewable handoff
+> recorded real GPT-5.6 result → local READY → bounded mission → Codex desktop instruction → real blind GPT-5.6 audit → deterministic reconciliation → human review → evidence handoff
 
-Two surfaces have deliberately different jobs:
+The first ten seconds deliberately show the completed GPT-5.6 result. A judge who watches only the opening should still understand that GPT-5.6 is a real, central product participant.
 
-- **GitHub Pages** is the static, no-install judge exhibit. It shows a sanitized committed snapshot and a recorded real GPT-5.6 run. It cannot display a new run from the entrant's computer.
-- **The local dashboard** is the live workbench used in the video. It shows `READY → RUNNING → COMPLETE` while Codex executes the product command.
+Two browser surfaces have different jobs:
 
-**FICTIONAL SAMPLE PROJECT:** InvoiceFlow Mini, its customer facts, approval, actors, and prepared before/after repository snapshots are fictional. GPT-5.6 does not create the `25 → 88` transformation.
+- **GitHub Pages** is the public, static, no-install judge exhibit. It shows a sanitized committed record of a real GPT-5.6 run.
+- **The local workbench** shows a fresh `READY → RUNNING → COMPLETE` transition while Codex desktop launches the product command.
 
-**REAL EXECUTION:** Control Tower really scans the snapshots, calculates the heuristic scores, runs two focused Node.js fixture tests, builds and hashes the evidence bundle, invokes real `gpt-5.6-sol` read-only, validates the response, and records the reconciliation.
+**FICTIONAL SAMPLE PROJECT:** InvoiceFlow Mini, its actors, records, approval, and prepared before/governed snapshots are fictional. GPT-5.6 did not create `25 → 88`.
 
-## Preflight — not part of the recording
+**REAL EXECUTION:** Control Tower really scans the snapshots, runs two focused tests, builds and hashes bounded evidence, invokes pinned Codex CLI and `gpt-5.6-sol` in an empty ephemeral read-only workspace, rejects tool events, validates its structured answer, and reconciles it locally.
+
+## Preflight—not part of the recording
 
 From the repository root:
 
 ```bash
 npm install
-npm test
+npm run verify
 npm run demo
 npm run dashboard
 ```
 
-Expected deterministic demo output:
+Expected deterministic fixture output:
 
-- Before prepared snapshot: `25/100`, `16` risks
-- Governed prepared snapshot: `88/100`, `1` risk
+- Before: `25/100`, `16` risks
+- Governed: `88/100`, `1` risk
 - Governed fixture: `2` focused Node.js tests passed
-- Fixture/provider browser, load, deployment, and independent security gates: `NOT_RUN`
+- Browser, load, deployment, provider, and independent security gates: `NOT_RUN`
 
-Keep the local dashboard and its command window open. Create a clean Codex desktop task named **Demo Reconciliation** for the same repository and prepare the exact instruction from [Codex Demo Prompt](CODEX_DEMO_PROMPT.md). Codex—not a separate command window—is the featured route that starts `npm run demo:codex`.
+Prepare three visible surfaces in this order:
 
-Before recording:
+1. Browser tab: [GitHub Pages](https://zyganali-glitch.github.io/codex-control-tower/) with the completed Blind GPT-5.6 panel visible.
+2. Browser tab: local workbench with `READY / NOT STARTED` visible after `npm run demo`.
+3. Codex desktop: a clean task named **Demo Blind Audit**, with the [exact prompt](CODEX_DEMO_PROMPT.md) ready but not yet sent.
 
-- verify Codex is signed in with the intended ChatGPT account;
-- paste the demo instruction into Codex and complete one rehearsal;
-- run `npm run demo` again so the local dashboard begins at `READY / NOT STARTED`;
-- confirm **FICTIONAL SAMPLE PROJECT** and **REAL EXECUTION** are both visible;
-- close private tabs, messages, absolute-path views, secrets, and unrelated applications;
-- keep the clean Demo Reconciliation task ready, with only the safe demo instruction visible;
-- do not show or publish the `/feedback` Session ID.
+Before recording, verify the intended ChatGPT account is signed in, complete one rehearsal, close private messages and unrelated apps, hide personal paths, and make sure no `/feedback` Session ID is visible.
 
-## 0:00–0:20 — Problem and product
+## 0:00–0:10 — Show GPT-5.6 first
 
 ### Screen
 
-Show **Overview**, the fictional-sample/real-execution disclosure, and the `READY / NOT STARTED` Evidence Reconciliation panel in the **local dashboard**.
+Start on **GitHub Pages**, already scrolled to the completed **Blind GPT-5.6 Semantic Audit** panel. Point to `gpt-5.6-sol`, `REAL_CODEX_BLIND_SEMANTIC_AUDIT`, the empty model workspace, the no-tool event policy, and the recorded result.
 
 ### Narration
 
-“Codex can build software quickly, but scope, proof, skipped checks, and the next safe action can disappear inside a chat. Codex Control Tower turns that missing state into a reviewable workflow. InvoiceFlow Mini is a fictional sample project; the scans, tests, and recorded model run are real tool outputs.”
+“This is a real GPT-5.6 Sol run inside Codex Control Tower. GPT-5.6 independently challenges the evidence, but it can never overwrite the locked local facts.”
 
-## 0:20–0:45 — Prepared starting state
+## 0:10–0:30 — Problem and honest boundary
 
 ### Screen
 
-Open **Before / After** and point to the before score and risk count.
+Keep Pages visible. Show the **FICTIONAL SAMPLE PROJECT** and **REAL EXECUTION** labels.
 
 ### Narration
 
-“These are prepared before and governed snapshots of the same fictional project. The local scanner scores the starting snapshot at twenty-five and finds sixteen risk flags. This is not a security certificate, and GPT-5.6 did not turn twenty-five into eighty-eight. The comparison makes missing plans, evidence, approval, and continuity reproducible.”
+“Codex can build quickly, but scope, skipped checks, and proof can disappear inside a chat. InvoiceFlow Mini is fictional. The scans, focused tests, evidence hashes, and recorded model call are real executions on that controlled sample.”
 
-## 0:45–1:10 — Bounded mission and locked evidence
+## 0:30–0:48 — Reproducible prepared comparison
 
 ### Screen
 
-Return to **Overview**. Show the next bounded Codex mission, allowed files, forbidden actions, and the `READY / NOT STARTED` Evidence Reconciliation panel.
+Open **Before / After** and point to `25`, `16`, `88`, `1`, and the two focused test results.
 
 ### Narration
 
-“Control Tower selects mission context and creates a bounded Codex instruction with allowed files, forbidden actions, and required proof. Before any model call, local code derives target-appropriate claims and locks their PASS, FAIL, NOT_RUN, or SIMULATED states. It also computes the authoritative local verdict.”
+“These are prepared snapshots, not a customer transformation. The local scanner reproducibly finds twenty-five points and sixteen risks before, then eighty-eight and one after. GPT-5.6 did not create this score change.”
 
-## 1:10–1:35 — Instruct Codex to run the product
+## 0:48–1:08 — Local READY and bounded mission
 
 ### Screen
 
-Switch to the clean **Demo Reconciliation** task in the Codex desktop app. Paste the exact prompt from [Codex Demo Prompt](CODEX_DEMO_PROMPT.md) and send it. Keep the line asking Codex to run `npm run demo:codex` visible. Let Codex start the command; do not use a separate PowerShell window in the main story. Do not open the long primary build task on camera.
+Switch to the local workbench. Show `READY / NOT STARTED`, then the mission, allowed scope, forbidden actions, and evidence requirement.
 
 ### Narration
 
-“I used Codex in the desktop app to build and verify this workflow. Now I am asking Codex itself to run the product's featured read-only GPT-5.6 reconciliation. My key human decision is that the model may assess evidence, but it can never replace local evidence state or the deterministic local verdict.”
+“The local layer creates a bounded Codex mission and locks structural and execution facts before any model call. It knows whether a command ran or a gate stayed NOT_RUN, but it does not pretend that a passing test necessarily proves the mission.”
 
-## 1:35–2:00 — Real GPT-5.6 and live state
+## 1:08–1:34 — Codex launches the real run
 
 ### Screen
 
-Return to the local dashboard. Show `RUNNING`, the exact `gpt-5.6-sol` model, ChatGPT subscription access, read-only scope, locked local states, and current evidence freshness. If completion arrives, show `COMPLETE`.
+Switch to **Demo Blind Audit** in Codex desktop. Paste and send the exact prompt from [Codex Demo Prompt](CODEX_DEMO_PROMPT.md). Keep `npm run demo:codex` visible while Codex begins the command.
 
 ### Narration
 
-“The command verifies my signed-in ChatGPT session and GPT-5.6 Sol, then runs Codex read-only against a bounded evidence bundle. GPT-5.6 can support, question, or find a claim insufficient. Local code validates the structure, hashes the evidence, and keeps model opinion separate from deterministic fact.”
+“Codex accelerated the architecture, implementation, tests, and verification of this product. Now Codex launches its featured run. My key human decision was to withhold locked claim-status fields and expected comparison classes, then compare GPT-5.6 only after it returns.”
 
-If the run takes longer, continue showing the visible `RUNNING` safety facts. Never replace a failed run with simulated success.
-
-## 2:00–2:25 — Reconciliation and preserved limits
+## 1:34–1:58 — Blind GPT-5.6 execution
 
 ### Screen
 
-Show `COMPLETE`, deterministic local verdict, separate model verdict, agreement/disagreement counts, evidence freshness/hash, and one claim row. Show any filtered citation path record if present. Then open **Evidence** and point to a NOT_RUN row.
+Return to the local workbench. Show RUNNING, then COMPLETE if it arrives. Point to exact model, medium reasoning, ChatGPT access, empty ephemeral read-only workspace, accepted tool events `0`, and blind-input disclosure.
 
 ### Narration
 
-“The reconciler rejects missing claims, status injection, malformed output, and statements that the model ran tests. Unsupported citation paths are filtered and recorded. Semantic agreement stays visible, while the authoritative local verdict and every unavailable check remain unchanged.”
+“The command verifies my signed-in ChatGPT session. GPT-5.6 sees only neutral claims and bounded evidence in an empty workspace; project instructions and web access are disabled, and any tool event rejects the run. Locked statuses and expected classes are withheld. It must answer SUPPORTS, CONTRADICTS, or INSUFFICIENT with evidence.”
 
-## 2:25–2:38 — Human decision and governed snapshot
+If completion is still pending, keep the RUNNING safety facts visible. Never replace a failed or slow run with simulated success.
+
+## 1:58–2:28 — Controlled semantic challenge
 
 ### Screen
 
-Show the local Review Gate, then open **Before / After** and point to `88`, `1`, and the two focused test results.
+Show `MISSION_CHANGE_TEST_ALIGNMENT`, its **Structural precheck** label, model assessment, citations, counter-evidence, missing evidence, and recommended next action. If present, point to **HUMAN REVIEW REQUIRED** and the conflict relation. If the relation is COMPATIBLE, explain that it is uncertainty rather than full agreement.
 
 ### Narration
 
-“The developer remains the decision-maker. The governed prepared snapshot scores eighty-eight with one remaining risk, and two focused fixture tests really passed. This is reproducible sample evidence, not a claim that GPT-5.6 rewrote the project or proved production readiness.”
+“This controlled challenge asks whether changes and tests prove every success criterion. The local PASS is only a structural precheck, not semantic truth. Raw records contain a missing audit-trail requirement, but the prompt gives no expected answer. A conflict asks for human review; compatible uncertainty is not mislabeled agreement. The model cannot change local facts.”
 
-## 2:38–2:45 — Close
+## 2:28–2:43 — Preserved limits and human authority
 
 ### Screen
 
-Return to **Overview** with completed Evidence Reconciliation visible.
+Open **Evidence** and point to NOT_RUN. Show the deterministic verdict and human Review Gate beside the separate model opinion.
 
 ### Narration
 
-“Codex writes. Control Tower proves. The developer decides.”
+“Local validation rejects tool events, malformed answers, unsupported decisive claims, and claims that the model ran tests. NOT_RUN stays NOT_RUN. The model opinion is advice; the deterministic verdict and human Review Gate remain authoritative.”
+
+## 2:43–2:52 — Close
+
+### Screen
+
+Return to the completed audit summary.
+
+### Narration
+
+“Codex writes. GPT-5.6 challenges. Control Tower locks the facts. The developer decides.”
 
 ## Recording acceptance checklist
 
-- Final duration is below `3:00`; the target is `2:45`.
-- Video is public on YouTube.
-- Audio clearly explains what was built, how Codex accelerated it, the key human decision, and what GPT-5.6 does in the product.
-- The working product is visible, not just slides.
+- Final duration is below `3:00`; target is `2:52`.
+- The YouTube video is public.
+- Spoken audio explicitly explains Codex, GPT-5.6, the blind input boundary, and the key human decision.
+- A completed real GPT-5.6 panel appears in the first ten seconds.
+- The working product is visible; the video is not only slides.
 - Codex desktop visibly receives the instruction and starts `npm run demo:codex`.
-- The local dashboard—not GitHub Pages—shows the live `READY → RUNNING → COMPLETE` path.
-- GitHub Pages is described only as the static no-install judge exhibit.
-- Real `gpt-5.6-sol`, the deterministic local verdict, separate model verdict, evidence provenance, and at least one locked NOT_RUN state are visible.
-- InvoiceFlow Mini is called a fictional sample project with prepared snapshots.
-- GPT-5.6 is not credited with the `25 → 88` transformation, score calculation, or fixture tests.
-- No secrets, personal paths, private task names, or `/feedback` Session ID appear.
+- Pages is described as the static exhibit; only the local workbench is described as showing the fresh transition.
+- `gpt-5.6-sol`, empty ephemeral read-only workspace, accepted tool events `0`, model assessment, deterministic verdict, and at least one locked NOT_RUN are visible.
+- Structural precheck and COMPATIBLE-versus-conflict meanings are described accurately for the actual recorded result.
+- The controlled semantic challenge and any HUMAN REVIEW REQUIRED flag are explained without claiming a forced result.
+- InvoiceFlow Mini and the prepared snapshots are called fictional.
+- GPT-5.6 is not credited with the score change, score calculation, fixture creation, or test execution.
+- No secrets, personal paths, private task contents, or `/feedback` Session ID appear.
 - No copyrighted background music is used.
 
 ## Recovery notes
 
-- Never open `apps/dashboard/index.html` directly. Use `npm run dashboard`, which starts the required local service and opens the correct address.
+- Do not open `apps/dashboard/index.html` directly. The public route is GitHub Pages; the fresh-run route is `npm run dashboard`.
 - If the local browser does not open, copy the `Local:` address printed by the dashboard command into the browser.
-- If the page is stale, stop the dashboard, run `npm run demo`, restart it, and refresh the browser.
-- If Codex desktop cannot start the command, a separate command window running `npm run demo:codex` is an emergency recovery route. If used, say clearly that it is the same product command normally launched from Codex.
-- If Codex is blocked, sign in with ChatGPT and retry the exact prompt.
-- If `gpt-5.6-sol` is unavailable, do not claim a real run.
-- If structured output is rejected, preserve FAILED, inspect the named error, fix the contract, and rerun before recording.
+- If the local view is stale, stop the dashboard, run `npm run demo`, start `npm run dashboard` again, and refresh.
+- If Codex desktop cannot start the command, `npm run demo:codex` in a separate command window is emergency recovery only. Say that it is the same product command normally launched by Codex.
+- If Codex is signed out or `gpt-5.6-sol` is unavailable, do not claim a real run.
+- If structured output is rejected, keep FAILED visible, inspect the error, fix the contract, and rerun before recording.
 
 ## Related assets
 
 - [Codex Demo Prompt](CODEX_DEMO_PROMPT.md)
-- [README](../README.md)
 - [Beginner-safe Turkish recording guide](DEMO_REHBERI_TR.md)
 - [Judge Test Path](JUDGE_TEST_PATH.md)
-- [Build Week Development Delta](BUILD_WEEK_DELTA.md)
 - [Devpost Submission](DEVPOST_SUBMISSION.md)
 - [Judging Map](JUDGING_MAP.md)

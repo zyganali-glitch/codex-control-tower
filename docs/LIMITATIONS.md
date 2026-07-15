@@ -23,18 +23,20 @@ Codex Control Tower is an evidence and workflow layer for Codex-assisted develop
 | Privacy | Core processing is local, but generated reports can contain sensitive paths, plans, markers, or architecture details. Automatic redaction is not guaranteed. | Review every export before sharing. |
 | Security enforcement | Safe path handling reduces accidental writes but is not an OS sandbox, policy engine, malware scanner, or secret manager. | Use normal repository and operating-system security controls. |
 | Team workflows | No hosted synchronization, enterprise RBAC, signed approvals, cross-repo view, or automatic PR/MR comments are included. | These are future integrations, not hidden features. |
-| GPT-5.6 Evidence Reconciliation | No model is required for deterministic scanning. The featured explicit audit sends a bounded evidence bundle through signed-in ChatGPT. | Model opinion is not independent attestation; local code owns every state and final verdict, filters/records unsupported citations, and exposes hashes/freshness. |
+| Blind GPT-5.6 Semantic Audit | No model is required for deterministic scanning. The featured explicit audit sends a bounded evidence bundle through signed-in ChatGPT while locked comparison targets/expected classes are withheld. It uses a pinned CLI and an empty temporary workspace; user/project instructions and web/tool surfaces are disabled and tool events fail closed. Raw evidence can still contain status labels. | Model opinion is not independent attestation; local code owns every state/verdict, validates events and evidence-bearing output, exposes separate full-file/included-content hashes plus freshness, and raises advisory human review on policy conflict. |
+| Semantic challenge | GPT-5.6 can miss a gap, overread wording, or cite narrow evidence. `SUPPORTS`, `CONTRADICTS`, and `INSUFFICIENT` are judgments, not facts. Local mission PASS proves only a structural precheck. | Inspect rationale, counter/missing evidence, the hidden-policy relation, and local proof; `CONTRADICTS` alone is not always a conflict, and compatible insufficiency is not full agreement. |
 | Localization | This Build Week version, including Phase-0, is English-only. | Multilingual packs are future work. |
 
 ## Demo boundary
 
-InvoiceFlow Mini is a **FICTIONAL SAMPLE PROJECT** created for a controlled 2:45 before/after demonstration. It is not a real customer repository, payment product, authentication reference, benchmark corpus, or production sample.
+InvoiceFlow Mini is a **FICTIONAL SAMPLE PROJECT** created for a controlled under-three-minute demonstration. It is not a real customer repository, payment product, authentication reference, benchmark corpus, or production sample.
 
 - The messy repository intentionally contains weak tests, stale docs, TODO/FIXME markers, and risky auth/payment examples.
 - The governed repository demonstrates improved governance surfaces; it does not prove that every application risk is remediated.
 - The before/governed folders are prepared snapshots. Their values are real deterministic scan results, not customer impact metrics; GPT-5.6 did not produce the `25 → 88` change.
 - SHA-256 and Git/freshness provenance expose changes but are not signed immutable attestations.
 - Any command or gate not executed during the demo must remain `NOT_RUN`.
+- The controlled mission/change/test challenge includes an unproven durable audit-trail criterion. Raw records expose it, but the prompt does not label the challenge, direct the model to the gap, or supply an expected class; the result is not forced.
 
 ## Lineage and claim boundary
 
@@ -48,6 +50,8 @@ The **Universal Agent OS family** was studied for concepts only and was not modi
 - Confirming evidence provenance and deciding what can be shared.
 - Resolving contradictory plans, ownership, memory, policy, or test signals.
 - Determining regulatory, contractual, privacy, licensing, and security requirements.
+
+**CCT does not replace ESLint, CI, code review, or branch protection. It adds the evidence and handoff layer around agent-assisted work.**
 
 ## Roadmap, not current capability
 

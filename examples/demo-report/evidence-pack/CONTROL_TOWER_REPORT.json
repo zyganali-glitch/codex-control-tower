@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0",
   "projectName": "invoiceflow-mini-simulated-before",
-  "targetPath": ".\\examples\\demo-workspace",
-  "generatedAt": "2026-07-13T21:04:57.642Z",
+  "targetPath": "./examples\\demo-workspace",
+  "generatedAt": "2026-07-15T09:05:51.852Z",
   "scanMode": "SIMULATED",
   "simulatedData": true,
   "scanScope": {
-    "targetPath": ".\\examples\\demo-workspace",
+    "targetPath": "./examples\\demo-workspace",
     "excludedPaths": [],
     "exclusionSource": "built-in generated/dependency exclusions only",
     "note": "No repository-specific path exclusions were configured."
@@ -105,31 +105,31 @@
       "path": ".codex/AGENTS.md",
       "bytes": 474,
       "lines": 11,
-      "modifiedAt": "2026-07-13T21:04:57.593Z"
+      "modifiedAt": "2026-07-15T09:05:51.808Z"
     },
     {
       "path": ".controltower/config.json",
       "bytes": 283,
       "lines": 13,
-      "modifiedAt": "2026-07-13T21:04:57.607Z"
+      "modifiedAt": "2026-07-15T09:05:51.819Z"
     },
     {
       "path": ".controltower/flight-recorder.jsonl",
       "bytes": 670,
       "lines": 0,
-      "modifiedAt": "2026-07-13T21:04:57.619Z"
+      "modifiedAt": "2026-07-15T09:05:51.830Z"
     },
     {
       "path": ".controltower/phase0.json",
       "bytes": 3261,
       "lines": 17,
-      "modifiedAt": "2026-07-13T21:04:57.587Z"
+      "modifiedAt": "2026-07-15T09:05:51.802Z"
     },
     {
       "path": ".controltower/review-gate.json",
       "bytes": 605,
       "lines": 23,
-      "modifiedAt": "2026-07-13T21:04:57.618Z"
+      "modifiedAt": "2026-07-15T09:05:51.828Z"
     },
     {
       "path": ".github/workflows/ci.yml",
@@ -141,25 +141,25 @@
       "path": "docs/EVIDENCE_REPORT.md",
       "bytes": 87,
       "lines": 4,
-      "modifiedAt": "2026-07-13T21:04:57.596Z"
+      "modifiedAt": "2026-07-15T09:05:51.811Z"
     },
     {
       "path": "docs/MEMORY_LENS.md",
       "bytes": 174,
       "lines": 8,
-      "modifiedAt": "2026-07-13T21:04:57.602Z"
+      "modifiedAt": "2026-07-15T09:05:51.815Z"
     },
     {
       "path": "docs/MISTAKE_SHIELD.md",
       "bytes": 129,
       "lines": 6,
-      "modifiedAt": "2026-07-13T21:04:57.603Z"
+      "modifiedAt": "2026-07-15T09:05:51.816Z"
     },
     {
       "path": "docs/NOT_RUN_GATES.md",
       "bytes": 104,
       "lines": 6,
-      "modifiedAt": "2026-07-13T21:04:57.599Z"
+      "modifiedAt": "2026-07-15T09:05:51.813Z"
     },
     {
       "path": "docs/old-notes.md",
@@ -171,13 +171,13 @@
       "path": "docs/TECH_DEBT_DELTA.md",
       "bytes": 101,
       "lines": 4,
-      "modifiedAt": "2026-07-13T21:04:57.600Z"
+      "modifiedAt": "2026-07-15T09:05:51.814Z"
     },
     {
       "path": "docs/TRACEABILITY_MATRIX.md",
       "bytes": 176,
       "lines": 6,
-      "modifiedAt": "2026-07-13T21:04:57.598Z"
+      "modifiedAt": "2026-07-15T09:05:51.812Z"
     },
     {
       "path": "package.json",
@@ -189,13 +189,13 @@
       "path": "plans/master-roadmap.md",
       "bytes": 299,
       "lines": 15,
-      "modifiedAt": "2026-07-13T21:04:57.595Z"
+      "modifiedAt": "2026-07-15T09:05:51.809Z"
     },
     {
       "path": "plans/PHASE0_ALIGNMENT.md",
       "bytes": 3121,
       "lines": 91,
-      "modifiedAt": "2026-07-13T21:04:57.589Z"
+      "modifiedAt": "2026-07-15T09:05:51.803Z"
     },
     {
       "path": "README.md",
@@ -249,7 +249,7 @@
       "path": "TECH_DEBT_AND_SECURITY.md",
       "bytes": 241,
       "lines": 4,
-      "modifiedAt": "2026-07-13T21:04:57.605Z"
+      "modifiedAt": "2026-07-15T09:05:51.817Z"
     },
     {
       "path": "tests/placeholder.test.js",
@@ -267,7 +267,7 @@
     "Require signed token verification and focused auth tests before changes.",
     "Verify provider events, amounts, currency, and idempotency before marking paid."
   ],
-  "codexPrompt": "# Codex Control Tower Mission\n\nTarget repository: .\\examples\\demo-workspace\nMission goal: Add the smallest governance surfaces and tests needed for an auditable handoff.\nReview gate: APPROVED (scoped)\nReview gate scope: Install and record Control Tower governance surfaces in the controlled demo workspace.\nMistake Shield: CAUTION\n\n## Detected risks\n- [CRITICAL] Evidence report has no substantial proof boundary\n- [HIGH] Tests are missing or only placeholders\n- [HIGH] Architecture documentation is missing\n- [MEDIUM] 6 TODO/FIXME marker(s) detected\n- [HIGH] README is missing, tiny, or marked stale\n- [CRITICAL] Risky authentication logic detected\n- [CRITICAL] Risky payment state logic detected\n\n## Missing surfaces\n- docs/ARCHITECTURE.md\n- working tests\n- evidence-backed docs/EVIDENCE_REPORT.md\n\n## Allowed files\n- .codex/**\n- .controltower/**\n- plans/**\n- docs/**\n- TECH_DEBT_AND_SECURITY.md\n\n## Forbidden actions\n- Do not delete tests, history, user data, or unrelated legacy code.\n- Do not overwrite existing files without a backup and explicit need.\n- Do not push, publish, deploy, or upload source unless the APPROVED scoped Review Gate explicitly authorizes the exact action and destination. Never expose secrets.\n- Do not expand scope beyond the mission or bypass a non-approved review gate.\n- Review Gate forbids: delete tests\n- Review Gate forbids: change auth behavior\n- Review Gate forbids: change payment behavior\n- Review Gate forbids: write outside the demo workspace\n- Do not touch without approval: Authentication token semantics and payment settlement behavior without explicit approval.\n\n## Required evidence\n- Changed files, exact commands, test output, traceability, NOT_RUN gates, and remaining risks.\n- List every changed file and every command actually run.\n- Attach concrete output or artifact paths for every PASS claim.\n- Keep WARN, FAIL, NOT_RUN, and SIMULATED labels visible.\n\n## Tests to run\n- Run the repository test command discovered in package metadata.\n\n## Documentation to update\n- README.md when behavior or commands change\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n\n## Execution contract\nYou are Codex working under Codex Control Tower. Fix only the listed gaps. Read instructions and plans before editing. Stop before risky implementation unless the local gate is APPROVED, fully scoped, and the proposed action stays within that scope. PASS requires evidence; an edited file is not a validated file. If a check cannot run, label it NOT_RUN and explain why.\n\n## Final response format\n1. Summary\n2. Changed files\n3. Commands and evidence with PASS/WARN/FAIL/NOT_RUN/SIMULATED\n4. Review gate and Mistake Shield state\n5. Remaining risks\n6. Next safe action",
+  "codexPrompt": "# Codex Control Tower Mission\n\nTarget repository: ./examples\\demo-workspace\nMission goal: Add the smallest governance surfaces and tests needed for an auditable handoff.\nReview gate: APPROVED (scoped)\nReview gate scope: Install and record Control Tower governance surfaces in the controlled demo workspace.\nMistake Shield: CAUTION\n\n## Detected risks\n- [CRITICAL] Evidence report has no substantial proof boundary\n- [HIGH] Tests are missing or only placeholders\n- [HIGH] Architecture documentation is missing\n- [MEDIUM] 6 TODO/FIXME marker(s) detected\n- [HIGH] README is missing, tiny, or marked stale\n- [CRITICAL] Risky authentication logic detected\n- [CRITICAL] Risky payment state logic detected\n\n## Missing surfaces\n- docs/ARCHITECTURE.md\n- working tests\n- evidence-backed docs/EVIDENCE_REPORT.md\n\n## Allowed files\n- .codex/**\n- .controltower/**\n- plans/**\n- docs/**\n- TECH_DEBT_AND_SECURITY.md\n\n## Forbidden actions\n- Do not delete tests, history, user data, or unrelated legacy code.\n- Do not overwrite existing files without a backup and explicit need.\n- Do not push, publish, deploy, or upload source unless the APPROVED scoped Review Gate explicitly authorizes the exact action and destination. Never expose secrets.\n- Do not expand scope beyond the mission or bypass a non-approved review gate.\n- Review Gate forbids: delete tests\n- Review Gate forbids: change auth behavior\n- Review Gate forbids: change payment behavior\n- Review Gate forbids: write outside the demo workspace\n- Do not touch without approval: Authentication token semantics and payment settlement behavior without explicit approval.\n\n## Required evidence\n- Changed files, exact commands, test output, traceability, NOT_RUN gates, and remaining risks.\n- List every changed file and every command actually run.\n- Attach concrete output or artifact paths for every PASS claim.\n- Keep WARN, FAIL, NOT_RUN, and SIMULATED labels visible.\n\n## Tests to run\n- Run the repository test command discovered in package metadata.\n\n## Documentation to update\n- README.md when behavior or commands change\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n\n## Execution contract\nYou are Codex working under Codex Control Tower. Fix only the listed gaps. Read instructions and plans before editing. Stop before risky implementation unless the local gate is APPROVED, fully scoped, and the proposed action stays within that scope. PASS requires evidence; an edited file is not a validated file. If a check cannot run, label it NOT_RUN and explain why.\n\n## Final response format\n1. Summary\n2. Changed files\n3. Commands and evidence with PASS/WARN/FAIL/NOT_RUN/SIMULATED\n4. Review gate and Mistake Shield state\n5. Remaining risks\n6. Next safe action",
   "traceabilityMatrix": [
     {
       "requirement": "Plan before implementation",
@@ -336,7 +336,7 @@
     }
   },
   "contextGraph": {
-    "generatedAt": "2026-07-13T21:04:57.640Z",
+    "generatedAt": "2026-07-15T09:05:51.849Z",
     "generatedLocally": true,
     "algorithm": "deterministic lexical and repository-surface analysis",
     "nodes": [
@@ -1177,7 +1177,7 @@
   "reviewGate": {
     "status": "APPROVED",
     "note": "SIMULATED demo approval for governance-only changes.",
-    "updatedAt": "2026-07-13T21:04:57.613Z",
+    "updatedAt": "2026-07-15T09:05:51.824Z",
     "decidedBy": "local-human-command",
     "localFileGate": true,
     "identityVerified": false,
@@ -1200,7 +1200,7 @@
     "decisionRecorded": true
   },
   "memoryLens": {
-    "generatedAt": "2026-07-13T21:04:57.642Z",
+    "generatedAt": "2026-07-15T09:05:51.852Z",
     "generatedLocally": true,
     "sources": [
       {
@@ -1217,7 +1217,7 @@
       },
       {
         "relative": "README.md",
-        "ageDays": 1,
+        "ageDays": 2,
         "stale": false,
         "bytes": 453
       }
@@ -1305,7 +1305,7 @@
     "matchedLessons": [],
     "gateStatus": "APPROVED",
     "saferNextAction": "Inspect the listed risk files, define allowed files and evidence, then request review before changing behavior.",
-    "checkedAt": "2026-07-13T21:04:57.642Z",
+    "checkedAt": "2026-07-15T09:05:51.852Z",
     "deterministic": true
   },
   "phase0": {
@@ -1313,7 +1313,7 @@
     "locale": "en",
     "simulated": true,
     "simulatedDataLabel": "SIMULATED — InvoiceFlow Mini demo answers",
-    "generatedAt": "2026-07-13T21:04:57.586Z",
+    "generatedAt": "2026-07-15T09:05:51.800Z",
     "goal": "Govern InvoiceFlow Mini without changing unrelated product behavior.",
     "audience": "Small-business SaaS developers using Codex.",
     "successCriteria": "A reviewable plan, reduced risk flags, a working test, and an honest evidence pack.",
@@ -1322,33 +1322,33 @@
     "expectedEvidence": "Changed files, exact commands, test output, traceability, NOT_RUN gates, and remaining risks.",
     "profile": "startup",
     "nextMission": "Add the smallest governance surfaces and tests needed for an auditable handoff.",
-    "codexMissionPrompt": "# Codex Control Tower Mission\n\nTarget repository: .\\examples\\demo-workspace\nMission goal: Add the smallest governance surfaces and tests needed for an auditable handoff.\nReview gate: AWAITING_HUMAN\nReview gate scope: No approved scope recorded.\nMistake Shield: CAUTION\n\n## Detected risks\n- [HIGH] Do not create an auth bypass, accept unverified payment state, or delete tests.\n\n## Missing surfaces\n- No required governance surface is currently missing.\n\n## Allowed files\n- governance files listed under Missing surfaces\n- tests directly related to the approved mission\n\n## Forbidden actions\n- Do not delete tests, history, user data, or unrelated legacy code.\n- Do not overwrite existing files without a backup and explicit need.\n- Do not push, publish, deploy, or upload source unless the APPROVED scoped Review Gate explicitly authorizes the exact action and destination. Never expose secrets.\n- Do not expand scope beyond the mission or bypass a non-approved review gate.\n- Do not touch without approval: Authentication token semantics and payment settlement behavior without explicit approval.\n\n## Required evidence\n- Changed files, exact commands, test output, traceability, NOT_RUN gates, and remaining risks.\n- List every changed file and every command actually run.\n- Attach concrete output or artifact paths for every PASS claim.\n- Keep WARN, FAIL, NOT_RUN, and SIMULATED labels visible.\n\n## Tests to run\n- Discover the smallest relevant test command; report NOT_RUN if unavailable.\n\n## Documentation to update\n- README.md when behavior or commands change\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n\n## Execution contract\nYou are Codex working under Codex Control Tower. Fix only the listed gaps. Read instructions and plans before editing. Stop before risky implementation unless the local gate is APPROVED, fully scoped, and the proposed action stays within that scope. PASS requires evidence; an edited file is not a validated file. If a check cannot run, label it NOT_RUN and explain why.\n\n## Final response format\n1. Summary\n2. Changed files\n3. Commands and evidence with PASS/WARN/FAIL/NOT_RUN/SIMULATED\n4. Review gate and Mistake Shield state\n5. Remaining risks\n6. Next safe action"
+    "codexMissionPrompt": "# Codex Control Tower Mission\n\nTarget repository: ./examples\\demo-workspace\nMission goal: Add the smallest governance surfaces and tests needed for an auditable handoff.\nReview gate: AWAITING_HUMAN\nReview gate scope: No approved scope recorded.\nMistake Shield: CAUTION\n\n## Detected risks\n- [HIGH] Do not create an auth bypass, accept unverified payment state, or delete tests.\n\n## Missing surfaces\n- No required governance surface is currently missing.\n\n## Allowed files\n- governance files listed under Missing surfaces\n- tests directly related to the approved mission\n\n## Forbidden actions\n- Do not delete tests, history, user data, or unrelated legacy code.\n- Do not overwrite existing files without a backup and explicit need.\n- Do not push, publish, deploy, or upload source unless the APPROVED scoped Review Gate explicitly authorizes the exact action and destination. Never expose secrets.\n- Do not expand scope beyond the mission or bypass a non-approved review gate.\n- Do not touch without approval: Authentication token semantics and payment settlement behavior without explicit approval.\n\n## Required evidence\n- Changed files, exact commands, test output, traceability, NOT_RUN gates, and remaining risks.\n- List every changed file and every command actually run.\n- Attach concrete output or artifact paths for every PASS claim.\n- Keep WARN, FAIL, NOT_RUN, and SIMULATED labels visible.\n\n## Tests to run\n- Discover the smallest relevant test command; report NOT_RUN if unavailable.\n\n## Documentation to update\n- README.md when behavior or commands change\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n\n## Execution contract\nYou are Codex working under Codex Control Tower. Fix only the listed gaps. Read instructions and plans before editing. Stop before risky implementation unless the local gate is APPROVED, fully scoped, and the proposed action stays within that scope. PASS requires evidence; an edited file is not a validated file. If a check cannot run, label it NOT_RUN and explain why.\n\n## Final response format\n1. Summary\n2. Changed files\n3. Commands and evidence with PASS/WARN/FAIL/NOT_RUN/SIMULATED\n4. Review gate and Mistake Shield state\n5. Remaining risks\n6. Next safe action"
   },
   "flightRecorder": {
     "events": [
       {
-        "timestamp": "2026-07-13T21:04:57.611Z",
+        "timestamp": "2026-07-15T09:05:51.822Z",
         "type": "PROMPT",
         "message": "SIMULATED InvoiceFlow Mini Phase-0 mission generated.",
         "source": "cct-demo",
         "simulated": true
       },
       {
-        "timestamp": "2026-07-13T21:04:57.612Z",
+        "timestamp": "2026-07-15T09:05:51.823Z",
         "type": "PLAN",
         "message": "SIMULATED governance surfaces planned; product behavior remains out of scope.",
         "source": "cct-demo",
         "simulated": true
       },
       {
-        "timestamp": "2026-07-13T21:04:57.618Z",
+        "timestamp": "2026-07-15T09:05:51.828Z",
         "type": "APPROVAL",
         "message": "Local demo gate changed to APPROVED.",
         "source": "cct-demo",
         "simulated": true
       },
       {
-        "timestamp": "2026-07-13T21:04:57.618Z",
+        "timestamp": "2026-07-15T09:05:51.829Z",
         "type": "NOT_RUN",
         "message": "InvoiceFlow Mini behavior tests were not executed by the demo orchestrator.",
         "source": "cct-demo",

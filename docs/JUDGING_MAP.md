@@ -1,239 +1,181 @@
 # OpenAI Build Week Judging Map
 
-This map uses the four criteria currently published on the official [OpenAI Build Week Devpost page](https://openai.devpost.com/): **Technological Implementation**, **Design**, **Potential Impact**, and **Quality of the Idea**. The official [Devpost FAQ](https://openai.devpost.com/details/faqs) describes the required demo and Codex/GPT-5.6 disclosure path.
+The official [OpenAI Build Week page](https://openai.devpost.com/) and [rules](https://openai.devpost.com/rules) define a Stage One pass/fail screen followed by Stage Two judging across four equally weighted criteria: **Technological Implementation**, **Design**, **Potential Impact**, and **Quality of the Idea**. Competition details are time-sensitive; recheck the official pages immediately before submission.
 
-Competition details are time-sensitive. Recheck the official pages before submission.
+## Stage One: eligibility and required story
+
+| Requirement | Codex Control Tower response | Fast proof |
+| --- | --- | --- |
+| Fits the challenge and Developer Tools track | Working Codex-centered mission-control tool, not a prompt-only entry | [Judge: Start Here](../JUDGE_START_HERE.md), Pages, CLI |
+| Real Codex/GPT-5.6 role | Codex built the product and visibly launches real `gpt-5.6-sol`; GPT-5.6 performs the blind semantic audit | First ten seconds of video, audit panel, `codex-review.js` |
+| Under-three-minute public video | Target 2:52; spoken audio explains Codex, GPT-5.6, and human decisions | [Demo Script](DEMO_SCRIPT.md), Devpost video field |
+| README explains acceleration, contributions, and human choices | Dedicated Build Week, architecture, authority, and provenance sections | [README](../README.md), [Build Log](CODEX_BUILD_LOG.md) |
+| Developer-tool testing path | No-install Pages route plus reproducible local commands; no rebuild required for Pages inspection | [Judge Test Path](JUDGE_TEST_PATH.md) |
+| Private feedback identity | Real Session ID from the primary build task, entered only in Devpost | Private form field; intentionally not public |
 
 ## Judge-ready summary
 
-| Criterion | One-sentence case | Fastest proof |
+| Criterion | Case | Fastest evidence |
 | --- | --- | --- |
-| Technological Implementation | Codex helped build a non-trivial local developer tool: CLI, deterministic analysis engines, generated artifacts, tests, demo fixtures, and React dashboard. | Run the demo, inspect CLI output and generated Evidence Pack, then open the dashboard. |
-| Design | One coherent flow moves from alignment and scan through context, approval, mission, evidence, and before/after handoff. | Follow the eight dashboard tabs and conditional Phase-0 card. |
-| Potential Impact | Developers using coding agents need durable proof and continuity without uploading private repositories. | Show a risky proposed action, visible NOT_RUN gates, and the generated next mission. |
-| Quality of the Idea | GPT-5.6 audits target-derived locked evidence claims while local code owns the final verdict and exposes model opinion separately. | Ask Codex desktop to run `npm run demo:codex`; inspect semantic alignment/conflict, preserved NOT_RUN, hashes, and freshness. |
+| **Technological Implementation** | Codex helped build a non-trivial CLI/dashboard with deterministic analysis, real blind GPT-5.6 execution, strict validation, provenance, reconciliation, and adversarial tests. | Pages audit panel; `npm run verify`; `cli/commands/codex-review.js`; tests |
+| **Design** | One coherent authority model connects mission, context, risk, human gate, locked facts, blind model judgment, reconciliation, and handoff. | Follow Overview → Audit → Evidence → Before/After |
+| **Potential Impact** | Developers get durable review and continuity around agent-assisted changes without a mandatory hosted service. | Mission Prompt, Context Trace, NOT_RUN, Review Gate, Flight Recorder |
+| **Quality of the Idea** | GPT-5.6 is an intentionally blind semantic challenger—not a generator, score owner, or rubber stamp—and conflict escalates to a human. | `MISSION_CHANGE_TEST_ALIGNMENT`, model/local separation, HUMAN REVIEW REQUIRED |
 
-## Technological Implementation
+## 1. Technological Implementation
 
-### What the official criterion asks
+### Criterion interpretation
 
-The criterion evaluates the depth and skill of GPT-5.6 use and whether the result reflects genuine effort as a working, non-trivial implementation.
+This criterion evaluates the depth and skill demonstrated in using Codex to build a working, non-trivial project. Meaningful GPT-5.6 use is also a required part of the overall submission story, but the technical criterion should not be mislabeled as only “depth of GPT-5.6 use.”
 
-### Codex Control Tower case
+### Implementation evidence
 
-| Implemented capability | Technical evidence | What it demonstrates |
+| Capability | Evidence | Technical depth |
 | --- | --- | --- |
-| Command-line product | cli/index.js and cli/commands/ | A real command surface, argument parsing, error handling, read-only and generating workflows |
-| Deterministic repository analysis | cli/lib/repoScanner.js and cli/lib/healthScorer.js | File inventory, governance detection, risk rules, evidence states, and inspectable weighted scoring |
-| Explainable context | cli/lib/contextGraphBuilder.js | Local graph relationships and selected context with reason, relevance, freshness, importance, and protection |
-| Codex-native mission generation | cli/lib/codexPromptBuilder.js | Repository state becomes an explicit next-Codex execution contract |
-| Human decision and risk comparison | cli/lib/reviewGate.js and cli/lib/mistakeShield.js | Local gate states plus deterministic CLEAR/CAUTION/BLOCKED reasoning |
-| Cross-session continuity | cli/lib/memoryLens.js and cli/lib/flightRecorder.js | Persistent rules/minefields plus typed JSONL events |
-| Portable evidence | cli/lib/evidenceCollector.js | Markdown/JSON evidence, traceability, NOT_RUN, debt, graph, gate, memory, shield, recorder, and mission artifacts |
-| Beginner alignment | cli/commands/phase0.js and core/en/ | One-question-at-a-time English alignment and non-interactive fictional-sample mode |
-| Product UI | apps/dashboard/ | Vite/React workbench with local report import, normalization, eight tabs, and conditional Phase-0 card |
-| Reproducible demonstration | examples/messy-saas-before and examples/governed-saas-after | The same fictional codebase exposes meaningful before/after governance behavior |
-| Evidence Reconciliation | cli/commands/codex-review.js | Target-derived claims, deterministic local verdict/action, separate model verdict/suggestion, SHA-256/base-commit/worktree/freshness provenance, structured validation, and filtered citation records |
+| CLI product | `cli/index.js`, `cli/commands/` | Argument parsing, command boundaries, safe errors, read/generate workflows |
+| Repository analysis | `cli/lib/repoScanner.js`, `healthScorer.js` | Bounded inventory, governance/risk rules, inspectable weighted score |
+| Explainable context | `contextGraphBuilder.js` | Local relationships, selection reason, relevance, freshness, importance, protection |
+| Codex mission contract | `codexPromptBuilder.js` | Allowed scope, forbidden actions, proof, tests, docs, stop/final-response rules |
+| Human authority | `reviewGate.js`, `mistakeShield.js` | Scoped decision artifact and deterministic risk/minefield comparison |
+| Continuity | `memoryLens.js`, `flightRecorder.js` | Persistent rules and typed JSONL session events |
+| Evidence | `evidenceCollector.js` | Portable reports, traceability, NOT_RUN, debt, gate, memory, recorder, mission |
+| Blind model input | `cli/commands/codex-review.js` | Neutral claims + bounded raw evidence; locked comparison targets withheld |
+| Real model execution | `npm run demo:codex` | Signed-in ChatGPT, pinned Codex CLI, `gpt-5.6-sol`, medium reasoning, empty ephemeral read-only workspace |
+| Fail-closed execution boundary | `codex-review.js`, `tests/test_codex_review.js` | User/project instructions, web, inherited environment, persistence, and approval disabled; every tool/unknown/failed/malformed event rejected |
+| Strict output contract | `codex-review.js`, `tests/test_codex_review.js` | Exact claim coverage, enum/schema checks, status-injection rejection, allowed citation for decisive judgment, required counter/missing evidence |
+| Authority-preserving reconciliation | Reconciliation record and dashboard | Separate verdicts, structural-precheck label, agreement/compatible/conflict relations, locked facts, human flag, full/included hashes, freshness/provenance |
+| Product UI | `apps/dashboard/` | React/Vite workbench, report normalization, local import, static Pages exhibit |
+| Reproducible fixtures | `examples/` | Controlled messy/governed comparison and bounded test output |
 
-### How Codex was used
+### How Codex accelerated the build
 
-Codex collaborated across requirements synthesis, read-only source research, CLI and engine implementation, fixtures/tests, dashboard, integration, verification, and competition documentation. The build-time agent workflow analysis was converted into concrete product features rather than remaining prose.
+Codex collaborated on requirements synthesis, official-rule review, read-only lineage research, architecture, CLI/engine implementation, fixtures, tests, dashboard, integration diagnosis, deployment, documentation, and release verification. It used parallel bounded workstreams and converted discovered weaknesses into product requirements.
 
-The deterministic scanner makes no AI API call, so judges can reproduce its score without credentials. The featured Build Week flow derives target-appropriate claims, computes the authoritative local verdict, verifies ChatGPT authentication and the `gpt-5.6-sol` catalog entry, runs Codex read-only, validates model output, filters and records unsupported citations, and shows a separate model verdict without replacing local state. Actual commands and outcomes are recorded in [Codex Build Log](CODEX_BUILD_LOG.md).
-
-### Live judge proof
-
-~~~bash
-npm install
-npm run demo
-npm run dashboard
-~~~
-
-Then show:
-
-- generated before/after local reports;
-- Context Trace selection reasons;
-- a BLOCKED/CAUTION Mistake Shield result;
-- Review Gate state;
-- generated Codex Mission Prompt;
-- Evidence Pack with NOT_RUN entries;
-- dashboard comparison.
-
-For the model step, use a clean **Demo Reconciliation** task in Codex desktop and paste [Codex Demo Prompt](CODEX_DEMO_PROMPT.md). The local dashboard shows the live transition; the public GitHub Pages page is a static recorded no-install exhibit.
+The most important corrections demonstrate genuine iteration. External review first revealed that the model prompt disclosed expected answer classes; a later red-team pass showed that a read-only target workspace could still permit unrelated reads. The final design withholds locked targets, runs from an empty temporary workspace with instruction/web/tool surfaces disabled, validates the event stream and evidence-bearing response fail-closed, and raises HUMAN REVIEW REQUIRED only after the model call.
 
 ### Honest boundary
 
-The scanner is heuristic and does not prove semantic correctness. The fixture's two focused Node tests prove only their bounded cases. Root-suite, dashboard-build, static judge-demo deployment, and other final verification results must be read from the current build log; fixture/provider deployment, browser accessibility, load, and independent security checks remain NOT_RUN unless separately executed.
+The deterministic scanner is heuristic. Two fixture tests prove only their bounded cases. GitHub Actions verifies the deterministic path, not the signed-in ChatGPT model step. Browser/load/provider/deployment/independent-security checks remain NOT_RUN unless a named artifact proves otherwise.
 
-## Design
-
-### What the official criterion asks
-
-The criterion looks for a runnable, complete, coherent product experience rather than an isolated technical proof of concept.
+## 2. Design
 
 ### Coherent product journey
 
 ~~~text
 plain-language Phase-0
         ↓
-local repository scan
+local scan + risks + Context Trace
         ↓
-health + risks + missing surfaces
+human Review Gate + bounded Codex Mission
         ↓
-Context Trace + Memory Lens
+locked structural/execution facts
         ↓
-Mistake Shield + human Review Gate
+blind GPT-5.6 semantic challenge
         ↓
-bounded Codex Mission Prompt
+local reconciliation + optional HUMAN REVIEW REQUIRED
         ↓
-Flight Recorder + Evidence Pack
-        ↓
-reviewable handoff + Before / After dashboard
+Flight Recorder + Evidence Pack + next safe handoff
 ~~~
 
-### Design evidence
+### Design choices
 
-| Design choice | Product benefit | Visible proof |
+| Choice | Benefit | Visible proof |
 | --- | --- | --- |
-| One local vocabulary | Score, risk, scope, gate, evidence, memory, and next action stay consistent from CLI to dashboard | CLI output, generated files, dashboard labels |
-| Progressive disclosure | Overview works in seconds; deeper tabs expose risk, context, evidence, memory, chronology, prevention, and comparison | Eight dashboard tabs |
-| Honest status language | PASS, WARN, FAIL, NOT_RUN, and SIMULATED never collapse into one optimistic state | Evidence tab and generated reports |
-| Explainable context | Context is not a mystery list; each selection has a reason and quality signals | Context Trace |
-| Developer authority | The human decision remains visible and separate from Codex implementation | Review Gate panel |
-| Beginner and expert paths | Phase-0 avoids jargon; CLI reports and artifact exports support deeper inspection | Phase-0 card plus JSON/Markdown |
-| Local privacy | Deterministic core needs no account, analytics, telemetry, source upload, or API key; real model audit is explicit opt-in | Architecture/privacy docs and network-free core |
-| Portable handoff | Reports remain inspectable without the UI | JSON, JSONL, and Markdown outputs |
+| Two truth layers | Deterministic fact and semantic opinion stay distinguishable | Audit panel and record |
+| Blind comparison target | Reduces answer-echoing without hiding the raw material under review | Prompt artifact and blind-input disclosure |
+| Progressive disclosure | Overview works quickly; detail remains inspectable | Dashboard sections/tabs |
+| Honest vocabulary | PASS, WARN, FAIL, NOT_RUN, SIMULATED, and HUMAN REVIEW REQUIRED do not collapse | Evidence + Audit |
+| Human authority | Conflict becomes visible advice, compatible uncertainty stays distinct from agreement, and neither silently mutates facts | Review Gate and reconciliation relations |
+| Portable artifacts | Evidence survives without the UI | JSON, JSONL, Markdown |
+| Public/static plus local/live | Judges get instant access and a reproducible fresh-run route | Pages and local workbench |
+| Explicit fictional/real split | Controlled sample remains useful without implying customer proof | Disclosure banners and docs |
 
-### Demo design proof
+The Devpost Pack Exporter is secondary. It packages evidence and handoff text; it is not the core product story.
 
-The InvoiceFlow Mini story is small enough to understand in 2:45 but realistic enough to surface auth/payment risk, weak tests, stale docs, evidence conflict, and continuity gaps. Two prepared fictional snapshots produce real deterministic scans of 25/100 with 16 risks and 88/100 with one remaining risk. GPT-5.6 does not create that transformation, and omitted checks stay visible.
-
-### Honest boundary
-
-The dashboard does not create stronger proof than the report. FICTIONAL SAMPLE PROJECT and REAL EXECUTION labels must remain visible in screenshots/video. The local UI is a live workbench; GitHub Pages is a static exhibit, not a hosted scanner or multi-user service.
-
-## Potential Impact
-
-### What the official criterion asks
-
-The criterion tests whether the project makes a credible, specific case for a real problem and audience and whether the demonstrated solution addresses that problem.
+## 3. Potential Impact
 
 ### Audience
 
-- Individual developers using Codex across multiple sessions
-- Startup teams moving quickly with coding agents
-- Maintainers accepting agent-assisted changes in brownfield repositories
-- Technical leads who need an auditable handoff before review or release
-- AI-agent workflow builders who need portable, local evidence contracts
+- Developers using Codex across multiple sessions
+- Fast-moving teams reviewing agent-assisted changes
+- Maintainers working in brownfield repositories
+- Technical leads who need bounded proof before release
+- Agent-workflow builders who prefer portable local evidence
 
-### Problem-to-feature fit
+### Problem-to-feature map
 
-| Real workflow problem | Control Tower response | Demonstrated outcome |
+| Workflow problem | Product response | Demonstrated value |
 | --- | --- | --- |
-| Mission lives only in chat | Phase-0 files and generated Mission Prompt | Next session receives a durable goal, risk, evidence, and forbidden scope |
-| “Done” lacks proof | Evidence Pack and traceability | Claims are mapped to artifacts; missing execution remains NOT_RUN |
-| Repository context is too broad | Context Graph/Trace and budget | Selected files/docs/plans/memory explain why they matter |
-| Risky work proceeds implicitly | Mistake Shield and Review Gate | Destructive/high-risk proposals show reasons and wait for a visible decision |
-| Lessons disappear between sessions | Memory Lens and Flight Recorder | Minefields, constraints, events, and next action remain local |
-| Teams cannot see improvement | Health score and Before / After | Governance gaps and residual risk are legible without claiming code correctness |
-| Private code should not be uploaded | Local deterministic core | Scan, score, reports, and dashboard run without an API key or source upload |
+| Mission exists only in chat | Phase-0 + Mission Prompt | Durable goal, scope, forbidden areas, proof, and next action |
+| “Done” lacks evidence | Evidence Boundary + traceability | Named proof; missing execution remains NOT_RUN |
+| Passing tests do not prove the mission | Blind semantic challenge | GPT-5.6 examines mission/change/test/evidence alignment |
+| Context is too broad | Context Trace | Selected items explain why they matter |
+| Risky work proceeds implicitly | Mistake Shield + Review Gate | Reasons, safer rewrite, visible human decision |
+| Lessons vanish between sessions | Memory Lens + Flight Recorder | Minefields, constraints, events, and next action persist |
+| Model confidence can overwrite nuance | Locked reconciliation | Model opinion cannot promote or erase local state |
+| Private code should not require a new service | Local-first deterministic core | Scan/report/dashboard work without API key or telemetry |
 
-### Credibility of impact
+The project does not claim customers, productivity percentages, incident reduction, or production deployment. Current impact evidence is a working product, reproducible controlled fixture, real model execution, and inspectable handoff—not market validation.
 
-The project does not claim user counts, customer deployments, productivity percentages, incident reduction, or production outcomes. The current evidence is a working local implementation, real scans/tests on prepared fictional snapshots, and a recorded real GPT-5.6 reconciliation. The credible near-term impact is better reviewability and continuity for a developer who chooses to adopt the workflow.
+**CCT does not replace ESLint, CI, code review, or branch protection. It adds the evidence and handoff layer around agent-assisted work.**
 
-### Honest boundary
+## 4. Quality of the Idea
 
-Control Tower cannot force an external agent to obey the prompt, authenticate a reviewer, or replace repository permissions, tests, CI, security review, and domain expertise. Its impact is an explicit evidence and coordination layer.
+Most agent tools optimize generation. Control Tower focuses on the state around generation and uses GPT-5.6 as a constrained semantic adversary:
 
-## Quality of the Idea
+- deterministic code records execution and structural facts;
+- GPT-5.6 judges whether the evidence semantically addresses the mission;
+- local code validates and reconciles only after the answer returns;
+- a conflict escalates to a human without changing truth;
+- the developer retains the final gate.
 
-### What the official criterion asks
+### Controlled challenge
 
-The criterion considers whether the GPT-5.6 use is creative/non-obvious and whether the team understands the problem space.
+`MISSION_CHANGE_TEST_ALIGNMENT` is a repository-independent claim. In the fictional governed fixture, Phase-0 requires a durable local audit trail for rejected payments, but the bounded change/test evidence does not prove that full criterion. This gap is disclosed to judges, not to the model. The result is not forced and remains non-authoritative; the point is to expose whether GPT-5.6 adds semantic signal beyond “the test exited zero.”
 
-### What is non-obvious
+### Originality and lineage
 
-Most agent tooling optimizes generation. Codex Control Tower focuses on the **state around generation**:
+Codex Control Tower is inspired at concept level by the **Universal Agent OS family**, which was studied read-only and is not a runtime dependency or demo target. The independent transformation is the integrated bounded mission, context trace, human gate, evidence recorder, blind GPT-5.6 challenge, deterministic reconciliation, and dashboard.
 
-- what Codex should know before acting;
-- which files and lessons deserve limited context;
-- what the developer has actually approved;
-- what proof exists after acting;
-- what did not run;
-- what the next Codex session may safely do.
+See [Source Protection](SOURCE_PROTECTION.md), [Feature Harvest](FEATURE_HARVEST.md), and [Originality Matrix](ORIGINALITY_MATRIX.md).
 
-Codex helped analyze its own build workflow and turn those observations into product logic: Mission Prompt, Context Trace, Review Gate, Mistake Shield, Flight Recorder, Evidence Pack, Phase-0, and Before / After.
+## Video evidence path (2:52 target)
 
-This is a Codex-generated build-time assessment—not an anthropomorphic claim.
-
-### Codex-native originality
-
-| Prior broad idea | New Codex Control Tower transformation |
-| --- | --- |
-| Governance rules | Computed local health and a generated next-Codex mission |
-| Context/blast-radius thinking | Local repository Context Graph plus explainable mission Context Trace |
-| Approval workflow | Honest local file gate surfaced directly in the mission and dashboard |
-| Memory workbench | Memory Lens plus selected-context reasons and Flight Recorder continuity |
-| Mistake prevention | Proposed-action comparison with gate/risk/minefield reasons and a safe rewrite |
-| Evidence manifest | Generated evidence boundary, traceability, NOT_RUN gates, and black-box-style handoff |
-| Before/after demo | Same fictional SaaS scanned as messy and governed, without donor/customer data |
-
-The **Universal Agent OS family** is acknowledged and protected. Family code, UI, screenshots, and runtimes are not copied into this product. See [Source Protection](SOURCE_PROTECTION.md), [Feature Harvest](FEATURE_HARVEST.md), and [Originality Matrix](ORIGINALITY_MATRIX.md).
-
-### Demonstrated understanding
-
-The product explicitly distinguishes:
-
-- presence from execution;
-- edited from validated;
-- local approval from identity verification;
-- lexical context from semantic certainty;
-- recorder history from immutable attestation;
-- fictional sample content from customer/production evidence, and sample content from real scan/test/model execution;
-- Codex implementation from developer authority.
-
-Those distinctions are the core idea, not footnotes.
-
-### Honest boundary
-
-Real read-only GPT-5.6 Sol Evidence Reconciliation with locked states is implemented. Signed gates, PR/MR integration, team dashboards, and semantic code graphs remain roadmap work.
-
-## 2:45 evidence path
-
-| Time | Criterion emphasized | Proof |
+| Time | Main criterion | Proof |
 | --- | --- | --- |
-| 0:00–0:20 | Potential Impact / Quality of Idea | Missing-evidence problem plus fictional-sample/real-execution boundary |
-| 0:20–0:45 | Technological Implementation | Prepared starting snapshot and real deterministic scan |
-| 0:45–1:10 | Design | Bounded mission, target-derived locked claims, local verdict |
-| 1:10–2:00 | Technological Implementation / Quality of Idea | Clean Codex demo task launches real GPT-5.6; local dashboard shows live state |
-| 2:00–2:25 | Technological Implementation | Separate verdicts, semantic alignment/conflict, hashes/freshness, preserved NOT_RUN |
-| 2:25–2:45 | Design / Impact | Human gate, governed prepared snapshot, explicit honest close |
+| 0:00–0:10 | Quality / Technology | Completed real GPT-5.6 result and authority boundary |
+| 0:10–0:30 | Impact / Trust | Problem plus fictional-sample/real-execution disclosure |
+| 0:30–0:48 | Technology | Reproducible prepared scan comparison |
+| 0:48–1:08 | Design | Local READY, bounded mission, locked facts |
+| 1:08–1:34 | Technology | Codex desktop launches real product command |
+| 1:34–1:58 | Technology / Quality | Blind GPT-5.6 input and structured assessment |
+| 1:58–2:28 | Quality | Controlled semantic challenge and human-review escalation |
+| 2:28–2:52 | Design / Impact | Preserved NOT_RUN, human authority, concise close |
 
 Full narration: [Demo Script](DEMO_SCRIPT.md).
 
 ## Judge verification checklist
 
-- [ ] CLI help lists the full command surface.
-- [ ] Messy fixture scan reports 25/100 and visible governance/risk gaps.
-- [ ] Governed fixture scan reports 88/100 and one remaining risk.
-- [ ] FICTIONAL SAMPLE PROJECT and REAL EXECUTION labels are both visible.
-- [ ] Codex desktop visibly receives the demo prompt and launches the product command.
-- [ ] GPT-5.6 is not credited with the prepared snapshots or `25 → 88` score difference.
-- [ ] Context Trace explains selection.
-- [ ] Review Gate states its local identity boundary.
-- [ ] Mistake Shield gives reasons and a safer next action.
-- [ ] Mission Prompt includes scope, evidence, tests, docs, statuses, and final response.
-- [ ] Evidence Pack preserves NOT_RUN.
-- [ ] Dashboard shows all eight tabs and conditional Phase-0 card.
-- [ ] Build log names the actual final commands and outcomes.
-- [ ] Lineage and limitations remain explicit.
+- [ ] GPT-5.6's real role is visible in the first ten seconds.
+- [ ] Codex desktop visibly launches `npm run demo:codex`.
+- [ ] Exact model, pinned CLI, empty ephemeral read-only workspace, no-tool event policy, medium reasoning, and blind-comparison boundary are shown.
+- [ ] Assessments use SUPPORTS / CONTRADICTS / INSUFFICIENT.
+- [ ] Mission PASS is labeled a structural precheck; `COMPATIBLE` uncertainty is not shown as full agreement.
+- [ ] The controlled challenge is disclosed without claiming a forced result.
+- [ ] Any HUMAN REVIEW REQUIRED flag is advisory and tied to a claim.
+- [ ] Locked local facts, verdict/action, and Review Gate remain separate.
+- [ ] FICTIONAL SAMPLE PROJECT and REAL EXECUTION both remain visible.
+- [ ] GPT-5.6 is not credited with `25 → 88`, scoring, fixture creation, or test execution.
+- [ ] NOT_RUN remains visible.
+- [ ] Build log identifies current verification, while old run IDs are labeled historical.
+- [ ] Frozen tag, Pages, video, and private feedback field are checked before submission.
 
 ## Related assets
 
+- [Judge: Start Here](../JUDGE_START_HERE.md)
+- [Submission Manifest](SUBMISSION_MANIFEST.md)
 - [README](../README.md)
 - [Devpost Submission](DEVPOST_SUBMISSION.md)
 - [Demo Script](DEMO_SCRIPT.md)
 - [Architecture](ARCHITECTURE.md)
-- [Codex Self-Assessment](CODEX_SELF_ASSESSMENT.md)
 - [Codex Build Log](CODEX_BUILD_LOG.md)

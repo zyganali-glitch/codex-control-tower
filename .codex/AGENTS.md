@@ -6,7 +6,7 @@ These instructions govern Codex-assisted work in this independent repository.
 
 - Read `plans/master-roadmap.md`, `.controltower/phase0.json`, the Review Gate, Memory Lens, and current evidence before changing files.
 - Keep the product local-first, deterministic, Codex-centered, and honest about simulated or unexecuted checks.
-- Treat the four Universal Agent OS family repositories as protected, read-only research sources. Never modify or push to them.
+- Treat the Universal Agent OS family sources as protected, read-only research material. Never modify or push to them.
 - InvoiceFlow Mini under `examples/` is simulated demo data, never customer evidence.
 
 ## Change safety

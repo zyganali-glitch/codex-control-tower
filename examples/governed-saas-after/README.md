@@ -34,7 +34,8 @@ no runtime dependencies, network listener, database, telemetry, or analytics.
 - Mistake Shield: `CLEAR` for this fixture; destructive payment/auth expansion is
   still outside the approved scope.
 - Evidence: one working integration test was run with Node's test runner.
-- NOT_RUN: dependency audit, browser tests, load tests, and real-provider tests.
+- NOT_RUN: durable rejected-payment auditing, dependency audit, browser tests,
+  load tests, and real-provider tests.
 - Remaining risk: this is illustrative in-memory code, not production software.
 
 See [Architecture](docs/ARCHITECTURE.md), [Evidence Report](docs/EVIDENCE_REPORT.md),

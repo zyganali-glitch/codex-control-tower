@@ -22,8 +22,11 @@ export default function normalizeCodexLiveReview(review) {
   const reconciliation = review.reconciliation;
   const claimAudits = asArray(reconciliation.claimAudits).map((audit) => ({
     ...audit,
+    modelAssessment: statusOrUnknown(audit.modelAssessment),
     relation: audit.relation || audit.agreement || 'UNCLASSIFIED',
   }));
+  const conflictCount = claimAudits.filter((audit) => ['CHALLENGE', 'DISAGREEMENT', 'CONFLICTS_WITH_LOCKED_STATUS'].includes(String(audit.relation).toUpperCase())).length;
+  const humanReviewRequired = Boolean(reconciliation.humanReviewRequired || conflictCount > 0);
   const engineHasSplitVerdicts = hasValue(reconciliation.modelVerdict)
     || hasValue(reconciliation.localVerdict)
     || hasValue(reconciliation.deterministicVerdict);
@@ -32,6 +35,8 @@ export default function normalizeCodexLiveReview(review) {
     reconciliation: {
       ...reconciliation,
       claimAudits,
+      humanReviewRequired,
+      reviewState: reconciliation.reviewState || (humanReviewRequired ? 'HUMAN_REVIEW_REQUIRED' : null),
       localVerdict: reconciliation.localVerdict
         || reconciliation.deterministicVerdict
         || (engineHasSplitVerdicts ? reconciliation.verdict : deriveDeterministicVerdict(claimAudits)),

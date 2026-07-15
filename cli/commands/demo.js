@@ -123,12 +123,17 @@ async function demoCommand() {
     missingSurfaces: before.missingSurfaces,
     evidenceStatus: before.evidenceStatus
   };
+  after.submission = {
+    version: 'openai-build-week-final',
+    immutableSource: 'https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final',
+    judgeStart: 'JUDGE_START_HERE.md'
+  };
   after.codexLiveReview = {
     state: 'READY',
-    mode: 'REAL_CODEX_EVIDENCE_RECONCILIATION',
+    mode: 'REAL_CODEX_BLIND_SEMANTIC_AUDIT',
     model: 'gpt-5.6-sol',
-    authenticatedVia: 'Checked when evidence reconciliation starts',
-    disclosure: 'Real GPT-5.6 evidence reconciliation is ready; deterministic states remain locked and independently reproducible.'
+    authenticatedVia: 'Checked when the blind semantic audit starts',
+    disclosure: "Real GPT-5.6 is ready to challenge bounded raw evidence in an empty ephemeral no-tool workspace without seeing the reconciler's locked claim statuses or expected assessment classes; local facts remain independently reproducible and cannot be overwritten."
   };
   writePortableJson(path.join(reportDir, 'after-report.json'), after, root);
   writePortableJson(path.join(root, 'apps', 'dashboard', 'src', 'sample-report.json'), after, root);

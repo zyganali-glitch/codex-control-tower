@@ -192,7 +192,7 @@ The build exposed several concrete improvements:
 | Signed/identity-backed gates and immutable logs | **Future work** | Local files are mutable and unsigned |
 | Language-aware semantic graph | **Future work** | Current context is deterministic and heuristic |
 | PR/MR, CI, team, and cross-repo integration | **Future work** | No hosted integration in the local-first build |
-| Real GPT-5.6 Evidence Reconciliation | **Implemented now** | ChatGPT subscription, verified `gpt-5.6-sol`, read-only execution, target-derived locked states, local verdict/action, separate model opinion/suggestion, SHA-256/base-commit/worktree/freshness provenance, and explicit data disclosure |
+| Real Blind GPT-5.6 Semantic Audit | **Implemented now** | ChatGPT subscription, pinned Codex CLI, `gpt-5.6-sol`, medium reasoning, empty ephemeral read-only workspace, disabled instruction/web/tool surfaces, fail-closed event validation, hidden locked comparison targets, SUPPORTS/CONTRADICTS/INSUFFICIENT, evidence-bearing judgments, structural-precheck/compatible/conflict policy, provenance, and explicit data disclosure |
 | Full multilingual product packs | **Future work** | The Build Week product and Phase-0 are English-only |
 
 ## Assessment boundary

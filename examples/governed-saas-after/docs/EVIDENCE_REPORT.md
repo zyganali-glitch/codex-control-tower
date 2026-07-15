@@ -17,6 +17,7 @@ adding external services or changing the project's in-memory architecture.
 | Tampered token rejection | PASS | Test assertion in `invoiceflow.test.js` | HMAC demo, not an identity provider |
 | Payment event verification | PASS | Test rejects an unverified fixture event | Provider verification itself is simulated |
 | Payment idempotency | PASS | Replay assertion and one stored payment | In-memory process only |
+| Durable rejected-payment audit record | NOT_RUN | No implementation, focused assertion, or command output | No completion claim made; in-memory behavior only |
 | Architecture and README sync | PASS | `docs/ARCHITECTURE.md`; `README.md` | Reviewed against this fixture |
 | Dependency audit | NOT_RUN | No dependencies installed | Not inferred as safe |
 | Browser and accessibility checks | NOT_RUN | No browser UI in fixture | No browser claim made |
@@ -34,7 +35,8 @@ adding external services or changing the project's in-memory architecture.
 
 The bounded local checks pass, known risky patterns are reduced, and the Review
 Gate is visible. The fixture is not validated for production, security compliance,
-real money movement, persistence, deployment, or scale.
+real money movement, durable rejected-payment auditing, persistence, deployment,
+or scale.
 
 ## Next safe action
 

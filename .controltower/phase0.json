@@ -6,7 +6,7 @@
   "goal": "Build, verify, publish, and present Codex Control Tower as a competition-ready local-first governance layer for Codex-assisted software delivery.",
   "audience": "OpenAI Build Week judges, developers using Codex, AI-agent workflow builders, and open-source reviewers.",
   "successCriteria": "A working CLI and dashboard, a clear 25-to-88 simulated before/after demo, honest evidence boundaries, protected source lineage, passing local verification, and a reviewable public repository.",
-  "forbiddenAreas": "Do not modify the four protected source repositories, commit secrets or private screenshots, claim simulated evidence as real, add mandatory cloud dependencies, or rewrite Git history.",
+  "forbiddenAreas": "Do not modify Universal Agent OS family sources, commit secrets or private screenshots, claim simulated evidence as real, add mandatory cloud dependencies, or rewrite Git history.",
   "risk": "The largest immediate risk is a trust product that does not govern or truthfully assess its own repository; competition eligibility and Codex-use provenance must also remain explicit.",
   "expectedEvidence": "Full test suite, deterministic demo output, dashboard production build, root self-scan, source-protection checks, clean staged diff, remote commit verification, and visible NOT_RUN gates.",
   "workflow": "startup",

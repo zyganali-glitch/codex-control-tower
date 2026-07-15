@@ -10,8 +10,8 @@ Finish sanitized competition media and strengthen the evidence story without una
 
 - The published Devpost rules have been reviewed; final media and submission-form checks remain manual gates.
 - The README hero is sanitized, but the final video and screenshot set still need frame-by-frame privacy review.
-- A native Codex hook/plugin or change receipt could improve a future version, but it must not displace the working 2:45 story or bypass a new scoped approval.
-- Protected source repositories remain read-only and must never become product remotes or demo targets.
+- A native Codex hook/plugin or change receipt could improve a future version, but it must not displace the working under-three-minute story or bypass a new scoped approval.
+- Universal Agent OS family sources remain read-only and must never become product remotes or demo targets.
 
 ## Next safe action
 

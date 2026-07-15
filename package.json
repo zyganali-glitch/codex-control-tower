@@ -1,7 +1,7 @@
 {
   "name": "codex-control-tower",
   "version": "0.1.0",
-  "description": "Mission control for AI-built software.",
+  "description": "Mission control where real GPT-5.6 challenges bounded evidence in an isolated no-tool workspace while locked local facts remain authoritative.",
   "license": "MIT",
   "private": true,
   "bin": {
@@ -9,10 +9,12 @@
   },
   "keywords": [
     "codex",
+    "gpt-5-6",
     "openai",
     "ai-agents",
     "governance",
     "evidence",
+    "semantic-audit",
     "devtools",
     "local-first",
     "vscode",
@@ -37,6 +39,6 @@
     "verify": "npm test && npm run demo && npm run dashboard:build"
   },
   "devDependencies": {
-    "@openai/codex": "^0.144.3"
+    "@openai/codex": "0.144.3"
   }
 }

@@ -1,8 +1,8 @@
 # Architecture
 
-Codex Control Tower is a local-first Node.js CLI plus a Vite/React report dashboard. The core path is deterministic: it reads a target repository, derives a report from visible files and rules, and writes portable JSON/Markdown only when the user selects a generating command.
+Codex Control Tower is a local-first Node.js CLI plus a Vite/React report dashboard. Its central Build Week loop combines deterministic local facts with a real Blind GPT-5.6 Semantic Audit: the reconciler locks structural/execution state, GPT-5.6 independently challenges neutral claims against bounded raw evidence, and local code compares the two layers only after the model returns.
 
-It does not require an OpenAI API key, a database, a hosted service, a donor repository, or a competition-source repository.
+The deterministic path does not require an OpenAI API key, a database, a hosted service, or the Universal Agent OS family. The real audit is explicit opt-in and uses the ChatGPT session already signed in to Codex.
 
 ## System view
 
@@ -57,7 +57,7 @@ Commands are deliberately separated by mutation level.
 | scan | Yes | No | Optional JSON file |
 | context-graph | Yes | No | Optional JSON file |
 | memory-lens | Yes | No | Optional JSON file |
-| codex-review | Yes; derives target-appropriate claims and a bounded evidence bundle | `.controltower` claims, bundle, model output, events, hashes/freshness, and reconciliation record | Evidence Reconciliation dashboard report |
+| codex-review | Yes; derives neutral target-appropriate claims, locked local comparison state, and a bounded evidence bundle | `.controltower` claims, bundle, model output, events, hashes/freshness, and reconciliation record | Blind GPT-5.6 Semantic Audit dashboard report |
 | mistake-shield | Yes | No | No |
 | init | Yes | Minimal governance files only | No |
 | phase0 | Yes | .controltower/phase0.json and plans/PHASE0_ALIGNMENT.md only | No |
@@ -156,7 +156,13 @@ When Phase-0 data exists, Overview also renders a conditional Phase-0 Alignment 
 
 Core scanning and scoring make no model, telemetry, analytics, database, or upload call. Dependency installation can require network access; after dependencies are present, deterministic scanning/reporting does not.
 
-The `codex-review` command is a featured explicit opt-in path. It verifies ChatGPT subscription authentication and model availability, derives target-appropriate locked claims, computes `reconciliation.deterministicVerdict`, builds bounded evidence, and records `evidenceIntegrity` SHA-256/file/base-commit/bounded-worktree provenance plus `reportProvenance` freshness. It invokes `gpt-5.6-sol` read-only. Missing, duplicate, status-injecting, execution-claiming, or malformed output is rejected. Unsupported citation paths are filtered from accepted evidence and recorded. Model output remains separately labeled as `modelVerdict`, `modelSummary`, and `modelNextSafeAction`; per-claim relation is `ALIGNS_WITH_LOCKED_STATUS` or `CONFLICTS_WITH_LOCKED_STATUS`. The model never changes PASS, WARN, FAIL, NOT_RUN, SIMULATED, the deterministic local verdict, or the locally derived `nextSafeAction`.
+The `codex-review` command is a featured explicit opt-in path. It verifies ChatGPT subscription authentication and model availability, derives target-appropriate neutral claims, independently locks structural/execution states, computes `reconciliation.deterministicVerdict`, builds bounded raw evidence, and records `evidenceIntegrity` SHA-256/file/base-commit/bounded-worktree provenance plus `reportProvenance` freshness.
+
+It then invokes pinned Codex CLI `0.144.3` and `gpt-5.6-sol` with medium reasoning in a newly created empty temporary workspace. The run is ephemeral and read-only; approval escalation is disabled; user configuration, project rules/instructions, subprocess environment inheritance, and web search are disabled. The prompt withholds the reconciler's locked claim-status fields and expected comparison classes. Raw evidence can contain PASS/NOT_RUN-style labels because those are part of the material under audit; they are not disclosed as the target answer. The model returns `SUPPORTS`, `CONTRADICTS`, or `INSUFFICIENT`, plus rationale, cited evidence, counter-evidence, missing evidence, and a recommended next action.
+
+The JSONL event stream is fail-closed: only lifecycle events plus reasoning and one completed agent message are accepted. Command execution, file change, MCP, web search, plan update, unknown items, malformed JSON, errors, and failed turns reject the run. Missing, duplicate, status-injecting, execution-claiming, or malformed output is also rejected. `SUPPORTS` and `CONTRADICTS` require an allowed citation; `CONTRADICTS` requires counter-evidence; `INSUFFICIENT` requires missing evidence. Unsupported citation paths are filtered and recorded. Only after both validations does local code apply the hidden comparison policy. Per-claim relation is `ALIGNS_WITH_LOCKED_STATUS`, `COMPATIBLE_WITH_LOCKED_STATUS`, or `CONFLICTS_WITH_LOCKED_STATUS`. A conflict sets `humanReviewRequired: true` and `reviewState: HUMAN_REVIEW_REQUIRED`; `CONTRADICTS` is not automatically a conflict because, for example, it can align with a locked FAIL. The flag is advisory. The model never changes PASS, WARN, FAIL, NOT_RUN, SIMULATED, `deterministicVerdict`, the local `nextSafeAction`, or Review Gate.
+
+`MISSION_CHANGE_TEST_ALIGNMENT` provides the repository-independent semantic test: do Phase-0 goal/success criteria, recorded changes, test assertions, test output, and evidence actually align? Local PASS means the required structural/execution surfaces are present, not that semantic coverage is proven. The fictional governed fixture openly leaves one criterion unproven—a durable local audit trail for rejected payment attempts—so the real model has a controlled opportunity to find a meaningful gap. The prompt does not label that row as a challenge, direct the model to the gap, or disclose the expected classification; GPT-5.6 must relate the raw records itself, and its answer is never forced.
 
 InvoiceFlow Mini is only the bundled demonstration target. Its two prepared snapshots produce real deterministic scan/test outputs, but GPT-5.6 does not create the snapshots or cause the `25 → 88` score difference.
 
@@ -165,8 +171,9 @@ InvoiceFlow Mini is only the bundled demonstration target. Its two prepared snap
 - Generated Markdown/JSON may contain sensitive filenames, paths, plans, risks, and architecture. The user must review exports before sharing.
 - Review Gate and Flight Recorder files can be changed by any process with filesystem write access.
 - A generated mission prompt cannot force another agent to follow it; repository permissions, branch protection, CI, and human review remain necessary.
+- CCT does not replace ESLint, CI, code review, or branch protection. It adds the evidence and handoff layer around agent-assisted work.
 - Scanner and Mistake Shield rules may miss semantic defects, generated behavior, reflection, external dependencies, or novel phrasing.
-- Protected source repositories were read-only research inputs. They are not runtime dependencies, scan targets, demo targets, or write destinations.
+- Universal Agent OS family sources were read-only research inputs. They are not runtime dependencies, scan targets, demo targets, or write destinations.
 
 ## Design rationale and related evidence
 

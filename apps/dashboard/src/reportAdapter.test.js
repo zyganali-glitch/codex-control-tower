@@ -21,7 +21,7 @@ test('normalizes the simulated sample from recorded comparison and evidence data
   assert.equal(report.mistakeShield.score, null);
   assert.equal(report.sampleContext.fictional, true);
   assert.match(report.disclosure, /real deterministic scans of prepared fictional snapshots/i);
-  assert.match(report.disclosure, /recorded GPT-5\.6 reconciliation/i);
+  assert.match(report.disclosure, /recorded blind GPT-5\.6 semantic audit/i);
 });
 
 test('does not synthesize a baseline, prompt, gate, shield, or recorder event', () => {
@@ -95,7 +95,7 @@ test('uses explicit raw comparison values and derives coverage independently fro
   assert.equal(report.comparison.after.evidenceCoverage, 50);
 });
 
-test('preserves locked Evidence Reconciliation states beside model assessments', () => {
+test('preserves locked local states beside blind GPT-5.6 model assessments', () => {
   const report = normalizeReport({
     projectName: 'reconciled-project',
     score: 70,
@@ -117,6 +117,7 @@ test('preserves locked Evidence Reconciliation states beside model assessments',
   assert.equal(report.codexLiveReview.reconciliation.claimAudits[0].modelAssessment, 'SUPPORTS');
   assert.equal(report.codexLiveReview.reconciliation.claimAudits[0].relation, 'AGREEMENT');
   assert.equal(report.codexLiveReview.reconciliation.localVerdict, 'NOT_RUN');
+  assert.equal(report.codexLiveReview.reconciliation.humanReviewRequired, false);
 });
 
 test('preserves split verdicts, semantic relations, freshness, and integrity provenance', () => {
@@ -126,6 +127,7 @@ test('preserves split verdicts, semantic relations, freshness, and integrity pro
     codexLiveReview: {
       state: 'COMPLETE',
       model: 'gpt-5.6-sol',
+      mode: 'REAL_CODEX_BLIND_SEMANTIC_AUDIT',
       reconciliation: {
         verdict: 'FAIL',
         deterministicVerdict: 'FAIL',
@@ -134,10 +136,12 @@ test('preserves split verdicts, semantic relations, freshness, and integrity pro
         modelSummary: 'The model questioned one source.',
         claimAudits: [{
           id: 'CI_EXECUTION',
-          deterministicStatus: 'FAIL',
-          modelAssessment: 'QUESTIONS',
-          agreement: 'AGREEMENT',
-          relation: 'ALIGNS_WITH_LOCKED_STATUS',
+          deterministicStatus: 'PASS',
+          modelAssessment: 'CONTRADICTS',
+          agreement: 'DISAGREEMENT',
+          relation: 'CONFLICTS_WITH_LOCKED_STATUS',
+          counterEvidence: ['The named log records exit code 0.'],
+          recommendedNextAction: 'Have a human inspect the CI log.',
         }],
         reportProvenance: {
           generatedAt: '2026-07-13T10:00:00.000Z',
@@ -159,7 +163,12 @@ test('preserves split verdicts, semantic relations, freshness, and integrity pro
   const reconciliation = report.codexLiveReview.reconciliation;
   assert.equal(reconciliation.localVerdict, 'FAIL');
   assert.equal(reconciliation.modelVerdict, 'WARN');
-  assert.equal(reconciliation.claimAudits[0].relation, 'ALIGNS_WITH_LOCKED_STATUS');
+  assert.equal(reconciliation.claimAudits[0].modelAssessment, 'CONTRADICTS');
+  assert.equal(reconciliation.claimAudits[0].relation, 'CONFLICTS_WITH_LOCKED_STATUS');
+  assert.equal(reconciliation.humanReviewRequired, true);
+  assert.equal(reconciliation.reviewState, 'HUMAN_REVIEW_REQUIRED');
+  assert.deepEqual(reconciliation.claimAudits[0].counterEvidence, ['The named log records exit code 0.']);
+  assert.equal(reconciliation.claimAudits[0].recommendedNextAction, 'Have a human inspect the CI log.');
   assert.equal(reconciliation.reportProvenance.stale, false);
   assert.equal(reconciliation.evidenceIntegrity.bundle.sha256, 'bundle-digest');
   assert.equal(reconciliation.evidenceIntegrity.gitWorktreeState, 'DIRTY');

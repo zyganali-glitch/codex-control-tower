@@ -1,6 +1,6 @@
 # Originality Matrix
 
-Codex Control Tower acknowledges the **Universal Agent OS family** while making a different product bet: compute the state of a local repository, turn it into an explainable and bounded Codex mission, preserve evidence and review state, and use a featured explicit opt-in real GPT-5.6 Sol assessment without surrendering the deterministic core.
+Codex Control Tower acknowledges the **Universal Agent OS family** while making a different product bet: compute the state of a local repository, turn it into an explainable and bounded Codex mission, preserve evidence and review state, and use real GPT-5.6 as a blind semantic challenger without surrendering the deterministic core.
 
 | Prior family concept | New Codex Control Tower contribution | Build Week value |
 | --- | --- | --- |
@@ -10,8 +10,8 @@ Codex Control Tower acknowledges the **Universal Agent OS family** while making 
 | Persistent project memory | Memory Lens selects durable rules and minefields for the next mission. | Cross-session continuity. |
 | Human review | Review Gate and Mistake Shield expose explicit developer decisions and safer rewrites. | Human/Codex collaboration remains visible. |
 | Explainable context | Local Context Graph/Trace shows why each file, test, plan, or risk matters. | Product-quality context preparation. |
-| Timeline and comparison | Flight Recorder and Before/After dashboard show change over time without claiming an LLM benchmark. | A coherent 2:45 story. |
-| Model-assisted assessment | Real `gpt-5.6-sol` audits target-derived locked claims; a deterministic reconciler rejects unsafe structure, filters/records unsupported citations, preserves the local verdict, and exposes semantic alignment/conflict plus hashes/freshness. | Codex is a live product participant without owning the evidence state. |
+| Timeline and comparison | Flight Recorder and Before/After dashboard show change over time without claiming an LLM benchmark. | A coherent under-three-minute story. |
+| Blind semantic challenge | Real `gpt-5.6-sol` receives neutral claims/bounded raw evidence while locked comparison targets/expected classes are withheld; local code validates, reconciles, and can raise human review without changing facts. | Codex/GPT-5.6 are live product participants rather than decorative generators. |
 
 ## Originality guardrails
 
