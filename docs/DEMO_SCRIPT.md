@@ -51,7 +51,7 @@ Start on **GitHub Pages**, already scrolled to the completed **Blind GPT-5.6 Sem
 
 ### Narration
 
-“This is a real GPT-5.6 Sol run inside Codex Control Tower. GPT-5.6 independently challenges the evidence, but it can never overwrite the locked local facts.”
+“This is a real GPT-5.6 Sol run in Codex Control Tower. It challenges evidence but cannot change locked local facts.”
 
 ## 0:10–0:30 — Problem and honest boundary
 
@@ -61,7 +61,7 @@ Keep Pages visible. Show the **FICTIONAL SAMPLE PROJECT** and **REAL EXECUTION**
 
 ### Narration
 
-“Codex can build quickly, but scope, skipped checks, and proof can disappear inside a chat. InvoiceFlow Mini is fictional. The scans, focused tests, evidence hashes, and recorded model call are real executions on that controlled sample.”
+“Codex builds quickly, but scope and proof can disappear. InvoiceFlow Mini is fictional. The scans, two tests, hashes, and GPT-5.6 call are real.”
 
 ## 0:30–0:48 — Reproducible prepared comparison
 
@@ -71,7 +71,7 @@ Open **Before / After** and point to `25`, `16`, `88`, `1`, and the two focused 
 
 ### Narration
 
-“These are prepared snapshots, not a customer transformation. The local scanner reproducibly finds twenty-five points and sixteen risks before, then eighty-eight and one after. GPT-5.6 did not create this score change.”
+“These prepared snapshots score twenty-five with sixteen risks before, and eighty-eight with one risk after. They are not a customer transformation. GPT-5.6 did not create the change.”
 
 ## 0:48–1:08 — Local READY and bounded mission
 
@@ -81,7 +81,7 @@ Switch to the local workbench. Show `READY / NOT STARTED`, then the mission, all
 
 ### Narration
 
-“The local layer creates a bounded Codex mission and locks structural and execution facts before any model call. It knows whether a command ran or a gate stayed NOT_RUN, but it does not pretend that a passing test necessarily proves the mission.”
+“The local layer creates a bounded Codex mission and locks execution facts. A passing test proves that it ran, not that it proves the whole mission.”
 
 ## 1:08–1:34 — Codex launches the real run
 
@@ -91,7 +91,7 @@ Switch to **Demo Blind Audit** in Codex desktop. Paste and send the exact prompt
 
 ### Narration
 
-“Codex accelerated the architecture, implementation, tests, and verification of this product. Now Codex launches its featured run. My key human decision was to withhold locked claim-status fields and expected comparison classes, then compare GPT-5.6 only after it returns.”
+“Codex helped build and test this product. Now Codex starts the real audit. My key decision was to hide locked statuses and expected answers until GPT-5.6 returns.”
 
 ## 1:34–1:58 — Blind GPT-5.6 execution
 
@@ -101,7 +101,7 @@ Return to the local workbench. Show RUNNING, then COMPLETE if it arrives. Point 
 
 ### Narration
 
-“The command verifies my signed-in ChatGPT session. GPT-5.6 sees only neutral claims and bounded evidence in an empty workspace; project instructions and web access are disabled, and any tool event rejects the run. Locked statuses and expected classes are withheld. It must answer SUPPORTS, CONTRADICTS, or INSUFFICIENT with evidence.”
+“GPT-5.6 sees bounded evidence in an empty workspace. Project instructions and web access are off. Any tool event rejects the run. Locked statuses are hidden. The model must answer with evidence.”
 
 If completion is still pending, keep the RUNNING safety facts visible. Never replace a failed or slow run with simulated success.
 
@@ -113,7 +113,7 @@ Show `MISSION_CHANGE_TEST_ALIGNMENT`, its **Structural precheck** label, model a
 
 ### Narration
 
-“This controlled challenge asks whether changes and tests prove every success criterion. The local PASS is only a structural precheck, not semantic truth. Raw records contain a missing audit-trail requirement, but the prompt gives no expected answer. A conflict asks for human review; compatible uncertainty is not mislabeled agreement. The model cannot change local facts.”
+“Here, local PASS means structural precheck, not semantic truth. GPT-5.6 found the missing audit-trail implementation and test. That conflict requires human review, but the model still cannot change a local fact.”
 
 ## 2:28–2:43 — Preserved limits and human authority
 
@@ -123,7 +123,7 @@ Open **Evidence** and point to NOT_RUN. Show the deterministic verdict and human
 
 ### Narration
 
-“Local validation rejects tool events, malformed answers, unsupported decisive claims, and claims that the model ran tests. NOT_RUN stays NOT_RUN. The model opinion is advice; the deterministic verdict and human Review Gate remain authoritative.”
+“Local validation rejects unsafe events and unsupported answers. NOT_RUN stays NOT_RUN. The model advises; the deterministic verdict and human Review Gate stay authoritative.”
 
 ## 2:43–2:52 — Close
 

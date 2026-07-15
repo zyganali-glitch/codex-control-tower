@@ -27,6 +27,8 @@ The final tag is the frozen code/document reference. `main` may move after submi
 | Tagged repository | Frozen implementation and documentation | Canonical submitted source |
 | Devpost entry | Submitted text, public video URL, and private required fields | Canonical competition-form record |
 
+The committed final model record completed through signed-in ChatGPT with `codex-cli 0.144.3` and `gpt-5.6-sol`. It accepted zero tool events in an empty ephemeral workspace, used a fresh report and clean pre-run worktree, produced 3 SUPPORTS / 3 CONTRADICTS, aligned on five local comparison outcomes, raised one HUMAN REVIEW REQUIRED mission conflict, and preserved one locked NOT_RUN. Its local/model controlled-fixture verdicts are both FAIL; the invocation itself completed successfully.
+
 ## Competition media and private-field boundary
 
 The submission-readiness assessment treats these form-only requirements as completed:

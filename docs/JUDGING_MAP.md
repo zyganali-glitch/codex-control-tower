@@ -53,6 +53,8 @@ Codex collaborated on requirements synthesis, official-rule review, read-only li
 
 The most important corrections demonstrate genuine iteration. External review first revealed that the model prompt disclosed expected answer classes; a later red-team pass showed that a read-only target workspace could still permit unrelated reads. The final design withholds locked targets, runs from an empty temporary workspace with instruction/web/tool surfaces disabled, validates the event stream and evidence-bearing response fail-closed, and raises HUMAN REVIEW REQUIRED only after the model call.
 
+The final recorded run validates this design with a non-decorative result: exact `gpt-5.6-sol` accepted zero tool events, produced 3 SUPPORTS / 3 CONTRADICTS, aligned on five evidence-state claims, and contradicted the mission-alignment structural precheck after tracing the missing durable-audit implementation and test proof. One conflict became HUMAN REVIEW REQUIRED; one NOT_RUN remained locked. The honest local/model fixture verdicts are both FAIL, while the invocation and safety contract completed successfully.
+
 ### Honest boundary
 
 The deterministic scanner is heuristic. Two fixture tests prove only their bounded cases. GitHub Actions verifies the deterministic path, not the signed-in ChatGPT model step. Browser/load/provider/deployment/independent-security checks remain NOT_RUN unless a named artifact proves otherwise.

@@ -68,6 +68,12 @@ The fictional governed fixture contains an openly disclosed test case for semant
 
 The raw records naturally contain the success criterion and the missing implementation evidence. The prompt does not label that row as a challenge, direct GPT-5.6 to the gap, or provide the desired classification. It presents the same neutral mission/change/test/evidence relationship used for another repository. If the model relates those records and identifies the mismatch, the result demonstrates why a blind semantic challenger adds value. If it does not, that real answer remains visible. The test is controlled, not forced; it is not customer evidence and cannot change local truth.
 
+### Recorded submission run
+
+The final committed exhibit records a real completed run through signed-in ChatGPT, pinned `codex-cli 0.144.3`, and exact `gpt-5.6-sol`. The model worked from an empty ephemeral workspace; user/project instructions, web access, inherited subprocess environment, and approval escalation were disabled; the accepted event stream contained zero tool events. The pre-run worktree was clean and the report was fresh.
+
+GPT-5.6 returned 3 `SUPPORTS` and 3 `CONTRADICTS`. Five assessments aligned with the local comparison policy. On `MISSION_CHANGE_TEST_ALIGNMENT`, GPT-5.6 independently traced the durable rejected-payment audit criterion and contradicted the local structural precheck because no implementation or focused test proof existed. That single conflict raised **HUMAN REVIEW REQUIRED** while the locked `NOT_RUN` remained unchanged. Both the local controlled-fixture verdict and separate model verdict are honestly `FAIL`; the model invocation itself completed successfully. This is the product's central result: semantic reasoning found a mission-coverage gap that a passing test and structural precheck did not establish.
+
 ## What is implemented
 
 | Surface | Implementation | Evidence |

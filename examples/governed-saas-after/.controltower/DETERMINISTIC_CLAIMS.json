@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-07-15T09:06:44.006Z",
+  "generatedAt": "2026-07-15T09:09:45.959Z",
   "reportProvenance": {
     "source": "RECORDED_REPORT",
     "status": "PASS",
     "reportPath": "CONTROL_TOWER_REPORT.json",
     "generatedAt": "2026-07-15T09:05:52.103Z",
-    "loadedAt": "2026-07-15T09:06:44.905Z",
-    "ageMs": 52802,
+    "loadedAt": "2026-07-15T09:09:46.863Z",
+    "ageMs": 234760,
     "maxAgeMs": 86400000,
     "stale": false,
     "staleReasons": [],
     "preservedRecordedExecutionEvidence": true,
     "freshScanComparison": {
       "performed": true,
-      "freshScanGeneratedAt": "2026-07-15T09:06:44.921Z",
+      "freshScanGeneratedAt": "2026-07-15T09:09:46.882Z",
       "scoreMatches": true,
       "riskFlagsMatch": true,
       "changedFileCount": 0,

@@ -11,6 +11,7 @@ This review separates product implementation, published evidence, fictional samp
 | Does README explain the product in 30 seconds? | PASS | First screen states the real blind GPT-5.6 challenge, locked local authority, and human decision loop. |
 | Are GitHub Pages and the local dashboard distinguished? | PASS | Pages is the static recorded no-install exhibit; local dashboard is the live `READY → RUNNING → COMPLETE` workbench. |
 | Does the video path visibly use Codex desktop? | PASS for documented path | The script opens with completed GPT-5.6 proof, then uses a clean Demo Blind Audit task to launch `npm run demo:codex`; terminal is recovery only. |
+| Is the recording script realistically below three minutes? | PASS | The English script and Turkish guide match across nine spoken passages. The 222-word narration takes about 1:56 at a slow 115 words per minute, leaving about 64 seconds for screen transitions; the target cut is `2:52`. |
 | Is the fictional/real boundary unambiguous? | PASS | Public narrative separates fictional actors/prepared snapshots from real scans, fixture tests, evidence hashes, and GPT-5.6 reconciliation. |
 | Does README distinguish the authority layers? | PASS | “Codex writes. GPT-5.6 challenges. Control Tower locks the facts. The developer decides.” |
 | Does README acknowledge lineage without naming sibling versions? | PASS | Public lineage uses only “Universal Agent OS family.” |
@@ -34,9 +35,9 @@ This review separates product implementation, published evidence, fictional samp
 | Evidence hashes, Git context, and freshness | PASS | Reconciliation provenance distinguishes full-file, included-content, and bundle SHA-256; it also exposes base commit, bounded worktree state, target-local raw test output, and stale/current state |
 | Unsafe model-output handling | PASS | Tool/unknown/failed/malformed events and missing/duplicate/status-injecting/malformed/execution-claiming responses are rejected; decisive evidence requirements are enforced; unsupported paths are filtered and recorded |
 | READY truthfulness | PASS | READY is labeled not started; real-run claims appear only for RUNNING/COMPLETE recorded state |
-| Full root verification and dashboard production build | PASS | Current release verification record; exact module count is not a durable product claim |
+| Full root verification and dashboard production build | PASS | All ten CLI/core scripts and seven dashboard adapter tests passed; Vite transformed 50 modules; root and dashboard package audits reported zero known vulnerabilities. Module count is a recorded observation, not a durable product contract. |
 | Static judge-demo deployment | PASS | Anonymous Pages access plus [current workflow history](https://github.com/zyganali-glitch/codex-control-tower/actions/workflows/pages.yml); old run IDs are historical only |
-| Real Blind GPT-5.6 Semantic Audit | PASS | Signed-in ChatGPT subscription, exact `gpt-5.6-sol`, pinned CLI, empty ephemeral no-tool execution, locked local state, structured provenance |
+| Real Blind GPT-5.6 Semantic Audit | PASS execution; FAIL controlled-fixture verdict | Signed-in ChatGPT subscription, exact `gpt-5.6-sol`, pinned CLI, empty ephemeral execution, accepted tool events 0, fresh report, clean pre-run worktree, 3 SUPPORTS / 3 CONTRADICTS, five policy alignments, one mission conflict, HUMAN REVIEW REQUIRED, one locked NOT_RUN, structured provenance. The invocation completed successfully; FAIL honestly describes the fixture evidence. |
 | Fixture/provider deployment, load, accessibility, independent security review | NOT_RUN | Static judge hosting and focused tests do not prove these separate gates |
 
 ## Submission-only gates

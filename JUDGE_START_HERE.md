@@ -22,6 +22,8 @@ Deterministic code can reliably record that a test command exited zero, a file e
 
 The controlled `MISSION_CHANGE_TEST_ALIGNMENT` challenge includes one openly disclosed gap in the fictional governed fixture: the Phase-0 success criteria require a durable local audit trail for rejected payment attempts, while the bounded change/test evidence does not prove that full behavior. The raw records naturally expose both the criterion and the missing implementation evidence, but the prompt does not label this as a challenge, direct GPT-5.6 to the gap, or disclose the expected classification. If its assessment conflicts with the local comparison policy—for this structurally present claim, a `CONTRADICTS` result does—Control Tower raises **HUMAN REVIEW REQUIRED**. If it does not, the result remains inspectable. This is a controlled test of model value—not customer evidence, a forced outcome, or permission for the model to change local truth.
 
+**Recorded final exhibit:** the real run completed with `gpt-5.6-sol`, accepted 0 tool events, used a clean pre-run worktree, returned 3 `SUPPORTS` and 3 `CONTRADICTS`, aligned with five local comparison outcomes, and independently contradicted the structural mission-alignment precheck. The resulting single conflict raised **HUMAN REVIEW REQUIRED** while the locked `NOT_RUN` remained unchanged. Both the local fixture verdict and separate model verdict are honestly `FAIL`; that is the controlled evidence result, not a failed model invocation or failed product CI run.
+
 ## What is real
 
 - Working Node.js CLI and React dashboard

@@ -1923,7 +1923,7 @@
     "mode": "REAL_CODEX_BLIND_SEMANTIC_AUDIT",
     "model": "gpt-5.6-sol",
     "authenticatedVia": "ChatGPT subscription",
-    "startedAt": "2026-07-15T09:06:44.006Z",
+    "startedAt": "2026-07-15T09:09:45.959Z",
     "executionIsolation": {
       "workspace": "EPHEMERAL_EMPTY_DIRECTORY",
       "sandbox": "read-only",
@@ -1932,6 +1932,7 @@
       "userConfig": "ignored",
       "projectRules": "ignored",
       "projectInstructionsMaxBytes": 0,
+      "subprocessEnvironment": "none",
       "sessionPersistence": "ephemeral",
       "eventPolicy": "FAIL_CLOSED_NO_TOOL_EVENTS",
       "eventValidation": {
@@ -1943,57 +1944,57 @@
     },
     "disclosure": "Real GPT-5.6 blind semantic audit: the model receives neutral claims and bounded raw evidence in an isolated empty workspace, while the reconciler's locked claim statuses and expected comparison classes are withheld. Local states remain locked and independently reproducible.",
     "cliVersion": "codex-cli 0.144.3",
-    "completedAt": "2026-07-15T09:07:28.018Z",
+    "completedAt": "2026-07-15T09:10:27.548Z",
     "assessment": {
       "modelVerdict": "FAIL",
-      "summary": "The bounded evidence supports recorded local simulated test execution, an accurately disclosed simulated Review Gate, and visible evidence-state boundaries. It contradicts claims of CI execution, completion of every external gate, and full Phase-0 mission alignment because CI and multiple external checks were not run, while the required durable rejected-payment audit record is neither implemented nor tested.",
+      "summary": "Bounded evidence supports the recorded local test execution, the simulated Review Gate disclosure, and visible evidence boundaries. It contradicts claims of CI execution, completion of every external gate, and complete Phase-0 mission alignment because CI and multiple external gates were not run, while durable rejected-payment auditing has no implementation, assertion, or execution evidence.",
       "claimAudits": [
         {
           "id": "TEST_EXECUTION",
           "modelAssessment": "SUPPORTS",
-          "rationale": "The recorded output identifies the Node test command, exit code 0, two named passing tests, and zero failures. The test source contains corresponding assertions for payment idempotency, tampered-token rejection, and rejection of unverified payment events. This supports the claim of recorded local simulated test execution, without establishing production or external-system behavior.",
+          "rationale": "The report records a specific Node test command, exit code 0, and two passing tests. The captured output identifies the same command and test cases, and the assertions cover tampered authentication, unverified payment rejection, and payment replay idempotency. This supports recorded local simulated execution, not production or external behavior.",
           "citedEvidencePaths": [
-            ".controltower/governed-test-output.txt",
-            "tests/invoiceflow.test.js",
             "CONTROL_TOWER_REPORT.json",
+            "tests/invoiceflow.test.js",
+            ".controltower/governed-test-output.txt",
             "docs/EVIDENCE_REPORT.md"
           ],
           "counterEvidence": [],
           "missingEvidence": [],
-          "recommendedNextAction": "Retain the test source and captured output together as bounded evidence, preserving the explicit simulated/local limitation."
+          "recommendedNextAction": "Preserve the command output with its simulated/local boundary and continue citing the exact test source alongside it."
         },
         {
           "id": "CI_EXECUTION",
           "modelAssessment": "CONTRADICTS",
-          "rationale": "The report marks CI as FAIL with no evidence, lists CI under not-run verification, and raises a high-severity NO_CI risk because no CI configuration exists. The NOT_RUN documentation does not provide any CI completion record.",
+          "rationale": "The report explicitly marks CI as FAIL with no evidence, lists CI as NOT_RUN, and raises a high-severity NO_CI risk. The bounded evidence therefore affirmatively conflicts with recorded continuous-integration execution.",
           "citedEvidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             "docs/NOT_RUN_GATES.md"
           ],
           "counterEvidence": [
-            "CONTROL_TOWER_REPORT.json records evidenceStatus.ci as FAIL with evidence null, lists CI as not run, and reports NO_CI."
+            "CONTROL_TOWER_REPORT.json records evidenceStatus.ci as FAIL with null evidence, lists CI under verification.notRun, and reports no CI configuration."
           ],
           "missingEvidence": [
-            "No CI workflow configuration, CI run identifier, automation log, or CI result is present in the allowed evidence."
+            "No CI configuration, CI run record, job URL, log, or artifact is present in the allowed evidence."
           ],
-          "recommendedNextAction": "Add an approved minimal CI workflow and capture its run result before claiming recorded CI execution."
+          "recommendedNextAction": "Add an approved minimal CI workflow that runs the focused test, then retain the resulting CI job record as bounded evidence."
         },
         {
           "id": "REVIEW_GATE",
           "modelAssessment": "SUPPORTS",
-          "rationale": "The report and gate file consistently disclose an APPROVED but simulated local-file review, name the simulated reviewer, define scope and forbidden actions, and explicitly state that reviewer identity was not verified and that the gate is not enterprise identity verification.",
+          "rationale": "The report and gate file consistently disclose an APPROVED decision limited to the simulated local fixture. Both identify the simulated reviewer, scope, allowed files, forbidden actions, timestamps, lack of identity verification, and the disclaimer that this is not enterprise identity verification.",
           "citedEvidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             ".controltower/review-gate.json"
           ],
           "counterEvidence": [],
           "missingEvidence": [],
-          "recommendedNextAction": "Continue labeling the gate as simulated and local; require a separately authenticated human decision before treating it as a real organizational approval."
+          "recommendedNextAction": "Keep the simulated and identity-unverified qualifications attached whenever the approval is presented."
         },
         {
           "id": "EVIDENCE_BOUNDARY",
           "modelAssessment": "SUPPORTS",
-          "rationale": "The evidence visibly distinguishes executed PASS results, CI FAIL, numerous NOT_RUN gates, and the overarching SIMULATED mode. The evidence report also limits passing results to local simulated flows and explicitly denies production, persistence, deployment, scale, and real-provider validation.",
+          "rationale": "The report visibly identifies simulated mode, records an executed passing local test, marks CI as FAIL, and lists unexecuted gates as NOT_RUN. The evidence report and traceability documents further distinguish locally covered behavior from absent implementation and external checks, while warning that NOT_RUN is not PASS.",
           "citedEvidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             "docs/EVIDENCE_REPORT.md",
@@ -2002,29 +2003,29 @@
           ],
           "counterEvidence": [],
           "missingEvidence": [],
-          "recommendedNextAction": "Preserve the explicit PASS, FAIL, NOT_RUN, and SIMULATED labels in future summaries so none are collapsed into a general completion claim."
+          "recommendedNextAction": "Retain the explicit PASS, FAIL, NOT_RUN, and SIMULATED labels and their stated scope boundaries in future report summaries."
         },
         {
           "id": "EXTERNAL_GATES",
           "modelAssessment": "CONTRADICTS",
-          "rationale": "External and environment-dependent gates are explicitly recorded as NOT_RUN, including real identity-provider testing, real payment-provider testing, browser/accessibility, load/concurrency, deployment, and independent security review. Therefore, not every listed external verification gate has completion evidence.",
+          "rationale": "Multiple listed external verification gates explicitly remain NOT_RUN, including dependency, browser/accessibility, load/concurrency, real identity-provider, real payment-provider, and deployment checks. The report also lists CI and independent security review as not run.",
           "citedEvidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             "docs/NOT_RUN_GATES.md"
           ],
           "counterEvidence": [
-            "docs/NOT_RUN_GATES.md marks real identity-provider, real payment-provider, browser/accessibility, load/concurrency, and deployment gates NOT_RUN.",
-            "CONTROL_TOWER_REPORT.json lists browser/accessibility, load/concurrency, deployment, and independent security review as not run."
+            "docs/NOT_RUN_GATES.md marks every listed external or broader verification gate NOT_RUN.",
+            "CONTROL_TOWER_REPORT.json lists CI, browser/accessibility, load/concurrency, deployment, and independent security review under verification.notRun."
           ],
           "missingEvidence": [
-            "No completion output is provided for the listed external gates."
+            "No completion records are supplied for the gates marked NOT_RUN."
           ],
-          "recommendedNextAction": "Keep these gates NOT_RUN until each receives separately approved scope and recorded execution evidence."
+          "recommendedNextAction": "Keep the completion claim false until each applicable gate has an approved execution record; continue identifying intentionally out-of-scope gates as NOT_RUN."
         },
         {
           "id": "MISSION_CHANGE_TEST_ALIGNMENT",
           "modelAssessment": "CONTRADICTS",
-          "rationale": "Several criteria have a coherent chain: signed local sessions are implemented in auth code, tampering is asserted, and the named test is recorded as passing; verified and idempotent simulated payments are implemented, asserted, and included in the passing output; governance and traceability documents are present. However, the stated success criteria also require a durable local audit record for every rejected payment attempt. Payments reject invalid attempts by throwing errors but create no audit record, the test contains no audit assertion, and the roadmap, traceability matrix, evidence report, and NOT_RUN list all explicitly mark this requirement unimplemented or NOT_RUN. Thus every success criterion is not semantically demonstrated.",
+          "rationale": "The bounded source, assertions, and output support signed local sessions, rejection of tampered tokens and unverified payment events, idempotent payment replay, updated governance evidence, and a passing Node test. However, Phase-0 also requires a durable local audit record for every rejected payment attempt. The source throws on rejection without recording an audit entry, the test asserts only that an exception occurs, and the roadmap, traceability matrix, evidence report, and NOT_RUN record explicitly state that this criterion has no implementation, focused assertion, or command output. Therefore not every stated success criterion is semantically demonstrated.",
           "citedEvidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             "src/auth.js",
@@ -2039,29 +2040,30 @@
             ".controltower/review-gate.json"
           ],
           "counterEvidence": [
-            "src/payments.js throws on rejected payment attempts but contains no durable audit-record operation.",
-            "tests/invoiceflow.test.js asserts rejection of an unverified event but does not assert creation or persistence of an audit record.",
-            "docs/TRACEABILITY_MATRIX.md marks the durable rejected-payment audit requirement NOT_RUN with no implementation or focused assertion.",
-            "docs/EVIDENCE_REPORT.md states that durable rejected-payment auditing has no implementation, focused assertion, or command output.",
-            "plans/master-roadmap.md marks IFM-06 NOT_RUN, and docs/NOT_RUN_GATES.md confirms that no persistence mechanism or focused assertion exists."
+            "src/payments.js rejects invalid payment attempts by throwing but contains no durable audit-record write.",
+            "tests/invoiceflow.test.js checks that an unverified event throws but does not assert creation or durability of a rejection audit record.",
+            "docs/TRACEABILITY_MATRIX.md marks durable rejected-payment auditing NOT_RUN with no implementation or focused verification.",
+            "docs/EVIDENCE_REPORT.md states that durable rejected-payment auditing has no implementation, assertion, or command output.",
+            "plans/master-roadmap.md records IFM-06 as NOT_RUN.",
+            "docs/NOT_RUN_GATES.md states that no persistence mechanism or focused assertion exists."
           ],
           "missingEvidence": [
-            "A durable local audit implementation for every rejected payment path.",
-            "Focused assertions covering audit creation and durability across relevant lifecycle boundaries.",
-            "Recorded output showing those audit assertions passing.",
-            "A traceability link connecting the durable-audit criterion to implementation, assertion, and output."
+            "A bounded durable audit implementation for every rejected payment path.",
+            "Focused assertions showing rejected attempts are recorded with required audit fields.",
+            "Recorded output demonstrating the audit record survives the defined durability boundary.",
+            "A traceability link connecting the criterion to that implementation, assertion, and output."
           ],
-          "recommendedNextAction": "Under a newly approved bounded persistence scope, implement rejected-payment audit recording, add focused durability assertions for each rejection path, capture their output, and update traceability before claiming Phase-0 completion."
+          "recommendedNextAction": "Under a newly approved bounded persistence scope, implement durable rejected-attempt auditing and add focused tests covering each rejection path and the defined durability boundary."
         }
       ],
-      "nextSafeAction": "Do not claim full mission or external-gate completion; preserve the supported local simulated results and obtain approval for a bounded durable-audit implementation and test mission."
+      "nextSafeAction": "Do not claim CI, external-gate completion, or full Phase-0 success. Preserve the supported local test and simulated Review Gate evidence, and seek bounded approval before implementing and testing durable rejected-payment auditing."
     },
     "reconciliation": {
       "verdict": "FAIL",
       "deterministicVerdict": "FAIL",
       "modelVerdict": "FAIL",
       "summary": "Locked local evidence: 3 PASS, 0 WARN, 1 FAIL, 1 NOT_RUN, 1 SIMULATED.",
-      "modelSummary": "The bounded evidence supports recorded local simulated test execution, an accurately disclosed simulated Review Gate, and visible evidence-state boundaries. It contradicts claims of CI execution, completion of every external gate, and full Phase-0 mission alignment because CI and multiple external checks were not run, while the required durable rejected-payment audit record is neither implemented nor tested.",
+      "modelSummary": "Bounded evidence supports the recorded local test execution, the simulated Review Gate disclosure, and visible evidence boundaries. It contradicts claims of CI execution, completion of every external gate, and complete Phase-0 mission alignment because CI and multiple external gates were not run, while durable rejected-payment auditing has no implementation, assertion, or execution evidence.",
       "claimAudits": [
         {
           "id": "TEST_EXECUTION",
@@ -2070,13 +2072,13 @@
           "deterministicStatus": "PASS",
           "deterministicBasis": "Recorded local test-execution state and evidence references.",
           "modelAssessment": "SUPPORTS",
-          "expectedModelAssessments": [
+          "localComparisonPolicyAccepts": [
             "SUPPORTS"
           ],
           "agreement": "AGREEMENT",
           "relation": "ALIGNS_WITH_LOCKED_STATUS",
           "humanReviewRequired": false,
-          "rationale": "The recorded output identifies the Node test command, exit code 0, two named passing tests, and zero failures. The test source contains corresponding assertions for payment idempotency, tampered-token rejection, and rejection of unverified payment events. This supports the claim of recorded local simulated test execution, without establishing production or external-system behavior.",
+          "rationale": "The report records a specific Node test command, exit code 0, and two passing tests. The captured output identifies the same command and test cases, and the assertions cover tampered authentication, unverified payment rejection, and payment replay idempotency. This supports recorded local simulated execution, not production or external behavior.",
           "evidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             "tests/invoiceflow.test.js",
@@ -2085,15 +2087,15 @@
             "docs/TRACEABILITY_MATRIX.md"
           ],
           "citedEvidencePaths": [
-            ".controltower/governed-test-output.txt",
-            "tests/invoiceflow.test.js",
             "CONTROL_TOWER_REPORT.json",
+            "tests/invoiceflow.test.js",
+            ".controltower/governed-test-output.txt",
             "docs/EVIDENCE_REPORT.md"
           ],
           "rejectedEvidencePaths": [],
           "counterEvidence": [],
           "missingEvidence": [],
-          "recommendedNextAction": "Retain the test source and captured output together as bounded evidence, preserving the explicit simulated/local limitation."
+          "recommendedNextAction": "Preserve the command output with its simulated/local boundary and continue citing the exact test source alongside it."
         },
         {
           "id": "CI_EXECUTION",
@@ -2102,14 +2104,14 @@
           "deterministicStatus": "FAIL",
           "deterministicBasis": "Recorded local CI-execution state and evidence references.",
           "modelAssessment": "CONTRADICTS",
-          "expectedModelAssessments": [
+          "localComparisonPolicyAccepts": [
             "CONTRADICTS",
             "INSUFFICIENT"
           ],
           "agreement": "AGREEMENT",
           "relation": "ALIGNS_WITH_LOCKED_STATUS",
           "humanReviewRequired": false,
-          "rationale": "The report marks CI as FAIL with no evidence, lists CI under not-run verification, and raises a high-severity NO_CI risk because no CI configuration exists. The NOT_RUN documentation does not provide any CI completion record.",
+          "rationale": "The report explicitly marks CI as FAIL with no evidence, lists CI as NOT_RUN, and raises a high-severity NO_CI risk. The bounded evidence therefore affirmatively conflicts with recorded continuous-integration execution.",
           "evidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             "docs/TRACEABILITY_MATRIX.md",
@@ -2121,12 +2123,12 @@
           ],
           "rejectedEvidencePaths": [],
           "counterEvidence": [
-            "CONTROL_TOWER_REPORT.json records evidenceStatus.ci as FAIL with evidence null, lists CI as not run, and reports NO_CI."
+            "CONTROL_TOWER_REPORT.json records evidenceStatus.ci as FAIL with null evidence, lists CI under verification.notRun, and reports no CI configuration."
           ],
           "missingEvidence": [
-            "No CI workflow configuration, CI run identifier, automation log, or CI result is present in the allowed evidence."
+            "No CI configuration, CI run record, job URL, log, or artifact is present in the allowed evidence."
           ],
-          "recommendedNextAction": "Add an approved minimal CI workflow and capture its run result before claiming recorded CI execution."
+          "recommendedNextAction": "Add an approved minimal CI workflow that runs the focused test, then retain the resulting CI job record as bounded evidence."
         },
         {
           "id": "REVIEW_GATE",
@@ -2135,13 +2137,13 @@
           "deterministicStatus": "SIMULATED",
           "deterministicBasis": "Recorded local gate decision, scope, and simulation boundary.",
           "modelAssessment": "SUPPORTS",
-          "expectedModelAssessments": [
+          "localComparisonPolicyAccepts": [
             "SUPPORTS"
           ],
           "agreement": "AGREEMENT",
           "relation": "ALIGNS_WITH_LOCKED_STATUS",
           "humanReviewRequired": false,
-          "rationale": "The report and gate file consistently disclose an APPROVED but simulated local-file review, name the simulated reviewer, define scope and forbidden actions, and explicitly state that reviewer identity was not verified and that the gate is not enterprise identity verification.",
+          "rationale": "The report and gate file consistently disclose an APPROVED decision limited to the simulated local fixture. Both identify the simulated reviewer, scope, allowed files, forbidden actions, timestamps, lack of identity verification, and the disclaimer that this is not enterprise identity verification.",
           "evidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             ".controltower/review-gate.json"
@@ -2153,7 +2155,7 @@
           "rejectedEvidencePaths": [],
           "counterEvidence": [],
           "missingEvidence": [],
-          "recommendedNextAction": "Continue labeling the gate as simulated and local; require a separately authenticated human decision before treating it as a real organizational approval."
+          "recommendedNextAction": "Keep the simulated and identity-unverified qualifications attached whenever the approval is presented."
         },
         {
           "id": "EVIDENCE_BOUNDARY",
@@ -2162,13 +2164,13 @@
           "deterministicStatus": "PASS",
           "deterministicBasis": "Structural presence of the evidence, traceability, and NOT_RUN disclosures.",
           "modelAssessment": "SUPPORTS",
-          "expectedModelAssessments": [
+          "localComparisonPolicyAccepts": [
             "SUPPORTS"
           ],
           "agreement": "AGREEMENT",
           "relation": "ALIGNS_WITH_LOCKED_STATUS",
           "humanReviewRequired": false,
-          "rationale": "The evidence visibly distinguishes executed PASS results, CI FAIL, numerous NOT_RUN gates, and the overarching SIMULATED mode. The evidence report also limits passing results to local simulated flows and explicitly denies production, persistence, deployment, scale, and real-provider validation.",
+          "rationale": "The report visibly identifies simulated mode, records an executed passing local test, marks CI as FAIL, and lists unexecuted gates as NOT_RUN. The evidence report and traceability documents further distinguish locally covered behavior from absent implementation and external checks, while warning that NOT_RUN is not PASS.",
           "evidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             "docs/EVIDENCE_REPORT.md",
@@ -2184,7 +2186,7 @@
           "rejectedEvidencePaths": [],
           "counterEvidence": [],
           "missingEvidence": [],
-          "recommendedNextAction": "Preserve the explicit PASS, FAIL, NOT_RUN, and SIMULATED labels in future summaries so none are collapsed into a general completion claim."
+          "recommendedNextAction": "Retain the explicit PASS, FAIL, NOT_RUN, and SIMULATED labels and their stated scope boundaries in future report summaries."
         },
         {
           "id": "EXTERNAL_GATES",
@@ -2193,14 +2195,14 @@
           "deterministicStatus": "NOT_RUN",
           "deterministicBasis": "Recorded local completion or NOT_RUN state for external gates.",
           "modelAssessment": "CONTRADICTS",
-          "expectedModelAssessments": [
+          "localComparisonPolicyAccepts": [
             "CONTRADICTS",
             "INSUFFICIENT"
           ],
           "agreement": "AGREEMENT",
           "relation": "ALIGNS_WITH_LOCKED_STATUS",
           "humanReviewRequired": false,
-          "rationale": "External and environment-dependent gates are explicitly recorded as NOT_RUN, including real identity-provider testing, real payment-provider testing, browser/accessibility, load/concurrency, deployment, and independent security review. Therefore, not every listed external verification gate has completion evidence.",
+          "rationale": "Multiple listed external verification gates explicitly remain NOT_RUN, including dependency, browser/accessibility, load/concurrency, real identity-provider, real payment-provider, and deployment checks. The report also lists CI and independent security review as not run.",
           "evidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             "docs/NOT_RUN_GATES.md"
@@ -2211,13 +2213,13 @@
           ],
           "rejectedEvidencePaths": [],
           "counterEvidence": [
-            "docs/NOT_RUN_GATES.md marks real identity-provider, real payment-provider, browser/accessibility, load/concurrency, and deployment gates NOT_RUN.",
-            "CONTROL_TOWER_REPORT.json lists browser/accessibility, load/concurrency, deployment, and independent security review as not run."
+            "docs/NOT_RUN_GATES.md marks every listed external or broader verification gate NOT_RUN.",
+            "CONTROL_TOWER_REPORT.json lists CI, browser/accessibility, load/concurrency, deployment, and independent security review under verification.notRun."
           ],
           "missingEvidence": [
-            "No completion output is provided for the listed external gates."
+            "No completion records are supplied for the gates marked NOT_RUN."
           ],
-          "recommendedNextAction": "Keep these gates NOT_RUN until each receives separately approved scope and recorded execution evidence."
+          "recommendedNextAction": "Keep the completion claim false until each applicable gate has an approved execution record; continue identifying intentionally out-of-scope gates as NOT_RUN."
         },
         {
           "id": "MISSION_CHANGE_TEST_ALIGNMENT",
@@ -2226,13 +2228,13 @@
           "deterministicStatus": "PASS",
           "deterministicBasis": "Structural presence of a Phase-0 goal and success criteria, traceability, a passing recorded test command, and its evidence reference; semantic coverage is deliberately left to the blind model audit.",
           "modelAssessment": "CONTRADICTS",
-          "expectedModelAssessments": [
+          "localComparisonPolicyAccepts": [
             "SUPPORTS"
           ],
           "agreement": "DISAGREEMENT",
           "relation": "CONFLICTS_WITH_LOCKED_STATUS",
           "humanReviewRequired": true,
-          "rationale": "Several criteria have a coherent chain: signed local sessions are implemented in auth code, tampering is asserted, and the named test is recorded as passing; verified and idempotent simulated payments are implemented, asserted, and included in the passing output; governance and traceability documents are present. However, the stated success criteria also require a durable local audit record for every rejected payment attempt. Payments reject invalid attempts by throwing errors but create no audit record, the test contains no audit assertion, and the roadmap, traceability matrix, evidence report, and NOT_RUN list all explicitly mark this requirement unimplemented or NOT_RUN. Thus every success criterion is not semantically demonstrated.",
+          "rationale": "The bounded source, assertions, and output support signed local sessions, rejection of tampered tokens and unverified payment events, idempotent payment replay, updated governance evidence, and a passing Node test. However, Phase-0 also requires a durable local audit record for every rejected payment attempt. The source throws on rejection without recording an audit entry, the test asserts only that an exception occurs, and the roadmap, traceability matrix, evidence report, and NOT_RUN record explicitly state that this criterion has no implementation, focused assertion, or command output. Therefore not every stated success criterion is semantically demonstrated.",
           "evidencePaths": [
             "CONTROL_TOWER_REPORT.json",
             "tests/invoiceflow.test.js",
@@ -2261,19 +2263,20 @@
           ],
           "rejectedEvidencePaths": [],
           "counterEvidence": [
-            "src/payments.js throws on rejected payment attempts but contains no durable audit-record operation.",
-            "tests/invoiceflow.test.js asserts rejection of an unverified event but does not assert creation or persistence of an audit record.",
-            "docs/TRACEABILITY_MATRIX.md marks the durable rejected-payment audit requirement NOT_RUN with no implementation or focused assertion.",
-            "docs/EVIDENCE_REPORT.md states that durable rejected-payment auditing has no implementation, focused assertion, or command output.",
-            "plans/master-roadmap.md marks IFM-06 NOT_RUN, and docs/NOT_RUN_GATES.md confirms that no persistence mechanism or focused assertion exists."
+            "src/payments.js rejects invalid payment attempts by throwing but contains no durable audit-record write.",
+            "tests/invoiceflow.test.js checks that an unverified event throws but does not assert creation or durability of a rejection audit record.",
+            "docs/TRACEABILITY_MATRIX.md marks durable rejected-payment auditing NOT_RUN with no implementation or focused verification.",
+            "docs/EVIDENCE_REPORT.md states that durable rejected-payment auditing has no implementation, assertion, or command output.",
+            "plans/master-roadmap.md records IFM-06 as NOT_RUN.",
+            "docs/NOT_RUN_GATES.md states that no persistence mechanism or focused assertion exists."
           ],
           "missingEvidence": [
-            "A durable local audit implementation for every rejected payment path.",
-            "Focused assertions covering audit creation and durability across relevant lifecycle boundaries.",
-            "Recorded output showing those audit assertions passing.",
-            "A traceability link connecting the durable-audit criterion to implementation, assertion, and output."
+            "A bounded durable audit implementation for every rejected payment path.",
+            "Focused assertions showing rejected attempts are recorded with required audit fields.",
+            "Recorded output demonstrating the audit record survives the defined durability boundary.",
+            "A traceability link connecting the criterion to that implementation, assertion, and output."
           ],
-          "recommendedNextAction": "Under a newly approved bounded persistence scope, implement rejected-payment audit recording, add focused durability assertions for each rejection path, capture their output, and update traceability before claiming Phase-0 completion."
+          "recommendedNextAction": "Under a newly approved bounded persistence scope, implement durable rejected-attempt auditing and add focused tests covering each rejection path and the defined durability boundary."
         }
       ],
       "reviewState": "HUMAN_REVIEW_REQUIRED",
@@ -2298,15 +2301,15 @@
         "status": "PASS",
         "reportPath": "CONTROL_TOWER_REPORT.json",
         "generatedAt": "2026-07-15T09:05:52.103Z",
-        "loadedAt": "2026-07-15T09:06:44.905Z",
-        "ageMs": 52802,
+        "loadedAt": "2026-07-15T09:09:46.863Z",
+        "ageMs": 234760,
         "maxAgeMs": 86400000,
         "stale": false,
         "staleReasons": [],
         "preservedRecordedExecutionEvidence": true,
         "freshScanComparison": {
           "performed": true,
-          "freshScanGeneratedAt": "2026-07-15T09:06:44.921Z",
+          "freshScanGeneratedAt": "2026-07-15T09:09:46.882Z",
           "scoreMatches": true,
           "riskFlagsMatch": true,
           "changedFileCount": 0,
@@ -2315,7 +2318,7 @@
       },
       "evidenceIntegrity": {
         "algorithm": "SHA-256",
-        "gitCommit": "d82cc7813f83731e3218e23f3cf794a1e738e9a4",
+        "gitCommit": "470944e26674916df77e24387b1e26ff43228707",
         "gitWorktreeSnapshot": "PRE_RUN",
         "gitWorktreeState": "CLEAN",
         "gitChangedPaths": [],
@@ -2401,15 +2404,15 @@
           {
             "path": ".controltower/DETERMINISTIC_CLAIMS.json",
             "exists": true,
-            "sha256": "f30c7a2fe7d21b34c778c267024a56a75fda8af9a7a9e441478a619f5fa31ca3",
-            "sizeBytes": 4221,
-            "mtime": "2026-07-15T09:06:45.030Z"
+            "sha256": "1e195d6a04a59edd2c13ff925d01636dd19d362a1398f065db55b15763b32755",
+            "sizeBytes": 4222,
+            "mtime": "2026-07-15T09:09:46.994Z"
           }
         ],
         "bundle": {
           "path": ".controltower/EVIDENCE_BUNDLE.md",
-          "sha256": "47edd80f9c2f4924bf4e768a855b15cb3f441b3d4fdb5cd16abf606f44c34c43",
-          "sizeBytes": 29986,
+          "sha256": "43107422f4aacb65c27e7bfaa59a1528503c7429fbfe10a7032dd7543f1cd1d9",
+          "sizeBytes": 29987,
           "digestScope": "Exact UTF-8 bytes written to the bundle file; the digest is recorded externally to avoid a self-referential hash."
         }
       },
@@ -2442,7 +2445,7 @@
         }
       },
       "nextSafeAction": "Resolve failed locked evidence and rerun the deterministic checks; do not treat the model opinion as an override.",
-      "modelNextSafeAction": "Do not claim full mission or external-gate completion; preserve the supported local simulated results and obtain approval for a bounded durable-audit implementation and test mission.",
+      "modelNextSafeAction": "Do not claim CI, external-gate completion, or full Phase-0 success. Preserve the supported local test and simulated Review Gate evidence, and seek bounded approval before implementing and testing durable rejected-payment auditing.",
       "safetyBoundary": "GPT-5.6 independently challenges bounded evidence but cannot replace deterministic PASS, WARN, FAIL, NOT_RUN, or SIMULATED states. Mission alignment compares a semantic model opinion with a labeled local structural precheck, not with a claimed deterministic semantic truth. A conflict requests human review; it never rewrites local truth."
     },
     "reportProvenance": {
@@ -2450,15 +2453,15 @@
       "status": "PASS",
       "reportPath": "CONTROL_TOWER_REPORT.json",
       "generatedAt": "2026-07-15T09:05:52.103Z",
-      "loadedAt": "2026-07-15T09:06:44.905Z",
-      "ageMs": 52802,
+      "loadedAt": "2026-07-15T09:09:46.863Z",
+      "ageMs": 234760,
       "maxAgeMs": 86400000,
       "stale": false,
       "staleReasons": [],
       "preservedRecordedExecutionEvidence": true,
       "freshScanComparison": {
         "performed": true,
-        "freshScanGeneratedAt": "2026-07-15T09:06:44.921Z",
+        "freshScanGeneratedAt": "2026-07-15T09:09:46.882Z",
         "scoreMatches": true,
         "riskFlagsMatch": true,
         "changedFileCount": 0,
@@ -2467,7 +2470,7 @@
     },
     "evidenceIntegrity": {
       "algorithm": "SHA-256",
-      "gitCommit": "d82cc7813f83731e3218e23f3cf794a1e738e9a4",
+      "gitCommit": "470944e26674916df77e24387b1e26ff43228707",
       "gitWorktreeSnapshot": "PRE_RUN",
       "gitWorktreeState": "CLEAN",
       "gitChangedPaths": [],
@@ -2553,15 +2556,15 @@
         {
           "path": ".controltower/DETERMINISTIC_CLAIMS.json",
           "exists": true,
-          "sha256": "f30c7a2fe7d21b34c778c267024a56a75fda8af9a7a9e441478a619f5fa31ca3",
-          "sizeBytes": 4221,
-          "mtime": "2026-07-15T09:06:45.030Z"
+          "sha256": "1e195d6a04a59edd2c13ff925d01636dd19d362a1398f065db55b15763b32755",
+          "sizeBytes": 4222,
+          "mtime": "2026-07-15T09:09:46.994Z"
         }
       ],
       "bundle": {
         "path": ".controltower/EVIDENCE_BUNDLE.md",
-        "sha256": "47edd80f9c2f4924bf4e768a855b15cb3f441b3d4fdb5cd16abf606f44c34c43",
-        "sizeBytes": 29986,
+        "sha256": "43107422f4aacb65c27e7bfaa59a1528503c7429fbfe10a7032dd7543f1cd1d9",
+        "sizeBytes": 29987,
         "digestScope": "Exact UTF-8 bytes written to the bundle file; the digest is recorded externally to avoid a self-referential hash."
       }
     },

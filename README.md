@@ -4,7 +4,7 @@
 
 > **Mission control for AI-built software.**
 
-Codex Control Tower uses a real, read-only GPT-5.6 run to independently challenge neutral claims and bounded raw evidence while the reconciler's locked claim-status fields and expected comparison classes are withheld—and GPT-5.6 can never overwrite the locked local facts.
+Codex Control Tower runs real GPT-5.6 in an empty, ephemeral, read-only, no-tool Codex workspace to independently challenge neutral claims and bounded raw evidence while the reconciler's locked claim-status fields and expected comparison classes are withheld—and GPT-5.6 can never overwrite the locked local facts.
 
 **OpenAI Build Week Developer Tools entry · real Blind GPT-5.6 Semantic Audit · deterministic authority · no API key required · fictional sample separated from real execution**
 
@@ -23,6 +23,19 @@ Control Tower turns repository state into a bounded Codex mission and locks loca
 **Main loop:** local scan → bounded Codex mission → locked facts → blind GPT-5.6 semantic challenge → deterministic reconciliation → human decision → evidence handoff.
 
 > **Codex writes. GPT-5.6 challenges. Control Tower locks the facts. The developer decides.**
+
+## Recorded Submission Result
+
+The committed exhibit contains a completed real run from 2026-07-15, not a mocked model card:
+
+- signed-in ChatGPT subscription, pinned `codex-cli 0.144.3`, exact model `gpt-5.6-sol`, medium reasoning;
+- empty ephemeral workspace, read-only sandbox, web/user/project instructions disabled, no inherited subprocess environment, no approval escalation;
+- fail-closed event result: one completed model message, one completed turn, **0 accepted tool events**;
+- fresh report and clean pre-run worktree at source commit `470944e26674916df77e24387b1e26ff43228707`;
+- completed audit result: local fixture verdict `FAIL`, separate GPT-5.6 verdict `FAIL`, 3 `SUPPORTS`, 3 `CONTRADICTS`, 5 policy alignments, 1 semantic conflict, 1 locked `NOT_RUN`, and **HUMAN REVIEW REQUIRED**;
+- the conflict is substantive: local code found the mission/test/evidence surfaces structurally present, while GPT-5.6 traced the stated durable rejected-payment audit requirement and showed that neither implementation nor focused test proof existed.
+
+`FAIL` here is the honest controlled-fixture evidence verdict, not a failed model invocation or failed Control Tower CI run. The model run completed successfully and exposed the intended mission-coverage gap without changing any local state. Inspect the [recorded audit](examples/governed-saas-after/.controltower/codex-live-review-record.json), [exact model input](examples/governed-saas-after/.controltower/CODEX_LIVE_REVIEW_PROMPT.md), and [accepted JSONL lifecycle events](examples/governed-saas-after/.controltower/codex-live-events.jsonl).
 
 ## Why This Is Different
 
@@ -54,7 +67,7 @@ The `MISSION_CHANGE_TEST_ALIGNMENT` challenge is repository-independent. It comp
 1. Read [Judge: Start Here](JUDGE_START_HERE.md).
 2. Open the [GitHub Pages dashboard](https://zyganali-glitch.github.io/codex-control-tower/); no installation is required.
 3. Read the separate **FICTIONAL SAMPLE PROJECT** and **REAL EXECUTION** disclosures.
-4. Inspect **Blind GPT-5.6 Semantic Audit**: exact model, read-only provenance, independent assessment, evidence citations, reconciliation, and any **HUMAN REVIEW REQUIRED** flag.
+4. Inspect **Blind GPT-5.6 Semantic Audit**: exact model, empty ephemeral workspace, accepted tool events `0`, structural precheck, independent assessment, evidence citations, reconciliation, and **HUMAN REVIEW REQUIRED**.
 5. Open **Before / After** for the reproducible `25 → 88` score and `16 → 1` risk comparison.
 6. Open **Evidence** and confirm unavailable gates remain NOT_RUN.
 
@@ -79,7 +92,7 @@ The deterministic path requires no OpenAI API key. The featured model path uses 
 For the real run, open this repository in the Codex desktop app and give Codex this instruction:
 
 ~~~text
-Without editing any files, run `npm run demo:codex` for this project. Keep the run read-only. When it completes, report the exact model, the deterministic local verdict, the separate GPT-5.6 verdict, SUPPORTS / CONTRADICTS / INSUFFICIENT counts, whether HUMAN REVIEW REQUIRED was raised, the preserved NOT_RUN count, evidence freshness, and the evidence-record path. If it fails, show the real failure and do not replace it with simulated success.
+Without editing any files, run `npm run demo:codex` for this project. Keep the run read-only. When it completes, report the exact model, empty-workspace and no-tool-event proof, the deterministic local verdict, the separate GPT-5.6 verdict, SUPPORTS / CONTRADICTS / INSUFFICIENT counts, whether HUMAN REVIEW REQUIRED was raised, the preserved NOT_RUN count, evidence freshness, and the evidence-record path. If it fails, show the real failure and do not replace it with simulated success.
 ~~~
 
 `npm run demo:codex` verifies the signed-in ChatGPT session and model catalog, then invokes real `gpt-5.6-sol` with medium reasoning inside an empty temporary workspace. The run is read-only and ephemeral; user configuration, project rules/instructions, web search, and approval escalation are disabled. Local code rejects any command, file, MCP, web-search, plan, unknown, failed, or malformed Codex event. It also validates the structured result, requires allowed citations for decisive assessments, records hashes and Git provenance, and performs the local reconciliation. The Codex dependency is pinned to `0.144.3` so this fail-closed event contract cannot silently drift. There is no hidden fallback to deterministic or simulated output.
@@ -90,7 +103,7 @@ For the exact Codex instruction, see [Codex Demo Prompt](docs/CODEX_DEMO_PROMPT.
 
 **FICTIONAL SAMPLE PROJECT:** InvoiceFlow Mini is a controlled invoice/customer/payment example created only for this repository. Its actors, approvals, customer facts, and prepared before/governed snapshots are fictional. GPT-5.6 did not create the snapshots and did not cause the score change.
 
-**REAL EXECUTION:** Control Tower really scans both snapshots, calculates the heuristic scores, runs two focused Node.js fixture tests, builds and hashes evidence, records provenance/freshness, and invokes real `gpt-5.6-sol` read-only. These are bounded tool outputs—not customer validation, production readiness, a correctness guarantee, or independent security review.
+**REAL EXECUTION:** Control Tower really scans both snapshots, calculates the heuristic scores, runs two focused Node.js fixture tests, builds and hashes evidence, records provenance/freshness, and invokes real `gpt-5.6-sol` in an empty ephemeral read-only no-tool workspace. These are bounded tool outputs—not customer validation, production readiness, a correctness guarantee, or independent security review.
 
 The prepared comparison is reproducible:
 

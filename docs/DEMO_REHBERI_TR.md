@@ -278,11 +278,11 @@ Ekranda yap:
 
 Söyle:
 
-> “This is a real GPT-5.6 Sol run inside Codex Control Tower. GPT-5.6 challenges the evidence, but it can never overwrite the locked local facts.”
+> “This is a real GPT-5.6 Sol run in Codex Control Tower. It challenges evidence but cannot change locked local facts.”
 
 Yaklaşık okunuş:
 
-> “Dis iz ı riyıl ci-pi-ti fayv point siks Sol ran insayd Kodeks Kontrol Tavır. Ci-pi-ti fayv point siks çelıncız dı evidıns, bat it ken nevır ovır-rayt dı lokt lokıl fekts.”
+> “Dis iz ı riyıl ci-pi-ti fayv point siks Sol ran in Kodeks Kontrol Tavır. İt çelıncız evidıns bat kenat çeync lokt lokıl fekts.”
 
 Anlamı: Bu, ürünün içindeki gerçek GPT-5.6 çalışmasıdır. Model kanıta itiraz edebilir ama kilitli yerel gerçekleri değiştiremez.
 
@@ -295,11 +295,11 @@ Ekranda yap:
 
 Söyle:
 
-> “Codex can build quickly, but scope, skipped checks, and proof can disappear inside a chat. InvoiceFlow Mini is fictional. The scans, focused tests, evidence hashes, and GPT-5.6 call are real.”
+> “Codex builds quickly, but scope and proof can disappear. InvoiceFlow Mini is fictional. The scans, two tests, hashes, and GPT-5.6 call are real.”
 
 Yaklaşık okunuş:
 
-> “Kodeks ken bild kuikli, bat skop, skipt çeks, end pruf ken disapir insayd ı çet. İnvoys Flo Mini iz fikşınıl. Dı skenz, fokıst tests, evidıns heşız, end ci-pi-ti fayv point siks kol ar riyıl.”
+> “Kodeks bildz kuikli, bat skop end pruf ken disapir. İnvoys Flo Mini iz fikşınıl. Dı skenz, tu tests, heşız, end ci-pi-ti fayv point siks kol ar riyıl.”
 
 ### 0:30–0:48 — Önce ve sonra görünümünü göster
 
@@ -310,11 +310,11 @@ Ekranda yap:
 
 Söyle:
 
-> “These are prepared snapshots, not a customer transformation. The scanner finds twenty-five points and sixteen risks before, then eighty-eight and one after. GPT-5.6 did not create this change.”
+> “These prepared snapshots score twenty-five with sixteen risks before, and eighty-eight with one risk after. They are not a customer transformation. GPT-5.6 did not create the change.”
 
 Yaklaşık okunuş:
 
-> “Diiz ar priperd snapşats, nat ı kastımır transformeyşın. Dı skenır faynds tventi fayv points end sikstiin risks bifor, den eyti eyt end van aftır. Ci-pi-ti fayv point siks did nat kriyeyt dis çeync.”
+> “Diiz priperd snapşats skor tventi fayv vit sikstiin risks bifor, end eyti eyt vit van risk aftır. Dey ar nat ı kastımır transformeyşın. Ci-pi-ti fayv point siks did nat kriyeyt dı çeync.”
 
 ### 0:48–1:08 — Bilgisayardaki canlı HAZIR durumuna geç
 
@@ -326,11 +326,11 @@ Ekranda yap:
 
 Söyle:
 
-> “The local layer creates a bounded Codex mission and locks facts before any model call. It records whether a command ran, but it does not pretend that a passing test proves the whole mission.”
+> “The local layer creates a bounded Codex mission and locks execution facts. A passing test proves that it ran, not that it proves the whole mission.”
 
 Yaklaşık okunuş:
 
-> “Dı lokıl leyır kriyeyts ı baundıd Kodeks mişın end loks fekts bifor eni modıl kol. İt rikords vedır ı komand ren, bat it daz nat pritend det ı pasing test pruvz dı hol mişın.”
+> “Dı lokıl leyır kriyeyts ı baundıd Kodeks mişın end loks eksikyuşın fekts. ı pasing test pruvz det it ran, nat det it pruvz dı hol mişın.”
 
 ### 1:08–1:34 — Codex'e gerçek talimatı ver
 
@@ -343,11 +343,11 @@ Ekranda yap:
 
 Söyle:
 
-> “Codex accelerated the architecture, implementation, tests, and verification. Now Codex launches the real GPT-5.6 audit. My key human decision was to withhold locked claim-status fields and expected comparison classes.”
+> “Codex helped build and test this product. Now Codex starts the real audit. My key decision was to hide locked statuses and expected answers until GPT-5.6 returns.”
 
 Yaklaşık okunuş:
 
-> “Kodeks ekselıreytıd dı arkitekçır, implımınteyşın, tests, end verifikeyşın. Nau Kodeks lonçız dı riyıl ci-pi-ti fayv point siks odit. May kii hümın disicın vaz tu vidhold lokt kleym steytıs fiilds end ekspektıd komperısın klasız.”
+> “Kodeks helpt bild end test dis prodakt. Nau Kodeks starts dı riyıl odit. May kii disicın vaz tu hayd lokt steytısız end ekspektıd ansırz until ci-pi-ti fayv point siks ritörnz.”
 
 ### 1:34–1:58 — Gerçek kör anlam incelemesini göster
 
@@ -360,11 +360,11 @@ Ekranda yap:
 
 Söyle:
 
-> “GPT-5.6 sees only bounded evidence in an empty workspace. Project instructions and web access are disabled, and any tool event rejects the run. Locked statuses and expected classes are withheld. It answers with evidence.”
+> “GPT-5.6 sees bounded evidence in an empty workspace. Project instructions and web access are off. Any tool event rejects the run. Locked statuses are hidden. The model must answer with evidence.”
 
 Yaklaşık okunuş:
 
-> “Ci-pi-ti fayv point siks siiz onli baundıd evidıns in en empti vörkspeys. Procet instrakşınz end veb ekses ar diseybıld, end eni tul ivent ricekts dı ran. Lokt steytısız end ekspektıd klasız ar vithold. İt ansırs vit evidıns.”
+> “Ci-pi-ti fayv point siks siiz baundıd evidıns in en empti vörkspeys. Procet instrakşınz end veb ekses ar of. Eni tul ivent ricekts dı ran. Lokt steytısız ar hidın. Dı modıl mast ansır vit evidıns.”
 
 İşlem henüz bitmediyse telaş etme. `RUNNING` ekranında güvenlik sınırlarını göstermeye devam et. Sahte tamamlanma gösterme.
 
@@ -380,11 +380,11 @@ Ekranda yap:
 
 Söyle:
 
-> “This controlled challenge asks whether changes and tests prove every success criterion. The local PASS is only a structural precheck, not semantic truth. The prompt gives no expected answer. A conflict requires human review; compatible uncertainty is not full agreement. No local fact changes.”
+> “Here, local PASS means structural precheck, not semantic truth. GPT-5.6 found the missing audit-trail implementation and test. That conflict requires human review, but the model still cannot change a local fact.”
 
 Yaklaşık okunuş:
 
-> “Dis kontrolld çelınc asks vedır çeyncız end tests pruv evri sakses kraytiriyın. Dı lokıl pas iz onli ı strakçırıl pri-çek, nat simentik trut. Dı prompt givz no ekspektıd ansır. ı konflikt rikvayırz hümın rivyu; kompatıbıl ansörtınti iz nat ful ıgriimınt. No lokıl fekt çeyncız.”
+> “Hir, lokıl pas miinz strakçırıl pri-çek, nat simentik trut. Ci-pi-ti fayv point siks faund dı mising odit treyl implımınteyşın end test. Det konflikt rikvayırz hümın rivyu, bat dı modıl stil kenat çeync ı lokıl fekt.”
 
 `HUMAN REVIEW REQUIRED` oluşmadıysa “oluştu” deme. Bunun yerine son cümleyi şöyle değiştir:
 
@@ -401,11 +401,11 @@ Ekranda yap:
 
 Söyle:
 
-> “Local validation rejects tool events and unsupported decisive claims. NOT_RUN stays NOT_RUN. The model opinion is advice; the deterministic verdict and human Review Gate remain authoritative.”
+> “Local validation rejects unsafe events and unsupported answers. NOT_RUN stays NOT_RUN. The model advises; the deterministic verdict and human Review Gate stay authoritative.”
 
 Yaklaşık okunuş:
 
-> “Lokıl valideyşın ricekts tul ivents end ansaportıd disaysiv kleymz. Nat ran steyz nat ran. Dı modıl opinyın iz edvays; dı ditörmınıstik vördict end hümın rivyu geyt rimeyn otoritıtiv.”
+> “Lokıl valideyşın ricekts anseyf ivents end ansaportıd ansırz. Nat ran steyz nat ran. Dı modıl edvayzız; dı ditörmınıstik vördict end hümın rivyu geyt stey otoritıtiv.”
 
 ### 2:43–2:52 — Kapanış
 

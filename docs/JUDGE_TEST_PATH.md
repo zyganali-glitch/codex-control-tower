@@ -23,6 +23,7 @@ GitHub Pages is a static, sanitized, no-install exhibit. It does not scan a judg
 - Two focused Node.js fixture tests really ran on the governed prepared snapshot.
 - A recorded real `gpt-5.6-sol` run reviewed bounded raw evidence from an empty ephemeral read-only workspace.
 - Local code rejected tool/unknown/failed/malformed events, validated the evidence-bearing model result, and reconciled it without granting model authority over locked facts.
+- The committed final record accepted 0 tool events, returned 3 SUPPORTS / 3 CONTRADICTS, aligned on five local comparison outcomes, raised one HUMAN REVIEW REQUIRED mission conflict, and preserved one locked NOT_RUN. Its local/model fixture verdicts are both honestly FAIL; the real invocation completed successfully.
 
 ## What it does not prove
 

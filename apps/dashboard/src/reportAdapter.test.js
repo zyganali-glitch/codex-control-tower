@@ -101,7 +101,7 @@ test('preserves locked local states beside blind GPT-5.6 model assessments', () 
     score: 70,
     codexLiveReview: {
       state: 'COMPLETE',
-      mode: 'REAL_CODEX_EVIDENCE_RECONCILIATION',
+      mode: 'REAL_CODEX_BLIND_SEMANTIC_AUDIT',
       reconciliation: {
         claimAudits: [{
           id: 'EXTERNAL_GATES',
