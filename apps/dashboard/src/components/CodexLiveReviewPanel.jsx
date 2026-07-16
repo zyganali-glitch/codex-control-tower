@@ -134,10 +134,10 @@ function ProofAndProvenance({ review, report }) {
       || review.liveRecordPath
       || evidenceFiles.find((file) => String(file.path || '').includes('live-review-record'))?.path,
   );
-  const warnings = [
+  const warnings = [...new Set([
     ...(Array.isArray(provenance.staleReasons) ? provenance.staleReasons : []),
     ...(Array.isArray(reconciliation.warnings) ? reconciliation.warnings : []),
-  ];
+  ].map((warning) => String(warning).trim()).filter(Boolean))];
   const metadata = [
     ['Model', review.model || 'Not selected'],
     ['Audit mode', review.mode || 'Not recorded'],
