@@ -24,9 +24,9 @@ Ham video klasörünü Dosya Gezgini'nde şu biçimde bul:
 
 Bu klasördeki hiçbir dosyayı silme, yeniden adlandırma veya üzerine kaydetme.
 
-- 01, 02, 04, 05, 06, 07, 08, 09, 10 ve 12 numaralı mevcut videolar korunacaktır.
+- 01, 02, 04, 05, 06, 07, 08, 09, 10, 11 ve 12 numaralı mevcut videolar korunacak ve son kurguda kullanılacaktır.
 - Eski 8 saniyelik 03 dosyası korunacak ama son kurguda kullanılmayacaktır. Yeni 15 saniyelik 03 ayrı dosya olacaktır.
-- Eski 11 dosyası korunacaktır. Yeni 11, gerçek YouTube bağlantısı belgelere eklendikten ve gerçek `openai-build-week-final-v2` etiketi ile sürümü yayımlandıktan sonra ayrı dosya olarak çekilecektir.
+- Mevcut 16 saniyelik 11 dosyası değişmeden kullanılacaktır. Yeniden çekme, silme, yeniden adlandırma veya üzerine kaydetme. Bu kayıt tarihsel dondurulmuş etiketi ve herkese açık depoyu gösterir; v2'nin var olduğunu iddia etmez.
 
 ## Clipchamp'ın önemli sınırı
 
@@ -78,7 +78,7 @@ Bir hata görürsen çekime başlama. Hata metninin ekran görüntüsünü bu Co
 ### 3. 03 panelini aç
 
 1. Açılan Chrome veya Edge penceresini büyüt.
-2. Sol taraftan `Mistake Shield` bölümüne tıkla.
+2. Sol taraftan `Safety Preflight` bölümüne tıkla.
 3. Sayfanın üstündeki **DESTRUCTIVE ACTION PREFLIGHT** panelini bul.
 4. Gerekirse sayfayı az miktarda kaydır; panelin tamamı aynı ekrana sığsın.
 5. Tarayıcı büyüklüğünü normalde, yani yüzde 100'de tut.
@@ -261,19 +261,19 @@ Bu maddelerin tamamı görünüyorsa ana Codex görevi sana **“03 numaralı ka
 
 **Görmen gereken sonuç:** Puanların yerel taramaya ait olduğu anlaşılmalıdır. Mevcut ham video korunur.
 
-## 11 numaralı video — 16 saniye — beklemede
+## 11 numaralı video — 16 saniye — mevcut kaydı kullan
 
-**Tam dosya adı:** `11 (16 sn) Codex helped turn the competition brief into the CLI, tests, dashboard, and evidence workflow. I chose the authority, safety, and disclosure boundaries. The frozen tag preserves the submitted source for judges.mp4`
+**Tam dosya adı:** `11 (16 sn) The frozen Build Week tag preserves the submitted source. The public repository exposes the GPT-5.6 story, evidence, tests, workflows, a live demo, and a release for judges.mp4`
 
-**Ekranda göster:** Tek GitHub tarayıcı penceresinde güncel README başlangıcı, yeşil Actions/Pages, gerçek `openai-build-week-final-v2` sürümü, sürüm notlarında GPT-5.6 ve Destructive Action Preflight, JUDGE_START_HERE bağlantısı.
+**Ekranda göster:** Mevcut GitHub kaydını değiştirmeden kullan. Görüntüde deponun genel açılışı ve üstteki dosya listesi, README başlığı ile ilk paragrafı ve yayımlanmış sürüm alanı bulunur. README'nin aşağı bölümlerinin görünmesi gerekmez. Bu tarihsel dondurulmuş temel kaydıdır; v2'nin zaten var olduğu iddiası değildir.
 
-**Fare hareketi:** README v0.2.0, yeşil durum, v2 sürümü, GPT-5.6/ön denetim notu ve jüri bağlantısında sırayla bekle.
+**Fare hareketi:** Mevcut kayıtta deponun açılışı, README ilk paragrafı ve sürüm alanı arasında yapılan hareketi aynen koru.
 
-**Tam İngilizce seslendirme:** “Codex helped turn the competition brief into the CLI, tests, dashboard, and evidence workflow. I chose the authority, safety, and disclosure boundaries. The frozen tag preserves the submitted source for judges.”
+**Tam İngilizce seslendirme:** “The frozen Build Week tag preserves the submitted source. The public repository exposes the GPT-5.6 story, evidence, tests, workflows, a live demo, and a release for judges.”
 
-**Türkçe anlamı:** Codex yarışma özetini komut aracına, denetimlere, gösterge paneline ve kanıt akışına dönüştürmeye yardım etti. Yetki, güvenlik ve açıklama sınırlarını ben seçtim. Dondurulmuş etiket gönderilen kaynağı jüri için korur.
+**Türkçe anlamı:** Dondurulmuş Build Week etiketi gönderilen kaynağı korur. Herkese açık depo GPT-5.6 anlatısını, kanıtları, testleri, iş akışlarını, canlı demoyu ve jüri için bir sürümü gösterir.
 
-**Görmen gereken sonuç:** Bu video şu anda **çekilmeyecek**. Gerçek herkese açık YouTube bağlantısı doğrulanmadan, belgelere eklenmeden ve gerçek v2 etiket/sürüm yayımlanmadan kullanıcı çekime çağrılmamalıdır. Eski ham 11 dosyasını silme.
+**Görmen gereken sonuç:** Bu video yeniden çekilmeyecek. Mevcut ham 11 dosyası son kurguda aynen kullanılacaktır. Yeni Destructive Action Preflight kanıtını yeni 03 videosu gösterir. Mevcut 11, `openai-build-week-final-v2` etiketinin var olduğunu söylemez.
 
 ## 12 numaralı video — 8 saniye
 
@@ -293,14 +293,14 @@ Bu maddelerin tamamı görünüyorsa ana Codex görevi sana **“03 numaralı ka
 
 1. Clipchamp'ta yeni boş video aç.
 2. Ham video klasöründeki kullanılacak dosyaları içe aktar.
-3. Zaman çizelgesine şu sırayla koy: `01, 02, yeni 03, 04, 05, 06, 07, 08, 09, 10, yeni 11, 12`.
+3. Zaman çizelgesine şu sırayla koy: `01, 02, yeni 03, 04, 05, 06, 07, 08, 09, 10, mevcut 11, 12`.
 4. Her parça arasında boş siyah alan olmadığını kontrol et.
 5. Sürelerin sırasıyla `10, 13, 15, 12, 20, 14, 15, 17, 16, 16, 16, 8` saniye olduğunu kontrol et.
 6. Toplamın `2:52` olduğunu gör.
 7. Videoyu baştan sona izle; yalnızca başını ve sonunu kontrol etme.
 8. Dışa aktarmadan önce sesin duyulduğunu ve yazıların okunabildiğini doğrula.
 
-Yeni 11 henüz çekilmediyse bu son birleştirme aşaması **beklemededir**. Olmayan etiketi veya sürümü gösteren sahte görüntü hazırlama.
+Yeni 03 kaydını tamamladıktan sonra 12 parçayı mevcut 11 ile birleştir ve dışa aktar. Nihai videoyu herkese açık YouTube'a yükle; gerçek bağlantıyı belgelere eklemek üzere Codex'e gönder. Codex bağlantıyı doğrulayıp ekledikten, testleri yeniden çalıştırdıktan ve Pages'i doğruladıktan sonra v2 etiketini ve sürümünü oluşturacaktır. YouTube bağlantısından önce v2 oluşturma veya olmayan bir etiketi gösteren sahte görüntü hazırlama.
 
 ## Son gizlilik kontrolü
 
@@ -324,7 +324,7 @@ Gerçek nihai video tamamlanıp YouTube'a **Herkese Açık** olarak yüklendiği
 5. Süre `3:00` değerinden kısa mı kontrol et.
 6. Bağlantıyı bu Codex görevine gönder.
 
-Codex bağlantıyı doğruladıktan sonra README, JUDGE_START_HERE, Devpost metni ve Submission Manifest içine ekleyecek; son denetimleri yeniden çalıştıracak; ardından `openai-build-week-final-v2` etiketi ve aynı adlı sürümü oluşturacaktır. Hayalî veya geçici bağlantı yazılmayacaktır. Eski `openai-build-week-final` etiketi değiştirilmeyecektir.
+Codex bağlantıyı doğruladıktan sonra README, JUDGE_START_HERE, Devpost metni ve Submission Manifest içine ekleyecek; testleri yeniden çalıştıracak ve Pages'i doğrulayacak; ancak bundan sonra `openai-build-week-final-v2` etiketi ile aynı adlı sürümü oluşturacaktır. Hayalî veya geçici bağlantı yazılmayacaktır. Eski `openai-build-week-final` etiketi değiştirilmeyecektir.
 
 ## `/feedback` kimliği
 

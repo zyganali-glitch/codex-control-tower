@@ -36,4 +36,4 @@ Normal project/hash trust was not verified. Official Codex hook coverage is inco
 
 ## Current root action
 
-The sanitized v0.2.0 panel has passed 1920×1080 visual and privacy review. Record new clip 03 from the prepared Shield view, then keep the real public YouTube URL, replacement clip 11, and immutable v2 tag/release pending until their external dependencies exist.
+The sanitized v0.2.0 panel has passed 1920×1080 visual and privacy review. Record new clip 03 from the prepared Safety Preflight view, retain the existing 16-second clip 11 unchanged, and keep the real public YouTube URL plus immutable v2 tag/release pending until their external dependencies exist.

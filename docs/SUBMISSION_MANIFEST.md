@@ -40,7 +40,7 @@ The optional project hook has one retained real verification: a matching support
 - Public YouTube URL: **PENDING**. No placeholder is stored.
 - Planned final duration: `2:52` across 12 independent clips.
 - New clip 03: 15-second Destructive Action Preflight view.
-- Replacement clip 11: **PENDING** until the real YouTube URL is integrated and the real v2 tag/release exist.
+- Existing clip 11: **RETAINED** unchanged as the 16-second historical-baseline repository capture; it makes no v2 claim and is used in the final edit.
 - Private `/feedback` Session ID: Devpost-only. It must never be copied into this public repository.
 
 ## Reproduction commands

@@ -10,7 +10,7 @@
 - Added an optional Codex project `PreToolUse` hook for the supported `Bash` command subset. A real denial was verified with pinned Codex CLI `0.144.3`, `gpt-5.6-sol`, a read-only sandbox, and a nonexistent harmless probe. The verification used a one-off vetted hook-trust bypass only; normal project/hash trust was not verified.
 - Documented that Codex hook interception is incomplete, CAUTION can add context but cannot force an ask decision, hook failure is not fail-closed enforcement, and sandboxing/permissions remain primary.
 - Added no-delete regression coverage for POSIX/Windows expressions, path traversal, repository and `.git` boundaries, raw command forms, redaction, output confinement, recorder integration, and the harmless hook denial path.
-- Replaced the old nine-scene recording plan with 12 independent clips totaling `2:52`; clip 03 is now the 15-second preflight view. The public YouTube URL, replacement clip 11, and immutable `openai-build-week-final-v2` tag/release remain pending.
+- Replaced the old nine-scene recording plan with 12 independent clips totaling `2:52`; only old clip 03 is excluded from the edit and replaced by the 15-second preflight view, while the existing 16-second clip 11 is retained unchanged. The public YouTube URL and immutable `openai-build-week-final-v2` tag/release remain pending.
 
 ## Unreleased - 2026-07-13
 

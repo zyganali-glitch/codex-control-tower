@@ -10,12 +10,13 @@ InvoiceFlow Mini remains a **FICTIONAL SAMPLE PROJECT**. The scans, two focused 
 
 ## Assembly contract
 
-- Final order: `01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12`.
+- Final order: `01 → 02 → new 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10 → existing 11 → 12`.
 - Durations: `10 + 13 + 15 + 12 + 20 + 14 + 15 + 17 + 16 + 16 + 16 + 8 = 172 seconds = 2:52`.
 - The final export must remain below `3:00`.
-- Preserve raw clips 01, 02, 04, 05, 06, 07, 08, 09, 10, and 12 exactly as recorded. Do not delete, rename, or overwrite any raw file.
+- Preserve raw clips 01, 02, 04, 05, 06, 07, 08, 09, 10, 11, and 12 exactly as recorded. Do not delete, rename, or overwrite any raw file.
 - Replace the old 8-second clip 03 only in the edit; keep its raw file untouched. Record the new clip 03 as a separate 15-second file.
-- Do not record replacement clip 11 until the real public YouTube URL has been verified and integrated and `openai-build-week-final-v2` plus its release actually exist. Keep the old raw clip 11 untouched.
+- Use the existing 16-second clip 11 unchanged in the final edit. It shows the frozen historical baseline and public repository, and it makes no v2 claim. Do not re-record, rename, delete, or overwrite it.
+- Publication order: record new clip 03 → assemble and export all 12 clips with the existing clip 11 → upload the real public YouTube video → integrate and verify its URL → rerun tests and verify Pages → create and publish `openai-build-week-final-v2` and its release. Never create v2 before the real public URL is verified.
 - Clipchamp window capture records one selected window. Never require a terminal/browser, Codex/browser, or other application switch inside one clip. Prepare the exact window before recording each clip.
 - Product UI and English narration stay English. The exact Turkish translations and beginner click path are mirrored in [DEMO_REHBERI_TR.md](DEMO_REHBERI_TR.md).
 
@@ -65,7 +66,7 @@ Expected safety exhibit: operation `recursive_delete`, requested target `$HOME/.
 
 **Full filename:** `03 (15 sn) Before a destructive action, Control Tower deterministically resolves the target against protected roots. This recursive delete crosses the user-home boundary, so execution stays NOT RUN and human review is required.mp4`
 
-**Screen:** One Chrome or Edge window at normal zoom, 1920×1080, with **Destructive Action Preflight** fully readable inside Mistake Shield. Do not change applications during this clip.
+**Screen:** One Chrome or Edge window at normal zoom, 1920×1080, with **Destructive Action Preflight** fully readable in **Safety Preflight**. Do not change applications during this clip.
 
 **Mouse movement:** First 3 seconds: `DESTRUCTIVE ACTION PREFLIGHT`, `recursive_delete`, `$HOME/..`. Next 4 seconds: `<USER_HOME_PARENT>`. Next 5 seconds: `BLOCKED`, `Execution NOT_RUN`, `HUMAN REVIEW REQUIRED`. Final 3 seconds: safer next action and `ANALYSIS ONLY · NO COMMAND EXECUTED`.
 
@@ -173,19 +174,19 @@ Expected safety exhibit: operation `recursive_delete`, requested target `$HOME/.
 
 **Expected result:** The model is not credited with deterministic scoring and unavailable gates remain honest.
 
-## Clip 11 — 16 seconds — gated replacement
+## Clip 11 — 16 seconds — retain existing recording
 
-**Full filename:** `11 (16 sn) Codex helped turn the competition brief into the CLI, tests, dashboard, and evidence workflow. I chose the authority, safety, and disclosure boundaries. The frozen tag preserves the submitted source for judges.mp4`
+**Full filename:** `11 (16 sn) The frozen Build Week tag preserves the submitted source. The public repository exposes the GPT-5.6 story, evidence, tests, workflows, a live demo, and a release for judges.mp4`
 
-**Screen:** One GitHub browser window showing the current README opening, successful Actions/Pages state, `openai-build-week-final-v2` release, release notes naming GPT-5.6 and Destructive Action Preflight, and the JUDGE_START_HERE link.
+**Screen:** Keep the existing GitHub recording: the repository opening with the top of the file list, the README heading and first paragraph, and the published release area. The lower README does not need to be visible. This is the frozen historical baseline capture, not a claim that v2 already exists.
 
-**Mouse movement:** Point to README v0.2.0, green Actions/Pages, the v2 release, GPT-5.6/preflight release-note lines, and JUDGE_START_HERE.
+**Mouse movement:** Keep the movement already recorded across the repository opening, README first paragraph, and release area.
 
-**Exact English narration:** “Codex helped turn the competition brief into the CLI, tests, dashboard, and evidence workflow. I chose the authority, safety, and disclosure boundaries. The frozen tag preserves the submitted source for judges.”
+**Exact English narration:** “The frozen Build Week tag preserves the submitted source. The public repository exposes the GPT-5.6 story, evidence, tests, workflows, a live demo, and a release for judges.”
 
 **Turkish meaning:** See clip 11 in the [Turkish recording guide](DEMO_REHBERI_TR.md).
 
-**Expected result:** Record only after the real public YouTube URL is integrated and the immutable v2 tag/release exist. Until then this clip is **PENDING** and no UI or release claim may be staged or fabricated.
+**Expected result:** Use the existing clip unchanged. It truthfully records the historical `openai-build-week-final` baseline and public repository surfaces without claiming that `openai-build-week-final-v2` exists. New clip 03 carries the Destructive Action Preflight proof.
 
 ## Clip 12 — 8 seconds
 
@@ -210,11 +211,12 @@ Expected safety exhibit: operation `recursive_delete`, requested target `$HOME/.
 - [ ] No deletion command or executable is run for clip 03 or any test.
 - [ ] No clip requires an application switch inside the selected Clipchamp window.
 - [ ] Clip 05 remains the valid existing Codex Desktop capture.
-- [ ] Replacement clip 11 is not recorded before the verified public YouTube URL and real v2 tag/release exist.
+- [ ] The existing 16-second clip 11 is retained unchanged and used in the final sequence; it does not claim that v2 exists.
 - [ ] InvoiceFlow Mini and prepared snapshots are called fictional; scans/tests/hashes/model/preflight are separately described as real executions.
 - [ ] GPT-5.6 is not credited with `25 → 88`, fixture creation, scoring, or test execution.
 - [ ] No personal path, private conversation, secret, notification, or `/feedback` Session ID appears.
 - [ ] The YouTube URL remains marked PENDING until a real public, audible, under-three-minute upload is verified.
+- [ ] Only after that URL is integrated, tests pass, and Pages is verified are the immutable v2 tag and release created.
 
 ## Related assets
 

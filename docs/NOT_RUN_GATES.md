@@ -23,7 +23,7 @@ This list separates completed release evidence from work that is still unavailab
 | Normal project/hash hook trust setup | NOT_RUN | The bounded verification deliberately used a one-off vetted hook-trust bypass. | Trust the project/config through the documented normal flow and record a separate harmless check without weakening sandbox/approvals. |
 | Complete destructive tool interception | NOT_RUN / unsupported claim | Official `PreToolUse` coverage is incomplete and this matcher covers supported `Bash` forms only. | Do not promote this to PASS; retain sandbox, permissions, review, and command-specific evidence. |
 | Final public YouTube video | NOT_RUN | No real public URL has been supplied or anonymously verified. | Verify public access, audio, duration below three minutes, and privacy when the user supplies the URL. |
-| Replacement clip 11 and immutable v2 release | NOT_RUN | They must wait for the real public YouTube URL and final source state. | Record clip 11 only after the real tag/release exist; never move the old tag or invent v2. |
+| Immutable v2 tag/release | NOT_RUN | They must wait for the real public YouTube URL, URL integration, final verification, and Pages confirmation. Existing clip 11 is already retained for the final video and makes no v2 claim. | Assemble with existing clip 11, upload and verify the public video, integrate its URL, rerun tests and verify Pages, then create v2; never move the old tag or invent v2. |
 
 `NOT_RUN` is not failure and is never silently promoted to PASS. It means no named execution artifact supports the claim.
 

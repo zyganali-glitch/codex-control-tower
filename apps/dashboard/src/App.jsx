@@ -28,7 +28,7 @@ const tabs = [
   { id: 'evidence', label: 'Evidence', icon: 'evidence' },
   { id: 'memory', label: 'Memory Lens', icon: 'memory' },
   { id: 'recorder', label: 'Flight Recorder', icon: 'recorder' },
-  { id: 'shield', label: 'Mistake Shield', icon: 'shield' },
+  { id: 'shield', label: 'Safety Preflight', icon: 'shield' },
   { id: 'compare', label: 'Before / After', icon: 'compare' },
 ];
 

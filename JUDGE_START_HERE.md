@@ -13,7 +13,7 @@ The v0.2.0 candidate adds **Destructive Action Preflight** without moving GPT-5.
 1. Open the [no-install GitHub Pages exhibit](https://zyganali-glitch.github.io/codex-control-tower/).
 2. Read the separate **FICTIONAL SAMPLE PROJECT** and **REAL EXECUTION** labels.
 3. Inspect **Blind GPT-5.6 Semantic Audit** for the exact model, empty ephemeral workspace, accepted tool events `0`, blind-input disclosure, structural-precheck label, assessment, citations, missing/counter-evidence, reconciliation relation, and human-review state.
-4. Open **Mistake Shield** and inspect **Destructive Action Preflight** for `recursive_delete`, `$HOME/..`, `<USER_HOME_PARENT>`, `BLOCKED`, `NOT_RUN`, and **ANALYSIS ONLY · NO COMMAND EXECUTED**.
+4. Open **Safety Preflight** and inspect **Destructive Action Preflight** for `recursive_delete`, `$HOME/..`, `<USER_HOME_PARENT>`, `BLOCKED`, `NOT_RUN`, and **ANALYSIS ONLY · NO COMMAND EXECUTED**.
 5. Open **Before / After** to see the reproducible `25 → 88` governance score and `16 → 1` risk comparison on prepared InvoiceFlow Mini snapshots.
 6. Open **Evidence** and confirm that browser, load, deployment, provider, and independent security checks remain NOT_RUN.
 
@@ -71,6 +71,6 @@ GPT-5.6 did not create the snapshots or cause `25 → 88`. Real tools run on con
 - [Build provenance](docs/BUILD_WEEK_DELTA.md)
 - [Architecture and authority boundary](docs/ARCHITECTURE.md)
 
-The real public YouTube URL is still pending. Until it is verified and added to the public submission documents, `openai-build-week-final-v2` and its release must not be created and replacement clip 11 must not be recorded. The private `/feedback` Session ID remains a Devpost-only field and is intentionally absent from the repository. No placeholder is invented for either value.
+The existing 16-second clip 11 is retained unchanged for the final edit and makes no v2 claim. The real public YouTube URL is still pending. After the final video is uploaded, its URL must be verified and added to the public submission documents, tests must pass, and Pages must be confirmed before `openai-build-week-final-v2` and its release are created. The private `/feedback` Session ID remains a Devpost-only field and is intentionally absent from the repository. No placeholder is invented for either value.
 
 If an external preview omits v0.2.0 or Destructive Action Preflight, it is stale. The current `main` branch and Pages workflow history identify the moving candidate; the old frozen tag remains historical until the real v2 release exists.

@@ -26,7 +26,7 @@
 | No-delete safety demo | `npm run demo:safety` | Generated `tmp/destructive-preflight.json`, BLOCKED/NOT_RUN/`executed: false`; final `npm test` and `npm run verify` | PASS in final local v0.2.0 suite |
 | Source lineage and protection | `docs/SOURCE_*`, `docs/FEATURE_HARVEST.md`, `docs/ORIGINALITY_MATRIX.md` | `tests/test_source_protection.js` | PASS |
 | Final public YouTube video | `docs/DEMO_SCRIPT.md`, `docs/DEMO_REHBERI_TR.md`, Devpost form | Twelve clips total 2:52; spoken Codex/GPT-5.6/preflight explanation | PENDING — no public URL supplied or invented |
-| Replacement clip 11 | GitHub README/Actions/Pages/v2 release view | Exact 16-second narration and capture plan | PENDING — wait for real YouTube integration plus v2 tag/release |
+| Retained clip 11 | Existing GitHub historical-baseline repository/release capture | Exact existing 16-second filename, narration, and screen description | READY — use unchanged; no v2 claim or re-recording required |
 | Immutable v0.2.0 source/release | Planned `openai-build-week-final-v2` | Real public YouTube link plus final green verification/Pages | PENDING — old `openai-build-week-final` remains untouched |
 | Private `/feedback` form field | Primary Codex task and Devpost form | Real Session ID, intentionally not committed | PRIVATE FORM ONLY |
 | Independent user validation | `docs/USER_VALIDATION.md` | Consented sessions and honest summary | NOT_RUN |

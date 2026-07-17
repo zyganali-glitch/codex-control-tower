@@ -21,7 +21,7 @@ export default function DestructiveActionPreflightPanel({ preflight }) {
   return (
     <Panel className={`destructive-preflight destructive-preflight--${decision.toLowerCase()}`}>
       <header className="destructive-preflight__header">
-        <div className="destructive-preflight__mark"><Icon name="lock" size={38} /></div>
+        <div className="destructive-preflight__mark"><Icon name="lock" size={32} /></div>
         <div className="destructive-preflight__heading">
           <span className="eyebrow">DESTRUCTIVE ACTION PREFLIGHT</span>
           <h2>Protected boundary decision</h2>
@@ -29,13 +29,12 @@ export default function DestructiveActionPreflightPanel({ preflight }) {
         </div>
         <div className="destructive-preflight__decision">
           <span>Decision</span>
-          <strong>{decision}</strong>
           <StatusPill status={decision} />
         </div>
       </header>
 
       <div className="destructive-preflight__analysis-only">
-        <Icon name="shield" size={20} />
+        <Icon name="shield" size={16} />
         <strong>ANALYSIS ONLY · NO COMMAND EXECUTED</strong>
       </div>
 
@@ -48,9 +47,9 @@ export default function DestructiveActionPreflightPanel({ preflight }) {
       </div>
 
       <div className="destructive-preflight__assurances">
-        <span className={preflight.humanReviewRequired ? 'active' : ''}><Icon name="lock" size={18} />{preflight.humanReviewRequired ? 'HUMAN REVIEW REQUIRED' : 'Human review state not recorded'}</span>
-        <span className={preflight.deterministic ? 'active' : ''}><Icon name="evidence" size={18} />{preflight.deterministic ? 'Deterministic policy' : 'Policy basis not recorded'}</span>
-        {preflight.policyVersion && <span><Icon name="file" size={18} />Policy {preflight.policyVersion}</span>}
+        <span className={preflight.humanReviewRequired ? 'active' : ''}><Icon name="lock" size={14} />{preflight.humanReviewRequired ? 'HUMAN REVIEW REQUIRED' : 'Human review state not recorded'}</span>
+        <span className={preflight.deterministic ? 'active' : ''}><Icon name="evidence" size={14} />{preflight.deterministic ? 'Deterministic policy' : 'Policy basis not recorded'}</span>
+        {preflight.policyVersion && <span><Icon name="file" size={14} />Policy {preflight.policyVersion}</span>}
       </div>
 
       {(preflight.reasons || []).length > 0 && (
@@ -61,7 +60,7 @@ export default function DestructiveActionPreflightPanel({ preflight }) {
       )}
 
       <div className="destructive-preflight__next-action">
-        <div><Icon name="arrow" size={21} /><span>Safer next action</span></div>
+        <div><Icon name="arrow" size={16} /><span>Safer next action</span></div>
         <strong>{display(preflight.saferNextAction)}</strong>
       </div>
     </Panel>

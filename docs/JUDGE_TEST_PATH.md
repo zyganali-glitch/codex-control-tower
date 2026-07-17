@@ -11,7 +11,7 @@ Open the verified public exhibit:
 1. Read **FICTIONAL SAMPLE PROJECT** and the separate **REAL EXECUTION** statement.
 2. Inspect **Blind GPT-5.6 Semantic Audit**.
 3. Confirm the page identifies real `gpt-5.6-sol`, the empty ephemeral/no-tool execution boundary, the blind reconciliation boundary, separate model/local verdicts, evidence provenance, and any HUMAN REVIEW REQUIRED flag.
-4. Open **Mistake Shield**, where **Destructive Action Preflight** should show `recursive_delete`, `$HOME/..`, `<USER_HOME_PARENT>`, `BLOCKED`, `NOT_RUN`, and **ANALYSIS ONLY · NO COMMAND EXECUTED**.
+4. Open **Safety Preflight**, where **Destructive Action Preflight** should show `recursive_delete`, `$HOME/..`, `<USER_HOME_PARENT>`, `BLOCKED`, `NOT_RUN`, and **ANALYSIS ONLY · NO COMMAND EXECUTED**.
 5. Open **Before / After** for the deterministic `25 → 88` score and `16 → 1` risk comparison on prepared fictional snapshots.
 6. Open **Evidence** and confirm unavailable checks remain NOT_RUN.
 

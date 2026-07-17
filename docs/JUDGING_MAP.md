@@ -160,7 +160,7 @@ See [Source Protection](SOURCE_PROTECTION.md), [Feature Harvest](FEATURE_HARVEST
 | 08 | 17s | Technology | Model/CLI/workspace/no-tool/hash/freshness provenance |
 | 09 | 16s | Trust | PASS/FAIL/NOT_RUN/SIMULATED remain distinct |
 | 10 | 16s | Impact / Honesty | Real deterministic scans on prepared fictional snapshots |
-| 11 | 16s | Build provenance | Codex contribution, human decisions, and real frozen v2 source; PENDING until YouTube plus v2 tag/release exist |
+| 11 | 16s | Build provenance | Existing recording of the frozen historical baseline, repository opening, README first paragraph, and published release area; retained unchanged and makes no v2 claim |
 | 12 | 8s | Design / Authority | Codex writes; GPT-5.6 challenges; Control Tower locks; developer decides |
 
 Full narration: [Demo Script](DEMO_SCRIPT.md).
@@ -182,7 +182,7 @@ Full narration: [Demo Script](DEMO_SCRIPT.md).
 - [ ] NOT_RUN remains visible.
 - [ ] Build log identifies current verification, while old run IDs are labeled historical.
 - [ ] The old `openai-build-week-final` tag remains untouched.
-- [ ] Real public YouTube, replacement clip 11, `openai-build-week-final-v2`, and its release remain pending until their dependencies are actually complete.
+- [ ] The real public YouTube URL, `openai-build-week-final-v2`, and its release remain pending until the final video is uploaded, its URL is integrated, and tests/Pages are verified. Existing clip 11 is retained unchanged.
 
 ## Related assets
 

@@ -24,7 +24,7 @@ Status: **WARN** — release-preflight debt is visible and bounded.
 - No PR/MR integration, packaged cross-project hook installer, real user validation, or hosted team workflow exists.
 - The optional hook matches supported `Bash` events only. Official interception is incomplete; normal project/hash trust is not yet verified; CAUTION cannot force ask; hook failure may continue.
 - Preflight is a documented command subset and project-level decision layer, not a general shell parser, OS firewall, or replacement for sandbox/permissions.
-- The final 1920×1080 competition screenshot is complete and privacy-checked. Recording new clip 03, supplying the real public YouTube URL, replacement clip 11, the private primary-task `/feedback` form entry, and real user validation remain pending.
+- The final 1920×1080 competition screenshot is complete and privacy-checked. Existing clip 11 is retained unchanged. Recording new clip 03, supplying the real public YouTube URL, the private primary-task `/feedback` form entry, and real user validation remain pending.
 - `openai-build-week-final-v2` and its release remain pending the real public YouTube URL; the old tag stays untouched.
 
 These items remain roadmap work; none is silently promoted to `PASS`.

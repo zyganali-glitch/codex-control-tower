@@ -91,4 +91,4 @@ The Build Week contribution is not merely the existence of a deterministic scann
 - `.controltower/codex-live-review-record.json` in the governed fixture
 - GitHub Actions history for the public repository
 
-No `/feedback` Session ID is invented or stored here; that private value belongs only in Devpost. The v0.2.0 public YouTube URL is currently pending, so the replacement clip 11, `openai-build-week-final-v2` tag, and same-named release are also pending. The existing `openai-build-week-final` tag remains unchanged.
+No `/feedback` Session ID is invented or stored here; that private value belongs only in Devpost. The existing 16-second clip 11 is retained unchanged as the historical-baseline repository capture and will be used in the final edit. The v0.2.0 public YouTube URL, `openai-build-week-final-v2` tag, and same-named release remain pending. The existing `openai-build-week-final` tag remains unchanged.

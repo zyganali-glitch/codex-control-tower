@@ -11,7 +11,7 @@ This review separates product implementation, published evidence, fictional samp
 | Does README explain the product in 30 seconds? | PASS | First screen keeps the real blind GPT-5.6 challenge central, states locked local authority, and adds deterministic pre-execution protected-boundary analysis. |
 | Are GitHub Pages and the local dashboard distinguished? | PASS | Pages is the static recorded no-install exhibit; local dashboard is the live `READY → RUNNING → COMPLETE` workbench. |
 | Does the video path visibly use Codex desktop? | PASS for documented path | The script opens with completed GPT-5.6 proof, then uses a clean Demo Blind Audit task to launch `npm run demo:codex`; terminal is recovery only. |
-| Is the recording script realistically below three minutes? | PASS for plan | The English script and Turkish guide define the same 12 independent clips. Durations sum to `172` seconds (`2:52`); new clip 03 is 15 seconds. The public upload and replacement clip 11 remain pending. |
+| Is the recording script realistically below three minutes? | PASS for plan | The English script and Turkish guide define the same 12 independent clips. Durations sum to `172` seconds (`2:52`); new clip 03 is 15 seconds and the existing 16-second clip 11 is retained unchanged. Only the public upload remains pending. |
 | Is the fictional/real boundary unambiguous? | PASS | Public narrative separates fictional actors/prepared snapshots from real scans, fixture tests, evidence hashes, and GPT-5.6 reconciliation. |
 | Does README distinguish the authority layers? | PASS | “Codex writes. GPT-5.6 challenges. Control Tower locks the facts. The developer decides.” |
 | Does README acknowledge lineage without naming sibling versions? | PASS | Public lineage uses only “Universal Agent OS family.” |
@@ -50,13 +50,13 @@ This review separates product implementation, published evidence, fictional samp
 | --- | --- | --- |
 | Final public YouTube video under three minutes | PENDING | No URL is stored or invented; verify anonymous access, audio, and duration when the user supplies it |
 | Spoken Codex/GPT-5.6/preflight explanation | PENDING FINAL UPLOAD | The 12-clip plan provides exact English narration and a Turkish meaning for every clip |
-| Replacement clip 11 | PENDING EXTERNAL DEPENDENCIES | Do not record until the real YouTube URL is integrated and the v2 tag/release actually exist |
+| Existing clip 11 | READY / RETAINED | Use the existing 16-second historical-baseline repository capture unchanged; it makes no v2 claim and needs no re-recording |
 | `openai-build-week-final-v2` tag and release | PENDING EXTERNAL YOUTUBE URL | Existing `openai-build-week-final` remains immutable; do not create or claim v2 early |
 | Primary-task `/feedback` Session ID | PRIVATE FORM ONLY | Real value belongs in Devpost only and is never committed |
 | Independent user validation | NOT_RUN | Do not invent participants, quotes, or outcomes |
 
 ## Review conclusion
 
-The repository contains a coherent runnable developer tool, a published static no-install judge exhibit, a live local recording path, a real Blind GPT-5.6 Semantic Audit with deterministic authority, and a locally and remotely verified v0.2.0 Destructive Action Preflight candidate. The public YouTube URL, replacement clip 11, and immutable v2 tag/release remain pending. The private feedback value stays outside public evidence. Independent user validation and external product/security gates remain NOT_RUN.
+The repository contains a coherent runnable developer tool, a published static no-install judge exhibit, a live local recording path, a real Blind GPT-5.6 Semantic Audit with deterministic authority, and a locally and remotely verified v0.2.0 Destructive Action Preflight candidate. Existing clip 11 is retained and ready; the public YouTube URL and immutable v2 tag/release remain pending. The private feedback value stays outside public evidence. Independent user validation and external product/security gates remain NOT_RUN.
 
 Related: [README](../README.md) · [Evidence Report](EVIDENCE_REPORT.md) · [Judge Test Path](JUDGE_TEST_PATH.md) · [NOT_RUN Gates](NOT_RUN_GATES.md)

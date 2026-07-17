@@ -14,7 +14,7 @@ Before a supported destructive action, **Destructive Action Preflight** determin
 
 **[Open the no-install judge demo](https://zyganali-glitch.github.io/codex-control-tower/)** · **[Judge: start here](JUDGE_START_HERE.md)**
 
-![Codex Control Tower Shield view showing the Destructive Action Preflight BLOCKED and NOT_RUN result, with the real GPT-5.6 audit marked COMPLETE in the sidebar](docs/assets/dashboard-overview.png)
+![Codex Control Tower Safety Preflight view showing the Destructive Action Preflight BLOCKED and NOT_RUN result, with the real GPT-5.6 audit marked COMPLETE in the sidebar](docs/assets/dashboard-overview.png)
 
 *InvoiceFlow Mini is a fictional sample project. Its prepared before/after snapshots are not customer evidence. The scans, two fixture tests, hashed evidence bundle, provenance checks, and recorded GPT-5.6 run are real tool outputs.*
 
@@ -83,7 +83,7 @@ Control Tower therefore makes a narrower claim: it deterministically analyzes a 
 2. Open the [GitHub Pages dashboard](https://zyganali-glitch.github.io/codex-control-tower/); no installation is required.
 3. Read the separate **FICTIONAL SAMPLE PROJECT** and **REAL EXECUTION** disclosures.
 4. Inspect **Blind GPT-5.6 Semantic Audit**: exact model, empty ephemeral workspace, accepted tool events `0`, structural precheck, independent assessment, evidence citations, reconciliation, and **HUMAN REVIEW REQUIRED**.
-5. Open **Mistake Shield** and inspect **Destructive Action Preflight**: `recursive_delete`, `$HOME/..`, `<USER_HOME_PARENT>`, `BLOCKED`, `NOT_RUN`, and **ANALYSIS ONLY · NO COMMAND EXECUTED**.
+5. Open **Safety Preflight** and inspect **Destructive Action Preflight**: `recursive_delete`, `$HOME/..`, `<USER_HOME_PARENT>`, `BLOCKED`, `NOT_RUN`, and **ANALYSIS ONLY · NO COMMAND EXECUTED**.
 6. Open **Before / After** for the reproducible `25 → 88` score and `16 → 1` risk comparison.
 7. Open **Evidence** and confirm unavailable gates remain NOT_RUN.
 
@@ -151,7 +151,7 @@ This is an independent challenge inside the product, not an independent third-pa
 
 ## Demo Recording Path
 
-The 2:52 plan uses 12 independent clips. It keeps the completed GPT-5.6 result in clip 01, replaces clip 03 with a 15-second Destructive Action Preflight view, and preserves the later blind-audit/evidence story. Each clip stays inside one application window so Clipchamp window capture never depends on an in-clip app switch. Clip 11 must not be re-recorded until the real public YouTube URL has been integrated and the v2 tag/release actually exist.
+The 2:52 plan uses 12 independent clips. It keeps the completed GPT-5.6 result in clip 01, replaces only the old clip 03 with a separate 15-second Destructive Action Preflight recording, and retains the existing 16-second clip 11 unchanged as a truthful view of the frozen historical baseline and public repository. The old raw clip 03 is preserved but excluded from the final edit. Each clip stays inside one application window so Clipchamp window capture never depends on an in-clip app switch. After recording the new clip 03, assemble and upload the final video with the existing clip 11; then integrate the real public YouTube URL, rerun verification, confirm Pages, and only then create the immutable v2 tag/release.
 
 Follow the [under-3-minute Demo Script](docs/DEMO_SCRIPT.md). The spoken narration explicitly explains both Codex and GPT-5.6. The private `/feedback` Session ID comes from the primary Codex build task and belongs only in the Devpost form; it is intentionally never committed to this public repository.
 
