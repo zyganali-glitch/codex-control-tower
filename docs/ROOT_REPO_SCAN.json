@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "codex-control-tower",
   "targetPath": ".",
-  "generatedAt": "2026-07-17T19:19:05.004Z",
+  "generatedAt": "2026-07-17T20:29:22.974Z",
   "scanMode": "REAL_LOCAL_SCAN",
   "simulatedData": false,
   "scanScope": {
@@ -110,7 +110,7 @@
       "path": "apps/dashboard/package-lock.json",
       "bytes": 57693,
       "lines": 1692,
-      "modifiedAt": "2026-07-17T19:12:35.084Z"
+      "modifiedAt": "2026-07-17T20:28:36.968Z"
     },
     {
       "path": "apps/dashboard/package.json",
@@ -120,9 +120,9 @@
     },
     {
       "path": "apps/dashboard/src/App.jsx",
-      "bytes": 15869,
+      "bytes": 15871,
       "lines": 279,
-      "modifiedAt": "2026-07-17T18:17:05.493Z"
+      "modifiedAt": "2026-07-17T20:22:10.060Z"
     },
     {
       "path": "apps/dashboard/src/components/BeforeAfterPanel.jsx",
@@ -156,9 +156,9 @@
     },
     {
       "path": "apps/dashboard/src/components/DestructiveActionPreflightPanel.jsx",
-      "bytes": 3397,
-      "lines": 70,
-      "modifiedAt": "2026-07-17T18:16:18.962Z"
+      "bytes": 3359,
+      "lines": 69,
+      "modifiedAt": "2026-07-17T20:22:10.061Z"
     },
     {
       "path": "apps/dashboard/src/components/EvidencePanel.jsx",
@@ -246,9 +246,9 @@
     },
     {
       "path": "apps/dashboard/src/details.css",
-      "bytes": 22760,
+      "bytes": 22631,
       "lines": 0,
-      "modifiedAt": "2026-07-17T18:18:38.289Z"
+      "modifiedAt": "2026-07-17T20:23:56.727Z"
     },
     {
       "path": "apps/dashboard/src/main.jsx",
@@ -288,9 +288,9 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 5999,
+      "bytes": 6081,
       "lines": 51,
-      "modifiedAt": "2026-07-17T18:52:40.012Z"
+      "modifiedAt": "2026-07-17T20:25:56.916Z"
     },
     {
       "path": "cli/commands/codex-review.js",
@@ -630,21 +630,21 @@
     },
     {
       "path": "docs/assets/dashboard-overview.png",
-      "bytes": 540271,
+      "bytes": 547919,
       "lines": 0,
-      "modifiedAt": "2026-07-17T19:05:49.186Z"
+      "modifiedAt": "2026-07-17T20:27:23.379Z"
     },
     {
       "path": "docs/BUILD_WEEK_DELTA.md",
-      "bytes": 8235,
+      "bytes": 8319,
       "lines": 95,
-      "modifiedAt": "2026-07-17T18:49:06.823Z"
+      "modifiedAt": "2026-07-17T20:25:16.347Z"
     },
     {
       "path": "docs/CODEX_BUILD_LOG.md",
-      "bytes": 31830,
+      "bytes": 32223,
       "lines": 155,
-      "modifiedAt": "2026-07-17T19:17:58.670Z"
+      "modifiedAt": "2026-07-17T20:27:56.404Z"
     },
     {
       "path": "docs/CODEX_DEMO_PROMPT.md",
@@ -666,27 +666,27 @@
     },
     {
       "path": "docs/DEMO_REHBERI_TR.md",
-      "bytes": 20862,
+      "bytes": 21303,
       "lines": 340,
-      "modifiedAt": "2026-07-17T18:32:52.863Z"
+      "modifiedAt": "2026-07-17T20:25:16.346Z"
     },
     {
       "path": "docs/DEMO_SCRIPT.md",
-      "bytes": 14606,
-      "lines": 226,
-      "modifiedAt": "2026-07-17T18:50:18.338Z"
+      "bytes": 15145,
+      "lines": 228,
+      "modifiedAt": "2026-07-17T20:25:56.919Z"
     },
     {
       "path": "docs/DEVPOST_SUBMISSION.md",
-      "bytes": 20702,
+      "bytes": 20852,
       "lines": 244,
-      "modifiedAt": "2026-07-17T19:15:16.624Z"
+      "modifiedAt": "2026-07-17T20:25:56.918Z"
     },
     {
       "path": "docs/EVIDENCE_REPORT.md",
-      "bytes": 6493,
+      "bytes": 6557,
       "lines": 36,
-      "modifiedAt": "2026-07-17T19:07:30.710Z"
+      "modifiedAt": "2026-07-17T20:27:56.405Z"
     },
     {
       "path": "docs/FEATURE_HARVEST.md",
@@ -696,21 +696,21 @@
     },
     {
       "path": "docs/FINAL_COMPLETENESS_REVIEW.md",
-      "bytes": 8691,
+      "bytes": 8763,
       "lines": 63,
-      "modifiedAt": "2026-07-17T19:17:58.665Z"
+      "modifiedAt": "2026-07-17T20:25:16.351Z"
     },
     {
       "path": "docs/JUDGE_TEST_PATH.md",
-      "bytes": 8969,
+      "bytes": 8971,
       "lines": 116,
-      "modifiedAt": "2026-07-17T18:36:40.717Z"
+      "modifiedAt": "2026-07-17T20:25:16.360Z"
     },
     {
       "path": "docs/JUDGING_MAP.md",
-      "bytes": 16182,
+      "bytes": 16304,
       "lines": 196,
-      "modifiedAt": "2026-07-17T18:43:07.508Z"
+      "modifiedAt": "2026-07-17T20:25:16.353Z"
     },
     {
       "path": "docs/LIMITATIONS.md",
@@ -726,15 +726,15 @@
     },
     {
       "path": "docs/MISTAKE_SHIELD.md",
-      "bytes": 2443,
+      "bytes": 2480,
       "lines": 40,
-      "modifiedAt": "2026-07-17T19:07:30.713Z"
+      "modifiedAt": "2026-07-17T20:25:16.355Z"
     },
     {
       "path": "docs/NOT_RUN_GATES.md",
-      "bytes": 4150,
+      "bytes": 4327,
       "lines": 33,
-      "modifiedAt": "2026-07-17T19:17:58.667Z"
+      "modifiedAt": "2026-07-17T20:25:16.356Z"
     },
     {
       "path": "docs/ORIGINALITY_MATRIX.md",
@@ -768,21 +768,21 @@
     },
     {
       "path": "docs/SUBMISSION_MANIFEST.md",
-      "bytes": 6505,
+      "bytes": 6546,
       "lines": 76,
-      "modifiedAt": "2026-07-17T19:00:40.941Z"
+      "modifiedAt": "2026-07-17T20:25:16.357Z"
     },
     {
       "path": "docs/TECH_DEBT_DELTA.md",
-      "bytes": 2802,
+      "bytes": 2821,
       "lines": 31,
-      "modifiedAt": "2026-07-17T19:07:30.712Z"
+      "modifiedAt": "2026-07-17T20:25:16.359Z"
     },
     {
       "path": "docs/TRACEABILITY_MATRIX.md",
-      "bytes": 5448,
+      "bytes": 5486,
       "lines": 35,
-      "modifiedAt": "2026-07-17T19:17:58.669Z"
+      "modifiedAt": "2026-07-17T20:25:16.358Z"
     },
     {
       "path": "docs/USER_VALIDATION.md",
@@ -792,9 +792,9 @@
     },
     {
       "path": "JUDGE_START_HERE.md",
-      "bytes": 7574,
+      "bytes": 7709,
       "lines": 77,
-      "modifiedAt": "2026-07-17T18:50:56.110Z"
+      "modifiedAt": "2026-07-17T20:27:06.297Z"
     },
     {
       "path": "LICENSE",
@@ -828,9 +828,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 26003,
+      "bytes": 26287,
       "lines": 265,
-      "modifiedAt": "2026-07-17T19:10:18.540Z"
+      "modifiedAt": "2026-07-17T20:25:16.343Z"
     },
     {
       "path": "TECH_DEBT_AND_SECURITY.md",
@@ -1009,7 +1009,7 @@
     }
   },
   "contextGraph": {
-    "generatedAt": "2026-07-17T19:19:04.997Z",
+    "generatedAt": "2026-07-17T20:29:22.967Z",
     "generatedLocally": true,
     "algorithm": "deterministic lexical and repository-surface analysis",
     "nodes": [
@@ -1228,7 +1228,7 @@
         "label": "apps/dashboard/src/App.jsx",
         "type": "source",
         "lines": 279,
-        "bytes": 15869,
+        "bytes": 15871,
         "risk": false,
         "markers": 0,
         "relevance": 0.7,
@@ -1317,8 +1317,8 @@
         "id": "file:apps/dashboard/src/components/DestructiveActionPreflightPanel.jsx",
         "label": "apps/dashboard/src/components/DestructiveActionPreflightPanel.jsx",
         "type": "source",
-        "lines": 70,
-        "bytes": 3397,
+        "lines": 69,
+        "bytes": 3359,
         "risk": false,
         "markers": 0,
         "relevance": 0.7,
@@ -1543,7 +1543,7 @@
         "label": "apps/dashboard/src/details.css",
         "type": "file",
         "lines": 0,
-        "bytes": 22760,
+        "bytes": 22631,
         "risk": false,
         "markers": 0,
         "relevance": 0.45,
@@ -1648,7 +1648,7 @@
         "label": "CHANGELOG.md",
         "type": "documentation",
         "lines": 51,
-        "bytes": 5999,
+        "bytes": 6081,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2503,7 +2503,7 @@
         "label": "docs/assets/dashboard-overview.png",
         "type": "file",
         "lines": 0,
-        "bytes": 540271,
+        "bytes": 547919,
         "risk": false,
         "markers": 0,
         "relevance": 0.45,
@@ -2518,7 +2518,7 @@
         "label": "docs/BUILD_WEEK_DELTA.md",
         "type": "documentation",
         "lines": 95,
-        "bytes": 8235,
+        "bytes": 8319,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2533,7 +2533,7 @@
         "label": "docs/CODEX_BUILD_LOG.md",
         "type": "documentation",
         "lines": 155,
-        "bytes": 31830,
+        "bytes": 32223,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2593,7 +2593,7 @@
         "label": "docs/DEMO_REHBERI_TR.md",
         "type": "documentation",
         "lines": 340,
-        "bytes": 20862,
+        "bytes": 21303,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2607,8 +2607,8 @@
         "id": "file:docs/DEMO_SCRIPT.md",
         "label": "docs/DEMO_SCRIPT.md",
         "type": "documentation",
-        "lines": 226,
-        "bytes": 14606,
+        "lines": 228,
+        "bytes": 15145,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2623,7 +2623,7 @@
         "label": "docs/DEVPOST_SUBMISSION.md",
         "type": "documentation",
         "lines": 244,
-        "bytes": 20702,
+        "bytes": 20852,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2638,7 +2638,7 @@
         "label": "docs/EVIDENCE_REPORT.md",
         "type": "evidence",
         "lines": 36,
-        "bytes": 6493,
+        "bytes": 6557,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -2668,7 +2668,7 @@
         "label": "docs/FINAL_COMPLETENESS_REVIEW.md",
         "type": "documentation",
         "lines": 63,
-        "bytes": 8691,
+        "bytes": 8763,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2683,7 +2683,7 @@
         "label": "docs/JUDGE_TEST_PATH.md",
         "type": "documentation",
         "lines": 116,
-        "bytes": 8969,
+        "bytes": 8971,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2698,7 +2698,7 @@
         "label": "docs/JUDGING_MAP.md",
         "type": "documentation",
         "lines": 196,
-        "bytes": 16182,
+        "bytes": 16304,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2743,7 +2743,7 @@
         "label": "docs/MISTAKE_SHIELD.md",
         "type": "documentation",
         "lines": 40,
-        "bytes": 2443,
+        "bytes": 2480,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2758,7 +2758,7 @@
         "label": "docs/NOT_RUN_GATES.md",
         "type": "evidence",
         "lines": 33,
-        "bytes": 4150,
+        "bytes": 4327,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -2848,7 +2848,7 @@
         "label": "docs/SUBMISSION_MANIFEST.md",
         "type": "documentation",
         "lines": 76,
-        "bytes": 6505,
+        "bytes": 6546,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2863,7 +2863,7 @@
         "label": "docs/TECH_DEBT_DELTA.md",
         "type": "documentation",
         "lines": 31,
-        "bytes": 2802,
+        "bytes": 2821,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2878,7 +2878,7 @@
         "label": "docs/TRACEABILITY_MATRIX.md",
         "type": "evidence",
         "lines": 35,
-        "bytes": 5448,
+        "bytes": 5486,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -2908,7 +2908,7 @@
         "label": "JUDGE_START_HERE.md",
         "type": "documentation",
         "lines": 77,
-        "bytes": 7574,
+        "bytes": 7709,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2998,7 +2998,7 @@
         "label": "README.md",
         "type": "readme",
         "lines": 265,
-        "bytes": 26003,
+        "bytes": 26287,
         "risk": false,
         "markers": 0,
         "relevance": 0.82,
@@ -4148,7 +4148,7 @@
         "label": "docs/EVIDENCE_REPORT.md",
         "type": "evidence",
         "lines": 36,
-        "bytes": 6493,
+        "bytes": 6557,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -4163,7 +4163,7 @@
         "label": "docs/NOT_RUN_GATES.md",
         "type": "evidence",
         "lines": 33,
-        "bytes": 4150,
+        "bytes": 4327,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -4178,7 +4178,7 @@
         "label": "docs/TRACEABILITY_MATRIX.md",
         "type": "evidence",
         "lines": 35,
-        "bytes": 5448,
+        "bytes": 5486,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -4343,7 +4343,7 @@
       "maxItems": 24,
       "selectedItems": 24,
       "availableItems": 148,
-      "estimatedTokens": 12275
+      "estimatedTokens": 12345
     }
   },
   "reviewGate": {
@@ -4389,7 +4389,7 @@
     "decisionRecorded": true
   },
   "memoryLens": {
-    "generatedAt": "2026-07-17T19:19:05.002Z",
+    "generatedAt": "2026-07-17T20:29:22.971Z",
     "generatedLocally": true,
     "sources": [
       {
@@ -4408,7 +4408,7 @@
         "relative": "README.md",
         "ageDays": 0,
         "stale": false,
-        "bytes": 26003
+        "bytes": 26287
       }
     ],
     "persistentRules": [
@@ -4626,7 +4626,7 @@
     "matchedLessons": [],
     "gateStatus": "APPROVED",
     "saferNextAction": "Proceed only within the declared scope and record commands, evidence, NOT_RUN checks, and remaining risk.",
-    "checkedAt": "2026-07-17T19:19:05.004Z",
+    "checkedAt": "2026-07-17T20:29:22.973Z",
     "deterministic": true
   },
   "phase0": {
@@ -4790,7 +4790,7 @@
   },
   "provenance": {
     "generatedBy": "cct scan --portable",
-    "gitCommit": "a3fc18ca9f40b21042f92a1dc171e8130ae0256d",
+    "gitCommit": "2221070f77954c0086929f481cde1cb696014c7b",
     "worktreeAtScan": "CLEAN"
   }
 }
