@@ -1,6 +1,6 @@
 # Privacy and Security
 
-Codex Control Tower is local-first. Its core scan, health, doctor, context-graph, review-gate, mistake-shield, memory-lens, flight-recorder, evidence, demo, and dashboard workflows are designed to run without uploading a repository or requiring an OpenAI API key.
+Codex Control Tower is local-first. Its core scan, health, doctor, context-graph, review-gate, destructive-preflight, mistake-shield, memory-lens, flight-recorder, evidence, demo, safety-demo, and dashboard workflows are designed to run without uploading a repository or requiring an OpenAI API key.
 
 This is a product boundary, not a claim of formal security certification.
 
@@ -16,6 +16,9 @@ This is a product boundary, not a claim of formal security certification.
 - **Blind reconciliation target.** The model receives neutral claims and raw evidence, which can contain evidence-state words, but not the reconciler's locked claim-status fields or expected comparison classes.
 - **No model authority.** A policy conflict can set advisory `HUMAN_REVIEW_REQUIRED`; model output never changes the local status, verdict, next action, or Review Gate.
 - **Local reports stay local by default.** Output is written only to requested target/output paths unless the user deliberately commits or shares it. The public GitHub Pages exhibit contains a sanitized committed snapshot.
+- **Destructive analysis is execution-free.** Preflight expands supported expressions, resolves a canonical target, and returns `BLOCKED` or `CAUTION` with `NOT_RUN` and `executed: false`. It does not call a deletion executable.
+- **Protected-boundary redaction.** Public preflight fields replace personal filesystem roots with tokens such as `<USER_HOME>`, `<USER_HOME_PARENT>`, `<REPOSITORY_ROOT>`, and `<REPOSITORY_GIT_DIR>`.
+- **Optional hook is defense in depth.** Matching supported `Bash` `PreToolUse` can deny BLOCKED intent, but official hook interception is incomplete, project trust is required, and sandboxing/permissions remain primary.
 - **The user chooses what to share.** Devpost/evidence export creates local files; it does not submit or upload them.
 - **No mandatory external CDN or hosted database.** The dashboard uses project dependencies and local report data.
 - **Universal Agent OS family sources remain read-only.** They are never scan targets, generated-work targets, or runtime dependencies. See [Source Protection](SOURCE_PROTECTION.md).
@@ -40,14 +43,18 @@ Commands should follow least mutation:
 | Command class | Expected behavior |
 | --- | --- |
 | Scan, health, doctor, context graph, status queries, and mistake checks | Read target data; write only when an explicit `--out` path is supplied. |
+| Destructive preflight | Read/inspect the verified target and path boundary; optionally write only a named `destructive-preflight*.json` under target `.controltower/` or `tmp/`, and only overwrite with explicit `--overwrite`. Never execute the requested action. |
 | Evidence and secondary Devpost export | Create a new local output directory selected by the user; do not upload it. |
 | Init | Add Control Tower governance surfaces inside the selected target; preserve unrelated application files. |
 | Phase-0 | Write only `.controltower/phase0.json` and `plans/PHASE0_ALIGNMENT.md`; both include the generated mission prompt. Do not write implementation code. |
 | Review Gate / Flight Recorder | Update only their declared `.controltower` state/log files in the selected target. |
 | Demo | Operate only on controlled example/output directories; separate fictional sample content from real scan/test/model execution. |
 | Codex review | Write declared `.controltower` evidence/reconciliation files, create an empty temporary model workspace, invoke the bounded model step only after explicit opt-in, reject any tool event, then delete the temporary workspace. |
+| Optional Codex hook | Read the matching `PreToolUse` payload and repository boundary, then emit deny or additional context. The adapter itself does not append Flight Recorder state or execute the requested tool. |
 
 Path checks reduce accidental writes, but this tool is not a sandbox for arbitrary plugins, dependencies, shell commands, or a malicious external agent. Review the target and output arguments before execution, especially around symlinks or shared directories.
+
+Destructive Action Preflight validates the claimed repository root, canonicalizes existing path segments (including platform aliases when available), and fails closed on root, home, repository, `.git`, and outside paths; unsupported variables; substitution; chaining; wildcards; and uncertain symlink inspection. A specific repository subpath remains CAUTION and still requires scoped human review. This narrows a documented subset; it is not a complete parser or operating-system enforcement layer.
 
 ## Secrets and sensitive output
 
@@ -56,6 +63,7 @@ The scanner is not a secret manager and should not be treated as one.
 - Do not place API keys, access tokens, credentials, private deployment URLs, or customer data in Control Tower config, demo fixtures, recorder events, screenshots, or exported packs.
 - Keep credentials in ignored environment variables or the official signed-in Codex session, never committed files.
 - Do not log environment-variable values or authorization headers.
+- Do not publish expanded personal paths from a preflight. Keep the sanitized boundary tokens in dashboard, JSON, screenshots, and video.
 - Review evidence and Devpost packs before sharing; paths, package names, risk markers, plan text, and architecture details can still be sensitive even without full source code.
 - A risk finding that points to a suspected secret is not proof that the value has been redacted from every user-authored file.
 - If a secret is discovered, revoke/rotate it using the owning service; deleting a local report is not remediation.
@@ -85,6 +93,12 @@ Plain JSONL and Markdown make records inspectable but do not make them immutable
 
 For stronger assurance, use version control, CI logs, signed commits/artifacts, branch protection, and independent test reruns. The current hashes are tamper-evident comparison aids, not signed identity or a tamper-proof ledger.
 
+## Codex hook boundary
+
+The retained hook verification used pinned Codex CLI `0.144.3`, exact model `gpt-5.6-sol`, read-only sandboxing, and a deliberately nonexistent `cct-preflight-probe`. The matching `$HOME/..` intent resolved to `<USER_HOME_PARENT>` and returned deny before execution. Approval was not bypassed. A one-off vetted hook-trust bypass was used only for this test, so it must not be described as proof that normal project/hash trust setup works automatically.
+
+The hook matcher is `^Bash$`, the parser is limited to documented forms, CAUTION only adds context, and a hook command failure may allow the tool workflow to continue. Official Codex documentation states that `PreToolUse` interception is incomplete. Keep the Codex sandbox, approvals, repository permissions, and human review enabled.
+
 ## Dependency and browser considerations
 
 - Install dependencies from the lockfile and review dependency changes.
@@ -106,6 +120,8 @@ The Universal Agent OS family was researched through public, read-only web acces
 - [ ] Confirm fictional sample content and real execution are explicitly separated.
 - [ ] Confirm unavailable checks remain `NOT_RUN`.
 - [ ] Confirm no protected-source screenshot, asset, or copied code is included.
+- [ ] Confirm preflight paths use redacted boundary tokens and no personal home path remains.
+- [ ] Confirm any hook claim says “bounded supported `Bash` path,” not complete enforcement.
 - [ ] Confirm the recipient is authorized to see plans, risks, filenames, and architecture details.
 - [ ] Rerun the relevant tests independently when the consequence is material.
 

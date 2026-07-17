@@ -17,6 +17,7 @@ import ContextBudgetPanel from './components/ContextBudgetPanel.jsx';
 import ContextGraphPanel from './components/ContextGraphPanel.jsx';
 import MemoryLensPanel from './components/MemoryLensPanel.jsx';
 import FlightRecorderPanel from './components/FlightRecorderPanel.jsx';
+import DestructiveActionPreflightPanel from './components/DestructiveActionPreflightPanel.jsx';
 import MistakeShieldPanel from './components/MistakeShieldPanel.jsx';
 import BeforeAfterPanel from './components/BeforeAfterPanel.jsx';
 
@@ -38,7 +39,7 @@ const pageCopy = {
   evidence: ['Evidence & review', 'Separate verified claims from warnings, failures, unavailable checks, and simulated proof.'],
   memory: ['Memory Lens', 'Carry validated lessons forward while keeping stale assumptions visible.'],
   recorder: ['Flight Recorder', 'A chronological, local record of missions, gates, commands, evidence, and skipped checks.'],
-  shield: ['Mistake Shield', 'Compare a proposed action against protected lessons and the approved mission boundary.'],
+  shield: ['Safety preflight', 'Resolve destructive targets against protected boundaries, then keep the legacy action-text compatibility check visible.'],
   compare: ['Before / After', 'Prepared starting and governed snapshots of the same fictional project, scanned by the same real tool.'],
 };
 
@@ -224,7 +225,12 @@ function App() {
           {activeTab === 'evidence' && <Evidence report={report} />}
           {activeTab === 'memory' && <MemoryLensPanel memory={report.memoryLens} />}
           {activeTab === 'recorder' && <FlightRecorderPanel events={report.flightRecorder} />}
-          {activeTab === 'shield' && <MistakeShieldPanel shield={report.mistakeShield} />}
+          {activeTab === 'shield' && (
+            <div className="view-stack">
+              <DestructiveActionPreflightPanel preflight={report.destructiveActionPreflight} />
+              <MistakeShieldPanel shield={report.mistakeShield} />
+            </div>
+          )}
           {activeTab === 'compare' && <BeforeAfterPanel comparison={report.comparison} />}
         </main>
       </div>
@@ -243,7 +249,7 @@ function Overview({ report, navigate }) {
         <button onClick={() => navigate('risks')}><span className="signal-icon signal-icon--risk"><Icon name="risks" /></span><span><small>Open risk flags</small><strong>{report.risks?.filter((risk) => risk.status === 'OPEN').length || 0}</strong></span><Icon name="chevron" size={15} /></button>
         <button onClick={() => navigate('evidence')}><span className="signal-icon signal-icon--pass"><Icon name="evidence" /></span><span><small>Evidence checks passed</small><strong>{boundary.PASS || 0}</strong></span><Icon name="chevron" size={15} /></button>
         <button onClick={() => navigate('evidence')}><span className="signal-icon signal-icon--notrun"><Icon name="recorder" /></span><span><small>Visible NOT_RUN gates</small><strong>{boundary.NOT_RUN || 0}</strong></span><Icon name="chevron" size={15} /></button>
-        <button onClick={() => navigate('shield')}><span className="signal-icon signal-icon--shield"><Icon name="shield" /></span><span><small>Mistake Shield</small><strong>{report.mistakeShield?.status || '—'}</strong></span><Icon name="chevron" size={15} /></button>
+        <button onClick={() => navigate('shield')}><span className="signal-icon signal-icon--shield"><Icon name="shield" /></span><span><small>{report.destructiveActionPreflight ? 'Destructive preflight' : 'Mistake Shield'}</small><strong>{report.destructiveActionPreflight?.decision || report.mistakeShield?.status || '—'}</strong></span><Icon name="chevron" size={15} /></button>
       </div>
       <div className="two-column two-column--wide"><ScoreBreakdown items={report.scoreBreakdown} /><MissingSurfaces items={report.missingSurfaces} /></div>
       <PhaseZeroCard phase0={report.phase0} />

@@ -57,7 +57,18 @@ The final blind-audit redesign additionally adds:
 - policy-based `HUMAN_REVIEW_REQUIRED`, where `CONTRADICTS` alone is not automatically conflict, `INSUFFICIENT` can be merely `COMPATIBLE`, mission `PASS` is labeled a structural precheck rather than semantic truth, and no model response changes locked facts;
 - a judge-first README/Pages/video opening, frozen-version manifest, and `JUDGE_START_HERE.md` discovery path.
 
-The initial locked-reconciliation implementation is commit `034d53ff21c65323823e2693f9aed39374f83185` (`feat: add locked GPT-5.6 evidence reconciliation`). Later in-period commits contain the blind-audit redesign and judge hardening. The frozen `openai-build-week-final` tag and Git history are the sources of truth for exact timestamps and diffs.
+The v0.2.0 safety extension additionally adds:
+
+- deterministic Destructive Action Preflight for structured operations and a documented raw-command subset;
+- canonical comparisons against filesystem root, user home/parent, a verified Git root, `.git`, outside-repository targets, and symlink uncertainty;
+- sanitized `BLOCKED`/`CAUTION` results that always retain `NOT_RUN`, `executed: false`, human review, and a safer next action;
+- backward-compatible Mistake Shield and Flight Recorder integration without treating legacy CLEAR as a safety guarantee;
+- `npm run demo:safety`, which generates a preflight record without invoking a deletion command;
+- an optional project `PreToolUse` adapter for matching `Bash` events, plus an actual denial verification using a nonexistent harmless probe, read-only sandboxing, pinned Codex CLI `0.144.3`, and `gpt-5.6-sol`;
+- explicit hook limitations: one-off hook-trust bypass used only for verification, normal project/hash trust not verified, incomplete interception, no forced ask for CAUTION, no fail-closed guarantee on hook failure, and sandboxing as the primary control;
+- a 12-clip `2:52` recording plan whose new 15-second clip 03 shows the preflight while keeping GPT-5.6 in the opening and central story.
+
+The initial locked-reconciliation implementation is commit `034d53ff21c65323823e2693f9aed39374f83185` (`feat: add locked GPT-5.6 evidence reconciliation`). Later in-period commits contain the blind-audit redesign and judge hardening. Git history is the source of truth for exact timestamps and diffs; the frozen `openai-build-week-final` tag remains the historical v0.1 baseline and is not moved for v0.2.0.
 
 ## What judges should evaluate as new work
 
@@ -68,6 +79,7 @@ The Build Week contribution is not merely the existence of a deterministic scann
 3. GPT-5.6 judges mission/change/test/evidence alignment and returns assessment, citations, counter-evidence, missing evidence, and a recommendation.
 4. A deterministic reconciler rejects unsafe output, filters/records unsupported citations, applies hidden comparison policy, and raises human review on conflict without changing facts.
 5. The dashboard exposes both layers, provenance, and missing proof; a human Review Gate remains authoritative.
+6. Before a supported destructive action, the separate deterministic preflight resolves the canonical target and keeps protected or uncertain intent at BLOCKED/NOT_RUN without claiming complete enforcement.
 
 ## Verification sources
 
@@ -79,4 +91,4 @@ The Build Week contribution is not merely the existence of a deterministic scann
 - `.controltower/codex-live-review-record.json` in the governed fixture
 - GitHub Actions history for the public repository
 
-No `/feedback` Session ID is invented or stored here. For submission-readiness scoring, the real primary-task ID and under-three-minute video are treated as completed Devpost form assets. The private ID remains intentionally absent from the public repository.
+No `/feedback` Session ID is invented or stored here; that private value belongs only in Devpost. The v0.2.0 public YouTube URL is currently pending, so the replacement clip 11, `openai-build-week-final-v2` tag, and same-named release are also pending. The existing `openai-build-week-final` tag remains unchanged.

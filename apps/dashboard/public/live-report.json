@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "invoiceflow-mini-simulated-governed",
   "targetPath": "./examples\\governed-saas-after",
-  "generatedAt": "2026-07-15T09:05:52.103Z",
+  "generatedAt": "2026-07-17T19:05:10.454Z",
   "scanMode": "SIMULATED",
   "simulatedData": true,
   "scanScope": {
@@ -48,33 +48,33 @@
     },
     {
       "path": ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
-      "bytes": 17502,
-      "lines": 482,
-      "modifiedAt": "2026-07-13T21:06:14.768Z"
+      "bytes": 33988,
+      "lines": 814,
+      "modifiedAt": "2026-07-16T18:28:46.088Z"
     },
     {
       "path": ".controltower/codex-live-events.jsonl",
-      "bytes": 4667,
+      "bytes": 7383,
       "lines": 0,
-      "modifiedAt": "2026-07-13T21:06:44.836Z"
+      "modifiedAt": "2026-07-16T18:29:21.015Z"
     },
     {
       "path": ".controltower/codex-live-review-record.json",
-      "bytes": 21430,
-      "lines": 471,
-      "modifiedAt": "2026-07-13T21:06:44.839Z"
+      "bytes": 32693,
+      "lines": 665,
+      "modifiedAt": "2026-07-16T18:29:21.019Z"
     },
     {
       "path": ".controltower/codex-live-review.json",
-      "bytes": 4194,
+      "bytes": 6844,
       "lines": 1,
-      "modifiedAt": "2026-07-13T21:06:43.227Z"
+      "modifiedAt": "2026-07-16T18:29:20.654Z"
     },
     {
       "path": ".controltower/codex-review-schema.json",
-      "bytes": 1688,
-      "lines": 82,
-      "modifiedAt": "2026-07-13T21:06:14.770Z"
+      "bytes": 1907,
+      "lines": 90,
+      "modifiedAt": "2026-07-16T18:28:46.090Z"
     },
     {
       "path": ".controltower/config.json",
@@ -84,15 +84,15 @@
     },
     {
       "path": ".controltower/DETERMINISTIC_CLAIMS.json",
-      "bytes": 2860,
-      "lines": 94,
-      "modifiedAt": "2026-07-13T21:06:14.633Z"
+      "bytes": 4277,
+      "lines": 109,
+      "modifiedAt": "2026-07-16T18:28:45.982Z"
     },
     {
       "path": ".controltower/EVIDENCE_BUNDLE.md",
-      "bytes": 14397,
-      "lines": 435,
-      "modifiedAt": "2026-07-13T21:06:14.767Z"
+      "bytes": 30038,
+      "lines": 776,
+      "modifiedAt": "2026-07-16T18:28:46.086Z"
     },
     {
       "path": ".controltower/flight-recorder.jsonl",
@@ -102,9 +102,9 @@
     },
     {
       "path": ".controltower/governed-test-output.txt",
-      "bytes": 373,
+      "bytes": 375,
       "lines": 15,
-      "modifiedAt": "2026-07-15T09:05:52.087Z"
+      "modifiedAt": "2026-07-17T19:05:10.422Z"
     },
     {
       "path": ".controltower/phase0.json",
@@ -311,7 +311,7 @@
     }
   },
   "contextGraph": {
-    "generatedAt": "2026-07-15T09:05:52.101Z",
+    "generatedAt": "2026-07-17T19:05:10.451Z",
     "generatedLocally": true,
     "algorithm": "deterministic lexical and repository-surface analysis",
     "nodes": [
@@ -334,8 +334,8 @@
         "id": "file:.controltower/CODEX_LIVE_REVIEW_PROMPT.md",
         "label": ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
         "type": "documentation",
-        "lines": 482,
-        "bytes": 17502,
+        "lines": 814,
+        "bytes": 33988,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -350,7 +350,7 @@
         "label": ".controltower/codex-live-events.jsonl",
         "type": "control",
         "lines": 0,
-        "bytes": 4667,
+        "bytes": 7383,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -364,8 +364,8 @@
         "id": "file:.controltower/codex-live-review-record.json",
         "label": ".controltower/codex-live-review-record.json",
         "type": "control",
-        "lines": 471,
-        "bytes": 21430,
+        "lines": 665,
+        "bytes": 32693,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -380,7 +380,7 @@
         "label": ".controltower/codex-live-review.json",
         "type": "control",
         "lines": 1,
-        "bytes": 4194,
+        "bytes": 6844,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -394,8 +394,8 @@
         "id": "file:.controltower/codex-review-schema.json",
         "label": ".controltower/codex-review-schema.json",
         "type": "control",
-        "lines": 82,
-        "bytes": 1688,
+        "lines": 90,
+        "bytes": 1907,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -424,8 +424,8 @@
         "id": "file:.controltower/DETERMINISTIC_CLAIMS.json",
         "label": ".controltower/DETERMINISTIC_CLAIMS.json",
         "type": "control",
-        "lines": 94,
-        "bytes": 2860,
+        "lines": 109,
+        "bytes": 4277,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -439,8 +439,8 @@
         "id": "file:.controltower/EVIDENCE_BUNDLE.md",
         "label": ".controltower/EVIDENCE_BUNDLE.md",
         "type": "evidence",
-        "lines": 435,
-        "bytes": 14397,
+        "lines": 776,
+        "bytes": 30038,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -470,7 +470,7 @@
         "label": ".controltower/governed-test-output.txt",
         "type": "control",
         "lines": 15,
-        "bytes": 373,
+        "bytes": 375,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -915,8 +915,8 @@
         "id": "file:.controltower/EVIDENCE_BUNDLE.md",
         "label": ".controltower/EVIDENCE_BUNDLE.md",
         "type": "evidence",
-        "lines": 435,
-        "bytes": 14397,
+        "lines": 776,
+        "bytes": 30038,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -1006,7 +1006,7 @@
         "label": ".controltower/codex-live-events.jsonl",
         "type": "control",
         "lines": 0,
-        "bytes": 4667,
+        "bytes": 7383,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1020,8 +1020,8 @@
         "id": "file:.controltower/codex-live-review-record.json",
         "label": ".controltower/codex-live-review-record.json",
         "type": "control",
-        "lines": 471,
-        "bytes": 21430,
+        "lines": 665,
+        "bytes": 32693,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1036,7 +1036,7 @@
         "label": ".controltower/codex-live-review.json",
         "type": "control",
         "lines": 1,
-        "bytes": 4194,
+        "bytes": 6844,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1050,8 +1050,8 @@
         "id": "file:.controltower/codex-review-schema.json",
         "label": ".controltower/codex-review-schema.json",
         "type": "control",
-        "lines": 82,
-        "bytes": 1688,
+        "lines": 90,
+        "bytes": 1907,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1080,8 +1080,8 @@
         "id": "file:.controltower/DETERMINISTIC_CLAIMS.json",
         "label": ".controltower/DETERMINISTIC_CLAIMS.json",
         "type": "control",
-        "lines": 94,
-        "bytes": 2860,
+        "lines": 109,
+        "bytes": 4277,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1111,7 +1111,7 @@
         "label": ".controltower/governed-test-output.txt",
         "type": "control",
         "lines": 15,
-        "bytes": 373,
+        "bytes": 375,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1185,8 +1185,8 @@
         "id": "file:.controltower/CODEX_LIVE_REVIEW_PROMPT.md",
         "label": ".controltower/CODEX_LIVE_REVIEW_PROMPT.md",
         "type": "documentation",
-        "lines": 482,
-        "bytes": 17502,
+        "lines": 814,
+        "bytes": 33988,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -1261,7 +1261,7 @@
       "maxItems": 24,
       "selectedItems": 24,
       "availableItems": 33,
-      "estimatedTokens": 21354
+      "estimatedTokens": 23505
     }
   },
   "reviewGate": {
@@ -1297,24 +1297,24 @@
     "decisionRecorded": true
   },
   "memoryLens": {
-    "generatedAt": "2026-07-15T09:05:52.102Z",
+    "generatedAt": "2026-07-17T19:05:10.453Z",
     "generatedLocally": true,
     "sources": [
       {
         "relative": "docs/MEMORY_LENS.md",
-        "ageDays": 1,
+        "ageDays": 4,
         "stale": false,
         "bytes": 1401
       },
       {
         "relative": "TECH_DEBT_AND_SECURITY.md",
-        "ageDays": 2,
+        "ageDays": 5,
         "stale": false,
         "bytes": 941
       },
       {
         "relative": "README.md",
-        "ageDays": 0,
+        "ageDays": 2,
         "stale": false,
         "bytes": 1883
       }
@@ -1527,7 +1527,7 @@
     "matchedLessons": [],
     "gateStatus": "APPROVED",
     "saferNextAction": "Proceed only within the declared scope and record commands, evidence, NOT_RUN checks, and remaining risk.",
-    "checkedAt": "2026-07-15T09:05:52.102Z",
+    "checkedAt": "2026-07-17T19:05:10.454Z",
     "deterministic": true
   },
   "phase0": {
@@ -1914,9 +1914,39 @@
     }
   },
   "submission": {
-    "version": "openai-build-week-final",
-    "immutableSource": "https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final",
+    "version": "v0.2.0",
+    "releaseState": "FINAL_V2_PENDING_PUBLIC_DEMO_URL",
+    "priorImmutableSource": "https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final",
     "judgeStart": "JUDGE_START_HERE.md"
+  },
+  "destructiveActionPreflight": {
+    "operation": "recursive_delete",
+    "decision": "BLOCKED",
+    "executionState": "NOT_RUN",
+    "executed": false,
+    "requestedTarget": "$HOME/..",
+    "expandedTarget": "<USER_HOME>/..",
+    "resolvedTarget": "<USER_HOME_PARENT>",
+    "protectedBoundary": "<USER_HOME_PARENT>",
+    "protectedBoundaryType": "USER_HOME_PARENT",
+    "reasons": [
+      "The target resolves to the parent of the user home boundary."
+    ],
+    "reasonCodes": [
+      "USER_HOME_PARENT"
+    ],
+    "humanReviewRequired": true,
+    "saferNextAction": "Do not execute the command. Narrow the target to a specific non-symlinked repository subpath, inspect it, and obtain scoped human approval.",
+    "deterministic": true,
+    "checkedAt": "2026-07-17T17:48:45.202Z",
+    "policyVersion": "1.0.0",
+    "currentWorkingDirectory": "<REPOSITORY_ROOT>",
+    "repositoryRoot": "<REPOSITORY_ROOT>",
+    "platform": "posix",
+    "recursive": true,
+    "force": true,
+    "source": "recorded_demo",
+    "hookOutcome": "DENIED"
   },
   "codexLiveReview": {
     "state": "COMPLETE",

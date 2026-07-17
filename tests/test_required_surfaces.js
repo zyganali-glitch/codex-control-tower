@@ -12,6 +12,10 @@ const required = [
   'docs/SOURCE_PROTECTION.md', 'docs/SOURCE_RESEARCH_MATRIX.md', 'docs/FEATURE_HARVEST.md', 'docs/ORIGINALITY_MATRIX.md',
   'docs/CODEX_SELF_ASSESSMENT.md', 'docs/CODEX_NATIVE_RECOMMENDATIONS.md', 'docs/FINAL_COMPLETENESS_REVIEW.md', 'docs/ROOT_REPO_SCAN.json',
   'apps/dashboard/src/App.jsx', 'apps/dashboard/src/components/CodexLiveReviewPanel.jsx', 'apps/dashboard/src/sample-report.json', 'apps/dashboard/public/live-report.json',
+  'apps/dashboard/src/components/DestructiveActionPreflightPanel.jsx', 'apps/dashboard/src/destructivePreflightAdapter.js',
+  'cli/lib/destructiveActionPreflight.js', 'cli/commands/destructive-preflight.js',
+  '.codex/hooks.json', '.codex/hooks/destructive-preflight.js', '.controltower/CODEX_HOOK_VERIFICATION.json',
+  'tests/test_destructive_action_preflight.js', 'tests/test_destructive_preflight_persistence.js', 'tests/test_destructive_preflight_hook.js',
   'core/en/phase0-questions.json'
 ];
 for (const relative of required) assert.ok(fs.existsSync(path.join(ROOT, relative)), `${relative} missing`);
@@ -22,4 +26,10 @@ const governedEvidencePath = path.join(ROOT, 'examples/governed-saas-after/.cont
 assert.ok(fs.existsSync(governedEvidencePath), 'governed fixture must retain its target-local raw test output');
 const governedReport = JSON.parse(fs.readFileSync(path.join(ROOT, 'examples/governed-saas-after/CONTROL_TOWER_REPORT.json'), 'utf8'));
 assert.equal(governedReport.verification.commands[0].evidence, '.controltower/governed-test-output.txt');
+assert.equal(governedReport.destructiveActionPreflight.decision, 'BLOCKED');
+assert.equal(governedReport.destructiveActionPreflight.executionState, 'NOT_RUN');
+assert.equal(governedReport.destructiveActionPreflight.executed, false);
+assert.equal(governedReport.destructiveActionPreflight.requestedTarget, '$HOME/..');
+assert.equal(governedReport.destructiveActionPreflight.protectedBoundary, '<USER_HOME_PARENT>');
+assert.equal(governedReport.destructiveActionPreflight.hookOutcome, 'DENIED');
 console.log('PASS test_required_surfaces');

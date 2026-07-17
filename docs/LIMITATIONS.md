@@ -14,7 +14,9 @@ Codex Control Tower is an evidence and workflow layer for Codex-assisted develop
 | Blast radius | Local references, plans, owners, tests, and risk markers are incomplete proxies for impact. | Treat blast-radius findings as prompts for review, not exhaustive dependency proof. |
 | Mission Prompt | A bounded prompt can reduce ambiguity but cannot force an external Codex session to obey it. | Filesystem, branch, CI, and human controls still matter. |
 | Review Gate | Gate state is a local, unsigned file. It does not authenticate an approver or enforce enterprise policy. | It is a visible collaboration checkpoint, not identity verification. |
-| Mistake Shield | Verdicts rely on available minefield rules and deterministic matching. Paraphrases or novel risks may be missed; broad words may overmatch. | `CLEAR` means no configured rule matched, not “safe.” |
+| Destructive Action Preflight | The analyzer covers documented operations, path expressions, and raw command forms. Encoded payloads, nested interpreters, novel shell syntax, other tools, or runtime-generated targets may remain outside parsing. | BLOCKED/CAUTION is a deterministic decision for the inspected input, not complete command enforcement. It never executes the action or emits destructive CLEAR. |
+| Canonical/path inspection | Realpath and symlink checks reduce typed-intent ambiguity, but inaccessible filesystems, platform mismatch, unsupported variables, or uncertain links can prevent resolution. | Uncertainty becomes BLOCKED; users must not “fix” it by weakening the boundary. |
+| Mistake Shield | The structured preflight handles its documented destructive subset; other verdicts still rely on minefield rules and deterministic matching. Paraphrases or novel risks may be missed; broad words may overmatch. | Legacy `CLEAR` means no configured rule matched, not “safe.” |
 | Memory Lens | It can only analyze memory/lesson surfaces present in the repository. Those documents may be stale, incomplete, contradictory, or themselves unsafe. | Review selected memory before trusting it. |
 | Flight Recorder | JSONL is inspectable but mutable. Events can be omitted by tools that do not use the recorder. | It is not a tamper-proof black box or compliance ledger. |
 | Evidence Pack | Evidence is limited to artifacts and command results the workflow can observe. It cannot validate an unsupported external claim. | Missing provenance stays `NOT_RUN`; a report is not independent attestation. |
@@ -22,6 +24,7 @@ Codex Control Tower is an evidence and workflow layer for Codex-assisted develop
 | Dashboard | The UI visualizes report data; it does not create stronger proof than the underlying files. | A polished card is not an additional validation step. |
 | Privacy | Core processing is local, but generated reports can contain sensitive paths, plans, markers, or architecture details. Automatic redaction is not guaranteed. | Review every export before sharing. |
 | Security enforcement | Safe path handling reduces accidental writes but is not an OS sandbox, policy engine, malware scanner, or secret manager. | Use normal repository and operating-system security controls. |
+| Optional Codex hook | The project hook matches `Bash` `PreToolUse` only. Official interception is incomplete; trust is required; CAUTION can add context but cannot force ask; hook process failure may allow the tool workflow to continue. | Codex sandboxing and permissions are primary. The hook is defense in depth, not a firewall or complete deletion blocker. |
 | Team workflows | No hosted synchronization, enterprise RBAC, signed approvals, cross-repo view, or automatic PR/MR comments are included. | These are future integrations, not hidden features. |
 | Blind GPT-5.6 Semantic Audit | No model is required for deterministic scanning. The featured explicit audit sends a bounded evidence bundle through signed-in ChatGPT while locked comparison targets/expected classes are withheld. It uses a pinned CLI and an empty temporary workspace; user/project instructions and web/tool surfaces are disabled and tool events fail closed. Raw evidence can still contain status labels. | Model opinion is not independent attestation; local code owns every state/verdict, validates events and evidence-bearing output, exposes separate full-file/included-content hashes plus freshness, and raises advisory human review on policy conflict. |
 | Semantic challenge | GPT-5.6 can miss a gap, overread wording, or cite narrow evidence. `SUPPORTS`, `CONTRADICTS`, and `INSUFFICIENT` are judgments, not facts. Local mission PASS proves only a structural precheck. | Inspect rationale, counter/missing evidence, the hidden-policy relation, and local proof; `CONTRADICTS` alone is not always a conflict, and compatible insufficiency is not full agreement. |
@@ -36,6 +39,7 @@ InvoiceFlow Mini is a **FICTIONAL SAMPLE PROJECT** created for a controlled unde
 - The before/governed folders are prepared snapshots. Their values are real deterministic scan results, not customer impact metrics; GPT-5.6 did not produce the `25 → 88` change.
 - SHA-256 and Git/freshness provenance expose changes but are not signed immutable attestations.
 - Any command or gate not executed during the demo must remain `NOT_RUN`.
+- The preflight demo and tests analyze harmless intent strings and fixture paths only. No deletion command is run. The real hook proof used a nonexistent probe executable and verifies only denial before execution for that exact bounded path.
 - The controlled mission/change/test challenge includes an unproven durable audit-trail criterion. Raw records expose it, but the prompt does not label the challenge, direct the model to the gap, or supply an expected class; the result is not forced.
 
 ## Lineage and claim boundary
@@ -50,6 +54,7 @@ The **Universal Agent OS family** was studied for concepts only and was not modi
 - Confirming evidence provenance and deciding what can be shared.
 - Resolving contradictory plans, ownership, memory, policy, or test signals.
 - Determining regulatory, contractual, privacy, licensing, and security requirements.
+- Inspecting a CAUTION repository subpath and giving scoped approval before any destructive execution.
 
 **CCT does not replace ESLint, CI, code review, or branch protection. It adds the evidence and handoff layer around agent-assisted work.**
 
@@ -61,6 +66,7 @@ The **Universal Agent OS family** was studied for concepts only and was not modi
 - Signed/tamper-evident gates and evidence.
 - Team and cross-repository dashboards.
 - MCP and multi-agent continuity.
+- broader, documented tool/hook coverage if Codex can expose it without weakening sandbox or trust controls.
 - Multilingual packs.
 
 ## Related reading

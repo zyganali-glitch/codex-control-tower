@@ -27,6 +27,9 @@ This document records the build-time decisions that keep Codex Control Tower sma
 | PD-19 | Escalate policy conflict to a human | `HUMAN_REVIEW_REQUIRED` makes disagreement visible without granting model authority. | `CONTRADICTS` alone is not always conflict; comparison policy determines relation after validation. |
 | PD-20 | Isolate and fail closed around the model | A read-only target workspace still exposes files and instructions. Pinned Codex CLI now runs from a new empty ephemeral workspace with user/project instructions, web, inherited environment, persistence, and approval disabled; any tool/unknown/failed/malformed event rejects the result. | This mechanically narrows access to the disclosed prompt bundle, but it is not third-party attestation and still sends that bundle to signed-in ChatGPT. |
 | PD-21 | Separate structural precheck, compatible uncertainty, and semantic conflict | Local mission PASS proves the required surfaces exist, not that tests semantically cover every criterion. `INSUFFICIENT` against a negative/unexecuted local state should not be called agreement. | Dashboard and artifacts use structural-precheck labeling plus three relations: align, compatible, conflict. Human judgment remains necessary. |
+| PD-22 | Resolve canonical destructive boundaries before execution | Typed strings such as `$HOME/..`, relative traversal, platform aliases, or symlinks can hide the actual target. | The documented subset returns BLOCKED/CAUTION, NOT_RUN, and human review. It is analysis, not a general shell parser or OS firewall. |
+| PD-23 | Never emit destructive CLEAR | Even a specific repository subpath can contain valuable data or generated/source ambiguity. | A resolved repository subpath is CAUTION; protected, outside, dynamic, or uncertain targets are BLOCKED. Legacy Mistake Shield CLEAR keeps its narrow “no configured rule matched” meaning. |
+| PD-24 | Keep optional hooks subordinate to sandbox and trust | A project `PreToolUse` decision can add defense in depth, but official interception is incomplete and hook failure may not block. | Match supported `Bash` forms only, require project/hash trust, never weaken sandbox/approvals, and publish the exact harmless verification boundary. |
 
 ## Why local-first
 
@@ -45,6 +48,14 @@ The health score is a prioritization aid, not a verdict from an opaque model. A 
 - Which improvement changed the before/after score?
 
 The implemented real model audit may challenge evidence, but it cannot rewrite the deterministic result, the authoritative local verdict, or convert `NOT_RUN` into `PASS`.
+
+## Why canonical destructive preflight
+
+Review Gate answers whether a human approved a declared scope; it does not prove that a runtime target stays inside that scope. Destructive Action Preflight therefore treats target resolution as a separate deterministic question. It expands only documented expressions, verifies the Git root, canonicalizes the target, inspects symlink boundaries, and compares against filesystem root, user home/parent, repository root, `.git`, and outside-repository boundaries.
+
+The result is evidence, not execution: `BLOCKED` or `CAUTION`, `NOT_RUN`, `executed: false`, redacted paths, reasons, and a safer next action. An APPROVED Review Gate cannot turn a protected target into CLEAR. Tests and the safety demo never run deletion.
+
+The optional Codex hook consumes the same decision for matching `Bash` `PreToolUse`. Its real nonexistent-probe denial is retained, along with the one-off hook-trust caveat and incomplete-coverage boundary. The Codex sandbox and permission model remain primary.
 
 ## Why a Codex Mission Prompt
 

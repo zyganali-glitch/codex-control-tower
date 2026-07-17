@@ -13,13 +13,18 @@ Status: **WARN** — release-preflight debt is visible and bounded.
 - Added semantic alignment/conflict, SHA-256/Git evidence provenance, report freshness, and filtered unsupported-citation records.
 - Added bounded Git worktree-state provenance and target-local raw test output after a real GPT-5.6 run exposed the missing-artifact boundary.
 - Verified the static GitHub Pages judge exhibit and reviewed the published Devpost rules/FAQ.
+- Added canonical Destructive Action Preflight with protected-boundary redaction, no-delete tests/demo, Mistake Shield/Flight Recorder integration, and generated-output confinement.
+- Added an optional limited Codex `PreToolUse` adapter and retained an exact harmless nonexistent-probe denial record without weakening read-only sandboxing.
 
 ## Remaining risk and debt
 
 - Scanner rules remain heuristic and can still produce false positives or false negatives.
 - Review Gate approval is local and unsigned; identity is not cryptographically verified.
 - Codex build provenance is documented but not yet a standardized signed session receipt.
-- No PR/MR integration, Codex hook/plugin packaging, real user validation, or hosted team workflow exists.
-- Final competition screenshots/video, private primary-task `/feedback` form entry, and real user validation are pending.
+- No PR/MR integration, packaged cross-project hook installer, real user validation, or hosted team workflow exists.
+- The optional hook matches supported `Bash` events only. Official interception is incomplete; normal project/hash trust is not yet verified; CAUTION cannot force ask; hook failure may continue.
+- Preflight is a documented command subset and project-level decision layer, not a general shell parser, OS firewall, or replacement for sandbox/permissions.
+- The final 1920×1080 competition screenshot is complete and privacy-checked. Recording new clip 03, supplying the real public YouTube URL, replacement clip 11, the private primary-task `/feedback` form entry, and real user validation remain pending.
+- `openai-build-week-final-v2` and its release remain pending the real public YouTube URL; the old tag stays untouched.
 
 These items remain roadmap work; none is silently promoted to `PASS`.

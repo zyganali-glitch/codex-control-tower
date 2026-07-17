@@ -107,9 +107,9 @@ Prioritize detection of:
 - dependency/supply-chain changes;
 - demo/real evidence leakage.
 
-**Implemented now:** local file relationships, risk markers, large files, TODO/FIXME, weak tests, auth/payment heuristics, docs/governance gaps, and lexical mistake checks.
+**Implemented now:** local file relationships, risk markers, large files, TODO/FIXME, weak tests, auth/payment heuristics, docs/governance gaps, lexical mistake checks, and Destructive Action Preflight. The preflight expands supported home expressions, canonicalizes the target, blocks protected/uncertain/symlink boundaries, redacts personal paths, and keeps execution `NOT_RUN`. A specific repository subpath is still CAUTION.
 
-**Future:** language-aware adapters, Git ownership/overlap, generated-file mapping, package graph, and cross-repository integrations.
+**Future:** language-aware adapters, Git ownership/overlap, generated-file mapping, package graph, cross-repository integrations, and broader destructive-command recognition without weakening the fail-closed boundary.
 
 ## 6. What should Control Tower record for the next session?
 
@@ -172,7 +172,7 @@ Require an APPROVED gate with bounded scope before:
 
 Gate approval should expire or be invalidated when scope, target, risk, or diff changes materially.
 
-**Implemented now:** local gate states, note/timestamp, risky-action guidance, and Mistake Shield gate awareness.
+**Implemented now:** local gate states, note/timestamp, risky-action guidance, Mistake Shield gate awareness, and structured destructive-action analysis. Protected targets become BLOCKED even when the local Review Gate is APPROVED; approval does not make a canonical home, root, repository, `.git`, outside, or uncertain target acceptable.
 
 **Future:** policy profiles, scope-diff invalidation, expiry enforcement, approver identity, signatures, and repository/CI enforcement.
 
@@ -210,6 +210,8 @@ This build intentionally avoids adding a cloud service or hidden model dependenc
 - local Context Graph and dashboard Context Trace
 - local Review Gate states and notes
 - deterministic Mistake Shield
+- Destructive Action Preflight with `BLOCKED`/`CAUTION`, redacted canonical boundaries, `NOT_RUN`, human review, CLI/demo/recorder integration, and no deletion execution
+- optional limited Codex `PreToolUse` adapter for matching `Bash` events; exact harmless-denial evidence exists, but normal project trust and complete interception do not
 - Memory Lens and metrics
 - JSONL Flight Recorder
 - Evidence Pack and Devpost Pack exporters
@@ -228,6 +230,7 @@ This build intentionally avoids adding a cloud service or hidden model dependenc
 - CI and PR/MR integration
 - team/cross-repository continuity
 - additional semantic-challenge claim packs beyond the implemented read-only GPT-5.6 flow
+- broader hook/tool coverage and a forced-approval decision for CAUTION, if Codex exposes and documents those capabilities
 - full multilingual product packs beyond the English-only Build Week product
 
 ### Deliberately not claimed

@@ -8,7 +8,7 @@ The official [OpenAI Build Week page](https://openai.devpost.com/) and [rules](h
 | --- | --- | --- |
 | Fits the challenge and Developer Tools track | Working Codex-centered mission-control tool, not a prompt-only entry | [Judge: Start Here](../JUDGE_START_HERE.md), Pages, CLI |
 | Real Codex/GPT-5.6 role | Codex built the product and visibly launches real `gpt-5.6-sol`; GPT-5.6 performs the blind semantic audit | First ten seconds of video, audit panel, `codex-review.js` |
-| Under-three-minute public video | Target 2:52; spoken audio explains Codex, GPT-5.6, and human decisions | [Demo Script](DEMO_SCRIPT.md), Devpost video field |
+| Under-three-minute public video | Twelve-clip target 2:52; spoken audio explains Codex, GPT-5.6, deterministic preflight, and human decisions. Real URL remains pending. | [Demo Script](DEMO_SCRIPT.md), Devpost video field |
 | README explains acceleration, contributions, and human choices | Dedicated Build Week, architecture, authority, and provenance sections | [README](../README.md), [Build Log](CODEX_BUILD_LOG.md) |
 | Developer-tool testing path | No-install Pages route plus reproducible local commands; no rebuild required for Pages inspection | [Judge Test Path](JUDGE_TEST_PATH.md) |
 | Private feedback identity | Real Session ID from the primary build task, entered only in Devpost | Private form field; intentionally not public |
@@ -17,7 +17,7 @@ The official [OpenAI Build Week page](https://openai.devpost.com/) and [rules](h
 
 | Criterion | Case | Fastest evidence |
 | --- | --- | --- |
-| **Technological Implementation** | Codex helped build a non-trivial CLI/dashboard with deterministic analysis, real blind GPT-5.6 execution, strict validation, provenance, reconciliation, and adversarial tests. | Pages audit panel; `npm run verify`; `cli/commands/codex-review.js`; tests |
+| **Technological Implementation** | Codex helped build a non-trivial CLI/dashboard with deterministic analysis, canonical destructive-target preflight, real blind GPT-5.6 execution, strict validation, provenance, reconciliation, and adversarial tests. | Pages panels; `npm run verify`; `cli/commands/codex-review.js`; preflight code/tests |
 | **Design** | One coherent authority model connects mission, context, risk, human gate, locked facts, blind model judgment, reconciliation, and handoff. | Follow Overview → Audit → Evidence → Before/After |
 | **Potential Impact** | Developers get durable review and continuity around agent-assisted changes without a mandatory hosted service. | Mission Prompt, Context Trace, NOT_RUN, Review Gate, Flight Recorder |
 | **Quality of the Idea** | GPT-5.6 is an intentionally blind semantic challenger—not a generator, score owner, or rubber stamp—and conflict escalates to a human. | `MISSION_CHANGE_TEST_ALIGNMENT`, model/local separation, HUMAN REVIEW REQUIRED |
@@ -37,6 +37,8 @@ This criterion evaluates the depth and skill demonstrated in using Codex to buil
 | Explainable context | `contextGraphBuilder.js` | Local relationships, selection reason, relevance, freshness, importance, protection |
 | Codex mission contract | `codexPromptBuilder.js` | Allowed scope, forbidden actions, proof, tests, docs, stop/final-response rules |
 | Human authority | `reviewGate.js`, `mistakeShield.js` | Scoped decision artifact and deterministic risk/minefield comparison |
+| Destructive Action Preflight | `destructiveActionPreflight.js`, `destructiveCommandParser.js` | Supported variable expansion, canonical boundary checks, fail-closed ambiguity/symlink handling, sanitized BLOCKED/CAUTION/NOT_RUN output |
+| Optional Codex hook | `.codex/hooks.json`, `.codex/hooks/destructive-preflight.js` | Matching `Bash` `PreToolUse` deny for BLOCKED with a real nonexistent harmless-probe record; incomplete coverage and trust caveats retained |
 | Continuity | `memoryLens.js`, `flightRecorder.js` | Persistent rules and typed JSONL session events |
 | Evidence | `evidenceCollector.js` | Portable reports, traceability, NOT_RUN, debt, gate, memory, recorder, mission |
 | Blind model input | `cli/commands/codex-review.js` | Neutral claims + bounded raw evidence; locked comparison targets withheld |
@@ -91,6 +93,8 @@ Flight Recorder + Evidence Pack + next safe handoff
 | Portable artifacts | Evidence survives without the UI | JSON, JSONL, Markdown |
 | Public/static plus local/live | Judges get instant access and a reproducible fresh-run route | Pages and local workbench |
 | Explicit fictional/real split | Controlled sample remains useful without implying customer proof | Disclosure banners and docs |
+| No destructive “safe” state | Protected/uncertain intent is BLOCKED; a specific repository subpath remains CAUTION and human-reviewed | Preflight panel and record |
+| Canonical privacy boundary | Public/video paths use `<USER_HOME>` and related tokens rather than a personal filesystem path | Preflight output and regression tests |
 
 The Devpost Pack Exporter is secondary. It packages evidence and handoff text; it is not the core product story.
 
@@ -113,13 +117,14 @@ The Devpost Pack Exporter is secondary. It packages evidence and handoff text; i
 | Passing tests do not prove the mission | Blind semantic challenge | GPT-5.6 examines mission/change/test/evidence alignment |
 | Context is too broad | Context Trace | Selected items explain why they matter |
 | Risky work proceeds implicitly | Mistake Shield + Review Gate | Reasons, safer rewrite, visible human decision |
+| Typed target hides a broader destructive boundary | Destructive Action Preflight | Canonical root, home, repository, `.git`, outside, and symlink resolution before execution; NOT_RUN evidence |
 | Lessons vanish between sessions | Memory Lens + Flight Recorder | Minefields, constraints, events, and next action persist |
 | Model confidence can overwrite nuance | Locked reconciliation | Model opinion cannot promote or erase local state |
 | Private code should not require a new service | Local-first deterministic core | Scan/report/dashboard work without API key or telemetry |
 
 The project does not claim customers, productivity percentages, incident reduction, or production deployment. Current impact evidence is a working product, reproducible controlled fixture, real model execution, and inspectable handoff—not market validation.
 
-**CCT does not replace ESLint, CI, code review, or branch protection. It adds the evidence and handoff layer around agent-assisted work.**
+**CCT does not replace the Codex sandbox/permissions, operating-system security, ESLint, CI, code review, or branch protection. It adds a project-level decision, evidence, and handoff layer around agent-assisted work.**
 
 ## 4. Quality of the Idea
 
@@ -141,18 +146,22 @@ Codex Control Tower is inspired at concept level by the **Universal Agent OS fam
 
 See [Source Protection](SOURCE_PROTECTION.md), [Feature Harvest](FEATURE_HARVEST.md), and [Originality Matrix](ORIGINALITY_MATRIX.md).
 
-## Video evidence path (2:52 target)
+## Video evidence path (12 clips, 2:52 target)
 
-| Time | Main criterion | Proof |
-| --- | --- | --- |
-| 0:00–0:10 | Quality / Technology | Completed real GPT-5.6 result and authority boundary |
-| 0:10–0:30 | Impact / Trust | Problem plus fictional-sample/real-execution disclosure |
-| 0:30–0:48 | Technology | Reproducible prepared scan comparison |
-| 0:48–1:08 | Design | Local READY, bounded mission, locked facts |
-| 1:08–1:34 | Technology | Codex desktop launches real product command |
-| 1:34–1:58 | Technology / Quality | Blind GPT-5.6 input and structured assessment |
-| 1:58–2:28 | Quality | Controlled semantic challenge and human-review escalation |
-| 2:28–2:52 | Design / Impact | Preserved NOT_RUN, human authority, concise close |
+| Clip | Duration | Main criterion | Proof |
+| --- | ---: | --- | --- |
+| 01 | 10s | Quality / Technology | Completed real GPT-5.6 result and locked-authority boundary in the opening |
+| 02 | 13s | Impact / Trust | Fictional sample versus real scan/test/model execution |
+| 03 | 15s | Technology / Safety | Destructive Action Preflight: `$HOME/..` → `<USER_HOME_PARENT>` → BLOCKED / NOT_RUN / human review; no command executed |
+| 04 | 12s | Design | Truthful local READY / NOT STARTED state |
+| 05 | 20s | Technology | Codex Desktop launches the real `gpt-5.6-sol` path and returns the recorded result |
+| 06 | 14s | Design / Quality | Completed local dashboard with separate verdicts and locked NOT_RUN |
+| 07 | 15s | Quality | Controlled semantic challenge and non-authoritative conflict |
+| 08 | 17s | Technology | Model/CLI/workspace/no-tool/hash/freshness provenance |
+| 09 | 16s | Trust | PASS/FAIL/NOT_RUN/SIMULATED remain distinct |
+| 10 | 16s | Impact / Honesty | Real deterministic scans on prepared fictional snapshots |
+| 11 | 16s | Build provenance | Codex contribution, human decisions, and real frozen v2 source; PENDING until YouTube plus v2 tag/release exist |
+| 12 | 8s | Design / Authority | Codex writes; GPT-5.6 challenges; Control Tower locks; developer decides |
 
 Full narration: [Demo Script](DEMO_SCRIPT.md).
 
@@ -165,12 +174,15 @@ Full narration: [Demo Script](DEMO_SCRIPT.md).
 - [ ] Mission PASS is labeled a structural precheck; `COMPATIBLE` uncertainty is not shown as full agreement.
 - [ ] The controlled challenge is disclosed without claiming a forced result.
 - [ ] Any HUMAN REVIEW REQUIRED flag is advisory and tied to a claim.
+- [ ] Destructive Action Preflight shows canonical protected-boundary resolution, BLOCKED/CAUTION only, NOT_RUN, `executed: false`, redacted paths, and no deletion execution.
+- [ ] Optional hook claims are limited to matching supported `Bash` `PreToolUse`; sandbox remains primary, trust is required, and complete interception is not claimed.
 - [ ] Locked local facts, verdict/action, and Review Gate remain separate.
 - [ ] FICTIONAL SAMPLE PROJECT and REAL EXECUTION both remain visible.
 - [ ] GPT-5.6 is not credited with `25 → 88`, scoring, fixture creation, or test execution.
 - [ ] NOT_RUN remains visible.
 - [ ] Build log identifies current verification, while old run IDs are labeled historical.
-- [ ] Frozen tag, Pages, video, and private feedback field are checked before submission.
+- [ ] The old `openai-build-week-final` tag remains untouched.
+- [ ] Real public YouTube, replacement clip 11, `openai-build-week-final-v2`, and its release remain pending until their dependencies are actually complete.
 
 ## Related assets
 

@@ -32,7 +32,112 @@ test('does not synthesize a baseline, prompt, gate, shield, or recorder event', 
   assert.equal(report.missionPrompt, null);
   assert.equal(report.reviewGate, null);
   assert.equal(report.mistakeShield, null);
+  assert.equal(report.destructiveActionPreflight, null);
   assert.deepEqual(report.flightRecorder, []);
+});
+
+test('normalizes the exact destructive preflight contract without losing false values', () => {
+  const destructiveActionPreflight = {
+    operation: 'recursive_delete',
+    decision: 'blocked',
+    executionState: 'not_run',
+    executed: false,
+    requestedTarget: '$HOME/..',
+    expandedTarget: '<USER_HOME>/..',
+    resolvedTarget: '<USER_HOME_PARENT>',
+    protectedBoundary: '<USER_HOME_PARENT>',
+    protectedBoundaryType: 'USER_HOME_PARENT',
+    reasons: ['The target resolves to the parent of the user home boundary.'],
+    reasonCodes: ['USER_HOME_PARENT'],
+    humanReviewRequired: true,
+    saferNextAction: 'Do not execute the command. Narrow the target and obtain scoped human approval.',
+    deterministic: true,
+    checkedAt: '2026-07-17T12:00:00.000Z',
+    policyVersion: '1.0.0',
+    currentWorkingDirectory: '<REPOSITORY_ROOT>',
+    repositoryRoot: '<REPOSITORY_ROOT>',
+    platform: 'posix',
+    recursive: false,
+    force: false,
+    source: 'structured_cli',
+    hookOutcome: 'DENIED',
+  };
+  const report = normalizeReport({
+    projectName: 'preflight-project',
+    score: 70,
+    destructiveActionPreflight,
+  });
+
+  assert.deepEqual(report.destructiveActionPreflight, {
+    ...destructiveActionPreflight,
+    decision: 'BLOCKED',
+    executionState: 'NOT_RUN',
+  });
+});
+
+test('normalizes preflight data on an already-normalized report and never invents a hook outcome', () => {
+  const report = normalizeReport({
+    repository: { name: 'normalized-project', path: '<REPOSITORY_ROOT>' },
+    health: { score: 70, grade: 'Governed' },
+    destructiveActionPreflight: {
+      operation: 'recursive_delete',
+      decision: 'BLOCKED',
+      executionState: 'NOT_RUN',
+      executed: false,
+      requestedTarget: '$HOME/..',
+      protectedBoundary: '<USER_HOME_PARENT>',
+      humanReviewRequired: true,
+      deterministic: true,
+      recursive: false,
+      force: false,
+    },
+  });
+
+  assert.equal(report.destructiveActionPreflight.executed, false);
+  assert.equal(report.destructiveActionPreflight.recursive, false);
+  assert.equal(report.destructiveActionPreflight.force, false);
+  assert.equal(Object.prototype.hasOwnProperty.call(report.destructiveActionPreflight, 'hookOutcome'), false);
+});
+
+test('redacts user-home paths from every displayed destructive preflight text field', () => {
+  const report = normalizeReport({
+    projectName: 'privacy-project',
+    score: 70,
+    destructiveActionPreflight: {
+      operation: 'recursive_delete',
+      decision: 'BLOCKED',
+      executionState: 'NOT_RUN',
+      executed: false,
+      requestedTarget: 'C:\\Users\\PRIVATE_USER\\..',
+      expandedTarget: 'C:\\Users\\PRIVATE_USER\\..',
+      resolvedTarget: 'C:\\Users\\PRIVATE_USER',
+      protectedBoundary: '<USER_HOME>',
+      reasons: ['C:\\Users\\PRIVATE_USER is protected.'],
+      humanReviewRequired: true,
+      saferNextAction: 'Inspect /home/private-user/cache without executing it.',
+      deterministic: true,
+    },
+  });
+  const serialized = JSON.stringify(report.destructiveActionPreflight);
+
+  assert.doesNotMatch(serialized, /PRIVATE_USER|private-user|C:\\\\Users/u);
+  assert.match(serialized, /<USER_HOME>/u);
+});
+
+test('preserves an explicitly recorded false hook outcome without synthesizing one elsewhere', () => {
+  const withHook = normalizeReport({
+    projectName: 'explicit-hook-state',
+    score: 70,
+    destructiveActionPreflight: { decision: 'CAUTION', hookOutcome: false },
+  });
+  const withoutHook = normalizeReport({
+    projectName: 'absent-hook-state',
+    score: 70,
+    destructiveActionPreflight: { decision: 'CAUTION' },
+  });
+
+  assert.equal(withHook.destructiveActionPreflight.hookOutcome, false);
+  assert.equal(Object.prototype.hasOwnProperty.call(withoutHook.destructiveActionPreflight, 'hookOutcome'), false);
 });
 
 test('keeps a pending gate unapproved and preserves unknown recorder status', () => {

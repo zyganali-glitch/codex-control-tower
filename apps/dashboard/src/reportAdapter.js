@@ -1,4 +1,5 @@
 import normalizeCodexLiveReview from './reconciliationAdapter.js';
+import normalizeDestructiveActionPreflight from './destructivePreflightAdapter.js';
 
 const evidenceStates = ['PASS', 'WARN', 'FAIL', 'NOT_RUN', 'SIMULATED'];
 
@@ -360,6 +361,7 @@ function normalizeCliReport(raw) {
     contextTrace,
     memoryLens: normalizeMemory(raw),
     flightRecorder: normalizeFlightRecorder(raw),
+    destructiveActionPreflight: normalizeDestructiveActionPreflight(raw.destructiveActionPreflight),
     mistakeShield: raw.mistakeShield ? {
       status: statusOrUnknown(raw.mistakeShield.verdict || raw.mistakeShield.status),
       action: raw.mistakeShield.proposedAction || raw.nextSafeAction || null,
@@ -379,6 +381,7 @@ export default function normalizeReport(raw = {}) {
     ...raw,
     risks: raw.risks || [], missingSurfaces: raw.missingSurfaces || [], scoreBreakdown: raw.scoreBreakdown || [], traceability: raw.traceability || [], flightRecorder: Array.isArray(raw.flightRecorder) ? raw.flightRecorder : [],
     evidenceBoundary: raw.evidenceBoundary || { summary: Object.fromEntries(evidenceStates.map((state) => [state, 0])), checks: [] },
+    destructiveActionPreflight: normalizeDestructiveActionPreflight(raw.destructiveActionPreflight),
     codexLiveReview: normalizeCodexLiveReview(raw.codexLiveReview),
   };
 }

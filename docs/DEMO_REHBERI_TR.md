@@ -1,531 +1,339 @@
-# Demo Videosu Çekim Rehberi
+# 12 Parçalı Demo Videosu Çekim Rehberi
 
-Bu rehber, bilgisayar kullanımı ve yabancı kelimeler konusunda deneyimin olmadığını varsayar. Hiçbir adımı atlama. Her adımda yazan “Görmen gereken” bölümünü doğrulamadan sonraki adıma geçme.
+Bu rehber bilgisayar ve İngilizce konusunda deneyimin olmadığını varsayar. Her “Görmen gereken” satırını doğrulamadan sonraki adıma geçme.
 
-Videonun hedef süresi **2 dakika 52 saniyedir**. Kesin sınır **3 dakikadan kısa** olmaktır.
+Nihai video **2 dakika 52 saniye**, yani **172 saniye** olmalıdır. Kesin kural: video **3 dakikadan kısa** kalmalıdır.
 
-## Önce çok basit biçimde ne göstereceğimizi anlayalım
+## Önce neyi göstereceğimizi anlayalım
 
-Codex Control Tower, Codex ile yapılan yazılım işinin görevini, sınırlarını, kanıtını ve insan kararını düzenler. Ürünün en önemli yeni parçası gerçek GPT-5.6 kullanımıdır.
+Codex Control Tower ürününün merkezinde gerçek `gpt-5.6-sol` vardır. Model sınırlı kanıtı sorgular ama kilitli yerel `PASS`, `WARN`, `FAIL`, `NOT_RUN` veya `SIMULATED` durumlarını değiştiremez.
 
-GPT-5.6'ya bir iddia ve sınırlandırılmış ham kanıt verilir. Fakat karşılaştırmada kullanılacak **kilitli iddia sonucu** ve “vermesi beklenen cevap” gösterilmez. Model, her çalışmada yeni açılan boş ve geçici bir alanda çalışır; proje klasörünü kendi başına dolaşamaz, internet araması yapamaz ve bilgisayarda başka bir işlem başlatamaz. Böyle bir girişim kayda geçerse ürün sonucu kabul etmez. Ham kanıt dosyalarının içinde `PASS` veya `NOT_RUN` gibi kendi kayıtları bulunabilir; saklanan şey uzlaştırıcının kilitli iddia sonucu ve beklenen cevap sınıfıdır. Böylece model yalnızca hazır cevabı tekrar etmeye yönlendirilmez.
+Yeni **Destructive Action Preflight** bölümü, desteklenen yıkıcı bir işlem niyetini çalıştırmadan önce hedefin gerçek sınırını hesaplar. Yazılan `$HOME/..` ifadesi kişisel klasör adını göstermeden `<USER_HOME_PARENT>` olarak görünür. Sonuç `BLOCKED`, çalışma durumu `NOT_RUN` ve `executed: false` olur. Bu bölüm bir silme komutu çalıştırmaz.
 
-Model şu üç görüşten birini verir:
+Codex'in kendi güvenli çalışma alanı ve izinleri ana korumadır. Projedeki isteğe bağlı bağlantı yalnızca desteklenen bazı `Bash` araç çağrılarını inceleyebilir; her işlem yolunu yakaladığı söylenemez. Bu yüzden videoda “tam güvenlik” veya “her silmeyi kesin engeller” deme.
 
-- `SUPPORTS`: Kanıt iddiayı destekliyor.
-- `CONTRADICTS`: Kanıt iddiayla çelişiyor.
-- `INSUFFICIENT`: Karar vermek için kanıt yetersiz.
+InvoiceFlow Mini **kurgusal örnektir**. Hazırlanmış önce/sonra klasörleri müşteri sonucu değildir. Taramalar, iki küçük denetim, kanıt özetleri, gerçek GPT-5.6 çağrısı ve ön denetim analizi ise kontrollü girdiler üzerinde yapılan gerçek işlemlerdir. GPT-5.6 puanı 25'ten 88'e çıkarmamıştır.
 
-Model görüşü daha sonra gizli yerel karşılaştırma kuralıyla uyuşmazsa ekranda `HUMAN REVIEW REQUIRED` görünür. Türkçesi “İNSAN İNCELEMESİ GEREKLİ”dir. `CONTRADICTS` kelimesi tek başına her zaman uyuşmazlık demek değildir; örneğin yerel `FAIL` ile modelin `CONTRADICTS` görüşü uyumlu olabilir. `COMPATIBLE` görünürse bunun anlamı “model kanıtı yetersiz buldu ama bu belirsizlik mevcut olumsuz veya çalıştırılmamış yerel kayıtla çelişmiyor”dur; tam anlaşma demek değildir. Bu yalnızca bir uyarı ve karşılaştırmadır. GPT-5.6 yerel sonucu, `PASS`, `FAIL`, `NOT_RUN`, `SIMULATED` durumunu veya insan onayını değiştiremez.
+## Ham videoları koru
 
-## İki gösterge sayfasının farkı
+Ham video klasörünü Dosya Gezgini'nde şu biçimde bul:
 
-Videoda aynı ürünün iki görünümünü kullanacağız:
+```text
+<USER_HOME>\Videos\CCT-Devpost-Final-2026\01-Ham-Videolar
+```
 
-1. **GitHub Pages:** İnternetteki herkese açık, sabit vitrindir. Jüri hiçbir şey kurmadan açabilir. Önceden kaydedilmiş gerçek GPT-5.6 sonucunu gösterir. Senin bilgisayarında yeni işlem başlayınca kendiliğinden değişmez.
-2. **Bilgisayardaki canlı sayfa:** Yeni işlemin `READY`, `RUNNING`, `COMPLETE` değişimini gösterir. Türkçe karşılıkları “HAZIR”, “ÇALIŞIYOR”, “TAMAMLANDI”dır. Bu sayfa `npm run dashboard` talimatıyla açılır.
+Bu klasördeki hiçbir dosyayı silme, yeniden adlandırma veya üzerine kaydetme.
 
-Videonun ilk 10 saniyesinde GitHub Pages vitrini gösterilir. Daha sonra yeni çalışmayı göstermek için bilgisayardaki canlı sayfaya geçilir.
+- 01, 02, 04, 05, 06, 07, 08, 09, 10 ve 12 numaralı mevcut videolar korunacaktır.
+- Eski 8 saniyelik 03 dosyası korunacak ama son kurguda kullanılmayacaktır. Yeni 15 saniyelik 03 ayrı dosya olacaktır.
+- Eski 11 dosyası korunacaktır. Yeni 11, gerçek YouTube bağlantısı belgelere eklendikten ve gerçek `openai-build-week-final-v2` etiketi ile sürümü yayımlandıktan sonra ayrı dosya olarak çekilecektir.
 
-`apps/dashboard/index.html` dosyasına çift tıklama. Bu yöntem doğru sayfayı açmaz.
+## Clipchamp'ın önemli sınırı
 
-## Kurgusal olan ile gerçek olan
+Clipchamp “pencere kaydı” seçilince yalnızca seçtiğin tek pencereyi kaydeder. Aynı video parçasında terminalden tarayıcıya, Codex'ten tarayıcıya veya başka bir uygulamaya geçmeye çalışma.
 
-### Kurgusal örnek
+Her parça için:
 
-- InvoiceFlow Mini gerçek bir müşteri projesi değildir.
-- Kişiler, müşteriler, ödemeler, onaylar ve geçmiş kurgusaldır.
-- `25` puanlı önceki durum ile `88` puanlı yönetimli durum önceden hazırlanmış iki örnek klasördür.
-- GPT-5.6 bu iki klasörü oluşturmaz ve puanı 25'ten 88'e çıkarmaz.
+1. Önce göstereceğin uygulamayı aç.
+2. Sayfayı doğru bölüme getir.
+3. Yazıları normal tarayıcı büyüklüğünde okunur yap.
+4. Clipchamp'ta yalnızca o pencereyi seç.
+5. O parçayı bitirince kaydı durdur.
+6. Sonraki uygulama veya ekran için yeni bir kayıt başlat.
 
-### Gerçek işlemler
+## Yeni 03 kaydından önce proje sayfasını hazırla
 
-- Program iki örnek klasörü gerçekten tarar.
-- Puanlar yerel kurallarla gerçekten hesaplanır.
-- İki küçük denetim gerçekten çalışır.
-- Kanıt dosyaları gerçekten toplanır ve özet değerleri hesaplanır.
-- Codex uygulaması gerçek `gpt-5.6-sol` modelini yeni açılmış boş, geçici ve salt okunur bir alanda çalıştırır.
-- Proje talimatları ve internet araması kapalıdır; model başka bir araç kullanmaya kalkarsa çalışma kabul edilmez.
-- GPT-5.6 cevabı gerçekten kaydedilir; dayanak göstermeyen kesin cevaplar reddedilir ve geçerli cevap yerel sonuçla sonradan karşılaştırılır.
+### 1. Proje klasöründe koyu pencere aç
 
-Videoda söyleyeceğin dürüst cümle şudur:
+1. Klavyede Windows işaretli tuş ile `E` tuşuna birlikte bas.
+2. `codex-control-tower` klasörünü bul ve aç.
+3. Klasörün içindeki boş alana farenin sağ tuşuyla tıkla.
+4. `Terminalde Aç` veya `Open in Terminal` seçeneğine tıkla.
 
-> “InvoiceFlow Mini is fictional. The scans, focused tests, evidence hashes, and GPT-5.6 call are real executions on that controlled sample.”
+Görmen gereken: Koyu pencerenin son satırında `codex-control-tower` yazmalıdır.
 
-Türkçe anlamı: “InvoiceFlow Mini kurgusaldır. Taramalar, küçük denetimler, kanıt özetleri ve GPT-5.6 çağrısı bu kontrollü örnek üzerinde yapılan gerçek işlemlerdir.”
+### 2. Son denetimleri çalıştır
 
-## Kontrollü anlam sınaması neden var?
-
-Örneğin başarı ölçütlerinden biri, reddedilen ödeme girişimlerinin kalıcı ve yerel bir denetim kaydında tutulmasıdır. Hazırlanmış yönetimli örnekte bazı yapısal kanıtlar ve geçen küçük denetimler vardır; fakat bu başarı ölçütünün tamamını kanıtlayan kayıt yoktur.
-
-Bu boşluk özellikle ve açıkça bırakılmış bir **kontrollü sınamadır**. Amaç modeli kandırmak veya zorla hata buldurmak değildir. Ham kayıtlar hem başarı ölçütünü hem eksik uygulama kanıtını doğal olarak içerir; fakat GPT-5.6 talimatı “şu boşluğa bak” demez ve istenen cevap sınıfını vermez. Yerel taraftaki `PASS`, burada yalnızca gerekli görev, iz, çalışan denetim ve kanıt bağlantılarının bulunduğunu söyleyen **yapısal ön kontroldür**; bütün başarı ölçütlerinin anlam bakımından kanıtlandığı iddiası değildir. Model ham görev, değişiklik, denetim ve kanıt arasındaki anlam ilişkisini kendi kurar. Görüşü yerel karşılaştırma kuralıyla uyuşmazsa `HUMAN_REVIEW_REQUIRED` oluşur. Uyuşsa da uyuşmasa da gerçek cevap olduğu gibi gösterilir.
-
-## Çekimden bir gün önce: hazırlık
-
-### A. Proje klasörünü bul
-
-1. Klavyede Windows işaretli tuş ile `E` tuşuna aynı anda bas.
-2. Açılan Dosya Gezgini penceresinin sağ üstündeki arama alanına `codex-control-tower` yaz.
-3. Arama bitince aynı adlı klasöre çift tıkla.
-4. İçeride `README.md`, `package.json`, `docs`, `apps`, `cli` ve `examples` adlarını gör.
-
-Görmen gereken: Üstte veya pencere başlığında `codex-control-tower` adı yazmalı.
-
-### B. Talimat yazma penceresini aç
-
-Bu rehberde “koyu pencere” dediğimiz yer, kısa çalışma talimatlarını yazacağın penceredir.
-
-En kolay yol:
-
-1. Proje klasörünün içindeki boş beyaz alana farenin sağ tuşuyla tıkla.
-2. `Terminalde Aç` veya `Open in Terminal` seçeneğine tıkla.
-3. Koyu pencerenin son satırında `codex-control-tower` adını ara.
-
-Bu seçenek yoksa:
-
-1. Dosya Gezgini'nin üstündeki adres alanına bir kez tıkla.
-2. Mavi seçili hale gelen klasör adresini `Ctrl` ve `C` tuşlarına birlikte basarak kopyala.
-3. Windows'un alttaki arama alanına tıkla.
-4. `PowerShell` yaz ve çıkan uygulamaya tıkla.
-5. Koyu pencereye `cd ` yaz. `cd` harflerinden sonra bir boşluk bırak.
-6. `Ctrl` ve `V` ile klasör adresini yapıştır.
-7. Enter tuşuna bas.
-
-Görmen gereken: Son satırda `codex-control-tower` adı bulunmalı. Başka klasördeysen aşağıdaki talimatları çalışma.
-
-### C. Gerekli parçaları kur ve tam denetimi çalıştır
-
-Koyu pencereye aşağıdaki ilk satırı yaz ve Enter'a bas:
+Koyu pencereye aşağıdaki komutları birer birer yaz. Her satırdan sonra Enter'a bas ve işlem bitmeden sonraki satırı yazma.
 
 ```powershell
 npm install
-```
-
-Yazılar akarken bekle. Yeniden yazı yazabileceğin boş satır gelince şu satırı yaz ve Enter'a bas:
-
-```powershell
 npm run verify
-```
-
-Bu işlem birkaç dakika sürebilir.
-
-Görmen gereken:
-
-- Son bölümde kırmızı, uzun bir hata olmamalı.
-- Başarısız denetim sayısı `0` olmalı.
-- Sayfa oluşturma işlemi tamamlanmalı.
-
-Hata varsa video çekimine geçme. Hata metninin ekran görüntüsünü al ve bu Codex görevine gönder.
-
-### D. Hazırlanmış örneği oluştur
-
-Aynı koyu pencereye yaz:
-
-```powershell
 npm run demo
-```
-
-Görmen gereken:
-
-- `Before: 25/100, 16 risks`
-- `After: 88/100, 1 risks`
-- İki küçük denetimin geçtiğini belirten sonuç
-- Canlı gösterge için `READY` veya `NOT STARTED`
-
-Sayılar farklıysa videoda eski sayıları söyleme. Önce uyumsuzluğu düzelt.
-
-### E. Codex uygulamasında temiz demo görevi aç
-
-1. Windows'un alttaki arama alanına tıkla.
-2. `Codex` yaz.
-3. Codex uygulamasına tıkla.
-4. Giriş istenirse `Sign in with ChatGPT` düğmesine tıkla.
-5. GPT-5.6 erişimin olan ChatGPT hesabınla giriş yap.
-6. Sol üstteki `+` işaretine veya `New task` yazısına tıkla.
-7. Klasör seçme ekranı gelirse bulduğun `codex-control-tower` klasörünü seç.
-8. `Klasör Seç` veya `Select Folder` düğmesine tıkla.
-9. Yeni görevin yanındaki üç noktaya tıkla.
-10. `Rename` seçeneği varsa tıkla ve `Demo Blind Audit` yaz. Bu seçenek yoksa devam et; önemli olan görevin boş olmasıdır.
-
-Görmen gereken: Boş bir konuşma, doğru proje adı ve altta Codex'e yazı yazılan alan.
-
-Uzun ana geliştirme görevini video sırasında açma. Özel konuşma ve `/feedback` bilgisi görünmemeli.
-
-### F. Gerçek GPT-5.6 çalışmasını prova et
-
-1. Dosya Gezgini'nde `docs` klasörüne çift tıkla.
-2. `CODEX_DEMO_PROMPT.md` dosyasına çift tıkla. Windows hangi uygulamayla açacağını sorarsa Not Defteri'ni seçebilirsin.
-3. Üç ters tırnak arasındaki İngilizce metnin tamamını fareyle seç.
-4. `Ctrl` ve `C` ile kopyala.
-5. Codex uygulamasına dön.
-6. Alttaki yazı alanına tıkla.
-7. `Ctrl` ve `V` ile yapıştır.
-8. İlk satırda `Without editing any files` ve `npm run demo:codex` yazdığını kontrol et.
-9. Enter'a bas.
-10. Codex'in aynı adlı talimatı çalıştırdığını gör ve bitmesini bekle.
-
-Görmen gereken özet:
-
-- `gpt-5.6-sol`
-- `REAL_CODEX_BLIND_SEMANTIC_AUDIT`
-- boş ve geçici çalışma alanı açıklaması
-- kabul edilen araç işlemi sayısının `0` olması
-- `read-only` veya salt okunur açıklaması
-- Yerel karar ile ayrı model görüşü
-- `SUPPORTS`, `CONTRADICTS`, `INSUFFICIENT` sayıları
-- Varsa `HUMAN REVIEW REQUIRED`
-- Korunan `NOT_RUN` sayısı
-- Kanıt güncelliği ve kayıt yolu
-
-Başarısız olursa sonucu gizleme ve başarı görüntüsü uydurma. Video gününden önce hatayı düzelt.
-
-### G. Prova bittikten sonra başlangıca dön
-
-Koyu pencereye dön ve yeniden yaz:
-
-```powershell
-npm run demo
-```
-
-Bu, bilgisayardaki canlı sayfayı yeniden `READY / NOT STARTED` durumuna getirir. GitHub Pages'deki kayıtlı sonuç değişmez.
-
-## Çekimden hemen önce: üç ekranı hazırla
-
-### 1. Özel bilgileri kapat
-
-1. E-posta, WhatsApp, banka, parola ve özel belge pencerelerini kapat.
-2. Tarayıcıdaki kişisel sekmeleri kapat.
-3. Windows bildirimlerini kapat veya “Rahatsız etmeyin” durumuna al.
-4. Codex'in sol bölümündeki özel görev adları görünüyorsa sol bölümü daralt.
-5. Tam ad, kullanıcı klasörü, parola, gizli anahtar ve `/feedback` kimliği görünmesin.
-6. Masaüstündeki özel dosya adları görünüyorsa açık pencereleri tam ekran yap.
-
-### 2. GitHub Pages vitrinini aç
-
-1. Tarayıcıyı aç.
-2. Üstteki adres alanına tıkla.
-3. Aşağıdaki adresi kopyalayıp yapıştır:
-
-```text
-https://zyganali-glitch.github.io/codex-control-tower/
-```
-
-4. Enter'a bas.
-5. Sayfa açılınca **Blind GPT-5.6 Semantic Audit** bölümünü bul.
-6. Gerekirse aşağı doğru kaydır.
-7. `gpt-5.6-sol`, tamamlanmış sonuç ve modelin ayrı görüşü aynı ekranda görünsün.
-8. Bu sekmeyi birinci sırada bırak.
-
-Görmen gereken: Adres `github.io` içermeli. Sayfa “arka uç kapalı” veya benzeri bir hata göstermemeli. Bu sayfa kaydedilmiş sabit vitrindir.
-
-### 3. Bilgisayardaki canlı sayfayı aç
-
-Koyu pencereye yaz:
-
-```powershell
+npm run demo:safety
 npm run dashboard
 ```
 
-Enter'a bas ve koyu pencereyi kapatma.
+`npm run demo:safety` yalnızca ön denetim kaydı üretir. Bir silme komutu çalıştırmaz.
 
 Görmen gereken:
 
-- Tarayıcıda ikinci bir sekme açılır.
-- Adres `http://localhost:` ile başlar. Bu yabancı ifade yalnızca “bu bilgisayarda çalışan sayfa” anlamına gelir.
-- Codex Control Tower görünür.
-- `READY / NOT STARTED` görünür.
-- **FICTIONAL SAMPLE PROJECT** ve **REAL EXECUTION** açıklamaları bulunur.
+- Denetimler hata vermeden bitmelidir.
+- Demo sonucu `Before: 25/100, 16 risks` ve `After: 88/100, 1 risks` göstermelidir.
+- Ön denetim `BLOCKED`, `NOT_RUN` ve `<USER_HOME_PARENT>` göstermelidir.
+- Tarayıcıda Codex Control Tower açılmalıdır.
 
-Tarayıcı kendiliğinden açılmazsa koyu penceredeki `Local:` yazısının yanındaki adresi kopyalayıp tarayıcı adres alanına yapıştır.
+Bir hata görürsen çekime başlama. Hata metninin ekran görüntüsünü bu Codex görevine gönder.
 
-### 4. Codex ekranını hazırla
+### 3. 03 panelini aç
 
-1. Codex uygulamasındaki temiz `Demo Blind Audit` görevine dön.
-2. `CODEX_DEMO_PROMPT.md` içindeki İngilizce metni yeniden kopyala.
-3. Codex'in alttaki yazı alanına yapıştır.
-4. Henüz Enter'a basma.
-5. İlk satır ve `npm run demo:codex` görünür kalsın.
+1. Açılan Chrome veya Edge penceresini büyüt.
+2. Sol taraftan `Mistake Shield` bölümüne tıkla.
+3. Sayfanın üstündeki **DESTRUCTIVE ACTION PREFLIGHT** panelini bul.
+4. Gerekirse sayfayı az miktarda kaydır; panelin tamamı aynı ekrana sığsın.
+5. Tarayıcı büyüklüğünü normalde, yani yüzde 100'de tut.
 
-### 5. Ekran kaydının uygulama geçişlerini çektiğini dene
+Görmen gereken:
 
-Kullanacağın kayıt aracı tüm ekranı ve tarayıcıdan Codex'e geçişi kaydetmelidir. Bazı araçlar yalnızca tek pencereyi kaydeder.
+- `ANALYSIS ONLY · NO COMMAND EXECUTED`
+- `Operation: recursive_delete`
+- `Requested target: $HOME/..`
+- `Resolved boundary: <USER_HOME_PARENT>`
+- `Decision: BLOCKED`
+- `Execution: NOT_RUN`
+- `HUMAN REVIEW REQUIRED`
+- Deterministik kural sürümü
+- Güvenli sonraki adım
 
-1. Yirmi saniyelik deneme kaydı başlat.
-2. GitHub Pages sekmesini göster.
-3. Codex uygulamasına geç.
-4. Bilgisayardaki canlı sayfaya geç.
-5. Kaydı durdur ve izle.
-6. Üç ekran da görünüyorsa aynı aracı kullan.
-7. Yalnızca bir pencere görünüyorsa tam ekran kaydı seçeneğini aç veya tüm ekranı kaydeden başka bir araç kullan.
+Ekranda gerçek kullanıcı adı, gerçek kullanıcı klasörü, e-posta, özel konuşma, parola, gizli anahtar veya `/feedback` kimliği varsa çekime başlama.
 
-Mikrofon denemesinde kendi sesini açıkça duymadan gerçek kayda başlama.
+Bu maddelerin tamamı görünüyorsa ana Codex görevi sana **“03 numaralı kayıt için hazırsın”** diyecektir. Bu cümleyi görmeden 03 kaydına başlama.
 
-## İngilizce anlatımı kolay okuma yöntemi
+## 01 numaralı video — 10 saniye
 
-Jürinin doğrudan anlaması için aşağıdaki kısa İngilizce cümleleri okuyacağız. Her cümlenin altında Türkçe okunuşa yakın bir yardımcı satır ve anlamı vardır. Okunuş satırı yalnız yardımdır; mükemmel aksan gerekmez. Yavaş, net ve doğal konuş.
+**Tam dosya adı:** `01 (10 sn) Codex Control Tower lets GPT-5.6 challenge bounded evidence. The model can audit the proof, but it cannot overwrite locked local facts.mp4`
 
-Çekimden önce her cümleyi en az beş kez prova et. Telefonda ses kaydı alıp dinlemek çok faydalıdır.
+**Ekranda göster:** GitHub Pages'te tamamlanmış gerçek GPT-5.6 paneli.
 
-## 2 dakika 52 saniyelik çekim
+**Fare hareketi:** `gpt-5.6-sol`, ayrı model/yerel kararlar ve kilitli durum açıklamasında kısa süre bekle.
 
-### 0:00–0:10 — GPT-5.6'yı ilk anda göster
+**Tam İngilizce seslendirme:** “Codex Control Tower lets GPT-5.6 challenge bounded evidence. The model can audit the proof, but it cannot overwrite locked local facts.”
 
-Ekranda yap:
+**Türkçe anlamı:** Codex Control Tower, GPT-5.6'nın sınırlı kanıtı sorgulamasını sağlar. Model kanıtı inceleyebilir fakat kilitli yerel gerçeklerin üzerine yazamaz.
 
-1. Kaydı GitHub Pages sekmesi açıkken başlat.
-2. Tamamlanmış **Blind GPT-5.6 Semantic Audit** bölümü görünsün.
-3. Fareyi sırayla `gpt-5.6-sol`, boş ve geçici çalışma alanı, kabul edilen araç işlemi `0` ve sonuç alanına götür.
+**Görmen gereken sonuç:** İlk 10 saniyede gerçek GPT-5.6'nın merkezde olduğu ve yerel gerçeği değiştiremediği anlaşılmalıdır. Mevcut ham video korunur.
 
-Söyle:
+## 02 numaralı video — 13 saniye
 
-> “This is a real GPT-5.6 Sol run in Codex Control Tower. It challenges evidence but cannot change locked local facts.”
+**Tam dosya adı:** `02 (13 sn) The sample project is fictional, but this execution is real. The local scanner compares prepared snapshots, raising governance from twenty-five to eighty-eight while reducing risks from sixteen to one.mp4`
 
-Yaklaşık okunuş:
+**Ekranda göster:** `FICTIONAL SAMPLE PROJECT`, `REAL EXECUTION` ve Before / After özeti.
 
-> “Dis iz ı riyıl ci-pi-ti fayv point siks Sol ran in Kodeks Kontrol Tavır. İt çelıncız evidıns bat kenat çeync lokt lokıl fekts.”
+**Fare hareketi:** Sırayla kurgusal/gerçek açıklamaları, `25 → 88` ve `16 → 1` sayılarını göster.
 
-Anlamı: Bu, ürünün içindeki gerçek GPT-5.6 çalışmasıdır. Model kanıta itiraz edebilir ama kilitli yerel gerçekleri değiştiremez.
+**Tam İngilizce seslendirme:** “The sample project is fictional, but this execution is real. The local scanner compares prepared snapshots, raising governance from twenty-five to eighty-eight while reducing risks from sixteen to one.”
 
-### 0:10–0:30 — Sorunu ve dürüst sınırı söyle
+**Türkçe anlamı:** Örnek proje kurgusaldır ama bu çalışma gerçektir. Yerel tarayıcı hazırlanmış görüntüleri karşılaştırır; yönetişim yirmi beşten seksen sekize çıkarken riskler on altıdan bire iner.
 
-Ekranda yap:
+**Görmen gereken sonuç:** Kurgusal örnek ile gerçek tarama birbirine karışmamalıdır. GPT-5.6'nın puanı değiştirdiği söylenmemelidir. Mevcut ham video korunur.
 
-1. Aynı sayfada **FICTIONAL SAMPLE PROJECT** yazısını göster.
-2. Sonra **REAL EXECUTION** yazısını göster.
+## 03 numaralı video — 15 saniye — yeni çekim
 
-Söyle:
+**Tam dosya adı:** `03 (15 sn) Before a destructive action, Control Tower deterministically resolves the target against protected roots. This recursive delete crosses the user-home boundary, so execution stays NOT RUN and human review is required.mp4`
 
-> “Codex builds quickly, but scope and proof can disappear. InvoiceFlow Mini is fictional. The scans, two tests, hashes, and GPT-5.6 call are real.”
+**Ekranda göster:** Yalnızca Chrome veya Edge içindeki Destructive Action Preflight paneli. Çekim sırasında uygulama değiştirme.
 
-Yaklaşık okunuş:
+**Fare hareketi:**
 
-> “Kodeks bildz kuikli, bat skop end pruf ken disapir. İnvoys Flo Mini iz fikşınıl. Dı skenz, tu tests, heşız, end ci-pi-ti fayv point siks kol ar riyıl.”
+1. İlk 3 saniye: başlık, `recursive_delete` ve `$HOME/..`.
+2. Sonraki 4 saniye: `<USER_HOME_PARENT>`.
+3. Sonraki 5 saniye: `BLOCKED`, `Execution NOT_RUN` ve `HUMAN REVIEW REQUIRED`.
+4. Son 3 saniye: güvenli sonraki adım ve `ANALYSIS ONLY · NO COMMAND EXECUTED`.
 
-### 0:30–0:48 — Önce ve sonra görünümünü göster
+**Tam İngilizce seslendirme:** “Before a destructive action, Control Tower deterministically resolves the target against protected roots. This recursive delete crosses the user-home boundary, so execution stays NOT RUN and human review is required.”
 
-Ekranda yap:
+**Türkçe anlamı:** Yıkıcı bir işlemden önce Control Tower hedefi korunan köklere göre deterministik olarak çözümler. Bu özyinelemeli silme kullanıcı ana klasörü sınırını aştığı için işlem NOT RUN olarak kalır ve insan incelemesi gerekir.
 
-1. Soldaki `Before / After` seçeneğine tıkla.
-2. Fareyle `25`, `16`, `88`, `1` ve iki geçen denetimi sırayla göster.
+**Görmen gereken sonuç:** Kişisel yol görünmeden `BLOCKED`, `NOT_RUN`, insan incelemesi ve hiçbir komutun çalışmadığı açıkça okunmalıdır.
 
-Söyle:
+### 03 kaydını Clipchamp ile çek
 
-> “These prepared snapshots score twenty-five with sixteen risks before, and eighty-eight with one risk after. They are not a customer transformation. GPT-5.6 did not create the change.”
+1. Windows'un alttaki arama alanına tıkla.
+2. `Clipchamp` yaz ve uygulamayı aç.
+3. `Yeni video oluştur` düğmesine tıkla.
+4. Sol tarafta `Kaydet ve oluştur` seçeneğine tıkla.
+5. `Ekran` veya `Screen` seçeneğine tıkla.
+6. Mikrofonu aç ve doğru mikrofonu seç.
+7. Kırmızı kayıt düğmesine tıkla.
+8. Paylaşma penceresinde `Pencere` veya `Window` bölümünü seç.
+9. Destructive Action Preflight açık olan Chrome veya Edge penceresine tıkla.
+10. `Paylaş` düğmesine tıkla.
+11. Üç saniyelik geri sayımdan sonra yukarıdaki fare sırasını uygula ve İngilizce cümleyi oku.
+12. 15 saniye dolunca kaydı durdur.
+13. Dışa aktarırken dosya adını yukarıdaki tam adla yaz.
+14. Eski 03 dosyasının üzerine kaydetme; yeni dosyanın ayrı olduğunu kontrol et.
 
-Yaklaşık okunuş:
+## 04 numaralı video — 12 saniye
 
-> “Diiz priperd snapşats skor tventi fayv vit sikstiin risks bifor, end eyti eyt vit van risk aftır. Dey ar nat ı kastımır transformeyşın. Ci-pi-ti fayv point siks did nat kriyeyt dı çeync.”
+**Tam dosya adı:** `04 (12 sn) Before GPT-5.6 runs, the local dashboard shows READY. Access is unchecked, no model workspace exists, and accepted tool events have not run.mp4`
 
-### 0:48–1:08 — Bilgisayardaki canlı HAZIR durumuna geç
+**Ekranda göster:** Yerel dashboard `READY / NOT STARTED` durumu.
 
-Ekranda yap:
+**Fare hareketi:** READY, erişim kontrol edilmedi, model alanı yok ve araç olayları çalışmadı alanlarını sırayla göster.
 
-1. Tarayıcıdaki ikinci, `localhost` yazan sekmeye tıkla.
-2. `READY / NOT STARTED` alanını göster.
-3. Görev sınırını, izin verilen işleri ve kanıt isteğini göster.
+**Tam İngilizce seslendirme:** “Before GPT-5.6 runs, the local dashboard shows READY. Access is unchecked, no model workspace exists, and accepted tool events have not run.”
 
-Söyle:
+**Türkçe anlamı:** GPT-5.6 çalışmadan önce yerel gösterge paneli READY gösterir. Erişim henüz kontrol edilmemiştir, model çalışma alanı yoktur ve kabul edilen araç olayları çalışmamıştır.
 
-> “The local layer creates a bounded Codex mission and locks execution facts. A passing test proves that it ran, not that it proves the whole mission.”
+**Görmen gereken sonuç:** READY durumunun tamamlanmış çalışma olmadığı anlaşılmalıdır. Mevcut ham video korunur.
 
-Yaklaşık okunuş:
+## 05 numaralı video — 20 saniye
 
-> “Dı lokıl leyır kriyeyts ı baundıd Kodeks mişın end loks eksikyuşın fekts. ı pasing test pruvz det it ran, nat det it pruvz dı hol mişın.”
+**Tam dosya adı:** `05 (20 sn) In Codex Desktop, one exact instruction launches the real GPT-5.6 Sol audit. About fifty-two seconds later, it returns separate verdicts, preserves NOT_RUN, and requires human review.mp4`
 
-### 1:08–1:34 — Codex'e gerçek talimatı ver
+**Ekranda göster:** Mevcut Codex Desktop ham videosundaki tam talimat, `npm run demo:codex` başlangıcı ve aynı penceredeki sonuç. Bu parçada tarayıcıya geçme.
 
-Ekranda yap:
+**Fare hareketi:** Talimat, komut, ayrı kararlar, NOT_RUN ve insan incelemesi üzerinde kısa süre bekle.
 
-1. Codex uygulamasına geç.
-2. Hazır talimatı iki saniye göster.
-3. Enter'a bas.
-4. Codex'in `npm run demo:codex` çalıştırmaya başladığını göster.
+**Tam İngilizce seslendirme:** “In Codex Desktop, one exact instruction launches the real GPT-5.6 Sol audit. About fifty-two seconds later, it returns separate verdicts, preserves NOT_RUN, and requires human review.”
 
-Söyle:
+**Türkçe anlamı:** Codex Desktop'ta tek bir tam talimat gerçek GPT-5.6 Sol denetimini başlatır. Yaklaşık elli iki saniye sonra ayrı kararlar döner, NOT_RUN korunur ve insan incelemesi gerekir.
 
-> “Codex helped build and test this product. Now Codex starts the real audit. My key decision was to hide locked statuses and expected answers until GPT-5.6 returns.”
+**Görmen gereken sonuç:** Mevcut video hem talimatı hem sonucu gösterdiği için yeniden çekilmez.
 
-Yaklaşık okunuş:
+## 06 numaralı video — 14 saniye
 
-> “Kodeks helpt bild end test dis prodakt. Nau Kodeks starts dı riyıl odit. May kii disicın vaz tu hayd lokt steytısız end ekspektıd ansırz until ci-pi-ti fayv point siks ritörnz.”
+**Tam dosya adı:** `06 (14 sn) The local dashboard now reads the same completed GPT-5.6 run. It preserves separate verdicts, one disagreement, locked NOT_RUN, and human review.mp4`
 
-### 1:34–1:58 — Gerçek kör anlam incelemesini göster
+**Ekranda göster:** Yerel dashboard tamamlanmış GPT-5.6 özeti.
 
-Ekranda yap:
+**Fare hareketi:** COMPLETE, ayrı kararlar, bir uyuşmazlık, kilitli NOT_RUN ve insan incelemesini göster.
 
-1. Bilgisayardaki canlı sayfaya dön.
-2. `RUNNING` görünüyorsa göster.
-3. İşlem bittiyse `COMPLETE` göster.
-4. `gpt-5.6-sol`, `medium`, boş ve geçici çalışma alanı, kabul edilen araç işlemi `0`, `read-only` ve kör giriş açıklamasını göster.
+**Tam İngilizce seslendirme:** “The local dashboard now reads the same completed GPT-5.6 run. It preserves separate verdicts, one disagreement, locked NOT_RUN, and human review.”
 
-Söyle:
+**Türkçe anlamı:** Yerel gösterge paneli artık aynı tamamlanmış GPT-5.6 çalışmasını okur. Ayrı kararları, bir uyuşmazlığı, kilitli NOT_RUN durumunu ve insan incelemesini korur.
 
-> “GPT-5.6 sees bounded evidence in an empty workspace. Project instructions and web access are off. Any tool event rejects the run. Locked statuses are hidden. The model must answer with evidence.”
+**Görmen gereken sonuç:** Model ve yerel kararlar birleşmemelidir. Mevcut ham video korunur.
 
-Yaklaşık okunuş:
+## 07 numaralı video — 15 saniye
 
-> “Ci-pi-ti fayv point siks siiz baundıd evidıns in en empti vörkspeys. Procet instrakşınz end veb ekses ar of. Eni tul ivent ricekts dı ran. Lokt steytısız ar hidın. Dı modıl mast ansır vit evidıns.”
+**Tam dosya adı:** `07 (15 sn) This is the non-obvious control. GPT-5.6 can contradict a structural PASS using missing implementation and test evidence, but it cannot rewrite the locked local state.mp4`
 
-İşlem henüz bitmediyse telaş etme. `RUNNING` ekranında güvenlik sınırlarını göstermeye devam et. Sahte tamamlanma gösterme.
+**Ekranda göster:** `MISSION_CHANGE_TEST_ALIGNMENT`, yapısal ön kontrol ve eksik uygulama/denetim kanıtı.
 
-### 1:58–2:28 — Kontrollü anlam sınamasını göster
+**Fare hareketi:** Yapısal PASS, eksik kanıt, çelişki ilişkisi ve kilitli yerel durumu göster.
 
-Ekranda yap:
+**Tam İngilizce seslendirme:** “This is the non-obvious control. GPT-5.6 can contradict a structural PASS using missing implementation and test evidence, but it cannot rewrite the locked local state.”
 
-1. `MISSION_CHANGE_TEST_ALIGNMENT` satırını bul.
-2. `Structural precheck` yazısını göster. Bunun “yapısal ön kontrol” olduğunu unutma; anlam bakımından kesin doğruluk değildir.
-3. Model görüşünü göster.
-4. Karşı kanıt, eksik kanıt ve önerilen sonraki adımı göster.
-5. Varsa `HUMAN REVIEW REQUIRED` yazısını göster. `COMPATIBLE` görünürse bunun tam anlaşma değil, çelişmeyen belirsizlik olduğunu söyle.
+**Türkçe anlamı:** Bu, ilk bakışta açık olmayan denetimdir. GPT-5.6 eksik uygulama ve denetim kanıtını kullanarak yapısal PASS ile çelişebilir fakat kilitli yerel durumu yeniden yazamaz.
 
-Söyle:
+**Görmen gereken sonuç:** GPT-5.6'nın anlam ilişkisini sorguladığı, gerçeğin sahibi olmadığı anlaşılmalıdır. Mevcut ham video korunur.
 
-> “Here, local PASS means structural precheck, not semantic truth. GPT-5.6 found the missing audit-trail implementation and test. That conflict requires human review, but the model still cannot change a local fact.”
+## 08 numaralı video — 17 saniye
 
-Yaklaşık okunuş:
+**Tam dosya adı:** `08 (17 sn) Proof includes the model, Codex CLI, an empty read-only workspace, zero accepted tools, disabled web search, timestamps, a clean commit, and SHA-256 evidence. The age warning remains visible.mp4`
 
-> “Hir, lokıl pas miinz strakçırıl pri-çek, nat simentik trut. Ci-pi-ti fayv point siks faund dı mising odit treyl implımınteyşın end test. Det konflikt rikvayırz hümın rivyu, bat dı modıl stil kenat çeync ı lokıl fekt.”
+**Ekranda göster:** Model ve kanıt kökeni bölümü.
 
-`HUMAN REVIEW REQUIRED` oluşmadıysa “oluştu” deme. Bunun yerine son cümleyi şöyle değiştir:
+**Fare hareketi:** Model, Codex CLI `0.144.3`, boş salt okunur alan, sıfır araç, kapalı internet araması, zaman, temiz kayıt, SHA-256 ve yaş uyarısını göster.
 
-> “A policy conflict would require human review, but it could not change a local fact.”
+**Tam İngilizce seslendirme:** “Proof includes the model, Codex CLI, an empty read-only workspace, zero accepted tools, disabled web search, timestamps, a clean commit, and SHA-256 evidence. The age warning remains visible.”
 
-### 2:28–2:43 — Değişmeyen sınırları göster
+**Türkçe anlamı:** Kanıt; modeli, Codex komut aracını, boş salt okunur alanı, sıfır kabul edilen aracı, kapalı internet aramasını, zamanları, temiz kaydı ve SHA-256 özetini içerir. Yaş uyarısı görünür kalır.
 
-Ekranda yap:
+**Görmen gereken sonuç:** Kanıt kökeni okunmalı ve eski kanıt uyarısı saklanmamalıdır. Mevcut ham video korunur.
 
-1. `Evidence` bölümüne tıkla.
-2. `NOT_RUN` satırını göster.
-3. Yerel karar ile model görüşünün ayrı durduğunu göster.
-4. İnsan onay alanını göster.
+## 09 numaralı video — 16 saniye
 
-Söyle:
+**Tam dosya adı:** `09 (16 sn) Evidence states never collapse into a single success claim. Seven checks pass, one fails, five remain NOT_RUN, and the fictional demo provenance stays explicitly SIMULATED.mp4`
 
-> “Local validation rejects unsafe events and unsupported answers. NOT_RUN stays NOT_RUN. The model advises; the deterministic verdict and human Review Gate stay authoritative.”
+**Ekranda göster:** Evidence durum sayıları.
 
-Yaklaşık okunuş:
+**Fare hareketi:** PASS, FAIL, NOT_RUN ve SIMULATED sayılarını sırayla göster.
 
-> “Lokıl valideyşın ricekts anseyf ivents end ansaportıd ansırz. Nat ran steyz nat ran. Dı modıl edvayzız; dı ditörmınıstik vördict end hümın rivyu geyt stey otoritıtiv.”
+**Tam İngilizce seslendirme:** “Evidence states never collapse into a single success claim. Seven checks pass, one fails, five remain NOT_RUN, and the fictional demo provenance stays explicitly SIMULATED.”
 
-### 2:43–2:52 — Kapanış
+**Türkçe anlamı:** Kanıt durumları tek bir başarı iddiasında birleşmez. Yedi denetim geçer, biri başarısızdır, beşi NOT_RUN kalır ve kurgusal demo kökeni açıkça SIMULATED olarak görünür.
 
-Ekranda yap: Tamamlanmış GPT-5.6 özetine dön.
+**Görmen gereken sonuç:** Eksik veya kurgusal kanıt PASS gibi gösterilmemelidir. Mevcut ham video korunur.
 
-Söyle:
+## 10 numaralı video — 16 saniye
 
-> “Codex writes. GPT-5.6 challenges. Control Tower locks the facts. The developer decides.”
+**Tam dosya adı:** `10 (16 sn) The fictional sample uses real scans, not model-made scores. Governance rises from 25 to 88, risks fall from 16 to 1, and NOT_RUN stays visible.mp4`
 
-Yaklaşık okunuş:
+**Ekranda göster:** Before / After görünümü ve NOT_RUN.
 
-> “Kodeks rayts. Ci-pi-ti fayv point siks çelıncız. Kontrol Tavır loks dı fekts. Dı divelıpır disayds.”
+**Fare hareketi:** `25`, `88`, `16`, `1` ve NOT_RUN alanlarını göster.
 
-## Kaydı durdur ve eksiksiz kontrol et
+**Tam İngilizce seslendirme:** “The fictional sample uses real scans, not model-made scores. Governance rises from 25 to 88, risks fall from 16 to 1, and NOT_RUN stays visible.”
 
-1. Kayıt aracındaki kare biçimli durdurma düğmesine tıkla.
-2. Kaydedilen videoyu aç.
-3. Baştan sona izle; yalnızca başını ve sonunu kontrol etme.
-4. Sürenin `2:59` veya daha kısa olduğunu gör.
-5. İlk 10 saniyede gerçek GPT-5.6 sonucu görünmeli.
-6. Sesinde “Codex” ve “GPT-5.6” açıkça duyulmalı.
-7. Codex'e talimat verildiği ve Codex'in `npm run demo:codex` başlattığı görünmeli.
-8. GitHub Pages'in sabit vitrin, bilgisayardaki sayfanın canlı çalışma ekranı olduğu karışmamalı.
-9. Örnek projenin kurgusal, tarama/denetim/model çağrısının gerçek olduğu söylenmeli.
-10. GPT-5.6'nın puanı 25'ten 88'e çıkardığı söylenmemeli.
-11. Modelin kilitli sonucu değiştirebildiği söylenmemeli.
-12. Boş ve geçici çalışma alanı ile kabul edilen araç işlemi `0` görünmeli.
-13. `Structural precheck` kesin anlam doğruluğu gibi anlatılmamalı; `COMPATIBLE` tam anlaşma diye çevrilmemeli.
-14. Varsa `HUMAN REVIEW REQUIRED` dürüstçe gösterilmeli; yoksa varmış gibi anlatılmamalı.
-15. Ekranda e-posta, parola, kişisel yol, özel konuşma veya `/feedback` kimliği bulunmamalı.
-16. Telif hakkı sana ait olmayan müzik kullanma.
+**Türkçe anlamı:** Kurgusal örnek, modelin ürettiği puanları değil gerçek taramaları kullanır. Yönetişim 25'ten 88'e çıkar, riskler 16'dan 1'e iner ve NOT_RUN görünür kalır.
 
-Bir madde eksikse videoyu yeniden çek. Üç dakikayı geçen videoyu yükleme.
+**Görmen gereken sonuç:** Puanların yerel taramaya ait olduğu anlaşılmalıdır. Mevcut ham video korunur.
 
-## YouTube'a yükleme
+## 11 numaralı video — 16 saniye — beklemede
 
-1. Tarayıcıda yeni sekme aç.
-2. Adres alanına `youtube.com` yaz ve Enter'a bas.
-3. Sağ üstteki hesap simgesinden doğru Google hesabında olduğunu kontrol et.
-4. Sağ üstte kamera biçimli `Oluştur` veya `Create` düğmesine tıkla.
-5. `Video yükle` veya `Upload video` seçeneğine tıkla.
-6. `Dosyaları seç` veya `Select files` düğmesine tıkla.
-7. Kaydettiğin videoyu seç ve `Aç` düğmesine tıkla.
-8. Başlık alanına şunu yaz:
+**Tam dosya adı:** `11 (16 sn) Codex helped turn the competition brief into the CLI, tests, dashboard, and evidence workflow. I chose the authority, safety, and disclosure boundaries. The frozen tag preserves the submitted source for judges.mp4`
 
-```text
-Codex Control Tower — OpenAI Build Week Demo
-```
+**Ekranda göster:** Tek GitHub tarayıcı penceresinde güncel README başlangıcı, yeşil Actions/Pages, gerçek `openai-build-week-final-v2` sürümü, sürüm notlarında GPT-5.6 ve Destructive Action Preflight, JUDGE_START_HERE bağlantısı.
 
-9. Açıklamaya şunu yaz:
+**Fare hareketi:** README v0.2.0, yeşil durum, v2 sürümü, GPT-5.6/ön denetim notu ve jüri bağlantısında sırayla bekle.
 
-```text
-Codex Control Tower gives real GPT-5.6 a blind semantic evidence challenge while deterministic local facts remain locked.
+**Tam İngilizce seslendirme:** “Codex helped turn the competition brief into the CLI, tests, dashboard, and evidence workflow. I chose the authority, safety, and disclosure boundaries. The frozen tag preserves the submitted source for judges.”
 
-Repository: https://github.com/zyganali-glitch/codex-control-tower
-Live demo: https://zyganali-glitch.github.io/codex-control-tower/
-```
+**Türkçe anlamı:** Codex yarışma özetini komut aracına, denetimlere, gösterge paneline ve kanıt akışına dönüştürmeye yardım etti. Yetki, güvenlik ve açıklama sınırlarını ben seçtim. Dondurulmuş etiket gönderilen kaynağı jüri için korur.
 
-10. İçerik çocuklar için özel hazırlanmadıysa `Hayır, çocuklara özel değil` seçeneğini işaretle.
-11. `İleri` düğmesine bas.
-12. Ek video öğesi eklemeyeceksen sonraki ekranda yeniden `İleri` düğmesine bas.
-13. Telif hakkı denetiminde sorun olmadığını gör. Sorun varsa incelemeden yayımlama.
-14. Görünürlük ekranında `Herkese Açık` veya `Public` seçeneğini işaretle.
-15. `Yayınla` düğmesine tıkla.
-16. Video bağlantısını `Kopyala` düğmesiyle kopyala.
-17. `Ctrl`, `Shift` ve `N` tuşlarına birlikte basarak gizli tarayıcı penceresi aç.
-18. Bağlantıyı yapıştır ve Enter'a bas.
-19. Hesaba girmeden video açılıyor, ses duyuluyor ve süre üç dakikadan kısa görünüyorsa bağlantı doğrudur.
-20. Bu bağlantıyı Devpost formundaki video alanına yapıştır.
+**Görmen gereken sonuç:** Bu video şu anda **çekilmeyecek**. Gerçek herkese açık YouTube bağlantısı doğrulanmadan, belgelere eklenmeden ve gerçek v2 etiket/sürüm yayımlanmadan kullanıcı çekime çağrılmamalıdır. Eski ham 11 dosyasını silme.
+
+## 12 numaralı video — 8 saniye
+
+**Tam dosya adı:** `12 (8 sn) Codex writes. GPT-5.6 challenges. Control Tower locks the facts. The developer decides.mp4`
+
+**Ekranda göster:** Tamamlanmış denetim özeti veya ürün kapanış görüntüsü.
+
+**Fare hareketi:** Fareyi sabit tut veya yetki cümlesi üzerinde beklet.
+
+**Tam İngilizce seslendirme:** “Codex writes. GPT-5.6 challenges. Control Tower locks the facts. The developer decides.”
+
+**Türkçe anlamı:** Codex yazar. GPT-5.6 sorgular. Control Tower gerçekleri kilitler. Geliştirici karar verir.
+
+**Görmen gereken sonuç:** Video insan yetkisiyle kapanmalıdır. Mevcut ham video korunur.
+
+## Clipchamp'ta 12 parçayı birleştir
+
+1. Clipchamp'ta yeni boş video aç.
+2. Ham video klasöründeki kullanılacak dosyaları içe aktar.
+3. Zaman çizelgesine şu sırayla koy: `01, 02, yeni 03, 04, 05, 06, 07, 08, 09, 10, yeni 11, 12`.
+4. Her parça arasında boş siyah alan olmadığını kontrol et.
+5. Sürelerin sırasıyla `10, 13, 15, 12, 20, 14, 15, 17, 16, 16, 16, 8` saniye olduğunu kontrol et.
+6. Toplamın `2:52` olduğunu gör.
+7. Videoyu baştan sona izle; yalnızca başını ve sonunu kontrol etme.
+8. Dışa aktarmadan önce sesin duyulduğunu ve yazıların okunabildiğini doğrula.
+
+Yeni 11 henüz çekilmediyse bu son birleştirme aşaması **beklemededir**. Olmayan etiketi veya sürümü gösteren sahte görüntü hazırlama.
+
+## Son gizlilik kontrolü
+
+- E-posta, parola, bildirim veya özel sekme görünmüyor.
+- Gerçek kullanıcı klasörü görünmüyor; yalnızca `<USER_HOME>`, `<USER_HOME_PARENT>` ve `<REPOSITORY_ROOT>` gibi güvenli ifadeler var.
+- Özel Codex konuşması ve `/feedback` kimliği görünmüyor.
+- InvoiceFlow Mini'nin kurgusal olduğu söyleniyor.
+- GPT-5.6'nın 25 → 88 değişimini oluşturduğu söylenmiyor.
+- Destructive Action Preflight için “her silmeyi engeller” veya “sandbox yerine geçer” denmiyor.
+- 03 panelinde `ANALYSIS ONLY · NO COMMAND EXECUTED` görünüyor.
+- Telif hakkı sana ait olmayan müzik kullanılmıyor.
+
+## YouTube bağlantısı geldiğinde
+
+Gerçek nihai video tamamlanıp YouTube'a **Herkese Açık** olarak yüklendiğinde:
+
+1. `Ctrl`, `Shift` ve `N` tuşlarına birlikte basıp gizli tarayıcı penceresi aç.
+2. Gerçek YouTube bağlantısını yapıştır ve Enter'a bas.
+3. Hesaba girmeden video açılıyor mu kontrol et.
+4. Ses var mı kontrol et.
+5. Süre `3:00` değerinden kısa mı kontrol et.
+6. Bağlantıyı bu Codex görevine gönder.
+
+Codex bağlantıyı doğruladıktan sonra README, JUDGE_START_HERE, Devpost metni ve Submission Manifest içine ekleyecek; son denetimleri yeniden çalıştıracak; ardından `openai-build-week-final-v2` etiketi ve aynı adlı sürümü oluşturacaktır. Hayalî veya geçici bağlantı yazılmayacaktır. Eski `openai-build-week-final` etiketi değiştirilmeyecektir.
 
 ## `/feedback` kimliği
 
-Bu kimliğin tamamlandığını varsayan başvuru değerlendirmesinde bile şu güvenlik kuralı değişmez: kimlik yalnızca Devpost'un özel alanında bulunur.
-
-Henüz alınmadıysa:
-
-1. Codex uygulamasında geliştirmelerin çoğunun yapıldığı uzun ana görevi aç.
-2. Video için açtığın kısa `Demo Blind Audit` görevini kullanma.
-3. Mesaj alanına yalnızca `/feedback` yaz.
-4. Enter'a bas.
-5. Codex'in verdiği gerçek `Session ID` değerini kopyala.
-6. Yalnızca Devpost formundaki özel alana yapıştır.
-7. README'ye, GitHub'a, videoya, YouTube açıklamasına veya ekran görüntüsüne koyma.
-8. Sonuç oluşmazsa başka değer uydurma.
-
-Zaten tamamlandıysa yeniden üretmen gerekmez; yalnızca Devpost özel alanında bulunduğunu ve videoda görünmediğini kontrol et.
-
-## Bir şey ters giderse
-
-### GitHub Pages açılmazsa
-
-1. Adresin tam olarak `https://zyganali-glitch.github.io/codex-control-tower/` olduğunu kontrol et.
-2. `Ctrl` ve `F5` tuşlarına birlikte bas.
-3. Gizli pencerede yeniden dene.
-4. Hâlâ açılmıyorsa video çekme; GitHub Pages yayınının düzelmesini bekle.
-
-### Bilgisayardaki canlı sayfa açılmazsa
-
-1. `index.html` dosyasına çift tıklamadığından emin ol.
-2. Koyu pencereyi kapat.
-3. Proje klasöründe yeni koyu pencere aç.
-4. Sırayla `npm install`, `npm run demo`, `npm run dashboard` çalıştır.
-5. Tarayıcı açılmazsa koyu penceredeki `Local:` adresini tarayıcıya yapıştır.
-
-### Codex komutu başlatamazsa
-
-1. Codex'te doğru ChatGPT hesabıyla giriş yaptığını kontrol et.
-2. Doğru `codex-control-tower` klasörünün seçili olduğunu kontrol et.
-3. [Codex Demo Talimatı](CODEX_DEMO_PROMPT.md) içindeki metni yeniden gönder.
-4. Yalnız acil durumda ayrı koyu pencerede `npm run demo:codex` çalıştır.
-5. Bu kurtarma yolunu kullanırsan videoda bunun Codex'in normalde başlattığı aynı ürün talimatı olduğunu söyle.
-
-### Model bulunamaz veya işlem başarısız olursa
-
-Başarı görüntüsü uydurma. Hata çıktısını koru. İnternet ve ChatGPT oturumunu kontrol et. `npm run demo` ile başlangıcı yenile. Gerçek çalışma tamamlanmadan “tamamlandı” deme.
+Gerçek kimlik yalnızca Devpost'un özel alanında bulunmalıdır. README, GitHub, video, YouTube açıklaması, ekran görüntüsü veya bu depodaki herhangi bir dosyaya yazma. Değer yoksa uydurma.
 
 ## Son bağlantılar
 
-- [Codex'e yapıştırılacak hazır talimat](CODEX_DEMO_PROMPT.md)
-- [İngilizce zaman çizelgesi](DEMO_SCRIPT.md)
+- [İngilizce 12 parça planı](DEMO_SCRIPT.md)
+- [Codex'e yapıştırılacak gerçek model denetimi talimatı](CODEX_DEMO_PROMPT.md)
 - [Jüri başlangıç sayfası](../JUDGE_START_HERE.md)
 - [Jürinin deneme yolu](JUDGE_TEST_PATH.md)
 - [Devpost gönderim metni](DEVPOST_SUBMISSION.md)

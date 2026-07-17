@@ -10,11 +10,13 @@
 
 ## One-liner
 
-Mission control for AI-built software: real GPT-5.6 blindly challenges bounded evidence while deterministic local facts remain locked and the developer keeps authority.
+Mission control for AI-built software: real GPT-5.6 blindly challenges bounded evidence, Destructive Action Preflight protects critical boundaries before execution, and the developer keeps authority.
 
 ## Short description
 
 Codex Control Tower turns Codex-assisted work into a bounded, reviewable delivery workflow. Local code records mission context, risks, approval, execution evidence, and locked facts. Real `gpt-5.6-sol` then receives neutral claims plus bounded raw evidence—but not the reconciler's locked claim-status fields or expected comparison classes—and judges whether the mission, change, tests, and proof actually align. `SUPPORTS`, `CONTRADICTS`, and `INSUFFICIENT` remain model opinions. A conflict raises **HUMAN REVIEW REQUIRED** without changing PASS, WARN, FAIL, NOT_RUN, SIMULATED, the deterministic verdict, or the human Review Gate.
+
+Before a supported destructive action, the v0.2.0 Destructive Action Preflight expands and canonicalizes the target, compares it with protected filesystem, user, and repository boundaries, and returns `BLOCKED` or `CAUTION`. It always records `NOT_RUN` and `executed: false`; a destructive request never receives CLEAR. The `$HOME/..` exhibit resolves to `<USER_HOME_PARENT>` without publishing a personal path.
 
 > **Codex writes. GPT-5.6 challenges. Control Tower locks the facts. The developer decides.**
 
@@ -29,6 +31,7 @@ After an AI coding session, a developer may have changed files and a confident s
 - Was risky work explicitly approved?
 - What context and known mistakes must survive the chat boundary?
 - What may the next Codex session safely do?
+- Does a typed destructive target actually resolve to a protected root, `.git`, or a path outside the repository?
 
 A test exit code proves execution, not semantic coverage. A model answer can add reasoning, but it should not own repository truth. Codex Control Tower combines both strengths while keeping their authority separate.
 
@@ -37,14 +40,21 @@ A test exit code proves execution, not semantic coverage. A model answer can add
 1. **Align:** Phase-0 records goal, audience, success criteria, forbidden areas, risk, expected evidence, and next mission.
 2. **Scan:** deterministic local rules detect governance gaps, risky areas, test/CI surfaces, and continuity state.
 3. **Bound:** Context Trace and Mission Prompt select relevant files, allowed scope, forbidden actions, and required proof.
-4. **Decide:** Review Gate records the developer's local decision; Mistake Shield compares a proposed action with risks and remembered minefields.
-5. **Lock facts:** local code records structural/execution states and computes the deterministic verdict before the model call.
-6. **Challenge blindly:** real GPT-5.6 receives neutral claims and bounded raw evidence in a newly created empty, ephemeral, read-only workspace. User/project instructions, web search, inherited subprocess environment, and approval escalation are disabled. The reconciler's locked claim-status fields and expected comparison classes are withheld.
-7. **Validate, then reconcile:** fail-closed local code rejects every tool, unknown, failed, or malformed Codex event. It then enforces the declared structured contract, requires allowed citations for decisive assessments, requires counter-evidence for contradiction and missing evidence for insufficiency, and only then compares the model answer with locked facts.
-8. **Escalate honestly:** an assessment/local-policy conflict raises advisory HUMAN REVIEW REQUIRED, but never promotes, erases, or rewrites local evidence. `CONTRADICTS` alone is not automatically a conflict.
-9. **Hand off:** dashboard, Flight Recorder, Evidence Pack, and bounded next action survive the session boundary.
+4. **Preflight:** supported destructive intent is expanded, canonicalized, checked against protected roots, `.git`, outside paths, and symlink uncertainty; redacted; and kept NOT_RUN.
+5. **Decide:** Review Gate records the developer's local decision; Mistake Shield combines the structured preflight with backward-compatible action-text risks and remembered minefields.
+6. **Lock facts:** local code records structural/execution states and computes the deterministic verdict before the model call.
+7. **Challenge blindly:** real GPT-5.6 receives neutral claims and bounded raw evidence in a newly created empty, ephemeral, read-only workspace. User/project instructions, web search, inherited subprocess environment, and approval escalation are disabled. The reconciler's locked claim-status fields and expected comparison classes are withheld.
+8. **Validate, then reconcile:** fail-closed local code rejects every tool, unknown, failed, or malformed Codex event. It then enforces the declared structured contract, requires allowed citations for decisive assessments, requires counter-evidence for contradiction and missing evidence for insufficiency, and only then compares the model answer with locked facts.
+9. **Escalate honestly:** an assessment/local-policy conflict raises advisory HUMAN REVIEW REQUIRED, but never promotes, erases, or rewrites local evidence. `CONTRADICTS` alone is not automatically a conflict.
+10. **Hand off:** dashboard, Flight Recorder, Evidence Pack, and bounded next action survive the session boundary.
 
-**CCT does not replace ESLint, CI, code review, or branch protection. It adds the evidence and handoff layer around agent-assisted work.**
+**CCT does not replace the Codex sandbox/permission system, operating-system security, ESLint, CI, code review, or branch protection. It adds a project-level decision, evidence, and handoff layer around agent-assisted work.**
+
+## Why now
+
+A [public accidental-deletion report](https://x.com/thsottiaux/status/2077630111499882637) provides a concrete motivation, while OpenAI's official [sandboxing](https://learn.chatgpt.com/docs/sandboxing), [auto-review](https://learn.chatgpt.com/docs/sandboxing/auto-review), [hooks](https://learn.chatgpt.com/docs/hooks), and [GPT-5.6 safety](https://deploymentsafety.openai.com/gpt-5-6) materials define the honest boundary. Sandboxing and permissions are primary. Codex `PreToolUse` hooks can add a second project decision point, but official coverage is incomplete.
+
+The implemented hook therefore makes only a bounded claim: a matching supported `Bash` event can be denied when preflight returns BLOCKED. The real verification used a nonexistent harmless probe, read-only sandboxing, pinned Codex CLI `0.144.3`, and `gpt-5.6-sol`; denial occurred before execution. It used a one-off vetted hook-trust bypass only, not an approval or sandbox bypass. Normal project/hash trust and complete interception were not verified.
 
 ## Why GPT-5.6 is central and non-obvious
 
@@ -70,7 +80,7 @@ The raw records naturally contain the success criterion and the missing implemen
 
 ### Recorded submission run
 
-The final committed exhibit records a real completed run through signed-in ChatGPT, pinned `codex-cli 0.144.3`, and exact `gpt-5.6-sol`. The model worked from an empty ephemeral workspace; user/project instructions, web access, inherited subprocess environment, and approval escalation were disabled; the accepted event stream contained zero tool events. The pre-run worktree was clean and the report was fresh.
+The final committed exhibit records a real completed run through signed-in ChatGPT, pinned `codex-cli 0.144.3`, and exact `gpt-5.6-sol`. The model worked from an empty ephemeral workspace; user/project instructions, web access, inherited subprocess environment, and approval escalation were disabled; the accepted event stream contained zero tool events. The pre-run worktree was clean at `587ddbd7b43e122d21598194e29a818a20c3f6a3`. The recorded report was older than 24 hours, so `reportProvenance.status` remains `WARN` and `stale: true`; a fresh scan still matched its score, risk flags, and changed-file set.
 
 GPT-5.6 returned 3 `SUPPORTS` and 3 `CONTRADICTS`. Five assessments aligned with the local comparison policy. On `MISSION_CHANGE_TEST_ALIGNMENT`, GPT-5.6 independently traced the durable rejected-payment audit criterion and contradicted the local structural precheck because no implementation or focused test proof existed. That single conflict raised **HUMAN REVIEW REQUIRED** while the locked `NOT_RUN` remained unchanged. Both the local controlled-fixture verdict and separate model verdict are honestly `FAIL`; the model invocation itself completed successfully. This is the product's central result: semantic reasoning found a mission-coverage gap that a passing test and structural precheck did not establish.
 
@@ -82,6 +92,8 @@ GPT-5.6 returned 3 `SUPPORTS` and 3 `CONTRADICTS`. Five assessments aligned with
 | Scanner and scoring | Local inventory, governance/risk detection, weighted 100-point health model | `cli/lib/repoScanner.js`, `cli/lib/healthScorer.js` |
 | Bounded Codex mission | Context Graph/Trace plus explicit allowed scope, forbidden actions, proof, tests, and stop rules | `cli/lib/contextGraphBuilder.js`, `cli/lib/codexPromptBuilder.js` |
 | Human authority | Scoped local Review Gate plus deterministic Mistake Shield | `cli/lib/reviewGate.js`, `cli/lib/mistakeShield.js` |
+| Destructive Action Preflight | Canonical protected-boundary analysis, sanitized BLOCKED/CAUTION/NOT_RUN output, CLI, safety demo, recorder integration | `cli/lib/destructiveActionPreflight.js`, `cli/commands/destructive-preflight.js` |
+| Optional pre-tool adapter | Matching `Bash` `PreToolUse` deny for the documented command subset; harmless real probe evidence and explicit incomplete-coverage boundary | `.codex/hooks.json`, `.codex/hooks/destructive-preflight.js`, `.controltower/CODEX_HOOK_VERIFICATION.json` |
 | Continuity | Memory Lens and typed local JSONL Flight Recorder | `cli/lib/memoryLens.js`, `cli/lib/flightRecorder.js` |
 | Blind GPT-5.6 audit | Neutral claims, bounded raw evidence, hidden reconciliation targets, pinned Codex CLI, real `gpt-5.6-sol`, medium reasoning, empty ephemeral read-only workspace | `cli/commands/codex-review.js` |
 | Model boundary and reconciliation safety | Disabled config/rules/web/environment/approval, fail-closed no-tool JSONL validation, decisive-evidence rules, citation allowlist, separate full/included hashes, freshness/provenance, locked-state preservation, HUMAN REVIEW REQUIRED | `cli/commands/codex-review.js`, `tests/test_codex_review.js` |
@@ -143,7 +155,7 @@ Control Tower really scans, scores, tests, hashes the bounded bundle, records pr
 2. Open the [no-install GitHub Pages exhibit](https://zyganali-glitch.github.io/codex-control-tower/).
 3. Inspect the completed Blind GPT-5.6 Semantic Audit and evidence boundary.
 4. Use [Judge Test Path](JUDGE_TEST_PATH.md) for the fresh local run.
-5. Use the [frozen Build Week tag](https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final) for the submitted source.
+5. Use `main` for the moving v0.2.0 candidate. The existing [openai-build-week-final](https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final) tag remains an untouched v0.1 baseline; the v2 tag/release is pending the real public YouTube URL.
 
 The public Pages site is a static recorded exhibit. It does not execute a visitor's repository or update when a local run begins. A fresh run uses the local workbench and Codex desktop.
 
@@ -152,6 +164,7 @@ The public Pages site is a static recorded exhibit. It does not execute a visito
 ~~~bash
 npm install
 npm run demo
+npm run demo:safety
 npm run dashboard
 ~~~
 
@@ -163,6 +176,8 @@ npm run demo:codex
 
 The local panel moves through READY → RUNNING → COMPLETE. A separate command window is documented only as recovery.
 
+`npm run demo:safety` does not run a deletion command. It analyzes `$HOME/..`, prints `BLOCKED` and `NOT_RUN`, and writes a sanitized generated record under `tmp/`.
+
 ## Evidence boundary
 
 - **PASS:** named evidence supports the exact bounded local claim.
@@ -171,6 +186,9 @@ The local panel moves through READY → RUNNING → COMPLETE. A separate command
 - **NOT_RUN:** the check did not execute or no result was available.
 - **SIMULATED:** controlled fixture fact or activity.
 - **HUMAN REVIEW REQUIRED:** advisory reconciliation flag; not a new evidence state and not permission to proceed.
+- **BLOCKED (preflight):** a protected, outside, unresolved, dynamic, wildcard, uncertain, or symlink boundary; execution remains NOT_RUN.
+- **CAUTION (preflight):** a specific repository subpath still requiring inspection and scoped human approval; execution remains NOT_RUN.
+- **CLEAR (legacy Mistake Shield only):** no configured lexical rule matched; never a safety guarantee and never emitted as destructive clearance.
 
 A test file does not prove a test ran. A zero exit code does not prove complete mission coverage. A model opinion is not independent third-party attestation.
 
@@ -198,6 +216,8 @@ See [Source Protection](SOURCE_PROTECTION.md), [Source Research Matrix](SOURCE_R
 - Review Gate is a local unsigned artifact, not identity verification or OS enforcement.
 - Flight Recorder is mutable JSONL, not a tamper-proof ledger.
 - Scanner and model output can both be wrong.
+- Preflight covers a documented operation/command subset. It is not a general shell parser, OS firewall, malware detector, or replacement for Codex sandboxing.
+- The optional project hook matches `Bash` only, requires trust, has incomplete interception, cannot force an ask decision for CAUTION, and may fail without blocking the tool workflow.
 - CCT does not prove code correctness, security, compliance, production readiness, or user demand.
 - This Build Week product is English-only; multilingual product packs are future work.
 
@@ -205,12 +225,9 @@ Details: [Privacy and Security](PRIVACY_AND_SECURITY.md) and [Limitations](LIMIT
 
 ## Submission media and private field
 
-The submission-readiness assessment treats the required public YouTube video and private `/feedback` identity as completed form assets:
+The public YouTube URL is **PENDING**. The 12-clip plan totals 2:52 and replaces clip 03 with a 15-second preflight view. Replacement clip 11 must wait until the real public URL is integrated and the v2 tag/release actually exist. No placeholder link or release is claimed.
 
-- video is under three minutes and spoken audio explains both Codex and GPT-5.6;
-- the real `/feedback` Session ID comes from the primary development task and is entered only in Devpost's private field.
-
-The private ID is intentionally absent from the public repository. The Devpost entry, not a fabricated placeholder in source, is authoritative for the public video URL.
+The real `/feedback` Session ID comes from the primary development task and belongs only in Devpost's private field. The private ID is intentionally absent from the public repository.
 
 ## Submission assets
 

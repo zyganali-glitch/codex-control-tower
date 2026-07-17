@@ -7,7 +7,7 @@ export default function MistakeShieldPanel({ shield }) {
     <Panel className={`shield-panel shield-panel--${shield.status.toLowerCase()}`}>
       <div className="shield-hero">
         <div className="shield-mark"><Icon name="shield" size={42} /><span>{shield.score}</span></div>
-        <div><span className="eyebrow">Preflight action analysis</span><h2>Codex Mistake Shield</h2><p>{shield.summary}</p></div>
+        <div><span className="eyebrow">Legacy action-text compatibility check</span><h2>Codex Mistake Shield</h2><p>{shield.summary}</p></div>
         <StatusPill status={shield.status} />
       </div>
       <div className="proposed-action"><span>Proposed action</span><strong>“{shield.action}”</strong></div>

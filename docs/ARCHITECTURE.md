@@ -2,6 +2,8 @@
 
 Codex Control Tower is a local-first Node.js CLI plus a Vite/React report dashboard. Its central Build Week loop combines deterministic local facts with a real Blind GPT-5.6 Semantic Audit: the reconciler locks structural/execution state, GPT-5.6 independently challenges neutral claims against bounded raw evidence, and local code compares the two layers only after the model returns.
 
+Version 0.2.0 adds an analysis-only destructive-action path beside that central loop. It parses a documented operation/command subset, expands supported home expressions, resolves a canonical path, compares it with protected boundaries, and emits `BLOCKED` or `CAUTION` while execution remains `NOT_RUN`. It does not execute the requested action.
+
 The deterministic path does not require an OpenAI API key, a database, a hosted service, or the Universal Agent OS family. The real audit is explicit opt-in and uses the ChatGPT session already signed in to Codex.
 
 ## System view
@@ -15,6 +17,10 @@ cli/index.js -> command -> repoScanner -> healthScorer       |
                          |       |                           |
                          |       +-> readiness + breakdown   |
                          +-> contextGraphBuilder              |
+                         +-> destructiveActionPreflight       |
+                         |        +-> mistakeShield           |
+                         |        +-> optional PreToolUse deny|
+                         |        +-> flightRecorder record   |
                          +-> memoryLens -> mistakeShield      |
                          +-> reviewGate + flightRecorder      |
                          +-> codexPromptBuilder               |
@@ -41,7 +47,10 @@ cli/index.js -> command -> repoScanner -> healthScorer       |
 | Context Graph builder | cli/lib/contextGraphBuilder.js | Classify files, create local relationships, attach risk/selection metadata, and assemble a bounded context selection. | Local structural approximation, not a semantic whole-program graph or GitLab Orbit. |
 | Mission Prompt builder | cli/lib/codexPromptBuilder.js | Turn scan state into an explicit Codex mission: risks, gaps, allowed scope, forbidden actions, evidence, tests, docs, gate state, and response contract. | Generates a prompt; it does not execute or enforce the mission. |
 | Review Gate | cli/lib/reviewGate.js | Persist AWAITING_HUMAN, APPROVED, REJECTED, or BLOCKED with scope, allowed files, forbidden actions, note, and timestamp. | Local unsigned JSON; identity is not verified, and incomplete scope cannot authorize risky work. |
-| Mistake Shield | cli/lib/mistakeShield.js | Compare proposed text with destructive verbs, high-risk areas, Review Gate state, detected risks, and remembered minefields. | Deterministic lexical matching; CLEAR is not a safety guarantee. |
+| Destructive Action Preflight | cli/lib/destructiveActionPreflight.js | Resolve supported destructive intent against canonical filesystem, user-home, repository, `.git`, outside, and symlink boundaries; return a sanitized `BLOCKED`/`CAUTION` record. | Analysis only. Always `NOT_RUN`, `executed: false`, and human-review required. It is not a general shell parser or OS firewall. |
+| Destructive command parser | cli/lib/destructiveCommandParser.js | Parse a narrow documented subset of `rm`, `Remove-Item`, `del`/`erase`, `rmdir`/`rd`, `git clean`, and `git reset --hard` intent. | Unsupported, chained, nested, multiple-target, or dynamic forms fail closed instead of becoming CLEAR. |
+| Optional Codex hook | .codex/hooks.json, .codex/hooks/destructive-preflight.js | On matching `Bash` `PreToolUse`, deny a `BLOCKED` supported command or add context for `CAUTION`. | Codex interception is incomplete; project/hash trust is required; CAUTION cannot force ask; hook failure may continue. Sandbox and permissions remain primary. |
+| Mistake Shield | cli/lib/mistakeShield.js | Compare proposed text with the structured preflight, destructive verbs, high-risk areas, Review Gate state, detected risks, and remembered minefields. | Legacy lexical `CLEAR` means only that no configured rule matched; it is not a safety guarantee. |
 | Memory Lens | cli/lib/memoryLens.js | Read known memory/lesson surfaces and report durable rules, risks, architecture, environment, preferences, staleness, and missing sources. | Quality is limited by the repository's recorded memory. |
 | Flight Recorder | cli/lib/flightRecorder.js | Append and read local JSONL events for prompts, plans, changes, tests, evidence, skipped checks, approvals, risks, and blocks. | Mutable local history, not a tamper-evident ledger. |
 | Evidence collector | cli/lib/evidenceCollector.js | Export evidence, traceability, NOT_RUN, debt, prompt, graph, gate, memory, shield, recorder, Devpost summary, and the machine report. | Artifact presence can be PASS; unexecuted target tests/CI stay NOT_RUN. |
@@ -58,6 +67,7 @@ Commands are deliberately separated by mutation level.
 | context-graph | Yes | No | Optional JSON file |
 | memory-lens | Yes | No | Optional JSON file |
 | codex-review | Yes; derives neutral target-appropriate claims, locked local comparison state, and a bounded evidence bundle | `.controltower` claims, bundle, model output, events, hashes/freshness, and reconciliation record | Blind GPT-5.6 Semantic Audit dashboard report |
+| destructive-preflight | Yes; verifies the Git root and inspects path boundaries | Optional Flight Recorder event only when `--record` is explicit | Optional named `destructive-preflight*.json` under `.controltower/` or `tmp/`; overwrite requires explicit `--overwrite` |
 | mistake-shield | Yes | No | No |
 | init | Yes | Minimal governance files only | No |
 | phase0 | Yes | .controltower/phase0.json and plans/PHASE0_ALIGNMENT.md only | No |
@@ -77,9 +87,10 @@ The <code>init</code> command preserves an existing README and existing governan
 4. **Derive facts.** Detect instructions, config, plan, evidence, traceability, NOT_RUN, debt, memory, shield, architecture, Phase-0, tests, CI, and review/recorder surfaces.
 5. **Raise risk flags.** Apply explicit rules for missing governance, weak proof, TODO/FIXME, large files, stale README, and suspicious auth/payment patterns.
 6. **Build continuity context.** Construct graph nodes/edges, selected Context Trace items, Memory Lens findings, Review Gate state, and Flight Recorder events.
-7. **Evaluate the proposed action.** Mistake Shield emits CLEAR, CAUTION, or BLOCKED plus reasons and a safer next action.
-8. **Score and prompt.** Health Scorer computes category contributions; Mission Prompt Builder converts the full state into the next bounded Codex mission.
-9. **Return the report.** The caller prints it, writes JSON, exports a pack, or feeds the dashboard.
+7. **Evaluate destructive intent first.** The preflight validates the repository root, expands supported variables, canonicalizes the target, inspects symlink boundaries, and emits BLOCKED or CAUTION with redacted paths. It never emits destructive CLEAR.
+8. **Evaluate the broader proposed action.** Mistake Shield preserves legacy CLEAR/CAUTION/BLOCKED behavior while attaching the structured preflight when a supported destructive form is recognized. CLEAR still means only “no configured rule matched.”
+9. **Score and prompt.** Health Scorer computes category contributions; Mission Prompt Builder converts the full state into the next bounded Codex mission.
+10. **Return the report.** The caller prints it, writes JSON, exports a pack, or feeds the dashboard.
 
 ## Health model
 
@@ -118,6 +129,7 @@ The scanner's machine report includes:
 - evidence status;
 - Context Graph/Trace;
 - Review Gate, Memory Lens, Mistake Shield, Phase-0, and Flight Recorder state.
+- optional `destructiveActionPreflight` with operation, sanitized requested/expanded/resolved targets, protected boundary, reason codes, human-review state, deterministic policy version, and `NOT_RUN` execution state.
 
 The dashboard has a normalization boundary so generated CLI reports and the richer bundled demo report can feed the same views. Full-detail cards require the corresponding report fields; absent fields render as unavailable rather than becoming fabricated proof. The local server watches reconciliation state and can show `READY → RUNNING → COMPLETE`; the GitHub Pages build is a sanitized static snapshot and cannot observe a local run.
 
@@ -168,6 +180,11 @@ InvoiceFlow Mini is only the bundled demonstration target. Its two prepared snap
 
 ## Safety and trust boundaries
 
+- Preflight compares the canonical resolved target rather than trusting the typed string. Filesystem root, user home/parent, repository root, `.git`, outside-repository, unresolved/dynamic/wildcard, uncertain, and symlink-boundary results are BLOCKED. A specific non-symlinked repository subpath is CAUTION.
+- Public output uses tokens such as `<USER_HOME>`, `<USER_HOME_PARENT>`, `<REPOSITORY_ROOT>`, and `<REPOSITORY_GIT_DIR>`. Raw personal paths must not enter the dashboard or video.
+- `npm run demo:safety` and all preflight tests are intent analysis only. No deletion command is executed.
+- The real hook check used a nonexistent `cct-preflight-probe` with Codex CLI `0.144.3`, `gpt-5.6-sol`, read-only sandboxing, no approval bypass, and a one-off vetted hook-trust bypass. It verified denial before execution only for that path; normal project/hash trust setup was not verified.
+- Official Codex documentation describes `PreToolUse` interception as incomplete. This hook matches `Bash` only, parses a limited subset, does not write recorder events, and cannot replace the sandbox, approval system, repository permissions, or review.
 - Generated Markdown/JSON may contain sensitive filenames, paths, plans, risks, and architecture. The user must review exports before sharing.
 - Review Gate and Flight Recorder files can be changed by any process with filesystem write access.
 - A generated mission prompt cannot force another agent to follow it; repository permissions, branch protection, CI, and human review remain necessary.

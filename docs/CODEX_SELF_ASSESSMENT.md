@@ -97,6 +97,7 @@ Status scope matters. “2 focused fixture tests PASS” does not imply integrat
 - Hide a failure or skipped check in an optimistic final summary.
 - Delete tests or historical context that were the only evidence for a risky behavior.
 - Execute a destructive or external action without explicit authority.
+- Misread a relative, environment-based, short-name, or symlinked target and act beyond the apparent text boundary.
 
 Greater coding capability does not remove the need for bounded authority, state capture, and evidence.
 
@@ -156,6 +157,8 @@ Human approval should be required before:
 
 The local Review Gate makes the decision visible, but real authorization still depends on repository, identity, and organizational controls.
 
+Destructive Action Preflight now adds a narrower machine-readable check before supported filesystem/Git intent: it expands documented home expressions, resolves a canonical target, blocks protected or uncertain boundaries, and keeps the action `NOT_RUN`. Approval cannot override its protected-boundary decision. This is defense in depth, not proof that every command path is intercepted.
+
 ## 9. What parts of the current product plan should be improved based on Codex's build experience?
 
 The build exposed several concrete improvements:
@@ -184,6 +187,8 @@ The build exposed several concrete improvements:
 | Explicit evidence states | **Implemented now** | PASS/WARN/FAIL/NOT_RUN/SIMULATED across reports/dashboard |
 | Local human decision artifact | **Implemented now** | Review Gate; unsigned and not identity-backed |
 | Known-mistake comparison | **Implemented now** | Deterministic Mistake Shield |
+| Canonical destructive-action analysis | **Implemented now** | Destructive Action Preflight returns BLOCKED/CAUTION, redacted boundary data, `NOT_RUN`, and human review without executing the action |
+| Optional Codex pre-tool denial | **Implemented for a bounded subset** | Matching `Bash` `PreToolUse` plus a real harmless nonexistent-probe denial; official hook coverage is incomplete, project trust is required, and sandboxing remains primary |
 | Cross-session event record | **Implemented now** | Local JSONL Flight Recorder |
 | Evidence and Devpost exports | **Implemented now** | Portable Markdown/JSON packs |
 | Controlled before/after proof | **Implemented now** | Prepared fictional InvoiceFlow Mini snapshots plus real deterministic scans/tests and dashboard |

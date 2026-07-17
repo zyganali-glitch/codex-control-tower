@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.2.0 candidate - 2026-07-17
+
+- Added analysis-only Destructive Action Preflight with deterministic `BLOCKED`/`CAUTION`, `NOT_RUN`, `executed: false`, human review, and safer-next-action output.
+- Added canonical boundary checks for filesystem roots, user home and its parent, verified repository root, `.git`, outside-repository targets, symlinks, unresolved variables, substitution, chaining, wildcards, and path-inspection uncertainty.
+- Added portable redaction tokens such as `<USER_HOME>`, `<USER_HOME_PARENT>`, and `<REPOSITORY_ROOT>` so reports, dashboard views, and recording assets do not expose a personal path.
+- Integrated the preflight into the backward-compatible Mistake Shield and Flight Recorder without turning legacy `CLEAR` into a safety claim.
+- Added `cct destructive-preflight` and `npm run demo:safety`; both analyze intent and never execute a deletion command. Generated JSON is restricted to named preflight files under `.controltower/` or `tmp/`.
+- Added an optional Codex project `PreToolUse` hook for the supported `Bash` command subset. A real denial was verified with pinned Codex CLI `0.144.3`, `gpt-5.6-sol`, a read-only sandbox, and a nonexistent harmless probe. The verification used a one-off vetted hook-trust bypass only; normal project/hash trust was not verified.
+- Documented that Codex hook interception is incomplete, CAUTION can add context but cannot force an ask decision, hook failure is not fail-closed enforcement, and sandboxing/permissions remain primary.
+- Added no-delete regression coverage for POSIX/Windows expressions, path traversal, repository and `.git` boundaries, raw command forms, redaction, output confinement, recorder integration, and the harmless hook denial path.
+- Replaced the old nine-scene recording plan with 12 independent clips totaling `2:52`; clip 03 is now the 15-second preflight view. The public YouTube URL, replacement clip 11, and immutable `openai-build-week-final-v2` tag/release remain pending.
+
 ## Unreleased - 2026-07-13
 
 - Replaced answer-leaking reconciliation prompts with a blind GPT-5.6 semantic
@@ -16,7 +28,7 @@
 - Replaced the earlier free-form model review with a featured explicit opt-in, read-only GPT-5.6 Evidence Reconciliation path through the signed-in Codex application/ChatGPT subscription.
 - Locked deterministic `PASS`, `WARN`, `FAIL`, `NOT_RUN`, and `SIMULATED` states so model output can support, question, or mark evidence insufficient without rewriting facts.
 - Added a bounded local evidence bundle, strict structured-output validation, reconciliation provenance, adversarial tests, and a live dashboard panel.
-- Added a GitHub Pages deployment workflow, a 30-second judge path, a Build Week delta record, and a 2:45 recording script.
+- Added a GitHub Pages deployment workflow, a 30-second judge path, a Build Week delta record, and the earlier recording script that the v0.2.0 twelve-clip plan supersedes.
 - Added an honest user-validation template; no users, quotes, or outcomes are fabricated.
 - Generalized evidence claims beyond InvoiceFlow-specific wording, separated the deterministic local verdict from model opinion, added semantic alignment, and recorded SHA-256/Git/freshness provenance.
 - Clarified GitHub Pages as the static recorded judge exhibit and the local dashboard as the live workbench; moved the featured recording action into a clean Codex desktop demo task.
