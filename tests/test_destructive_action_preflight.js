@@ -207,6 +207,14 @@ assert.equal(preservedReview.state, 'COMPLETE');
 assert.equal(preservedReview.model, 'gpt-5.6-sol');
 assert.ok(Array.isArray(preservedReview.reconciliation?.claimAudits));
 
+const defaultApiResult = analyzeDestructiveAction({
+  operation: 'recursive_delete',
+  requestedTarget: '.git',
+  currentWorkingDirectory: ROOT, repositoryRoot: ROOT, platform: process.platform
+}, { now: FIXED_TIME, repositoryRootVerified: true });
+assertBlocked(defaultApiResult, 'REPOSITORY_GIT_DIR');
+assert.doesNotMatch(JSON.stringify(defaultApiResult), /(?:[A-Za-z]:[\\/]Users[\\/][^\\/]+|\/(?:home|Users)\/[^/]+)/iu);
+
 const rawCases = [
   ['rm -rf $HOME', 'recursive_delete', '$HOME'],
   ['Remove-Item -Recurse -Force $HOME', 'recursive_delete', '$HOME'],

@@ -1,5 +1,6 @@
 'use strict';
 
+const os = require('node:os');
 const { parseDestructiveCommand } = require('./destructiveCommandParser');
 const {
   canonicalizeBoundary,
