@@ -146,11 +146,15 @@ const uncertain = analyze('tmp/cache', {}, {
   }
 });
 assertBlocked(uncertain, 'PATH_INSPECTION_UNCERTAIN');
+const crossPlatformContext = process.platform === 'win32' ? posixContext : windowsContext;
+const crossPlatformHome = process.platform === 'win32'
+  ? posixOptions.homeDirectory
+  : windowsOptions.homeDirectory;
 assertBlocked(analyzeDestructiveAction({
-  ...posixContext,
+  ...crossPlatformContext,
   requestedTarget: 'tmp/cache'
 }, {
-  homeDirectory: posixOptions.homeDirectory,
+  homeDirectory: crossPlatformHome,
   now: FIXED_TIME,
   repositoryRootVerified: true,
   canonicalizePath: undefined
