@@ -2,6 +2,7 @@
 
 const { readReviewGate } = require('./reviewGate');
 const { analyzeMemory } = require('./memoryLens');
+const { analyzeDestructiveAction, parseDestructiveCommand } = require('./destructiveActionPreflight');
 
 const DESTRUCTIVE = /\b(delete|remove|drop|truncate|overwrite|reset|destroy|purge)\b/i;
 const TEST_AREA = /\b(test|tests|spec|coverage)\b/i;
@@ -23,6 +24,40 @@ function evaluateMistakeShield(target, action, options = {}) {
   const riskFlags = options.riskFlags || [];
   const reasons = [];
   let verdict = 'CLEAR';
+  let destructivePreflight = null;
+
+  const parsedCommand = options.preflightInput
+    ? null
+    : parseDestructiveCommand(proposedAction);
+  const preflightInput = options.preflightInput || (parsedCommand?.matched ? {
+    operation: parsedCommand.operation,
+    requestedTarget: parsedCommand.requestedTarget,
+    currentWorkingDirectory: options.currentWorkingDirectory || target,
+    repositoryRoot: target,
+    platform: options.platform || process.platform,
+    recursive: parsedCommand.recursive,
+    force: parsedCommand.force,
+    source: parsedCommand.source || 'raw_command'
+  } : null);
+
+  if (preflightInput) {
+    destructivePreflight = analyzeDestructiveAction({
+      currentWorkingDirectory: options.currentWorkingDirectory || target,
+      repositoryRoot: target,
+      platform: options.platform || process.platform,
+      source: 'mistake_shield',
+      ...preflightInput
+    }, {
+      homeDirectory: options.homeDirectory,
+      now: options.now,
+      inspectPath: options.inspectPath,
+      symlinkPaths: options.symlinkPaths,
+      preflightReasonCodes: parsedCommand?.supported === false ? parsedCommand.reasonCodes : []
+    });
+    if (destructivePreflight.decision === 'BLOCKED') verdict = 'BLOCKED';
+    else if (verdict === 'CLEAR') verdict = 'CAUTION';
+    reasons.push(...destructivePreflight.reasons.map((reason) => `Destructive Action Preflight: ${reason}`));
+  }
 
   if (!proposedAction) {
     verdict = 'CAUTION';
@@ -69,8 +104,10 @@ function evaluateMistakeShield(target, action, options = {}) {
   reasons.push(...matchedLessons.map((lesson) => `Matched memory: ${lesson}`));
   if (!reasons.length) reasons.push('No destructive verb or known minefield overlap was detected.');
 
-  const saferNextAction = verdict === 'BLOCKED'
-    ? 'Narrow the change, preserve tests, record a plan, and obtain an APPROVED local review gate with a note.'
+  const saferNextAction = destructivePreflight && (destructivePreflight.decision === 'BLOCKED' || verdict === 'CAUTION')
+    ? destructivePreflight.saferNextAction
+    : verdict === 'BLOCKED'
+      ? 'Narrow the change, preserve tests, record a plan, and obtain an APPROVED local review gate with a note.'
     : verdict === 'CAUTION'
       ? 'Inspect the listed risk files, define allowed files and evidence, then request review before changing behavior.'
       : 'Proceed only within the declared scope and record commands, evidence, NOT_RUN checks, and remaining risk.';
@@ -83,7 +120,8 @@ function evaluateMistakeShield(target, action, options = {}) {
     gateStatus: gate.status,
     saferNextAction,
     checkedAt: new Date().toISOString(),
-    deterministic: true
+    deterministic: true,
+    ...(destructivePreflight ? { destructivePreflight } : {})
   };
 }
 

@@ -33,4 +33,23 @@ function readFlightEvents(target) {
   });
 }
 
-module.exports = { EVENT_TYPES, appendFlightEvent, readFlightEvents };
+function appendPreflightEvent(target, preflight, source = 'cct-destructive-preflight') {
+  if (!preflight || !['BLOCKED', 'CAUTION'].includes(preflight.decision)) {
+    throw new Error('A BLOCKED or CAUTION destructive preflight result is required.');
+  }
+  const type = preflight.decision === 'BLOCKED' ? 'BLOCKED' : 'RISK';
+  return appendFlightEvent(
+    target,
+    type,
+    `${preflight.operation} resolved to ${preflight.protectedBoundary}; execution remained NOT_RUN.`,
+    source,
+    {
+      status: preflight.decision,
+      executionState: 'NOT_RUN',
+      executed: false,
+      destructiveActionPreflight: preflight
+    }
+  );
+}
+
+module.exports = { EVENT_TYPES, appendFlightEvent, appendPreflightEvent, readFlightEvents };

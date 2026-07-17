@@ -11,7 +11,7 @@ const { ROOT } = require('./helpers');
 const packageJson = require('../package.json');
 assert.equal(packageJson.name, 'codex-control-tower');
 assert.equal(packageJson.bin.cct, 'cli/index.js');
-for (const command of ['init', 'phase0', 'scan', 'health', 'doctor', 'evidence', 'context-graph', 'codex-review', 'review-gate', 'mistake-shield', 'memory-lens', 'flight-recorder', 'export-devpost', 'demo']) {
+for (const command of ['init', 'phase0', 'scan', 'health', 'doctor', 'evidence', 'context-graph', 'codex-review', 'destructive-preflight', 'review-gate', 'mistake-shield', 'memory-lens', 'flight-recorder', 'export-devpost', 'demo']) {
   assert.equal(typeof COMMANDS[command], 'function', `${command} must be routed`);
   assert.match(HELP, new RegExp(command.replace('-', '\\-')));
 }

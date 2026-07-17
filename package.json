@@ -1,6 +1,6 @@
 {
   "name": "codex-control-tower",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Mission control where real GPT-5.6 challenges bounded evidence in an isolated no-tool workspace while locked local facts remain authoritative.",
   "license": "MIT",
   "private": true,
@@ -27,8 +27,9 @@
     "node": ">=18"
   },
   "scripts": {
-    "test": "node tests/test_cli_commands.js && node tests/test_health_scoring.js && node tests/test_evidence_pack.js && node tests/test_required_surfaces.js && node tests/test_context_graph.js && node tests/test_review_gate.js && node tests/test_mistake_shield.js && node tests/test_phase0.js && node tests/test_codex_review.js && node tests/test_source_protection.js && npm --prefix apps/dashboard test",
+    "test": "node tests/test_cli_commands.js && node tests/test_health_scoring.js && node tests/test_evidence_pack.js && node tests/test_required_surfaces.js && node tests/test_context_graph.js && node tests/test_review_gate.js && node tests/test_mistake_shield.js && node tests/test_destructive_action_preflight.js && node tests/test_phase0.js && node tests/test_codex_review.js && node tests/test_source_protection.js && npm --prefix apps/dashboard test",
     "demo": "node cli/index.js demo",
+    "demo:safety": "node cli/demo-safety.js",
     "dashboard": "npm --prefix apps/dashboard install && npm --prefix apps/dashboard run dev -- --open",
     "demo:codex": "node cli/index.js codex-review --target examples/governed-saas-after --model gpt-5.6-sol --live-report apps/dashboard/public/live-report.json",
     "dashboard:build": "npm --prefix apps/dashboard install && npm --prefix apps/dashboard run build",

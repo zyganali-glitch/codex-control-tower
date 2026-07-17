@@ -3,6 +3,7 @@
 
 const { contextGraphCommand } = require('./commands/context-graph');
 const { codexReviewCommand } = require('./commands/codex-review');
+const { destructivePreflightCommand } = require('./commands/destructive-preflight');
 const { demoCommand } = require('./commands/demo');
 const { doctorCommand } = require('./commands/doctor');
 const { evidenceCommand } = require('./commands/evidence');
@@ -27,6 +28,7 @@ Usage:
   cct evidence --target <dir> --out <dir>
   cct context-graph --target <dir> [--out <file>]
   cct codex-review --target <dir> [--model gpt-5.6-sol] [--live-report <file>]  # blind semantic evidence challenge
+  cct destructive-preflight --target <repo> --operation <operation> --path <target-path> [--cwd <dir>] [--platform win32|posix] [--recursive] [--force] [--out <file>] [--record]
   cct review-gate --target <dir> --status|--approve|--reject|--reset [--note <text>] [--scope <text> --allow <paths> --forbid <actions>]
   cct mistake-shield --target <dir> --action <text>
   cct memory-lens --target <dir> [--out <file>]
@@ -69,6 +71,7 @@ const COMMANDS = {
   evidence: evidenceCommand,
   'context-graph': contextGraphCommand,
   'codex-review': codexReviewCommand,
+  'destructive-preflight': destructivePreflightCommand,
   'review-gate': reviewGateCommand,
   'mistake-shield': mistakeShieldCommand,
   'memory-lens': memoryLensCommand,
