@@ -5,7 +5,7 @@
 | Local-first Codex governance CLI | `cli/commands/`, `cli/lib/` | Current test and `npm run verify` records | PASS |
 | Product self-scan | `npm run evidence:self` | `docs/ROOT_REPO_SCAN.json`: portable clean-worktree `REAL_LOCAL_SCAN` | PASS — structural governance only |
 | Judge-readable dashboard | `apps/dashboard/` | Production build plus local/Pages visual checks | PASS |
-| Static no-install judge exhibit | `.github/workflows/pages.yml` | [Current Pages workflow history](https://github.com/zyganali-glitch/codex-control-tower/actions/workflows/pages.yml), public HTTP check | PASS for published checkpoint; final v0.2.0 refresh pending |
+| Static no-install judge exhibit | `.github/workflows/pages.yml` | [Pages run 29606886221](https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29606886221), anonymous cache-busted HTTP/asset check | PASS for published v0.2.0 candidate at `97d35d4` |
 | Live recording workbench | Local `npm run dashboard` | `READY → RUNNING → COMPLETE` contract and dashboard tests | PASS — local only |
 | Honest fictional before/after sample | `examples/messy-saas-before`, `examples/governed-saas-after` | Real `npm run demo` scans and two focused fixture tests | PASS — prepared snapshots, not customer outcomes |
 | Neutral target-derived evidence claims | `cli/commands/codex-review.js` | Reconciliation tests and generated claims | PASS |
