@@ -151,7 +151,7 @@ function parseWindowsDelete(tokens, executable) {
   for (const token of tokens.slice(1)) {
     if (/^\/[sqfa]+(?::.*)?$/iu.test(token)) {
       recursive ||= /s/iu.test(token);
-      force ||= /f/iu.test(token);
+      force ||= executable === 'rmdir' || executable === 'rd' ? /q/iu.test(token) : /f/iu.test(token);
     } else {
       targets.push(token);
     }
@@ -210,17 +210,17 @@ function parseGit(tokens) {
 function parseDestructiveCommand(command) {
   const text = String(command || '').trim();
   if (!text) return { matched: false, supported: false, reasonCodes: [] };
-  const destructiveMarker = /\b(?:rm|remove-item|del|erase|rmdir|rd|git\s+(?:clean|reset)|cct-preflight-probe)\b/iu;
+  const destructiveMarker = /\b(?:rm|remove-item|del|erase|rmdir|rd|cct-preflight-probe)\b|\bgit(?:\.exe)?\b[\s\S]*\b(?:clean|reset)\b/iu;
   if (!destructiveMarker.test(text)) return { matched: false, supported: false, reasonCodes: [] };
   if (text.includes('`') || text.includes('$(')) return unsupportedCommand(['COMMAND_SUBSTITUTION']);
   if (/[\r\n]|&&|\|\||[;|<>]/u.test(text)) return unsupportedCommand(['COMMAND_CHAINING']);
+  if (/(?:^|\s)&(?:\s|$)/u.test(text)) return unsupportedCommand(['UNSUPPORTED_COMMAND_FORM']);
 
   const tokenized = tokenizeCommand(text);
   if (!tokenized.balanced) return unsupportedCommand(['UNTERMINATED_QUOTE']);
   let tokens = tokenized.tokens;
   if (!tokens.length) return unsupportedCommand(['MISSING_TARGET']);
-  if (String(tokens[0]).toLowerCase() === 'sudo') tokens = tokens.slice(1);
-  if (!tokens.length) return unsupportedCommand(['UNSUPPORTED_COMMAND_FORM']);
+  if (String(tokens[0]).toLowerCase() === 'sudo') return unsupportedCommand(['UNSUPPORTED_COMMAND_FORM']);
 
   const executable = String(tokens[0]).replaceAll('\\', '/').split('/').pop().toLowerCase();
   if (executable === 'cct-preflight-probe') return parseNamedProbe(tokens);
@@ -230,7 +230,7 @@ function parseDestructiveCommand(command) {
   if (executable === 'rm') return parseRm(tokens);
   if (executable === 'remove-item') return parseRemoveItem(tokens);
   if (['del', 'erase', 'rmdir', 'rd'].includes(executable)) return parseWindowsDelete(tokens, executable);
-  if (executable === 'git') return parseGit(tokens);
+  if (executable === 'git' || executable === 'git.exe') return parseGit(tokens);
   return unsupportedCommand(['UNSUPPORTED_COMMAND_FORM']);
 }
 

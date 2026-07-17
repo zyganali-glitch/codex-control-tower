@@ -6,6 +6,7 @@ const path = require('node:path');
 const { initCommand } = require('./init');
 const { phase0Command } = require('./phase0');
 const { createEvidencePack } = require('../lib/evidenceCollector');
+const { analyzeDestructiveAction } = require('../lib/destructiveActionPreflight');
 const { appendFlightEvent } = require('../lib/flightRecorder');
 const { evaluateMistakeShield } = require('../lib/mistakeShield');
 const { portableString, portableValue } = require('../lib/portable');
@@ -26,6 +27,50 @@ function sanitizeGeneratedPack(files, root) {
       writeGeneratedFile(file, portableString(text, root));
     }
   }
+}
+
+function readJsonIfPresent(file) {
+  try {
+    return JSON.parse(fs.readFileSync(file, 'utf8'));
+  } catch {
+    return null;
+  }
+}
+
+function recordedPreflight(root) {
+  const verification = readJsonIfPresent(path.join(root, '.controltower', 'CODEX_HOOK_VERIFICATION.json'));
+  const result = analyzeDestructiveAction({
+    operation: 'recursive_delete',
+    requestedTarget: '$HOME/..',
+    currentWorkingDirectory: '/srv/recorded-demo-user/work/control-tower',
+    repositoryRoot: '/srv/recorded-demo-user/work/control-tower',
+    platform: 'posix',
+    recursive: true,
+    force: true,
+    source: 'recorded_demo'
+  }, {
+    homeDirectory: '/srv/recorded-demo-user',
+    now: verification?.verifiedAt || '2026-07-17T17:48:45.202Z',
+    inspectPath: () => ({ exists: false }),
+    canonicalizePath: (value) => value,
+    repositoryRootVerified: true
+  });
+  if (verification?.status === 'PASS'
+    && verification?.preflightDecision === 'BLOCKED'
+    && verification?.executionState === 'NOT_RUN'
+    && verification?.executed === false
+    && verification?.hookOutcome === 'DENIED') {
+    result.hookOutcome = 'DENIED';
+  }
+  return result;
+}
+
+function preservedCodexReview(root, governed) {
+  const candidates = [
+    readJsonIfPresent(path.join(governed, '.controltower', 'codex-live-review-record.json')),
+    readJsonIfPresent(path.join(root, 'apps', 'dashboard', 'public', 'live-report.json'))?.codexLiveReview
+  ];
+  return candidates.find((record) => /^COMPLETE(?:D)?$/u.test(String(record?.state || ''))) || null;
 }
 
 async function demoCommand() {
@@ -124,11 +169,13 @@ async function demoCommand() {
     evidenceStatus: before.evidenceStatus
   };
   after.submission = {
-    version: 'openai-build-week-final',
-    immutableSource: 'https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final',
+    version: 'v0.2.0',
+    releaseState: 'FINAL_V2_PENDING_PUBLIC_DEMO_URL',
+    priorImmutableSource: 'https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final',
     judgeStart: 'JUDGE_START_HERE.md'
   };
-  after.codexLiveReview = {
+  after.destructiveActionPreflight = recordedPreflight(root);
+  after.codexLiveReview = preservedCodexReview(root, governed) || {
     state: 'READY',
     mode: 'REAL_CODEX_BLIND_SEMANTIC_AUDIT',
     model: 'gpt-5.6-sol',
@@ -149,4 +196,4 @@ async function demoCommand() {
   return { before, workspaceAfter, after, evidence };
 }
 
-module.exports = { demoCommand };
+module.exports = { demoCommand, preservedCodexReview, recordedPreflight };

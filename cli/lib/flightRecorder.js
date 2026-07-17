@@ -2,7 +2,7 @@
 
 const fs = require('node:fs');
 const path = require('node:path');
-const { ensureDirectory } = require('./safeFs');
+const { assertNoSymlinkTraversal, ensureDirectory, ensureInside } = require('./safeFs');
 
 const EVENT_TYPES = ['PROMPT', 'PLAN', 'CHANGE', 'TEST', 'EVIDENCE', 'NOT_RUN', 'RISK', 'APPROVAL', 'BLOCKED'];
 
@@ -20,6 +20,8 @@ function appendFlightEvent(target, type, message, source = 'cct-cli', extra = {}
     ...extra
   };
   const file = path.join(target, '.controltower', 'flight-recorder.jsonl');
+  ensureInside(target, file);
+  assertNoSymlinkTraversal(target, file);
   ensureDirectory(path.dirname(file));
   fs.appendFileSync(file, `${JSON.stringify(event)}\n`, 'utf8');
   return event;

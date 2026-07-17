@@ -2,7 +2,7 @@
 
 const { readReviewGate } = require('./reviewGate');
 const { analyzeMemory } = require('./memoryLens');
-const { analyzeDestructiveAction, parseDestructiveCommand } = require('./destructiveActionPreflight');
+const { analyzeDestructiveAction, parseDestructiveCommand, redactSensitiveText } = require('./destructiveActionPreflight');
 
 const DESTRUCTIVE = /\b(delete|remove|drop|truncate|overwrite|reset|destroy|purge)\b/i;
 const TEST_AREA = /\b(test|tests|spec|coverage)\b/i;
@@ -52,6 +52,8 @@ function evaluateMistakeShield(target, action, options = {}) {
       now: options.now,
       inspectPath: options.inspectPath,
       symlinkPaths: options.symlinkPaths,
+      canonicalizePath: options.canonicalizePath,
+      repositoryRootVerified: options.repositoryRootVerified,
       preflightReasonCodes: parsedCommand?.supported === false ? parsedCommand.reasonCodes : []
     });
     if (destructivePreflight.decision === 'BLOCKED') verdict = 'BLOCKED';
@@ -114,7 +116,12 @@ function evaluateMistakeShield(target, action, options = {}) {
 
   return {
     verdict,
-    proposedAction,
+    proposedAction: destructivePreflight ? redactSensitiveText(proposedAction, {
+      repositoryRoot: target,
+      platform: options.platform || process.platform
+    }, {
+      homeDirectory: options.homeDirectory
+    }) : proposedAction,
     reasons: [...new Set(reasons)],
     matchedLessons,
     gateStatus: gate.status,

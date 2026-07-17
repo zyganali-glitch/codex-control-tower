@@ -13,7 +13,8 @@ async function main() {
     recursive: true,
     force: true,
     source: 'demo_safety',
-    out: 'tmp/destructive-preflight.json'
+    out: 'tmp/destructive-preflight.json',
+    overwrite: true
   });
 }
 

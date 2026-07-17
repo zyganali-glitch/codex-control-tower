@@ -1,6 +1,9 @@
 'use strict';
 
 const os = require('node:os');
+const path = require('node:path');
+const fs = require('node:fs');
+const { execFileSync } = require('node:child_process');
 const { analyzeDestructiveAction } = require('../lib/destructiveActionPreflight');
 const { appendPreflightEvent } = require('../lib/flightRecorder');
 const { resolveTarget, writeJsonSafe } = require('../lib/safeFs');
@@ -28,6 +31,36 @@ function printPreflight(result) {
   console.log(`Safer next action: ${result.saferNextAction}`);
 }
 
+function normalizeOutputPath(value) {
+  if (path.isAbsolute(String(value || ''))) {
+    throw new Error('destructive-preflight --out must use a repository-relative generated path.');
+  }
+  const normalized = path.posix.normalize(String(value || '').replaceAll('\\', '/'));
+  const allowedRoot = normalized.startsWith('.controltower/') || normalized.startsWith('tmp/');
+  const allowedName = /(?:^|\/)[^/]*destructive-preflight[^/]*\.json$/iu.test(normalized);
+  if (!allowedRoot || !allowedName || normalized.startsWith('../')) {
+    throw new Error('destructive-preflight --out is limited to a named preflight JSON under .controltower/ or tmp/.');
+  }
+  return normalized;
+}
+
+function verifyGitRepositoryRoot(target) {
+  try {
+    const reported = execFileSync('git', ['-C', target, 'rev-parse', '--show-toplevel'], {
+      encoding: 'utf8',
+      windowsHide: true,
+      stdio: ['ignore', 'pipe', 'ignore']
+    }).trim();
+    const reportedRealPath = fs.realpathSync.native(reported);
+    const targetRealPath = fs.realpathSync.native(target);
+    return process.platform === 'win32'
+      ? reportedRealPath.toLowerCase() === targetRealPath.toLowerCase()
+      : reportedRealPath === targetRealPath;
+  } catch {
+    return false;
+  }
+}
+
 async function destructivePreflightCommand(args, options = {}) {
   const target = resolveTarget(args.target || '.');
   if (!args.operation) throw new Error('destructive-preflight requires --operation.');
@@ -36,21 +69,27 @@ async function destructivePreflightCommand(args, options = {}) {
   const result = analyzeDestructiveAction({
     operation: args.operation,
     requestedTarget: args.path,
-    currentWorkingDirectory: args.cwd || target,
+    currentWorkingDirectory: args.cwd || process.cwd(),
     repositoryRoot: target,
     platform: args.platform || process.platform,
     recursive: booleanValue(args.recursive),
     force: booleanValue(args.force),
     source: args.source || 'structured_cli'
   }, {
-    homeDirectory: args.home || options.homeDirectory || os.homedir(),
+    homeDirectory: options.homeDirectory || os.homedir(),
     now: options.now,
     inspectPath: options.inspectPath,
-    symlinkPaths: options.symlinkPaths
+    symlinkPaths: options.symlinkPaths,
+    canonicalizePath: options.canonicalizePath,
+    repositoryRootVerified: options.repositoryRootVerified ?? verifyGitRepositoryRoot(target)
   });
 
   if (args.out) {
-    writeJsonSafe(target, args.out, result, { overwrite: true });
+    const outputPath = normalizeOutputPath(args.out);
+    const written = writeJsonSafe(target, outputPath, result, { overwrite: booleanValue(args.overwrite) });
+    if (written.status === 'PRESERVED') {
+      throw new Error('The preflight output already exists. Choose a new generated path or pass --overwrite explicitly.');
+    }
   }
   if (booleanValue(args.record)) {
     appendPreflightEvent(target, result);
@@ -59,4 +98,10 @@ async function destructivePreflightCommand(args, options = {}) {
   return result;
 }
 
-module.exports = { booleanValue, destructivePreflightCommand, printPreflight };
+module.exports = {
+  booleanValue,
+  destructivePreflightCommand,
+  normalizeOutputPath,
+  printPreflight,
+  verifyGitRepositoryRoot
+};

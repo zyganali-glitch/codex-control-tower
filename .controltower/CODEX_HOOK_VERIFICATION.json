@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "recordType": "codex_pretooluse_hook_verification",
+  "status": "PASS",
+  "verifiedAt": "2026-07-17T17:48:45.202Z",
+  "codexCliVersion": "0.144.3",
+  "model": "gpt-5.6-sol",
+  "hookEvent": "PreToolUse",
+  "matcher": "^Bash$",
+  "probe": "cct-preflight-probe --operation recursive_delete --path $HOME/..",
+  "probeSafety": "The named probe executable was absent from PATH; it expressed intent but could not perform deletion.",
+  "probeExecutableFound": false,
+  "sandbox": "read-only",
+  "approvalBypass": false,
+  "hookTrustBypass": true,
+  "hookTrust": "one-off vetted bypass for this verification probe only",
+  "normalProjectTrustSetupVerified": false,
+  "preflightDecision": "BLOCKED",
+  "hookOutcome": "DENIED",
+  "executionState": "NOT_RUN",
+  "executed": false,
+  "protectedBoundary": "<USER_HOME_PARENT>",
+  "limitations": [
+    "Project hooks run only after the repository and hook configuration are trusted; this verification used a one-off hook-trust bypass only for the vetted probe.",
+    "The matcher covers Bash events only, and Codex PreToolUse interception is not complete enforcement for every tool or command path.",
+    "CAUTION can add context but cannot force an ask decision because PreToolUse does not support that decision.",
+    "A hook command failure may allow the tool workflow to continue, so Codex sandboxing remains the primary protection boundary.",
+    "The parser covers a documented command subset; encoded or nested interpreter payloads are outside its coverage.",
+    "The hook requires Node.js and Git on PATH and does not write Flight Recorder or other runtime records."
+  ]
+}

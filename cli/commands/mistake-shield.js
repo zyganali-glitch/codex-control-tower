@@ -4,7 +4,7 @@ const { scanRepository } = require('../lib/repoScanner');
 const { evaluateMistakeShield } = require('../lib/mistakeShield');
 const { appendPreflightEvent } = require('../lib/flightRecorder');
 const { resolveTarget } = require('../lib/safeFs');
-const { booleanValue } = require('./destructive-preflight');
+const { booleanValue, verifyGitRepositoryRoot } = require('./destructive-preflight');
 
 async function mistakeShieldCommand(args) {
   const target = resolveTarget(args.target || '.');
@@ -14,13 +14,13 @@ async function mistakeShieldCommand(args) {
     reviewGate: report.reviewGate,
     memoryLens: report.memoryLens,
     riskFlags: report.riskFlags,
-    currentWorkingDirectory: args.cwd || target,
+    currentWorkingDirectory: args.cwd || process.cwd(),
     platform: args.platform || process.platform,
-    homeDirectory: args.home,
+    repositoryRootVerified: verifyGitRepositoryRoot(target),
     preflightInput: args.operation ? {
       operation: args.operation,
       requestedTarget: args.path || '',
-      currentWorkingDirectory: args.cwd || target,
+      currentWorkingDirectory: args.cwd || process.cwd(),
       repositoryRoot: target,
       platform: args.platform || process.platform,
       recursive: booleanValue(args.recursive),

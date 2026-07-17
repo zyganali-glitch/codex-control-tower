@@ -5,6 +5,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { execFileSync } = require('node:child_process');
 const { destructivePreflightCommand } = require('../cli/commands/destructive-preflight');
+const { preservedCodexReview, recordedPreflight } = require('../cli/commands/demo');
 const {
   POLICY_VERSION,
   analyzeDestructiveAction,
@@ -26,7 +27,10 @@ const posixContext = {
 };
 const posixOptions = {
   homeDirectory: '/srv/fixture-user',
-  now: FIXED_TIME
+  now: FIXED_TIME,
+  inspectPath: () => ({ exists: false }),
+  canonicalizePath: (value) => value,
+  repositoryRootVerified: true
 };
 const windowsContext = {
   ...posixContext,
@@ -36,7 +40,10 @@ const windowsContext = {
 };
 const windowsOptions = {
   homeDirectory: 'C:\\Users\\Fixture',
-  now: FIXED_TIME
+  now: FIXED_TIME,
+  inspectPath: () => ({ exists: false }),
+  canonicalizePath: (value) => value,
+  repositoryRootVerified: true
 };
 
 function analyze(requestedTarget, input = {}, options = {}) {
@@ -87,6 +94,9 @@ assertBlocked(analyze('..\\sibling'), 'OUTSIDE_REPOSITORY');
 for (const expression of ['$UNKNOWN', '${UNKNOWN}', '%UNKNOWN%', '$env:UNKNOWN', '~someone/cache']) {
   assertBlocked(analyze(expression), 'UNRESOLVED_VARIABLE');
 }
+for (const expression of ['$home/tmp', '${home}/tmp']) {
+  assertBlocked(analyze(expression), 'UNRESOLVED_VARIABLE');
+}
 for (const expression of ['$(dynamic-target)', '`dynamic-target`']) {
   assertBlocked(analyze(expression), 'COMMAND_SUBSTITUTION');
 }
@@ -95,6 +105,34 @@ for (const expression of ['tmp/*', 'tmp/?', 'tmp/[ab]', 'tmp/{a,b}']) {
 }
 assertBlocked(analyze('tmp/cache && another-target'), 'COMMAND_CHAINING');
 assertBlocked(analyze('tmp/"dynamic"/cache'), 'UNTERMINATED_QUOTE');
+
+assertBlocked(analyzeDestructiveAction({
+  ...posixContext,
+  repositoryRoot: '/',
+  currentWorkingDirectory: '/',
+  requestedTarget: 'tmp'
+}, {
+  ...posixOptions,
+  repositoryRootVerified: true
+}), 'UNSAFE_REPOSITORY_ROOT');
+assertBlocked(analyzeDestructiveAction({
+  ...posixContext,
+  repositoryRoot: posixOptions.homeDirectory,
+  currentWorkingDirectory: posixOptions.homeDirectory,
+  requestedTarget: 'tmp'
+}, {
+  ...posixOptions,
+  repositoryRootVerified: true
+}), 'UNSAFE_REPOSITORY_ROOT');
+assertBlocked(analyzeDestructiveAction({
+  ...posixContext,
+  repositoryRoot: '/srv/fixture-user/work/not-a-repository',
+  currentWorkingDirectory: '/srv/fixture-user/work/not-a-repository',
+  requestedTarget: 'tmp'
+}, {
+  ...posixOptions,
+  repositoryRootVerified: false
+}), 'UNVERIFIED_REPOSITORY_ROOT');
 
 const symlinked = analyze('tmp/link/child', {}, {
   symlinkPaths: ['/srv/fixture-user/work/control-tower/tmp/link']
@@ -108,6 +146,15 @@ const uncertain = analyze('tmp/cache', {}, {
   }
 });
 assertBlocked(uncertain, 'PATH_INSPECTION_UNCERTAIN');
+assertBlocked(analyzeDestructiveAction({
+  ...posixContext,
+  requestedTarget: 'tmp/cache'
+}, {
+  homeDirectory: posixOptions.homeDirectory,
+  now: FIXED_TIME,
+  repositoryRootVerified: true,
+  canonicalizePath: undefined
+}), 'PATH_INSPECTION_UNCERTAIN');
 
 const caution = analyze('tmp/generated-cache');
 assert.equal(caution.decision, 'CAUTION');
@@ -123,6 +170,9 @@ for (const expression of ['%USERPROFILE%', '$env:USERPROFILE']) {
 assertBlocked(analyzeWindows('C:\\'), 'FILESYSTEM_ROOT');
 assertBlocked(analyzeWindows('.'), 'REPOSITORY_ROOT');
 assertBlocked(analyzeWindows('.GiT\\config'), 'REPOSITORY_GIT_DIR');
+assertBlocked(analyzeWindows('GIT~1\\config', {}, {
+  canonicalizePath: (value) => value.replace(/\\GIT~1(?=\\|$)/iu, '\\.git')
+}), 'REPOSITORY_GIT_DIR');
 assertBlocked(analyzeWindows('..\\sibling'), 'OUTSIDE_REPOSITORY');
 assertBlocked(analyzeWindows('C:relative-target'), 'WINDOWS_DRIVE_RELATIVE');
 assert.equal(analyzeWindows('tmp/cache').resolvedTarget, '<REPOSITORY_ROOT>/tmp/cache');
@@ -133,11 +183,25 @@ assert.deepEqual(repeated, analyze('$HOME/..'));
 const serialized = JSON.stringify([
   repeated,
   analyzeWindows('$env:USERPROFILE'),
-  caution
+  caution,
+  analyzeWindows('C:/Users/Fixture/x;C:\\Users\\Fixture\\y')
 ]);
 assert.doesNotMatch(serialized, /srv\/fixture-user/u);
 assert.doesNotMatch(serialized, /C:\\\\Users\\\\Fixture/iu);
+assert.doesNotMatch(serialized, /Users[\\/]Fixture/iu);
 assert.doesNotMatch(serialized, /hookOutcome/u);
+
+const recordedDemoPreflight = recordedPreflight(ROOT);
+assertBlocked(recordedDemoPreflight, 'USER_HOME_PARENT');
+assert.equal(recordedDemoPreflight.hookOutcome, 'DENIED');
+assert.doesNotMatch(JSON.stringify(recordedDemoPreflight), /recorded-demo-user/u);
+const preservedReview = preservedCodexReview(
+  ROOT,
+  path.join(ROOT, 'examples', 'governed-saas-after')
+);
+assert.equal(preservedReview.state, 'COMPLETE');
+assert.equal(preservedReview.model, 'gpt-5.6-sol');
+assert.ok(Array.isArray(preservedReview.reconciliation?.claimAudits));
 
 const rawCases = [
   ['rm -rf $HOME', 'recursive_delete', '$HOME'],
@@ -159,7 +223,12 @@ assert.ok(missingRmdirTarget.reasonCodes.includes('MISSING_TARGET'));
 assert.equal(parseDestructiveCommand('rm --unknown tmp/cache').supported, false);
 assert.ok(parseDestructiveCommand('rm -rf tmp/one tmp/two').reasonCodes.includes('MULTIPLE_TARGETS'));
 assert.ok(parseDestructiveCommand('bash -c "rm -rf $HOME"').reasonCodes.includes('UNSUPPORTED_COMMAND_FORM'));
+assert.ok(parseDestructiveCommand('sudo rm -rf $HOME').reasonCodes.includes('UNSUPPORTED_COMMAND_FORM'));
 assert.ok(parseDestructiveCommand('rm -rf tmp/cache && echo done').reasonCodes.includes('COMMAND_CHAINING'));
+assert.equal(parseDestructiveCommand('git.exe clean -fdx').supported, true);
+assert.equal(parseDestructiveCommand('git -C . clean -fdx').supported, false);
+assert.equal(parseDestructiveCommand('"C:\\Program Files\\Git\\cmd\\git.exe" clean -fdx').supported, true);
+assert.equal(parseDestructiveCommand('& "C:\\Program Files\\Git\\cmd\\git.exe" clean -fdx').supported, false);
 assert.equal(parseDestructiveCommand('Update the documentation').matched, false);
 
 const approvedGate = {
@@ -178,7 +247,10 @@ function shield(command, context = posixContext, options = posixOptions) {
     currentWorkingDirectory: context.currentWorkingDirectory,
     platform: context.platform,
     homeDirectory: options.homeDirectory,
-    now: FIXED_TIME
+    now: FIXED_TIME,
+    inspectPath: options.inspectPath,
+    canonicalizePath: options.canonicalizePath,
+    repositoryRootVerified: true
   });
 }
 
@@ -192,6 +264,18 @@ for (const [command] of rawCases) {
 assert.equal(shield('rmdir /s /q', windowsContext, windowsOptions).verdict, 'BLOCKED');
 assert.equal(shield('rm -rf tmp/generated-cache').verdict, 'CAUTION');
 assert.equal(shield('Update the documentation').verdict, 'CLEAR');
+for (const command of [
+  'git.exe clean -fdx',
+  'git -C . clean -fdx',
+  '"C:\\Program Files\\Git\\cmd\\git.exe" clean -fdx',
+  '& "C:\\Program Files\\Git\\cmd\\git.exe" clean -fdx'
+]) {
+  assert.equal(shield(command, windowsContext, windowsOptions).verdict, 'BLOCKED');
+}
+const redactedShield = shield('rm -rf C:\\Users\\Fixture\\private-cache', windowsContext, windowsOptions);
+assert.equal(redactedShield.verdict, 'BLOCKED');
+assert.match(redactedShield.proposedAction, /<USER_HOME>/u);
+assert.doesNotMatch(JSON.stringify(redactedShield), /Users[\\/]Fixture/iu);
 
 const testTarget = path.join(ROOT, 'tmp', 'tests', `destructive-preflight-${process.pid}-${Date.now()}`);
 fs.mkdirSync(path.join(testTarget, '.controltower'), { recursive: true });
@@ -210,15 +294,79 @@ assert.doesNotMatch(fs.readFileSync(path.join(testTarget, '.controltower', 'flig
     target: testTarget,
     operation: 'recursive_delete',
     path: '.git',
+    cwd: testTarget,
     out: '.controltower/destructive-preflight.json'
-  }, { now: FIXED_TIME });
+  }, { now: FIXED_TIME, repositoryRootVerified: true });
   assertBlocked(commandResult, 'REPOSITORY_GIT_DIR');
   assert.ok(fs.existsSync(path.join(testTarget, '.controltower', 'destructive-preflight.json')));
+
+  await assert.rejects(() => destructivePreflightCommand({
+    target: testTarget,
+    operation: 'recursive_delete',
+    path: '.git',
+    cwd: testTarget,
+    out: '.git/config'
+  }, { now: FIXED_TIME, repositoryRootVerified: true }), /limited to/u);
+  await assert.rejects(() => destructivePreflightCommand({
+    target: testTarget,
+    operation: 'recursive_delete',
+    path: '.git',
+    cwd: testTarget,
+    out: '../destructive-preflight.json'
+  }, { now: FIXED_TIME, repositoryRootVerified: true }), /limited to/u);
+  fs.mkdirSync(path.join(testTarget, 'tmp'), { recursive: true });
+  const existingOutput = path.join(testTarget, 'tmp', 'existing-destructive-preflight.json');
+  fs.writeFileSync(existingOutput, 'user-owned\n', 'utf8');
+  await assert.rejects(() => destructivePreflightCommand({
+    target: testTarget,
+    operation: 'recursive_delete',
+    path: '.git',
+    cwd: testTarget,
+    out: 'tmp/existing-destructive-preflight.json'
+  }, { now: FIXED_TIME, repositoryRootVerified: true }), /already exists/u);
+  assert.equal(fs.readFileSync(existingOutput, 'utf8'), 'user-owned\n');
+
+  const ignoredHomeOverride = await destructivePreflightCommand({
+    target: ROOT,
+    operation: 'recursive_delete',
+    path: '$HOME',
+    home: ROOT
+  }, { now: FIXED_TIME, repositoryRootVerified: true });
+  assertBlocked(ignoredHomeOverride, 'USER_HOME');
+  assert.equal(ignoredHomeOverride.resolvedTarget, '<USER_HOME>');
+
+  const cwdDefaultsToProcess = await destructivePreflightCommand({
+    target: testTarget,
+    operation: 'recursive_delete',
+    path: '.'
+  }, {
+    now: FIXED_TIME,
+    repositoryRootVerified: true,
+    homeDirectory: posixOptions.homeDirectory
+  });
+  assertBlocked(cwdDefaultsToProcess, 'OUTSIDE_REPOSITORY');
+
+  const linkTarget = path.join(ROOT, 'tmp', 'tests', `flight-outside-${process.pid}-${Date.now()}`);
+  const linkedRecorderRoot = path.join(ROOT, 'tmp', 'tests', `flight-link-${process.pid}-${Date.now()}`);
+  fs.mkdirSync(linkTarget, { recursive: true });
+  fs.mkdirSync(linkedRecorderRoot, { recursive: true });
+  fs.symlinkSync(linkTarget, path.join(linkedRecorderRoot, '.controltower'), process.platform === 'win32' ? 'junction' : 'dir');
+  assert.throws(
+    () => appendFlightEvent(linkedRecorderRoot, 'BLOCKED', 'No write may traverse this link.', 'unit-test'),
+    /symbolic link/u
+  );
+  assert.equal(fs.existsSync(path.join(linkTarget, 'flight-recorder.jsonl')), false);
+
+  assert.throws(() => analyzeDestructiveAction({
+    ...posixContext,
+    requestedTarget: 'tmp/cache',
+    platform: 'win64'
+  }, posixOptions), /Unsupported platform/u);
 
   const output = execFileSync(process.execPath, [
     path.join(ROOT, 'cli', 'index.js'),
     'destructive-preflight',
-    '--target', testTarget,
+    '--target', ROOT,
     '--operation', 'recursive_delete',
     '--path', '.git'
   ], { encoding: 'utf8' });
