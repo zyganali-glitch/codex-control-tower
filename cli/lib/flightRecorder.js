@@ -29,6 +29,12 @@ function appendFlightEvent(target, type, message, source = 'cct-cli', extra = {}
 
 function readFlightEvents(target) {
   const file = path.join(target, '.controltower', 'flight-recorder.jsonl');
+  try {
+    ensureInside(target, file);
+    assertNoSymlinkTraversal(target, file);
+  } catch {
+    return [];
+  }
   if (!fs.existsSync(file)) return [];
   return fs.readFileSync(file, 'utf8').split(/\r?\n/).filter(Boolean).flatMap((line) => {
     try { return [JSON.parse(line)]; } catch { return []; }

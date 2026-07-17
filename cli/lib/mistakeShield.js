@@ -73,6 +73,10 @@ function evaluateMistakeShield(target, action, options = {}) {
     verdict = 'BLOCKED';
     reasons.push('Removing test evidence can hide regressions and requires explicit, scoped approval.');
   }
+  if (DESTRUCTIVE.test(proposedAction) && !destructivePreflight && verdict !== 'BLOCKED') {
+    verdict = 'CAUTION';
+    reasons.push('Legacy destructive wording has no supported structured target analysis; human review is required.');
+  }
   const forbiddenMatch = (gate.forbiddenActions || []).find((rule) => overlaps(proposedAction, rule, meaningfulWords(rule).length > 1 ? 2 : 1));
   if (forbiddenMatch) {
     verdict = 'BLOCKED';
@@ -116,12 +120,12 @@ function evaluateMistakeShield(target, action, options = {}) {
 
   return {
     verdict,
-    proposedAction: destructivePreflight ? redactSensitiveText(proposedAction, {
+    proposedAction: redactSensitiveText(proposedAction, {
       repositoryRoot: target,
       platform: options.platform || process.platform
     }, {
       homeDirectory: options.homeDirectory
-    }) : proposedAction,
+    }),
     reasons: [...new Set(reasons)],
     matchedLessons,
     gateStatus: gate.status,

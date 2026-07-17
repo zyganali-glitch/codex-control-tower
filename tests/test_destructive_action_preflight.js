@@ -1,17 +1,13 @@
 'use strict';
 
 const assert = require('node:assert/strict');
-const fs = require('node:fs');
 const path = require('node:path');
-const { execFileSync } = require('node:child_process');
-const { destructivePreflightCommand } = require('../cli/commands/destructive-preflight');
 const { preservedCodexReview, recordedPreflight } = require('../cli/commands/demo');
 const {
   POLICY_VERSION,
   analyzeDestructiveAction,
   parseDestructiveCommand
 } = require('../cli/lib/destructiveActionPreflight');
-const { appendFlightEvent, appendPreflightEvent, readFlightEvents } = require('../cli/lib/flightRecorder');
 const { evaluateMistakeShield } = require('../cli/lib/mistakeShield');
 const { ROOT } = require('./helpers');
 
@@ -194,6 +190,12 @@ assert.doesNotMatch(serialized, /srv\/fixture-user/u);
 assert.doesNotMatch(serialized, /C:\\\\Users\\\\Fixture/iu);
 assert.doesNotMatch(serialized, /Users[\\/]Fixture/iu);
 assert.doesNotMatch(serialized, /hookOutcome/u);
+const otherUserTarget = analyzeWindows('C:\\Users\\AnotherUser\\private-cache');
+assert.match(otherUserTarget.requestedTarget, /<USER_HOME>/u);
+assert.doesNotMatch(JSON.stringify(otherUserTarget), /AnotherUser/iu);
+const otherPosixHome = analyze('/home/another-user/private-cache');
+assert.match(otherPosixHome.requestedTarget, /<USER_HOME>/u);
+assert.doesNotMatch(JSON.stringify(otherPosixHome), /another-user/iu);
 
 const recordedDemoPreflight = recordedPreflight(ROOT);
 assertBlocked(recordedDemoPreflight, 'USER_HOME_PARENT');
@@ -288,106 +290,4 @@ const redactedShield = shield('rm -rf C:\\Users\\Fixture\\private-cache', window
 assert.equal(redactedShield.verdict, 'BLOCKED');
 assert.match(redactedShield.proposedAction, /<USER_HOME>/u);
 assert.doesNotMatch(JSON.stringify(redactedShield), /Users[\\/]Fixture/iu);
-
-const testTarget = path.join(ROOT, 'tmp', 'tests', `destructive-preflight-${process.pid}-${Date.now()}`);
-fs.mkdirSync(path.join(testTarget, '.controltower'), { recursive: true });
-appendFlightEvent(testTarget, 'PLAN', 'Existing event shape remains readable.', 'unit-test');
-appendPreflightEvent(testTarget, parent, 'unit-test');
-const events = readFlightEvents(testTarget);
-assert.equal(events.length, 2);
-assert.equal(events[1].type, 'BLOCKED');
-assert.equal(events[1].executionState, 'NOT_RUN');
-assert.equal(events[1].executed, false);
-assert.equal(events[1].destructiveActionPreflight.protectedBoundary, '<USER_HOME_PARENT>');
-assert.doesNotMatch(fs.readFileSync(path.join(testTarget, '.controltower', 'flight-recorder.jsonl'), 'utf8'), /srv\/fixture-user/u);
-
-(async () => {
-  const commandResult = await destructivePreflightCommand({
-    target: testTarget,
-    operation: 'recursive_delete',
-    path: '.git',
-    cwd: testTarget,
-    out: '.controltower/destructive-preflight.json'
-  }, { now: FIXED_TIME, repositoryRootVerified: true });
-  assertBlocked(commandResult, 'REPOSITORY_GIT_DIR');
-  assert.ok(fs.existsSync(path.join(testTarget, '.controltower', 'destructive-preflight.json')));
-
-  await assert.rejects(() => destructivePreflightCommand({
-    target: testTarget,
-    operation: 'recursive_delete',
-    path: '.git',
-    cwd: testTarget,
-    out: '.git/config'
-  }, { now: FIXED_TIME, repositoryRootVerified: true }), /limited to/u);
-  await assert.rejects(() => destructivePreflightCommand({
-    target: testTarget,
-    operation: 'recursive_delete',
-    path: '.git',
-    cwd: testTarget,
-    out: '../destructive-preflight.json'
-  }, { now: FIXED_TIME, repositoryRootVerified: true }), /limited to/u);
-  fs.mkdirSync(path.join(testTarget, 'tmp'), { recursive: true });
-  const existingOutput = path.join(testTarget, 'tmp', 'existing-destructive-preflight.json');
-  fs.writeFileSync(existingOutput, 'user-owned\n', 'utf8');
-  await assert.rejects(() => destructivePreflightCommand({
-    target: testTarget,
-    operation: 'recursive_delete',
-    path: '.git',
-    cwd: testTarget,
-    out: 'tmp/existing-destructive-preflight.json'
-  }, { now: FIXED_TIME, repositoryRootVerified: true }), /already exists/u);
-  assert.equal(fs.readFileSync(existingOutput, 'utf8'), 'user-owned\n');
-
-  const ignoredHomeOverride = await destructivePreflightCommand({
-    target: ROOT,
-    operation: 'recursive_delete',
-    path: '$HOME',
-    home: ROOT
-  }, { now: FIXED_TIME, repositoryRootVerified: true });
-  assertBlocked(ignoredHomeOverride, 'USER_HOME');
-  assert.equal(ignoredHomeOverride.resolvedTarget, '<USER_HOME>');
-
-  const cwdDefaultsToProcess = await destructivePreflightCommand({
-    target: testTarget,
-    operation: 'recursive_delete',
-    path: '.'
-  }, {
-    now: FIXED_TIME,
-    repositoryRootVerified: true,
-    homeDirectory: posixOptions.homeDirectory
-  });
-  assertBlocked(cwdDefaultsToProcess, 'OUTSIDE_REPOSITORY');
-
-  const linkTarget = path.join(ROOT, 'tmp', 'tests', `flight-outside-${process.pid}-${Date.now()}`);
-  const linkedRecorderRoot = path.join(ROOT, 'tmp', 'tests', `flight-link-${process.pid}-${Date.now()}`);
-  fs.mkdirSync(linkTarget, { recursive: true });
-  fs.mkdirSync(linkedRecorderRoot, { recursive: true });
-  fs.symlinkSync(linkTarget, path.join(linkedRecorderRoot, '.controltower'), process.platform === 'win32' ? 'junction' : 'dir');
-  assert.throws(
-    () => appendFlightEvent(linkedRecorderRoot, 'BLOCKED', 'No write may traverse this link.', 'unit-test'),
-    /symbolic link/u
-  );
-  assert.equal(fs.existsSync(path.join(linkTarget, 'flight-recorder.jsonl')), false);
-
-  assert.throws(() => analyzeDestructiveAction({
-    ...posixContext,
-    requestedTarget: 'tmp/cache',
-    platform: 'win64'
-  }, posixOptions), /Unsupported platform/u);
-
-  const output = execFileSync(process.execPath, [
-    path.join(ROOT, 'cli', 'index.js'),
-    'destructive-preflight',
-    '--target', ROOT,
-    '--operation', 'recursive_delete',
-    '--path', '.git'
-  ], { encoding: 'utf8' });
-  assert.match(output, /DESTRUCTIVE ACTION PREFLIGHT/u);
-  assert.match(output, /ANALYSIS ONLY · NO COMMAND EXECUTED/u);
-  assert.match(output, /Decision: BLOCKED/u);
-  assert.match(output, /Execution: NOT_RUN/u);
-  console.log('PASS test_destructive_action_preflight');
-})().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+console.log('PASS test_destructive_action_preflight');

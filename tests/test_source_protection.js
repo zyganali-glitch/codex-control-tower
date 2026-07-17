@@ -23,6 +23,7 @@ const portableDemoArtifacts = [
   'docs/ROOT_REPO_SCAN.json',
   'examples/governed-saas-after/CONTROL_TOWER_REPORT.json',
   'examples/demo-report/after-report.json',
+  '.controltower/CODEX_HOOK_VERIFICATION.json',
   'examples/governed-saas-after/.controltower/codex-live-events.jsonl',
   'examples/governed-saas-after/.controltower/codex-live-review-record.json'
 ].map((relative) => fs.readFileSync(path.join(ROOT, relative), 'utf8')).join('\n');

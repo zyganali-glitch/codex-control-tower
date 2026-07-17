@@ -27,7 +27,7 @@
     "node": ">=18"
   },
   "scripts": {
-    "test": "node tests/test_cli_commands.js && node tests/test_health_scoring.js && node tests/test_evidence_pack.js && node tests/test_required_surfaces.js && node tests/test_context_graph.js && node tests/test_review_gate.js && node tests/test_mistake_shield.js && node tests/test_destructive_action_preflight.js && node tests/test_destructive_preflight_hook.js && node tests/test_phase0.js && node tests/test_codex_review.js && node tests/test_source_protection.js && npm --prefix apps/dashboard test",
+    "test": "node tests/test_cli_commands.js && node tests/test_health_scoring.js && node tests/test_evidence_pack.js && node tests/test_required_surfaces.js && node tests/test_context_graph.js && node tests/test_review_gate.js && node tests/test_mistake_shield.js && node tests/test_destructive_action_preflight.js && node tests/test_destructive_preflight_persistence.js && node tests/test_destructive_preflight_hook.js && node tests/test_phase0.js && node tests/test_codex_review.js && node tests/test_source_protection.js && npm --prefix apps/dashboard test",
     "demo": "node cli/index.js demo",
     "demo:safety": "node cli/demo-safety.js",
     "dashboard": "npm --prefix apps/dashboard install && npm --prefix apps/dashboard run dev -- --open",

@@ -38,14 +38,22 @@ function assertNoSymlinkTraversal(root, destination) {
   const relative = path.relative(path.resolve(root), path.resolve(destination));
   const parts = relative.split(path.sep).filter(Boolean);
   let current = path.resolve(root);
-  if (fs.existsSync(current) && fs.lstatSync(current).isSymbolicLink()) {
-    throw new Error(`Refusing to write through a symbolic-link target: ${current}`);
+
+  function inspect(candidate) {
+    try {
+      if (fs.lstatSync(candidate).isSymbolicLink()) {
+        throw new Error(`Refusing to access a path through a symbolic link: ${candidate}`);
+      }
+    } catch (error) {
+      if (error?.code === 'ENOENT' || error?.code === 'ENOTDIR') return;
+      throw error;
+    }
   }
+
+  inspect(current);
   for (const part of parts) {
     current = path.join(current, part);
-    if (fs.existsSync(current) && fs.lstatSync(current).isSymbolicLink()) {
-      throw new Error(`Refusing to write through a symbolic link: ${current}`);
-    }
+    inspect(current);
   }
 }
 

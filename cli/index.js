@@ -30,7 +30,7 @@ Usage:
   cct codex-review --target <dir> [--model gpt-5.6-sol] [--live-report <file>]  # blind semantic evidence challenge
   cct destructive-preflight --target <repo> --operation <operation> --path <target-path> [--cwd <dir>] [--platform win32|posix] [--recursive] [--force] [--out <generated-file>] [--overwrite] [--record]
   cct review-gate --target <dir> --status|--approve|--reject|--reset [--note <text>] [--scope <text> --allow <paths> --forbid <actions>]
-  cct mistake-shield --target <dir> --action <text>
+  cct mistake-shield --target <repo> (--action <text> | --operation <operation> --path <target-path>) [--cwd <dir>] [--platform win32|posix] [--recursive] [--force] [--record]
   cct memory-lens --target <dir> [--out <file>]
   cct flight-recorder --target <dir> --event <type> --message <text>
   cct export-devpost --target <dir> --out <dir>

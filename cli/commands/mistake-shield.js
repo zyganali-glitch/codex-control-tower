@@ -4,19 +4,20 @@ const { scanRepository } = require('../lib/repoScanner');
 const { evaluateMistakeShield } = require('../lib/mistakeShield');
 const { appendPreflightEvent } = require('../lib/flightRecorder');
 const { resolveTarget } = require('../lib/safeFs');
-const { booleanValue, verifyGitRepositoryRoot } = require('./destructive-preflight');
+const { assertPersistenceAllowed, booleanValue, verifyGitRepositoryRoot } = require('./destructive-preflight');
 
 async function mistakeShieldCommand(args) {
   const target = resolveTarget(args.target || '.');
   const action = args.action || (args.operation ? `${args.operation} ${args.path || ''}`.trim() : '');
   const report = scanRepository(target, { action });
+  const repositoryRootVerified = verifyGitRepositoryRoot(target);
   const result = evaluateMistakeShield(target, action, {
     reviewGate: report.reviewGate,
     memoryLens: report.memoryLens,
     riskFlags: report.riskFlags,
     currentWorkingDirectory: args.cwd || process.cwd(),
     platform: args.platform || process.platform,
-    repositoryRootVerified: verifyGitRepositoryRoot(target),
+    repositoryRootVerified,
     preflightInput: args.operation ? {
       operation: args.operation,
       requestedTarget: args.path || '',
@@ -29,6 +30,7 @@ async function mistakeShieldCommand(args) {
     } : null
   });
   if (result.destructivePreflight && booleanValue(args.record)) {
+    assertPersistenceAllowed(result.destructivePreflight, repositoryRootVerified);
     appendPreflightEvent(target, result.destructivePreflight, 'cct-mistake-shield');
   }
   console.log(`Mistake Shield: ${result.verdict}`);

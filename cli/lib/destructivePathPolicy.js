@@ -144,13 +144,17 @@ function redactRequestedTarget(value, context) {
   let redacted = String(value || '');
   const entries = [
     [context.repositoryRoot, '<REPOSITORY_ROOT>'],
-    [context.homeDirectory, '<USER_HOME>'],
-    [context.homeParent, '<USER_HOME_PARENT>']
+    [context.homeDirectory, '<USER_HOME>']
   ].sort((left, right) => String(right[0]).length - String(left[0]).length);
   for (const [root, token] of entries) {
     const flags = normalizePlatform(context.platform) === 'win32' ? 'giu' : 'gu';
     redacted = redacted.replace(new RegExp(pathExpression(root), flags), token);
   }
+  redacted = redacted
+    .replace(/\b[A-Za-z]:[\\/]+Users[\\/]+[^\\/\s"'`]+/giu, '<USER_HOME>')
+    .replace(/\/(?:Users|home)\/[^/\s"'`]+/gu, '<USER_HOME>');
+  const parentFlags = normalizePlatform(context.platform) === 'win32' ? 'giu' : 'gu';
+  redacted = redacted.replace(new RegExp(pathExpression(context.homeParent), parentFlags), '<USER_HOME_PARENT>');
   return redacted;
 }
 

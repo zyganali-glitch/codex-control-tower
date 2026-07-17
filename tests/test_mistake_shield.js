@@ -25,4 +25,15 @@ updateReviewGate(target, 'approve', 'Approve bounded authentication review.', {
   forbiddenActions: ['delete tests']
 });
 assert.equal(evaluateMistakeShield(target, 'Review authentication').verdict, 'CAUTION');
+const legacyDestructive = evaluateMistakeShield(target, 'Delete generated cache');
+assert.equal(legacyDestructive.verdict, 'CAUTION');
+assert.equal(Object.prototype.hasOwnProperty.call(legacyDestructive, 'destructivePreflight'), false);
+assert.ok(legacyDestructive.reasons.some((reason) => /no supported structured target analysis/iu.test(reason)));
+const redactedLegacy = evaluateMistakeShield('C:\\Users\\Fixture\\work\\repo', 'delete C:\\Users\\Fixture\\private-note', {
+  reviewGate: { status: 'AWAITING_HUMAN', scopeComplete: false, allowedFiles: [], forbiddenActions: [] },
+  memoryLens: { neverForgetRisks: [] }, riskFlags: [], platform: 'win32', homeDirectory: 'C:\\Users\\Fixture'
+});
+assert.equal(redactedLegacy.verdict, 'BLOCKED');
+assert.match(redactedLegacy.proposedAction, /<USER_HOME>/u);
+assert.doesNotMatch(JSON.stringify(redactedLegacy), /Users[\\/]Fixture/iu);
 console.log('PASS test_mistake_shield');

@@ -61,10 +61,20 @@ function verifyGitRepositoryRoot(target) {
   }
 }
 
+function assertPersistenceAllowed(result, repositoryRootVerified) {
+  if (!repositoryRootVerified
+    || result.reasonCodes.includes('UNSAFE_REPOSITORY_ROOT')
+    || result.reasonCodes.includes('UNVERIFIED_REPOSITORY_ROOT')) {
+    throw new Error('Refusing to persist preflight output outside a verified, non-protected Git repository root.');
+  }
+}
+
 async function destructivePreflightCommand(args, options = {}) {
   const target = resolveTarget(args.target || '.');
   if (!args.operation) throw new Error('destructive-preflight requires --operation.');
   if (args.path === undefined || args.path === true) throw new Error('destructive-preflight requires --path.');
+  const repositoryRootVerified = options.repositoryRootVerified ?? verifyGitRepositoryRoot(target);
+  const recordRequested = booleanValue(args.record);
 
   const result = analyzeDestructiveAction({
     operation: args.operation,
@@ -81,9 +91,10 @@ async function destructivePreflightCommand(args, options = {}) {
     inspectPath: options.inspectPath,
     symlinkPaths: options.symlinkPaths,
     canonicalizePath: options.canonicalizePath,
-    repositoryRootVerified: options.repositoryRootVerified ?? verifyGitRepositoryRoot(target)
+    repositoryRootVerified
   });
 
+  if (args.out || recordRequested) assertPersistenceAllowed(result, repositoryRootVerified);
   if (args.out) {
     const outputPath = normalizeOutputPath(args.out);
     const written = writeJsonSafe(target, outputPath, result, { overwrite: booleanValue(args.overwrite) });
@@ -91,7 +102,7 @@ async function destructivePreflightCommand(args, options = {}) {
       throw new Error('The preflight output already exists. Choose a new generated path or pass --overwrite explicitly.');
     }
   }
-  if (booleanValue(args.record)) {
+  if (recordRequested) {
     appendPreflightEvent(target, result);
   }
   printPreflight(result);
@@ -100,6 +111,7 @@ async function destructivePreflightCommand(args, options = {}) {
 
 module.exports = {
   booleanValue,
+  assertPersistenceAllowed,
   destructivePreflightCommand,
   normalizeOutputPath,
   printPreflight,
