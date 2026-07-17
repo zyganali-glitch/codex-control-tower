@@ -1,22 +1,25 @@
-# 2:52 OpenAI Build Week Demo Script — 12 Independent Clips
+# 2:57 OpenAI Build Week Demo Script — 13 Source Clips
 
 ## Demo promise
 
-The final sequence keeps real GPT-5.6 at the center while adding a 15-second, analysis-only Destructive Action Preflight exhibit:
+The final sequence keeps real GPT-5.6 at the center while preserving the local-dashboard startup proof and adding a separate 15-second, analysis-only Destructive Action Preflight exhibit:
 
-> real GPT-5.6 evidence challenge → deterministic protected-boundary preflight → locked facts → human review → evidence handoff
+> real GPT-5.6 evidence challenge → local dashboard startup → locked facts → deterministic protected-boundary preflight → human review → evidence handoff
 
 InvoiceFlow Mini remains a **FICTIONAL SAMPLE PROJECT**. The scans, two focused fixture tests, evidence hashes, recorded `gpt-5.6-sol` call, and preflight analysis are real executions on controlled inputs. GPT-5.6 did not create the prepared snapshots or the `25 → 88` score change. No safety-demo or test command performs deletion.
 
 ## Assembly contract
 
-- Final order: `01 → 02 → new 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10 → existing 11 → 12`.
-- Durations: `10 + 13 + 15 + 12 + 20 + 14 + 15 + 17 + 16 + 16 + 16 + 8 = 172 seconds = 2:52`.
+- Final order: `01 → 02 → old 03 local startup → 04 → 05 → 06 → 07 → 08 → 09 → 10 → new 03 Safety Preflight → existing 11 → 12`.
+- Timeline durations: `10 + 13 + 8 + 12 + 17 + 14 + 15 + 17 + 16 + 16 + 15 + 16 + 8 = 177 seconds = 2:57`.
 - The final export must remain below `3:00`.
-- Preserve raw clips 01, 02, 04, 05, 06, 07, 08, 09, 10, 11, and 12 exactly as recorded. Do not delete, rename, or overwrite any raw file.
-- Replace the old 8-second clip 03 only in the edit; keep its raw file untouched. Record the new clip 03 as a separate 15-second file.
+- Preserve all 13 raw captures exactly as recorded. Do not delete, rename, move, or overwrite any raw file.
+- Use both 03 captures. The old 8-second 03 is the only terminal/local-server startup proof. The new 15-second 03 is a separate Safety Preflight exhibit; it does not replace the startup clip.
+- Keep the original narrative chronology intact by placing the new Safety Preflight capture after clip 10 and before clip 11. The new capture shows the completed public v0.2.0 state, so placing it before the READY-state clip 04 would create a `COMPLETE → READY` regression.
+- The source captures total about `6:23` and all embedded audio tracks are silent. Trim them to the timeline durations and add the exact audible English narration during editing; never concatenate the raw files unchanged.
+- Clip 05 keeps its exact filename and narration but is trimmed to 17 seconds in the final timeline. Remove only waiting/idle time between the launch and result; retain the instruction, launch, and returned result.
 - Use the existing 16-second clip 11 unchanged in the final edit. It shows the frozen historical baseline and public repository, and it makes no v2 claim. Do not re-record, rename, delete, or overwrite it.
-- Publication order: record new clip 03 → assemble and export all 12 clips with the existing clip 11 → upload the real public YouTube video → integrate and verify its URL → rerun tests and verify Pages → create and publish `openai-build-week-final-v2` and its release. Never create v2 before the real public URL is verified.
+- Publication order: assemble and export the 13 verified source clips → upload the real public YouTube video → integrate and verify its URL → rerun tests and verify Pages → create and publish `openai-build-week-final-v2` and its release. Never create v2 before the real public URL is verified.
 - Clipchamp window capture records one selected window. Never require a terminal/browser, Codex/browser, or other application switch inside one clip. Prepare the exact window before recording each clip.
 - Product UI and English narration stay English. The exact Turkish translations and beginner click path are mirrored in [DEMO_REHBERI_TR.md](DEMO_REHBERI_TR.md).
 
@@ -62,19 +65,19 @@ Expected safety exhibit: operation `recursive_delete`, requested target `$HOME/.
 
 **Expected result:** The prepared fictional sample and real deterministic scan/test work remain clearly separated; GPT-5.6 is not credited with the score change.
 
-## Clip 03 — 15 seconds — new preflight recording
+## Old clip 03 — 8 seconds — retain local startup
 
-**Full filename:** `03 (15 sn) Before a destructive action, Control Tower deterministically resolves the target against protected roots. This recursive delete crosses the user-home boundary, so execution stays NOT RUN and human review is required.mp4`
+**Full filename:** `03 (8 sn) The dashboard starts locally from the project workspace and serves its live report at the private address shown on screen.mp4`
 
-**Screen:** One Chrome or Edge window at normal zoom, 1920×1080, with **Destructive Action Preflight** fully readable in **Safety Preflight**. Do not change applications during this clip.
+**Screen:** Keep the existing terminal capture. It runs `npm.cmd run dashboard`, shows the dashboard package command, and reaches the Vite local address at `http://127.0.0.1:4173/`.
 
-**Mouse movement:** First 3 seconds: `DESTRUCTIVE ACTION PREFLIGHT`, `recursive_delete`, `$HOME/..`. Next 4 seconds: `<USER_HOME_PARENT>`. Next 5 seconds: `BLOCKED`, `Execution NOT_RUN`, `HUMAN REVIEW REQUIRED`. Final 3 seconds: safer next action and `ANALYSIS ONLY · NO COMMAND EXECUTED`.
+**Edit:** Retain the command launch and the Vite `ready`/local-address result. Remove only surplus waiting before or after those states so the final slot is 8 seconds.
 
-**Exact English narration:** “Before a destructive action, Control Tower deterministically resolves the target against protected roots. This recursive delete crosses the user-home boundary, so execution stays NOT RUN and human review is required.”
+**Exact English narration:** “The dashboard starts locally from the project workspace and serves its live report at the private address shown on screen.”
 
-**Turkish meaning:** See clip 03 in the [Turkish recording guide](DEMO_REHBERI_TR.md).
+**Turkish meaning:** See old clip 03 in the [Turkish recording guide](DEMO_REHBERI_TR.md).
 
-**Expected result:** The panel shows `BLOCKED`, `NOT_RUN`, `executed: false`, a redacted protected boundary, deterministic policy, and no command execution. No real user path appears.
+**Expected result:** Clip 02's terminal demo result now connects reproducibly to clip 04's local READY dashboard. This source must remain in the final edit.
 
 ## Clip 04 — 12 seconds
 
@@ -90,7 +93,7 @@ Expected safety exhibit: operation `recursive_delete`, requested target `$HOME/.
 
 **Expected result:** READY is not mistaken for completed model execution.
 
-## Clip 05 — 20 seconds
+## Clip 05 — 17 seconds in the final edit
 
 **Full filename:** `05 (20 sn) In Codex Desktop, one exact instruction launches the real GPT-5.6 Sol audit. About fifty-two seconds later, it returns separate verdicts, preserves NOT_RUN, and requires human review.mp4`
 
@@ -98,11 +101,13 @@ Expected safety exhibit: operation `recursive_delete`, requested target `$HOME/.
 
 **Mouse movement:** Follow the instruction, `npm run demo:codex`, returned separate verdicts, NOT_RUN, and human-review result.
 
+**Edit:** Keep an opening prompt/run portion and the result portion around raw `00:53–01:00`; join them with a hard cut and remove the long idle wait. Do not speed up the full 60-second source because the instruction and final evidence must remain readable. Keep the raw `(20 sn)` filename unchanged even though its final timeline slot is 17 seconds. Keep attention on the central verified result rather than the unrelated right-side repository change counter.
+
 **Exact English narration:** “In Codex Desktop, one exact instruction launches the real GPT-5.6 Sol audit. About fifty-two seconds later, it returns separate verdicts, preserves NOT_RUN, and requires human review.”
 
 **Turkish meaning:** See clip 05 in the [Turkish recording guide](DEMO_REHBERI_TR.md).
 
-**Expected result:** Codex visibly launches the real product workflow; the existing raw clip remains valid and needs no re-recording.
+**Expected result:** Codex visibly launches the real product workflow. Keep the existing raw clip and exact narration; remove only idle waiting so this timeline slot is 17 seconds. No re-recording is required.
 
 ## Clip 06 — 14 seconds
 
@@ -174,6 +179,20 @@ Expected safety exhibit: operation `recursive_delete`, requested target `$HOME/.
 
 **Expected result:** The model is not credited with deterministic scoring and unavailable gates remain honest.
 
+## New Safety Preflight insert — 15 seconds — use the file named 03 (YENİ)
+
+**Audited source file:** the existing filename begins `03 (YENİ) (15 sn) Before a destructive action...` and is truncated by Windows at `...and huma.mp4`. Do not rename or overwrite it. Use the complete narration below.
+
+**Screen:** The existing Chrome/Edge capture of the public v0.2.0 **Safety Preflight** page, with **Destructive Action Preflight** fully readable. It belongs here, after the completed audit and Before / After story, rather than before clip 04's READY state.
+
+**Mouse movement:** First 3 seconds: `DESTRUCTIVE ACTION PREFLIGHT`, `recursive_delete`, `$HOME/..`. Next 4 seconds: `<USER_HOME_PARENT>`. Next 5 seconds: `BLOCKED`, `Execution NOT_RUN`, `HUMAN REVIEW REQUIRED`. Final 3 seconds: safer next action and `ANALYSIS ONLY · NO COMMAND EXECUTED`.
+
+**Exact English narration:** “Before a destructive action, Control Tower deterministically resolves the target against protected roots. This recursive delete crosses the user-home boundary, so execution stays NOT RUN and human review is required.”
+
+**Turkish meaning:** See the Safety Preflight insert in the [Turkish recording guide](DEMO_REHBERI_TR.md).
+
+**Expected result:** The panel shows `BLOCKED`, `NOT_RUN`, `executed: false`, a redacted protected boundary, deterministic policy, and no command execution. No real user path appears.
+
 ## Clip 11 — 16 seconds — retain existing recording
 
 **Full filename:** `11 (16 sn) The frozen Build Week tag preserves the submitted source. The public repository exposes the GPT-5.6 story, evidence, tests, workflows, a live demo, and a release for judges.mp4`
@@ -204,14 +223,17 @@ Expected safety exhibit: operation `recursive_delete`, requested target `$HOME/.
 
 ## Final acceptance checklist
 
-- [ ] Exactly 12 clips are assembled in the required order and total `2:52`.
+- [ ] All 13 source clips are assembled in the required order and the final timeline totals `2:57`.
 - [ ] The final export is shorter than three minutes and contains audible English narration.
+- [ ] No extra title card, black gap, or additive outro extends the `2:57` timeline; the exported file itself is checked below `3:00`.
 - [ ] Clip 01 shows real GPT-5.6 in the first ten seconds.
-- [ ] New clip 03 is 15 seconds and visibly shows `recursive_delete`, `$HOME/..`, `<USER_HOME_PARENT>`, BLOCKED, NOT_RUN, HUMAN REVIEW REQUIRED, deterministic policy, safer next action, and **ANALYSIS ONLY · NO COMMAND EXECUTED**.
+- [ ] Old clip 03 remains after clip 02 and visibly shows the terminal launch plus Vite local address.
+- [ ] The new 15-second Safety Preflight source named `03 (YENİ)` is placed after clip 10 and visibly shows `recursive_delete`, `$HOME/..`, `<USER_HOME_PARENT>`, BLOCKED, NOT_RUN, HUMAN REVIEW REQUIRED, deterministic policy, safer next action, and **ANALYSIS ONLY · NO COMMAND EXECUTED**.
 - [ ] No deletion command or executable is run for clip 03 or any test.
 - [ ] No clip requires an application switch inside the selected Clipchamp window.
-- [ ] Clip 05 remains the valid existing Codex Desktop capture.
+- [ ] Clip 05 remains the valid existing Codex Desktop capture, with idle time removed to make its final slot 17 seconds.
 - [ ] The existing 16-second clip 11 is retained unchanged and used in the final sequence; it does not claim that v2 exists.
+- [ ] Every source audio track was silent, so the final export has the exact English narration added and audibly verified.
 - [ ] InvoiceFlow Mini and prepared snapshots are called fictional; scans/tests/hashes/model/preflight are separately described as real executions.
 - [ ] GPT-5.6 is not credited with `25 → 88`, fixture creation, scoring, or test execution.
 - [ ] No personal path, private conversation, secret, notification, or `/feedback` Session ID appears.

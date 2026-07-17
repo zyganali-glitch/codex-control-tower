@@ -8,7 +8,7 @@ The official [OpenAI Build Week page](https://openai.devpost.com/) and [rules](h
 | --- | --- | --- |
 | Fits the challenge and Developer Tools track | Working Codex-centered mission-control tool, not a prompt-only entry | [Judge: Start Here](../JUDGE_START_HERE.md), Pages, CLI |
 | Real Codex/GPT-5.6 role | Codex built the product and visibly launches real `gpt-5.6-sol`; GPT-5.6 performs the blind semantic audit | First ten seconds of video, audit panel, `codex-review.js` |
-| Under-three-minute public video | Twelve-clip target 2:52; spoken audio explains Codex, GPT-5.6, deterministic preflight, and human decisions. Real URL remains pending. | [Demo Script](DEMO_SCRIPT.md), Devpost video field |
+| Under-three-minute public video | Thirteen-source-clip target 2:57; spoken audio explains Codex, GPT-5.6, local startup, deterministic preflight, and human decisions. Real URL remains pending. | [Demo Script](DEMO_SCRIPT.md), Devpost video field |
 | README explains acceleration, contributions, and human choices | Dedicated Build Week, architecture, authority, and provenance sections | [README](../README.md), [Build Log](CODEX_BUILD_LOG.md) |
 | Developer-tool testing path | No-install Pages route plus reproducible local commands; no rebuild required for Pages inspection | [Judge Test Path](JUDGE_TEST_PATH.md) |
 | Private feedback identity | Real Session ID from the primary build task, entered only in Devpost | Private form field; intentionally not public |
@@ -146,20 +146,23 @@ Codex Control Tower is inspired at concept level by the **Universal Agent OS fam
 
 See [Source Protection](SOURCE_PROTECTION.md), [Feature Harvest](FEATURE_HARVEST.md), and [Originality Matrix](ORIGINALITY_MATRIX.md).
 
-## Video evidence path (12 clips, 2:52 target)
+## Video evidence path (13 source clips, 2:57 target)
+
+The audited raw captures total about 6:23 and every embedded audio track is silent. The final 2:57 edit must use the documented trims and add the exact audible English narration before upload.
 
 | Clip | Duration | Main criterion | Proof |
 | --- | ---: | --- | --- |
 | 01 | 10s | Quality / Technology | Completed real GPT-5.6 result and locked-authority boundary in the opening |
 | 02 | 13s | Impact / Trust | Fictional sample versus real scan/test/model execution |
-| 03 | 15s | Technology / Safety | Destructive Action Preflight: `$HOME/..` → `<USER_HOME_PARENT>` → BLOCKED / NOT_RUN / human review; no command executed |
+| old 03 | 8s | Reproducibility | Terminal launches the local dashboard and Vite exposes the private local address |
 | 04 | 12s | Design | Truthful local READY / NOT STARTED state |
-| 05 | 20s | Technology | Codex Desktop launches the real `gpt-5.6-sol` path and returns the recorded result |
+| 05 | 17s | Technology | Codex Desktop launches the real `gpt-5.6-sol` path and returns the recorded result; idle wait is removed |
 | 06 | 14s | Design / Quality | Completed local dashboard with separate verdicts and locked NOT_RUN |
 | 07 | 15s | Quality | Controlled semantic challenge and non-authoritative conflict |
 | 08 | 17s | Technology | Model/CLI/workspace/no-tool/hash/freshness provenance |
 | 09 | 16s | Trust | PASS/FAIL/NOT_RUN/SIMULATED remain distinct |
 | 10 | 16s | Impact / Honesty | Real deterministic scans on prepared fictional snapshots |
+| new 03 insert | 15s | Technology / Safety | Destructive Action Preflight: `$HOME/..` → `<USER_HOME_PARENT>` → BLOCKED / NOT_RUN / human review; no command executed |
 | 11 | 16s | Build provenance | Existing recording of the frozen historical baseline, repository opening, README first paragraph, and published release area; retained unchanged and makes no v2 claim |
 | 12 | 8s | Design / Authority | Codex writes; GPT-5.6 challenges; Control Tower locks; developer decides |
 

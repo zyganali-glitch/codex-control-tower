@@ -66,7 +66,7 @@ The v0.2.0 safety extension additionally adds:
 - `npm run demo:safety`, which generates a preflight record without invoking a deletion command;
 - an optional project `PreToolUse` adapter for matching `Bash` events, plus an actual denial verification using a nonexistent harmless probe, read-only sandboxing, pinned Codex CLI `0.144.3`, and `gpt-5.6-sol`;
 - explicit hook limitations: one-off hook-trust bypass used only for verification, normal project/hash trust not verified, incomplete interception, no forced ask for CAUTION, no fail-closed guarantee on hook failure, and sandboxing as the primary control;
-- a 12-clip `2:52` recording plan whose new 15-second clip 03 shows the preflight while keeping GPT-5.6 in the opening and central story.
+- a 13-source-clip `2:57` recording plan that preserves the old local-start clip 03 and places the separate 15-second preflight capture after clip 10 while keeping GPT-5.6 in the opening and central story.
 
 The initial locked-reconciliation implementation is commit `034d53ff21c65323823e2693f9aed39374f83185` (`feat: add locked GPT-5.6 evidence reconciliation`). Later in-period commits contain the blind-audit redesign and judge hardening. Git history is the source of truth for exact timestamps and diffs; the frozen `openai-build-week-final` tag remains the historical v0.1 baseline and is not moved for v0.2.0.
 

@@ -225,7 +225,7 @@ Details: [Privacy and Security](PRIVACY_AND_SECURITY.md) and [Limitations](LIMIT
 
 ## Submission media and private field
 
-The public YouTube URL is **PENDING**. The 12-clip plan totals 2:52: only old clip 03 is excluded from the edit and replaced by a 15-second preflight view, while the existing 16-second clip 11 is retained unchanged. Assemble and upload the final video with that existing clip 11; then integrate and verify the public URL, rerun tests, confirm Pages, and create the v2 tag/release. No placeholder link or release is claimed.
+The public YouTube URL is **PENDING**. The audited 13-source-clip plan totals 2:57: old clip 03 remains as the terminal/local-start proof, the separate 15-second Safety Preflight capture follows clip 10, and existing clip 11 remains unchanged. Assemble and upload that final sequence; then integrate and verify the public URL, rerun tests, confirm Pages, and create the v2 tag/release. No placeholder link or release is claimed.
 
 The real `/feedback` Session ID comes from the primary development task and belongs only in Devpost's private field. The private ID is intentionally absent from the public repository.
 

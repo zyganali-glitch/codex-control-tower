@@ -38,8 +38,9 @@ The optional project hook has one retained real verification: a matching support
 ## Competition media and private-field boundary
 
 - Public YouTube URL: **PENDING**. No placeholder is stored.
-- Planned final duration: `2:52` across 12 independent clips.
-- New clip 03: 15-second Destructive Action Preflight view.
+- Planned final duration: `2:57` across all 13 audited source clips.
+- Old clip 03: retained 8-second terminal/local-dashboard startup proof.
+- New `03 (YENİ)` source: separate 15-second Destructive Action Preflight view placed after clip 10.
 - Existing clip 11: **RETAINED** unchanged as the 16-second historical-baseline repository capture; it makes no v2 claim and is used in the final edit.
 - Private `/feedback` Session ID: Devpost-only. It must never be copied into this public repository.
 

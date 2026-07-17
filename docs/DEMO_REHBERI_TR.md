@@ -1,8 +1,8 @@
-# 12 Parçalı Demo Videosu Çekim Rehberi
+# 13 Kaynak Parçalı Demo Videosu Kurgu Rehberi
 
 Bu rehber bilgisayar ve İngilizce konusunda deneyimin olmadığını varsayar. Her “Görmen gereken” satırını doğrulamadan sonraki adıma geçme.
 
-Nihai video **2 dakika 52 saniye**, yani **172 saniye** olmalıdır. Kesin kural: video **3 dakikadan kısa** kalmalıdır.
+Nihai video **2 dakika 57 saniye**, yani **177 saniye** olmalıdır. Kesin kural: video **3 dakikadan kısa** kalmalıdır.
 
 ## Önce neyi göstereceğimizi anlayalım
 
@@ -19,14 +19,15 @@ InvoiceFlow Mini **kurgusal örnektir**. Hazırlanmış önce/sonra klasörleri 
 Ham video klasörünü Dosya Gezgini'nde şu biçimde bul:
 
 ```text
-<USER_HOME>\Videos\CCT-Devpost-Final-2026\01-Ham-Videolar
+<USER_HOME>\Videos\Captures
 ```
 
 Bu klasördeki hiçbir dosyayı silme, yeniden adlandırma veya üzerine kaydetme.
 
-- 01, 02, 04, 05, 06, 07, 08, 09, 10, 11 ve 12 numaralı mevcut videolar korunacak ve son kurguda kullanılacaktır.
-- Eski 8 saniyelik 03 dosyası korunacak ama son kurguda kullanılmayacaktır. Yeni 15 saniyelik 03 ayrı dosya olacaktır.
+- Klasörde 13 ayrı kaynak video vardır: 01, 02, eski 03, yeni `03 (YENİ)`, 04, 05, 06, 07, 08, 09, 10, 11 ve 12. Tamamı son kurguda kullanılacaktır.
+- Eski 8 saniyelik 03 terminalden yerel dashboard'u başlatır; bu kanıt çıkarılmayacaktır. Yeni 15 saniyelik 03 ise ayrı Safety Preflight kanıtıdır ve eskisinin yerine geçmez.
 - Mevcut 16 saniyelik 11 dosyası değişmeden kullanılacaktır. Yeniden çekme, silme, yeniden adlandırma veya üzerine kaydetme. Bu kayıt tarihsel dondurulmuş etiketi ve herkese açık depoyu gösterir; v2'nin var olduğunu iddia etmez.
+- Ham kayıtların gerçek toplamı yaklaşık 6 dakika 23 saniyedir ve içlerindeki ses kanalları sessizdir. Dosyaları doğrudan arka arkaya ekleme; aşağıdaki hedef sürelere kırp ve İngilizce seslendirmeyi son kurguda ekle.
 
 ## Clipchamp'ın önemli sınırı
 
@@ -41,7 +42,7 @@ Her parça için:
 5. O parçayı bitirince kaydı durdur.
 6. Sonraki uygulama veya ekran için yeni bir kayıt başlat.
 
-## Yeni 03 kaydından önce proje sayfasını hazırla
+## Mevcut Safety Preflight kaydını doğrula
 
 ### 1. Proje klasöründe koyu pencere aç
 
@@ -97,7 +98,7 @@ Görmen gereken:
 
 Ekranda gerçek kullanıcı adı, gerçek kullanıcı klasörü, e-posta, özel konuşma, parola, gizli anahtar veya `/feedback` kimliği varsa çekime başlama.
 
-Bu maddelerin tamamı görünüyorsa ana Codex görevi sana **“03 numaralı kayıt için hazırsın”** diyecektir. Bu cümleyi görmeden 03 kaydına başlama.
+Mevcut `03 (YENİ)` ham kaydı bu alanları gösteriyorsa yeniden çekme. Denetlenen mevcut kayıtta bu alanlar görünmektedir; onu ham haliyle koru ve yalnızca son kurguda hedef süreye kırp.
 
 ## 01 numaralı video — 10 saniye
 
@@ -127,41 +128,19 @@ Bu maddelerin tamamı görünüyorsa ana Codex görevi sana **“03 numaralı ka
 
 **Görmen gereken sonuç:** Kurgusal örnek ile gerçek tarama birbirine karışmamalıdır. GPT-5.6'nın puanı değiştirdiği söylenmemelidir. Mevcut ham video korunur.
 
-## 03 numaralı video — 15 saniye — yeni çekim
+## Eski 03 numaralı video — 8 saniye — mutlaka kullan
 
-**Tam dosya adı:** `03 (15 sn) Before a destructive action, Control Tower deterministically resolves the target against protected roots. This recursive delete crosses the user-home boundary, so execution stays NOT RUN and human review is required.mp4`
+**Tam dosya adı:** `03 (8 sn) The dashboard starts locally from the project workspace and serves its live report at the private address shown on screen.mp4`
 
-**Ekranda göster:** Yalnızca Chrome veya Edge içindeki Destructive Action Preflight paneli. Çekim sırasında uygulama değiştirme.
+**Ekranda göster:** Mevcut terminal kaydını kullan. Kayıtta `npm.cmd run dashboard` komutu, dashboard paket komutu, Vite'ın hazır olması ve `http://127.0.0.1:4173/` yerel adresi görünür.
 
-**Fare hareketi:**
+**Kurgu:** Komutun çalıştırıldığı bölümü ve Vite'ın `ready`/yerel adres sonucunu koru. Yalnızca baştaki veya sondaki gereksiz beklemeyi keserek zaman çizelgesindeki bu parçayı 8 saniye yap.
 
-1. İlk 3 saniye: başlık, `recursive_delete` ve `$HOME/..`.
-2. Sonraki 4 saniye: `<USER_HOME_PARENT>`.
-3. Sonraki 5 saniye: `BLOCKED`, `Execution NOT_RUN` ve `HUMAN REVIEW REQUIRED`.
-4. Son 3 saniye: güvenli sonraki adım ve `ANALYSIS ONLY · NO COMMAND EXECUTED`.
+**Tam İngilizce seslendirme:** “The dashboard starts locally from the project workspace and serves its live report at the private address shown on screen.”
 
-**Tam İngilizce seslendirme:** “Before a destructive action, Control Tower deterministically resolves the target against protected roots. This recursive delete crosses the user-home boundary, so execution stays NOT RUN and human review is required.”
+**Türkçe anlamı:** Dashboard proje çalışma alanından yerel olarak başlatılır ve canlı raporunu ekranda görünen özel adreste sunar.
 
-**Türkçe anlamı:** Yıkıcı bir işlemden önce Control Tower hedefi korunan köklere göre deterministik olarak çözümler. Bu özyinelemeli silme kullanıcı ana klasörü sınırını aştığı için işlem NOT RUN olarak kalır ve insan incelemesi gerekir.
-
-**Görmen gereken sonuç:** Kişisel yol görünmeden `BLOCKED`, `NOT_RUN`, insan incelemesi ve hiçbir komutun çalışmadığı açıkça okunmalıdır.
-
-### 03 kaydını Clipchamp ile çek
-
-1. Windows'un alttaki arama alanına tıkla.
-2. `Clipchamp` yaz ve uygulamayı aç.
-3. `Yeni video oluştur` düğmesine tıkla.
-4. Sol tarafta `Kaydet ve oluştur` seçeneğine tıkla.
-5. `Ekran` veya `Screen` seçeneğine tıkla.
-6. Mikrofonu aç ve doğru mikrofonu seç.
-7. Kırmızı kayıt düğmesine tıkla.
-8. Paylaşma penceresinde `Pencere` veya `Window` bölümünü seç.
-9. Destructive Action Preflight açık olan Chrome veya Edge penceresine tıkla.
-10. `Paylaş` düğmesine tıkla.
-11. Üç saniyelik geri sayımdan sonra yukarıdaki fare sırasını uygula ve İngilizce cümleyi oku.
-12. 15 saniye dolunca kaydı durdur.
-13. Dışa aktarırken dosya adını yukarıdaki tam adla yaz.
-14. Eski 03 dosyasının üzerine kaydetme; yeni dosyanın ayrı olduğunu kontrol et.
+**Görmen gereken sonuç:** 02'nin terminal sonucundan 04'ün yerel READY ekranına nasıl geçildiği kanıtlanır. Bu parça yeni Safety Preflight kaydıyla değiştirilmeyecektir.
 
 ## 04 numaralı video — 12 saniye
 
@@ -177,7 +156,7 @@ Bu maddelerin tamamı görünüyorsa ana Codex görevi sana **“03 numaralı ka
 
 **Görmen gereken sonuç:** READY durumunun tamamlanmış çalışma olmadığı anlaşılmalıdır. Mevcut ham video korunur.
 
-## 05 numaralı video — 20 saniye
+## 05 numaralı video — son kurguda 17 saniye
 
 **Tam dosya adı:** `05 (20 sn) In Codex Desktop, one exact instruction launches the real GPT-5.6 Sol audit. About fifty-two seconds later, it returns separate verdicts, preserves NOT_RUN, and requires human review.mp4`
 
@@ -185,11 +164,13 @@ Bu maddelerin tamamı görünüyorsa ana Codex görevi sana **“03 numaralı ka
 
 **Fare hareketi:** Talimat, komut, ayrı kararlar, NOT_RUN ve insan incelemesi üzerinde kısa süre bekle.
 
+**Kurgu:** Ham videonun başındaki talimat/çalıştırma bölümünü ve yaklaşık `00:53–01:00` arasındaki sonuç bölümünü kullan. Uzun bekleme kısmını sert kesmeyle çıkar; 60 saniyelik videonun tamamını hızlandırma, çünkü talimat ve sonuç okunur kalmalıdır. Kaynak dosya adındaki `(20 sn)` ifadesini değiştirme; yalnızca Clipchamp zaman çizelgesindeki parçayı 17 saniye yap. Sağdaki ilgisiz depo değişiklik sayacında bekleme; ortadaki doğrulanmış sonuca odaklan.
+
 **Tam İngilizce seslendirme:** “In Codex Desktop, one exact instruction launches the real GPT-5.6 Sol audit. About fifty-two seconds later, it returns separate verdicts, preserves NOT_RUN, and requires human review.”
 
 **Türkçe anlamı:** Codex Desktop'ta tek bir tam talimat gerçek GPT-5.6 Sol denetimini başlatır. Yaklaşık elli iki saniye sonra ayrı kararlar döner, NOT_RUN korunur ve insan incelemesi gerekir.
 
-**Görmen gereken sonuç:** Mevcut video hem talimatı hem sonucu gösterdiği için yeniden çekilmez.
+**Görmen gereken sonuç:** Mevcut video hem talimatı hem sonucu gösterdiği için yeniden çekilmez. Tam İngilizce metni koru; yalnızca komut ile sonuç arasındaki boş beklemeyi azaltarak zaman çizelgesindeki süreyi 17 saniye yap.
 
 ## 06 numaralı video — 14 saniye
 
@@ -261,6 +242,27 @@ Bu maddelerin tamamı görünüyorsa ana Codex görevi sana **“03 numaralı ka
 
 **Görmen gereken sonuç:** Puanların yerel taramaya ait olduğu anlaşılmalıdır. Mevcut ham video korunur.
 
+## Yeni Safety Preflight parçası — 15 saniye — `03 (YENİ)` dosyasını kullan
+
+**Denetlenen kaynak dosya:** Adı `03 (YENİ) (15 sn) Before a destructive action...` ile başlayan ve Windows yol uzunluğu nedeniyle `...and huma.mp4` kısmında kesilen mevcut dosya. Bu ham dosyayı yeniden adlandırma veya üzerine yazma. Aşağıdaki eksiksiz seslendirmeyi kullan.
+
+**Zaman çizelgesindeki yeri:** 10'dan sonra, 11'den önce. Bu kayıt herkese açık v0.2.0 sayfasında tamamlanmış durumu gösterdiği için 04'ün READY ekranından önce konursa zaman sırası geriye gider.
+
+**Ekranda göster:** Chrome veya Edge içindeki Destructive Action Preflight paneli.
+
+**Fare hareketi:**
+
+1. İlk 3 saniye: başlık, `recursive_delete` ve `$HOME/..`.
+2. Sonraki 4 saniye: `<USER_HOME_PARENT>`.
+3. Sonraki 5 saniye: `BLOCKED`, `Execution NOT_RUN` ve `HUMAN REVIEW REQUIRED`.
+4. Son 3 saniye: güvenli sonraki adım ve `ANALYSIS ONLY · NO COMMAND EXECUTED`.
+
+**Tam İngilizce seslendirme:** “Before a destructive action, Control Tower deterministically resolves the target against protected roots. This recursive delete crosses the user-home boundary, so execution stays NOT RUN and human review is required.”
+
+**Türkçe anlamı:** Yıkıcı bir işlemden önce Control Tower hedefi korunan köklere göre deterministik olarak çözümler. Bu özyinelemeli silme kullanıcı ana klasörü sınırını aştığı için işlem NOT RUN olarak kalır ve insan incelemesi gerekir.
+
+**Görmen gereken sonuç:** Kişisel yol görünmeden `BLOCKED`, `NOT_RUN`, insan incelemesi ve hiçbir komutun çalışmadığı açıkça okunmalıdır. Mevcut kayıt geçerlidir; yeniden çekme gerekmez.
+
 ## 11 numaralı video — 16 saniye — mevcut kaydı kullan
 
 **Tam dosya adı:** `11 (16 sn) The frozen Build Week tag preserves the submitted source. The public repository exposes the GPT-5.6 story, evidence, tests, workflows, a live demo, and a release for judges.mp4`
@@ -289,18 +291,19 @@ Bu maddelerin tamamı görünüyorsa ana Codex görevi sana **“03 numaralı ka
 
 **Görmen gereken sonuç:** Video insan yetkisiyle kapanmalıdır. Mevcut ham video korunur.
 
-## Clipchamp'ta 12 parçayı birleştir
+## Clipchamp'ta 13 kaynak parçayı birleştir
 
 1. Clipchamp'ta yeni boş video aç.
 2. Ham video klasöründeki kullanılacak dosyaları içe aktar.
-3. Zaman çizelgesine şu sırayla koy: `01, 02, yeni 03, 04, 05, 06, 07, 08, 09, 10, mevcut 11, 12`.
+3. Zaman çizelgesine şu sırayla koy: `01, 02, eski 03 (8 sn), 04, 05, 06, 07, 08, 09, 10, yeni 03 (YENİ), mevcut 11, 12`.
 4. Her parça arasında boş siyah alan olmadığını kontrol et.
-5. Sürelerin sırasıyla `10, 13, 15, 12, 20, 14, 15, 17, 16, 16, 16, 8` saniye olduğunu kontrol et.
-6. Toplamın `2:52` olduğunu gör.
+5. Sürelerin sırasıyla `10, 13, 8, 12, 17, 14, 15, 17, 16, 16, 15, 16, 8` saniye olduğunu kontrol et.
+6. Toplamın `2:57` olduğunu gör. `3:00` görünüyorsa dışa aktarma.
 7. Videoyu baştan sona izle; yalnızca başını ve sonunu kontrol etme.
 8. Dışa aktarmadan önce sesin duyulduğunu ve yazıların okunabildiğini doğrula.
+9. Ek başlık kartı, siyah boşluk veya ayrı kapanış ekleme; bunlar 3 saniyelik güvenlik payını tüketir.
 
-Yeni 03 kaydını tamamladıktan sonra 12 parçayı mevcut 11 ile birleştir ve dışa aktar. Nihai videoyu herkese açık YouTube'a yükle; gerçek bağlantıyı belgelere eklemek üzere Codex'e gönder. Codex bağlantıyı doğrulayıp ekledikten, testleri yeniden çalıştırdıktan ve Pages'i doğruladıktan sonra v2 etiketini ve sürümünü oluşturacaktır. YouTube bağlantısından önce v2 oluşturma veya olmayan bir etiketi gösteren sahte görüntü hazırlama.
+Doğrulanmış 13 kaynak parçayı bu sırayla birleştirip `2:57` olarak dışa aktar. Nihai videoyu herkese açık YouTube'a yükle; gerçek bağlantıyı belgelere eklemek üzere Codex'e gönder. Codex bağlantıyı doğrulayıp ekledikten, testleri yeniden çalıştırdıktan ve Pages'i doğruladıktan sonra v2 etiketini ve sürümünü oluşturacaktır. YouTube bağlantısından önce v2 oluşturma veya olmayan bir etiketi gösteren sahte görüntü hazırlama.
 
 ## Son gizlilik kontrolü
 
@@ -332,7 +335,7 @@ Gerçek kimlik yalnızca Devpost'un özel alanında bulunmalıdır. README, GitH
 
 ## Son bağlantılar
 
-- [İngilizce 12 parça planı](DEMO_SCRIPT.md)
+- [İngilizce 13 kaynak parça planı](DEMO_SCRIPT.md)
 - [Codex'e yapıştırılacak gerçek model denetimi talimatı](CODEX_DEMO_PROMPT.md)
 - [Jüri başlangıç sayfası](../JUDGE_START_HERE.md)
 - [Jürinin deneme yolu](JUDGE_TEST_PATH.md)
