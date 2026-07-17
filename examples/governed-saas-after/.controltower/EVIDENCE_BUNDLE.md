@@ -8,18 +8,20 @@ The full-file hashes below describe source files on disk. Every embedded section
 ```json
 {
   "source": "RECORDED_REPORT",
-  "status": "PASS",
+  "status": "WARN",
   "reportPath": "CONTROL_TOWER_REPORT.json",
   "generatedAt": "2026-07-15T09:05:52.103Z",
-  "loadedAt": "2026-07-15T09:09:46.863Z",
-  "ageMs": 234760,
+  "loadedAt": "2026-07-16T18:28:45.804Z",
+  "ageMs": 120173701,
   "maxAgeMs": 86400000,
-  "stale": false,
-  "staleReasons": [],
+  "stale": true,
+  "staleReasons": [
+    "Recorded report is older than 24 hours."
+  ],
   "preservedRecordedExecutionEvidence": true,
   "freshScanComparison": {
     "performed": true,
-    "freshScanGeneratedAt": "2026-07-15T09:09:46.882Z",
+    "freshScanGeneratedAt": "2026-07-16T18:28:45.846Z",
     "scoreMatches": true,
     "riskFlagsMatch": true,
     "changedFileCount": 0,
@@ -32,7 +34,7 @@ The full-file hashes below describe source files on disk. Every embedded section
 ```json
 {
   "algorithm": "SHA-256",
-  "gitCommit": "470944e26674916df77e24387b1e26ff43228707",
+  "gitCommit": "587ddbd7b43e122d21598194e29a818a20c3f6a3",
   "gitWorktreeSnapshot": "PRE_RUN",
   "gitWorktreeState": "CLEAN",
   "gitChangedPaths": [],
@@ -118,9 +120,9 @@ The full-file hashes below describe source files on disk. Every embedded section
     {
       "path": ".controltower/DETERMINISTIC_CLAIMS.json",
       "exists": true,
-      "sha256": "1e195d6a04a59edd2c13ff925d01636dd19d362a1398f065db55b15763b32755",
-      "sizeBytes": 4222,
-      "mtime": "2026-07-15T09:09:46.994Z"
+      "sha256": "5a34998d671d720ffc4290de5e72776a6ca12813f614367646abfb2a1f0177af",
+      "sizeBytes": 4277,
+      "mtime": "2026-07-16T18:28:45.982Z"
     }
   ],
   "bundle": null
