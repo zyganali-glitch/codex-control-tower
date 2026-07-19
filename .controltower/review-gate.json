@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "status": "APPROVED",
-  "note": "The project owner explicitly requested continuation and publication to zyganali-glitch/codex-control-tower in the active Codex session.",
+  "note": "The project owner explicitly requested sanitized Devpost screenshots, English captions, repository documentation updates, and publication to zyganali-glitch/codex-control-tower in the active Codex session. Evaluator-driven narrative or product changes remain subject to a separate agreement.",
   "scope": "Complete bounded release-preflight hardening, run local verification, commit the independent repository, and push main to the user-provided GitHub repository.",
   "allowedFiles": [
     ".codex/**",
@@ -16,6 +16,11 @@
     "tests/**",
     "README.md",
     "CHANGELOG.md",
+    "DEVPOST_SCREENSHOTS.md",
+    "DEVPOST_01_GPT56_BLIND_AUDIT.png",
+    "DEVPOST_02_DESTRUCTIVE_PREFLIGHT_BLOCKED.png",
+    "DEVPOST_03_EVIDENCE_BOUNDARY.png",
+    "DEVPOST_04_BEFORE_AFTER.png",
     "LICENSE",
     "package.json",
     "package-lock.json",
@@ -29,7 +34,7 @@
     "publish to a destination other than the approved GitHub repository"
   ],
   "decidedBy": "project-owner-via-active-codex-session",
-  "updatedAt": "2026-07-12T23:29:03+03:00",
+  "updatedAt": "2026-07-19T12:20:00+03:00",
   "localFileGate": true,
   "identityVerified": false,
   "disclaimer": "Local session approval; not enterprise identity verification or a signed authorization.",

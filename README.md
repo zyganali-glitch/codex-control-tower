@@ -12,7 +12,7 @@ Before a supported destructive action, **Destructive Action Preflight** determin
 
 **OpenAI Build Week Developer Tools entry · real Blind GPT-5.6 Semantic Audit · deterministic Destructive Action Preflight · human authority · fictional sample separated from real execution**
 
-**[Open the no-install judge demo](https://zyganali-glitch.github.io/codex-control-tower/)** · **[Judge: start here](JUDGE_START_HERE.md)**
+**[Open the no-install judge demo](https://zyganali-glitch.github.io/codex-control-tower/)** · **[Judge: start here](JUDGE_START_HERE.md)** · **[Devpost screenshot pack](DEVPOST_SCREENSHOTS.md)**
 
 ![Codex Control Tower Safety Preflight view showing the Destructive Action Preflight BLOCKED and NOT_RUN result, with the real GPT-5.6 audit marked COMPLETE in the sidebar](docs/assets/dashboard-overview.png)
 
@@ -44,6 +44,16 @@ The committed exhibit contains a completed real run from 2026-07-16, not a mocke
 `FAIL` here is the honest controlled-fixture evidence verdict, not a failed model invocation or failed Control Tower CI run. The model run completed successfully and exposed the intended mission-coverage gap without changing any local state. Inspect the [recorded audit](examples/governed-saas-after/.controltower/codex-live-review-record.json), [exact model input](examples/governed-saas-after/.controltower/CODEX_LIVE_REVIEW_PROMPT.md), and [accepted JSONL lifecycle events](examples/governed-saas-after/.controltower/codex-live-events.jsonl).
 
 The v0.2.0 safety exhibit is separate from that model run. A structured `recursive_delete` request for `$HOME/..` resolves to `<USER_HOME_PARENT>`, returns `BLOCKED`, keeps `executionState: NOT_RUN` and `executed: false`, and exposes a safer next action. Tests use injected fixture homes and harmless paths; they never perform deletion. A real Codex `PreToolUse` denial was also verified with a deliberately nonexistent probe executable in a read-only sandbox. That bounded hook result is not complete enforcement; Codex sandboxing and permissions remain the primary protection.
+
+## Submission Screenshots
+
+These sanitized 1920 × 1080 images are prepared for the Devpost gallery. See the [upload order and exact English captions](DEVPOST_SCREENSHOTS.md).
+
+| Real Blind GPT-5.6 Evidence Audit | Destructive Action Blocked Before Execution |
+| --- | --- |
+| [![Recorded real GPT-5.6 Sol blind semantic audit with locked local facts and human review](DEVPOST_01_GPT56_BLIND_AUDIT.png)](DEVPOST_01_GPT56_BLIND_AUDIT.png) | [![Destructive Action Preflight blocking a protected home-parent boundary before execution](DEVPOST_02_DESTRUCTIVE_PREFLIGHT_BLOCKED.png)](DEVPOST_02_DESTRUCTIVE_PREFLIGHT_BLOCKED.png) |
+| **Controlled Before / After Comparison** | **Evidence States Stay Honest** |
+| [![Prepared fictional InvoiceFlow Mini snapshots scanned by the same deterministic tool](DEVPOST_04_BEFORE_AFTER.png)](DEVPOST_04_BEFORE_AFTER.png) | [![Evidence boundary keeping PASS, FAIL, NOT_RUN, and SIMULATED states separate](DEVPOST_03_EVIDENCE_BOUNDARY.png)](DEVPOST_03_EVIDENCE_BOUNDARY.png) |
 
 ## Why This Is Different
 

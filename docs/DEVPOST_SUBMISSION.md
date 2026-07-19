@@ -231,6 +231,7 @@ The real `/feedback` Session ID comes from the primary development task and belo
 
 ## Submission assets
 
+- [Devpost Screenshot Pack](../DEVPOST_SCREENSHOTS.md)
 - [Judge: Start Here](../JUDGE_START_HERE.md)
 - [Submission Manifest](SUBMISSION_MANIFEST.md)
 - [Under-3-minute Demo Script](DEMO_SCRIPT.md)
