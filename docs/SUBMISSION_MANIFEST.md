@@ -15,6 +15,7 @@ This file identifies the public surfaces for the Codex Control Tower submission 
 | Final v0.2.0 release | `openai-build-week-final-v2` — **PENDING** |
 | No-install exhibit | [GitHub Pages](https://zyganali-glitch.github.io/codex-control-tower/) |
 | Judge entry point | [JUDGE_START_HERE.md](../JUDGE_START_HERE.md) |
+| Sanitized Devpost media | [Screenshot pack and exact English captions](../DEVPOST_SCREENSHOTS.md) |
 
 The old `openai-build-week-final` tag must never be moved, deleted, or rewritten. It is the v0.1 historical baseline, not the v0.2.0 authority. Until the real v2 tag exists, current `main`, reproducible command output, and named evidence records are authoritative for the moving candidate. GitHub Pages is a static visualization built from published source and may lag a local checkout.
 
@@ -23,6 +24,7 @@ The old `openai-build-week-final` tag must never be moved, deleted, or rewritten
 | Surface | Purpose | Authority boundary |
 | --- | --- | --- |
 | GitHub Pages | Immediate, no-install product inspection | Static recorded exhibit; does not execute a visitor's repository or start a new model run |
+| Devpost screenshot pack | Four sanitized 1920 × 1080 judge-facing views | Recorded public exhibit; captions preserve fictional/real and model/local authority boundaries |
 | `npm run demo` | Reproducible deterministic fixture scan/test path | Current command output is authoritative for scores and fixture-test execution |
 | `npm run demo:safety` | Analysis-only Destructive Action Preflight exhibit | Sanitized BLOCKED/NOT_RUN record; no deletion command or executable runs |
 | `npm run demo:codex` | Real Blind GPT-5.6 Semantic Audit | Current local audit record is authoritative for model/run provenance; model opinion remains non-authoritative for locked facts |
@@ -38,6 +40,7 @@ The optional project hook has one retained real verification: a matching support
 ## Competition media and private-field boundary
 
 - Public YouTube URL: **PENDING**. No placeholder is stored.
+- Devpost screenshot pack: **READY** — four sanitized 1920 × 1080 images with exact English captions in [`DEVPOST_SCREENSHOTS.md`](../DEVPOST_SCREENSHOTS.md).
 - Planned final duration: `2:57` across all 13 audited source clips.
 - Old clip 03: retained 8-second terminal/local-dashboard startup proof.
 - New `03 (YENİ)` source: separate 15-second Destructive Action Preflight view placed after clip 10.
