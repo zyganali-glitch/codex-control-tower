@@ -11,6 +11,6 @@ This alignment is derived from the user's complete competition build brief. It i
 | Biggest risk | Losing trust through self-assessment false positives, unproved done claims, or unclear Codex provenance. |
 | Expected proof | Tests, deterministic demo, dashboard build, root self-scan, source-protection checks, clean Git diff, and remote commit verification. |
 | Workflow | Startup: fast and focused, with explicit approval and evidence for release actions. |
-| Next safe mission | Complete the Devpost form with the verified public 2:59 demo and immutable v2 source, enter the real private `/feedback` Session ID only in Devpost, and submit without inventing evidence. |
+| Next safe mission | Preserve the verified public 2:59 demo and immutable v2 source, keep the real private `/feedback` Session ID outside the repository, and make no further submission changes unless new evidence or an explicit request requires them. |
 
 The machine-readable record is `.controltower/phase0.json`.

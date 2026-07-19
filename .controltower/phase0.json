@@ -10,5 +10,5 @@
   "risk": "The largest immediate risk is a trust product that does not govern or truthfully assess its own repository; competition eligibility and Codex-use provenance must also remain explicit.",
   "expectedEvidence": "Full test suite, deterministic demo output, dashboard production build, root self-scan, source-protection checks, clean staged diff, remote commit verification, and visible NOT_RUN gates.",
   "workflow": "startup",
-  "nextMission": "Complete the Devpost form using the verified public 2:59 demo and immutable v2 source, enter the real private feedback Session ID only in Devpost, and submit without inventing evidence."
+  "nextMission": "Preserve the verified public 2:59 demo and immutable v2 source, keep the private feedback Session ID outside the repository, and make no further submission changes unless new evidence or an explicit request requires them."
 }
