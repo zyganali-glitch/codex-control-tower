@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "invoiceflow-mini-simulated-governed",
   "targetPath": "./examples\\governed-saas-after",
-  "generatedAt": "2026-07-17T19:05:10.454Z",
+  "generatedAt": "2026-07-19T10:47:30.840Z",
   "scanMode": "SIMULATED",
   "simulatedData": true,
   "scanScope": {
@@ -102,9 +102,9 @@
     },
     {
       "path": ".controltower/governed-test-output.txt",
-      "bytes": 375,
+      "bytes": 374,
       "lines": 15,
-      "modifiedAt": "2026-07-17T19:05:10.422Z"
+      "modifiedAt": "2026-07-19T10:47:30.815Z"
     },
     {
       "path": ".controltower/phase0.json",
@@ -311,7 +311,7 @@
     }
   },
   "contextGraph": {
-    "generatedAt": "2026-07-17T19:05:10.451Z",
+    "generatedAt": "2026-07-19T10:47:30.837Z",
     "generatedLocally": true,
     "algorithm": "deterministic lexical and repository-surface analysis",
     "nodes": [
@@ -470,7 +470,7 @@
         "label": ".controltower/governed-test-output.txt",
         "type": "control",
         "lines": 15,
-        "bytes": 375,
+        "bytes": 374,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1111,7 +1111,7 @@
         "label": ".controltower/governed-test-output.txt",
         "type": "control",
         "lines": 15,
-        "bytes": 375,
+        "bytes": 374,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1297,24 +1297,24 @@
     "decisionRecorded": true
   },
   "memoryLens": {
-    "generatedAt": "2026-07-17T19:05:10.453Z",
+    "generatedAt": "2026-07-19T10:47:30.839Z",
     "generatedLocally": true,
     "sources": [
       {
         "relative": "docs/MEMORY_LENS.md",
-        "ageDays": 4,
+        "ageDays": 5,
         "stale": false,
         "bytes": 1401
       },
       {
         "relative": "TECH_DEBT_AND_SECURITY.md",
-        "ageDays": 5,
+        "ageDays": 6,
         "stale": false,
         "bytes": 941
       },
       {
         "relative": "README.md",
-        "ageDays": 2,
+        "ageDays": 4,
         "stale": false,
         "bytes": 1883
       }
@@ -1527,7 +1527,7 @@
     "matchedLessons": [],
     "gateStatus": "APPROVED",
     "saferNextAction": "Proceed only within the declared scope and record commands, evidence, NOT_RUN checks, and remaining risk.",
-    "checkedAt": "2026-07-17T19:05:10.454Z",
+    "checkedAt": "2026-07-19T10:47:30.840Z",
     "deterministic": true
   },
   "phase0": {
@@ -1915,7 +1915,11 @@
   },
   "submission": {
     "version": "v0.2.0",
-    "releaseState": "FINAL_V2_PENDING_PUBLIC_DEMO_URL",
+    "releaseState": "FINAL_V2_SUBMISSION_READY",
+    "publicDemoUrl": "https://youtu.be/EvtguYLSNkg",
+    "publicDemoDisplayedDuration": "2:59",
+    "publicDemoVisibility": "PUBLIC",
+    "finalSourceTag": "openai-build-week-final-v2",
     "priorImmutableSource": "https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final",
     "judgeStart": "JUDGE_START_HERE.md"
   },

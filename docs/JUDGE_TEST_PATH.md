@@ -15,7 +15,7 @@ Open the verified public exhibit:
 5. Open **Before / After** for the deterministic `25 → 88` score and `16 → 1` risk comparison on prepared fictional snapshots.
 6. Open **Evidence** and confirm unavailable checks remain NOT_RUN.
 
-GitHub Pages is a static, sanitized, no-install exhibit. It does not scan a judge's repository, execute Codex in the browser, or show a new run from the entrant's computer. Use the [current Pages workflow history](https://github.com/zyganali-glitch/codex-control-tower/actions/workflows/pages.yml) and moving `main` branch for the v0.2.0 candidate. The existing [openai-build-week-final](https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final) tag is an untouched v0.1 baseline; v2 is pending the real public YouTube URL.
+GitHub Pages is a static, sanitized, no-install exhibit. It does not scan a judge's repository, execute Codex in the browser, or show a new run from the entrant's computer. Use the [current Pages workflow history](https://github.com/zyganali-glitch/codex-control-tower/actions/workflows/pages.yml) for deployment evidence and the immutable [openai-build-week-final-v2 source](https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final-v2) for the submitted code. The existing [openai-build-week-final](https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final) tag remains an untouched v0.1 baseline.
 
 ## What the exhibit proves
 
@@ -112,4 +112,4 @@ Current regenerated output is authoritative for a fresh checkout. The committed 
 
 ## Fallback
 
-If Pages is temporarily unavailable, inspect [Judge: Start Here](../JUDGE_START_HERE.md), the public repository, and current workflow history, then use the local commands. The public YouTube URL and v2 tag/release remain PENDING until real. A failed model or safety run must remain failed; it must never be replaced with fictional success.
+If Pages is temporarily unavailable, inspect the [public 2:59 video](https://youtu.be/EvtguYLSNkg), [Judge: Start Here](../JUDGE_START_HERE.md), the immutable v2 source/release, and current workflow history, then use the local commands. A failed model or safety run must remain failed; it must never be replaced with fictional success.

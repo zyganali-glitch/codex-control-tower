@@ -1,8 +1,8 @@
 # 13 Kaynak Parçalı Demo Videosu Kurgu Rehberi
 
-Bu rehber bilgisayar ve İngilizce konusunda deneyimin olmadığını varsayar. Her “Görmen gereken” satırını doğrulamadan sonraki adıma geçme.
+Bu rehber bilgisayar ve İngilizce konusunda deneyimin olmadığını varsayar. Kayıt ve kurgu sürecinin tarihsel, adım adım kaydı olarak korunmaktadır.
 
-Nihai video **2 dakika 57 saniye**, yani **177 saniye** olmalıdır. Kesin kural: video **3 dakikadan kısa** kalmalıdır.
+13 parçalı kurgu planı **2 dakika 57 saniye**, yani **177 saniye** hedefledi. Yayınlanan [YouTube videosu](https://youtu.be/EvtguYLSNkg) **2 dakika 59 saniye** görünüyor ve kesin kural olan **3 dakikadan kısa** sınırını karşılıyor.
 
 ## Önce neyi göstereceğimizi anlayalım
 
@@ -303,7 +303,7 @@ Mevcut `03 (YENİ)` ham kaydı bu alanları gösteriyorsa yeniden çekme. Denetl
 8. Dışa aktarmadan önce sesin duyulduğunu ve yazıların okunabildiğini doğrula.
 9. Ek başlık kartı, siyah boşluk veya ayrı kapanış ekleme; bunlar 3 saniyelik güvenlik payını tüketir.
 
-Doğrulanmış 13 kaynak parçayı bu sırayla birleştirip `2:57` olarak dışa aktar. Nihai videoyu herkese açık YouTube'a yükle; gerçek bağlantıyı belgelere eklemek üzere Codex'e gönder. Codex bağlantıyı doğrulayıp ekledikten, testleri yeniden çalıştırdıktan ve Pages'i doğruladıktan sonra v2 etiketini ve sürümünü oluşturacaktır. YouTube bağlantısından önce v2 oluşturma veya olmayan bir etiketi gösteren sahte görüntü hazırlama.
+Doğrulanmış 13 kaynak parça bu sırayla birleştirildi. Kurgu planı `2:57` idi; herkese açık yayın https://youtu.be/EvtguYLSNkg adresinde `2:59` görünüyor. Bağlantı belgelere işlendi ve son doğrulama ile v2 yayın süreci başlatıldı.
 
 ## Son gizlilik kontrolü
 
@@ -316,18 +316,12 @@ Doğrulanmış 13 kaynak parçayı bu sırayla birleştirip `2:57` olarak dışa
 - 03 panelinde `ANALYSIS ONLY · NO COMMAND EXECUTED` görünüyor.
 - Telif hakkı sana ait olmayan müzik kullanılmıyor.
 
-## YouTube bağlantısı geldiğinde
+## Yayınlanan YouTube videosu
 
-Gerçek nihai video tamamlanıp YouTube'a **Herkese Açık** olarak yüklendiğinde:
-
-1. `Ctrl`, `Shift` ve `N` tuşlarına birlikte basıp gizli tarayıcı penceresi aç.
-2. Gerçek YouTube bağlantısını yapıştır ve Enter'a bas.
-3. Hesaba girmeden video açılıyor mu kontrol et.
-4. Ses var mı kontrol et.
-5. Süre `3:00` değerinden kısa mı kontrol et.
-6. Bağlantıyı bu Codex görevine gönder.
-
-Codex bağlantıyı doğruladıktan sonra README, JUDGE_START_HERE, Devpost metni ve Submission Manifest içine ekleyecek; testleri yeniden çalıştıracak ve Pages'i doğrulayacak; ancak bundan sonra `openai-build-week-final-v2` etiketi ile aynı adlı sürümü oluşturacaktır. Hayalî veya geçici bağlantı yazılmayacaktır. Eski `openai-build-week-final` etiketi değiştirilmeyecektir.
+- Herkese açık bağlantı: https://youtu.be/EvtguYLSNkg
+- YouTube'da görünen süre: `2:59`
+- İngilizce seslendirme: mevcut ve Codex, GPT-5.6, kör kanıt sorgusu, yerel gerçeklerin kilidi, ön denetim ve insan kararını açıklıyor.
+- Eski `openai-build-week-final` etiketi değiştirilmez; son kaynak `openai-build-week-final-v2` etiketi ve aynı adlı sürümle dondurulur.
 
 ## `/feedback` kimliği
 

@@ -1,9 +1,9 @@
-Generated: 2026-07-17T19:05:10.419Z
+Generated: 2026-07-19T10:47:30.813Z
 Command: node --test tests/invoiceflow.test.js
 Exit code: 0
 
-✔ authorized verified payment closes an invoice and replay is idempotent (7.1005ms)
-✔ tampered auth tokens and unverified payment events are rejected (1.1263ms)
+✔ authorized verified payment closes an invoice and replay is idempotent (7.644ms)
+✔ tampered auth tokens and unverified payment events are rejected (1.7861ms)
 ℹ tests 2
 ℹ suites 0
 ℹ pass 2
@@ -11,4 +11,4 @@ Exit code: 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 165.0324
+ℹ duration_ms 175.3029

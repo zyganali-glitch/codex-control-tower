@@ -32,6 +32,11 @@ assert.equal(governedReport.destructiveActionPreflight.executed, false);
 assert.equal(governedReport.destructiveActionPreflight.requestedTarget, '$HOME/..');
 assert.equal(governedReport.destructiveActionPreflight.protectedBoundary, '<USER_HOME_PARENT>');
 assert.equal(governedReport.destructiveActionPreflight.hookOutcome, 'DENIED');
+assert.equal(governedReport.submission.releaseState, 'FINAL_V2_SUBMISSION_READY');
+assert.equal(governedReport.submission.publicDemoUrl, 'https://youtu.be/EvtguYLSNkg');
+assert.equal(governedReport.submission.publicDemoDisplayedDuration, '2:59');
+assert.equal(governedReport.submission.publicDemoVisibility, 'PUBLIC');
+assert.equal(governedReport.submission.finalSourceTag, 'openai-build-week-final-v2');
 
 const englishDemo = fs.readFileSync(path.join(ROOT, 'docs/DEMO_SCRIPT.md'), 'utf8');
 const turkishDemo = fs.readFileSync(path.join(ROOT, 'docs/DEMO_REHBERI_TR.md'), 'utf8');
@@ -39,17 +44,23 @@ const readme = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
 const judgingMap = fs.readFileSync(path.join(ROOT, 'docs/JUDGING_MAP.md'), 'utf8');
 const finalVideoDurations = [10, 13, 8, 12, 17, 14, 15, 17, 16, 16, 15, 16, 8];
 const finalVideoSeconds = finalVideoDurations.reduce((total, seconds) => total + seconds, 0);
-assert.equal(finalVideoDurations.length, 13, 'final video must retain all 13 audited source clips');
-assert.equal(finalVideoSeconds, 177, 'final video target must remain 2:57');
-assert.ok(finalVideoSeconds < 180, 'final video target must remain strictly below three minutes');
+assert.equal(finalVideoDurations.length, 13, 'editor plan must retain all 13 audited source clips');
+assert.equal(finalVideoSeconds, 177, 'documented 13-slot editor plan must total 2:57');
+assert.ok(finalVideoSeconds < 180, 'documented editor plan must remain strictly below three minutes');
 assert.match(englishDemo, /Final order: `01 → 02 → old 03 local startup → 04 → 05 → 06 → 07 → 08 → 09 → 10 → new 03 Safety Preflight → existing 11 → 12`/);
 assert.match(englishDemo, /177 seconds = 2:57/);
 assert.match(turkishDemo, /`01, 02, eski 03 \(8 sn\), 04, 05, 06, 07, 08, 09, 10, yeni 03 \(YENİ\), mevcut 11, 12`/);
 assert.match(turkishDemo, /Toplamın `2:57` olduğunu gör/);
-for (const surface of [englishDemo, turkishDemo, readme, judgingMap]) {
+for (const surface of [englishDemo, turkishDemo]) {
   assert.match(surface, /audio tracks are silent|silent audio tracks|audio track is silent|ses kanalları sessizdir/i);
   assert.match(surface, /audible English narration|İngilizce seslendirmeyi|İngilizce seslendirme/i);
 }
+for (const surface of [englishDemo, turkishDemo, readme, judgingMap]) {
+  assert.match(surface, /https:\/\/youtu\.be\/EvtguYLSNkg/);
+  assert.match(surface, /2:59/);
+}
+assert.doesNotMatch(readme, /public YouTube URL is \*\*PENDING\*\*/i);
+assert.doesNotMatch(judgingMap, /Real URL remains pending/i);
 assert.doesNotMatch(englishDemo, /Replace the old 8-second clip 03/);
 assert.doesNotMatch(turkishDemo, /Eski 8 saniyelik 03 dosyası korunacak ama son kurguda kullanılmayacaktır/);
 console.log('PASS test_required_surfaces');

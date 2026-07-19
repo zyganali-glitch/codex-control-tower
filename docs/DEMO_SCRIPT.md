@@ -1,8 +1,8 @@
-# 2:57 OpenAI Build Week Demo Script — 13 Source Clips
+# Published 2:59 OpenAI Build Week Demo — 2:57 Editor Plan / 13 Source Clips
 
 ## Demo promise
 
-The final sequence keeps real GPT-5.6 at the center while preserving the local-dashboard startup proof and adding a separate 15-second, analysis-only Destructive Action Preflight exhibit:
+The published sequence keeps real GPT-5.6 at the center while preserving the local-dashboard startup proof and adding a separate 15-second, analysis-only Destructive Action Preflight exhibit:
 
 > real GPT-5.6 evidence challenge → local dashboard startup → locked facts → deterministic protected-boundary preflight → human review → evidence handoff
 
@@ -19,7 +19,7 @@ InvoiceFlow Mini remains a **FICTIONAL SAMPLE PROJECT**. The scans, two focused 
 - The source captures total about `6:23` and all embedded audio tracks are silent. Trim them to the timeline durations and add the exact audible English narration during editing; never concatenate the raw files unchanged.
 - Clip 05 keeps its exact filename and narration but is trimmed to 17 seconds in the final timeline. Remove only waiting/idle time between the launch and result; retain the instruction, launch, and returned result.
 - Use the existing 16-second clip 11 unchanged in the final edit. It shows the frozen historical baseline and public repository, and it makes no v2 claim. Do not re-record, rename, delete, or overwrite it.
-- Publication order: assemble and export the 13 verified source clips → upload the real public YouTube video → integrate and verify its URL → rerun tests and verify Pages → create and publish `openai-build-week-final-v2` and its release. Never create v2 before the real public URL is verified.
+- Completed publication path: 13 verified source slots assembled to the audited 2:57 editor plan → [public YouTube upload](https://youtu.be/EvtguYLSNkg) verified and displayed as 2:59 → repository documentation reconciled → tests and Pages verified → immutable `openai-build-week-final-v2` tag/release published.
 - Clipchamp window capture records one selected window. Never require a terminal/browser, Codex/browser, or other application switch inside one clip. Prepare the exact window before recording each clip.
 - Product UI and English narration stay English. The exact Turkish translations and beginner click path are mirrored in [DEMO_REHBERI_TR.md](DEMO_REHBERI_TR.md).
 
@@ -223,25 +223,26 @@ Expected safety exhibit: operation `recursive_delete`, requested target `$HOME/.
 
 ## Final acceptance checklist
 
-- [ ] All 13 source clips are assembled in the required order and the final timeline totals `2:57`.
-- [ ] The final export is shorter than three minutes and contains audible English narration.
-- [ ] No extra title card, black gap, or additive outro extends the `2:57` timeline; the exported file itself is checked below `3:00`.
-- [ ] Clip 01 shows real GPT-5.6 in the first ten seconds.
-- [ ] Old clip 03 remains after clip 02 and visibly shows the terminal launch plus Vite local address.
-- [ ] The new 15-second Safety Preflight source named `03 (YENİ)` is placed after clip 10 and visibly shows `recursive_delete`, `$HOME/..`, `<USER_HOME_PARENT>`, BLOCKED, NOT_RUN, HUMAN REVIEW REQUIRED, deterministic policy, safer next action, and **ANALYSIS ONLY · NO COMMAND EXECUTED**.
-- [ ] No deletion command or executable is run for clip 03 or any test.
-- [ ] No clip requires an application switch inside the selected Clipchamp window.
-- [ ] Clip 05 remains the valid existing Codex Desktop capture, with idle time removed to make its final slot 17 seconds.
-- [ ] The existing 16-second clip 11 is retained unchanged and used in the final sequence; it does not claim that v2 exists.
-- [ ] Every source audio track was silent, so the final export has the exact English narration added and audibly verified.
-- [ ] InvoiceFlow Mini and prepared snapshots are called fictional; scans/tests/hashes/model/preflight are separately described as real executions.
-- [ ] GPT-5.6 is not credited with `25 → 88`, fixture creation, scoring, or test execution.
-- [ ] No personal path, private conversation, secret, notification, or `/feedback` Session ID appears.
-- [ ] The YouTube URL remains marked PENDING until a real public, audible, under-three-minute upload is verified.
-- [ ] Only after that URL is integrated, tests pass, and Pages is verified are the immutable v2 tag and release created.
+- [x] All 13 source slots are assembled in the required order and the editor timeline totals `2:57`.
+- [x] The published video displays as `2:59`, remains shorter than three minutes, and contains audible English narration.
+- [x] No extra title card, black gap, or additive outro pushes the published result to three minutes.
+- [x] Clip 01 shows real GPT-5.6 in the first ten seconds.
+- [x] Old clip 03 remains after clip 02 and visibly shows the terminal launch plus Vite local address.
+- [x] The 15-second Safety Preflight source named `03 (YENİ)` appears after clip 10 and shows `recursive_delete`, `$HOME/..`, `<USER_HOME_PARENT>`, BLOCKED, NOT_RUN, HUMAN REVIEW REQUIRED, deterministic policy, safer next action, and **ANALYSIS ONLY · NO COMMAND EXECUTED**.
+- [x] No deletion command or executable is run for clip 03 or any test.
+- [x] No clip requires an application switch inside the selected Clipchamp window.
+- [x] Clip 05 remains the valid existing Codex Desktop capture, with idle time removed to make its editor slot 17 seconds.
+- [x] The existing 16-second clip 11 is retained unchanged and used in the published sequence.
+- [x] Every source audio track was silent, so the published edit has the exact English narration added and audibly verified.
+- [x] InvoiceFlow Mini and prepared snapshots are called fictional; scans/tests/hashes/model/preflight are separately described as real executions.
+- [x] GPT-5.6 is not credited with `25 → 88`, fixture creation, scoring, or test execution.
+- [x] No personal path, private conversation, secret, notification, or `/feedback` Session ID appears.
+- [x] The public video is verified at https://youtu.be/EvtguYLSNkg.
+- [x] The immutable v2 tag/release identifies the final submitted source; the old tag remains untouched.
 
 ## Related assets
 
+- [Public 2:59 YouTube demo](https://youtu.be/EvtguYLSNkg)
 - [Beginner-safe Turkish recording guide](DEMO_REHBERI_TR.md)
 - [Codex Demo Prompt](CODEX_DEMO_PROMPT.md)
 - [Judge Test Path](JUDGE_TEST_PATH.md)

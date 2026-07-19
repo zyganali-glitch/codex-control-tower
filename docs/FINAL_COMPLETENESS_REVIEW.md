@@ -1,6 +1,6 @@
 # Final Completeness Review
 
-Review date: 2026-07-17
+Review date: 2026-07-19
 
 This review separates product implementation, published evidence, fictional sample content, and submission-only manual gates. InvoiceFlow Mini uses prepared fictional snapshots; their scores are real deterministic scan results on those snapshots. GPT-5.6 did not create the `25 → 88` transformation.
 
@@ -11,7 +11,7 @@ This review separates product implementation, published evidence, fictional samp
 | Does README explain the product in 30 seconds? | PASS | First screen keeps the real blind GPT-5.6 challenge central, states locked local authority, and adds deterministic pre-execution protected-boundary analysis. |
 | Are GitHub Pages and the local dashboard distinguished? | PASS | Pages is the static recorded no-install exhibit; local dashboard is the live `READY → RUNNING → COMPLETE` workbench. |
 | Does the video path visibly use Codex desktop? | PASS for documented path | The script opens with completed GPT-5.6 proof, then uses a clean Demo Blind Audit task to launch `npm run demo:codex`; terminal is recovery only. |
-| Is the recording script realistically below three minutes? | PASS for audited plan | The English script and Turkish guide define the same 13 source clips. Durations sum to `177` seconds (`2:57`); both distinct 03 captures and the existing 16-second clip 11 are retained, while only clip 05's idle wait is shortened. Only the public upload remains pending. |
+| Is the recording script realistically below three minutes? | PASS / PUBLISHED | The English script and Turkish guide define the same 13 source slots totaling `177` seconds (`2:57`). The accepted [public YouTube video](https://youtu.be/EvtguYLSNkg) displays as `2:59`, remains under three minutes, and contains audible narration. |
 | Is the fictional/real boundary unambiguous? | PASS | Public narrative separates fictional actors/prepared snapshots from real scans, fixture tests, evidence hashes, and GPT-5.6 reconciliation. |
 | Does README distinguish the authority layers? | PASS | “Codex writes. GPT-5.6 challenges. Control Tower locks the facts. The developer decides.” |
 | Does README acknowledge lineage without naming sibling versions? | PASS | Public lineage uses only “Universal Agent OS family.” |
@@ -39,8 +39,8 @@ This review separates product implementation, published evidence, fictional samp
 | Evidence hashes, Git context, and freshness | PASS | Reconciliation provenance distinguishes full-file, included-content, and bundle SHA-256; it also exposes base commit, bounded worktree state, target-local raw test output, and stale/current state |
 | Unsafe model-output handling | PASS | Tool/unknown/failed/malformed events and missing/duplicate/status-injecting/malformed/execution-claiming responses are rejected; decisive evidence requirements are enforced; unsupported paths are filtered and recorded |
 | READY truthfulness | PASS | READY is labeled not started; real-run claims appear only for RUNNING/COMPLETE recorded state |
-| Full root verification and dashboard production build | PASS locally for final v0.2.0 candidate | On 2026-07-17, `npm test` and `npm run verify` passed the full CLI/core, persistence, harmless-hook, privacy, source-protection, and 11 dashboard adapter checks; demo regeneration completed; dependency audit reported zero known vulnerabilities; and Vite built 52 modules. A final standalone build/diff check remains part of the handoff sequence. |
-| Static judge-demo deployment | PASS for published v0.2.0 candidate | [Pages run 29606886221](https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29606886221) built and deployed commit `97d35d4f5e2c8d3884c8d61dcce504f285c06670`; an anonymous cache-busted request returned HTTP 200 and the deployed asset contained the preflight, BLOCKED, NOT_RUN, and `<USER_HOME_PARENT>` exhibit markers |
+| Full root verification and dashboard production build | PASS for final v0.2.0 source | The final handoff reruns `npm run verify`; current hosted authority is the [CI workflow history](https://github.com/zyganali-glitch/codex-control-tower/actions/workflows/ci.yml). |
+| Static judge-demo deployment | PASS | Current hosted authority is the [Pages workflow history](https://github.com/zyganali-glitch/codex-control-tower/actions/workflows/pages.yml); the anonymous public exhibit contains the preflight, BLOCKED, NOT_RUN, and `<USER_HOME_PARENT>` markers. |
 | Real Blind GPT-5.6 Semantic Audit | PASS execution; FAIL controlled-fixture verdict; WARN provenance age | Signed-in ChatGPT subscription, exact `gpt-5.6-sol`, pinned CLI, empty ephemeral execution, accepted tool events 0, clean pre-run worktree at `587ddbd7b43e122d21598194e29a818a20c3f6a3`, 3 SUPPORTS / 3 CONTRADICTS, five policy alignments, one mission conflict, HUMAN REVIEW REQUIRED, one locked NOT_RUN, and structured provenance. The recorded report is visibly `WARN` / `stale: true` because it was older than 24 hours; a fresh scan matched its score, risks, and changed-file set. The invocation completed successfully; FAIL honestly describes the fixture evidence. |
 | Fixture/provider deployment, load, accessibility, independent security review | NOT_RUN | Static judge hosting and focused tests do not prove these separate gates |
 
@@ -48,15 +48,15 @@ This review separates product implementation, published evidence, fictional samp
 
 | Gate | Status in public repository | Rule |
 | --- | --- | --- |
-| Final public YouTube video under three minutes | PENDING | No URL is stored or invented; verify anonymous access, audio, and duration when the user supplies it |
-| Spoken Codex/GPT-5.6/preflight explanation | PENDING FINAL UPLOAD | The 13-source-clip plan provides exact English narration and a Turkish meaning for every clip |
-| Existing clip 11 | READY / RETAINED | Use the existing 16-second historical-baseline repository capture unchanged; it makes no v2 claim and needs no re-recording |
-| `openai-build-week-final-v2` tag and release | PENDING EXTERNAL YOUTUBE URL | Existing `openai-build-week-final` remains immutable; do not create or claim v2 early |
+| Final public YouTube video under three minutes | PASS / PUBLIC | [Accepted video](https://youtu.be/EvtguYLSNkg) is anonymously reachable and YouTube displays 2:59 |
+| Spoken Codex/GPT-5.6/preflight explanation | PASS | Audible English narration covers Codex, GPT-5.6, the authority boundary, and Safety Preflight |
+| Existing clip 11 | USED / RETAINED | The existing 16-second historical-baseline repository capture was used unchanged |
+| `openai-build-week-final-v2` tag and release | PASS | Canonical [v0.2.0 submission release](https://github.com/zyganali-glitch/codex-control-tower/releases/tag/openai-build-week-final-v2); old `openai-build-week-final` remains immutable |
 | Primary-task `/feedback` Session ID | PRIVATE FORM ONLY | Real value belongs in Devpost only and is never committed |
 | Independent user validation | NOT_RUN | Do not invent participants, quotes, or outcomes |
 
 ## Review conclusion
 
-The repository contains a coherent runnable developer tool, a published static no-install judge exhibit, a live local recording path, a real Blind GPT-5.6 Semantic Audit with deterministic authority, and a locally and remotely verified v0.2.0 Destructive Action Preflight candidate. Existing clip 11 is retained and ready; the public YouTube URL and immutable v2 tag/release remain pending. The private feedback value stays outside public evidence. Independent user validation and external product/security gates remain NOT_RUN.
+The repository contains a coherent runnable developer tool, a published static no-install judge exhibit, a real Blind GPT-5.6 Semantic Audit with deterministic authority, a verified v0.2.0 Destructive Action Preflight, a public 2:59 video, and an immutable v2 submission source/release. The private feedback value stays outside public evidence. Independent user validation and external product/security gates remain NOT_RUN.
 
 Related: [README](../README.md) · [Evidence Report](EVIDENCE_REPORT.md) · [Judge Test Path](JUDGE_TEST_PATH.md) · [NOT_RUN Gates](NOT_RUN_GATES.md)

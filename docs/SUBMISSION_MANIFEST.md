@@ -8,16 +8,17 @@ This file identifies the public surfaces for the Codex Control Tower submission 
 | --- | --- |
 | Project | Codex Control Tower |
 | Track | Developer Tools |
-| Candidate package version | `0.2.0` |
-| Moving v0.2.0 source | [main](https://github.com/zyganali-glitch/codex-control-tower/tree/main) |
+| Final package version | `0.2.0` |
+| Moving development source | [main](https://github.com/zyganali-glitch/codex-control-tower/tree/main) |
 | Historical immutable baseline | [openai-build-week-final tag](https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final) and [release](https://github.com/zyganali-glitch/codex-control-tower/releases/tag/openai-build-week-final) |
-| Final v0.2.0 frozen source | `openai-build-week-final-v2` — **PENDING; do not create before the real public YouTube URL is verified and integrated** |
-| Final v0.2.0 release | `openai-build-week-final-v2` — **PENDING** |
+| Final v0.2.0 frozen source | [openai-build-week-final-v2 tag](https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final-v2) |
+| Final v0.2.0 release | [openai-build-week-final-v2 release](https://github.com/zyganali-glitch/codex-control-tower/releases/tag/openai-build-week-final-v2) |
+| Public demo | [YouTube — displayed duration 2:59](https://youtu.be/EvtguYLSNkg) |
 | No-install exhibit | [GitHub Pages](https://zyganali-glitch.github.io/codex-control-tower/) |
 | Judge entry point | [JUDGE_START_HERE.md](../JUDGE_START_HERE.md) |
 | Sanitized Devpost media | [Screenshot pack and exact English captions](../DEVPOST_SCREENSHOTS.md) |
 
-The old `openai-build-week-final` tag must never be moved, deleted, or rewritten. It is the v0.1 historical baseline, not the v0.2.0 authority. Until the real v2 tag exists, current `main`, reproducible command output, and named evidence records are authoritative for the moving candidate. GitHub Pages is a static visualization built from published source and may lag a local checkout.
+The old `openai-build-week-final` tag must never be moved, deleted, or rewritten. It is the v0.1 historical baseline, not the v0.2.0 authority. The immutable `openai-build-week-final-v2` tag/release is the canonical submitted source; `main` remains moving development. GitHub Pages is a static visualization built from published source and may lag a local checkout.
 
 ## Evidence authority
 
@@ -28,7 +29,7 @@ The old `openai-build-week-final` tag must never be moved, deleted, or rewritten
 | `npm run demo` | Reproducible deterministic fixture scan/test path | Current command output is authoritative for scores and fixture-test execution |
 | `npm run demo:safety` | Analysis-only Destructive Action Preflight exhibit | Sanitized BLOCKED/NOT_RUN record; no deletion command or executable runs |
 | `npm run demo:codex` | Real Blind GPT-5.6 Semantic Audit | Current local audit record is authoritative for model/run provenance; model opinion remains non-authoritative for locked facts |
-| `openai-build-week-final-v2` when it exists | Frozen v0.2.0 implementation and documentation | Canonical submitted source; currently PENDING |
+| `openai-build-week-final-v2` | Frozen v0.2.0 implementation and documentation | Canonical submitted source |
 | Devpost entry | Submitted text, public video URL, and private required fields | Canonical competition-form record |
 
 The latest committed model record completed on 2026-07-16 through signed-in ChatGPT with `codex-cli 0.144.3` and `gpt-5.6-sol`. It accepted zero tool events in an empty ephemeral workspace and used a clean pre-run worktree at `587ddbd7b43e122d21598194e29a818a20c3f6a3`. Its recorded report was older than 24 hours, so `reportProvenance.status: WARN` and `stale: true` remain visible; a fresh scan matched score, risk flags, and changed files. The run produced 3 SUPPORTS / 3 CONTRADICTS, aligned on five local comparison outcomes, raised one HUMAN REVIEW REQUIRED mission conflict, and preserved one locked NOT_RUN. Its local/model controlled-fixture verdicts are both FAIL; the invocation itself completed successfully.
@@ -39,12 +40,12 @@ The optional project hook has one retained real verification: a matching support
 
 ## Competition media and private-field boundary
 
-- Public YouTube URL: **PENDING**. No placeholder is stored.
+- Public YouTube video: **PASS / PUBLIC** — https://youtu.be/EvtguYLSNkg; YouTube displays `2:59`.
 - Devpost screenshot pack: **READY** — four sanitized 1920 × 1080 images with exact English captions in [`DEVPOST_SCREENSHOTS.md`](../DEVPOST_SCREENSHOTS.md).
-- Planned final duration: `2:57` across all 13 audited source clips.
+- Audited editor plan: `2:57` across all 13 source slots; the published encode displays `2:59` and remains under three minutes.
 - Old clip 03: retained 8-second terminal/local-dashboard startup proof.
 - New `03 (YENİ)` source: separate 15-second Destructive Action Preflight view placed after clip 10.
-- Existing clip 11: **RETAINED** unchanged as the 16-second historical-baseline repository capture; it makes no v2 claim and is used in the final edit.
+- Existing clip 11: **RETAINED** unchanged as the 16-second historical-baseline repository capture and used in the published edit.
 - Private `/feedback` Session ID: Devpost-only. It must never be copied into this public repository.
 
 ## Reproduction commands

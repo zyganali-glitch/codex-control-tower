@@ -1,6 +1,6 @@
 # Codex Control Tower Master Roadmap
 
-Status: **RELEASE PREFLIGHT**
+Status: **FINAL SUBMISSION READY**
 Mission: ship an honest, competition-ready, local-first mission control layer for Codex-assisted software delivery.
 
 ## Product scope
@@ -21,7 +21,7 @@ The build excludes hosted SaaS, mandatory API keys, telemetry, real authenticati
 - [x] Push the verified `main` branch to the approved GitHub destination and observe hosted CI success.
 - [x] Review published Devpost rules/FAQ and record eligibility and media constraints.
 - [x] Publish and verify the static GitHub Pages no-install judge exhibit.
-- [ ] Capture sanitized final screenshots and a 2:45 demo video.
+- [x] Capture sanitized final screenshots and publish the audible under-three-minute demo at https://youtu.be/EvtguYLSNkg (YouTube displays 2:59).
 
 ## Acceptance and evidence
 
