@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "codex-control-tower",
   "targetPath": ".",
-  "generatedAt": "2026-07-17T20:29:22.974Z",
+  "generatedAt": "2026-07-19T10:53:29.942Z",
   "scanMode": "REAL_LOCAL_SCAN",
   "simulatedData": false,
   "scanScope": {
@@ -66,21 +66,21 @@
     },
     {
       "path": ".controltower/flight-recorder.jsonl",
-      "bytes": 2603,
+      "bytes": 3335,
       "lines": 0,
-      "modifiedAt": "2026-07-12T20:52:58.423Z"
+      "modifiedAt": "2026-07-19T10:43:42.679Z"
     },
     {
       "path": ".controltower/phase0.json",
-      "bytes": 1515,
+      "bytes": 1511,
       "lines": 15,
-      "modifiedAt": "2026-07-15T09:04:04.414Z"
+      "modifiedAt": "2026-07-19T10:28:49.496Z"
     },
     {
       "path": ".controltower/review-gate.json",
-      "bytes": 1495,
-      "lines": 40,
-      "modifiedAt": "2026-07-12T20:52:58.422Z"
+      "bytes": 1994,
+      "lines": 45,
+      "modifiedAt": "2026-07-19T10:28:51.357Z"
     },
     {
       "path": ".github/workflows/ci.yml",
@@ -110,7 +110,7 @@
       "path": "apps/dashboard/package-lock.json",
       "bytes": 57693,
       "lines": 1692,
-      "modifiedAt": "2026-07-17T20:28:36.968Z"
+      "modifiedAt": "2026-07-19T10:47:34.394Z"
     },
     {
       "path": "apps/dashboard/package.json",
@@ -288,9 +288,9 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 6081,
-      "lines": 51,
-      "modifiedAt": "2026-07-17T20:25:56.916Z"
+      "bytes": 6769,
+      "lines": 58,
+      "modifiedAt": "2026-07-19T10:39:42.510Z"
     },
     {
       "path": "cli/commands/codex-review.js",
@@ -306,9 +306,9 @@
     },
     {
       "path": "cli/commands/demo.js",
-      "bytes": 9858,
-      "lines": 200,
-      "modifiedAt": "2026-07-17T18:27:27.768Z"
+      "bytes": 10029,
+      "lines": 204,
+      "modifiedAt": "2026-07-19T10:30:52.898Z"
     },
     {
       "path": "cli/commands/destructive-preflight.js",
@@ -330,9 +330,9 @@
     },
     {
       "path": "cli/commands/export-devpost.js",
-      "bytes": 6038,
+      "bytes": 6205,
       "lines": 37,
-      "modifiedAt": "2026-07-15T09:03:11.755Z"
+      "modifiedAt": "2026-07-17T21:06:29.081Z"
     },
     {
       "path": "cli/commands/flight-recorder.js",
@@ -623,6 +623,36 @@
       "modifiedAt": "2026-07-12T17:03:39.327Z"
     },
     {
+      "path": "DEVPOST_01_GPT56_BLIND_AUDIT.png",
+      "bytes": 703402,
+      "lines": 0,
+      "modifiedAt": "2026-07-19T09:33:20.643Z"
+    },
+    {
+      "path": "DEVPOST_02_DESTRUCTIVE_PREFLIGHT_BLOCKED.png",
+      "bytes": 531253,
+      "lines": 0,
+      "modifiedAt": "2026-07-19T09:33:20.647Z"
+    },
+    {
+      "path": "DEVPOST_03_EVIDENCE_BOUNDARY.png",
+      "bytes": 459373,
+      "lines": 0,
+      "modifiedAt": "2026-07-19T09:33:20.651Z"
+    },
+    {
+      "path": "DEVPOST_04_BEFORE_AFTER.png",
+      "bytes": 439039,
+      "lines": 0,
+      "modifiedAt": "2026-07-19T09:33:20.655Z"
+    },
+    {
+      "path": "DEVPOST_SCREENSHOTS.md",
+      "bytes": 2458,
+      "lines": 20,
+      "modifiedAt": "2026-07-19T10:42:36.610Z"
+    },
+    {
       "path": "docs/ARCHITECTURE.md",
       "bytes": 19187,
       "lines": 204,
@@ -636,15 +666,15 @@
     },
     {
       "path": "docs/BUILD_WEEK_DELTA.md",
-      "bytes": 8319,
+      "bytes": 8545,
       "lines": 95,
-      "modifiedAt": "2026-07-17T20:25:16.347Z"
+      "modifiedAt": "2026-07-19T10:39:36.599Z"
     },
     {
       "path": "docs/CODEX_BUILD_LOG.md",
-      "bytes": 32223,
-      "lines": 155,
-      "modifiedAt": "2026-07-17T20:27:56.404Z"
+      "bytes": 33021,
+      "lines": 157,
+      "modifiedAt": "2026-07-19T10:39:40.518Z"
     },
     {
       "path": "docs/CODEX_DEMO_PROMPT.md",
@@ -666,27 +696,27 @@
     },
     {
       "path": "docs/DEMO_REHBERI_TR.md",
-      "bytes": 21303,
-      "lines": 340,
-      "modifiedAt": "2026-07-17T20:25:16.346Z"
+      "bytes": 22524,
+      "lines": 337,
+      "modifiedAt": "2026-07-19T10:41:22.134Z"
     },
     {
       "path": "docs/DEMO_SCRIPT.md",
-      "bytes": 15145,
-      "lines": 228,
-      "modifiedAt": "2026-07-17T20:25:56.919Z"
+      "bytes": 18102,
+      "lines": 251,
+      "modifiedAt": "2026-07-19T10:41:20.636Z"
     },
     {
       "path": "docs/DEVPOST_SUBMISSION.md",
-      "bytes": 20852,
-      "lines": 244,
-      "modifiedAt": "2026-07-17T20:25:56.918Z"
+      "bytes": 19687,
+      "lines": 238,
+      "modifiedAt": "2026-07-19T10:26:34.011Z"
     },
     {
       "path": "docs/EVIDENCE_REPORT.md",
-      "bytes": 6557,
+      "bytes": 6524,
       "lines": 36,
-      "modifiedAt": "2026-07-17T20:27:56.405Z"
+      "modifiedAt": "2026-07-19T10:37:59.360Z"
     },
     {
       "path": "docs/FEATURE_HARVEST.md",
@@ -696,21 +726,21 @@
     },
     {
       "path": "docs/FINAL_COMPLETENESS_REVIEW.md",
-      "bytes": 8763,
+      "bytes": 8398,
       "lines": 63,
-      "modifiedAt": "2026-07-17T20:25:16.351Z"
+      "modifiedAt": "2026-07-19T10:42:38.093Z"
     },
     {
       "path": "docs/JUDGE_TEST_PATH.md",
-      "bytes": 8971,
+      "bytes": 9068,
       "lines": 116,
-      "modifiedAt": "2026-07-17T20:25:16.360Z"
+      "modifiedAt": "2026-07-19T10:37:57.149Z"
     },
     {
       "path": "docs/JUDGING_MAP.md",
-      "bytes": 16304,
-      "lines": 196,
-      "modifiedAt": "2026-07-17T20:25:16.353Z"
+      "bytes": 16594,
+      "lines": 199,
+      "modifiedAt": "2026-07-19T10:37:55.470Z"
     },
     {
       "path": "docs/LIMITATIONS.md",
@@ -726,15 +756,15 @@
     },
     {
       "path": "docs/MISTAKE_SHIELD.md",
-      "bytes": 2480,
+      "bytes": 2554,
       "lines": 40,
-      "modifiedAt": "2026-07-17T20:25:16.355Z"
+      "modifiedAt": "2026-07-19T10:39:38.565Z"
     },
     {
       "path": "docs/NOT_RUN_GATES.md",
-      "bytes": 4327,
+      "bytes": 4086,
       "lines": 33,
-      "modifiedAt": "2026-07-17T20:25:16.356Z"
+      "modifiedAt": "2026-07-19T10:38:03.801Z"
     },
     {
       "path": "docs/ORIGINALITY_MATRIX.md",
@@ -768,21 +798,21 @@
     },
     {
       "path": "docs/SUBMISSION_MANIFEST.md",
-      "bytes": 6546,
-      "lines": 76,
-      "modifiedAt": "2026-07-17T20:25:16.357Z"
+      "bytes": 7371,
+      "lines": 81,
+      "modifiedAt": "2026-07-19T10:36:14.553Z"
     },
     {
       "path": "docs/TECH_DEBT_DELTA.md",
-      "bytes": 2821,
+      "bytes": 2954,
       "lines": 31,
-      "modifiedAt": "2026-07-17T20:25:16.359Z"
+      "modifiedAt": "2026-07-19T10:39:34.741Z"
     },
     {
       "path": "docs/TRACEABILITY_MATRIX.md",
-      "bytes": 5486,
+      "bytes": 5702,
       "lines": 35,
-      "modifiedAt": "2026-07-17T20:25:16.358Z"
+      "modifiedAt": "2026-07-19T10:42:39.943Z"
     },
     {
       "path": "docs/USER_VALIDATION.md",
@@ -792,9 +822,9 @@
     },
     {
       "path": "JUDGE_START_HERE.md",
-      "bytes": 7709,
-      "lines": 77,
-      "modifiedAt": "2026-07-17T20:27:06.297Z"
+      "bytes": 7770,
+      "lines": 83,
+      "modifiedAt": "2026-07-19T10:45:29.564Z"
     },
     {
       "path": "LICENSE",
@@ -816,21 +846,21 @@
     },
     {
       "path": "plans/master-roadmap.md",
-      "bytes": 3207,
+      "bytes": 3294,
       "lines": 49,
-      "modifiedAt": "2026-07-13T20:32:45.886Z"
+      "modifiedAt": "2026-07-19T10:30:54.391Z"
     },
     {
       "path": "plans/PHASE0_ALIGNMENT.md",
-      "bytes": 1449,
+      "bytes": 1485,
       "lines": 17,
-      "modifiedAt": "2026-07-15T09:04:04.415Z"
+      "modifiedAt": "2026-07-19T10:30:56.253Z"
     },
     {
       "path": "README.md",
-      "bytes": 26287,
-      "lines": 265,
-      "modifiedAt": "2026-07-17T20:25:16.343Z"
+      "bytes": 27056,
+      "lines": 279,
+      "modifiedAt": "2026-07-19T10:26:32.568Z"
     },
     {
       "path": "TECH_DEBT_AND_SECURITY.md",
@@ -906,9 +936,9 @@
     },
     {
       "path": "tests/test_required_surfaces.js",
-      "bytes": 3048,
-      "lines": 36,
-      "modifiedAt": "2026-07-17T19:01:11.533Z"
+      "bytes": 5419,
+      "lines": 67,
+      "modifiedAt": "2026-07-19T10:41:23.987Z"
     },
     {
       "path": "tests/test_review_gate.js",
@@ -924,7 +954,7 @@
     }
   ],
   "suggestedNextActions": [],
-  "codexPrompt": "# Codex Control Tower Mission\n\nTarget repository: .\nMission goal: Recheck the published Devpost rules after challenge opening, capture the final sanitized three-minute demo, and add Codex change provenance without expanding into an unapproved cloud build.\nReview gate: APPROVED (scoped)\nReview gate scope: Complete bounded release-preflight hardening, run local verification, commit the independent repository, and push main to the user-provided GitHub repository.\nMistake Shield: CLEAR\n\n## Detected risks\n- No scanner risk was detected; continue to verify scope.\n\n## Missing surfaces\n- No required governance surface is currently missing.\n\n## Allowed files\n- .codex/**\n- .controltower/**\n- .github/**\n- apps/**\n- cli/**\n- core/**\n- docs/**\n- examples/**\n- plans/**\n- tests/**\n- README.md\n- CHANGELOG.md\n- LICENSE\n- package.json\n- package-lock.json\n- TECH_DEBT_AND_SECURITY.md\n\n## Forbidden actions\n- Do not delete tests, history, user data, or unrelated legacy code.\n- Do not overwrite existing files without a backup and explicit need.\n- Do not push, publish, deploy, or upload source unless the APPROVED scoped Review Gate explicitly authorizes the exact action and destination. Never expose secrets.\n- Do not expand scope beyond the mission or bypass a non-approved review gate.\n- Review Gate forbids: modify or push to any protected source repository\n- Review Gate forbids: commit credentials, tokens, private URLs, or private screenshots\n- Review Gate forbids: rewrite shared Git history\n- Review Gate forbids: claim NOT_RUN or SIMULATED evidence as PASS\n- Review Gate forbids: publish to a destination other than the approved GitHub repository\n- Do not touch without approval: Do not modify Universal Agent OS family sources\n- Do not touch without approval: commit secrets or private screenshots\n- Do not touch without approval: claim simulated evidence as real\n- Do not touch without approval: add mandatory cloud dependencies\n- Do not touch without approval: or rewrite Git history.\n\n## Required evidence\n- Full test suite, deterministic demo output, dashboard production build, root self-scan, source-protection checks, clean staged diff, remote commit verification, and visible NOT_RUN gates.\n- List every changed file and every command actually run.\n- Attach concrete output or artifact paths for every PASS claim.\n- Keep WARN, FAIL, NOT_RUN, and SIMULATED labels visible.\n\n## Tests to run\n- Run the repository test command discovered in package metadata.\n\n## Documentation to update\n- README.md when behavior or commands change\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n\n## Execution contract\nYou are Codex working under Codex Control Tower. Fix only the listed gaps. Read instructions and plans before editing. Stop before risky implementation unless the local gate is APPROVED, fully scoped, and the proposed action stays within that scope. PASS requires evidence; an edited file is not a validated file. If a check cannot run, label it NOT_RUN and explain why.\n\n## Final response format\n1. Summary\n2. Changed files\n3. Commands and evidence with PASS/WARN/FAIL/NOT_RUN/SIMULATED\n4. Review gate and Mistake Shield state\n5. Remaining risks\n6. Next safe action",
+  "codexPrompt": "# Codex Control Tower Mission\n\nTarget repository: .\nMission goal: Complete the Devpost form using the verified public 2:59 demo and immutable v2 source, enter the real private feedback Session ID only in Devpost, and submit without inventing evidence.\nReview gate: APPROVED (scoped)\nReview gate scope: Complete bounded release-preflight hardening, run local verification, commit the independent repository, and push main to the user-provided GitHub repository.\nMistake Shield: CLEAR\n\n## Detected risks\n- No scanner risk was detected; continue to verify scope.\n\n## Missing surfaces\n- No required governance surface is currently missing.\n\n## Allowed files\n- .codex/**\n- .controltower/**\n- .github/**\n- apps/**\n- cli/**\n- core/**\n- docs/**\n- examples/**\n- plans/**\n- tests/**\n- README.md\n- CHANGELOG.md\n- DEVPOST_SCREENSHOTS.md\n- DEVPOST_01_GPT56_BLIND_AUDIT.png\n- DEVPOST_02_DESTRUCTIVE_PREFLIGHT_BLOCKED.png\n- DEVPOST_03_EVIDENCE_BOUNDARY.png\n- DEVPOST_04_BEFORE_AFTER.png\n- LICENSE\n- package.json\n- package-lock.json\n- TECH_DEBT_AND_SECURITY.md\n\n## Forbidden actions\n- Do not delete tests, history, user data, or unrelated legacy code.\n- Do not overwrite existing files without a backup and explicit need.\n- Do not push, publish, deploy, or upload source unless the APPROVED scoped Review Gate explicitly authorizes the exact action and destination. Never expose secrets.\n- Do not expand scope beyond the mission or bypass a non-approved review gate.\n- Review Gate forbids: modify or push to any protected source repository\n- Review Gate forbids: commit credentials, tokens, private URLs, or private screenshots\n- Review Gate forbids: rewrite shared Git history\n- Review Gate forbids: claim NOT_RUN or SIMULATED evidence as PASS\n- Review Gate forbids: publish to a destination other than the approved GitHub repository\n- Do not touch without approval: Do not modify Universal Agent OS family sources\n- Do not touch without approval: commit secrets or private screenshots\n- Do not touch without approval: claim simulated evidence as real\n- Do not touch without approval: add mandatory cloud dependencies\n- Do not touch without approval: or rewrite Git history.\n\n## Required evidence\n- Full test suite, deterministic demo output, dashboard production build, root self-scan, source-protection checks, clean staged diff, remote commit verification, and visible NOT_RUN gates.\n- List every changed file and every command actually run.\n- Attach concrete output or artifact paths for every PASS claim.\n- Keep WARN, FAIL, NOT_RUN, and SIMULATED labels visible.\n\n## Tests to run\n- Run the repository test command discovered in package metadata.\n\n## Documentation to update\n- README.md when behavior or commands change\n- docs/EVIDENCE_REPORT.md\n- docs/TRACEABILITY_MATRIX.md\n- docs/NOT_RUN_GATES.md\n\n## Execution contract\nYou are Codex working under Codex Control Tower. Fix only the listed gaps. Read instructions and plans before editing. Stop before risky implementation unless the local gate is APPROVED, fully scoped, and the proposed action stays within that scope. PASS requires evidence; an edited file is not a validated file. If a check cannot run, label it NOT_RUN and explain why.\n\n## Final response format\n1. Summary\n2. Changed files\n3. Commands and evidence with PASS/WARN/FAIL/NOT_RUN/SIMULATED\n4. Review gate and Mistake Shield state\n5. Remaining risks\n6. Next safe action",
   "traceabilityMatrix": [
     {
       "requirement": "Plan before implementation",
@@ -1009,7 +1039,7 @@
     }
   },
   "contextGraph": {
-    "generatedAt": "2026-07-17T20:29:22.967Z",
+    "generatedAt": "2026-07-19T10:53:29.934Z",
     "generatedLocally": true,
     "algorithm": "deterministic lexical and repository-surface analysis",
     "nodes": [
@@ -1093,7 +1123,7 @@
         "label": ".controltower/flight-recorder.jsonl",
         "type": "control",
         "lines": 0,
-        "bytes": 2603,
+        "bytes": 3335,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1108,7 +1138,7 @@
         "label": ".controltower/phase0.json",
         "type": "control",
         "lines": 15,
-        "bytes": 1515,
+        "bytes": 1511,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1122,8 +1152,8 @@
         "id": "file:.controltower/review-gate.json",
         "label": ".controltower/review-gate.json",
         "type": "control",
-        "lines": 40,
-        "bytes": 1495,
+        "lines": 45,
+        "bytes": 1994,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -1647,8 +1677,8 @@
         "id": "file:CHANGELOG.md",
         "label": "CHANGELOG.md",
         "type": "documentation",
-        "lines": 51,
-        "bytes": 6081,
+        "lines": 58,
+        "bytes": 6769,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -1692,8 +1722,8 @@
         "id": "file:cli/commands/demo.js",
         "label": "cli/commands/demo.js",
         "type": "source",
-        "lines": 200,
-        "bytes": 9858,
+        "lines": 204,
+        "bytes": 10029,
         "risk": false,
         "markers": 0,
         "relevance": 0.7,
@@ -1753,7 +1783,7 @@
         "label": "cli/commands/export-devpost.js",
         "type": "source",
         "lines": 37,
-        "bytes": 6038,
+        "bytes": 6205,
         "risk": false,
         "markers": 0,
         "relevance": 0.7,
@@ -2484,6 +2514,81 @@
         "owners": []
       },
       {
+        "id": "file:DEVPOST_01_GPT56_BLIND_AUDIT.png",
+        "label": "DEVPOST_01_GPT56_BLIND_AUDIT.png",
+        "type": "file",
+        "lines": 0,
+        "bytes": 703402,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:DEVPOST_02_DESTRUCTIVE_PREFLIGHT_BLOCKED.png",
+        "label": "DEVPOST_02_DESTRUCTIVE_PREFLIGHT_BLOCKED.png",
+        "type": "file",
+        "lines": 0,
+        "bytes": 531253,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:DEVPOST_03_EVIDENCE_BOUNDARY.png",
+        "label": "DEVPOST_03_EVIDENCE_BOUNDARY.png",
+        "type": "evidence",
+        "lines": 0,
+        "bytes": 459373,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:DEVPOST_04_BEFORE_AFTER.png",
+        "label": "DEVPOST_04_BEFORE_AFTER.png",
+        "type": "file",
+        "lines": 0,
+        "bytes": 439039,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.45,
+        "importance": 0.45,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a file surface for Codex mission context.",
+        "owners": []
+      },
+      {
+        "id": "file:DEVPOST_SCREENSHOTS.md",
+        "label": "DEVPOST_SCREENSHOTS.md",
+        "type": "documentation",
+        "lines": 20,
+        "bytes": 2458,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.75,
+        "importance": 0.75,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a documentation surface for Codex mission context.",
+        "owners": []
+      },
+      {
         "id": "file:docs/ARCHITECTURE.md",
         "label": "docs/ARCHITECTURE.md",
         "type": "documentation",
@@ -2518,7 +2623,7 @@
         "label": "docs/BUILD_WEEK_DELTA.md",
         "type": "documentation",
         "lines": 95,
-        "bytes": 8319,
+        "bytes": 8545,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2532,8 +2637,8 @@
         "id": "file:docs/CODEX_BUILD_LOG.md",
         "label": "docs/CODEX_BUILD_LOG.md",
         "type": "documentation",
-        "lines": 155,
-        "bytes": 32223,
+        "lines": 157,
+        "bytes": 33021,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2592,8 +2697,8 @@
         "id": "file:docs/DEMO_REHBERI_TR.md",
         "label": "docs/DEMO_REHBERI_TR.md",
         "type": "documentation",
-        "lines": 340,
-        "bytes": 21303,
+        "lines": 337,
+        "bytes": 22524,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2607,8 +2712,8 @@
         "id": "file:docs/DEMO_SCRIPT.md",
         "label": "docs/DEMO_SCRIPT.md",
         "type": "documentation",
-        "lines": 228,
-        "bytes": 15145,
+        "lines": 251,
+        "bytes": 18102,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2622,8 +2727,8 @@
         "id": "file:docs/DEVPOST_SUBMISSION.md",
         "label": "docs/DEVPOST_SUBMISSION.md",
         "type": "documentation",
-        "lines": 244,
-        "bytes": 20852,
+        "lines": 238,
+        "bytes": 19687,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2638,7 +2743,7 @@
         "label": "docs/EVIDENCE_REPORT.md",
         "type": "evidence",
         "lines": 36,
-        "bytes": 6557,
+        "bytes": 6524,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -2668,7 +2773,7 @@
         "label": "docs/FINAL_COMPLETENESS_REVIEW.md",
         "type": "documentation",
         "lines": 63,
-        "bytes": 8763,
+        "bytes": 8398,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2683,7 +2788,7 @@
         "label": "docs/JUDGE_TEST_PATH.md",
         "type": "documentation",
         "lines": 116,
-        "bytes": 8971,
+        "bytes": 9068,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2697,8 +2802,8 @@
         "id": "file:docs/JUDGING_MAP.md",
         "label": "docs/JUDGING_MAP.md",
         "type": "documentation",
-        "lines": 196,
-        "bytes": 16304,
+        "lines": 199,
+        "bytes": 16594,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2743,7 +2848,7 @@
         "label": "docs/MISTAKE_SHIELD.md",
         "type": "documentation",
         "lines": 40,
-        "bytes": 2480,
+        "bytes": 2554,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2758,7 +2863,7 @@
         "label": "docs/NOT_RUN_GATES.md",
         "type": "evidence",
         "lines": 33,
-        "bytes": 4327,
+        "bytes": 4086,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -2847,8 +2952,8 @@
         "id": "file:docs/SUBMISSION_MANIFEST.md",
         "label": "docs/SUBMISSION_MANIFEST.md",
         "type": "documentation",
-        "lines": 76,
-        "bytes": 6546,
+        "lines": 81,
+        "bytes": 7371,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2863,7 +2968,7 @@
         "label": "docs/TECH_DEBT_DELTA.md",
         "type": "documentation",
         "lines": 31,
-        "bytes": 2821,
+        "bytes": 2954,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2878,7 +2983,7 @@
         "label": "docs/TRACEABILITY_MATRIX.md",
         "type": "evidence",
         "lines": 35,
-        "bytes": 5486,
+        "bytes": 5702,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -2907,8 +3012,8 @@
         "id": "file:JUDGE_START_HERE.md",
         "label": "JUDGE_START_HERE.md",
         "type": "documentation",
-        "lines": 77,
-        "bytes": 7709,
+        "lines": 83,
+        "bytes": 7770,
         "risk": false,
         "markers": 0,
         "relevance": 0.75,
@@ -2968,7 +3073,7 @@
         "label": "plans/master-roadmap.md",
         "type": "plan",
         "lines": 49,
-        "bytes": 3207,
+        "bytes": 3294,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -2983,7 +3088,7 @@
         "label": "plans/PHASE0_ALIGNMENT.md",
         "type": "plan",
         "lines": 17,
-        "bytes": 1449,
+        "bytes": 1485,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -2997,8 +3102,8 @@
         "id": "file:README.md",
         "label": "README.md",
         "type": "readme",
-        "lines": 265,
-        "bytes": 26287,
+        "lines": 279,
+        "bytes": 27056,
         "risk": false,
         "markers": 0,
         "relevance": 0.82,
@@ -3192,8 +3297,8 @@
         "id": "file:tests/test_required_surfaces.js",
         "label": "tests/test_required_surfaces.js",
         "type": "test",
-        "lines": 36,
-        "bytes": 3048,
+        "lines": 67,
+        "bytes": 5419,
         "risk": false,
         "markers": 0,
         "relevance": 0.86,
@@ -3972,7 +4077,7 @@
     ],
     "overlappingPlans": [],
     "stats": {
-      "nodeCount": 148,
+      "nodeCount": 153,
       "edgeCount": 135,
       "riskNodeCount": 0,
       "todoFixmeCount": 0
@@ -4144,11 +4249,26 @@
         "owners": []
       },
       {
+        "id": "file:DEVPOST_03_EVIDENCE_BOUNDARY.png",
+        "label": "DEVPOST_03_EVIDENCE_BOUNDARY.png",
+        "type": "evidence",
+        "lines": 0,
+        "bytes": 459373,
+        "risk": false,
+        "markers": 0,
+        "relevance": 0.95,
+        "importance": 0.95,
+        "freshness": "fresh",
+        "protected": false,
+        "reason": "Selected as a evidence surface for Codex mission context.",
+        "owners": []
+      },
+      {
         "id": "file:docs/EVIDENCE_REPORT.md",
         "label": "docs/EVIDENCE_REPORT.md",
         "type": "evidence",
         "lines": 36,
-        "bytes": 6557,
+        "bytes": 6524,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -4163,7 +4283,7 @@
         "label": "docs/NOT_RUN_GATES.md",
         "type": "evidence",
         "lines": 33,
-        "bytes": 4327,
+        "bytes": 4086,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -4178,7 +4298,7 @@
         "label": "docs/TRACEABILITY_MATRIX.md",
         "type": "evidence",
         "lines": 35,
-        "bytes": 5486,
+        "bytes": 5702,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -4193,7 +4313,7 @@
         "label": "plans/master-roadmap.md",
         "type": "plan",
         "lines": 49,
-        "bytes": 3207,
+        "bytes": 3294,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -4208,7 +4328,7 @@
         "label": "plans/PHASE0_ALIGNMENT.md",
         "type": "plan",
         "lines": 17,
-        "bytes": 1449,
+        "bytes": 1485,
         "risk": false,
         "markers": 0,
         "relevance": 0.95,
@@ -4268,7 +4388,7 @@
         "label": ".controltower/flight-recorder.jsonl",
         "type": "control",
         "lines": 0,
-        "bytes": 2603,
+        "bytes": 3335,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -4283,7 +4403,7 @@
         "label": ".controltower/phase0.json",
         "type": "control",
         "lines": 15,
-        "bytes": 1515,
+        "bytes": 1511,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -4297,8 +4417,8 @@
         "id": "file:.controltower/review-gate.json",
         "label": ".controltower/review-gate.json",
         "type": "control",
-        "lines": 40,
-        "bytes": 1495,
+        "lines": 45,
+        "bytes": 1994,
         "risk": false,
         "markers": 0,
         "relevance": 0.9,
@@ -4322,34 +4442,19 @@
         "protected": false,
         "reason": "Selected as a ci surface for Codex mission context.",
         "owners": []
-      },
-      {
-        "id": "file:.github/workflows/pages.yml",
-        "label": ".github/workflows/pages.yml",
-        "type": "ci",
-        "lines": 50,
-        "bytes": 1171,
-        "risk": false,
-        "markers": 0,
-        "relevance": 0.88,
-        "importance": 0.88,
-        "freshness": "fresh",
-        "protected": false,
-        "reason": "Selected as a ci surface for Codex mission context.",
-        "owners": []
       }
     ],
     "contextBudget": {
       "maxItems": 24,
       "selectedItems": 24,
-      "availableItems": 148,
-      "estimatedTokens": 12345
+      "availableItems": 153,
+      "estimatedTokens": 16375
     }
   },
   "reviewGate": {
     "status": "APPROVED",
-    "note": "The project owner explicitly requested continuation and publication to zyganali-glitch/codex-control-tower in the active Codex session.",
-    "updatedAt": "2026-07-12T23:29:03+03:00",
+    "note": "The project owner explicitly accepted the existing public 2:59 YouTube video at https://youtu.be/EvtguYLSNkg, approved the agreed judge-facing README and Devpost narrative changes, full documentation reconciliation, publication to zyganali-glitch/codex-control-tower, and creation of the immutable openai-build-week-final-v2 tag and release. The private feedback Session ID remains Devpost-only.",
+    "updatedAt": "2026-07-19T15:30:00+03:00",
     "decidedBy": "project-owner-via-active-codex-session",
     "localFileGate": true,
     "identityVerified": false,
@@ -4367,6 +4472,11 @@
       "tests/**",
       "README.md",
       "CHANGELOG.md",
+      "DEVPOST_SCREENSHOTS.md",
+      "DEVPOST_01_GPT56_BLIND_AUDIT.png",
+      "DEVPOST_02_DESTRUCTIVE_PREFLIGHT_BLOCKED.png",
+      "DEVPOST_03_EVIDENCE_BOUNDARY.png",
+      "DEVPOST_04_BEFORE_AFTER.png",
       "LICENSE",
       "package.json",
       "package-lock.json",
@@ -4389,18 +4499,18 @@
     "decisionRecorded": true
   },
   "memoryLens": {
-    "generatedAt": "2026-07-17T20:29:22.971Z",
+    "generatedAt": "2026-07-19T10:53:29.938Z",
     "generatedLocally": true,
     "sources": [
       {
         "relative": "docs/MEMORY_LENS.md",
-        "ageDays": 3,
+        "ageDays": 5,
         "stale": false,
         "bytes": 1789
       },
       {
         "relative": "TECH_DEBT_AND_SECURITY.md",
-        "ageDays": 4,
+        "ageDays": 6,
         "stale": false,
         "bytes": 1119
       },
@@ -4408,7 +4518,7 @@
         "relative": "README.md",
         "ageDays": 0,
         "stale": false,
-        "bytes": 26287
+        "bytes": 27056
       }
     ],
     "persistentRules": [
@@ -4427,19 +4537,19 @@
       "Real authentication, payment providers, credentials, external APIs, telemetry, and source upload are outside the competition build.",
       "The deliberately risky auth/payment code under `examples/` is simulated fixture data and must not be reused as production logic.",
       "Destructive work, protected-source changes, real provider integration, and publication outside the recorded repository are blocked without a new scoped Review Gate. Security claims require executed checks; local heuristics do not replace independent review, and unrun external checks remain `NOT_RUN`.",
-      "the conflict is substantive: local code found the mission/test/evidence surfaces structurally present, while GPT-5.6 traced the stated durable rejected-payment audit requirement and showed that neither implementation nor focused test proof existed.",
-      "*CCT does not replace the Codex sandbox/permissions, operating-system security, ESLint, CI, code review, or branch protection. It adds a project-level decision, evidence, and handoff layer around agent-assisted work.**",
-      "Control Tower therefore makes a narrower claim: it deterministically analyzes a documented destructive-command subset, fails closed on ambiguous targets, records `BLOCKED` or `CAUTION`, and can deny supported `Bash` tool calls through an optional trusted project hook. It is an additional decision and evidence layer, not a replacement for sandboxing, permissions, review, CI, or operating-system security."
+      "Codex Control Tower is built for developers and small teams using Codex on long-running, brownfield, or high-risk repositories.",
+      "**The recorded audit caught a real mission gap: the fixture required a durable rejected-payment audit trail, but the implementation and focused test proof were missing. That `FAIL` is the product working—not a failed GPT-5.6 run or failed product CI.**",
+      "the conflict is substantive: local code found the mission/test/evidence surfaces structurally present, while GPT-5.6 traced the stated durable rejected-payment audit requirement and showed that neither implementation nor focused test proof existed."
     ],
     "architecturePrinciples": [
       "Preserve local-first behavior, no telemetry, and no mandatory OpenAI API key.",
       "# Architecture and product memory",
       "Git publication, history rewriting, dependency changes, and workflow permissions require explicit human scope.",
+      "| [![Recorded real GPT-5.6 Sol blind semantic audit with locked local facts and human review](DEVPOST_01_GPT56_BLIND_AUDIT.png)](DEVPOST_01_GPT56_BLIND_AUDIT.png) | [![Destructive Action Preflight blocking a protected home-parent boundary before execution](DEVPOST_02_DESTRUCTIVE_PREFLIGHT_BLOCKED.png)](DEVPOST_02_DESTRUCTIVE_PREFLIGHT_BLOCKED.png) |",
+      "| [![Prepared fictional InvoiceFlow Mini snapshots scanned by the same deterministic tool](DEVPOST_04_BEFORE_AFTER.png)](DEVPOST_04_BEFORE_AFTER.png) | [![Evidence boundary keeping PASS, FAIL, NOT_RUN, and SIMULATED states separate](DEVPOST_03_EVIDENCE_BOUNDARY.png)](DEVPOST_03_EVIDENCE_BOUNDARY.png) |",
       "A [public report about an accidental deletion during an agent run](https://x.com/thsottiaux/status/2077630111499882637) makes the boundary concrete, but it does not establish that any one product can prevent every destructive path. OpenAI's official guidance keeps [Codex sandboxing](https://learn.chatgpt.com/docs/sandboxing) and [auto-review](https://learn.chatgpt.com/docs/sandboxing/auto-review) as primary controls. [Codex hooks](https://learn.chatgpt.com/docs/hooks) can add a project-level decision point, but their `PreToolUse` coverage is explicitly incomplete. The [GPT-5.6 safety card](https://deploymentsafety.openai.com/gpt-5-6) provides the wider model-safety context.",
       "| **Memory Lens** | Durable rules, minefields, architecture principles, environment constraints, preferences, and continuity signals. |",
-      "| **Evidence Boundary** | PASS, WARN, FAIL, NOT_RUN, and SIMULATED remain distinct and tied to named artifacts. |",
-      "`npm run demo:codex` verifies the signed-in ChatGPT session and model catalog, then invokes real `gpt-5.6-sol` with medium reasoning inside an empty temporary workspace. The run is read-only and ephemeral; user configuration, project rules/instructions, web search, and approval escalation are disabled. Local code rejects any command, file, MCP, web-search, plan, unknown, failed, or malformed Codex event. It also validates the structured result, requires allowed citations for decisive assessments, records hashes and Git provenance, and performs the local reconciliation. The Codex dependency is pinned to `0.144.3` so this fail-closed event contract cannot silently drift. There is no hidden fallback to deterministic or simulated output.",
-      "# Blind GPT-5.6 Audit: Exact Authority Boundary"
+      "| **Evidence Boundary** | PASS, WARN, FAIL, NOT_RUN, and SIMULATED remain distinct and tied to named artifacts. |"
     ],
     "environmentConstraints": [
       "Preserve local-first behavior, no telemetry, and no mandatory OpenAI API key.",
@@ -4584,7 +4694,7 @@
       },
       {
         "pillar": "Minefield",
-        "text": "the conflict is substantive: local code found the mission/test/evidence surfaces structurally present, while GPT-5.6 traced the stated durable rejected-payment audit requirement and showed that neither implementation nor focused test proof existed.",
+        "text": "Codex Control Tower is built for developers and small teams using Codex on long-running, brownfield, or high-risk repositories.",
         "reason": "Risk prevention",
         "protected": true,
         "relevance": 0.68,
@@ -4593,7 +4703,7 @@
       },
       {
         "pillar": "Minefield",
-        "text": "*CCT does not replace the Codex sandbox/permissions, operating-system security, ESLint, CI, code review, or branch protection. It adds a project-level decision, evidence, and handoff layer around agent-assisted work.**",
+        "text": "**The recorded audit caught a real mission gap: the fixture required a durable rejected-payment audit trail, but the implementation and focused test proof were missing. That `FAIL` is the product working—not a failed GPT-5.6 run or failed product CI.**",
         "reason": "Risk prevention",
         "protected": true,
         "relevance": 0.65,
@@ -4602,7 +4712,7 @@
       },
       {
         "pillar": "Minefield",
-        "text": "Control Tower therefore makes a narrower claim: it deterministically analyzes a documented destructive-command subset, fails closed on ambiguous targets, records `BLOCKED` or `CAUTION`, and can deny supported `Bash` tool calls through an optional trusted project hook. It is an additional decision and evidence layer, not a replacement for sandboxing, permissions, review, CI, or operating-system security.",
+        "text": "the conflict is substantive: local code found the mission/test/evidence surfaces structurally present, while GPT-5.6 traced the stated durable rejected-payment audit requirement and showed that neither implementation nor focused test proof existed.",
         "reason": "Risk prevention",
         "protected": true,
         "relevance": 0.63,
@@ -4626,7 +4736,7 @@
     "matchedLessons": [],
     "gateStatus": "APPROVED",
     "saferNextAction": "Proceed only within the declared scope and record commands, evidence, NOT_RUN checks, and remaining risk.",
-    "checkedAt": "2026-07-17T20:29:22.973Z",
+    "checkedAt": "2026-07-19T10:53:29.941Z",
     "deterministic": true
   },
   "phase0": {
@@ -4641,7 +4751,7 @@
     "risk": "The largest immediate risk is a trust product that does not govern or truthfully assess its own repository; competition eligibility and Codex-use provenance must also remain explicit.",
     "expectedEvidence": "Full test suite, deterministic demo output, dashboard production build, root self-scan, source-protection checks, clean staged diff, remote commit verification, and visible NOT_RUN gates.",
     "workflow": "startup",
-    "nextMission": "Recheck the published Devpost rules after challenge opening, capture the final sanitized three-minute demo, and add Codex change provenance without expanding into an unapproved cloud build."
+    "nextMission": "Complete the Devpost form using the verified public 2:59 demo and immutable v2 source, enter the real private feedback Session ID only in Devpost, and submit without inventing evidence."
   },
   "flightRecorder": {
     "events": [
@@ -4715,6 +4825,20 @@
         "message": "GitHub Actions workflow run 29208503014 completed successfully for the release commit; all verify job steps passed.",
         "source": "github-actions",
         "status": "PASS"
+      },
+      {
+        "timestamp": "2026-07-19T15:30:00+03:00",
+        "type": "EVIDENCE",
+        "message": "The final public demo at https://youtu.be/EvtguYLSNkg was anonymously reachable, YouTube displayed 2:59, and the project owner confirmed the audible English narration. The documented 13-slot editor plan remains 2:57.",
+        "source": "final-submission-media",
+        "status": "PASS"
+      },
+      {
+        "timestamp": "2026-07-19T15:30:00+03:00",
+        "type": "DECISION",
+        "message": "The project owner approved the judge-facing README and Devpost simplification, full documentation reconciliation, publication to the approved repository, and creation of the immutable openai-build-week-final-v2 tag/release. The private feedback Session ID remains Devpost-only.",
+        "source": "review-gate",
+        "status": "APPROVED"
       }
     ]
   },
@@ -4784,13 +4908,13 @@
     "phase0Healthy": true,
     "flightRecorderHealthy": true,
     "evidenceSurfaceCount": 4,
-    "contextNodeCount": 148,
+    "contextNodeCount": 153,
     "criticalRiskCount": 0,
     "highRiskCount": 0
   },
   "provenance": {
     "generatedBy": "cct scan --portable",
-    "gitCommit": "2221070f77954c0086929f481cde1cb696014c7b",
+    "gitCommit": "7a2ad12203780c2bfc32696a6711d42988aceaf8",
     "worktreeAtScan": "CLEAN"
   }
 }
