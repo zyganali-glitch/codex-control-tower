@@ -5,11 +5,11 @@ Mission: ship an honest, competition-ready, local-first mission control layer fo
 
 ## Product scope
 
-The competition build includes the Node.js CLI, deterministic repository scanner and scorer, bounded Mission Prompt, target-derived locked claims, authoritative local verdict, separate real GPT-5.6 opinion, evidence integrity/freshness, Review Gate, evidence/Devpost exporters, React dashboard, and prepared fictional InvoiceFlow Mini snapshots.
+The competition build includes the Node.js CLI, deterministic repository scanner and scorer, bounded Mission Prompt, target-derived locked claims, authoritative local verdict, separate real GPT-5.6 opinion, evidence integrity/freshness, Review Gate, deterministic Destructive Action Preflight with a bounded optional Codex `PreToolUse` hook, evidence/Devpost exporters, React dashboard, and prepared fictional InvoiceFlow Mini snapshots.
 
 The build excludes hosted SaaS, mandatory API keys, telemetry, real authentication or payment integration, enterprise identity verification, and claims of guaranteed correctness.
 
-## Release 0.1 deliverables
+## v0.2.0 final submission deliverables
 
 - [x] Independent repository and source-protection records.
 - [x] Working CLI and local dashboard.
@@ -21,7 +21,9 @@ The build excludes hosted SaaS, mandatory API keys, telemetry, real authenticati
 - [x] Push the verified `main` branch to the approved GitHub destination and observe hosted CI success.
 - [x] Review published Devpost rules/FAQ and record eligibility and media constraints.
 - [x] Publish and verify the static GitHub Pages no-install judge exhibit.
+- [x] Add Destructive Action Preflight with canonical protected-boundary resolution, sanitized `BLOCKED`/`CAUTION` output, `NOT_RUN`, `executed: false`, adversarial tests, and no deletion execution.
 - [x] Capture sanitized final screenshots and publish the audible under-three-minute demo at https://youtu.be/EvtguYLSNkg (YouTube displays 2:59).
+- [x] Freeze the canonical v0.2.0 submission at the immutable `openai-build-week-final-v2` tag/release while preserving `openai-build-week-final` as the untouched v0.1 baseline.
 
 ## Acceptance and evidence
 
