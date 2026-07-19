@@ -8,7 +8,7 @@ The official [OpenAI Build Week page](https://openai.devpost.com/) and [rules](h
 | --- | --- | --- |
 | Fits the challenge and Developer Tools track | Working Codex-centered mission-control tool, not a prompt-only entry | [Judge: Start Here](../JUDGE_START_HERE.md), Pages, CLI |
 | Real Codex/GPT-5.6 role | Codex built the product and visibly launches real `gpt-5.6-sol`; GPT-5.6 performs the blind semantic audit | First ten seconds of video, audit panel, `codex-review.js` |
-| Under-three-minute public video | Thirteen-source-clip target 2:57; spoken audio explains Codex, GPT-5.6, local startup, deterministic preflight, and human decisions. Real URL remains pending. | [Demo Script](DEMO_SCRIPT.md), Devpost video field |
+| Under-three-minute public video | [Public YouTube demo](https://youtu.be/EvtguYLSNkg) displays as 2:59; spoken audio explains Codex, GPT-5.6, local startup, deterministic preflight, and human decisions. | [Demo Script](DEMO_SCRIPT.md), Devpost video field |
 | README explains acceleration, contributions, and human choices | Dedicated Build Week, architecture, authority, and provenance sections | [README](../README.md), [Build Log](CODEX_BUILD_LOG.md) |
 | Developer-tool testing path | No-install Pages route plus reproducible local commands; no rebuild required for Pages inspection | [Judge Test Path](JUDGE_TEST_PATH.md) |
 | Private feedback identity | Real Session ID from the primary build task, entered only in Devpost | Private form field; intentionally not public |
@@ -146,9 +146,9 @@ Codex Control Tower is inspired at concept level by the **Universal Agent OS fam
 
 See [Source Protection](SOURCE_PROTECTION.md), [Feature Harvest](FEATURE_HARVEST.md), and [Originality Matrix](ORIGINALITY_MATRIX.md).
 
-## Video evidence path (13 source clips, 2:57 target)
+## Published video evidence path
 
-The audited raw captures total about 6:23 and every embedded audio track is silent. The final 2:57 edit must use the documented trims and add the exact audible English narration before upload.
+The audited 13-slot editor plan totals 2:57. The [published YouTube demo](https://youtu.be/EvtguYLSNkg) displays as 2:59, remains under three minutes, and includes the exact audible English narration.
 
 | Clip | Duration | Main criterion | Proof |
 | --- | ---: | --- | --- |
@@ -170,22 +170,22 @@ Full narration: [Demo Script](DEMO_SCRIPT.md).
 
 ## Judge verification checklist
 
-- [ ] GPT-5.6's real role is visible in the first ten seconds.
-- [ ] Codex desktop visibly launches `npm run demo:codex`.
-- [ ] Exact model, pinned CLI, empty ephemeral read-only workspace, no-tool event policy, medium reasoning, and blind-comparison boundary are shown.
-- [ ] Assessments use SUPPORTS / CONTRADICTS / INSUFFICIENT.
-- [ ] Mission PASS is labeled a structural precheck; `COMPATIBLE` uncertainty is not shown as full agreement.
-- [ ] The controlled challenge is disclosed without claiming a forced result.
-- [ ] Any HUMAN REVIEW REQUIRED flag is advisory and tied to a claim.
-- [ ] Destructive Action Preflight shows canonical protected-boundary resolution, BLOCKED/CAUTION only, NOT_RUN, `executed: false`, redacted paths, and no deletion execution.
-- [ ] Optional hook claims are limited to matching supported `Bash` `PreToolUse`; sandbox remains primary, trust is required, and complete interception is not claimed.
-- [ ] Locked local facts, verdict/action, and Review Gate remain separate.
-- [ ] FICTIONAL SAMPLE PROJECT and REAL EXECUTION both remain visible.
-- [ ] GPT-5.6 is not credited with `25 → 88`, scoring, fixture creation, or test execution.
-- [ ] NOT_RUN remains visible.
-- [ ] Build log identifies current verification, while old run IDs are labeled historical.
-- [ ] The old `openai-build-week-final` tag remains untouched.
-- [ ] The real public YouTube URL, `openai-build-week-final-v2`, and its release remain pending until the final video is uploaded, its URL is integrated, and tests/Pages are verified. Existing clip 11 is retained unchanged.
+- [x] GPT-5.6's real role is visible in the first ten seconds.
+- [x] Codex desktop visibly launches `npm run demo:codex`.
+- [x] Exact model, pinned CLI, empty ephemeral read-only workspace, no-tool event policy, medium reasoning, and blind-comparison boundary are shown.
+- [x] Assessments use SUPPORTS / CONTRADICTS / INSUFFICIENT.
+- [x] Mission PASS is labeled a structural precheck; `COMPATIBLE` uncertainty is not shown as full agreement.
+- [x] The controlled challenge is disclosed without claiming a forced result.
+- [x] Any HUMAN REVIEW REQUIRED flag is advisory and tied to a claim.
+- [x] Destructive Action Preflight shows canonical protected-boundary resolution, BLOCKED/CAUTION only, NOT_RUN, `executed: false`, redacted paths, and no deletion execution.
+- [x] Optional hook claims are limited to matching supported `Bash` `PreToolUse`; sandbox remains primary, trust is required, and complete interception is not claimed.
+- [x] Locked local facts, verdict/action, and Review Gate remain separate.
+- [x] FICTIONAL SAMPLE PROJECT and REAL EXECUTION both remain visible.
+- [x] GPT-5.6 is not credited with `25 → 88`, scoring, fixture creation, or test execution.
+- [x] NOT_RUN remains visible.
+- [x] Build log identifies current verification, while old run IDs are labeled historical.
+- [x] The old `openai-build-week-final` tag remains untouched.
+- [x] The public 2:59 YouTube video is integrated, and `openai-build-week-final-v2` plus its release identify the canonical submitted source.
 
 ## Related assets
 

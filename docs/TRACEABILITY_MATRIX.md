@@ -5,7 +5,7 @@
 | Local-first Codex governance CLI | `cli/commands/`, `cli/lib/` | Current test and `npm run verify` records | PASS |
 | Product self-scan | `npm run evidence:self` | `docs/ROOT_REPO_SCAN.json`: portable clean-worktree `REAL_LOCAL_SCAN` | PASS — structural governance only |
 | Judge-readable dashboard | `apps/dashboard/` | Production build plus local/Pages visual checks | PASS |
-| Static no-install judge exhibit | `.github/workflows/pages.yml` | [Pages run 29606886221](https://github.com/zyganali-glitch/codex-control-tower/actions/runs/29606886221), anonymous cache-busted HTTP/asset check | PASS for published v0.2.0 candidate at `97d35d4` |
+| Static no-install judge exhibit | `.github/workflows/pages.yml` | [Current Pages workflow history](https://github.com/zyganali-glitch/codex-control-tower/actions/workflows/pages.yml), anonymous cache-busted HTTP/asset check | PASS for published v0.2.0 final exhibit |
 | Live recording workbench | Local `npm run dashboard` | `READY → RUNNING → COMPLETE` contract and dashboard tests | PASS — local only |
 | Honest fictional before/after sample | `examples/messy-saas-before`, `examples/governed-saas-after` | Real `npm run demo` scans and two focused fixture tests | PASS — prepared snapshots, not customer outcomes |
 | Neutral target-derived evidence claims | `cli/commands/codex-review.js` | Reconciliation tests and generated claims | PASS |
@@ -25,9 +25,9 @@
 | Optional Codex pre-tool denial | `.codex/hooks.json`, `.codex/hooks/destructive-preflight.js` | Real nonexistent harmless probe, CLI `0.144.3`, `gpt-5.6-sol`, read-only sandbox, no approval bypass | PASS for exact matching `Bash` path; normal trust and complete coverage NOT_RUN |
 | No-delete safety demo | `npm run demo:safety` | Generated `tmp/destructive-preflight.json`, BLOCKED/NOT_RUN/`executed: false`; final `npm test` and `npm run verify` | PASS in final local v0.2.0 suite |
 | Source lineage and protection | `docs/SOURCE_*`, `docs/FEATURE_HARVEST.md`, `docs/ORIGINALITY_MATRIX.md` | `tests/test_source_protection.js` | PASS |
-| Final public YouTube video | `docs/DEMO_SCRIPT.md`, `docs/DEMO_REHBERI_TR.md`, Devpost form | Thirteen audited source clips total 2:57; spoken Codex/GPT-5.6/local-start/preflight explanation | PENDING — no public URL supplied or invented |
+| Final public YouTube video | `docs/DEMO_SCRIPT.md`, `docs/DEMO_REHBERI_TR.md`, Devpost form | [Public demo](https://youtu.be/EvtguYLSNkg): YouTube displays 2:59; audible Codex/GPT-5.6/local-start/preflight explanation | PASS / PUBLIC — 13-slot editor plan totals 2:57; published encode remains under three minutes |
 | Retained clip 11 | Existing GitHub historical-baseline repository/release capture | Exact existing 16-second filename, narration, and screen description | READY — use unchanged; no v2 claim or re-recording required |
-| Immutable v0.2.0 source/release | Planned `openai-build-week-final-v2` | Real public YouTube link plus final green verification/Pages | PENDING — old `openai-build-week-final` remains untouched |
+| Immutable v0.2.0 source/release | [openai-build-week-final-v2](https://github.com/zyganali-glitch/codex-control-tower/releases/tag/openai-build-week-final-v2) | Public YouTube link plus final green verification/Pages | PASS — canonical submitted source; old `openai-build-week-final` remains untouched |
 | Private `/feedback` form field | Primary Codex task and Devpost form | Real Session ID, intentionally not committed | PRIVATE FORM ONLY |
 | Independent user validation | `docs/USER_VALIDATION.md` | Consented sessions and honest summary | NOT_RUN |
 

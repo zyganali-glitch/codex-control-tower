@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "status": "APPROVED",
-  "note": "The project owner explicitly requested sanitized Devpost screenshots, English captions, repository documentation updates, and publication to zyganali-glitch/codex-control-tower in the active Codex session. Evaluator-driven narrative or product changes remain subject to a separate agreement.",
+  "note": "The project owner explicitly accepted the existing public 2:59 YouTube video at https://youtu.be/EvtguYLSNkg, approved the agreed judge-facing README and Devpost narrative changes, full documentation reconciliation, publication to zyganali-glitch/codex-control-tower, and creation of the immutable openai-build-week-final-v2 tag and release. The private feedback Session ID remains Devpost-only.",
   "scope": "Complete bounded release-preflight hardening, run local verification, commit the independent repository, and push main to the user-provided GitHub repository.",
   "allowedFiles": [
     ".codex/**",
@@ -34,7 +34,7 @@
     "publish to a destination other than the approved GitHub repository"
   ],
   "decidedBy": "project-owner-via-active-codex-session",
-  "updatedAt": "2026-07-19T12:20:00+03:00",
+  "updatedAt": "2026-07-19T15:30:00+03:00",
   "localFileGate": true,
   "identityVerified": false,
   "disclaimer": "Local session approval; not enterprise identity verification or a signed authorization.",

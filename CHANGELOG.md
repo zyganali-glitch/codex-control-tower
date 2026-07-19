@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0 final - 2026-07-19
+
+- Published the audible under-three-minute demo at https://youtu.be/EvtguYLSNkg; YouTube displays 2:59, while the audited 13-slot editor plan totals 2:57.
+- Simplified the judge-facing README and Devpost opening, moved the real GPT-5.6 audit visual to the hero position, and made the value-producing controlled `FAIL` unmistakable.
+- Reconciled public media, evidence, traceability, judge, and release documentation; the private `/feedback` Session ID remains Devpost-only.
+- Prepared the immutable `openai-build-week-final-v2` tag/release as the canonical v0.2.0 submission source without moving the historical v0.1 tag.
+
 ## 0.2.0 candidate - 2026-07-17
 
 - Added analysis-only Destructive Action Preflight with deterministic `BLOCKED`/`CAUTION`, `NOT_RUN`, `executed: false`, human review, and safer-next-action output.

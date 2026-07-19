@@ -4,31 +4,35 @@
 
 > **Mission control for AI-built software.**
 
-**v0.2.0 candidate**
+> **Codex writes. GPT-5.6 challenges. Control Tower locks the facts. The developer decides.**
 
-Codex Control Tower runs real GPT-5.6 in an empty, ephemeral, read-only, no-tool Codex workspace to independently challenge neutral claims and bounded raw evidence while the reconciler's locked claim-status fields and expected comparison classes are withheld—and GPT-5.6 can never overwrite the locked local facts.
+**v0.2.0 final submission**
 
-Before a supported destructive action, **Destructive Action Preflight** deterministically resolves the typed target against canonical filesystem, user-home, repository, and `.git` boundaries. Protected or uncertain targets are `BLOCKED`; a specific repository subpath is only `CAUTION`. Every result remains `NOT_RUN`, requires human review, and executes no command.
+Codex Control Tower is built for developers and small teams using Codex on long-running, brownfield, or high-risk repositories.
+
+It turns Codex-assisted work into a bounded, reviewable delivery workflow. Local code records the mission, execution evidence, and locked facts. Real GPT-5.6 then independently checks whether the mission, changes, tests, and evidence actually align—without seeing the expected answer and without being able to overwrite local truth.
+
+Before supported destructive work, **Destructive Action Preflight** resolves the requested target against protected filesystem and repository boundaries. Protected or uncertain targets are blocked before execution, remain **NOT_RUN**, and require human review.
+
+> **The recorded audit caught a real mission gap: the fixture required a durable rejected-payment audit trail, but the implementation and focused test proof were missing. That `FAIL` is the product working—not a failed GPT-5.6 run or failed product CI.**
 
 **OpenAI Build Week Developer Tools entry · real Blind GPT-5.6 Semantic Audit · deterministic Destructive Action Preflight · human authority · fictional sample separated from real execution**
 
-**[Open the no-install judge demo](https://zyganali-glitch.github.io/codex-control-tower/)** · **[Judge: start here](JUDGE_START_HERE.md)** · **[Devpost screenshot pack](DEVPOST_SCREENSHOTS.md)**
+**[Watch the public 2:59 demo](https://youtu.be/EvtguYLSNkg)** · **[Open the no-install judge demo](https://zyganali-glitch.github.io/codex-control-tower/)** · **[Judge: start here](JUDGE_START_HERE.md)** · **[Devpost screenshot pack](DEVPOST_SCREENSHOTS.md)**
 
-![Codex Control Tower Safety Preflight view showing the Destructive Action Preflight BLOCKED and NOT_RUN result, with the real GPT-5.6 audit marked COMPLETE in the sidebar](docs/assets/dashboard-overview.png)
+[![Real GPT-5.6 blind semantic audit exposing a mission-coverage gap while locked local facts remain authoritative](DEVPOST_01_GPT56_BLIND_AUDIT.png)](DEVPOST_01_GPT56_BLIND_AUDIT.png)
 
 *InvoiceFlow Mini is a fictional sample project. Its prepared before/after snapshots are not customer evidence. The scans, two fixture tests, hashed evidence bundle, provenance checks, and recorded GPT-5.6 run are real tool outputs.*
 
 ## 30-Second Explanation
 
-Codex can move from request to implementation quickly. The developer still needs durable answers: what was planned, which files were allowed, what changed, what ran, which checks were skipped, whether the tests actually address the mission, and what the next session may safely do.
+AI coding sessions can end with changed files and a confident summary but no durable answer to what actually ran, what was skipped, or whether passing tests prove the mission.
 
-Control Tower turns repository state into a bounded Codex mission and locks local evidence states. It then gives real GPT-5.6 neutral claims and bounded raw evidence while withholding the reconciler's locked claim-status fields and expected comparison classes. Raw evidence can contain its own status words because those are material to audit; they are not disclosed as the answer target. GPT-5.6 returns `SUPPORTS`, `CONTRADICTS`, or `INSUFFICIENT`, plus cited counter-evidence, missing evidence, and a proposed next action. Local code compares the independent answer with the hidden local comparison policy afterward. A policy conflict raises **HUMAN REVIEW REQUIRED** but never changes PASS, WARN, FAIL, NOT_RUN, SIMULATED, the deterministic verdict, or the developer's Review Gate.
+Control Tower locks locally derived facts, then asks real GPT-5.6 a separate question: does the bounded evidence actually support the stated mission? The expected answer is withheld, so the model cannot simply agree. It must return `SUPPORTS`, `CONTRADICTS`, or `INSUFFICIENT` with bounded citations.
 
-**Main loop:** local scan → bounded Codex mission → locked facts → blind GPT-5.6 semantic challenge → deterministic reconciliation → human decision → evidence handoff.
+Only after that answer returns does local code compare it with the hidden local policy. A disagreement raises **HUMAN REVIEW REQUIRED**; it never changes PASS, WARN, FAIL, NOT_RUN, SIMULATED, the deterministic verdict, or the developer's Review Gate.
 
-> **Codex writes. GPT-5.6 challenges. Control Tower locks the facts. The developer decides.**
-
-> **GPT-5.6 challenges the evidence. Destructive Action Preflight protects critical boundaries before execution. Human authority remains final.**
+**Main loop:** local scan → bounded Codex mission → locked facts → blind GPT-5.6 challenge → local reconciliation → human decision → evidence handoff.
 
 ## Recorded Submission Result
 
@@ -101,7 +105,7 @@ The Pages site is a static, read-only judge exhibit. It shows sanitized fictiona
 
 ### Version and cache safety
 
-Some external preview tools cache a previously opened README. This v0.2.0 work is on the moving `main` branch until a real public YouTube URL is verified and the immutable `openai-build-week-final-v2` tag/release is created. The existing [`openai-build-week-final` tag](https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final) remains an untouched v0.1 baseline, not the v0.2.0 source. [Submission Manifest](docs/SUBMISSION_MANIFEST.md) records the distinction and never invents the pending video or v2 release.
+Some external preview tools cache a previously opened README. The canonical submitted source is the immutable [`openai-build-week-final-v2` tag and release](https://github.com/zyganali-glitch/codex-control-tower/releases/tag/openai-build-week-final-v2). The existing [`openai-build-week-final` tag](https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final) remains an untouched v0.1 baseline. [Submission Manifest](docs/SUBMISSION_MANIFEST.md) records the distinction.
 
 ## Quick Start
 
@@ -159,11 +163,11 @@ The product also scans its own repository with `npm run evidence:self`. The comm
 
 This is an independent challenge inside the product, not an independent third-party attestation. A model opinion can be wrong; the dashboard preserves both layers so the developer can inspect the disagreement.
 
-## Demo Recording Path
+## Published Demo
 
-The 2:57 plan uses all 13 audited source clips. The old 8-second clip 03 remains because it is the only terminal/local-dashboard startup proof; the separate 15-second `03 (YENİ)` Safety Preflight capture is placed after clip 10 so the completed v0.2.0 view does not precede clip 04's READY state. Existing clip 11 remains unchanged. The raw captures total about 6:23 and have silent audio tracks, so the final edit trims them to the documented slots, reduces only clip 05's idle wait to make its slot 17 seconds, and adds the exact audible English narration. After exporting and uploading the public video, integrate the real YouTube URL, rerun verification, confirm Pages, and only then create the immutable v2 tag/release.
+The [public YouTube demo](https://youtu.be/EvtguYLSNkg) displays as **2:59** and includes audible English explanations of Codex, GPT-5.6, the blind evidence challenge, deterministic authority, destructive-action preflight, and the human decision boundary. Its audited editor plan uses 13 source clips totaling 2:57; the published encode displays as 2:59 and remains under the competition's three-minute limit.
 
-Follow the [under-3-minute Demo Script](docs/DEMO_SCRIPT.md). The spoken narration explicitly explains both Codex and GPT-5.6. The private `/feedback` Session ID comes from the primary Codex build task and belongs only in the Devpost form; it is intentionally never committed to this public repository.
+The completed recording plan and exact narration remain in the [Demo Script](docs/DEMO_SCRIPT.md). The private `/feedback` Session ID comes from the primary Codex build task and belongs only in the Devpost form; it is intentionally never committed to this public repository.
 
 ## CLI
 

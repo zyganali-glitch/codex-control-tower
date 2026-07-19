@@ -2,6 +2,8 @@
 
 Upload these sanitized 1920 × 1080 images in the order below. InvoiceFlow Mini is fictional; the scans, focused tests, recorded GPT-5.6 run, and analysis-only safety preflight are real controlled executions.
 
+Companion video: [public 2:59 demo on YouTube](https://youtu.be/EvtguYLSNkg).
+
 | Order | File | Devpost title | English caption |
 | --- | --- | --- | --- |
 | 1 | [`DEVPOST_01_GPT56_BLIND_AUDIT.png`](DEVPOST_01_GPT56_BLIND_AUDIT.png) | **Real Blind GPT-5.6 Evidence Audit** | Real GPT-5.6 Sol performs a blind semantic audit over bounded evidence without seeing the expected local statuses. Local facts remain locked, and a recorded disagreement triggers human review instead of letting the model overwrite the evidence. |

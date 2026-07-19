@@ -2,20 +2,23 @@
 
 ## The ten-second version
 
-Codex Control Tower gives real GPT-5.6 a **blind semantic challenge**: the model receives neutral claims and bounded raw evidence inside an empty, ephemeral, read-only workspace. User/project instructions and web search are disabled; any tool event is rejected; the reconciler's locked claim-status fields and expected comparison classes are withheld. Raw evidence may contain status labels as material to audit; those labels are not disclosed as the target answer. GPT-5.6 can return `SUPPORTS`, `CONTRADICTS`, or `INSUFFICIENT`. Local code compares only the validated result with its hidden policy. A conflict may raise **HUMAN REVIEW REQUIRED**, but the model can never rewrite the locked facts.
+Codex writes. Control Tower locks the mission, execution evidence, and local facts. Real GPT-5.6 then checks the bounded proof **without seeing the expected answer**, so it cannot merely agree.
 
-The v0.2.0 candidate adds **Destructive Action Preflight** without moving GPT-5.6 out of the product center. Before execution, it resolves supported destructive targets against canonical protected boundaries. The recorded `$HOME/..` example becomes `<USER_HOME_PARENT>`, `BLOCKED`, and `NOT_RUN`; no command executes. A repository subpath is at most `CAUTION`, never a destructive safety clearance.
+In the recorded run, GPT-5.6 caught a real mission gap: a durable rejected-payment audit trail was required, but implementation and focused test proof were missing. That `FAIL` is the product working—the model invocation and product CI both completed successfully. A disagreement can raise **HUMAN REVIEW REQUIRED**, but the model can never rewrite the locked facts.
+
+The v0.2.0 final submission adds **Destructive Action Preflight** without moving GPT-5.6 out of the product center. Before execution, it resolves supported destructive targets against canonical protected boundaries. The recorded `$HOME/..` example becomes `<USER_HOME_PARENT>`, `BLOCKED`, and `NOT_RUN`; no command executes. A repository subpath is at most `CAUTION`, never a destructive safety clearance.
 
 > **Codex writes. GPT-5.6 challenges. Control Tower locks the facts. The developer decides.**
 
 ## Fastest evaluation route
 
-1. Open the [no-install GitHub Pages exhibit](https://zyganali-glitch.github.io/codex-control-tower/).
-2. Read the separate **FICTIONAL SAMPLE PROJECT** and **REAL EXECUTION** labels.
-3. Inspect **Blind GPT-5.6 Semantic Audit** for the exact model, empty ephemeral workspace, accepted tool events `0`, blind-input disclosure, structural-precheck label, assessment, citations, missing/counter-evidence, reconciliation relation, and human-review state.
-4. Open **Safety Preflight** and inspect **Destructive Action Preflight** for `recursive_delete`, `$HOME/..`, `<USER_HOME_PARENT>`, `BLOCKED`, `NOT_RUN`, and **ANALYSIS ONLY · NO COMMAND EXECUTED**.
-5. Open **Before / After** to see the reproducible `25 → 88` governance score and `16 → 1` risk comparison on prepared InvoiceFlow Mini snapshots.
-6. Open **Evidence** and confirm that browser, load, deployment, provider, and independent security checks remain NOT_RUN.
+1. Watch the [public 2:59 demo](https://youtu.be/EvtguYLSNkg).
+2. Open the [no-install GitHub Pages exhibit](https://zyganali-glitch.github.io/codex-control-tower/).
+3. Read the separate **FICTIONAL SAMPLE PROJECT** and **REAL EXECUTION** labels.
+4. Inspect **Blind GPT-5.6 Semantic Audit** for the exact model, empty ephemeral workspace, accepted tool events `0`, blind-input disclosure, structural-precheck label, assessment, citations, missing/counter-evidence, reconciliation relation, and human-review state.
+5. Open **Safety Preflight** and inspect **Destructive Action Preflight** for `recursive_delete`, `$HOME/..`, `<USER_HOME_PARENT>`, `BLOCKED`, `NOT_RUN`, and **ANALYSIS ONLY · NO COMMAND EXECUTED**.
+6. Open **Before / After** to see the reproducible `25 → 88` governance score and `16 → 1` risk comparison on prepared InvoiceFlow Mini snapshots.
+7. Open **Evidence** and confirm that browser, load, deployment, provider, and independent security checks remain NOT_RUN.
 
 The Pages site is a static recorded exhibit. For a fresh run, follow [Judge Test Path](docs/JUDGE_TEST_PATH.md); Codex desktop launches `npm run demo:codex`, and the local workbench shows READY → RUNNING → COMPLETE.
 
@@ -62,7 +65,10 @@ GPT-5.6 did not create the snapshots or cause `25 → 88`. Real tools run on con
 ## Version and submission links
 
 - [Repository](https://github.com/zyganali-glitch/codex-control-tower)
-- [Moving v0.2.0 development source](https://github.com/zyganali-glitch/codex-control-tower/tree/main)
+- [Public 2:59 demo](https://youtu.be/EvtguYLSNkg)
+- [Canonical v0.2.0 frozen source](https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final-v2)
+- [Canonical v0.2.0 release](https://github.com/zyganali-glitch/codex-control-tower/releases/tag/openai-build-week-final-v2)
+- [Moving development source](https://github.com/zyganali-glitch/codex-control-tower/tree/main)
 - [Untouched v0.1 baseline tag](https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final)
 - [Untouched v0.1 baseline release](https://github.com/zyganali-glitch/codex-control-tower/releases/tag/openai-build-week-final)
 - [Submission manifest](docs/SUBMISSION_MANIFEST.md)
@@ -71,6 +77,6 @@ GPT-5.6 did not create the snapshots or cause `25 → 88`. Real tools run on con
 - [Build provenance](docs/BUILD_WEEK_DELTA.md)
 - [Architecture and authority boundary](docs/ARCHITECTURE.md)
 
-The existing 16-second clip 11 is retained unchanged for the final edit and makes no v2 claim. The real public YouTube URL is still pending. After the final video is uploaded, its URL must be verified and added to the public submission documents, tests must pass, and Pages must be confirmed before `openai-build-week-final-v2` and its release are created. The private `/feedback` Session ID remains a Devpost-only field and is intentionally absent from the repository. No placeholder is invented for either value.
+The accepted public video is available at https://youtu.be/EvtguYLSNkg and YouTube displays it as 2:59. Its 13-slot editor plan targeted 2:57; the published encode remains under three minutes. The private `/feedback` Session ID remains a Devpost-only field and is intentionally absent from the repository.
 
-If an external preview omits v0.2.0 or Destructive Action Preflight, it is stale. The current `main` branch and Pages workflow history identify the moving candidate; the old frozen tag remains historical until the real v2 release exists.
+If an external preview omits v0.2.0, GPT-5.6, or Destructive Action Preflight, it is stale. Use the immutable `openai-build-week-final-v2` tag/release as the submitted source; `main` remains the moving development branch and the old frozen tag remains the untouched v0.1 baseline.

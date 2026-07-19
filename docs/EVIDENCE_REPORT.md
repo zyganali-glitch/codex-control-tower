@@ -4,7 +4,7 @@ This report describes real repository/build evidence. InvoiceFlow Mini is a fict
 
 ## Published checkpoint and current authority
 
-A fully published checkpoint before the current coherence hardening is commit `416d145`; it is historical. The existing `openai-build-week-final` tag is the immutable v0.1 baseline. The v0.2.0 candidate is on moving `main`; current command output, generated evidence records, and workflow history govern it until a verified public YouTube URL allows creation of the separate immutable `openai-build-week-final-v2` tag/release.
+A fully published checkpoint before the final coherence hardening is commit `416d145`; it is historical. The existing `openai-build-week-final` tag remains the immutable v0.1 baseline. The separate [`openai-build-week-final-v2` tag/release](https://github.com/zyganali-glitch/codex-control-tower/releases/tag/openai-build-week-final-v2) is the canonical v0.2.0 submitted source; `main` remains moving development.
 
 | Check | Status | Evidence / boundary |
 | --- | --- | --- |
@@ -19,7 +19,7 @@ A fully published checkpoint before the current coherence hardening is commit `4
 | Dashboard data-contract integrity | PASS | Eleven adapter/regression tests cover absent fields, false-value preservation, privacy, hook non-synthesis, and locked reconciliation state; the final local production Vite build transformed 52 modules. The local dashboard shows live state, while GitHub Pages shows only a static recorded snapshot. |
 | Source protection | PASS | `SOURCE_PROTECTION.md`, the source-protection test, and the independent repository boundary protect the Universal Agent OS family research sources. |
 | Static GitHub Pages judge exhibit | PASS | Public page is anonymously reachable; current deployment status is read from [workflow history](https://github.com/zyganali-glitch/codex-control-tower/actions/workflows/pages.yml). Old run IDs remain history only. |
-| Final public YouTube video | PENDING | The audited 13-source-clip plan totals 2:57: old clip 03 retains the local-start proof, the separate Safety Preflight capture follows clip 10, and existing clip 11 remains unchanged. No real public URL has been supplied or invented; the v2 tag/release wait on that external asset and subsequent tests/Pages verification. |
+| Final public YouTube video | PASS / PUBLIC | [The accepted demo](https://youtu.be/EvtguYLSNkg) is anonymously reachable and YouTube displays 2:59. Its audited 13-slot editor plan totals 2:57; the published encode remains under three minutes and includes audible Codex/GPT-5.6/preflight narration. |
 | Private `/feedback` entry | PRIVATE FORM ONLY | The Session ID is intentionally absent from public source and must remain in Devpost only. |
 | Real user validation | NOT_RUN | No participant, quote, or outcome is invented. See `USER_VALIDATION.md`. |
 | Fixture/provider deployment, load, accessibility, independent security review | NOT_RUN | The static Pages exhibit does not convert these separate gates to PASS. |

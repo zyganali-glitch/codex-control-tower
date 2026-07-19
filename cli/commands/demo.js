@@ -170,7 +170,11 @@ async function demoCommand() {
   };
   after.submission = {
     version: 'v0.2.0',
-    releaseState: 'FINAL_V2_PENDING_PUBLIC_DEMO_URL',
+    releaseState: 'FINAL_V2_SUBMISSION_READY',
+    publicDemoUrl: 'https://youtu.be/EvtguYLSNkg',
+    publicDemoDisplayedDuration: '2:59',
+    publicDemoVisibility: 'PUBLIC',
+    finalSourceTag: 'openai-build-week-final-v2',
     priorImmutableSource: 'https://github.com/zyganali-glitch/codex-control-tower/tree/openai-build-week-final',
     judgeStart: 'JUDGE_START_HERE.md'
   };
